@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "lexi-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3123
+    },
+    {
+      "name": "mock-s2s",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["tests/mock-s2s-server.mjs", "8799"],
+      "port": 8799
+    }
+  ]
+}

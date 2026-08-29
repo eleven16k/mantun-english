@@ -249,6 +249,59 @@ export async function addFriendByPhone(phone: string) {
   });
 }
 
+// ─── Scenarios (NovaWorld integration) ───
+
+export interface NpcReply {
+  npcResponse: string;
+  userSuggestion: string;
+}
+
+export async function chatWithNpc(payload: {
+  scenarioId: string;
+  history: { role: "user" | "model"; text: string }[];
+  message: string;
+  level: string;
+  customVocab: string[];
+  locale: string;
+}): Promise<NpcReply> {
+  return fetchApi("/api/scenarios/chat", { method: "POST", body: JSON.stringify(payload) });
+}
+
+export async function generateScenarioVocab(scenarioId: string, level: string): Promise<{ vocab: string[]; generated: boolean }> {
+  return fetchApi("/api/scenarios/vocab", {
+    method: "POST",
+    body: JSON.stringify({ scenarioId, level }),
+  });
+}
+
+export async function scenarioTTS(text: string): Promise<{ audio: string; sampleRate: number }> {
+  return fetchApi("/api/scenarios/tts", { method: "POST", body: JSON.stringify({ text }) });
+}
+
+export async function bankScenarioReward(payload: {
+  scenarioId: string;
+  mode: "chat" | "call";
+  turns: number;
+  xp: number;
+  coins: number;
+  masteredWords: string[];
+  transcript?: unknown[];
+}): Promise<{ coins: number; scorePoints: number; newWords: number }> {
+  return fetchApi("/api/scenarios/reward", { method: "POST", body: JSON.stringify(payload) });
+}
+
+export interface WordQuestQuestion {
+  word: string;
+  correct: string;
+  distractors: string[];
+  example: string;
+  exampleTranslation: string;
+}
+
+export async function generateWordQuest(level: string): Promise<{ questions: WordQuestQuestion[]; generated: boolean }> {
+  return fetchApi("/api/wordquest", { method: "POST", body: JSON.stringify({ level }) });
+}
+
 // ─── SMS OTP ───
 
 export async function sendSmsCode(phone: string) {

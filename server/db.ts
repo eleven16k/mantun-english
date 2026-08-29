@@ -176,6 +176,28 @@ db.exec(`
     starts_at INTEGER NOT NULL,
     expires_at INTEGER NOT NULL
   );
+
+  -- Scenario role-play sessions (NovaWorld integration)
+  CREATE TABLE IF NOT EXISTS scenario_sessions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    scenario_id TEXT NOT NULL,
+    mode TEXT DEFAULT 'chat',            -- chat | call
+    turns INTEGER DEFAULT 0,
+    xp_earned INTEGER DEFAULT 0,
+    coins_earned INTEGER DEFAULT 0,
+    transcript_json TEXT,                -- Message[] snapshot (optional)
+    created_at INTEGER DEFAULT (unixepoch())
+  );
+
+  -- Words used in-scenario and marked as mastered
+  CREATE TABLE IF NOT EXISTS scenario_mastery (
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    scenario_id TEXT NOT NULL,
+    word TEXT NOT NULL,
+    mastered_at INTEGER DEFAULT (unixepoch()),
+    PRIMARY KEY (user_id, scenario_id, word)
+  );
 `);
 
 // ─── Migrations for tables created before a column existed ───

@@ -11,6 +11,7 @@ import { studyDict } from "./i18n/dicts/study";
 import { socialDict } from "./i18n/dicts/social";
 import { shopDict } from "./i18n/dicts/shop";
 import { quizDict } from "./i18n/dicts/quiz";
+import { scenariosDict } from "./i18n/dicts/scenarios";
 import { kv } from "./kv";
 
 export type Locale = "en" | "zh";
@@ -171,6 +172,7 @@ const en = {
   ...socialDict.en,
   ...shopDict.en,
   ...quizDict.en,
+  ...scenariosDict.en,
 };
 
 export type MessageKey = keyof typeof en;
@@ -182,6 +184,7 @@ const zh: Record<MessageKey, string> = {
   ...socialDict.zh,
   ...shopDict.zh,
   ...quizDict.zh,
+  ...scenariosDict.zh,
 };
 
 const DICTS: Record<Locale, Record<MessageKey, string>> = { en, zh };
