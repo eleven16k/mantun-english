@@ -38,6 +38,37 @@ export default function SolvePage() {
     setError("");
     setSolution("");
 
+    const append = (chunk: string) => setSolution((prev) => prev + chunk);
+
+    // Primary: vision+reasoning gateway via /api/solve (streams plain text).
+    try {
+      const res = await fetch("/api/solve", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem("lexi-token") ?? ""}` },
+        body: JSON.stringify({ imageBase64, note: note.trim(), locale: locale === "zh" ? "zh" : "en" }),
+      });
+      if (res.ok && res.body) {
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        for (;;) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          append(decoder.decode(value, { stream: true }));
+        }
+        setSolving(false);
+        return;
+      }
+      if (res.status !== 503) {
+        setSolving(false);
+        setError(t("solve.failed"));
+        return;
+      }
+      // 503 = no gateway key configured — fall through to DeepTutor sidecar.
+    } catch {
+      // network error — fall through to DeepTutor sidecar
+    }
+
+    // Fallback: DeepTutor /solve WebSocket.
     const up = await pingDeepTutor();
     if (!up) {
       setSolving(false);
@@ -49,7 +80,7 @@ export default function SolvePage() {
       imageBase64,
       question: note.trim(),
       language: locale === "zh" ? "zh" : "en",
-      onChunk: (chunk) => setSolution((prev) => prev + chunk),
+      onChunk: append,
     }).catch(() => null);
 
     setSolving(false);

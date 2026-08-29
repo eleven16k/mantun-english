@@ -5,7 +5,7 @@
  */
 import { NextResponse } from "next/server";
 import { requireAuth } from "../../../../server/auth";
-import { geminiText, GeminiUnavailableError } from "../../../../server/gemini";
+import { aiText, AIUnavailableError } from "../../../../server/ai";
 import { scenarioById, buildChatSystemInstruction, type VocabLevel } from "../../../../lib/scenarios";
 
 const LEVELS: VocabLevel[] = ["Primary", "JuniorHigh", "SeniorHigh", "Custom"];
@@ -29,7 +29,7 @@ export async function POST(req: Request) {
           .filter((m: unknown) => !!m && typeof m === "object")
           .map((m: { role?: unknown; text?: unknown }) => ({
             role: m.role === "model" ? "model" : "user",
-            parts: [{ text: String(m.text ?? "").slice(0, 4000) }],
+            text: String(m.text ?? "").slice(0, 4000),
           }))
           .slice(-20)
       : [];
@@ -37,10 +37,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Message required" }, { status: 400 });
     }
 
-    const text = await geminiText({
-      contents: [...history, { role: "user", parts: [{ text: message }] }],
+    const text = await aiText({
+      contents: [...history, { role: "user", text: message }],
       systemInstruction: buildChatSystemInstruction(scenario, level, customVocab, locale, message),
       json: true,
+      timeoutMs: 60_000,
     });
 
     try {
@@ -55,7 +56,7 @@ export async function POST(req: Request) {
     }
   } catch (e) {
     if (e instanceof Response) return e;
-    if (e instanceof GeminiUnavailableError) {
+    if (e instanceof AIUnavailableError) {
       return NextResponse.json({ error: "AI service unavailable" }, { status: 503 });
     }
     return NextResponse.json({ error: e instanceof Error ? e.message : "Failed" }, { status: 500 });

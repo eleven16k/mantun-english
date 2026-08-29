@@ -8,7 +8,7 @@
  */
 import { NextResponse } from "next/server";
 import { requireAuth } from "../../../server/auth";
-import { geminiText, GeminiUnavailableError } from "../../../server/gemini";
+import { aiText, AIUnavailableError } from "../../../server/ai";
 import { VOCAB_LISTS } from "../../../lib/vocab-lists";
 
 type Q = { word: string; correct: string; distractors: string[]; example: string; exampleTranslation: string };
@@ -63,29 +63,25 @@ export async function POST(req: Request) {
     const selectedWords = pickRandom(vocab, 10);
 
     try {
-      const text = await geminiText({
+      const text = await aiText({
         contents: [
           {
             role: "user",
-            parts: [
-              {
-                text: [
-                  `Generate 10 multiple choice vocabulary questions for ${level} level.`,
-                  `The words are: ${selectedWords.join(", ")}.`,
-                  "For each word, provide:",
-                  "1. The English word",
-                  "2. The correct Chinese meaning",
-                  "3. 3 incorrect Chinese meanings",
-                  "4. A simple example sentence in English using the word",
-                  "5. The Chinese translation of that example sentence",
-                  'Return ONLY a JSON array of objects: { "word": string, "correct": string, "distractors": [string, string, string], "example": string, "exampleTranslation": string }',
-                ].join("\n"),
-              },
-            ],
+            text: [
+              `Generate 10 multiple choice vocabulary questions for ${level} level.`,
+              `The words are: ${selectedWords.join(", ")}.`,
+              "For each word, provide:",
+              "1. The English word",
+              "2. The correct Chinese meaning",
+              "3. 3 incorrect Chinese meanings",
+              "4. A simple example sentence in English using the word",
+              "5. The Chinese translation of that example sentence",
+              'Return ONLY a JSON array of objects: { "word": string, "correct": string, "distractors": [string, string, string], "example": string, "exampleTranslation": string }',
+            ].join("\n"),
           },
         ],
         json: true,
-        timeoutMs: 30_000,
+        timeoutMs: 60_000,
       });
 
       const parsed = JSON.parse(text) as Q[];
@@ -97,7 +93,7 @@ export async function POST(req: Request) {
       }
       throw new Error("empty quiz");
     } catch (genErr) {
-      if (!(genErr instanceof GeminiUnavailableError)) {
+      if (!(genErr instanceof AIUnavailableError)) {
         console.error("[wordquest] generation failed, using fallback:", genErr);
       }
       return NextResponse.json({ questions: fallbackQuestions(level), generated: false });
