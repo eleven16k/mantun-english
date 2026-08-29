@@ -1,0 +1,202 @@
+/*
+ * Lexi skin — verbatim Gizmo design tokens (extracted from app.gizmo.ai).
+ * Source of truth: gizmo-clone/docs/UI_SPEC.md + DESIGN_TOKENS_LIGHT_DARK.tsv.
+ * Light-first; .dark class flips to dark theme (class strategy, below).
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ---- typography (measured) ---- */
+  --font-size-hero: 34px;
+  --font-size-title: 26px;
+  --font-size-body: 16px;
+  --font-size-label: 16px;
+  --font-size-btn: 14px;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ---- surfaces ---- */
+  --bg-app: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-canvas: #f1f5f9;
+  --bg-inverse: #0f172a;
+
+  /* ---- action (measured: Study pill #0f172a) ---- */
+  --bg-action-emphasis-default: #0f172a;
+  --bg-action-emphasis-hover: #020617;
+  --bg-action-subtle-default: #ffffff;
+  --bg-action-subtle-hover: #f8fafc;
+
+  /* ---- brand ---- */
+  --bg-brand-emphasis-default: #7c3aed;
+  --bg-brand-emphasis-hover: #6d28d9;
+  --bg-brand-subtle-default: #ede9fe;
+  --bg-brand-subtle-hover: #ddd6fe;
+
+  /* ---- semantic ---- */
+  --bg-positive-emphasis-default: #16a34a;
+  --bg-warning-emphasis-default: #d97706;
+  --bg-critical-emphasis-default: #dc2626;
+  --bg-info-emphasis-default: #2563eb;
+  --bg-gold-emphasis-default: #ca8a04;
+  --bg-streak-emphasis-default: #ea580c;
+
+  /* ---- text ---- */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
+  --text-inverse: #ffffff;
+  --text-brand-default: #7c3aed;
+  --text-hearts-default: #9333ea;
+  --text-gold-default: #ca8a04;
+  --text-streak-default: #ea580c;
+  --text-positive-default: #16a34a;
+  --text-critical-default: #dc2626;
+  --text-info-default: #2563eb;
+
+  /* ---- border ---- */
+  --border-subtle: #e2e8f0;
+  --border-emphasis: #e4e4e7;
+  --border-focus: #60a5fa;
+  --border-brand-default: #8b5cf6;
+}
+
+.dark {
+  --bg-app: #131316;
+  --bg-surface: #202023;
+  --bg-surface-elevated: #27272a;
+  --bg-canvas: #333338;
+  --bg-inverse: #fafafa;
+
+  --bg-action-emphasis-default: #fafafa;
+  --bg-action-emphasis-hover: #ffffff;
+  --bg-action-subtle-default: #27272a;
+  --bg-action-subtle-hover: #202023;
+
+  --bg-brand-emphasis-default: #7c3aed;
+  --bg-brand-emphasis-hover: #8b5cf6;
+  --bg-brand-subtle-default: #4c1d95;
+  --bg-brand-subtle-hover: #5b21b6;
+
+  --bg-positive-emphasis-default: #22c55e;
+  --bg-warning-emphasis-default: #f59e0b;
+  --bg-critical-emphasis-default: #ef4444;
+  --bg-info-emphasis-default: #3b82f6;
+  --bg-gold-emphasis-default: #eab308;
+  --bg-streak-emphasis-default: #f97316;
+
+  --text-primary: #ffffff;
+  --text-secondary: #e4e4e7;
+  --text-tertiary: #a1a1aa;
+  --text-inverse: #0f172a;
+  --text-brand-default: #a78bfa;
+  --text-hearts-default: #c084fc;
+  --text-gold-default: #facc15;
+  --text-streak-default: #fb923c;
+  --text-positive-default: #4ade80;
+  --text-critical-default: #f87171;
+  --text-info-default: #60a5fa;
+
+  --border-subtle: #333338;
+  --border-emphasis: #e4e4e7;
+  --border-focus: #60a5fa;
+  --border-brand-default: #8b5cf6;
+}
+
+/* ————— Gizmo global chrome (measured) ————— */
+
+html, body {
+  background: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+button { user-select: none; }
+
+/* Booster display face for titles/numbers */
+.font-booster {
+  font-family: var(--font-booster), var(--font-inter), sans-serif;
+}
+
+/* ————— Card system (measured radii) ————— */
+.g-card {          /* standard card: r16 */
+  background: var(--bg-surface);
+  border-radius: 16px;
+}
+.g-card-hero {     /* hero card: r24 */
+  background: var(--bg-surface);
+  border-radius: 24px;
+}
+.g-pill {          /* pill: full radius, the Gizmo button shape */
+  border-radius: 9999px;
+}
+
+/* ————— Feedback animations (from clone calibration) ————— */
+@keyframes g-heart-break {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.3) rotate(-8deg); }
+  60% { transform: scale(0.9) rotate(8deg); }
+  100% { transform: scale(1); }
+}
+.g-heart-break { animation: g-heart-break 0.6s cubic-bezier(0.36,0.07,0.19,0.97) both; }
+
+@keyframes g-reward-float {
+  0% { transform: translateY(0); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translateY(-48px); opacity: 0; }
+}
+.g-reward-float { animation: g-reward-float 1.1s ease-out forwards; }
+
+@keyframes g-question-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.g-question-enter { animation: g-question-enter 0.3s ease-out; }
+
+/* per-letter rising baseline (Gizmo brand signature, measured offsets) */
+.g-letter-rise span { display: inline-block; }
+
+
+/* ————— Utilities kept from the old skin, restyled with Gizmo tokens ————— */
+
+/* quiz progress track */
+.progress-track { background: var(--bg-canvas); border-radius: 9999px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 9999px; transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); background: var(--bg-brand-emphasis-default); }
+
+/* floating reward text (correct/wrong feedback) */
+.float-reward {
+  position: absolute;
+  pointer-events: none;
+  font-weight: 800;
+  font-size: 24px;
+  font-family: var(--font-booster), var(--font-inter), sans-serif;
+  animation: g-reward-float 1.2s ease-out forwards;
+  text-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+  z-index: 10;
+}
+
+/* screen transition */
+.screen-enter { animation: g-question-enter 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+
+/* legacy animation classes (kept for compatibility, token-tinted) */
+.animate-pop { animation: g-pop 0.3s ease-out; }
+.animate-shake { animation: g-shake 0.4s ease-in-out; }
+.animate-float-up { animation: g-reward-float 1s ease-out forwards; }
+.animate-bounce-in { animation: g-bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.animate-slide-up { animation: g-slide-up 0.4s ease-out; }
+.animate-heartbeat { animation: g-heartbeat 0.6s ease-in-out; }
+@keyframes g-pop { 0% { transform: scale(1); } 50% { transform: scale(1.15); } 100% { transform: scale(1); } }
+@keyframes g-shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+@keyframes g-bounce-in { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); } 100% { transform: scale(1); opacity: 1; } }
+@keyframes g-slide-up { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes g-heartbeat { 0%, 100% { transform: scale(1); } 25% { transform: scale(1.1); } 50% { transform: scale(0.95); } 75% { transform: scale(1.05); } }
