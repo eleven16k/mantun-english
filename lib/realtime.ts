@@ -59,6 +59,8 @@ export interface RealtimeCallCallbacks {
   onUserTranscript?: (text: string, partial: boolean) => void;
   /** Completed assistant reply for one response turn. */
   onAssistantTranscript?: (text: string) => void;
+  /** Mic loudness (0..1 RMS), emitted per capture chunk for UI meters. */
+  onLevel?: (rms: number) => void;
   onError?: (message: string) => void;
 }
 
@@ -158,6 +160,7 @@ export class RealtimeCall {
     });
     this.captureNode.port.onmessage = (e: MessageEvent) => {
       if (e.data instanceof ArrayBuffer) this.sendMicChunk(e.data);
+      else if (e.data?.kind === "level") this.opts.onLevel?.(e.data.rms as number);
     };
 
     this.micSrc = ctx.createMediaStreamSource(this.micStream);
@@ -206,10 +209,17 @@ export class RealtimeCall {
   }
 
   private sendMicChunk(pcm16: ArrayBuffer) {
-    if (!this.configured) return; // server rejects audio before session.update
+    if (!this.configured || this.muted) return; // server rejects audio before session.update; muted = hold audio
     const b64 = base64FromBytes(new Uint8Array(pcm16));
     this.send({ type: "input_audio_buffer.append", audio: b64 });
   }
+
+  /** Mute = hold mic audio client-side; the server simply hears silence. */
+  setMuted(muted: boolean) {
+    this.muted = muted;
+  }
+
+  private muted = false;
 
   private onServerEvent(raw: unknown) {
     if (typeof raw !== "string") return;
