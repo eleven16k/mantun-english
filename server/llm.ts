@@ -142,26 +142,30 @@ export async function llmChatStream(
   return full;
 }
 
-const DEFAULT_TTS_MODEL = "google/gemini-3.1-flash-tts-preview";
+const DEFAULT_TTS_MODEL = "qwen/qwen-audio-3.0-tts-plus";
 
 /**
- * TTS via the gateway's /audio/speech (e.g. gemini-3.1-flash-tts-preview).
+ * TTS via the gateway's /audio/speech (qwen-audio-3.0-tts-plus default,
+ * gemini-3.1-flash-tts-preview also works but ~2× slower and 2× the tokens).
  * Returns base64 PCM16 mono @ 24 kHz — the same shape geminiTTS produces, so
- * the client's playPcm audio path needs no changes. Throws when the model or
- * endpoint is unavailable so callers can fall back.
+ * the client's playPcm audio path needs no changes. Voice is model-specific
+ * (Gemini takes "Kore"; qwen/grok reject any voice param) so it is omitted
+ * unless explicitly given. Throws when unavailable so callers can fall back.
  */
-export async function llmTTS(text: string, voice = "Kore"): Promise<string> {
+export async function llmTTS(text: string, voice?: string): Promise<string> {
   const key = llmApiKey();
   if (!key) throw new Error("LLM_API_KEY not configured");
+
+  const body: Record<string, unknown> = {
+    model: process.env.LLM_TTS_MODEL ?? DEFAULT_TTS_MODEL,
+    input: text.slice(0, 800),
+  };
+  if (voice) body.voice = voice;
 
   const res = await fetch(`${llmBaseUrl()}/audio/speech`, {
     method: "POST",
     headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
-    body: JSON.stringify({
-      model: process.env.LLM_TTS_MODEL ?? DEFAULT_TTS_MODEL,
-      input: text.slice(0, 800),
-      voice,
-    }),
+    body: JSON.stringify(body),
     signal: AbortSignal.timeout(60_000),
   });
   if (!res.ok) {
