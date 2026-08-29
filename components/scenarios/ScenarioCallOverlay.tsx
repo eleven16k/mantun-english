@@ -3,8 +3,10 @@
 /**
  * ScenarioCallOverlay — full-screen live voice call with the scenario NPC.
  * Rides the OpenAI Realtime-compatible WebSocket of the local
- * speech-to-speech engine (lib/realtime). Live bilingual transcript rows and
- * call status; on hang-up the transcript is handed back to the parent page.
+ * speech-to-speech engine (lib/realtime). The call screen shows only status;
+ * the bilingual transcript stays hidden until the user taps "view
+ * transcript", which opens a modal. On hang-up the transcript is handed back
+ * to the parent page.
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -41,6 +43,7 @@ export function ScenarioCallOverlay({ npcName, npcRole, image, emoji, instructio
   const [status, setStatus] = useState<CallStatus>("connecting");
   const [rows, setRows] = useState<(CallTranscriptRow & { partial?: boolean })[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [showTranscript, setShowTranscript] = useState(false);
   const callRef = useRef<RealtimeCall | null>(null);
   const transcriptEndRef = useRef<HTMLDivElement>(null);
 
@@ -81,9 +84,10 @@ export function ScenarioCallOverlay({ npcName, npcRole, image, emoji, instructio
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Keep the modal pinned to the latest row while it is open.
   useEffect(() => {
-    transcriptEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [rows]);
+    if (showTranscript) transcriptEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [rows, showTranscript]);
 
   const hangUp = () => {
     callRef.current?.close();
@@ -151,38 +155,35 @@ export function ScenarioCallOverlay({ npcName, npcRole, image, emoji, instructio
           </div>
         )}
 
-        {/* Live transcript */}
-        <div className="mt-5 w-full flex-1 space-y-2.5 overflow-y-auto rounded-2xl border border-white/5 bg-white/[0.03] p-4 [scrollbar-width:thin]">
-          {rows.length === 0 && !error && (
-            <p className="pt-6 text-center text-xs leading-relaxed text-white/35">{t("scn.liveTip")}</p>
+        <div className="flex-1" />
+
+        {error && (
+          <div className="mb-5 w-full max-w-xs space-y-3 rounded-2xl border border-red-500/20 bg-red-500/10 p-4 text-center">
+            <p className="text-xs leading-relaxed text-red-300">{error}</p>
+            <button
+              onClick={hangUp}
+              className="rounded-xl bg-white px-4 py-2 text-xs font-bold text-black transition hover:bg-white/90"
+            >
+              {t("scn.endCall")}
+            </button>
+          </div>
+        )}
+
+        {/* Transcript stays hidden during the call — tap to view in a modal */}
+        <button
+          onClick={() => setShowTranscript(true)}
+          className="relative flex items-center gap-2 rounded-pill border border-white/10 bg-white/5 px-5 py-2.5 text-xs font-bold text-white/70 transition hover:bg-white/10 hover:text-white"
+        >
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          {t("scn.viewTranscript")}
+          {rows.length > 0 && (
+            <span className="grid h-5 min-w-5 place-items-center rounded-full bg-brand px-1 text-[10px] font-black text-white">
+              {rows.length}
+            </span>
           )}
-          {rows.map((r, i) => (
-            <div key={i} className={`flex ${r.role === "user" ? "justify-end" : "justify-start"}`}>
-              <div
-                className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-xs leading-relaxed ${
-                  r.role === "user"
-                    ? "rounded-tr-sm bg-brand text-white"
-                    : "rounded-tl-sm border border-white/10 bg-white/10 text-white/90"
-                } ${r.partial ? "opacity-60" : ""}`}
-              >
-                {r.partial && <span className="mr-1.5 text-[9px] uppercase tracking-widest opacity-60">{t("scn.you")}</span>}
-                {r.text}
-              </div>
-            </div>
-          ))}
-          {error && (
-            <div className="mx-auto mt-6 max-w-xs space-y-3 rounded-2xl border border-red-500/20 bg-red-500/10 p-4 text-center">
-              <p className="text-xs leading-relaxed text-red-300">{error}</p>
-              <button
-                onClick={hangUp}
-                className="rounded-xl bg-white px-4 py-2 text-xs font-bold text-black transition hover:bg-white/90"
-              >
-                {t("scn.endCall")}
-              </button>
-            </div>
-          )}
-          <div ref={transcriptEndRef} />
-        </div>
+        </button>
 
         {/* Hang up */}
         <button onClick={hangUp} className="group relative mt-6 h-16 w-16" aria-label={t("scn.endCall")}>
@@ -205,6 +206,55 @@ export function ScenarioCallOverlay({ npcName, npcRole, image, emoji, instructio
           }
         `}</style>
       </div>
+
+      {/* Transcript modal — call keeps running underneath */}
+      {showTranscript && (
+        <div
+          className="fixed inset-0 z-[210] flex items-end justify-center bg-black/50 backdrop-blur-sm sm:items-center"
+          onClick={() => setShowTranscript(false)}
+        >
+          <div
+            className="flex max-h-[70vh] w-full max-w-lg flex-col overflow-hidden rounded-t-3xl border border-white/10 bg-[rgba(15,21,38,0.98)] shadow-2xl sm:rounded-3xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between border-b border-white/5 px-5 py-4">
+              <p className="text-sm font-bold text-white">{t("scn.transcriptTitle")}</p>
+              <button
+                onClick={() => setShowTranscript(false)}
+                aria-label={t("scn.transcriptTitle")}
+                className="grid h-8 w-8 place-items-center rounded-full border border-white/10 bg-white/5 text-white/60 transition hover:bg-white/10 hover:text-white"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <path d="M18 6 6 18M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="flex-1 space-y-2.5 overflow-y-auto p-5 [scrollbar-width:thin]">
+              {rows.length === 0 && !error && (
+                <p className="pt-4 text-center text-xs leading-relaxed text-white/35">{t("scn.liveTip")}</p>
+              )}
+              {rows.map((r, i) => (
+                <div key={i} className={`flex ${r.role === "user" ? "justify-end" : "justify-start"}`}>
+                  <div
+                    className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-xs leading-relaxed ${
+                      r.role === "user"
+                        ? "rounded-tr-sm bg-brand text-white"
+                        : "rounded-tl-sm border border-white/10 bg-white/10 text-white/90"
+                    } ${r.partial ? "opacity-60" : ""}`}
+                  >
+                    {r.partial && <span className="mr-1.5 text-[9px] uppercase tracking-widest opacity-60">{t("scn.you")}</span>}
+                    {r.text}
+                  </div>
+                </div>
+              ))}
+              {error && (
+                <p className="pt-2 text-center text-xs leading-relaxed text-red-300">{error}</p>
+              )}
+              <div ref={transcriptEndRef} />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
