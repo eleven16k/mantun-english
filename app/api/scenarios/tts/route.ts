@@ -1,9 +1,11 @@
 /**
  * POST /api/scenarios/tts — replay an NPC message as speech.
  * Body: { text } → { audio: "<base64 PCM16 24 kHz mono>" }
+ * Primary: gateway /audio/speech (gemini-3.1-flash-tts-preview); Gemini fallback.
  */
 import { NextResponse } from "next/server";
 import { requireAuth } from "../../../../server/auth";
+import { llmAvailable, llmTTS } from "../../../../server/llm";
 import { geminiTTS, GeminiUnavailableError } from "../../../../server/gemini";
 
 export async function POST(req: Request) {
@@ -17,7 +19,14 @@ export async function POST(req: Request) {
     if (!clean) {
       return NextResponse.json({ error: "Text required" }, { status: 400 });
     }
-    const audio = await geminiTTS(clean);
+    let audio: string | null = null;
+    if (llmAvailable()) {
+      audio = await llmTTS(clean).catch(() => null);
+    }
+    if (!audio) audio = await geminiTTS(clean);
+    if (!audio) {
+      return NextResponse.json({ error: "TTS unavailable" }, { status: 503 });
+    }
     return NextResponse.json({ audio, sampleRate: 24000 });
   } catch (e) {
     if (e instanceof Response) return e;

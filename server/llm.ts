@@ -141,3 +141,34 @@ export async function llmChatStream(
   }
   return full;
 }
+
+const DEFAULT_TTS_MODEL = "google/gemini-3.1-flash-tts-preview";
+
+/**
+ * TTS via the gateway's /audio/speech (e.g. gemini-3.1-flash-tts-preview).
+ * Returns base64 PCM16 mono @ 24 kHz — the same shape geminiTTS produces, so
+ * the client's playPcm audio path needs no changes. Throws when the model or
+ * endpoint is unavailable so callers can fall back.
+ */
+export async function llmTTS(text: string, voice = "Kore"): Promise<string> {
+  const key = llmApiKey();
+  if (!key) throw new Error("LLM_API_KEY not configured");
+
+  const res = await fetch(`${llmBaseUrl()}/audio/speech`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
+    body: JSON.stringify({
+      model: process.env.LLM_TTS_MODEL ?? DEFAULT_TTS_MODEL,
+      input: text.slice(0, 800),
+      voice,
+    }),
+    signal: AbortSignal.timeout(60_000),
+  });
+  if (!res.ok) {
+    const detail = await res.text().catch(() => "");
+    throw new Error(`LLM gateway TTS error ${res.status}: ${detail.slice(0, 200)}`);
+  }
+  const data = (await res.json()) as { audio?: string; mime_type?: string };
+  if (!data.audio) throw new Error("LLM gateway TTS returned no audio");
+  return data.audio;
+}
