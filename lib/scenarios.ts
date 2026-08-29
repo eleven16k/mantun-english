@@ -268,7 +268,9 @@ export function buildCallInstructions(scenario: Scenario, level: VocabLevel, cus
     "You are role-playing a live phone call with a Chinese K12 student practicing English.",
     levelLine,
     vocabLine,
-    "Stay in character at all times. Keep every reply to 1-3 short sentences so the conversation feels natural. Ask a follow-up question when the student seems stuck. Speak only English.",
+    // Latency: the gateway model thinks before answering — keep the task small
+    // so reasoning, generation, and TTS synthesis all stay short.
+    "Respond immediately and spontaneously, like a real phone call. Keep every reply to 1-2 very short sentences (under 25 words). Never mention thinking or reasoning. Ask a follow-up question when the student seems stuck. Speak only English.",
   ]
     .filter(Boolean)
     .join(" ");
