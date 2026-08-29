@@ -4,6 +4,7 @@
  * (localStorage on web, AsyncStorage on React Native).
  * Base URL comes from lib/config (relative on web, absolute on RN).
  */
+import type { Scenario } from "./scenarios";
 import { kv } from "./kv";
 import { apiBase, unauthorizedHandler } from "./config";
 
@@ -326,4 +327,22 @@ export function timeLabel(at: number): string {
   return sameDay
     ? d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
     : d.toLocaleDateString([], { month: "short", day: "numeric" });
+}
+
+// ─── Courseware-generated scenarios ────────────────────────────────────────
+
+export async function generateScenario(text: string, level: string): Promise<{ scenario: Scenario }> {
+  return fetchApi("/api/scenarios/generate", {
+    method: "POST",
+    body: JSON.stringify({ text, level }),
+  });
+}
+
+export async function fetchCustomScenarios(): Promise<Scenario[]> {
+  const d = await fetchApi<{ scenarios: Scenario[] }>("/api/scenarios/custom", {});
+  return d.scenarios ?? [];
+}
+
+export async function deleteCustomScenario(id: string): Promise<void> {
+  await fetchApi(`/api/scenarios/custom?id=${encodeURIComponent(id)}`, { method: "DELETE" });
 }

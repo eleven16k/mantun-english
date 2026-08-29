@@ -105,6 +105,16 @@ db.exec(`
     created_at INTEGER DEFAULT (unixepoch())
   );
 
+  -- User-generated role-play scenarios (from courseware text)
+  CREATE TABLE IF NOT EXISTS custom_scenarios (
+    id TEXT PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    scenario_json TEXT NOT NULL,   -- full Scenario object
+    source_excerpt TEXT,           -- first ~400 chars of the source material
+    level TEXT,
+    created_at INTEGER DEFAULT (unixepoch())
+  );
+
   -- Score history (for trend chart)
   CREATE TABLE IF NOT EXISTS score_history (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

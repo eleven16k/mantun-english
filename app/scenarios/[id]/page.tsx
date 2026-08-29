@@ -11,7 +11,8 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { ScenarioCallOverlay, type CallTranscriptRow } from "@/components/scenarios/ScenarioCallOverlay";
-import { scenarioById, buildCallInstructions, type VocabLevel } from "@/lib/scenarios";
+import { scenarioById, buildCallInstructions, type Scenario, type VocabLevel } from "@/lib/scenarios";
+import { fetchCustomScenarios } from "@/lib/api";
 import { kv } from "@/lib/kv";
 import { useI18n } from "@/lib/i18n";
 import { chatWithNpc, generateScenarioVocab, scenarioTTS, bankScenarioReward } from "@/lib/api";
@@ -52,7 +53,22 @@ async function playPcm(base64: string, sampleRate: number): Promise<void> {
 export default function ScenarioSessionPage() {
   const { id } = useParams<{ id: string }>();
   const { t, locale } = useI18n();
-  const scenario = scenarioById(id);
+  const [customScenario, setCustomScenario] = useState<Scenario | null>(null);
+  const scenario = scenarioById(id) ?? customScenario;
+
+  // Courseware-generated scenarios live server-side — fetch when not static.
+  useEffect(() => {
+    if (scenarioById(id)) return;
+    let alive = true;
+    fetchCustomScenarios()
+      .then((list) => {
+        if (alive) setCustomScenario(list.find((s) => s.id === id) ?? null);
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [id]);
 
   const [briefing, setBriefing] = useState(true);
   const [level, setLevel] = useState<VocabLevel>("JuniorHigh");
