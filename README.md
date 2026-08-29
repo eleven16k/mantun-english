@@ -34,6 +34,16 @@ The app connects automatically; for phone/LAN access set
 Protocol details live in `lib/realtime.ts`; audio runs through two
 AudioWorklets in `public/worklets/`.
 
+To run the engine's LLM on the same gateway model as the rest of Lexi:
+
+```bash
+speech-to-speech serve \
+  --llm_backend chat-completions \
+  --responses_api_base_url https://zm.oxsm.gz.cn/api/v1 \
+  --responses_api_api_key <LLM_API_KEY> \
+  --model_name z-ai/glm-5.3-flash
+```
+
 A protocol-compatible mock engine for development is included:
 
 ```bash
@@ -41,11 +51,22 @@ node tests/mock-s2s-server.mjs 8799
 # then NEXT_PUBLIC_S2S_URL=ws://localhost:8799/v1/realtime npm run dev
 ```
 
-### NPC text chat / TTS / Word Quest (Gemini)
+### AI providers (text generation)
 
-Set `GEMINI_API_KEY` in `.env.local` (see `.env.example`). Without a key the
-pages degrade gracefully: static vocab lists, a friendly chat error, and an
-offline spelling quiz for Word Quest.
+Provider layering in `server/ai.ts` — first configured wins:
+
+1. **OpenAI-compatible gateway** (`LLM_API_KEY`, default
+   `https://zm.oxsm.gz.cn/api/v1` + `z-ai/glm-5.3-flash`, vision + reasoning)
+   — powers `/solve` 看图解题, scenario NPC chat, briefing vocab, Word Quest.
+2. **Gemini** (`GEMINI_API_KEY`) — fallback.
+3. Nothing set → graceful degradation (static vocab, offline Word Quest).
+   Scenario TTS replay is Gemini-only (the gateway has no TTS model).
+
+Note: `node server.js` loads `.env.local` via `@next/env` (server.js top).
+
+The DeepTutor sidecar (生题 via /import) is configured separately in its own
+settings — its active profile was switched to this same gateway + model
+(profile `zm-gateway`, provider `custom`).
 
 ## Tests
 

@@ -2,6 +2,11 @@
  * Custom Next.js server with Socket.IO for real-time class PK battles.
  * Usage: node server.js (replaces `next dev` / `next start`)
  */
+// Load .env.local / .env — the custom server bypasses the next CLI, which is
+// what normally does this (LLM/Gemini keys for the AI routes live there).
+const { loadEnvConfig } = require("@next/env");
+loadEnvConfig(__dirname, process.env.NODE_ENV !== "production");
+
 const { createServer } = require("http");
 const { parse } = require("url");
 const next = require("next");
