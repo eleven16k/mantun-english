@@ -60,7 +60,7 @@ describe("prompt builders", () => {
     const instructions = buildCallInstructions(cafe, "JuniorHigh", ["latte"]);
     expect(instructions).toContain("Oliver");
     expect(instructions).toContain("latte");
-    expect(instructions).toContain("1-3 short sentences");
+    expect(instructions).toContain("1-2 very short sentences");
   });
 
   it("call instructions scale difficulty by level", () => {
