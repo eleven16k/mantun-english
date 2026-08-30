@@ -11,6 +11,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { AppShell } from "@/components/AppShell";
 import { getScenarios, type Scenario, type VocabLevel } from "@/lib/scenarios";
+import { VOCAB_LISTS } from "@/lib/vocab-lists";
 import { generateScenario, fetchCustomScenarios, deleteCustomScenario } from "@/lib/api";
 import { kv } from "@/lib/kv";
 import { useI18n, type MessageKey } from "@/lib/i18n";
@@ -182,22 +183,31 @@ export default function ScenariosPage() {
             {t("scn.vocabLevel")}
           </p>
           <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-            {LEVELS.map((lvl) => (
-              <button
-                key={lvl.id}
-                onClick={() => pickLevel(lvl.id)}
-                className={`flex flex-col items-center gap-0.5 rounded-xl border px-3 py-2.5 text-xs font-bold transition-all ${
-                  level === lvl.id
-                    ? "border-brand bg-brand text-white"
-                    : "border-subtle bg-canvas text-secondary hover:text-primary"
-                }`}
-              >
-                <span>{t(lvl.labelKey)}</span>
-                <span className={level === lvl.id ? "text-white/70" : "text-tertiary"}>
-                  {lvl.id === "Custom" ? customWords.length : ""}{" "}
-                </span>
-              </button>
-            ))}
+            {LEVELS.map((lvl) => {
+              const count = lvl.id === "Custom" ? customWords.length : (VOCAB_LISTS[lvl.id]?.length ?? 0);
+              return (
+                <button
+                  key={lvl.id}
+                  onClick={() => pickLevel(lvl.id)}
+                  className={`flex flex-col items-center gap-0.5 rounded-xl border px-3 py-2.5 text-xs font-bold transition-all ${
+                    level === lvl.id
+                      ? "border-brand bg-brand text-white"
+                      : "border-subtle bg-canvas text-secondary hover:text-primary"
+                  }`}
+                >
+                  <span>{t(lvl.labelKey)}</span>
+                  {count > 0 && (
+                    <span
+                      className={`text-[10px] font-semibold tabular-nums ${
+                        level === lvl.id ? "text-white/75" : "text-tertiary"
+                      }`}
+                    >
+                      {count.toLocaleString()}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
           </div>
 
           {level === "Custom" && (
