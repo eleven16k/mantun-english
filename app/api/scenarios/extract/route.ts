@@ -1,11 +1,12 @@
 /**
  * POST /api/scenarios/extract — extract plain text from an uploaded
- * courseware file (PDF / DOCX / PPTX / TXT / MD) so the scenario generator
- * can consume it. Mirrors the import module's file support; parsing happens
+ * courseware file (PDF / DOCX / PPTX / TXT / MD, images via vision OCR) so
+ * the scenario generator and import flow can consume it. Parsing happens
  * server-side. Body: multipart form with a `file` field → { text, name }.
  */
 import { NextResponse } from "next/server";
 import { requireAuth } from "../../../../server/auth";
+import type { LLMMessage } from "../../../../server/llm";
 
 export const maxDuration = 120;
 
@@ -44,6 +45,34 @@ async function extractPptx(buf: Buffer): Promise<string> {
   return parts.join("\n\n");
 }
 
+/**
+ * Vision OCR via the gateway model (glm-5.3-flash reads images). Transcribes
+ * worksheet/textbook photos verbatim so downstream quiz/scenario generation
+ * sees plain text. 1M-context model handles full-page scans.
+ */
+async function ocrImage(mime: string, buf: Buffer): Promise<string> {
+  const { llmAvailable, llmChat } = await import("../../../../server/llm");
+  if (!llmAvailable()) {
+    throw new Error("Image OCR needs the LLM_API_KEY (vision model) configured");
+  }
+  const dataUrl = `data:${mime};base64,${buf.toString("base64")}`;
+  const messages: LLMMessage[] = [
+    {
+      role: "system",
+      content:
+        "You transcribe images of exercises, worksheets and textbook pages. Output ONLY the text content verbatim: every question number, stem, option (A/B/C/D), formula written inline in plain text, table row as a line. Preserve reading order. No commentary, no markdown headers, no translations.",
+    },
+    {
+      role: "user",
+      content: [
+        { type: "image_url", image_url: { url: dataUrl } },
+        { type: "text", text: "Transcribe all text in this image." },
+      ],
+    },
+  ];
+  return llmChat({ messages, timeoutMs: 120_000 });
+}
+
 export async function POST(req: Request) {
   try {
     requireAuth(req);
@@ -67,6 +96,8 @@ export async function POST(req: Request) {
       text = await extractPptx(buf);
     } else if (name.endsWith(".txt") || name.endsWith(".md") || name.endsWith(".csv")) {
       text = buf.toString("utf8");
+    } else if (file.type.startsWith("image/") || /\.(png|jpe?g|webp|gif|bmp)$/.test(name)) {
+      text = await ocrImage(file.type || "image/png", buf);
     } else {
       return NextResponse.json(
         { error: "Unsupported type — use PDF, DOCX, PPTX, TXT or MD" },

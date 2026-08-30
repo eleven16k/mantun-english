@@ -13,6 +13,7 @@ import {
   listKnowledgeBases,
   type KBInfo,
 } from "@/lib/deeptutor";
+import { extractCoursewareText } from "@/lib/api";
 import type { Question } from "@/lib/types";
 import { saveImport, getImports, isLoggedIn } from "@/lib/api";
 import { useGameStore } from "@/lib/store";
@@ -141,10 +142,28 @@ export default function ImportPage() {
     }
 
     try {
-      const kb = `import-${picked[0].name.replace(/\W+/g, "-").slice(0, 30).toLowerCase()}`;
+      // Images have no server-side parser — OCR them via the vision model and
+      // feed the transcription to the KB as plain text instead.
+      const imgs = picked.filter((f) => f.type.startsWith("image/"));
+      let toUpload = picked;
+      if (imgs.length) {
+        setStatusText(t("imp.statusOcr"));
+        const texts = await Promise.all(
+          imgs.map((f) => extractCoursewareText(f).catch(() => ({ text: "", name: f.name })))
+        );
+        const ocrTxt = texts
+          .map((r, i) => `【${r.name || `image-${i + 1}`}】\n${r.text}`)
+          .filter((s) => s.replace(/\W/g, "").length > 40)
+          .join("\n\n");
+        if (!ocrTxt) throw new Error("Could not read any text from the image(s)");
+        const rest = picked.filter((f) => !f.type.startsWith("image/"));
+        toUpload = [...rest, new File([ocrTxt], "photos.txt", { type: "text/plain" })];
+      }
+
+      const kb = `import-${toUpload[0].name.replace(/\W+/g, "-").slice(0, 30).toLowerCase()}`;
       setKbName(kb);
-      setStatusText(`${t("imp.statusUploadingPrefix")}${picked.length}${t("imp.statusUploadingSuffix")}`);
-      await createKnowledgeBase(kb, picked);
+      setStatusText(`${t("imp.statusUploadingPrefix")}${toUpload.length}${t("imp.statusUploadingSuffix")}`);
+      await createKnowledgeBase(kb, toUpload);
 
       setPhase("indexing");
       setStatusText(t("imp.statusIndexing"));

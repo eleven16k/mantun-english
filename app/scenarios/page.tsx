@@ -291,7 +291,7 @@ export default function ScenariosPage() {
                   {extracting ? t("scn.extracting") : t("scn.importFile")}
                   <input
                     type="file"
-                    accept=".pdf,.docx,.pptx,.txt,.md"
+                    accept=".pdf,.docx,.pptx,.txt,.md,image/*"
                     className="hidden"
                     disabled={extracting}
                     onChange={(e) => void importCourseware(e.target.files?.[0])}
