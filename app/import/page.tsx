@@ -157,10 +157,13 @@ export default function ImportPage() {
           .join("\n\n");
         if (!ocrTxt) throw new Error("Could not read any text from the image(s)");
         const rest = picked.filter((f) => !f.type.startsWith("image/"));
-        toUpload = [...rest, new File([ocrTxt], "photos.txt", { type: "text/plain" })];
+        // Unique name per batch — a fixed "photos.txt" would funnel every
+        // image upload into the same KB and pollute later quizzes.
+        const stamp = Date.now().toString(36);
+        toUpload = [...rest, new File([ocrTxt], `photos-${stamp}.txt`, { type: "text/plain" })];
       }
 
-      const kb = `import-${toUpload[0].name.replace(/\W+/g, "-").slice(0, 30).toLowerCase()}`;
+      const kb = `import-${toUpload[0].name.replace(/\W+/g, "-").slice(0, 30).toLowerCase()}-${Date.now().toString(36)}`;
       setKbName(kb);
       setStatusText(`${t("imp.statusUploadingPrefix")}${toUpload.length}${t("imp.statusUploadingSuffix")}`);
       await createKnowledgeBase(kb, toUpload);
