@@ -12,7 +12,7 @@ import Link from "next/link";
 import { AppShell } from "@/components/AppShell";
 import { getScenarios, type Scenario, type VocabLevel } from "@/lib/scenarios";
 import { VOCAB_LISTS } from "@/lib/vocab-lists";
-import { generateScenario, fetchCustomScenarios, deleteCustomScenario } from "@/lib/api";
+import { generateScenario, fetchCustomScenarios, deleteCustomScenario, extractCoursewareText } from "@/lib/api";
 import { kv } from "@/lib/kv";
 import { useI18n, type MessageKey } from "@/lib/i18n";
 
@@ -44,6 +44,8 @@ export default function ScenariosPage() {
   const [createLevel, setCreateLevel] = useState<VocabLevel>("JuniorHigh");
   const [creating, setCreating] = useState(false);
   const [createError, setCreateError] = useState(false);
+  const [extracting, setExtracting] = useState(false);
+  const [extractedName, setExtractedName] = useState("");
 
   useEffect(() => {
     const savedLevel = kv.getItem(LEVEL_KEY) as VocabLevel | null;
@@ -76,9 +78,21 @@ export default function ScenariosPage() {
     setTimeout(() => setShowSaved(false), 2000);
   };
 
-  const importTxt = async (file: File | undefined) => {
-    if (!file) return;
-    setCreateText((await file.text()).slice(0, 20000));
+  const importCourseware = async (file: File | undefined) => {
+    if (!file || extracting) return;
+    setCreateError(false);
+    setExtracting(true);
+    setExtractedName("");
+    try {
+      const { text, name } = await extractCoursewareText(file);
+      setCreateText(text.slice(0, 20000));
+      setExtractedName(`${name} · ${text.length.toLocaleString()} chars`);
+    } catch (err) {
+      setCreateError(true);
+      console.error("[scenarios] extract failed:", err);
+    } finally {
+      setExtracting(false);
+    }
   };
 
   const runCreate = async () => {
@@ -272,10 +286,19 @@ export default function ScenariosPage() {
             />
 
             <div className="mt-3 flex items-center justify-between gap-3">
-              <label className="cursor-pointer rounded-pill border border-subtle bg-canvas px-4 py-2 text-xs font-bold text-secondary transition hover:text-primary">
-                {t("scn.importVocab")}
-                <input type="file" accept=".txt,.md,text/plain" className="hidden" onChange={(e) => void importTxt(e.target.files?.[0])} />
-              </label>
+              <div className="flex items-center gap-2">
+                <label className="cursor-pointer rounded-pill border border-subtle bg-canvas px-4 py-2 text-xs font-bold text-secondary transition hover:text-primary">
+                  {extracting ? t("scn.extracting") : t("scn.importFile")}
+                  <input
+                    type="file"
+                    accept=".pdf,.docx,.pptx,.txt,.md"
+                    className="hidden"
+                    disabled={extracting}
+                    onChange={(e) => void importCourseware(e.target.files?.[0])}
+                  />
+                </label>
+                {extractedName && <span className="max-w-40 truncate text-[11px] text-positive">{extractedName}</span>}
+              </div>
               <div className="flex gap-1.5">
                 {LEVELS.filter((l) => l.id !== "Custom").map((l) => (
                   <button

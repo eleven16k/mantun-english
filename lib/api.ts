@@ -346,3 +346,19 @@ export async function fetchCustomScenarios(): Promise<Scenario[]> {
 export async function deleteCustomScenario(id: string): Promise<void> {
   await fetchApi(`/api/scenarios/custom?id=${encodeURIComponent(id)}`, { method: "DELETE" });
 }
+
+/** Upload a courseware file (PDF/DOCX/PPTX/TXT/MD) and get its plain text. */
+export async function extractCoursewareText(file: File): Promise<{ text: string; name: string }> {
+  const form = new FormData();
+  form.append("file", file);
+  const res = await fetch(`${apiBase()}/api/scenarios/extract`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${kv.getItem("lexi-token") ?? ""}` },
+    body: form,
+  });
+  if (!res.ok) {
+    const d = (await res.json().catch(() => ({}))) as { error?: string };
+    throw new Error(d.error ?? `Extract failed (${res.status})`);
+  }
+  return res.json();
+}
