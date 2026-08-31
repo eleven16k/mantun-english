@@ -27,10 +27,21 @@ export default defineConfig({
       dependencies: ["setup"],
     },
   ],
-  webServer: {
-    command: "rm -rf .tmp/e2e && DATA_DIR=./.tmp/e2e/data PORT=3199 node server.js",
-    url: "http://localhost:3199/chat",
-    reuseExistingServer: !process.env.CI,
-    timeout: 150_000,
-  },
+  webServer: [
+    {
+      // lexi-api (standalone backend + Socket.IO) on :4199 with an isolated DB
+      command: "rm -rf .tmp/e2e-apidata && DATA_DIR=./.tmp/e2e-apidata PORT=4199 JWT_SECRET=test-secret node server.js",
+      cwd: "../lexi-api",
+      url: "http://localhost:4199/api/health",
+      reuseExistingServer: !process.env.CI,
+      timeout: 150_000,
+    },
+    {
+      // lexi (student web) on :3199 — /api/* rewrites to :4199, socket env points at :4199
+      command: "NEXT_PUBLIC_SOCKET_URL=http://localhost:4199 npx next dev -p 3199",
+      url: "http://localhost:3199/chat",
+      reuseExistingServer: !process.env.CI,
+      timeout: 150_000,
+    },
+  ],
 });

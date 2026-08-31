@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev -p 3123",
     "build": "next build",
     "start": "next start -p 3123",
     "lint": "next lint",
-    "dev:ws": "node server.js",
+    "dev:api": "npm --prefix ../lexi-api run dev",
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "vitest run",
     "test:watch": "vitest",
-    "test:pk": "vitest run tests/integration",
     "test:e2e": "playwright test --project=setup --project=chromium --workers=1",
     "test:e2e:ai": "playwright test --project=ai"
   },
@@ -34,7 +33,6 @@
     "rehype-katex": "^7.0.1",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
-    "socket.io": "^4.8.3",
     "socket.io-client": "^4.8.3",
     "unpdf": "^1.8.1",
     "zustand": "^4.5.4"

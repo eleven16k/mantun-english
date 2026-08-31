@@ -78,6 +78,10 @@ export function s2sOutputRate(): number {
 }
 
 export function socketBase(): string {
+  // Socket.IO lives on the lexi-api service (X1 三端分家). Web dev/prod point
+  // NEXT_PUBLIC_SOCKET_URL at it; when unset, fall back to same-origin
+  // (deployments where an ingress routes both /api and /socket.io to lexi-api).
+  if (process.env.NEXT_PUBLIC_SOCKET_URL) return process.env.NEXT_PUBLIC_SOCKET_URL;
   return api;
 }
 
