@@ -79,7 +79,6 @@ const NAV_SECTIONS: NavSection[] = [
       { href: "/weakness", labelKey: "nav.weakness", icon: I.alert },
       { href: "/history", labelKey: "nav.aiHistory", icon: I.history },
       { href: "/share", labelKey: "nav.share", icon: I.share },
-      { href: "/parent", labelKey: "nav.parent", icon: I.parent },
       { href: "/pricing", labelKey: "nav.pricing", icon: I.crown },
     ],
   },

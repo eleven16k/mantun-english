@@ -1,0 +1,14 @@
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3123
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.6s
+ ○ Compiling /chat ...
+ ✓ Compiled /chat in 2.3s (609 modules)
+ GET /chat 200 in 2434ms
+ ✓ Compiled /class in 441ms (599 modules)
+ GET /class 200 in 509ms
+ ✓ Compiled /family in 113ms (591 modules)
+ GET /family 200 in 154ms
+[?25h
