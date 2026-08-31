@@ -1,25 +1,10 @@
-# deps / build
 node_modules/
 .next/
-out/
-*.tsbuildinfo
-
-# runtime data
-data/*.db
-data/*.db-shm
-data/*.db-wal
-
-# env
-.env
-.env.local
-.env.*.local
-
-# tests / tooling
 .tmp/
+data/
+test-results/
 playwright/.auth/
 playwright/report/
-test-results/
-
-# misc
+*.tsbuildinfo
 .DS_Store
-npm-debug.log*
+.env.local
