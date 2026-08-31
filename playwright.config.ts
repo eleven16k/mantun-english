@@ -37,8 +37,8 @@ export default defineConfig({
       timeout: 150_000,
     },
     {
-      // lexi (student web) on :3199 — /api/* rewrites to :4199, socket env points at :4199
-      command: "NEXT_PUBLIC_SOCKET_URL=http://localhost:4199 npx next dev -p 3199",
+      // lexi (student web) on :3199 — /api/* rewrites to the API at :4199
+      command: "API_URL=http://localhost:4199 NEXT_PUBLIC_SOCKET_URL=http://localhost:4199 npx next dev -p 3199",
       url: "http://localhost:3199/chat",
       reuseExistingServer: !process.env.CI,
       timeout: 150_000,

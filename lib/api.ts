@@ -158,29 +158,30 @@ export async function deleteImport(id?: string) {
   return fetchApi(url, { method: "DELETE" });
 }
 
-// ─── Classes ───
+// ─── Classes (thin client, V4 S1: join / my classes / read-only leaderboard) ───
 export interface ClassInfo {
   code: string;
   name: string;
   id: number;
   member_count?: number;
+  teacher_name?: string;
 }
 
 export async function getClasses() {
   return fetchApi<{ teaching: ClassInfo[]; joined: ClassInfo[] }>("/api/classes");
 }
 
-export async function createClass(name: string) {
-  return fetchApi<ClassInfo>("/api/classes", {
-    method: "POST",
-    body: JSON.stringify({ name }),
-  });
-}
-
 export async function joinClass(code: string) {
   return fetchApi("/api/classes", {
     method: "POST",
     body: JSON.stringify({ action: "join", code }),
+  });
+}
+
+export async function leaveClass(code: string) {
+  return fetchApi("/api/classes", {
+    method: "POST",
+    body: JSON.stringify({ action: "leave", code }),
   });
 }
 

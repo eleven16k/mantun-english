@@ -52,14 +52,27 @@ test.describe("/groups", () => {
 });
 
 test.describe("/class", () => {
-  test("teacher creates a class with a code", async ({ page }) => {
+  test("student joins a class by code and sees it in My Classes", async ({ page, request }) => {
+    // Seed: teacher (own role) creates a class via API — create UI left the
+    // student app in V4 S1 (management lives in lexi-teacher).
+    const teacherPhone = uniquePhone();
+    const send = await request.post("/api/auth", { data: { action: "send", phone: teacherPhone } });
+    const { devCode } = (await send.json()) as { devCode: string };
+    const verify = await request.post("/api/auth", { data: { phone: teacherPhone, code: devCode, role: "teacher" } });
+    const { token } = (await verify.json()) as { token: string };
+    const created = await request.post("/api/classes", {
+      headers: { Authorization: `Bearer ${token}` },
+      data: { name: `E2E Class ${Date.now()}` },
+    });
+    const { code } = (await created.json()) as { code: string };
+    expect(code).toMatch(/^\d{6}$/);
+
     await page.goto("/class");
-    const classInput = page.getByPlaceholder(/Grade 9|初三/i);
-    await classInput.waitFor({ state: "visible", timeout: 8000 });
-    await classInput.fill(`E2E Class ${Date.now()}`);
-    await page.locator("button").filter({ hasText: /create/i }).last().click();
-    // created class card renders with "Class code: <6 digits>"
-    await expect(page.getByText(/Class code/i).first()).toBeVisible({ timeout: 15_000 });
+    const codeInput = page.getByPlaceholder(/6-digit|6 位/);
+    await codeInput.waitFor({ state: "visible", timeout: 8000 });
+    await codeInput.fill(code);
+    await page.locator("button").filter({ hasText: /join|加入/i }).click();
+    await expect(page.getByText(/E2E Class/).first()).toBeVisible({ timeout: 15_000 });
   });
 });
 

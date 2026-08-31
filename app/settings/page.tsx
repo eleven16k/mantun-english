@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { useGameStore } from "@/lib/store";
 import { useI18n, LOCALES } from "@/lib/i18n";
+import { getMe, updateProfile, logout, isLoggedIn } from "@/lib/api";
+import { maskPhone } from "@/lib/maskPhone";
 
 /* — toggle switch — */
 function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
@@ -109,13 +111,28 @@ export default function SettingsPage() {
   const [hapticOn, setHapticOn] = useState(true);
   const [notifPush, setNotifPush] = useState(true);
   const [notifStreak, setNotifStreak] = useState(true);
-  const [signedOut, setSignedOut] = useState(false);
   const [mounted, setMounted] = useState(false);
+
+  // Account (C2-Δ): real phone (masked) + editable nickname. No fake
+  // email/password rows; no role row (roles live in the other two apps).
+  const [accountPhone, setAccountPhone] = useState<string | null>(null);
+  const [accountNickname, setAccountNickname] = useState<string>("");
+  const [editingNickname, setEditingNickname] = useState(false);
+  const [nicknameDraft, setNicknameDraft] = useState("");
+  const [nicknameError, setNicknameError] = useState("");
 
   const prefs = { darkMode, focusMode, soundOn, hapticOn, notifPush, notifStreak };
 
   useEffect(() => {
     setMounted(true);
+    if (isLoggedIn()) {
+      getMe()
+        .then((d) => {
+          setAccountPhone(d.user.phone ?? null);
+          setAccountNickname(d.user.nickname ?? "");
+        })
+        .catch(() => {});
+    }
     try {
       const saved = JSON.parse(localStorage.getItem("lexi-settings") || "{}");
       if (typeof saved.darkMode === "boolean") setDarkMode(saved.darkMode);
@@ -140,28 +157,73 @@ export default function SettingsPage() {
     document.documentElement.classList.toggle("dark", v);
   };
 
+  // Nickname edit — client validation mirrors the server rule (1..16 chars)
+  const saveNickname = async () => {
+    const next = nicknameDraft.trim();
+    if (next.length < 1 || next.length > 16) {
+      setNicknameError(t("settings.nickname"));
+      return;
+    }
+    try {
+      await updateProfile({ nickname: next });
+      setAccountNickname(next);
+      setEditingNickname(false);
+      setNicknameError("");
+    } catch {
+      setNicknameError(t("settings.nicknameSave"));
+    }
+  };
+
+  // Real sign-out (C2-Δ): clear token + in-progress answer state, land /auth
+  const signOut = () => {
+    logout();
+    useGameStore.setState({ questions: [], currentQIndex: 0, selectedAnswer: null, showFeedback: false });
+    router.replace("/auth");
+  };
+
   return (
     <AppShell>
       <div className="mx-auto w-full max-w-md px-3 pb-6 pt-[84px] sm:px-4">
         <h1 className="px-2 pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t("settings.title")}</h1>
 
-        {signedOut ? (
-          <div className="g-card p-8 text-center shadow-sm">
-            <p className="font-booster text-lg font-extrabold text-primary">{t("settings.signedOut")}</p>
-            <p className="mt-1 text-sm text-tertiary">{t("settings.signedOutHint")}</p>
-            <button
-              onClick={() => setSignedOut(false)}
-              className="mt-4 rounded-pill bg-brand px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90"
-            >
-              {t("settings.signIn")}
-            </button>
-          </div>
-        ) : (
+        {(
           <div className="flex flex-col gap-5">
-            {/* Account */}
+            {/* Account — real phone (masked) + editable nickname; no fake email/password, no role row */}
             <SettingGroup title={t("settings.account")}>
-              <LinkRow label={t("settings.email")} value="you@lexi.app" />
-              <LinkRow label={t("settings.password")} value="••••••••" />
+              <LinkRow label={t("settings.phone")} value={accountPhone ? maskPhone(accountPhone) : t("settings.notLoggedIn")} />
+              {editingNickname ? (
+                <div className="px-4 py-3.5">
+                  <p className="text-[15px] font-medium text-primary">{t("settings.nickname")}</p>
+                  <div className="mt-2 flex items-center gap-2">
+                    <input
+                      value={nicknameDraft}
+                      onChange={(e) => setNicknameDraft(e.target.value)}
+                      maxLength={16}
+                      autoFocus
+                      className="min-w-0 flex-1 rounded-xl border border-subtle bg-app px-3 py-2 text-sm outline-none focus:border-brandborder"
+                    />
+                    <button
+                      onClick={saveNickname}
+                      disabled={nicknameDraft.trim().length < 1 || nicknameDraft.trim().length > 16}
+                      className="rounded-pill bg-brand px-4 py-2 text-xs font-bold text-white transition hover:opacity-90 disabled:opacity-40"
+                    >
+                      {t("settings.nicknameSave")}
+                    </button>
+                    <button
+                      onClick={() => { setEditingNickname(false); setNicknameError(""); }}
+                      className="rounded-pill border border-subtle px-4 py-2 text-xs font-bold text-secondary"
+                    >
+                      {t("settings.nicknameCancel")}
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <LinkRow
+                  label={t("settings.nickname")}
+                  value={accountNickname || t("settings.notLoggedIn")}
+                  onClick={() => { setNicknameDraft(accountNickname); setEditingNickname(true); }}
+                />
+              )}
             </SettingGroup>
 
             {/* Appearance */}
@@ -249,12 +311,12 @@ export default function SettingsPage() {
               <LinkRow label={t("settings.difficulty")} value={t("settings.difficultyValue")} />
             </SettingGroup>
 
-            {/* Sign out */}
+            {/* Sign out — real logout: clears token + answer state, lands /auth */}
             <SettingGroup title="">
               <LinkRow
                 label={t("settings.signOut")}
                 destructive
-                onClick={() => setSignedOut(true)}
+                onClick={signOut}
               />
             </SettingGroup>
 

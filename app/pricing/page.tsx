@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { subscribe } from "@/lib/api";
+import { shippedMembershipFeatures } from "@/lib/membership";
 import { useGameStore } from "@/lib/store";
 import { useI18n, type MessageKey } from "@/lib/i18n";
 
@@ -62,14 +63,9 @@ const PLANS: {
   },
 ];
 
-const COMPARISON: { featKey: MessageKey; freeKey: MessageKey; memberKey: MessageKey }[] = [
-  { featKey: "pricing.cmp.daily", freeKey: "pricing.cmp.daily.free", memberKey: "pricing.cmp.daily.member" },
-  { featKey: "pricing.cmp.hearts", freeKey: "pricing.cmp.hearts.free", memberKey: "pricing.cmp.hearts.member" },
-  { featKey: "pricing.cmp.ai", freeKey: "pricing.cmp.ai.free", memberKey: "pricing.cmp.ai.member" },
-  { featKey: "pricing.cmp.parent", freeKey: "pricing.cmp.parent.free", memberKey: "pricing.cmp.parent.member" },
-  { featKey: "pricing.cmp.weak", freeKey: "pricing.cmp.weak.free", memberKey: "pricing.cmp.weak.member" },
-  { featKey: "pricing.cmp.ads", freeKey: "pricing.cmp.ads.free", memberKey: "pricing.cmp.ads.member" },
-];
+// Comparison table — config-driven from lib/membership (M4-Δ): only shipped
+// rows render, so copy never promises an unshipped feature.
+const COMPARISON = shippedMembershipFeatures();
 
 export default function PricingPage() {
   const [selected, setSelected] = useState("semester");
