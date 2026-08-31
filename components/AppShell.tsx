@@ -55,7 +55,9 @@ const NAV_SECTIONS: NavSection[] = [
     titleKey: "nav.sectionDecks",
     items: [
       { href: "/decks", labelKey: "nav.myDecks", icon: I.deck },
-      { href: "/decks/public", labelKey: "nav.publicDecks", icon: I.globe },
+      // Hidden until more decks ship (English is the only deck for now) —
+      // route/page still exist at /decks/public.
+      // { href: "/decks/public", labelKey: "nav.publicDecks", icon: I.globe },
       { href: "/vocab", labelKey: "nav.vocab", icon: I.deck },
       { href: "/add", labelKey: "nav.addCard", icon: I.bolt },
     ],

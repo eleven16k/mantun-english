@@ -23,7 +23,8 @@ export function GizmoSidebar() {
     { label: t("chrome.home"), icon: `${ASSETS}/nav-home.png`, screen: "dashboard" },
     { label: t("chrome.progress"), icon: `${ASSETS}/nav-streak.png`, screen: "dashboard" },
     { label: t("chrome.profileDecks"), icon: `${ASSETS}/nav-folder.png`, screen: "dashboard" },
-    { label: t("chrome.publicDecks"), icon: `${ASSETS}/nav-globe.png`, screen: "leaderboard" },
+    // Hidden until more decks ship — see AppShell sidebar note.
+    // { label: t("chrome.publicDecks"), icon: `${ASSETS}/nav-globe.png`, screen: "leaderboard" },
     { label: t("chrome.profile"), icon: `${ASSETS}/avatar-13.png`, screen: "profile", round: true },
   ];
 
