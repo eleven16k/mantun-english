@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { useGameStore } from "@/lib/store";
 import { useI18n, LOCALES } from "@/lib/i18n";
-import { getMe, updateProfile, logout, isLoggedIn } from "@/lib/api";
+import { getMe, updateProfile, logout, isLoggedIn, getParentLinks } from "@/lib/api";
 import { maskPhone } from "@/lib/maskPhone";
 
 /* — toggle switch — */
@@ -120,6 +120,7 @@ export default function SettingsPage() {
   const [editingNickname, setEditingNickname] = useState(false);
   const [nicknameDraft, setNicknameDraft] = useState("");
   const [nicknameError, setNicknameError] = useState("");
+  const [pendingBindings, setPendingBindings] = useState(0);
 
   const prefs = { darkMode, focusMode, soundOn, hapticOn, notifPush, notifStreak };
 
@@ -130,6 +131,10 @@ export default function SettingsPage() {
         .then((d) => {
           setAccountPhone(d.user.phone ?? null);
           setAccountNickname(d.user.nickname ?? "");
+          // Family red-dot (V4 S3): pending parent-binding requests count
+          getParentLinks()
+            .then((links) => setPendingBindings((links.links ?? []).filter((l) => l.status === "pending").length))
+            .catch(() => {});
         })
         .catch(() => {});
     }
@@ -224,6 +229,15 @@ export default function SettingsPage() {
                   onClick={() => { setNicknameDraft(accountNickname); setEditingNickname(true); }}
                 />
               )}
+            </SettingGroup>
+
+            {/* Family (V4 S3) — pending parent-binding requests surface here */}
+            <SettingGroup title={t("settings.family")}>
+              <LinkRow
+                label={t("family.title")}
+                value={pendingBindings > 0 ? `${pendingBindings} ${t("family.pendingSuffix")}` : undefined}
+                onClick={() => router.push("/family")}
+              />
             </SettingGroup>
 
             {/* Appearance */}

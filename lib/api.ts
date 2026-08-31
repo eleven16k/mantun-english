@@ -191,6 +191,59 @@ export async function getClassLeaderboard(code: string) {
   );
 }
 
+// ─── Assignments (V4 S2 — student thin client, read + progress only) ───
+export interface AssignmentRow {
+  id: number;
+  title: string;
+  className: string;
+  targetWords: number;
+  wordCount: number;
+  dueAt: number;
+  progress: number;
+  status: string;
+}
+
+export interface AssignmentDetail extends Omit<AssignmentRow, "wordCount"> {
+  completedAt: number | null;
+  words: { word: string; meaning: string }[];
+}
+
+export async function getAssignments() {
+  return fetchApi<{ assignments: AssignmentRow[] }>("/api/assignments");
+}
+
+export async function getAssignment(id: number) {
+  return fetchApi<AssignmentDetail>(`/api/assignments/${id}`);
+}
+
+export async function reportAssignmentProgress(id: number, progress: number) {
+  return fetchApi<{ progress: number; status: string }>(`/api/assignments/${id}/progress`, {
+    method: "POST",
+    body: JSON.stringify({ progress }),
+  });
+}
+
+// ─── Family bindings (V4 S3 — student side: confirm / reject / unbind) ───
+export interface ParentLink {
+  peerId: number;
+  status: "pending" | "active" | "rejected" | "removed";
+  updatedAt: number | null;
+  nickname: string;
+  avatar: string;
+  maskedPhone: string;
+}
+
+export async function getParentLinks() {
+  return fetchApi<{ links: ParentLink[] }>("/api/parent-links");
+}
+
+export async function actOnParentLink(peerId: number, action: "accept" | "reject" | "remove") {
+  return fetchApi<{ ok: boolean; status: string }>("/api/parent-links", {
+    method: "POST",
+    body: JSON.stringify({ peerId, action }),
+  });
+}
+
 // ─── Study groups ───
 
 export interface GroupInfo {

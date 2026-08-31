@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useGameStore, LEAGUE_TIERS, getTierIndex } from '@/lib/store';
+import { reportAssignmentProgress } from '@/lib/api';
 import { PartyPopperIcon, MuscleIcon, GiftIcon } from './SvgIcons';
 import { BoltIcon, CoinIcon } from './icons';
 import { useI18n } from '@/lib/i18n';
@@ -25,6 +26,18 @@ export default function ResultsScreen() {
       setShowConfetti(true);
       const timer = setTimeout(() => setShowConfetti(false), 2500);
       return () => clearTimeout(timer);
+    }
+  }, []);
+
+  // V4 S2 — the session came from a teacher assignment: report progress
+  // (session correct count; server clamps and keeps the historical max),
+  // then clear the marker so ordinary sessions don't report.
+  useEffect(() => {
+    const store = useGameStore.getState();
+    const asgId = store.activeAssignmentId;
+    if (asgId && lastResults) {
+      useGameStore.setState({ activeAssignmentId: null });
+      reportAssignmentProgress(asgId, lastResults.correct).catch(() => { /* best-effort */ });
     }
   }, []);
 

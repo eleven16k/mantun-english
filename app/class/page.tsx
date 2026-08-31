@@ -1,14 +1,25 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
-import { getClasses, joinClass, leaveClass, getClassLeaderboard, isLoggedIn, getMe } from "@/lib/api";
+import {
+  getClasses, joinClass, leaveClass, getClassLeaderboard, isLoggedIn, getMe,
+  getAssignments, getAssignment, wordlistQuiz,
+} from "@/lib/api";
+import type { AssignmentRow } from "@/lib/api";
+import { adaptQuizPairs } from "@/lib/deeptutor";
+import { useGameStore } from "@/lib/store";
+import type { Question } from "@/lib/types";
 import { useI18n } from "@/lib/i18n";
 
 /**
  * /class — V4 S1 thin client: students join a teacher's class by 6-digit
  * code, see their classes and a READ-ONLY leaderboard, and can leave.
  * All creation/management lives in lexi-teacher — no create UI here.
+ * V4 S2: the assignments section lists the teacher's assignments; starting
+ * one builds an in-memory temp quiz from the word-list snapshot (never
+ * written into userDecks) and reports progress after the session.
  */
 
 interface ClassRow {
@@ -27,7 +38,10 @@ interface LeaderMember {
 
 export default function ClassPage() {
   const { t } = useI18n();
+  const router = useRouter();
   const [classes, setClasses] = useState<ClassRow[]>([]);
+  const [assignments, setAssignments] = useState<AssignmentRow[]>([]);
+  const [startingId, setStartingId] = useState<number | null>(null);
   const [myId, setMyId] = useState<number | null>(null);
   const [joinCode, setJoinCode] = useState("");
   const [joinError, setJoinError] = useState("");
@@ -47,8 +61,9 @@ export default function ClassPage() {
       return;
     }
     try {
-      const data = await getClasses();
+      const [data, asg] = await Promise.all([getClasses(), getAssignments()]);
       setClasses(data.joined ?? []);
+      setAssignments(asg.assignments ?? []);
     } catch {
       // offline / not logged in — thin client degrades to empty state
     } finally {
@@ -104,6 +119,48 @@ export default function ClassPage() {
     }
   };
 
+  // V4 S2 — start an assignment: temp in-memory quiz from the word-list
+  // snapshot. Never saved to userDecks; progress reports after the session.
+  const startAssignment = async (id: number) => {
+    if (startingId) return;
+    setStartingId(id);
+    try {
+      const detail = await getAssignment(id);
+      if (!detail.words?.length) return;
+      const { pairs } = await wordlistQuiz(detail.words.map((w) => w.word), detail.words.length);
+      const adapted = adaptQuizPairs(pairs);
+      if (!adapted.length) return;
+      const storeQuestions: Question[] = adapted.map((q, i) => {
+        const common = {
+          id: q.id || `asg-${id}-${i}`,
+          wordId: `asg-${id}-${i}`,
+          type: "word-to-cn" as const,
+          prompt: q.prompt,
+          explanation: q.explanation,
+        };
+        if (q.type === "typed") {
+          return { ...common, promptSub: t("class.typeAnswer"), choices: [q.answer ?? ""], correctIndex: 0, answer: q.answer };
+        }
+        return { ...common, promptSub: undefined, choices: q.options ?? ["True", "False"], correctIndex: q.answerIndex ?? 0 };
+      });
+      sessionStorage.setItem("lexi-import-quiz", JSON.stringify({ questions: storeQuestions }));
+      useGameStore.setState({ activeAssignmentId: id });
+      router.push("/quiz?src=import");
+    } catch {
+      // generation failed — stay on the list, user can retry
+    } finally {
+      setStartingId(null);
+    }
+  };
+
+  const statusChip = (a: AssignmentRow) => {
+    const overdue = a.dueAt * 1000 < Date.now() && a.status !== "done";
+    if (a.status === "done") return <span className="rounded-full bg-[var(--bg-positive-emphasis-default)] px-2 py-0.5 text-[10px] font-bold text-white">✓ {t("class.done")}</span>;
+    if (overdue) return <span className="rounded-full bg-canvas px-2 py-0.5 text-[10px] font-bold text-tertiary">{t("class.overdue")}</span>;
+    if (a.status === "in_progress") return <span className="rounded-full bg-brand-subtle px-2 py-0.5 text-[10px] font-bold text-brand-text">{t("class.inProgress")}</span>;
+    return null;
+  };
+
   return (
     <AppShell>
       <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
@@ -131,6 +188,44 @@ export default function ClassPage() {
           </button>
           <p className="mt-3 text-center text-xs text-tertiary">{t("class.joinHint")}</p>
         </div>
+
+        {/* Assignments (V4 S2) */}
+        {assignments.length > 0 && (
+          <>
+            <h2 className="mb-3 mt-6 px-1 text-sm font-bold text-primary">{t("class.assignments")}</h2>
+            <div className="flex flex-col gap-3">
+              {assignments.map((a) => (
+                <div key={a.id} className="g-card p-5 shadow-sm">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <p className="truncate text-[15px] font-bold text-primary">{a.title}</p>
+                      <p className="mt-0.5 text-xs text-tertiary">
+                        {a.className} · {a.wordCount} {t("class.wordCount")} · {t("class.due")} {new Date(a.dueAt * 1000).toLocaleDateString()}
+                      </p>
+                    </div>
+                    {statusChip(a)}
+                  </div>
+                  <div className="mt-3 h-2 overflow-hidden rounded-pill bg-canvas">
+                    <div
+                      className={`h-full rounded-pill transition-all ${a.status === "done" ? "bg-[var(--bg-positive-emphasis-default)]" : "bg-brand"}`}
+                      style={{ width: `${Math.min(100, Math.round((a.progress / Math.max(1, a.targetWords)) * 100))}%` }}
+                    />
+                  </div>
+                  <div className="mt-3 flex items-center justify-between">
+                    <span className="text-xs font-bold text-tertiary">{a.progress} / {a.targetWords}</span>
+                    <button
+                      onClick={() => startAssignment(a.id)}
+                      disabled={startingId === a.id}
+                      className="rounded-pill bg-brand px-4 py-1.5 text-xs font-bold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
+                    >
+                      {startingId === a.id ? "…" : a.status === "done" ? t("class.practiceAgain") : t("class.start")}
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
 
         {/* My classes */}
         <h2 className="mb-3 mt-6 px-1 text-sm font-bold text-primary">{t("class.myClasses")}</h2>

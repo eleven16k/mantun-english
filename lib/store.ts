@@ -100,6 +100,10 @@ interface GameState {
   // Quiz session
   questions: Question[];
 
+  // Assignment this quiz session came from (V4 S2) — ResultsScreen reports
+  // progress to /api/assignments/:id/progress when set, then clears it.
+  activeAssignmentId: number | null;
+
   // DeepTutor KB the current quiz came from (enables RAG-cited tutor answers)
   quizKbName: string | null;
 
@@ -190,6 +194,7 @@ export const useGameStore = create<GameState>()(
       streakFreezesOwned: 0,
 
       questions: [],
+      activeAssignmentId: null,
       currentQIndex: 0,
       sessionCorrect: 0,
       sessionWrong: 0,
