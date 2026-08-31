@@ -362,3 +362,14 @@ export async function extractCoursewareText(file: File): Promise<{ text: string;
   }
   return res.json();
 }
+
+/** Vocabulary quiz straight from a word list (word-list images / pastes). */
+export async function wordlistQuiz(
+  words: string[],
+  count?: number
+): Promise<{ pairs: { question_id: string; question: string; question_type: string; correct_answer: string; explanation: string; options: Record<string, string> }[] }> {
+  return fetchApi("/api/quiz/wordlist", {
+    method: "POST",
+    body: JSON.stringify({ words, count }),
+  });
+}

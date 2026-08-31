@@ -13,7 +13,7 @@ import {
   listKnowledgeBases,
   type KBInfo,
 } from "@/lib/deeptutor";
-import { extractCoursewareText } from "@/lib/api";
+import { extractCoursewareText, wordlistQuiz } from "@/lib/api";
 import type { Question } from "@/lib/types";
 import { saveImport, getImports, isLoggedIn } from "@/lib/api";
 import { useGameStore } from "@/lib/store";
@@ -69,6 +69,7 @@ export default function ImportPage() {
   const [errorMsg, setErrorMsg] = useState("");
   const [generatedCount, setGeneratedCount] = useState(0);
   const [topic, setTopic] = useState("");
+  const [wordList, setWordList] = useState<string[] | null>(null);
   const [qType, setQType] = useState<(typeof QUESTION_TYPES)[number]["id"]>("choice");
   const [count, setCount] = useState(5);
   const [difficulty, setDifficulty] = useState<"easy" | "medium" | "hard">("medium");
@@ -126,6 +127,15 @@ export default function ImportPage() {
     return ok;
   }, [sidecarUp]);
 
+  /** A word list is mostly single short tokens, one per line, no sentences. */
+  const asWordList = (text: string): string[] | null => {
+    const lines = text.split(/\n+/).map((l) => l.trim()).filter(Boolean);
+    if (lines.length < 8) return null;
+    const wordish = lines.filter((l) => /^[A-Za-z][A-Za-z'\- ]{0,30}$/.test(l));
+    if (wordish.length / lines.length >= 0.7) return wordish;
+    return null;
+  };
+
   const ingest = async (picked: File[]) => {
     if (!picked.length) return;
     setFiles(picked);
@@ -156,6 +166,9 @@ export default function ImportPage() {
           .filter((s) => s.replace(/\W/g, "").length > 40)
           .join("\n\n");
         if (!ocrTxt) throw new Error("Could not read any text from the image(s)");
+        // Anchor the quiz on real content, never on the synthesized filename.
+        if (!topic) setTopic(ocrTxt.split(/\n+/).filter(Boolean).slice(0, 8).join(", ").slice(0, 90));
+        setWordList(asWordList(ocrTxt));
         const rest = picked.filter((f) => !f.type.startsWith("image/"));
         // Unique name per batch — a fixed "photos.txt" would funnel every
         // image upload into the same KB and pollute later quizzes.
@@ -193,6 +206,8 @@ export default function ImportPage() {
       setPhase("error");
       return;
     }
+    if (!topic) setTopic(text.split(/\n+/).filter(Boolean).slice(0, 8).join(", ").slice(0, 90));
+    setWordList(asWordList(text));
     const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, "");
     ingest([new File([text], `pasted-${stamp}.txt`, { type: "text/plain" })]);
   };
@@ -201,17 +216,25 @@ export default function ImportPage() {
     setPhase("generating");
     setStatusText(t("imp.statusGenerating"));
     try {
-      const kb = kbName || `import-${(files[0]?.name ?? "upload").replace(/\W+/g, "-").slice(0, 30).toLowerCase()}`;
-      setKbName(kb);
-      const pairs = await generateQuestions(
-        {
-          kbName: kb,
-          topic: topic || files[0]?.name || "English practice",
-          count,
-          difficulty,
-          questionType: qType,
-        },
-      );
+      let kb = kbName || `import-${(files[0]?.name ?? "upload").replace(/\W+/g, "-").slice(0, 30).toLowerCase()}`;
+      let pairs;
+      if (wordList && wordList.length >= 4) {
+        // Word lists (OCR'd vocab sheets) get dedicated generation — the RAG
+        // agent plans poorly from bare word lists.
+        setStatusText(t("imp.statusWordlist"));
+        pairs = (await wordlistQuiz(wordList, count)).pairs;
+      } else {
+        setKbName(kb);
+        pairs = await generateQuestions(
+          {
+            kbName: kb,
+            topic: topic || files[0]?.name || "English practice",
+            count,
+            difficulty,
+            questionType: qType,
+          },
+        );
+      }
 
       const questions = adaptQuizPairs(pairs);
       if (!questions.length) throw new Error(t("imp.errNoQuestions"));
