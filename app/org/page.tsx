@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { getMyOrgRanking, type OrgRanking } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
@@ -16,16 +16,21 @@ export default function OrgRankingPage() {
   const [loaded, setLoaded] = useState(false);
   const [track, setTrack] = useState<string | undefined>(undefined);
   const [week, setWeek] = useState<string | undefined>(undefined);
+  // V6 fix (codex review P2): a slow earlier track/week request must never
+  // overwrite a newer selection's data.
+  const loadSeqRef = useRef(0);
 
   const load = useCallback(async (trackQ?: string, weekQ?: string) => {
+    const seq = ++loadSeqRef.current;
     try {
       const d = await getMyOrgRanking(trackQ, weekQ);
+      if (loadSeqRef.current !== seq) return;
       setData(d);
       if (!trackQ && d.track) setTrack(d.track);
     } catch {
-      setData(null);
+      if (loadSeqRef.current === seq) setData(null);
     } finally {
-      setLoaded(true);
+      if (loadSeqRef.current === seq) setLoaded(true);
     }
   }, []);
 
@@ -117,7 +122,7 @@ export default function OrgRankingPage() {
 
             {/* top10 */}
             <div className="g-card p-5 shadow-sm">
-              <h2 className="mb-3 text-sm font-bold text-primary">Top 10</h2>
+              <h2 className="mb-3 text-sm font-bold text-primary">{t("org.top10")}</h2>
               {data.top10.length === 0 ? (
                 <p className="py-3 text-center text-xs text-tertiary">{t("org.empty")}</p>
               ) : (

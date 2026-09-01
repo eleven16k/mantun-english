@@ -38,7 +38,7 @@ interface LeaderMember {
 }
 
 export default function ClassPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const router = useRouter();
   const [classes, setClasses] = useState<ClassRow[]>([]);
   const [assignments, setAssignments] = useState<AssignmentRow[]>([]);
@@ -163,7 +163,13 @@ export default function ClassPage() {
   // V6 N2 — dismiss a reminder (mark read) and jump into the assignment
   const goReminder = async (n: AppNotification) => {
     setReminders((prev) => prev.filter((r) => r.id !== n.id));
-    markNotificationsRead([n.id]).catch(() => {});
+    try {
+      await markNotificationsRead([n.id]);
+    } catch {
+      // V6 fix (codex review P2): restore the banner if the read-mark fails
+      setReminders((prev) => [...prev, n]);
+      return;
+    }
     if (n.payload.assignmentId) await startAssignment(n.payload.assignmentId);
   };
 
@@ -258,7 +264,7 @@ export default function ClassPage() {
                     <div className="min-w-0">
                       <p className="truncate text-[15px] font-bold text-primary">{a.title}</p>
                       <p className="mt-0.5 text-xs text-tertiary">
-                        {a.className} · {a.wordCount} {t("class.wordCount")} · {t("class.due")} {new Date(a.dueAt * 1000).toLocaleDateString()}
+                        {a.className} · {a.wordCount} {t("class.wordCount")} · {t("class.due")} {new Date(a.dueAt * 1000).toLocaleDateString(locale === 'zh' ? 'zh-CN' : 'en-US')}
                       </p>
                     </div>
                     {statusChip(a)}

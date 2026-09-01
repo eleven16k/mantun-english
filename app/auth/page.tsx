@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { login } from "@/lib/api";
+import { kv } from "@/lib/kv";
 import { useI18n } from "@/lib/i18n";
 
 /**
@@ -26,7 +27,7 @@ export default function AuthPage() {
   useEffect(() => {
     const inv = new URLSearchParams(window.location.search).get("inv");
     if (inv && /^\d{6}$/.test(inv)) {
-      localStorage.setItem("lexi-invite", inv);
+      kv.setItem("lexi-invite", inv);
     }
   }, []);
 
@@ -66,7 +67,7 @@ export default function AuthPage() {
     setError("");
     try {
       const result = await login(phone, code);
-      localStorage.removeItem("lexi-invite"); // consumed (server ignores it for existing users)
+      kv.removeItem("lexi-invite"); // consumed (server ignores it for existing users)
       router.push(result.isNew ? "/onboarding" : "/chat");
     } catch (e) {
       setError(e instanceof Error ? e.message : t("auth.loginFailed"));
