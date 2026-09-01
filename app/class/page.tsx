@@ -6,8 +6,9 @@ import { AppShell } from "@/components/AppShell";
 import {
   getClasses, joinClass, leaveClass, getClassLeaderboard, isLoggedIn, getMe,
   getAssignments, getAssignment, wordlistQuiz, getMyOrgRanking,
+  getNotifications, markNotificationsRead,
 } from "@/lib/api";
-import type { AssignmentRow, OrgRanking } from "@/lib/api";
+import type { AssignmentRow, OrgRanking, AppNotification } from "@/lib/api";
 import { adaptQuizPairs } from "@/lib/deeptutor";
 import { useGameStore } from "@/lib/store";
 import type { Question } from "@/lib/types";
@@ -42,6 +43,7 @@ export default function ClassPage() {
   const [classes, setClasses] = useState<ClassRow[]>([]);
   const [assignments, setAssignments] = useState<AssignmentRow[]>([]);
   const [orgRanking, setOrgRanking] = useState<OrgRanking | null>(null);
+  const [reminders, setReminders] = useState<AppNotification[]>([]);
   const [startingId, setStartingId] = useState<number | null>(null);
   const [myId, setMyId] = useState<number | null>(null);
   const [joinCode, setJoinCode] = useState("");
@@ -62,10 +64,13 @@ export default function ClassPage() {
       return;
     }
     try {
-      const [data, asg, org] = await Promise.all([getClasses(), getAssignments(), getMyOrgRanking().catch(() => null)]);
+      const [data, asg, org, notifs] = await Promise.all([
+        getClasses(), getAssignments(), getMyOrgRanking().catch(() => null), getNotifications().catch(() => null),
+      ]);
       setClasses(data.joined ?? []);
       setAssignments(asg.assignments ?? []);
       setOrgRanking(org?.org ? org : null);
+      setReminders((notifs?.notifications ?? []).filter((n) => n.type === "assignment_reminder" && !n.readAt).slice(0, 2));
     } catch {
       // offline / not logged in — thin client degrades to empty state
     } finally {
@@ -155,6 +160,13 @@ export default function ClassPage() {
     }
   };
 
+  // V6 N2 — dismiss a reminder (mark read) and jump into the assignment
+  const goReminder = async (n: AppNotification) => {
+    setReminders((prev) => prev.filter((r) => r.id !== n.id));
+    markNotificationsRead([n.id]).catch(() => {});
+    if (n.payload.assignmentId) await startAssignment(n.payload.assignmentId);
+  };
+
   const statusChip = (a: AssignmentRow) => {
     const overdue = a.dueAt * 1000 < Date.now() && a.status !== "done";
     if (a.status === "done") return <span className="rounded-full bg-[var(--bg-positive-emphasis-default)] px-2 py-0.5 text-[10px] font-bold text-white">✓ {t("class.done")}</span>;
@@ -190,6 +202,29 @@ export default function ClassPage() {
           </button>
           <p className="mt-3 text-center text-xs text-tertiary">{t("class.joinHint")}</p>
         </div>
+
+        {/* Reminder banner (V6 N2) — teacher nudges, max 2 shown */}
+        {reminders.map((n) => (
+          <div key={n.id} className="mt-5 flex items-center gap-3 rounded-2xl border border-brandborder bg-brand-subtle px-4 py-3 shadow-sm">
+            <span className="text-lg">🔔</span>
+            <span className="min-w-0 flex-1">
+              <span className="block truncate text-sm font-bold text-primary">
+                {t("reminder.banner").replace("{{teacher}}", n.payload.teacherName ?? "")}
+              </span>
+              <span className="block truncate text-xs text-secondary">
+                {n.payload.title}{n.payload.dueAt ? ` · ${t("reminder.due")} ${new Date(n.payload.dueAt * 1000).toLocaleDateString()}` : ""}
+              </span>
+            </span>
+            {n.payload.assignmentId && (
+              <button
+                onClick={() => goReminder(n)}
+                className="shrink-0 rounded-pill bg-brand px-4 py-1.5 text-xs font-bold text-white shadow-sm transition hover:opacity-90"
+              >
+                {t("reminder.go")}
+              </button>
+            )}
+          </div>
+        ))}
 
         {/* Org weekly ranking entry (V5 W3) — only when the class has an org */}
         {orgRanking?.org && (

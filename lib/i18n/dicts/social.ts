@@ -97,6 +97,9 @@ const en = {
   "org.empty": "No ranking data this week",
   "org.none": "Your class doesn't belong to an institution yet",
   "org.privacyNote": "Only the Top 10 and your own rank are shown",
+  "reminder.banner": "{{teacher}} reminded you to finish",
+  "reminder.go": "Go finish",
+  "reminder.due": "Due",
 
   // — Share (/share) —
   "share.title": "Share Progress",
@@ -233,6 +236,9 @@ const zh: Record<keyof typeof en, string> = {
   "org.empty": "本周还没有榜单数据",
   "org.none": "你的班级还没有加入机构",
   "org.privacyNote": "仅展示 Top 10 与你自己的名次",
+  "reminder.banner": "{{teacher}}老师提醒你完成作业",
+  "reminder.go": "去完成",
+  "reminder.due": "截止",
 
   // — 分享 (/share) —
   "share.title": "分享学习成果",

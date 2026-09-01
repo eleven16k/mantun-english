@@ -262,6 +262,26 @@ export async function getMyOrgRanking(track?: string, week?: string) {
   return fetchApi<OrgRanking>(`/api/orgs/my/ranking${qs ? `?${qs}` : ""}`);
 }
 
+// ─── Notifications (V6 N2 — student inbox: assignment reminders) ───
+export interface AppNotification {
+  id: number;
+  type: string;
+  payload: { assignmentId?: number; title?: string; dueAt?: number; teacherName?: string };
+  createdAt: number;
+  readAt: number | null;
+}
+
+export async function getNotifications() {
+  return fetchApi<{ notifications: AppNotification[]; unread: number }>("/api/notifications");
+}
+
+export async function markNotificationsRead(ids?: number[]) {
+  return fetchApi<{ ok: boolean }>("/api/notifications", {
+    method: "POST",
+    body: JSON.stringify(ids ? { ids } : {}),
+  });
+}
+
 // ─── Study groups ───
 
 export interface GroupInfo {
