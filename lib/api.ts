@@ -244,6 +244,24 @@ export async function actOnParentLink(peerId: number, action: "accept" | "reject
   });
 }
 
+// ─── Org weekly ranking (V4 W3 — student view: Top10 + own rank bucket) ───
+export interface OrgRanking {
+  org: { name: string } | null;
+  track: string;
+  weekStart: string;
+  top10: { rank: number; nickname: string; weekSp: number }[];
+  me: { rankFrom: number; rankTo: number; weekSp: number } | null;
+  pastWeeks: string[];
+}
+
+export async function getMyOrgRanking(track?: string, week?: string) {
+  const params = new URLSearchParams();
+  if (track) params.set("track", track);
+  if (week) params.set("week", week);
+  const qs = params.toString();
+  return fetchApi<OrgRanking>(`/api/orgs/my/ranking${qs ? `?${qs}` : ""}`);
+}
+
 // ─── Study groups ───
 
 export interface GroupInfo {

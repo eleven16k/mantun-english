@@ -5,9 +5,9 @@ import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import {
   getClasses, joinClass, leaveClass, getClassLeaderboard, isLoggedIn, getMe,
-  getAssignments, getAssignment, wordlistQuiz,
+  getAssignments, getAssignment, wordlistQuiz, getMyOrgRanking,
 } from "@/lib/api";
-import type { AssignmentRow } from "@/lib/api";
+import type { AssignmentRow, OrgRanking } from "@/lib/api";
 import { adaptQuizPairs } from "@/lib/deeptutor";
 import { useGameStore } from "@/lib/store";
 import type { Question } from "@/lib/types";
@@ -41,6 +41,7 @@ export default function ClassPage() {
   const router = useRouter();
   const [classes, setClasses] = useState<ClassRow[]>([]);
   const [assignments, setAssignments] = useState<AssignmentRow[]>([]);
+  const [orgRanking, setOrgRanking] = useState<OrgRanking | null>(null);
   const [startingId, setStartingId] = useState<number | null>(null);
   const [myId, setMyId] = useState<number | null>(null);
   const [joinCode, setJoinCode] = useState("");
@@ -61,9 +62,10 @@ export default function ClassPage() {
       return;
     }
     try {
-      const [data, asg] = await Promise.all([getClasses(), getAssignments()]);
+      const [data, asg, org] = await Promise.all([getClasses(), getAssignments(), getMyOrgRanking().catch(() => null)]);
       setClasses(data.joined ?? []);
       setAssignments(asg.assignments ?? []);
+      setOrgRanking(org?.org ? org : null);
     } catch {
       // offline / not logged in — thin client degrades to empty state
     } finally {
@@ -188,6 +190,27 @@ export default function ClassPage() {
           </button>
           <p className="mt-3 text-center text-xs text-tertiary">{t("class.joinHint")}</p>
         </div>
+
+        {/* Org weekly ranking entry (V5 W3) — only when the class has an org */}
+        {orgRanking?.org && (
+          <button
+            onClick={() => router.push("/org")}
+            className="mt-6 flex w-full items-center gap-3 rounded-2xl border border-brandborder bg-brand-subtle p-5 text-left shadow-sm transition hover:opacity-95"
+          >
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand text-base">🏆</span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-[15px] font-extrabold text-primary">{t("org.leaderboard")} · {orgRanking.org.name}</span>
+              <span className="block truncate text-xs text-secondary">
+                {orgRanking.me
+                  ? orgRanking.me.rankFrom === orgRanking.me.rankTo
+                    ? `${t("org.rankExact")} #${orgRanking.me.rankFrom}`
+                    : `${t("org.rankBucket")} ${orgRanking.me.rankFrom} - ${orgRanking.me.rankTo}`
+                  : t("org.notOnBoard")}
+              </span>
+            </span>
+            <span className="shrink-0 text-xs font-bold text-tertiary">▸</span>
+          </button>
+        )}
 
         {/* Assignments (V4 S2) */}
         {assignments.length > 0 && (
