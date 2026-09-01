@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useGameStore, LEAGUE_TIERS, getTierIndex } from '@/lib/store';
-import { reportAssignmentProgress } from '@/lib/api';
+import { reportAssignmentProgress, saveSession } from '@/lib/api';
 import { PartyPopperIcon, MuscleIcon, GiftIcon } from './SvgIcons';
 import { BoltIcon, CoinIcon } from './icons';
 import { useI18n } from '@/lib/i18n';
@@ -29,11 +29,22 @@ export default function ResultsScreen() {
     }
   }, []);
 
-  // V4 S2 — the session came from a teacher assignment: report progress
-  // (session correct count; server clamps and keeps the historical max),
-  // then clear the marker so ordinary sessions don't report.
+  // V7 fix — report the finished session server-side (sessions_log had no
+  // writer, so analytics accuracy and weekly daysStudied read zero), and if
+  // the session came from a teacher assignment also report progress (server
+  // clamps and keeps the historical max), then clear the marker.
   useEffect(() => {
     const store = useGameStore.getState();
+    if (lastResults) {
+      saveSession({
+        correct: lastResults.correct,
+        total: lastResults.total,
+        coinsEarned: lastResults.coinsEarned,
+        spEarned: lastResults.spEarned,
+        newWords: lastResults.newWords,
+        durationSec: lastResults.durationSec,
+      }).catch(() => { /* best-effort */ });
+    }
     const asgId = store.activeAssignmentId;
     if (asgId && lastResults) {
       useGameStore.setState({ activeAssignmentId: null });

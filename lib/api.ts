@@ -286,6 +286,23 @@ export async function markNotificationsRead(ids?: number[]) {
   });
 }
 
+// ─── Session reporting (V7 fix — sessions_log previously had no writer, so
+// teacher analytics accuracy / parent summary accuracy / weekly report
+// daysStudied all read zero in production) ───
+export async function saveSession(results: {
+  correct: number;
+  total: number;
+  coinsEarned: number;
+  spEarned: number;
+  newWords: number;
+  durationSec: number;
+}) {
+  return fetchApi<{ ok: boolean }>("/api/sessions", {
+    method: "POST",
+    body: JSON.stringify(results),
+  });
+}
+
 // ─── Study groups ───
 
 export interface GroupInfo {
