@@ -1,4 +1,10 @@
 // lib/i18n/dicts/social.ts — pk / battle / class / share / leaderboard
+
+// Org layer称呼 config (机构/学校/校区) — rebrands every org surface via
+// NEXT_PUBLIC_ORG_LABEL without touching features.
+const ORG = process.env.NEXT_PUBLIC_ORG_LABEL ?? "机构";
+const ORG_EN = process.env.NEXT_PUBLIC_ORG_LABEL_EN ?? "Org";
+
 const en = {
   // — Class PK (/pk) —
   "pk.title": "Class PK",
@@ -76,7 +82,7 @@ const en = {
   "family.confirmRemove": "Confirm unbind",
   "family.removeConfirmTitle": "They will no longer see your study data",
   "family.pendingSuffix": "pending",
-  "org.leaderboard": "Org Weekly Ranking",
+  "org.leaderboard": `${ORG_EN} Weekly Ranking`,
   "org.trackXsc": "Elementary",
   "org.trackZk": "Zhongkao",
   "org.thisWeek": "This week",
@@ -86,7 +92,7 @@ const en = {
   "org.rankBucket": "Rank",
   "org.notOnBoard": "Not on the board yet — finish practice to rank",
   "org.empty": "No ranking data this week",
-  "org.none": "Your class doesn't belong to an institution yet",
+  "org.none": `Your class doesn't belong to an ${ORG_EN.toLowerCase()} yet`,
   "org.privacyNote": "Only the Top 10 and your own rank are shown",
   "reminder.banner": "{{teacher}} reminded you to finish",
   "reminder.go": "Go finish",
@@ -206,7 +212,7 @@ const zh: Record<keyof typeof en, string> = {
   "family.confirmRemove": "确认解除",
   "family.removeConfirmTitle": "解除后对方将无法再查看你的学习数据",
   "family.pendingSuffix": "待确认",
-  "org.leaderboard": "机构周榜",
+  "org.leaderboard": `${ORG}周榜`,
   "org.trackXsc": "小升初",
   "org.trackZk": "中考",
   "org.thisWeek": "本周",
@@ -216,7 +222,7 @@ const zh: Record<keyof typeof en, string> = {
   "org.rankBucket": "名次区间",
   "org.notOnBoard": "本周暂未上榜，完成练习即会上榜",
   "org.empty": "本周还没有榜单数据",
-  "org.none": "你的班级还没有加入机构",
+  "org.none": `你的班级还没有加入${ORG}`,
   "org.privacyNote": "仅展示 Top 10 与你自己的名次",
   "reminder.banner": "{{teacher}}老师提醒你完成作业",
   "reminder.go": "去完成",
