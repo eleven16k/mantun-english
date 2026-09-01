@@ -50,6 +50,23 @@ export function usePKBattle() {
 
     socket.on("connect", () => setConnected(true));
     socket.on("disconnect", () => setConnected(false));
+    // Handshake rejection (bad/expired token) surfaces here, not as pk:error —
+    // without this the join UI sits on "Connecting…" forever.
+    socket.on("connect_error", (e) => {
+      setConnected(false);
+      const msg = e instanceof Error ? e.message : String(e);
+      if (msg.includes("unauthorized")) setError(msg);
+    });
+
+    // V7 fix (codex review): /battle 1v1 hosting depends on this event to get
+    // the roomCode and enter the lobby — removing it in the B3 refactor broke
+    // the whole find-opponent flow. /pk (student join) never receives it.
+    socket.on("pk:created", ({ roomCode, className: cn }) => {
+      setRoomCode(roomCode);
+      setClassName(cn);
+      setPhase("lobby");
+      setError(null);
+    });
 
     socket.on("pk:players", ({ players: ps, className: cn }) => {
       setPlayers(ps);

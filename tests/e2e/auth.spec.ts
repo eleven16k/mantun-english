@@ -23,14 +23,22 @@ test.describe("/auth login flow", () => {
     await expect(page).toHaveURL(/\/auth/);
   });
 
-  test("correct devCode reaches the dashboard", async ({ page, request }) => {
+  test("correct devCode reaches the dashboard", async ({ page }) => {
     await page.goto("/auth");
     const phone = uniquePhone();
     await page.getByPlaceholder(/phone|手机/i).fill(phone);
     await page.getByRole("button", { name: /send|发送/i }).click();
-    // fetch the devCode via API (the UI displays the same code)
-    const send = await request.post("/api/auth", { data: { action: "send", phone } });
-    const { devCode } = (await send.json()) as { devCode: string };
+    // The UI displays the devCode directly (no SMS provider in dev). The old
+    // double-send (UI + API) now trips the 60s resend cooldown (V7 fix), so
+    // extract the code from the page instead of re-sending.
+    await expect(page.getByText(/\d{6}/)).toBeVisible({ timeout: 8000 });
+    const devText =
+      (await page.getByText(/Dev code|开发环境验证码/).first().textContent().catch(() => null)) ??
+      (await page.getByText(/\d{6}/).first().textContent().catch(() => null)) ??
+      "";
+    const devCode = devText.match(/(\d{6})/)?.[1] ?? "";
+    if (!devCode) console.log("[DEBUG] body text:", await page.locator("body").textContent());
+    expect(devCode).toMatch(/^\d{6}$/);
     await page.getByPlaceholder(/code|验证码/i).fill(devCode);
     const btn = page.getByRole("button", { name: /sign in|登录/i });
     await btn.waitFor({ state: "visible", timeout: 5000 });
