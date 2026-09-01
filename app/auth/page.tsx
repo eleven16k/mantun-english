@@ -49,6 +49,8 @@ export default function AuthPage() {
       if (!res.ok) throw new Error(data.error ?? "send failed");
       setSent(true);
       setDevCode(data.devCode ?? "");
+      // 测试便利：开发环境直接自动填入验证码（生产不返回 devCode，不受影响）
+      setCode(data.devCode ?? "");
       setCooldown(60);
       const timer = setInterval(() => {
         setCooldown((c) => {
