@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { login } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
@@ -8,6 +8,8 @@ import { useI18n } from "@/lib/i18n";
 /**
  * /auth — A1: Phone + SMS code login (mock for MVP).
  * On success → /onboarding (new) or /chat (returning).
+ * V7 F2: /auth?inv=CODE stashes the teacher referral code — every login
+ * carries it and the server consumes it only for new student registrations.
  */
 
 export default function AuthPage() {
@@ -20,6 +22,13 @@ export default function AuthPage() {
   const [cooldown, setCooldown] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    const inv = new URLSearchParams(window.location.search).get("inv");
+    if (inv && /^\d{6}$/.test(inv)) {
+      localStorage.setItem("lexi-invite", inv);
+    }
+  }, []);
 
   const validPhone = /^1[3-9]\d{9}$/.test(phone);
   const validCode = /^\d{6}$/.test(code);
@@ -57,6 +66,7 @@ export default function AuthPage() {
     setError("");
     try {
       const result = await login(phone, code);
+      localStorage.removeItem("lexi-invite"); // consumed (server ignores it for existing users)
       router.push(result.isNew ? "/onboarding" : "/chat");
     } catch (e) {
       setError(e instanceof Error ? e.message : t("auth.loginFailed"));

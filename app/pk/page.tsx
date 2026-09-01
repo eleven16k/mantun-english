@@ -1,41 +1,23 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
-import { usePKBattle, type PKQuestion } from "@/lib/usePKBattle";
-import { VOCAB, makeQuestion } from "@/lib/vocab";
+import { usePKBattle } from "@/lib/usePKBattle";
 import { isLoggedIn, getMe } from "@/lib/api";
-import { useGameStore } from "@/lib/store";
-import { DeckIcon } from "@/components/DeckIcon";
 import { useI18n } from "@/lib/i18n";
 
 /**
- * /pk — H2: Class PK competition.
- * Teacher creates a timed battle → students join with code → real-time leaderboard.
- * Uses Socket.IO via custom server (server.js).
+ * /pk — class PK, STUDENT side (V7 B3). Joining by room code is the only
+ * lifecycle action here — hosting lives in lexi-teacher (B2) and the
+ * socket layer rejects non-teachers (B1). Battle UI unchanged.
  */
-
-function Spinner() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6 animate-spin text-brand-text" fill="none">
-      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2.5" opacity="0.25" />
-      <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
 export default function PKPage() {
   const router = useRouter();
   const pk = usePKBattle();
   const { t } = useI18n();
 
-  const [mode, setMode] = useState<"teacher" | "student">("teacher");
-  const [className, setClassName] = useState("");
   const [joinCode, setJoinCode] = useState("");
-  // Deck selected as the question source ("" = built-in random vocab)
-  const [deckId, setDeckId] = useState("");
-  const userDecks = useGameStore((s) => s.userDecks);
   const [user, setUser] = useState<{ id: number; nickname: string } | null>(null);
 
   // Quiz state during battle
@@ -57,36 +39,13 @@ export default function PKPage() {
   // Countdown timer during battle
   useEffect(() => {
     if (pk.phase !== "playing" || !pk.endsAt) return;
-    const t = setInterval(() => {
+    const timer = setInterval(() => {
       const left = Math.max(0, Math.ceil((pk.endsAt! - Date.now()) / 1000));
       setTimeLeft(left);
-      if (left <= 0) clearInterval(t);
+      if (left <= 0) clearInterval(timer);
     }, 500);
-    return () => clearInterval(t);
+    return () => clearInterval(timer);
   }, [pk.phase, pk.endsAt]);
-
-  // Teacher creates room
-  const handleCreate = () => {
-    if (!className.trim() || !user) return;
-    let qs: PKQuestion[];
-    const deck = userDecks.find((d) => d.id === deckId);
-    if (deck && deck.questions.length > 0) {
-      // Teacher's uploaded deck becomes the battle question set
-      qs = deck.questions.map((q) => ({
-        id: q.id,
-        prompt: q.prompt,
-        choices: q.choices,
-        correctIndex: q.correctIndex,
-      }));
-    } else {
-      // Fallback: 10 random questions from the built-in vocab bank
-      qs = [...VOCAB].sort(() => Math.random() - 0.5).slice(0, 10).map((word, i) => {
-        const q = makeQuestion(word, i, "word-to-cn");
-        return { id: q.id, prompt: q.prompt, choices: q.choices, correctIndex: q.correctIndex };
-      });
-    }
-    pk.createRoom(className.trim(), user.id, user.nickname, qs);
-  };
 
   // Student joins
   const handleJoin = () => {
@@ -118,13 +77,13 @@ export default function PKPage() {
   useEffect(() => {
     if (pk.phase !== "countdown") return;
     setCountdown(3);
-    const t = setInterval(() => {
+    const timer = setInterval(() => {
       setCountdown(c => {
-        if (c <= 1) { clearInterval(t); return 0; }
+        if (c <= 1) { clearInterval(timer); return 0; }
         return c - 1;
       });
     }, 1000);
-    return () => clearInterval(t);
+    return () => clearInterval(timer);
   }, [pk.phase]);
 
   // Redirect if not logged in
@@ -132,7 +91,7 @@ export default function PKPage() {
     if (!isLoggedIn()) {
       router.push("/auth");
     }
-  }, []);
+  }, [router]);
 
   return (
     <AppShell>
@@ -142,110 +101,32 @@ export default function PKPage() {
           {pk.connected ? `🟢 ${t("pk.connected")}` : `🔴 ${t("pk.connecting")}`} · {t("pk.realtime")}
         </p>
 
-        {/* IDLE: choose mode */}
+        {/* IDLE: join by room code — hosting is the teacher app's job */}
         {pk.phase === "idle" && (
-          <>
-            <div className="mb-5 flex rounded-pill border border-subtle bg-surface p-1">
-              {(["teacher", "student"] as const).map(m => (
-                <button
-                  key={m}
-                  onClick={() => setMode(m)}
-                  className={`flex-1 rounded-pill py-2 text-sm font-bold transition ${mode === m ? "bg-action text-white" : "text-tertiary"}`}
-                >
-                  {m === "teacher" ? t("pk.hostBattle") : t("pk.joinBattle")}
-                </button>
-              ))}
-            </div>
-
-            {mode === "teacher" ? (
-              <div className="g-card p-5 shadow-sm">
-                <label className="flex flex-col gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wide text-tertiary">{t("pk.battleName")}</span>
-                  <input
-                    value={className}
-                    onChange={e => setClassName(e.target.value)}
-                    placeholder={t("pk.battleNamePh")}
-                    className="rounded-xl border border-subtle bg-app px-3 py-2.5 text-sm outline-none focus:border-brandborder"
-                  />
-                </label>
-
-                {/* Question source: one of the teacher's decks, or built-in random */}
-                <span className="mt-4 text-xs font-bold uppercase tracking-wide text-tertiary">{t("pk.deckSource")}</span>
-                <div className="mt-1.5 flex flex-col gap-1.5">
-                  <button
-                    type="button"
-                    onClick={() => setDeckId("")}
-                    className={`flex items-center gap-2.5 rounded-xl border px-3 py-2.5 text-left transition ${
-                      deckId === "" ? "border-brandborder bg-brand-subtle" : "border-subtle bg-app hover:bg-canvas"
-                    }`}
-                  >
-                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-canvas text-tertiary">
-                      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5" />
-                      </svg>
-                    </span>
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate text-sm font-bold text-primary">{t("pk.randomVocab")}</span>
-                    </span>
-                  </button>
-                  {userDecks.map((deck) => (
-                    <button
-                      key={deck.id}
-                      type="button"
-                      disabled={deck.questions.length === 0}
-                      onClick={() => setDeckId(deck.id)}
-                      className={`flex items-center gap-2.5 rounded-xl border px-3 py-2.5 text-left transition disabled:opacity-40 ${
-                        deckId === deck.id ? "border-brandborder bg-brand-subtle" : "border-subtle bg-app hover:bg-canvas"
-                      }`}
-                    >
-                      <DeckIcon icon={deck.icon} color={deck.color} size={28} />
-                      <span className="min-w-0 flex-1">
-                        <span className="block truncate text-sm font-bold text-primary">{deck.title}</span>
-                        <span className="block text-xs text-tertiary">
-                          {deck.questions.length > 0
-                            ? <>{deck.questions.length} {t("pk.deckQuestions")}</>
-                            : t("deck.empty")}
-                        </span>
-                      </span>
-                    </button>
-                  ))}
-                </div>
-
-                <p className="mt-3 text-xs text-tertiary">{t("pk.rules")}</p>
-                <button
-                  onClick={handleCreate}
-                  disabled={!className.trim() || !pk.connected}
-                  className="mt-4 w-full rounded-pill bg-brand py-3 font-booster font-extrabold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
-                >
-                  {t("pk.createRoom")}
-                </button>
-              </div>
-            ) : (
-              <div className="g-card p-5 shadow-sm">
-                <label className="flex flex-col gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wide text-tertiary">{t("pk.roomCode")}</span>
-                  <input
-                    value={joinCode}
-                    onChange={e => setJoinCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
-                    placeholder={t("pk.codePh")}
-                    inputMode="numeric"
-                    className="rounded-xl border border-subtle bg-app px-3 py-2.5 text-center text-lg font-bold tracking-widest outline-none focus:border-brandborder"
-                  />
-                </label>
-                <button
-                  onClick={handleJoin}
-                  disabled={joinCode.length !== 6 || !pk.connected}
-                  className="mt-4 w-full rounded-pill bg-brand py-3 font-booster font-extrabold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
-                >
-                  {t("pk.joinBattle")}
-                </button>
-                {pk.error && <p className="mt-3 text-center text-xs font-bold text-critical">{pk.error}</p>}
-              </div>
-            )}
-          </>
+          <div className="g-card p-5 shadow-sm">
+            <label className="flex flex-col gap-2">
+              <span className="text-xs font-bold uppercase tracking-wide text-tertiary">{t("pk.roomCode")}</span>
+              <input
+                value={joinCode}
+                onChange={e => setJoinCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                placeholder={t("pk.codePh")}
+                inputMode="numeric"
+                className="rounded-xl border border-subtle bg-app px-3 py-2.5 text-center text-lg font-bold tracking-widest outline-none focus:border-brandborder"
+              />
+            </label>
+            <button
+              onClick={handleJoin}
+              disabled={joinCode.length !== 6 || !pk.connected || !user}
+              className="mt-4 w-full rounded-pill bg-brand py-3 font-booster font-extrabold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
+            >
+              {t("pk.joinBattle")}
+            </button>
+            {pk.error && <p className="mt-3 text-center text-xs font-bold text-critical">{pk.error}</p>}
+            <p className="mt-3 text-center text-xs text-tertiary">{t("pk.rules")}</p>
+          </div>
         )}
 
-        {/* LOBBY: waiting for players */}
+        {/* LOBBY: waiting for the teacher to start */}
         {pk.phase === "lobby" && (
           <div className="g-card-hero p-6 text-center shadow-sm">
             <p className="text-xs font-bold uppercase text-tertiary">{t("pk.roomCode")}</p>
@@ -264,19 +145,7 @@ export default function PKPage() {
               </div>
             </div>
 
-            {/* Teacher controls */}
-            {mode === "teacher" && (
-              <button
-                onClick={() => pk.roomCode && pk.startBattle(pk.roomCode)}
-                disabled={pk.players.length < 2}
-                className="mt-6 w-full rounded-pill bg-brand py-3.5 font-booster text-base font-extrabold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
-              >
-                {pk.players.length < 2 ? t("pk.waitingPlayers") : t("pk.startBattle")}
-              </button>
-            )}
-            {mode === "student" && (
-              <p className="mt-6 text-sm text-tertiary">⏳ {t("pk.waitingTeacher")}</p>
-            )}
+            <p className="mt-6 text-sm text-tertiary">⏳ {t("pk.waitingTeacher")}</p>
           </div>
         )}
 
@@ -362,7 +231,7 @@ export default function PKPage() {
             </div>
             <div className="mt-5 flex flex-col gap-2">
               <button
-                onClick={() => { pk.reset(); setClassName(""); setJoinCode(""); }}
+                onClick={() => { pk.reset(); setJoinCode(""); }}
                 className="rounded-pill bg-brand py-3 font-booster font-extrabold text-white shadow-sm transition hover:opacity-90"
               >
                 {t("pk.newBattle")}

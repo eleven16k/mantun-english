@@ -47,10 +47,14 @@ async function fetchApi<T>(url: string, options?: RequestInit): Promise<T> {
 }
 
 // ─── Auth ───
-export async function login(phone: string, code: string) {
+export async function login(phone: string, code: string, inviteCode?: string) {
+  // V7 F2: the referral code rides every login — the server consumes it
+  // only for NEW student registrations (F1), so storing it client-side and
+  // sending it blindly is safe.
+  const stored = inviteCode ?? (kv.getItem("lexi-invite") as string | null) ?? undefined;
   const data = await fetchApi<{ token: string; user: { id: number; nickname: string }; isNew: boolean }>("/api/auth", {
     method: "POST",
-    body: JSON.stringify({ phone, code }),
+    body: JSON.stringify(stored ? { phone, code, inviteCode: stored } : { phone, code }),
   });
   setToken(data.token);
   return data;

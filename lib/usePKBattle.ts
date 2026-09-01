@@ -1,12 +1,14 @@
 "use client";
 
 /**
- * usePKBattle — Socket.IO client hook for class PK battles.
- * Manages connection, room lifecycle, and real-time state.
+ * usePKBattle — Socket.IO client hook for class PK battles (STUDENT side;
+ * hosting lives in lexi-teacher). V7 B1/B3: the token rides the handshake
+ * auth — the server gates create=teacher / join=student / start/end=host.
  */
 import { useEffect, useRef, useState, useCallback } from "react";
 import { io, type Socket } from "socket.io-client";
 import { socketBase } from "./config";
+import { kv } from "./kv";
 
 export interface PKPlayer {
   name: string;
@@ -42,18 +44,12 @@ export function usePKBattle() {
     const socket = io(socketBase(), {
       path: "/socket.io",
       transports: ["websocket", "polling"],
+      auth: { token: kv.getItem("lexi-token") ?? "" },
     });
     socketRef.current = socket;
 
     socket.on("connect", () => setConnected(true));
     socket.on("disconnect", () => setConnected(false));
-
-    socket.on("pk:created", ({ roomCode, className: cn }) => {
-      setRoomCode(roomCode);
-      setClassName(cn);
-      setPhase("lobby");
-      setError(null);
-    });
 
     socket.on("pk:players", ({ players: ps, className: cn }) => {
       setPlayers(ps);
@@ -85,7 +81,8 @@ export function usePKBattle() {
     };
   }, []);
 
-  // Teacher: create a room
+  // Host a room — used by /battle (student 1v1 duels). Class PKs are hosted
+  // from lexi-teacher; /pk (student) only joins. Start/end are host-only.
   const createRoom = useCallback((cn: string, teacherId: number, teacherName: string, qs: PKQuestion[]) => {
     socketRef.current?.emit("pk:create", { className: cn, teacherId, teacherName, questions: qs });
   }, []);
@@ -95,7 +92,7 @@ export function usePKBattle() {
     socketRef.current?.emit("pk:join", { roomCode: code, userId, name });
   }, []);
 
-  // Teacher: start the battle
+  // Host: start the battle (1v1 auto-starts from /battle once the rival joins)
   const startBattle = useCallback((code: string) => {
     socketRef.current?.emit("pk:start", { roomCode: code });
   }, []);
@@ -103,11 +100,6 @@ export function usePKBattle() {
   // Player: submit an answer
   const submitAnswer = useCallback((code: string, qIndex: number, isCorrect: boolean, timeMs: number) => {
     socketRef.current?.emit("pk:answer", { roomCode: code, questionIndex: qIndex, isCorrect, timeMs });
-  }, []);
-
-  // Teacher: end early
-  const endBattle = useCallback((code: string) => {
-    socketRef.current?.emit("pk:end", { roomCode: code });
   }, []);
 
   // Reset to idle
@@ -124,6 +116,6 @@ export function usePKBattle() {
   return {
     connected, phase, roomCode, className, players, questions, endsAt,
     leaderboard, results, error,
-    createRoom, joinRoom, startBattle, submitAnswer, endBattle, reset,
+    createRoom, joinRoom, startBattle, submitAnswer, reset,
   };
 }
