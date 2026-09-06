@@ -27,6 +27,7 @@ const config: Config = {
         },
         action: "var(--bg-action-emphasis-default)",
         actionhover: "var(--bg-action-emphasis-hover)",
+        accent: "var(--bg-gold-emphasis-default)",
         gold: "var(--text-gold-default)",
         streak: "var(--text-streak-default)",
         hearts: "var(--text-hearts-default)",
@@ -38,9 +39,9 @@ const config: Config = {
         focus: "var(--border-focus)",
       },
       fontFamily: {
-        booster: ["var(--font-booster)", "var(--font-inter)", "sans-serif"],
-        heading: ["var(--font-booster)", "var(--font-inter)", "sans-serif"],
-        inter: ["var(--font-inter)", "system-ui", "sans-serif"],
+        booster: ["'Noto Sans SC'", "var(--font-booster)", "var(--font-inter)", "sans-serif"],
+        heading: ["'Noto Sans SC'", "var(--font-booster)", "var(--font-inter)", "sans-serif"],
+        inter: ["'Noto Sans SC'", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       borderRadius: {
         card: "16px",

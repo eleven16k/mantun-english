@@ -29,8 +29,8 @@ export default function SharePage() {
 
     // BG
     const grad = ctx.createLinearGradient(0, 0, 0, H);
-    grad.addColorStop(0, "#7c3aed");
-    grad.addColorStop(1, "#4c1d95");
+    grad.addColorStop(0, "#4d96ff");
+    grad.addColorStop(1, "#1e3a8a");
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, W, H);
 
@@ -92,7 +92,7 @@ export default function SharePage() {
     ctx.roundRect(qx - 16, qy - 16, qrSize + 32, qrSize + 32, 16);
     ctx.fill();
 
-    ctx.fillStyle = "#1e1b4b";
+    ctx.fillStyle = "#0f172a";
     for (let row = 0; row < modules; row++) {
       for (let col = 0; col < modules; col++) {
         if (cellData[row * modules + col]) {

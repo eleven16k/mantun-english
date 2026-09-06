@@ -94,8 +94,8 @@ export function Dashboard() {
         </h2>
       </div>
 
-      {/* D1: Daily plan card — white r30 */}
-      <div className="mt-8 rounded-[30px] bg-surface p-5 shadow-sm">
+      {/* D1: Daily plan card — white r30 with paper border */}
+      <div className="mt-8 rounded-[30px] border-2 border-subtle bg-surface p-5">
         <div className="flex items-center gap-3 rounded-pill bg-canvas px-4 py-3">
           <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-tertiary" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 14l-4-4 4-4" />
@@ -130,7 +130,7 @@ export function Dashboard() {
         {/* Start plan button */}
         <button
           onClick={startPlan}
-          className="mt-3 w-full rounded-pill bg-brand py-3 font-booster text-base font-extrabold text-white transition hover:opacity-90 active:scale-[0.98]"
+          className="game-btn mt-3 w-full bg-brand py-3 font-booster text-base text-white"
         >
           {done >= goal ? t("dash.extraPractice") : t("dash.startPlan")}
         </button>

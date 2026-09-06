@@ -29,7 +29,7 @@ const POWERUPS: ShopItem[] = [
 ];
 
 const FEATURES: ShopItem[] = [
-  { id: 'dark-mode', nameKey: 'shop.item.darkMode.name', descKey: 'shop.item.darkMode.desc', price: 75, icon: 'moon', color: '#7c3aed' },
+  { id: 'dark-mode', nameKey: 'shop.item.darkMode.name', descKey: 'shop.item.darkMode.desc', price: 75, icon: 'moon', color: '#4d96ff' },
 ];
 
 export default function ShopScreen() {

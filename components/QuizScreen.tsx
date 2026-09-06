@@ -333,7 +333,7 @@ export default function QuizScreen() {
 
           {/* New word badge */}
           {wasNew && !showFeedback && (
-            <div className="absolute top-4 right-4 bg-gold text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full shadow-sm">
+            <div className="absolute top-4 right-4 game-badge px-2.5 py-1 text-[10px] text-primary">
               {t('quiz.newBadge')}
             </div>
           )}
@@ -385,7 +385,7 @@ export default function QuizScreen() {
                 <button
                   onClick={submitTyped}
                   disabled={!typedInput.trim() || judging}
-                  className="w-full rounded-pill bg-action py-3 font-booster font-extrabold text-white shadow-sm transition hover:bg-actionhover active:scale-[0.98] disabled:opacity-40"
+                  className="game-btn w-full bg-action py-3 font-booster text-white disabled:opacity-40"
                 >
                   {judging ? t('quiz.aiJudging') : t('quiz.submit')}
                 </button>
@@ -396,24 +396,24 @@ export default function QuizScreen() {
               const isSelected = selectedAnswer === i;
               const isCorrectAns = i === q.correctIndex;
 
-              let btnClass = 'flex w-full items-center gap-3 rounded-2xl border-2 border-subtle bg-surface px-4 py-3.5 text-left text-[15px] font-semibold text-primary transition-all duration-150 hover:-translate-y-0.5 hover:border-brandborder hover:bg-canvas';
+              let btnClass = 'game-chip flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left text-[15px]';
               let badgeClass = 'bg-canvas text-tertiary';
               let iconEl: React.ReactNode = null;
 
               if (isEliminated) {
-                btnClass = 'flex w-full items-center gap-3 rounded-2xl border-2 border-subtle bg-surface px-4 py-3.5 text-left text-[15px] font-semibold text-primary pointer-events-none opacity-30 line-through';
+                btnClass = 'flex w-full items-center gap-3 rounded-xl border-2 border-b-4 border-subtle bg-surface px-4 py-3.5 text-left text-[15px] font-bold text-primary pointer-events-none opacity-30 line-through';
                 badgeClass = 'bg-canvas text-tertiary';
               } else if (showFeedback) {
                 if (isCorrectAns) {
-                  btnClass = 'flex w-full items-center gap-3 rounded-2xl border-2 px-4 py-3.5 text-left text-[15px] font-semibold text-primary cursor-default border-[var(--bg-positive-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-positive-emphasis-default)_12%,transparent)]';
+                  btnClass = 'flex w-full items-center gap-3 rounded-xl border-2 border-b-4 px-4 py-3.5 text-left text-[15px] font-bold text-primary cursor-default border-[var(--bg-positive-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-positive-emphasis-default)_12%,transparent)]';
                   badgeClass = 'bg-positive text-white';
                   iconEl = <CheckIcon size={16} />;
                 } else if (isSelected) {
-                  btnClass = 'flex w-full items-center gap-3 rounded-2xl border-2 px-4 py-3.5 text-left text-[15px] font-semibold text-primary cursor-default border-[var(--bg-critical-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-critical-emphasis-default)_12%,transparent)]';
+                  btnClass = 'flex w-full items-center gap-3 rounded-xl border-2 border-b-4 px-4 py-3.5 text-left text-[15px] font-bold text-primary cursor-default border-[var(--bg-critical-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-critical-emphasis-default)_12%,transparent)]';
                   badgeClass = 'bg-critical text-white';
                   iconEl = <XIcon size={16} />;
                 } else {
-                  btnClass = 'flex w-full items-center gap-3 rounded-2xl border-2 border-subtle px-4 py-3.5 text-left text-[15px] font-semibold text-primary cursor-default opacity-40';
+                  btnClass = 'flex w-full items-center gap-3 rounded-xl border-2 border-b-4 border-subtle px-4 py-3.5 text-left text-[15px] font-bold text-primary cursor-default opacity-40';
                   badgeClass = 'bg-canvas text-tertiary';
                 }
               }
@@ -538,7 +538,7 @@ export default function QuizScreen() {
                 nextQuestion();
               }
             }}
-            className="w-full rounded-pill bg-action px-10 py-3.5 font-booster text-base font-extrabold text-white transition-all hover:bg-actionhover active:scale-[0.98]"
+            className="game-btn w-full bg-action px-10 py-3.5 font-booster text-base text-white"
           >
             {currentQIndex + 1 >= total ? t('quiz.seeResults') : t('quiz.continue')}
           </button>

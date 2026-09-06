@@ -1,6 +1,11 @@
 /*
- * Lexi skin — verbatim Gizmo design tokens (extracted from app.gizmo.ai).
- * Source of truth: gizmo-clone/docs/UI_SPEC.md + DESIGN_TOKENS_LIGHT_DARK.tsv.
+ * Lexi skin — "Playful Prep" design language, abstracted from the
+ * juyouenglish.com marketing site (computed styles, see juyou-clone research).
+ * Signature elements: cream app background, ink #0f172a chunky borders,
+ * hard "lift" shadows, blue #4D96FF brand + yellow #F4C430 accent,
+ * Noto Sans SC black weights.
+ * Semantic token layer (var names) intentionally unchanged from the Gizmo
+ * skin so Tailwind aliases keep working; only values are re-mapped.
  * Light-first; .dark class flips to dark theme (class strategy, below).
  */
 
@@ -19,31 +24,31 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* ---- surfaces ---- */
-  --bg-app: #f8fafc;
+  /* ---- surfaces (cream app bg = the juyou signature) ---- */
+  --bg-app: #fffbef;
   --bg-surface: #ffffff;
   --bg-surface-elevated: #ffffff;
   --bg-canvas: #f1f5f9;
   --bg-inverse: #0f172a;
 
-  /* ---- action (measured: Study pill #0f172a) ---- */
+  /* ---- action (ink solid button, juyou 立即注册体验) ---- */
   --bg-action-emphasis-default: #0f172a;
-  --bg-action-emphasis-hover: #020617;
+  --bg-action-emphasis-hover: #1e293b;
   --bg-action-subtle-default: #ffffff;
-  --bg-action-subtle-hover: #f8fafc;
+  --bg-action-subtle-hover: #fffbeb;
 
-  /* ---- brand ---- */
-  --bg-brand-emphasis-default: #7c3aed;
-  --bg-brand-emphasis-hover: #6d28d9;
-  --bg-brand-subtle-default: #ede9fe;
-  --bg-brand-subtle-hover: #ddd6fe;
+  /* ---- brand (juyou blue) ---- */
+  --bg-brand-emphasis-default: #4d96ff;
+  --bg-brand-emphasis-hover: #2563eb;
+  --bg-brand-subtle-default: #dbeafe;
+  --bg-brand-subtle-hover: #bfdbfe;
 
   /* ---- semantic ---- */
   --bg-positive-emphasis-default: #16a34a;
   --bg-warning-emphasis-default: #d97706;
   --bg-critical-emphasis-default: #dc2626;
   --bg-info-emphasis-default: #2563eb;
-  --bg-gold-emphasis-default: #ca8a04;
+  --bg-gold-emphasis-default: #f4c430;
   --bg-streak-emphasis-default: #ea580c;
 
   /* ---- text ---- */
@@ -51,19 +56,24 @@
   --text-secondary: #334155;
   --text-tertiary: #64748b;
   --text-inverse: #ffffff;
-  --text-brand-default: #7c3aed;
-  --text-hearts-default: #9333ea;
-  --text-gold-default: #ca8a04;
+  --text-brand-default: #2563eb;
+  --text-hearts-default: #ef4444;
+  --text-gold-default: #a16207;
   --text-streak-default: #ea580c;
-  --text-positive-default: #16a34a;
+  --text-positive-default: #15803d;
   --text-critical-default: #dc2626;
   --text-info-default: #2563eb;
 
   /* ---- border ---- */
   --border-subtle: #e2e8f0;
   --border-emphasis: #e4e4e7;
-  --border-focus: #60a5fa;
-  --border-brand-default: #8b5cf6;
+  --border-focus: #4d96ff;
+  --border-brand-default: #4d96ff;
+
+  /* ---- playful lift shadows (juyou button/card signature) ---- */
+  --ink: #0f172a;
+  --shadow-lift: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+  --shadow-lift-hover: 0 6px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .dark {
@@ -78,24 +88,24 @@
   --bg-action-subtle-default: #27272a;
   --bg-action-subtle-hover: #202023;
 
-  --bg-brand-emphasis-default: #7c3aed;
-  --bg-brand-emphasis-hover: #8b5cf6;
-  --bg-brand-subtle-default: #4c1d95;
-  --bg-brand-subtle-hover: #5b21b6;
+  --bg-brand-emphasis-default: #4d96ff;
+  --bg-brand-emphasis-hover: #6aa9ff;
+  --bg-brand-subtle-default: #1e3a8a;
+  --bg-brand-subtle-hover: #1e40af;
 
   --bg-positive-emphasis-default: #22c55e;
   --bg-warning-emphasis-default: #f59e0b;
   --bg-critical-emphasis-default: #ef4444;
   --bg-info-emphasis-default: #3b82f6;
-  --bg-gold-emphasis-default: #eab308;
+  --bg-gold-emphasis-default: #facc15;
   --bg-streak-emphasis-default: #f97316;
 
   --text-primary: #ffffff;
   --text-secondary: #e4e4e7;
   --text-tertiary: #a1a1aa;
   --text-inverse: #0f172a;
-  --text-brand-default: #a78bfa;
-  --text-hearts-default: #c084fc;
+  --text-brand-default: #6aa9ff;
+  --text-hearts-default: #f87171;
   --text-gold-default: #facc15;
   --text-streak-default: #fb923c;
   --text-positive-default: #4ade80;
@@ -104,8 +114,10 @@
 
   --border-subtle: #333338;
   --border-emphasis: #e4e4e7;
-  --border-focus: #60a5fa;
-  --border-brand-default: #8b5cf6;
+  --border-focus: #4d96ff;
+  --border-brand-default: #4d96ff;
+
+  --ink: #fafafa;
 }
 
 /* ————— Gizmo global chrome (measured) ————— */
@@ -113,7 +125,8 @@
 html, body {
   background: var(--bg-app);
   color: var(--text-primary);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  /* Noto Sans SC first (Playful Prep face, weights 100-900); Inter local fallback */
+  font-family: "Noto Sans SC", var(--font-inter), system-ui, sans-serif;
   font-size: 16px;
   line-height: 24px;
   -webkit-font-smoothing: antialiased;
@@ -123,22 +136,95 @@ html, body {
 * { -webkit-tap-highlight-color: transparent; }
 button { user-select: none; }
 
-/* Booster display face for titles/numbers */
+/* Display face for titles/numbers — Noto black keeps the chunky look in CJK */
 .font-booster {
-  font-family: var(--font-booster), var(--font-inter), sans-serif;
+  font-family: "Noto Sans SC", var(--font-booster), var(--font-inter), sans-serif;
 }
 
-/* ————— Card system (measured radii) ————— */
-.g-card {          /* standard card: r16 */
+/* ————— Card system ————— */
+.g-card {          /* standard card: r16 + subtle paper border */
   background: var(--bg-surface);
+  border: 2px solid var(--border-subtle);
   border-radius: 16px;
 }
-.g-card-hero {     /* hero card: r24 */
+.g-card-hero {     /* hero card: r24 + subtle paper border */
   background: var(--bg-surface);
+  border: 2px solid var(--border-subtle);
   border-radius: 24px;
 }
-.g-pill {          /* pill: full radius, the Gizmo button shape */
+.g-pill {          /* pill: full radius, the button shape */
   border-radius: 9999px;
+}
+
+/* ————— Playful Prep signature utilities (abstracted from juyouenglish.com) —————
+   Chunky ink borders + hard "lift" shadows + hover translate. Pure CSS so any
+   component can opt in. transition matches the source site: all .15s linear. */
+
+.game-chunky {
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-lift);
+  transition: all 0.15s linear;
+}
+
+.game-btn {
+  border: 2px solid var(--ink);
+  border-bottom-width: 4px;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lift);
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.game-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift-hover);
+}
+.game-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.game-card {
+  background: var(--bg-surface);
+  border: 3px solid var(--border-subtle);
+  border-radius: 1rem;
+  transition: all 0.15s linear;
+}
+.game-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink);
+}
+
+.game-badge {
+  display: inline-block;
+  background: var(--bg-gold-emphasis-default);
+  border: 2px solid var(--ink);
+  border-radius: 9999px;
+  box-shadow: var(--shadow-lift);
+  font-weight: 900;
+  transform: rotate(-2deg);
+  transition: all 0.15s linear;
+}
+.game-badge:hover {
+  transform: rotate(0deg);
+}
+
+/* quiz option chip — white word-card with thick bottom edge (juyou puzzle chips) */
+.game-chip {
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  border: 2px solid #cbd5e1;
+  border-bottom-width: 4px;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.game-chip:hover:not(:disabled) {
+  transform: translateY(-2px);
+  color: var(--text-brand-default);
+  border-color: var(--border-brand-default);
 }
 
 /* ————— Feedback animations (from clone calibration) ————— */

@@ -133,7 +133,7 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
         {/* brand */}
         <div className="flex items-center gap-2 px-4 py-3.5">
           <Link href="/chat" className="flex items-center gap-2">
-            <span className="grid h-8 w-8 place-items-center rounded-xl bg-brand text-white shadow-sm">
+            <span className="game-chunky grid h-8 w-8 place-items-center rounded-xl bg-brand text-white">
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15l-4.9 2.6.9-5.5-4-3.9 5.5-.8z" />
               </svg>
@@ -146,13 +146,13 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
         <div className="px-3 pb-1">
           <Link
             href="/quiz"
-            className="flex w-full items-center gap-2 rounded-xl border border-subtle bg-surface px-3.5 py-2.5 text-sm font-semibold text-secondary shadow-sm transition hover:border-brandborder hover:bg-canvas hover:text-primary"
+            className="game-btn flex w-full items-center gap-2 rounded-xl bg-accent px-3.5 py-2.5 text-sm text-[#0f172a]"
           >
-            <svg viewBox="0 0 24 24" className="h-4 w-4 text-brand-text" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M12 5v14M5 12h14" />
             </svg>
             {t("nav.study")}
-            <span className="ml-auto text-xs text-tertiary">{hearts} &#9829;</span>
+            <span className="ml-auto text-xs font-bold opacity-70">{hearts} &#9829;</span>
           </Link>
           <Link
             href="/import"
@@ -246,7 +246,7 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
           <header className="pointer-events-none absolute inset-x-0 top-0 z-10 flex h-[68px] items-center justify-end px-6">
             <div
               className="pointer-events-none absolute inset-0 -z-10"
-              style={{ background: "linear-gradient(180deg, rgba(248,250,252,0.88) 0%, rgba(248,250,252,0) 100%)" }}
+              style={{ background: "linear-gradient(180deg, var(--bg-app) 0%, rgba(255,255,255,0) 100%)" }}
               aria-hidden
             />
             <div className="pointer-results-auto flex items-center gap-2">

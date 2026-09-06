@@ -65,7 +65,7 @@ export default function ResultsScreen() {
   const tier = LEAGUE_TIERS[tierIdx];
 
   const grade = accuracy >= 90 ? t('res.gradeExcellent') : accuracy >= 70 ? t('res.gradeWell') : accuracy >= 50 ? t('res.gradeKeep') : t('res.gradeDont');
-  const gradeColor = accuracy >= 90 ? '#10B981' : accuracy >= 70 ? '#7C3AED' : accuracy >= 50 ? '#F59E0B' : '#F43F5E';
+  const gradeColor = accuracy >= 90 ? '#16A34A' : accuracy >= 70 ? '#2563EB' : accuracy >= 50 ? '#F59E0B' : '#F43F5E';
   const mins = Math.floor(durationSec / 60);
   const secs = durationSec % 60;
 
@@ -76,7 +76,7 @@ export default function ResultsScreen() {
           {Array.from({ length: 40 }).map((_, i) => (
             <div key={i} className="absolute w-2 h-3 rounded-sm animate-float-up"
               style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 30}%`,
-                background: ['#7C3AED', '#EC4899', '#F59E0B', '#10B981', '#3B82F6'][i % 5],
+                background: ['#4D96FF', '#FFD93D', '#F59E0B', '#10B981', '#F43F5E'][i % 5],
                 animationDelay: `${Math.random() * 0.5}s`, transform: `rotate(${Math.random() * 360}deg)` }} />
           ))}
         </div>
@@ -169,7 +169,7 @@ export default function ResultsScreen() {
 
       {/* Actions */}
       <div className="space-y-3 mt-auto">
-        <button onClick={() => { startQuiz(10); router.push('/quiz'); }} className="rounded-pill bg-action px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-actionhover active:scale-[0.98] w-full !py-4">
+        <button onClick={() => { startQuiz(10); router.push('/quiz'); }} className="game-btn w-full bg-action px-5 py-4 text-sm text-white">
           {t('res.playAgain')}
         </button>
         <button onClick={() => router.push('/leaderboard')} className="rounded-pill border-2 border-subtle px-5 py-2.5 text-sm font-bold text-secondary transition hover:border-brandborder hover:text-primary w-full !py-3 !text-sm">

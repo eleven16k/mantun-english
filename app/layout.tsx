@@ -32,12 +32,23 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  themeColor: "#f8fafc",
+  themeColor: "#fffbef",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-CN" className={`${inter.variable} ${booster.variable} h-full antialiased`}>
+      <head>
+        {/* Playful Prep face: Noto Sans SC variable (100-900), same as the /lexi
+            marketing page. Runtime <link> — no build-time fetch; Inter is the
+            offline fallback. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-full bg-app text-primary">
         <LanguageProvider>{children}</LanguageProvider>
       </body>
