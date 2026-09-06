@@ -93,7 +93,7 @@ const zh: Record<keyof typeof en, string> = {
   'dash.phaseSprint': '冲刺期',
   'dash.phaseFinal': '最后冲刺',
   'dash.intensity': '强度',
-  'dash.mascotAlt': 'Lexi 吉祥物',
+  'dash.mascotAlt': '漫豚吉祥物',
   'dash.readyTo': '准备好',
   'dash.studyBig': '学习了吗？',
   'dash.today': '今日：',

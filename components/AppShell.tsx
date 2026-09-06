@@ -133,12 +133,11 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
         {/* brand */}
         <div className="flex items-center gap-2 px-4 py-3.5">
           <Link href="/chat" className="flex items-center gap-2">
-            <span className="game-chunky grid h-8 w-8 place-items-center rounded-xl bg-brand text-white">
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15l-4.9 2.6.9-5.5-4-3.9 5.5-.8z" />
-              </svg>
+            <span className="game-chunky grid h-8 w-8 place-items-center rounded-xl bg-surface">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/sites/assets/dolphin.png" alt="" className="h-6 w-6" />
             </span>
-            <span className="font-booster text-lg font-extrabold">Lexi</span>
+            <span className="font-booster text-lg font-extrabold">漫豚英语</span>
           </Link>
         </div>
 

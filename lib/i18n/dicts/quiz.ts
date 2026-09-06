@@ -234,7 +234,7 @@ const zh: Record<keyof typeof en, string> = {
   "onb.startLearning": "开始学习 →",
 
   // — 玩法教程 —
-  "tut.title": "Lexi 玩法指南",
+  "tut.title": "漫豚英语玩法指南",
   "tut.ready": "你已准备就绪！",
   "tut.readyDesc": "你已经了解红心、金币和连胜的玩法了。",
   "tut.takeTest": "去做水平测试 →",
@@ -270,8 +270,8 @@ const zh: Record<keyof typeof en, string> = {
   "auth.signingIn": "登录中…",
   "auth.signIn": "登录",
   "auth.loginFailed": "登录失败",
-  "connect.title": "连接 Lexi 服务器",
-  "connect.hint": "输入运行 Lexi 服务的电脑 IP（Mac，需同一 Wi-Fi）",
+  "connect.title": "连接漫豚英语服务器",
+  "connect.hint": "输入运行漫豚英语服务的电脑 IP（Mac，需同一 Wi-Fi）",
   "connect.ph": "例如 192.168.3.113",
   "connect.test": "连接",
   "connect.testing": "正在测试…",

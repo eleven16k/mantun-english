@@ -24,7 +24,7 @@ const booster = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Lexi — English Practice",
+  title: "漫豚英语 — 每日提分计划",
   description: "Gamified English practice — every question counts",
 };
 

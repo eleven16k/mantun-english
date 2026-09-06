@@ -43,7 +43,7 @@ export default function SharePage() {
     // Brand
     ctx.fillStyle = "#fff";
     ctx.font = "bold 42px sans-serif";
-    ctx.fillText("Lexi", W / 2, 90);
+    ctx.fillText("漫豚英语", W / 2, 90);
     ctx.font = "20px sans-serif";
     ctx.fillStyle = "rgba(255,255,255,0.6)";
     ctx.fillText(t("share.subtitle"), W / 2, 125);
@@ -115,7 +115,7 @@ export default function SharePage() {
       if (!blob) throw new Error("export failed");
       const file = new File([blob], "lexi-poster.png", { type: "image/png" });
       if (navigator.canShare?.({ files: [file] })) {
-        await navigator.share({ files: [file], title: "Lexi" });
+        await navigator.share({ files: [file], title: "漫豚英语" });
         setCopied(true);
       } else {
         const url = URL.createObjectURL(blob);

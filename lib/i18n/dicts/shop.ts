@@ -205,7 +205,7 @@ const zh: Record<keyof typeof en, string> = {
   'profile.friendPhonePh': '好友的手机号',
   'profile.addFriendBtn': '添加',
   'profile.friendAdded': '好友添加成功！',
-  'profile.friendNotFound': '该手机号还没有注册 Lexi',
+  'profile.friendNotFound': '该手机号还没有注册漫豚英语',
   'profile.friendAddFail': '添加失败，请重试',
   'profile.studyGroups': '学习小组',
   'profile.learn': '一起学',
@@ -244,7 +244,7 @@ const zh: Record<keyof typeof en, string> = {
 
   // — 定价 —
   'pricing.title': '升级无限版',
-  'pricing.subtitle': '解锁 Lexi 全部功能',
+  'pricing.subtitle': '解锁漫豚英语全部功能',
   'pricing.feature': '功能',
   'pricing.free': '免费',
   'pricing.member': '会员',

@@ -99,7 +99,7 @@ export default function AuthPage() {
                 <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15l-4.9 2.6.9-5.5-4-3.9 5.5-.8z" />
               </svg>
             </span>
-            <h1 className="font-booster text-2xl font-extrabold tracking-tight">Lexi</h1>
+            <h1 className="font-booster text-2xl font-extrabold tracking-tight">漫豚英语</h1>
             <p className="text-sm text-tertiary">{t("auth.tagline")}</p>
           </div>
 
