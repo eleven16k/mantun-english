@@ -2,6 +2,7 @@
 // Lexi Vocabulary Bank - 中考高频词汇
 // ============================================================
 import type { VocabWord, Question } from './types';
+import { generateGrammarQuestions } from './grammar';
 
 export const VOCAB: VocabWord[] = [
   { id: 'w01', en: 'achieve', cn: '实现，达到', phonetic: '/əˈtʃiːv/', type: 'v.', example: 'You can achieve your dream.', exampleCn: '你可以实现你的梦想。', difficulty: 2 },
@@ -50,6 +51,10 @@ export function generateQuestions(count: number = 10): Question[] {
 
 /** Generate questions all of one type (deck-specific quizzes, e.g. cloze). */
 export function generateQuestionsByType(count: number, type: Question['type']): Question[] {
+  if (type === 'grammar') {
+    // 语法题走独立题库（不依赖词卡）
+    return generateGrammarQuestions(count);
+  }
   const shuffled = [...VOCAB].sort(() => Math.random() - 0.5);
   const selected = shuffled.slice(0, Math.min(count, VOCAB.length));
   return selected.map((word, idx) => makeQuestion(word, idx, type));
@@ -85,6 +90,9 @@ export function makeQuestion(word: VocabWord, idx: number, type: Question['type'
       const choices = [...distractors, word.cn].sort(() => Math.random() - 0.5);
       return { ...base, type, prompt: `🔊 ${word.phonetic}`, promptSub: '听音辨义 (sound → meaning)', choices, correctIndex: choices.indexOf(word.cn) };
     }
+    default:
+      // grammar 题来自独立题库（generateGrammarQuestions），不基于词卡生成
+      throw new Error(`makeQuestion does not support type: ${type}`);
   }
 }
 

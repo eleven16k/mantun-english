@@ -16,12 +16,13 @@ import type { Question } from "@/lib/types";
  * also saved here automatically (see /import → addUserDeck).
  */
 const DECKS: {
-  titleKey: "deck.deckVocab" | "deck.deckCloze";
+  titleKey: "deck.deckVocab" | "deck.deckCloze" | "deck.deckGrammar";
   color: string;
   questionType: Question["type"];
 }[] = [
   { titleKey: "deck.deckVocab", color: "#7c3aed", questionType: "word-to-cn" },
   { titleKey: "deck.deckCloze", color: "#16a34a", questionType: "fill-blank" },
+  { titleKey: "deck.deckGrammar", color: "#4d96ff", questionType: "grammar" },
 ];
 
 export default function DecksPage() {

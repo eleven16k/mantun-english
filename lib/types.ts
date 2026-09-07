@@ -16,7 +16,7 @@ export interface VocabWord {
 export interface Question {
   id: string;
   wordId: string;
-  type: 'word-to-cn' | 'cn-to-word' | 'fill-blank' | 'listening';
+  type: 'word-to-cn' | 'cn-to-word' | 'fill-blank' | 'listening' | 'grammar';
   prompt: string;
   promptSub?: string; // phonetic or hint
   choices: string[];
