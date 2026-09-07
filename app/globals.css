@@ -286,3 +286,20 @@ button { user-select: none; }
 @keyframes g-bounce-in { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); } 100% { transform: scale(1); opacity: 1; } }
 @keyframes g-slide-up { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 @keyframes g-heartbeat { 0%, 100% { transform: scale(1); } 25% { transform: scale(1.1); } 50% { transform: scale(0.95); } 75% { transform: scale(1.05); } }
+
+/* 🔥 连击 Fever 徽章 */
+.fever-badge {
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.6875rem;
+    line-height: 1.1;
+    color: #fff;
+    background: var(--bg-streak-emphasis-default);
+    animation: fever-pulse 1s ease-in-out infinite;
+}
+
+@keyframes fever-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}

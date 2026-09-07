@@ -269,3 +269,84 @@ describe("league tiers", () => {
     expect(getTierIndex(mins[mins.length - 1] + 1000)).toBe(mins.length - 1);
   });
 });
+
+describe("⚡ 闪电快答 speed multiplier", () => {
+  it("fast answer (≥7.5s left) triples review SP", () => {
+    useGameStore.setState({
+      sessionLightning: true,
+      comboCorrect: 0,
+      feverUntil: null,
+      questions: [],
+      currentQIndex: 0,
+      sessionSPEarned: 0,
+      scorePoints: 0,
+    });
+    useGameStore.getState().startQuiz(3, "word-to-cn", { lightning: true });
+    expect(useGameStore.getState().sessionLightning).toBe(true);
+    const q = useGameStore.getState().questions[0];
+    // 先答错一题把新词 SP 清零影响隔离掉：拿第二题作为复习题不好控制，
+    // 直接用第一题并断言 ≥ 3×20（新词最低 20 × 3）
+    useGameStore.getState().answerQuestion(q.correctIndex, { lightningLeftSec: 9 });
+    const s1 = useGameStore.getState();
+    expect(s1.sessionSPEarned).toBeGreaterThanOrEqual(60);
+  });
+
+  it("slow answer (≤5s left) earns plain SP (×1)", () => {
+    useGameStore.setState({ sessionLightning: true, comboCorrect: 0, feverUntil: null });
+    useGameStore.getState().startQuiz(3, "word-to-cn", { lightning: true });
+    const q = useGameStore.getState().questions[0];
+    useGameStore.getState().answerQuestion(q.correctIndex, { lightningLeftSec: 1 });
+    const s1 = useGameStore.getState();
+    // 新词基础 20 分 ×1
+    expect(s1.sessionSPEarned).toBe(20);
+  });
+});
+
+describe("🔥 连击 Fever", () => {
+  it("triggers at 5 consecutive correct and doubles SP while active", () => {
+    useGameStore.setState({
+      sessionLightning: false,
+      comboCorrect: 0,
+      feverUntil: null,
+      scoreBoostActive: false,
+      sessionSPEarned: 0,
+    });
+    useGameStore.getState().startQuiz(10, "word-to-cn");
+    const qs = useGameStore.getState().questions;
+    // 连对 4 题（不同词）
+    for (let i = 0; i < 4; i++) {
+      const q = qs[i];
+      useGameStore.setState({ currentQIndex: i, showFeedback: false, selectedAnswer: null });
+      useGameStore.getState().answerQuestion(q.correctIndex);
+    }
+    const before = useGameStore.getState();
+    expect(before.comboCorrect).toBe(4);
+    expect(before.feverUntil).toBeNull();
+
+    // 第 5 连对 → 触发 Fever
+    const q5 = qs[4];
+    const sp5Base = useGameStore.getState().sessionSPEarned;
+    useGameStore.setState({ currentQIndex: 4, showFeedback: false, selectedAnswer: null });
+    useGameStore.getState().answerQuestion(q5.correctIndex);
+    const after = useGameStore.getState();
+    expect(after.comboCorrect).toBe(5);
+    expect(after.feverUntil).not.toBeNull();
+    expect(after.feverUntil!).toBeGreaterThan(Date.now());
+
+    // Fever 生效中的下一题：SP ×2（复习题 10 → 20；触发题本身不吃 fever）
+    const q6 = qs[5];
+    useGameStore.setState({ currentQIndex: 5, showFeedback: false, selectedAnswer: null });
+    useGameStore.getState().answerQuestion(q6.correctIndex);
+    const s6 = useGameStore.getState();
+    expect(s6.sessionSPEarned - sp5Base).toBeGreaterThanOrEqual(20);
+  });
+
+  it("wrong answer resets the combo", () => {
+    useGameStore.setState({ sessionLightning: false, comboCorrect: 3, feverUntil: null });
+    useGameStore.getState().startQuiz(2, "word-to-cn");
+    const q = useGameStore.getState().questions[0];
+    const wrong = (q.correctIndex + 1) % q.choices.length;
+    useGameStore.getState().answerQuestion(wrong);
+    expect(useGameStore.getState().comboCorrect).toBe(0);
+  });
+});

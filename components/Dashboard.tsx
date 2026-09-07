@@ -135,6 +135,17 @@ export function Dashboard() {
           {done >= goal ? t("dash.extraPractice") : t("dash.startPlan")}
         </button>
 
+        {/* ⚡ 闪电快答：节奏玩法入口（每题 10 秒，答得越快倍率越高） */}
+        <button
+          onClick={() => {
+            useGameStore.getState().startQuiz(10, undefined, { lightning: true });
+            router.push("/quiz");
+          }}
+          className="game-btn mt-2 w-full bg-accent py-2.5 text-sm text-[#0f172a]"
+        >
+          ⚡ {t("dash.lightning")} · ×3
+        </button>
+
         {/* Action buttons — Upload / Paste / PK / More */}
         <div className="mt-4 flex items-center justify-between px-4 pb-1">
           {ACTIONS.map((b) => (

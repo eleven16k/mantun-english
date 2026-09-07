@@ -53,6 +53,15 @@ export default function QuizScreen() {
   const [floatReward, setFloatReward] = useState<{ text: string; color: string; key: number } | null>(null);
   const [heartLoss, setHeartLoss] = useState(false);
   const rewardKey = useRef(0);
+
+  // ⚡ 闪电快答 + 🔥 连击 Fever
+  const sessionLightning = useGameStore((s) => s.sessionLightning);
+  const comboCorrect = useGameStore((s) => s.comboCorrect);
+  const feverUntil = useGameStore((s) => s.feverUntil);
+  const [lightningLeft, setLightningLeft] = useState(10); // 剩余秒数（浮点）
+  const [feverActive, setFeverActive] = useState(false);
+  const feverRef = useRef(false); // 该题作答时 Fever 是否生效（服务端同步倍率）
+  const speedMultRef = useRef(1); // 该题作答时的速度倍率（服务端同步倍率）
   const [serverResult, setServerResult] = useState<{
     coinsEarned: number; spEarned: number; hearts: number;
     enteredWeakness: boolean; conqueredWeakness: boolean;
@@ -109,13 +118,57 @@ export default function QuizScreen() {
     }
   }, [showFeedback, selectedAnswer, q, t]);
 
+  // ⚡ 闪电快答：每题 10 秒倒计时，超时按答错处理
+  useEffect(() => {
+    if (!sessionLightning || showFeedback) return;
+    const started = Date.now();
+    setLightningLeft(10);
+    const iv = setInterval(() => {
+      const left = Math.max(0, 10 - (Date.now() - started) / 1000);
+      setLightningLeft(left);
+      if (left <= 0) {
+        clearInterval(iv);
+        handleAnswer(-1);
+      }
+    }, 100);
+    return () => clearInterval(iv);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentQIndex, showFeedback, sessionLightning]);
+
+  // 🔥 Fever 到期落牌
+  useEffect(() => {
+    setFeverActive(!!feverUntil && feverUntil > Date.now());
+    if (!feverUntil) return;
+    const iv = setInterval(() => setFeverActive(feverUntil > Date.now()), 500);
+    return () => clearInterval(iv);
+  }, [feverUntil]);
+
   // ---- Handlers ----
   const handleAnswer = (i: number) => {
     if (showFeedback || !q) return;
     const isCorrect = i === q.correctIndex;
 
-    // Optimistic local update for instant UI
-    answerQuestion(i);
+    // ⚡ 闪电模式：记录本题剩余秒数与倍率；🔥 Fever 生效则记录 ×2
+    const st = useGameStore.getState();
+    const feverOn = !!st.feverUntil && st.feverUntil > Date.now();
+    feverRef.current = feverOn;
+    speedMultRef.current =
+      st.sessionLightning && lightningLeft != null
+        ? (lightningLeft >= 7.5 ? 3 : lightningLeft >= 5 ? 2 : 1) * (feverOn ? 2 : 1)
+        : feverOn
+          ? 2
+          : 1;
+
+    // Optimistic local update for instant UI（闪电剩余秒数参与提分值倍率）
+    answerQuestion(i, { lightningLeftSec: st.sessionLightning ? lightningLeft : undefined });
+
+    // 🔥 连击触发 Fever 的即时反馈
+    const after = useGameStore.getState();
+    if (after.feverUntil && after.feverUntil > Date.now() && !feverOn) {
+      rewardKey.current++;
+      setFloatReward({ text: '🔥 FEVER ×2', color: '#F59E0B', key: rewardKey.current });
+      setTimeout(() => setFloatReward(null), 1400);
+    }
 
     // Fire server call (authoritative — updates hearts/coins/SP/streak/weakness/SM-2)
     if (q.wordId && !q.wordId.startsWith("import-") && !q.wordId.startsWith("plan-") && !q.wordId.startsWith("weak-") && !q.wordId.startsWith("battle-") && !q.wordId.startsWith("vocab-") && !q.wordId.startsWith("t")) {
@@ -124,10 +177,11 @@ export default function QuizScreen() {
         .then(result => {
           setServerResult(result);
           // Sync authoritative values back to store
+          // （闪电/Fever 的本地倍率同样作用在服务端回报的提分值上）
           useGameStore.setState({
             hearts: result.hearts,
             coins: result.coinsEarned > 0 ? coins + result.coinsEarned : coins,
-            scorePoints: result.spEarned > 0 ? scorePoints + result.spEarned : scorePoints,
+            scorePoints: result.spEarned > 0 ? scorePoints + Math.floor(result.spEarned * speedMultRef.current) : scorePoints,
             streak: result.streak,
             heartsDepletedAt: result.hearts === 0 ? Date.now() : null,
           });
@@ -309,7 +363,26 @@ export default function QuizScreen() {
           <HeartIcon size={20} className={hearts > 0 ? 'text-hearts' : 'text-tertiary'} />
           <span className={`font-heading font-extrabold text-sm ${hearts > 0 ? 'text-hearts' : 'text-tertiary'}`}>{hearts}</span>
         </div>
+        {feverActive && <span className="fever-badge">🔥 FEVER ×2</span>}
       </div>
+      {sessionLightning && !showFeedback && (
+        <div className="px-4 pb-1 -mt-1">
+          <div className="flex items-center gap-2">
+            <span className={`text-xs font-black tabular-nums ${lightningLeft <= 3 ? 'text-critical' : 'text-gold'}`}>
+              ⚡ {lightningLeft.toFixed(1)}s
+            </span>
+            <div className="flex-1 progress-track h-1.5">
+              <div
+                className="h-full rounded-full"
+                style={{
+                  width: `${lightningLeft * 10}%`,
+                  background: lightningLeft <= 3 ? 'var(--bg-critical-emphasis-default)' : 'var(--bg-gold-emphasis-default)',
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Session mini bar */}
       <div className="flex items-center justify-center gap-3 pb-2">

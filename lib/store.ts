@@ -122,6 +122,11 @@ interface GameState {
   scoreBoostActive: boolean;
   scoreBoostCount: number;
 
+  // ⚡ 闪电快答 + 🔥 连击 Fever
+  sessionLightning: boolean; // 每题 10 秒倒计时，答得越快提分值倍率越高
+  comboCorrect: number; // 本场连对数
+  feverUntil: number | null; // Fever 生效截止时间（x2 提分值）
+
   // Card states (spaced repetition)
   cardStates: Record<string, CardState>;
 
@@ -149,13 +154,13 @@ interface GameState {
   } | null;
 
   // Actions
-  startQuiz: (count?: number, type?: Question['type']) => void;
+  startQuiz: (count?: number, type?: Question['type'], opts?: { lightning?: boolean }) => void;
   addUserDeck: (title: string, questions: Question[], icon?: string, color?: string) => void;
   removeUserDeck: (id: string) => void;
   removeBuiltinDeck: (key: string) => void;
   addCardToDeck: (deckTitle: string, question: Question) => void;
   loadImportedQuiz: (questions: Question[], kbName?: string) => void;
-  answerQuestion: (choiceIndex: number) => void;
+  answerQuestion: (choiceIndex: number, speedOpts?: { lightningLeftSec?: number }) => void;
   nextQuestion: () => void;
   endQuiz: () => void;
   navigate: (screen: ScreenName) => void;
@@ -206,6 +211,9 @@ export const useGameStore = create<GameState>()(
       showFeedback: false,
       scoreBoostActive: false,
       scoreBoostCount: 0,
+      sessionLightning: false,
+      comboCorrect: 0,
+      feverUntil: null,
 
       cardStates: {},
       userDecks: [],
@@ -251,7 +259,7 @@ export const useGameStore = create<GameState>()(
         set({ userDecks: next });
       },
 
-      startQuiz: (count = 10, type) => {
+      startQuiz: (count = 10, type, opts) => {
         const { dailyDate, dailyQuestionsAnswered } = get();
         const td = todayStr();
         const dq = dailyDate === td ? dailyQuestionsAnswered : 0;
@@ -274,6 +282,9 @@ export const useGameStore = create<GameState>()(
           scoreBoostCount: 0,
           currentScreen: 'quiz',
           dailyDate: td,
+          sessionLightning: !!opts?.lightning,
+          comboCorrect: 0,
+          feverUntil: null,
         });
       },
 
@@ -297,10 +308,13 @@ export const useGameStore = create<GameState>()(
           scoreBoostCount: 0,
           currentScreen: 'quiz',
           dailyDate: td,
+          sessionLightning: false,
+          comboCorrect: 0,
+          feverUntil: null,
         });
       },
 
-      answerQuestion: (choiceIndex: number) => {
+      answerQuestion: (choiceIndex: number, speedOpts?: { lightningLeftSec?: number }) => {
         const state = get();
         if (state.showFeedback) return;
         const q = state.questions[state.currentQIndex];
@@ -341,6 +355,23 @@ export const useGameStore = create<GameState>()(
             }
           }
           spEarned = 0;
+        }
+
+        // ⚡ 闪电快答：答得越快，提分值倍率越高（剩余 ≥7.5s ×3 / ≥5s ×2 / 否则 ×1）
+        const feverWasActive = !!state.feverUntil && state.feverUntil > Date.now();
+        let speedMult = 1;
+        if (state.sessionLightning && isCorrect && speedOpts?.lightningLeftSec != null) {
+          const left = speedOpts.lightningLeftSec;
+          speedMult = left >= 7.5 ? 3 : left >= 5 ? 2 : 1;
+          spEarned = Math.floor(spEarned * speedMult);
+        }
+
+        // 🔥 连击 Fever：连对每满 5 题触发一次 30 秒全场 ×2（进行中不叠加时长）
+        const comboCorrect = isCorrect ? state.comboCorrect + 1 : 0;
+        const feverTriggered = isCorrect && !feverWasActive && comboCorrect > 0 && comboCorrect % 5 === 0;
+        const feverUntil = feverTriggered ? Date.now() + 30_000 : state.feverUntil;
+        if (feverWasActive && isCorrect) {
+          spEarned = Math.floor(spEarned * 2);
         }
 
         // Update card state (spaced repetition)
@@ -423,6 +454,8 @@ export const useGameStore = create<GameState>()(
           streak: newStreak,
           lastStudyDate: td,
           scoreBoostCount: state.scoreBoostActive ? state.scoreBoostCount + 1 : state.scoreBoostCount,
+          comboCorrect,
+          feverUntil: feverUntil && feverUntil > Date.now() ? feverUntil : null,
         });
 
         // Deactivate boost after 10 questions
