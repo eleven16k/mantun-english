@@ -29,7 +29,14 @@ export default function AuthPage() {
     if (inv && /^\d{6}$/.test(inv)) {
       kv.setItem("lexi-invite", inv);
     }
-  }, []);
+    // Demo bridge: the marketing-site /login verifies against the same API and
+    // hands the token over via ?token= — ingest it and jump straight in.
+    const token = new URLSearchParams(window.location.search).get("token");
+    if (token && /^[\w-]+\.[\w-]+\.[\w-]+$/.test(token)) {
+      kv.setItem("lexi-token", token);
+      router.replace("/chat");
+    }
+  }, [router]);
 
   const validPhone = /^1[3-9]\d{9}$/.test(phone);
   const validCode = /^\d{6}$/.test(code);
