@@ -219,7 +219,7 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
             }`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`${ASSETS}/dolphin.png`} alt="" className="h-7 w-7 rounded-full object-cover" />
+            <img src={`${ASSETS}/avatar-13.png`} alt="" className="h-7 w-7 rounded-full" />
             <span className="flex-1 truncate text-sm font-semibold text-primary">{t("nav.profile")}</span>
           </Link>
           <Link
@@ -254,7 +254,7 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
                 className="flex h-9 items-center gap-2 rounded-pill bg-surface px-3 text-sm font-semibold text-primary shadow-sm transition hover:bg-canvas"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`${ASSETS}/dolphin.png`} alt="" className="h-5 w-5 rounded-full object-cover" />
+                <img src={`${ASSETS}/nav-joystick.png`} alt="" className="h-5 w-5" />
                 {t("nav.streak")} {streak}
               </Link>
               <Link
@@ -273,7 +273,7 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
               </button>
               <Link href="/profile">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`${ASSETS}/dolphin.png`} alt="" className="h-9 w-9 rounded-full object-cover" />
+                <img src={`${ASSETS}/avatar-13.png`} alt="" className="h-9 w-9 rounded-full" />
               </Link>
             </div>
           </header>
