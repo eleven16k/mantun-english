@@ -87,7 +87,7 @@ const en = {
   "onb.startLearning": "Start learning →",
 
   // — Tutorial —
-  "tut.title": "How Lexi Works",
+  "tut.title": "How ManTun English Works",
   "tut.ready": "You're ready!",
   "tut.readyDesc": "You now know how hearts, coins and streaks work.",
   "tut.takeTest": "Take placement test →",
@@ -123,8 +123,8 @@ const en = {
   "auth.signingIn": "Signing in…",
   "auth.signIn": "Sign in",
   "auth.loginFailed": "Login failed",
-  "connect.title": "Connect to Lexi",
-  "connect.hint": "Enter the computer's IP address that runs your Lexi server (Mac, same Wi-Fi)",
+  "connect.title": "Connect to ManTun English",
+  "connect.hint": "Enter the computer's IP address that runs your ManTun English server (Mac, same Wi-Fi)",
   "connect.ph": "e.g. 192.168.3.113",
   "connect.test": "Connect",
   "connect.testing": "Testing…",

@@ -81,7 +81,7 @@ export function Dashboard() {
       {/* hero: mascot + English-practice headline */}
       <div className="flex flex-col items-center gap-2 pt-6">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`${ASSETS}/mascot.svg`} alt={t("dash.mascotAlt")} className="h-[280px] w-[280px]" />
+        <img src={`${ASSETS}/dolphin.png`} alt={t("dash.mascotAlt")} className="h-[280px] w-[280px] object-contain" />
         <h2 className="flex flex-wrap items-baseline justify-center gap-x-1">
           <span className="text-[16px] font-bold leading-[24px] text-secondary">{t("dash.readyTo")}</span>
           <span className="inline-flex font-booster text-[34px] font-extrabold leading-[40px] text-secondary">

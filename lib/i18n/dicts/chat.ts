@@ -8,7 +8,7 @@ const en = {
   'dash.phaseSprint': 'Sprint',
   'dash.phaseFinal': 'Final Push',
   'dash.intensity': 'intensity',
-  'dash.mascotAlt': 'Lexi mascot',
+  'dash.mascotAlt': 'ManTun English mascot',
   'dash.readyTo': 'Ready to',
   'dash.studyBig': 'Study?',
   'dash.today': 'Today:',

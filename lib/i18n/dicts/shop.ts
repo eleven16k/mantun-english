@@ -48,7 +48,7 @@ const en = {
   'profile.friendPhonePh': "Friend's phone number",
   'profile.addFriendBtn': 'Add',
   'profile.friendAdded': 'Friend added!',
-  'profile.friendNotFound': 'No Lexi user with that phone number',
+  'profile.friendNotFound': 'No ManTun English user with that phone number',
   'profile.friendAddFail': 'Could not add — try again',
   'profile.studyGroups': 'Study groups',
   'profile.learn': 'Learn',
@@ -87,7 +87,7 @@ const en = {
 
   // — Pricing —
   'pricing.title': 'Go Unlimited',
-  'pricing.subtitle': 'Unlock everything Lexi has to offer',
+  'pricing.subtitle': 'Unlock everything ManTun English has to offer',
   'pricing.feature': 'Feature',
   'pricing.free': 'Free',
   'pricing.member': 'Member',

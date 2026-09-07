@@ -108,9 +108,12 @@ export default function ProfileScreen() {
     <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
       {/* Name — Booster 26px (measured at (486,76)) */}
       <div className="flex items-center gap-4">
-        <div className="mv-arch grid h-16 w-16 place-items-center text-2xl font-booster font-extrabold text-white" style={{ background: 'var(--bg-brand-emphasis-default)' }}>
-          Me
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/sites/assets/dolphin.png"
+          alt=""
+          className="game-chunky h-16 w-16 rounded-2xl object-cover"
+        />
         <div>
           <h1 className="font-booster text-[26px] font-extrabold leading-[32px] text-primary">Me</h1>
           <p className="text-sm text-tertiary">0 {t('profile.followers')} · 0 {t('profile.following')}</p>
