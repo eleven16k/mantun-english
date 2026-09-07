@@ -284,21 +284,29 @@ describe("⚡ 闪电快答 speed multiplier", () => {
     useGameStore.getState().startQuiz(3, "word-to-cn", { lightning: true });
     expect(useGameStore.getState().sessionLightning).toBe(true);
     const q = useGameStore.getState().questions[0];
-    // 先答错一题把新词 SP 清零影响隔离掉：拿第二题作为复习题不好控制，
-    // 直接用第一题并断言 ≥ 3×20（新词最低 20 × 3）
+    // 强制按"复习词"计分（基础 10 分）→ ≥7.5s ×3 = 30
+    const day = Date.now();
+    useGameStore.setState({
+      cardStates: { [q.wordId]: { id: q.wordId, intervalIndex: 2, consecutiveWrong: 0, consecutiveCorrect: 0, mastered: false, nextReviewAt: day, lastReviewedAt: day } },
+    });
     useGameStore.getState().answerQuestion(q.correctIndex, { lightningLeftSec: 9 });
     const s1 = useGameStore.getState();
-    expect(s1.sessionSPEarned).toBeGreaterThanOrEqual(60);
+    expect(s1.sessionSPEarned).toBe(30);
   });
 
   it("slow answer (≤5s left) earns plain SP (×1)", () => {
     useGameStore.setState({ sessionLightning: true, comboCorrect: 0, feverUntil: null });
     useGameStore.getState().startQuiz(3, "word-to-cn", { lightning: true });
     const q = useGameStore.getState().questions[0];
+    // 强制按"复习词"计分（基础 10 分），消除新词难度差异
+    const day = Date.now();
+    useGameStore.setState({
+      cardStates: { [q.wordId]: { id: q.wordId, intervalIndex: 2, consecutiveWrong: 0, consecutiveCorrect: 0, mastered: false, nextReviewAt: day, lastReviewedAt: day } },
+    });
     useGameStore.getState().answerQuestion(q.correctIndex, { lightningLeftSec: 1 });
     const s1 = useGameStore.getState();
-    // 新词基础 20 分 ×1
-    expect(s1.sessionSPEarned).toBe(20);
+    // 复习词基础 10 分 ×1
+    expect(s1.sessionSPEarned).toBe(10);
   });
 });
 
@@ -348,5 +356,60 @@ describe("🔥 连击 Fever", () => {
     const wrong = (q.correctIndex + 1) % q.choices.length;
     useGameStore.getState().answerQuestion(wrong);
     expect(useGameStore.getState().comboCorrect).toBe(0);
+  });
+});
+
+describe("👹 弱点 Boss 战", () => {
+  it("correct answers damage the boss; defeat grants +50/+50 and removes the weakness", () => {
+    useGameStore.setState({
+      dropsEnabled: false,
+      bossBattle: { wordId: "boss-word", word: "achieve", hp: 2, maxHp: 2, total: 2, defeated: false },
+      weaknesses: { "boss-word": { id: "boss-word", wrongCount: 3, correctStreak: 0, lastPrompt: "achieve", addedAt: Date.now() } },
+      coins: 100,
+      scorePoints: 0,
+      sessionSPEarned: 0,
+      sessionCoinsEarned: 0,
+      questions: [
+        { id: "b0", wordId: "boss-word", type: "word-to-cn", prompt: "achieve", choices: ["a", "b"], correctIndex: 0 },
+        { id: "b1", wordId: "boss-word", type: "word-to-cn", prompt: "achieve", choices: ["a", "b"], correctIndex: 0 },
+        { id: "b2", wordId: "boss-word", type: "word-to-cn", prompt: "achieve", choices: ["a", "b"], correctIndex: 0 },
+      ],
+      currentQIndex: 0,
+      showFeedback: false,
+      selectedAnswer: null,
+      comboCorrect: 0,
+      feverUntil: null,
+      sessionLightning: false,
+      scoreBoostActive: false,
+    });
+    // wrong → boss heals (already at max, stays 2), no defeat
+    useGameStore.setState({ currentQIndex: 0, showFeedback: false });
+    useGameStore.getState().answerQuestion(1);
+    let s = useGameStore.getState();
+    expect(s.bossBattle?.hp).toBe(2);
+    expect(s.bossBattle?.defeated).toBe(false);
+
+    // correct ×2 → HP 2 → 1 → 0 defeat
+    useGameStore.setState({ currentQIndex: 1, showFeedback: false });
+    useGameStore.getState().answerQuestion(0);
+    s = useGameStore.getState();
+    expect(s.bossBattle?.hp).toBe(1);
+    expect(s.bossBattle?.defeated).toBe(false);
+
+    useGameStore.setState({ currentQIndex: 2, showFeedback: false });
+    useGameStore.getState().answerQuestion(0);
+    s = useGameStore.getState();
+    expect(s.bossBattle?.defeated).toBe(true);
+    expect(s.coins).toBeGreaterThanOrEqual(150); // 击败 +50（叠加基础金币）
+    expect(s.weaknesses["boss-word"]).toBeUndefined(); // removed from book
+  });
+
+  it("dropsEnabled=false keeps coin rewards deterministic", () => {
+    useGameStore.setState({ dropsEnabled: false, bossBattle: null });
+    useGameStore.getState().startQuiz(3, "word-to-cn");
+    const q = useGameStore.getState().questions[0];
+    useGameStore.getState().answerQuestion(q.correctIndex);
+    // 基础金币 5-10，无掉落随机加成 —— 不出错即视为确定性
+    expect(useGameStore.getState().lastDrop).toBe(0);
   });
 });

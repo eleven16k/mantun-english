@@ -6,7 +6,8 @@ import { AppShell } from "@/components/AppShell";
 import { getWeaknesses, deleteWeakness } from "@/lib/api";
 import type { Weakness } from "@/lib/types";
 import { AlertIcon } from "@/components/SvgIcons";
-import { getWordById, getDistractors } from "@/lib/vocab";
+import { getWordById, getDistractors, makeQuestion } from "@/lib/vocab";
+import { useGameStore } from "@/lib/store";
 import { CheckIcon } from "@/components/icons";
 import { askTutor } from "@/lib/deeptutor";
 import { Md } from "@/components/Markdown";
@@ -119,6 +120,28 @@ export default function WeaknessPage() {
                   className="rounded-pill bg-brand px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
                 >
                   {t("weak.drillPrefix")}{Math.min(10, total)}{t("weak.drillSuffix")}
+                </button>
+                  <button
+                    onClick={() => {
+                    // ⚔️ Boss 战：取错得最多的弱点词，连对 7 题击败它（9 题容错 2 次）
+                    const top = [...list].sort((a, b) => b.wrong_count - a.wrong_count)[0];
+                    const word = getWordById(top.word_id);
+                    if (!word) return;
+                    const types = ["word-to-cn", "cn-to-word", "fill-blank", "listening"] as const;
+                    const qs = Array.from({ length: 9 }, (_, i) => makeQuestion(word, i, types[i % 4]));
+                    useGameStore.setState({
+                      bossBattle: { wordId: top.word_id, word: word.en, hp: 7, maxHp: 7, total: 7, defeated: false },
+                    });
+                    sessionStorage.setItem("lexi-import-quiz", JSON.stringify({
+                      deckTitle: `BOSS · ${word.en}`,
+                      questions: qs,
+                      boss: { wordId: top.word_id, word: word.en, hp: 7, maxHp: 7 },
+                    }));
+                    router.push("/quiz?src=import");
+                  }}
+                  className="game-btn bg-critical px-5 py-2.5 text-sm text-white"
+                >
+                  ⚔️ {t("weak.boss")}
                 </button>
                 </div>
               </div>

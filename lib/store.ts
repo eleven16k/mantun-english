@@ -127,6 +127,11 @@ interface GameState {
   comboCorrect: number; // 本场连对数
   feverUntil: number | null; // Fever 生效截止时间（x2 提分值）
 
+  // 👹 弱点 Boss 战 + 🎁 答题掉落
+  bossBattle: { wordId: string; word: string; hp: number; maxHp: number; total: number; defeated: boolean } | null;
+  lastDrop: number; // 上一次答对的金币掉落（0 = 无），供 UI 播放动画
+  dropsEnabled: boolean;
+
   // Card states (spaced repetition)
   cardStates: Record<string, CardState>;
 
@@ -159,7 +164,7 @@ interface GameState {
   removeUserDeck: (id: string) => void;
   removeBuiltinDeck: (key: string) => void;
   addCardToDeck: (deckTitle: string, question: Question) => void;
-  loadImportedQuiz: (questions: Question[], kbName?: string) => void;
+  loadImportedQuiz: (questions: Question[], kbName?: string, boss?: { wordId: string; word: string; hp: number; maxHp: number } | null) => void;
   answerQuestion: (choiceIndex: number, speedOpts?: { lightningLeftSec?: number }) => void;
   nextQuestion: () => void;
   endQuiz: () => void;
@@ -214,6 +219,9 @@ export const useGameStore = create<GameState>()(
       sessionLightning: false,
       comboCorrect: 0,
       feverUntil: null,
+      bossBattle: null,
+      lastDrop: 0,
+      dropsEnabled: true,
 
       cardStates: {},
       userDecks: [],
@@ -285,10 +293,12 @@ export const useGameStore = create<GameState>()(
           sessionLightning: !!opts?.lightning,
           comboCorrect: 0,
           feverUntil: null,
+          bossBattle: null,
+          lastDrop: 0,
         });
       },
 
-      loadImportedQuiz: (questions: Question[], kbName?: string) => {
+      loadImportedQuiz: (questions: Question[], kbName?: string, boss?: { wordId: string; word: string; hp: number; maxHp: number } | null) => {
         const { dailyDate, dailyQuestionsAnswered } = get();
         const td = todayStr();
         const dq = dailyDate === td ? dailyQuestionsAnswered : 0;
@@ -311,6 +321,8 @@ export const useGameStore = create<GameState>()(
           sessionLightning: false,
           comboCorrect: 0,
           feverUntil: null,
+          bossBattle: boss ? { ...boss, total: boss.hp, defeated: false } : null,
+          lastDrop: 0,
         });
       },
 
@@ -374,6 +386,13 @@ export const useGameStore = create<GameState>()(
           spEarned = Math.floor(spEarned * 2);
         }
 
+        // 🎁 答题掉落：答对概率掉金币（可在测试中关闭）
+        let dropCoins = 0;
+        if (isCorrect && state.dropsEnabled && Math.random() < 0.2) {
+          dropCoins = [5, 10, 20][Math.floor(Math.random() * 3)];
+          coinsEarned += dropCoins;
+        }
+
         // Update card state (spaced repetition)
         const cs = { ...(state.cardStates[q.wordId] || createCardState(q.wordId)) };
         if (isCorrect) {
@@ -416,6 +435,21 @@ export const useGameStore = create<GameState>()(
         }
         spEarned += weaknessBonusSP;
 
+        // 👹 弱点 Boss 战：答对 -1 HP，答错 Boss 回血 +1（封顶）；HP 归零 = 击败，
+        // 击败奖励 +50 金币 +50 提分值，弱点当场移出弱点本
+        let bossBattle = state.bossBattle;
+        if (bossBattle && !bossBattle.defeated) {
+          const hp = isCorrect
+            ? Math.max(0, bossBattle.hp - 1)
+            : Math.min(bossBattle.maxHp, bossBattle.hp + 1);
+          bossBattle = { ...bossBattle, hp, defeated: hp === 0 };
+          if (hp === 0) {
+            coinsEarned += 50;
+            spEarned += 50;
+            delete weaknesses[bossBattle.wordId];
+          }
+        }
+
         const td = todayStr();
         const newDQ = (state.dailyDate === td ? state.dailyQuestionsAnswered : 0) + 1;
 
@@ -456,6 +490,8 @@ export const useGameStore = create<GameState>()(
           scoreBoostCount: state.scoreBoostActive ? state.scoreBoostCount + 1 : state.scoreBoostCount,
           comboCorrect,
           feverUntil: feverUntil && feverUntil > Date.now() ? feverUntil : null,
+          bossBattle,
+          lastDrop: dropCoins,
         });
 
         // Deactivate boost after 10 questions
@@ -496,8 +532,7 @@ export const useGameStore = create<GameState>()(
 
         set({
           lastResults: {
-            correct,
-            total,
+            correct,            total,
             coinsEarned: state.sessionCoinsEarned + bonusCoins,
             spEarned: state.sessionSPEarned,
             newWords: state.sessionNewWords,
@@ -507,6 +542,8 @@ export const useGameStore = create<GameState>()(
           },
           coins: state.coins + bonusCoins,
           currentScreen: 'results',
+          bossBattle: null,
+          lastDrop: 0,
         });
       },
 

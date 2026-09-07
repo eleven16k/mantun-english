@@ -303,3 +303,26 @@ button { user-select: none; }
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
 }
+
+/* 🎁 答题掉落金币雨 */
+.coin-shower {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 40;
+    overflow: hidden;
+}
+
+.coin-shower span {
+    position: absolute;
+    top: 18%;
+    font-size: 1.5rem;
+    animation: coin-fall 1.1s ease-in forwards;
+}
+
+@keyframes coin-fall {
+    to {
+        transform: translateY(55vh) rotate(360deg);
+        opacity: 0;
+    }
+}

@@ -41,6 +41,7 @@ const en = {
 
   // — /weakness —
   'weak.title': 'Weakness Book',
+  'weak.boss': 'Boss Battle',
   'weak.allClear': 'All clear!',
   'weak.emptyHint': 'No weak points right now. Answer wrong twice on any word and it will appear here.',
   'weak.startPractice': 'Start practicing',
@@ -191,6 +192,7 @@ const zh: Record<keyof typeof en, string> = {
 
   // — /薄弱点 —
   'weak.title': '薄弱点手册',
+  'weak.boss': 'Boss 战',
   'weak.allClear': '全部搞定！',
   'weak.emptyHint': '现在没有薄弱点。任何单词连错 2 次，就会出现在这里。',
   'weak.startPractice': '开始练习',

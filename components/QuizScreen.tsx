@@ -31,6 +31,7 @@ export default function QuizScreen() {
     answerQuestion, nextQuestion, useHint, useScoreBoost, navigate,
     dailyQuestionsAnswered, dailyDate,
     coins, scorePoints, streak,
+    bossBattle, lastDrop,
   } = useGameStore();
 
   const [eliminated, setEliminated] = useState<number[]>([]);
@@ -143,6 +144,22 @@ export default function QuizScreen() {
     return () => clearInterval(iv);
   }, [feverUntil]);
 
+  // 🎁 答题掉落：金币雨 + 飘字
+  const [dropShower, setDropShower] = useState<{ coins: number; key: number } | null>(null);
+  const dropKey = useRef(0);
+  const lastDropSeen = useRef(0);
+  useEffect(() => {
+    if (!lastDrop || lastDrop === lastDropSeen.current) return;
+    lastDropSeen.current = lastDrop;
+    dropKey.current++;
+    setDropShower({ coins: lastDrop, key: dropKey.current });
+    rewardKey.current++;
+    setFloatReward({ text: `🎁 +${lastDrop} 金币`, color: '#F59E0B', key: rewardKey.current });
+    const t1 = setTimeout(() => setDropShower(null), 1400);
+    const t2 = setTimeout(() => setFloatReward(null), 1200);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
+  }, [lastDrop]);
+
   // ---- Handlers ----
   const handleAnswer = (i: number) => {
     if (showFeedback || !q) return;
@@ -168,6 +185,12 @@ export default function QuizScreen() {
       rewardKey.current++;
       setFloatReward({ text: '🔥 FEVER ×2', color: '#F59E0B', key: rewardKey.current });
       setTimeout(() => setFloatReward(null), 1400);
+    }
+    // 👹 Boss 被击败的即时反馈
+    if (after.bossBattle?.defeated) {
+      rewardKey.current++;
+      setFloatReward({ text: '🎉 Boss 击败！+50💰+50SP', color: '#16A34A', key: rewardKey.current });
+      setTimeout(() => setFloatReward(null), 1600);
     }
 
     // Fire server call (authoritative — updates hearts/coins/SP/streak/weakness/SM-2)
@@ -383,6 +406,26 @@ export default function QuizScreen() {
           </div>
         </div>
       )}
+      {/* 👹 Boss 战：血条 + 击杀提示 */}
+      {bossBattle && (
+        <div className="boss-bar mx-4 mb-1 rounded-2xl border-2 border-[var(--bg-critical-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-critical-emphasis-default)_10%,transparent)] px-4 py-2">
+          <div className="flex items-center justify-between text-xs font-black text-primary">
+            <span>👹 BOSS · {bossBattle.word}</span>
+            <span className={bossBattle.defeated ? 'text-positive' : 'text-critical'}>
+              {bossBattle.defeated ? '🎉 击败！+50💰+50SP' : `HP ${bossBattle.hp}/${bossBattle.maxHp}`}
+            </span>
+          </div>
+          <div className="mt-1 h-2 overflow-hidden rounded-pill bg-canvas">
+            <div
+              className="h-full rounded-pill transition-all duration-500"
+              style={{ width: `${(bossBattle.hp / bossBattle.maxHp) * 100}%`, background: 'var(--bg-critical-emphasis-default)' }}
+            />
+          </div>
+          {showFeedback && selectedAnswer !== q.correctIndex && !bossBattle.defeated && (
+            <p className="mt-1 text-center text-[11px] font-bold text-critical">👹 答错了，Boss 回血 +1！</p>
+          )}
+        </div>
+      )}
 
       {/* Session mini bar */}
       <div className="flex items-center justify-center gap-3 pb-2">
@@ -399,8 +442,15 @@ export default function QuizScreen() {
         <div className="g-card-hero flex-1 flex flex-col items-center justify-between text-center relative mx-4 my-2 py-6 overflow-y-auto shadow-sm">
           {/* Floating reward animation */}
           {floatReward && (
-            <div key={floatReward.key} className="float-reward top-1/3 left-1/2 -translate-x-1/2" style={{ color: floatReward.color }}>
-              {floatReward.text}
+          <div key={floatReward.key} className="float-reward top-1/3 left-1/2 -translate-x-1/2" style={{ color: floatReward.color }}>
+            {floatReward.text}
+            </div>
+          )}
+          {dropShower && (
+            <div key={dropShower.key} className="coin-shower" aria-hidden>
+              {Array.from({ length: 6 }).map((_, i) => (
+                <span key={i} style={{ left: `${15 + i * 14}%`, animationDelay: `${i * 0.12}s` }}>🪙</span>
+              ))}
             </div>
           )}
 

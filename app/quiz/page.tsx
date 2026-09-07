@@ -42,7 +42,8 @@ export default function QuizPage() {
             };
           });
           if (safe.length && useGameStore.getState().questions.length === 0) {
-            useGameStore.getState().loadImportedQuiz(safe, typeof parsed.kbName === "string" ? parsed.kbName : undefined);
+            const boss = (parsed.boss ?? null) as { wordId: string; word: string; hp: number; maxHp: number } | null;
+            useGameStore.getState().loadImportedQuiz(safe, typeof parsed.kbName === "string" ? parsed.kbName : undefined, boss);
           }
         }
       } catch { /* fall through */ }
