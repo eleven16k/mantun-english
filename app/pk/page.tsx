@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { usePKBattle } from "@/lib/usePKBattle";
+import { LOGIN_URL } from "@/lib/api";
 import { isLoggedIn, getMe } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
 
@@ -89,7 +90,7 @@ export default function PKPage() {
   // Redirect if not logged in
   useEffect(() => {
     if (!isLoggedIn()) {
-      router.push("/auth");
+      window.location.assign(LOGIN_URL);
     }
   }, [router]);
 

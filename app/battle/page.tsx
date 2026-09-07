@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { usePKBattle, type PKQuestion } from "@/lib/usePKBattle";
+import { LOGIN_URL } from "@/lib/api";
 import { VOCAB, makeQuestion } from "@/lib/vocab";
 import { isLoggedIn, getMe } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
@@ -29,7 +30,7 @@ export default function BattlePage() {
 
   useEffect(() => {
     if (!isLoggedIn()) {
-      router.push("/auth");
+      window.location.assign(LOGIN_URL);
       return;
     }
     getMe().then((d) => setUser({ id: d.user.id, nickname: d.user.nickname })).catch(() => {});

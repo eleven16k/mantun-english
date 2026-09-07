@@ -23,10 +23,7 @@ test.describe("remaining pages smoke + interaction", () => {
     await expect(page.getByText(/streak|连胜|day/i).first()).toBeVisible({ timeout: 10_000 });
   });
 
-  test("/parent renders a stats dashboard", async ({ page }) => {
-    await page.goto("/parent");
-    await expect(page.locator("body")).not.toBeEmpty();
-  });
+  // /parent retired (P2 moved to lexi-parent) — console-health covers the rest
 
   test("/tutorial advances through steps", async ({ page }) => {
     await page.goto("/tutorial");

@@ -1,10 +1,12 @@
 import { test as setup } from "@playwright/test";
-import { apiLogin } from "../helpers/api";
+import { apiLogin, uniquePhone } from "../helpers/api";
 
 const AUTH_FILE = "playwright/.auth/student.json";
 
+// Unique phone per run: the API enforces an otp cooldown per phone, so a
+// fixed number would 429 when the suite runs twice within a minute.
 setup("seed primary student", async ({ request }) => {
-  const { token, uid, nickname } = await apiLogin(request, "13900002001");
+  const { token, uid, nickname } = await apiLogin(request, uniquePhone());
   const fs = await import("fs");
   fs.mkdirSync("playwright/.auth", { recursive: true });
   const state = {

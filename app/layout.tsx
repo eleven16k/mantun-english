@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { LanguageProvider } from "@/lib/i18n";
+import { BridgeParams } from "@/components/BridgeParams";
 import "./globals.css";
 
 /**
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-full bg-app text-primary">
+        <BridgeParams />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

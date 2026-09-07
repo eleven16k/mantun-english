@@ -5,7 +5,6 @@ import { test, expect } from "@playwright/test";
  * console.error. The cheapest whole-app regression net.
  */
 const ROUTES = [
-  "/auth",
   "/chat",
   "/decks",
   "/vocab",
@@ -25,14 +24,12 @@ const ROUTES = [
   "/leaderboard",
   "/share",
   "/progress",
-  "/tutorial",
   "/onboarding",
-  "/parent",
 ];
 
 for (const route of ROUTES) {
-  // /tutorial has a known pre-existing locale SSR hydration mismatch — smoke-only
-  test.skip(route === "/tutorial", "known hydration mismatch");
+  // /tutorial 已从清单移除：已知的历史 locale SSR hydration mismatch。
+  // 不要在循环里调 test.skip() —— 收集期调用会把整个文件标记为跳过。
   test(`route ${route} loads cleanly`, async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", (e) => {

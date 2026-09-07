@@ -53,9 +53,8 @@ export async function injectState(page: Page, token: string, opts?: { coins?: nu
   );
 }
 
-/** Unique phone generator — one user per call. */
-let counter = 0;
+/** Unique phone generator — one user per call. Time-based so separate
+ *  playwright processes never collide (and re-trip the otp cooldown). */
 export function uniquePhone(): string {
-  counter += 1;
-  return `1390000${String(1000 + counter).slice(-4)}`;
+  return `139${String(Date.now()).slice(-8)}`;
 }

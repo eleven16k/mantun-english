@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { useGameStore } from "@/lib/store";
 import { useI18n, LOCALES } from "@/lib/i18n";
-import { getMe, updateProfile, logout, isLoggedIn, getParentLinks } from "@/lib/api";
+import { getMe, updateProfile, logout, isLoggedIn, getParentLinks, LOGIN_URL } from "@/lib/api";
 import { maskPhone } from "@/lib/maskPhone";
 
 /* — toggle switch — */
@@ -183,7 +183,7 @@ export default function SettingsPage() {
   const signOut = () => {
     logout();
     useGameStore.setState({ questions: [], currentQIndex: 0, selectedAnswer: null, showFeedback: false });
-    router.replace("/auth");
+    window.location.assign(LOGIN_URL);
   };
 
   return (

@@ -10,6 +10,10 @@ import { apiBase, unauthorizedHandler } from "./config";
 
 const TOKEN_KEY = "lexi-token";
 
+/** 统一登录入口：营销站的 /login（可用 NEXT_PUBLIC_LOGIN_URL 覆盖）。 */
+export const LOGIN_URL =
+  process.env.NEXT_PUBLIC_LOGIN_URL || "http://localhost:49463/login";
+
 function getToken(): string | null {
   return kv.getItem(TOKEN_KEY) as string | null;
 }
@@ -36,8 +40,8 @@ async function fetchApi<T>(url: string, options?: RequestInit): Promise<T> {
     const handler = unauthorizedHandler();
     if (handler) {
       handler();
-    } else if (typeof window !== "undefined" && !location.pathname.startsWith("/auth")) {
-      location.assign("/auth");
+    } else if (typeof window !== "undefined") {
+      location.assign(LOGIN_URL);
     }
     throw new Error("Unauthorized");
   }

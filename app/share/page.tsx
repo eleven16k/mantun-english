@@ -6,6 +6,7 @@ import QRCode from "qrcode";
 import { AppShell } from "@/components/AppShell";
 import { useGameStore } from "@/lib/store";
 import { useI18n } from "@/lib/i18n";
+import { LOGIN_URL } from "@/lib/api";
 
 /**
  * /share — F3: Share poster. Canvas-rendered achievement card.
@@ -76,9 +77,9 @@ export default function SharePage() {
     ctx.fillStyle = "rgba(255,255,255,0.7)";
     ctx.fillText(t("share.joinMe"), W / 2, 690);
 
-    // QR — real code encoding the app's sign-up page, so scanning the
+    // QR — encodes the unified marketing login page, so scanning the
     // poster on a phone opens the join flow directly
-    const inviteUrl = `${window.location.origin}/auth`;
+    const inviteUrl = LOGIN_URL;
     const qr = QRCode.create(inviteUrl, { errorCorrectionLevel: "M" });
     const modules = qr.modules.size;
     const cellData = qr.modules.data;
@@ -143,7 +144,7 @@ export default function SharePage() {
           {/* Tap hotspot over the QR card — direct entry to the join page
               (percentages map the QR card region: 264..486 × 719..941 of 750×1000) */}
           <button
-            onClick={() => router.push("/auth")}
+            onClick={() => window.location.assign(LOGIN_URL)}
             aria-label={t("share.tapJoin")}
             className="absolute cursor-pointer rounded-2xl transition active:scale-95"
             style={{ left: "35.2%", top: "71.9%", width: "29.6%", height: "22.2%" }}
