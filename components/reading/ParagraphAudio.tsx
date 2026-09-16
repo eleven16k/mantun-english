@@ -24,6 +24,8 @@ interface Props {
   speed: QuestSpeed;
   /** 播放状态回调（列表高亮当前段用） */
   onPlayingChange?: (playing: boolean) => void;
+  /** 用户手动点击时通知（区别于 auto 触发；连续读模式下用于打断序列） */
+  onManualStart?: () => void;
   /** 自动播放（答题进题时播一次） */
   auto?: boolean;
   children?: React.ReactNode;
@@ -40,6 +42,7 @@ export function QuestPlayButton({
   fallbackText,
   speed,
   onPlayingChange,
+  onManualStart,
   auto = false,
 }: Omit<Props, "children">) {
   const [playing, setPlaying] = useState(false);
@@ -78,7 +81,10 @@ export function QuestPlayButton({
     <button
       type="button"
       className="ph-btn ph-btn--sm"
-      onClick={() => void play()}
+      onClick={() => {
+        onManualStart?.();
+        void play();
+      }}
       aria-label="play audio"
       style={playing ? { transform: "translateY(2px)", boxShadow: "none" } : undefined}
     >

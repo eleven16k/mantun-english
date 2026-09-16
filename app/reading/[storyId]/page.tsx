@@ -11,7 +11,7 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { QuestQuiz } from "@/components/reading/QuestQuiz";
@@ -29,7 +29,7 @@ import {
   type CompleteResult,
   type StoryProgress,
 } from "@/lib/reading";
-import { stopSpeech, unlockAudio } from "@/lib/phonics";
+import { playMp3, speakText, stopSpeech, unlockAudio } from "@/lib/phonics";
 import {
   findStory,
   loadTrackData,
@@ -66,6 +66,13 @@ export default function ReadingStoryPage() {
   const [showCn, setShowCn] = useState(true);
   const [playingIdx, setPlayingIdx] = useState(-1);
   const [quizInitial, setQuizInitial] = useState<StoryProgress | null>(null);
+  const [autoPlay, setAutoPlay] = useState(false);
+  const autoRunRef = useRef(0); // 连续读序列令牌：++ 即作废在跑的循环
+  const speedRef = useRef(speed);
+
+  useEffect(() => {
+    speedRef.current = speed;
+  }, [speed]);
 
   const [result, setResult] = useState<{ score: number; server: CompleteResult | null; earned: { coins: number; sp: number } } | null>(null);
   const [gradDismissed, setGradDismissed] = useState(false);
@@ -79,6 +86,11 @@ export default function ReadingStoryPage() {
       return { coins: r.coinsEarned, sp: r.spEarned, hearts: r.hearts };
     });
     return () => stopSpeech();
+  }, []);
+
+  // 卸载时作废连续读循环
+  useEffect(() => () => {
+    autoRunRef.current++;
   }, []);
 
   // 挂载后：解析学段 → 内容包 → 本课与断点信息（水合安全：首帧固定 loading 壳）
@@ -164,8 +176,41 @@ export default function ReadingStoryPage() {
     }
   };
 
-  const startQuiz = (fromSaved = false) => {
+  /** 连续读：从 from 段起逐段播放（mp3 优先 / TTS 兜底），段间留 350ms 气口 */
+  const playAll = async (from: number) => {
     stopSpeech();
+    const seq = ++autoRunRef.current;
+    setAutoPlay(true);
+    unlockAudio();
+    for (let i = from; i < story.paragraphs.length; i++) {
+      if (seq !== autoRunRef.current) return;
+      setPlayingIdx(i);
+      const sp = speedRef.current;
+      try {
+        const ok = await playMp3(paraAudioUrl(track, story.id, i, sp === 0.8), sp === 1.2 ? 1.15 : 1);
+        if (seq !== autoRunRef.current) return;
+        if (!ok) await speakText(story.paragraphs[i].text, sp === 0.8 ? 0.7 : sp === 1.2 ? 1.15 : 0.9);
+      } catch {
+        // 单段失败（网络/编码）不中断连续读，继续下一段
+      }
+      if (seq !== autoRunRef.current) return;
+      await new Promise((r) => setTimeout(r, 350));
+    }
+    if (seq === autoRunRef.current) {
+      setAutoPlay(false);
+      setPlayingIdx(-1);
+    }
+  };
+
+  const stopAuto = () => {
+    autoRunRef.current++;
+    stopSpeech();
+    setAutoPlay(false);
+    setPlayingIdx(-1);
+  };
+
+  const startQuiz = (fromSaved = false) => {
+    stopAuto();
     if (!fromSaved) {
       saveStoryProgress(storyId, {
         results: [],
@@ -259,6 +304,13 @@ export default function ReadingStoryPage() {
                   <button type="button" className="ph-btn ph-btn--ghost ph-btn--sm" onClick={() => setShowCn(!showCn)}>
                     {showCn ? t("reading.hideCn") : t("reading.showCn")}
                   </button>
+                  <button
+                    type="button"
+                    className={`ph-btn ph-btn--sm ${autoPlay ? "" : "ph-btn--ghost"}`}
+                    onClick={() => (autoPlay ? stopAuto() : void playAll(0))}
+                  >
+                    {autoPlay ? t("reading.autoStop") : t("reading.autoPlay")}
+                  </button>
                   <SpeedTabs speed={speed} setSpeed={setSpeed} />
                 </div>
               </div>
@@ -277,6 +329,7 @@ export default function ReadingStoryPage() {
                       fallbackText={p.text}
                       speed={speed}
                       onPlayingChange={(on) => setPlayingIdx(on ? i : -1)}
+                      onManualStart={stopAuto}
                     />
                   </div>
                 ))}
