@@ -1,0 +1,96 @@
+{
+  "track": "xiaoshengchu",
+  "label": "小升初",
+  "name": "Reading Quest · 小升初",
+  "cnName": "悦读馆 · 小升初",
+  "theme": "magic",
+  "vocabTier": "小学高段词汇（小学课标 700 词为主，可少量出现简单初中词）",
+  "quizPerStory": 6,
+  "passScore": 60,
+  "regions": [
+    {
+      "id": "xsc-r1",
+      "name": "Apple Orchard",
+      "cnName": "苹果园",
+      "icon": "🍎",
+      "stories": 18,
+      "sentenceLen": [4, 6],
+      "paraCount": [5, 6],
+      "grammar": "一般现在时为主：be 动词、there be、can、第三人称单数；不用过去时",
+      "genre": "动物、水果、颜色、家庭、玩具等幼儿生活题材",
+      "quizMix": { "image_choice": 0.5, "word_builder": 0.3, "sentence_order": 0.1, "fill_blank": 0.1 }
+    },
+    {
+      "id": "xsc-r2",
+      "name": "Animal Village",
+      "cnName": "动物村",
+      "icon": "🐻",
+      "stories": 14,
+      "sentenceLen": [5, 7],
+      "paraCount": [5, 6],
+      "grammar": "现在进行时（is/are doing）、can/like doing；短对话可出现",
+      "genre": "动物朋友、友谊、互助的温馨小故事",
+      "quizMix": { "image_choice": 0.4, "word_builder": 0.3, "sentence_order": 0.15, "fill_blank": 0.15 }
+    },
+    {
+      "id": "xsc-r3",
+      "name": "Candy Town",
+      "cnName": "糖果镇",
+      "icon": "🍭",
+      "stories": 14,
+      "sentenceLen": [6, 8],
+      "paraCount": [5, 6],
+      "grammar": "一般过去时入门（was/were、规则动词 -ed、常见不规则 went/saw/ate/had）",
+      "genre": "小镇生活、节日、美食、游戏",
+      "quizMix": { "image_choice": 0.35, "word_builder": 0.3, "sentence_order": 0.15, "fill_blank": 0.2 }
+    },
+    {
+      "id": "xsc-r4",
+      "name": "Ocean Park",
+      "cnName": "海洋乐园",
+      "icon": "🐬",
+      "stories": 13,
+      "sentenceLen": [6, 8],
+      "paraCount": [5, 6],
+      "grammar": "一般过去时叙事 + 形容词比较级（-er / more）",
+      "genre": "海洋动物、海底冒险、环保小意识",
+      "quizMix": { "image_choice": 0.3, "word_builder": 0.25, "sentence_order": 0.2, "fill_blank": 0.25 }
+    },
+    {
+      "id": "xsc-r5",
+      "name": "Dino Valley",
+      "cnName": "恐龙谷",
+      "icon": "🦕",
+      "stories": 12,
+      "sentenceLen": [7, 8],
+      "paraCount": [5, 6],
+      "grammar": "过去时叙事 + 最高级入门（-est / the most）+ because 原因句",
+      "genre": "恐龙、史前冒险、探险故事",
+      "quizMix": { "image_choice": 0.3, "word_builder": 0.25, "sentence_order": 0.2, "fill_blank": 0.25 }
+    },
+    {
+      "id": "xsc-r6",
+      "name": "Space Station",
+      "cnName": "太空站",
+      "icon": "🚀",
+      "stories": 10,
+      "sentenceLen": [7, 8],
+      "paraCount": [5, 6],
+      "grammar": "will 将来时 + 情态动词 must/should/could",
+      "genre": "太空、星球、未来交通、小科学家",
+      "quizMix": { "image_choice": 0.25, "word_builder": 0.25, "sentence_order": 0.25, "fill_blank": 0.25 }
+    },
+    {
+      "id": "xsc-r7",
+      "name": "Magic Castle",
+      "cnName": "魔法城堡",
+      "icon": "🏰",
+      "stories": 9,
+      "sentenceLen": [7, 8],
+      "paraCount": [5, 6],
+      "grammar": "综合：过去时叙事 + 比较/最高级 + 情态 + when/while 时间状语从句入门",
+      "genre": "魔法、奇幻冒险、勇气成长故事（有完整起承转合）",
+      "quizMix": { "image_choice": 0.2, "word_builder": 0.25, "sentence_order": 0.25, "fill_blank": 0.3 }
+    }
+  ]
+}

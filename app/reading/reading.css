@@ -1,0 +1,292 @@
+/*
+  悦读馆 — rq- 子主题（复用拼读馆 ph- 皮肤 + 句法馆 sn- 件，本文件只放
+  悦读馆新增件）。三学段「同结构不同主题」：rq-theme-* 类只换
+  --rq-accent / --rq-accent-deep / 页面光晕，信息结构完全一致。
+  暖色浅色固定，不跟随深色模式（低龄模块同款决策）。
+*/
+
+.rq-page {
+  --rq-accent: #4d96ff;
+  --rq-accent-deep: #2563eb;
+  min-height: 100%;
+  color: var(--ph-ink, #0f172a);
+}
+
+/* 小升初：魔法冒险（暖橙 + 品牌蓝） */
+.rq-theme-magic {
+  --rq-accent: #f97316;
+  --rq-accent-deep: #ea580c;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(249, 115, 22, 0.1), transparent 34%),
+    radial-gradient(circle at 88% 16%, rgba(255, 217, 61, 0.18), transparent 38%),
+    #fffbeb;
+}
+
+/* 中考：星际探索（靛蓝 + 青） */
+.rq-theme-space {
+  --rq-accent: #4d96ff;
+  --rq-accent-deep: #2563eb;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(77, 150, 255, 0.12), transparent 34%),
+    radial-gradient(circle at 88% 16%, rgba(34, 211, 238, 0.12), transparent 38%),
+    #fffbeb;
+}
+
+/* 高考：极简竞速（石墨绿 + 金） */
+.rq-theme-racing {
+  --rq-accent: #0d9488;
+  --rq-accent-deep: #0f766e;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(13, 148, 136, 0.1), transparent 34%),
+    radial-gradient(circle at 88% 16%, rgba(255, 217, 61, 0.14), transparent 38%),
+    #fffbeb;
+}
+
+/* ── 主题区横幅 ── */
+.rq-region {
+  border: 2px solid var(--ph-card-line, #e2e8f0);
+  border-radius: 1.25rem;
+  background: #fff;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.06);
+}
+
+.rq-region--locked {
+  opacity: 0.72;
+  background: var(--ph-line, #f1f5f9);
+}
+
+.rq-region-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rq-region-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  border: 2px solid var(--ph-ink, #0f172a);
+  border-radius: 0.9rem;
+  background: var(--rq-accent);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.rq-region-name {
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+.rq-region-meta {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ph-ink-3, #94a3b8);
+}
+
+/* ── 课程行（复用 ph-unit-row；通过态打勾由 ph-unit-num--done 提供）── */
+.rq-node-score {
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: var(--rq-accent-deep);
+}
+
+/* ── 阅读器 ── */
+.rq-para {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.85rem 0.9rem;
+  border: 2px solid var(--ph-card-line, #e2e8f0);
+  border-radius: 1rem;
+  background: #fff;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.15s linear, transform 0.15s linear;
+}
+
+.rq-para:hover {
+  border-color: var(--ph-ink, #0f172a);
+  transform: translateY(-2px);
+}
+
+.rq-para--playing {
+  border-color: var(--rq-accent);
+  box-shadow: 0 3px 0 0 var(--rq-accent);
+}
+
+.rq-para-num {
+  flex: none;
+  width: 1.65rem;
+  height: 1.65rem;
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #fff;
+  background: var(--rq-accent);
+  border-radius: 999px;
+}
+
+.rq-para-text {
+  font-weight: 700;
+  line-height: 1.55;
+  font-size: 1rem;
+}
+
+.rq-para-cn {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ph-ink-2, #475569);
+}
+
+.rq-speed-tabs {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.rq-speed-tab {
+  min-width: 2.75rem;
+  min-height: 2.75rem; /* 44pt 触控（PRD §6.5）*/
+  padding: 0 0.6rem;
+  font-weight: 900;
+  font-size: 0.8rem;
+  border: 2px solid var(--ph-card-line, #e2e8f0);
+  border-radius: 0.7rem;
+  background: #fff;
+  transition: all 0.15s linear;
+}
+
+.rq-speed-tab--on {
+  background: var(--ph-yellow, #ffd93d);
+  border-color: var(--ph-ink, #0f172a);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+/* ── 听音辨图 ── */
+.rq-img-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  .rq-img-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.rq-img-opt {
+  min-height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border: 2px solid var(--ph-card-line, #e2e8f0);
+  border-bottom-width: 4px;
+  border-radius: 1rem;
+  background: #fff;
+  font-weight: 800;
+  transition: all 0.15s linear;
+}
+
+.rq-img-opt:hover:not(:disabled) {
+  border-color: var(--ph-ink, #0f172a);
+  transform: translateY(-2px);
+}
+
+.rq-img-opt--good {
+  background: var(--ph-green-bg, #dcfce7);
+  border-color: var(--ph-green, #15803d);
+}
+
+.rq-img-opt--bad {
+  background: var(--ph-red-bg, #fee2e2);
+  border-color: var(--ph-red, #b91c1c);
+}
+
+.rq-img-opt--dim {
+  opacity: 0.4;
+}
+
+.rq-img-emoji {
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+/* ── Buddy 状态条 ── */
+.rq-buddy {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  border: 2px solid var(--ph-card-line, #e2e8f0);
+  border-radius: 1.25rem;
+  background: #fff;
+  padding: 0.85rem 1.1rem;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.06);
+  width: 100%;
+  text-align: left;
+}
+
+.rq-buddy--ready {
+  border-color: var(--ph-ink, #0f172a);
+  background: var(--ph-yellow, #ffd93d);
+}
+
+.rq-buddy-face {
+  font-size: 2.1rem;
+  line-height: 1;
+  animation: rq-float 2.6s ease-in-out infinite;
+}
+
+@keyframes rq-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.rq-buddy-name {
+  font-weight: 900;
+}
+
+.rq-buddy-meta {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ph-ink-2, #475569);
+}
+
+.rq-buddy-bar {
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--ph-line, #f1f5f9);
+  overflow: hidden;
+}
+
+.rq-buddy-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--rq-accent);
+  transition: width 0.4s ease;
+}
+
+/* ── 进化仪式 ── */
+.rq-evolve-face {
+  font-size: 5rem;
+  line-height: 1;
+  animation: rq-pop 0.7s cubic-bezier(0.22, 1.4, 0.36, 1);
+}
+
+@keyframes rq-pop {
+  0% { transform: scale(0.2) rotate(-12deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+/* 进度条强调色（覆盖 ph-progress 的默认蓝） */
+.rq-page .ph-progress i {
+  background: var(--rq-accent);
+}

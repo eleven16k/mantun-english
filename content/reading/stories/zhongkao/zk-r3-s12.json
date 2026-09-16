@@ -1,0 +1,117 @@
+{
+  "id": "zk-r3-s12",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 12,
+  "title": "Drones Over the Fields",
+  "titleCn": "无人机飞过田野",
+  "coverEmoji": "🚁",
+  "paragraphs": [
+    {
+      "text": "A drone is a small machine that can fly in the sky. From far away, it might look like a big bird. No one sits inside it, so it can work alone. Today drones are seen above many farms and fields.",
+      "translation": "无人机是一种能在天空中飞行的小机器。远远看去，它可能像一只大鸟。里面没有人坐着，所以它可以独自工作。如今，无人机常出现在许多农场和田野的上空。"
+    },
+    {
+      "text": "Farmers use them to watch their crops. A camera on the drone takes photos of every part of the field. The photos are sent to a phone or a computer.",
+      "translation": "农民用它们来照看地里的庄稼。无人机上的摄像头会拍下田里每一处的照片。这些照片会被发送到手机或电脑上。"
+    },
+    {
+      "text": "In the past, farmers walked through the fields to check the plants. That work was done by hand, and it took a long time. Now the same job can be finished by a drone in minutes.",
+      "translation": "过去，农民要走进田里去查看庄稼。那些活都是靠手做的，要花很长时间。现在，同样的活由无人机几分钟就能完成。"
+    },
+    {
+      "text": "Drones can also be used to give water and medicine to crops. They fly low and drop just enough water on each plant. This way, less water is wasted, and the plants stay healthy.",
+      "translation": "无人机还可以用来给庄稼浇水和施药。它们飞得很低，只让每株植物落下刚好够用的水。这样一来，浪费的水更少，庄稼也能保持健康。"
+    },
+    {
+      "text": "However, drones must be controlled by people with care. If a drone flies too high, it may hit a bird or a plane. So every flight should be planned before it starts.",
+      "translation": "不过，无人机必须由人小心操控。如果无人机飞得太高，它可能会撞到鸟或者飞机。所以每次飞行开始前都应该做好计划。"
+    },
+    {
+      "text": "In the future, drones may be used in many more ways. They could carry medicine to small villages far away. Maybe one day a drone will bring a letter to your door.",
+      "translation": "将来，无人机可能会被用在更多地方。它们可以把药品送到很远的小村庄。也许有一天，无人机会把一封信送到你家门口。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What might a drone look like when it is far away?",
+      "audioText": "What might a drone look like when it is far away?",
+      "options": [
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A big bird"
+        },
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "A tall tree"
+        },
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "A small car"
+        }
+      ],
+      "answer": "bird"
+    },
+    {
+      "type": "word_builder",
+      "word": "camera",
+      "audioText": "camera"
+    },
+    {
+      "type": "word_builder",
+      "word": "healthy",
+      "audioText": "healthy"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Farmers",
+        "use",
+        "them",
+        "to",
+        "watch",
+        "their",
+        "crops."
+      ],
+      "audioText": "Farmers use them to watch their crops."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The photos are sent to a phone or a ___.",
+      "choices": [
+        "computer",
+        "window",
+        "letter"
+      ],
+      "answer": "computer",
+      "audioText": "The photos are sent to a phone or a computer."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Drones must be ___ by people with care.",
+      "choices": [
+        "controlled",
+        "collected",
+        "carried"
+      ],
+      "answer": "controlled",
+      "audioText": "Drones must be controlled by people with care."
+    }
+  ],
+  "_unknownWords": [
+    "drone",
+    "big",
+    "drones",
+    "seen",
+    "crops",
+    "done",
+    "less",
+    "controlled",
+    "plane",
+    "flight"
+  ]
+}

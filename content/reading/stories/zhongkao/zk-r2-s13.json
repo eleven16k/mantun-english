@@ -1,0 +1,125 @@
+{
+  "id": "zk-r2-s13",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 13,
+  "title": "Blue Sea and Red Roofs in Qingdao",
+  "titleCn": "青岛：碧海与红瓦",
+  "coverEmoji": "🌊",
+  "paragraphs": [
+    {
+      "text": "Last summer, my family took a slow train to Qingdao. We left home before the sun came up. When we arrived, the sea wind felt cooler than the air at home. I knew this trip would be different from any other.",
+      "translation": "去年夏天，我们一家人坐慢车去了青岛。太阳还没升起来，我们就出发了。到了那儿，海风比家乡的空气凉爽。我知道这趟旅行会和以往任何一次都不一样。"
+    },
+    {
+      "text": "On the first morning, we walked to an old tower by the sea. After we climbed to the top, we looked at the sea. The water was bluer than the sky. While we stood there, a big ship sailed past.",
+      "translation": "第一天早上，我们走到海边一座古老的塔前。爬到塔顶后，我们眺望大海。海水比天空还要蓝。我们站在那儿的时候，一艘大船驶了过去。"
+    },
+    {
+      "text": "Then we visited the old town on a small hill. Many houses there have red roofs and yellow walls. While we walked up the hill, my mother took photos. From the top, we saw the most beautiful view of our trip.",
+      "translation": "接着我们去了小山上的一片老城区。那里很多房子都有红色的屋顶和黄色的墙。我们往山上走的时候，妈妈一直在拍照。从高处看过去，我们见到了这趟旅行中最美的景色。"
+    },
+    {
+      "text": "At noon, we ate lunch in a small restaurant near the beach. The fish was fresher than anything we eat at home. My little brother ate more than anyone else at the table. After lunch, we rested for a while under a tree.",
+      "translation": "中午，我们在海滩附近的一家小餐馆吃午饭。那鱼比我们在家吃的任何鱼都要新鲜。我弟弟比桌上任何人都吃得多。午饭后，我们在一棵树下歇了一会儿。"
+    },
+    {
+      "text": "In the afternoon, we played on the beach for two hours. Before we left, I picked up some white shells. The sand felt softer than the sand in my city park. When the sun went down, the whole sea turned golden.",
+      "translation": "下午，我们在海滩上玩了两个小时。离开之前，我捡了一些白色的贝壳。那沙子摸起来比我城市公园里的沙子还软。太阳落下去的时候，整片大海都变成了金色。"
+    },
+    {
+      "text": "On the last day, we took the train home again. I was tired, but my heart was full of happy pictures. Qingdao is not the biggest city in China. But for me, it was the best place of the summer.",
+      "translation": "最后一天，我们又坐火车回家了。我很累，但心里装满了快乐的画面。青岛不是中国最大的城市。但对我来说，它是这个夏天最好的地方。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "When the sun went down, what colour did the whole sea turn?",
+      "audioText": "When the sun went down, what colour did the whole sea turn?",
+      "options": [
+        {
+          "emoji": "🟡",
+          "value": "golden",
+          "text": "Golden"
+        },
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue"
+        },
+        {
+          "emoji": "⚫",
+          "value": "black",
+          "text": "Black"
+        }
+      ],
+      "answer": "golden"
+    },
+    {
+      "type": "word_builder",
+      "word": "shells",
+      "audioText": "shells"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "left",
+        "home",
+        "before",
+        "the",
+        "sun",
+        "came",
+        "up."
+      ],
+      "audioText": "We left home before the sun came up."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "water",
+        "was",
+        "bluer",
+        "than",
+        "the",
+        "sky."
+      ],
+      "audioText": "The water was bluer than the sky."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "When we arrived, the sea wind felt ___ than the air at home.",
+      "choices": [
+        "cooler",
+        "cool",
+        "coolest"
+      ],
+      "answer": "cooler",
+      "audioText": "When we arrived, the sea wind felt cooler than the air at home."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Qingdao is not the ___ city in China.",
+      "choices": [
+        "biggest",
+        "bigger",
+        "big"
+      ],
+      "answer": "biggest",
+      "audioText": "Qingdao is not the biggest city in China."
+    }
+  ],
+  "_unknownWords": [
+    "qingdao",
+    "tower",
+    "bluer",
+    "big",
+    "roofs",
+    "view",
+    "shells",
+    "biggest",
+    "china"
+  ]
+}

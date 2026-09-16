@@ -1,0 +1,130 @@
+{
+  "id": "gk-r3-s12",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 12,
+  "title": "The Bridge That Time Could Not Break",
+  "titleCn": "时间冲不垮的石桥",
+  "coverEmoji": "🌉",
+  "paragraphs": [
+    {
+      "text": "In the south of Hebei Province, a grey stone bridge has crossed the Jiao River for more than fourteen hundred years. Most people know it as the Zhaozhou Bridge, and it was built around 605 by a craftsman named Li Chun. If Li Chun had copied older designs, the river would have blocked itself with ice and mud every spring. He chose a single arch instead.",
+      "translation": "在河北省南部，一座灰色的石桥横跨洨河，已经屹立了一千四百多年。大多数人称它为赵州桥，它大约建于公元605年，建造者是一位名叫李春的工匠。假如李春照搬了更早的桥梁设计，这条河每年春天都会被冰块和泥沙堵住。他没有那样做，而是选择了一道单拱。"
+    },
+    {
+      "text": "The arch is huge, yet the stone is surprisingly thin, and the whole structure looks lighter than it should. Not only did the single arch save stone, but it also let flood water rush away freely. Four small arches, two at each end, carry away extra water when the river rises. It was these openings that saved the bridge.",
+      "translation": "这道拱巨大无比，可石料却出奇地薄，整个结构看上去比它应有的样子轻巧得多。单拱不仅节省了石料，还让洪水能够顺畅地冲走。四个小拱分列两端，每当河水上涨时就分走多余的水流。正是这些小开口救了这座桥。"
+    },
+    {
+      "text": "Earthquakes shook the region many times, and wars destroyed the towns on both banks of the river. No sooner had the water dropped than farmers were driving their carts across the stones again. Craftsmen in later dynasties repaired small parts, but they never had to rebuild the great arch itself. A Tang official who saw it in 725 called it the finest bridge under heaven.",
+      "translation": "地震多次震动这一带，战火也摧毁过河两岸的城镇。洪水刚一退去，农人又赶着车从石桥上经过。后世各朝的工匠修补过一些小部件，却从不需要重建那道大拱。一位唐代官员在公元725年见到它，称它是天下最好的桥。"
+    },
+    {
+      "text": "Today the Zhaozhou Bridge is a protected monument, and visitors walk across it in every season. Heavy trucks are no longer allowed, for the ancient stones could not carry such weight. If the stones could speak, they would tell us about a thousand years of footsteps, wheels and horses. It is the patience of a good design that keeps a bridge alive long after its builders are gone.",
+      "translation": "如今，赵州桥是一处受保护的历史遗迹，一年四季都有游人在桥上走过。重型卡车不再获准通行，因为古老的石料承受不了那样的重量。假如石头会说话，它们会向我们讲述一千年的脚步、车轮与马匹。正是好设计里的那份耐心，让一座桥在建造者逝去很久之后依然存在。"
+    },
+    {
+      "text": "Li Chun left no statue behind, and only a short line in an old book records his name. Yet every spring, when the river rises, his answer to a hard problem still carries the road above the water. If he had built only for praise, his work might have been forgotten long ago. Perhaps that quiet, useful kind of fame is the truest of all.",
+      "translation": "李春没有留下雕像，只有古书中短短一行字记下了他的名字。然而每到春天河水上涨时，他给那个难题的答案依然托着路面，让它悬在水面之上。假如他只为赞誉而建，他的作品也许早已被遗忘。或许，那种安静而有用的名声，才是最真实的名声。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which feature of the bridge does the text say saved it during floods?",
+      "audioText": "Which feature of the bridge does the text say saved it during floods?",
+      "options": [
+        {
+          "emoji": "🧱",
+          "value": "walls",
+          "text": "Thick stone walls"
+        },
+        {
+          "emoji": "🕳️",
+          "value": "openings",
+          "text": "Small openings for water"
+        },
+        {
+          "emoji": "🚪",
+          "value": "gates",
+          "text": "Heavy iron gates"
+        }
+      ],
+      "answer": "openings"
+    },
+    {
+      "type": "word_builder",
+      "word": "earthquake",
+      "audioText": "earthquake"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "these",
+        "openings",
+        "that",
+        "saved",
+        "the",
+        "bridge."
+      ],
+      "audioText": "It was these openings that saved the bridge."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "He",
+        "chose",
+        "a",
+        "single",
+        "arch",
+        "instead."
+      ],
+      "audioText": "He chose a single arch instead."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If Li Chun ___ copied older designs, the river would have blocked itself with ice and mud every spring.",
+      "choices": [
+        "has",
+        "had",
+        "would have"
+      ],
+      "answer": "had",
+      "audioText": "If Li Chun had copied older designs, the river would have blocked itself with ice and mud every spring."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Not only ___ the single arch save stone, but it also let flood water rush away freely.",
+      "choices": [
+        "did",
+        "does",
+        "was"
+      ],
+      "answer": "did",
+      "audioText": "Not only did the single arch save stone, but it also let flood water rush away freely."
+    }
+  ],
+  "_unknownWords": [
+    "hebei",
+    "grey",
+    "jiao",
+    "zhaozhou",
+    "craftsman",
+    "li",
+    "chun",
+    "surprisingly",
+    "structure",
+    "region",
+    "craftsmen",
+    "rebuild",
+    "tang",
+    "finest",
+    "footsteps",
+    "builders",
+    "gone",
+    "forgotten",
+    "truest"
+  ]
+}

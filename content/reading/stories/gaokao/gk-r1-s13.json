@@ -1,0 +1,129 @@
+{
+  "id": "gk-r1-s13",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 13,
+  "title": "The Dunes That Sing",
+  "titleCn": "会唱歌的沙丘",
+  "coverEmoji": "🏜️",
+  "paragraphs": [
+    {
+      "text": "Standing at the foot of a desert dune, travellers sometimes hear a strange low note, like a distant engine. The sound, produced by sliding sand, can last for several minutes and travel several kilometres. Local people have told stories about it for centuries, calling the dunes \"singing mountains\". Science, however, has only recently begun to explain how such a quiet landscape produces such a powerful sound.",
+      "translation": "站在沙丘脚下，旅行者有时会听到一种奇怪的低音，像是远处传来的发动机声。这种由沙粒滑落产生的声音可以持续好几分钟，还能传出好几公里。几个世纪以来，当地一直在讲述关于它的故事，把那些沙丘称作“唱歌的山”。然而，科学直到最近才开始解释：如此安静的风景，怎么会发出如此洪亮的声音。"
+    },
+    {
+      "text": "Sand dunes sing when dry grains slide down the steep, sheltered side of the dune. As the upper layer collapses, thousands of grains begin to move together, creating a steady vibration. This vibration then passes through the body of the dune, which acts like a natural loudspeaker. The result is a deep, steady note that can carry for several kilometres across the open desert.",
+      "translation": "当干燥的沙粒沿着沙丘陡峭的背风一侧滑落时，沙丘就开始“唱歌”。随着表层崩塌，成千上万的沙粒开始一起移动，形成稳定的振动。这种振动随后穿过沙丘的丘体，而丘体就像一个天然的扩音器。结果便是低沉而稳定的音调，能在开阔的沙漠中传出好几公里。"
+    },
+    {
+      "text": "The exact note that a dune produces depends on the size and shape of its grains. Scientists have found that dunes made of fine, well-rounded sand usually produce much lower sounds. The idea that the note comes from the surface layer alone has been carefully tested in the laboratory. When those grains are mixed with dust, however, the song becomes weaker or disappears altogether.",
+      "translation": "沙丘发出的确切音高，取决于沙粒的大小和形状。科学家发现，由细小、圆润的沙粒构成的沙丘，发出的声音通常要低得多。而“这种声音只来自表层”的说法，已在实验室里得到仔细检验。不过，当这些沙粒混入尘土后，“歌声”就会变弱，甚至完全消失。"
+    },
+    {
+      "text": "To study the phenomenon, researchers have climbed singing dunes in Morocco, China and the United States. Recording the sound with sensitive microphones, they measured both its frequency and its volume. Their results suggest that singing sand must be dry and clean, with a slightly damp layer below. Rain, strong wind and even human footsteps can silence a singing dune for several days.",
+      "translation": "为了研究这一现象，研究人员攀登过摩洛哥、中国和美国的鸣沙丘。他们用灵敏的麦克风录下声音，测量了它的频率和音量。研究结果表明，会“唱歌”的沙子必须干燥、洁净，下面还得有一层略微潮湿的沙。降雨、强风，甚至人的脚步，都能让一座鸣沙丘沉默好几天。"
+    },
+    {
+      "text": "Singing dunes remind us that the physical world still holds plenty of surprises for us. Although the sound had been reported for more than a thousand years, its true cause was explained only recently. For travellers, the experience remains unforgettable: a whole mountain of sand, humming like a living creature. Perhaps the lesson is simple — even grains of sand can speak to us, if we listen carefully enough.",
+      "translation": "会唱歌的沙丘提醒我们：物质世界依然充满惊喜。尽管这种声音被记载了一千多年，但它真正的成因直到最近才得到解释。对旅行者而言，这种体验令人难忘：整整一座沙山，像活的生物一样低吟。也许道理很简单——只要用心倾听，连沙粒也能对我们说话。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In the text, the sound of a singing dune is compared to which of the following?",
+      "audioText": "In the text, the sound of a singing dune is compared to which of the following?",
+      "options": [
+        {
+          "emoji": "🚂",
+          "value": "engine",
+          "text": "A distant engine"
+        },
+        {
+          "emoji": "🌊",
+          "value": "waves",
+          "text": "Crashing waves"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A singing bird"
+        }
+      ],
+      "answer": "engine"
+    },
+    {
+      "type": "word_builder",
+      "word": "vibration",
+      "audioText": "vibration"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "thousands",
+        "of",
+        "grains",
+        "begin",
+        "to",
+        "move",
+        "together"
+      ],
+      "audioText": "Thousands of grains begin to move together."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "This vibration then passes through the body of the dune, ___ acts like a natural loudspeaker.",
+      "choices": [
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer": "which",
+      "audioText": "This vibration then passes through the body of the dune, which acts like a natural loudspeaker."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "the",
+        "song",
+        "becomes",
+        "weaker",
+        "or",
+        "disappears",
+        "altogether"
+      ],
+      "audioText": "The song becomes weaker or disappears altogether."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The idea ___ the note comes from the surface layer alone has been carefully tested in the laboratory.",
+      "choices": [
+        "that",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "audioText": "The idea that the note comes from the surface layer alone has been carefully tested in the laboratory."
+    }
+  ],
+  "_unknownWords": [
+    "dune",
+    "travellers",
+    "dunes",
+    "begun",
+    "landscape",
+    "powerful",
+    "collapses",
+    "steady",
+    "vibration",
+    "altogether",
+    "researchers",
+    "morocco",
+    "microphones",
+    "frequency",
+    "volume",
+    "footsteps",
+    "unforgettable",
+    "humming"
+  ]
+}

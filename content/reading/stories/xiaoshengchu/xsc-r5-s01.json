@@ -1,0 +1,127 @@
+{
+  "id": "xsc-r5-s01",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 1,
+  "title": "The Tallest Dinosaur in Dino Valley",
+  "titleCn": "恐龙谷里最高的恐龙",
+  "coverEmoji": "🦕",
+  "paragraphs": [
+    {
+      "text": "Last summer, Grandpa took me to Dino Valley. It is a green place with tall trees. Big dinosaurs lived here long ago. Now we see their big footprints in the stone.",
+      "translation": "去年夏天，爷爷带我去了恐龙谷。那里是个绿树成荫的地方。很久以前，大恐龙就生活在这里。现在我们还能在石头上看到它们的大脚印。"
+    },
+    {
+      "text": "Grandpa walked slowly and looked at everything. I ran first because I was so happy. Then we found a small river near the hills.",
+      "translation": "爷爷慢慢地走着，看着周围的一切。我因为太开心，所以跑在了最前面。后来，我们在小山附近发现了一条小河。"
+    },
+    {
+      "text": "Then we saw the tallest dinosaur in the valley. Its head was high above the big trees. It walked slowly and looked at us. I was happy because I saw it first.",
+      "translation": "接着，我们看见了山谷里最高的那只恐龙。它的头高高地伸在大树之上。它慢慢地走着，看着我们。我很开心，因为是我先看到它的。"
+    },
+    {
+      "text": "Later, a little dinosaur ran to the river. It was the smallest one in the valley. Its feet were as small as my hands. It did not run because we were quiet.",
+      "translation": "后来，一只小恐龙跑到河边。它是山谷里最小的一只。它的脚和我的手一样小。它没有跑，因为我们很安静。"
+    },
+    {
+      "text": "Grandpa took a photo of the big dinosaur. We sat down and ate our lunch. The sun was warm and the wind was soft. It was the best day of my summer.",
+      "translation": "爷爷给那只大恐龙拍了张照片。我们坐下来吃了午饭。阳光暖暖的，风轻轻的。那是我这个夏天最棒的一天。"
+    },
+    {
+      "text": "I want to go back to Dino Valley. Next year, I will look for new footprints. Big or small, every dinosaur is a surprise.",
+      "translation": "我想再去一次恐龙谷。明年，我要去寻找新的脚印。不管是大恐龙还是小恐龙，每一只都让人惊喜。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What lived in Dino Valley long ago?",
+      "audioText": "What lived in Dino Valley long ago?",
+      "options": [
+        {
+          "emoji": "🦕",
+          "value": "dinosaurs",
+          "text": "Dinosaurs"
+        },
+        {
+          "emoji": "🐘",
+          "value": "elephants",
+          "text": "Elephants"
+        },
+        {
+          "emoji": "🐯",
+          "value": "tigers",
+          "text": "Tigers"
+        }
+      ],
+      "answer": "dinosaurs"
+    },
+    {
+      "type": "image_choice",
+      "question": "What can we see in the stone now?",
+      "audioText": "What can we see in the stone now?",
+      "options": [
+        {
+          "emoji": "👣",
+          "value": "footprints",
+          "text": "Big footprints"
+        },
+        {
+          "emoji": "🌊",
+          "value": "river",
+          "text": "A river"
+        },
+        {
+          "emoji": "🌳",
+          "value": "trees",
+          "text": "Tall trees"
+        }
+      ],
+      "answer": "footprints"
+    },
+    {
+      "type": "word_builder",
+      "word": "dinosaur",
+      "audioText": "dinosaur"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "was",
+        "happy",
+        "because",
+        "I",
+        "saw",
+        "it",
+        "first."
+      ],
+      "audioText": "I was happy because I saw it first."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was the ___ day of my summer.",
+      "choices": [
+        "best",
+        "better",
+        "good"
+      ],
+      "answer": "best",
+      "audioText": "It was the best day of my summer."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Grandpa ___ a photo of the big dinosaur.",
+      "choices": [
+        "took",
+        "takes",
+        "take"
+      ],
+      "answer": "took",
+      "audioText": "Grandpa took a photo of the big dinosaur."
+    }
+  ],
+  "_unknownWords": [
+    "later"
+  ]
+}

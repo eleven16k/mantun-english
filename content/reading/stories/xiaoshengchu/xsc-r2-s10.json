@@ -1,0 +1,124 @@
+{
+  "id": "xsc-r2-s10",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 10,
+  "title": "The Picnic in the Rain",
+  "titleCn": "雨中的野餐",
+  "coverEmoji": "🧺",
+  "paragraphs": [
+    {
+      "text": "It is a sunny morning in Animal Village. Rabbit, Duck and Bear are walking to the hill. They are carrying a big basket. Duck is singing a happy song. Bear is eating some bread. Rabbit is looking at the sky.",
+      "translation": "动物村里，这是一个晴朗的早晨。兔子、鸭子和熊正往小山上走。它们抬着一只大篮子。鸭子唱着开心的歌。熊在吃面包。兔子在看天空。"
+    },
+    {
+      "text": "They put a red cloth on the grass. Duck is putting apples on a plate. Bear is opening a bottle of juice. Rabbit is dancing and laughing. They are all having a good time.",
+      "translation": "它们把一块红布铺在草地上。鸭子把苹果摆到盘子里。熊在开一瓶果汁。兔子又跳又笑。它们都玩得很开心。"
+    },
+    {
+      "text": "Suddenly, big dark clouds come. Rain is falling on the grass. Duck is looking at the wet food. \"Oh no!\" says Bear. \"We can't eat here now.\" Rabbit is thinking and thinking.",
+      "translation": "忽然，大朵大朵的乌云飘来了。雨落在草地上。鸭子看着被淋湿的食物。“哎呀！”熊说，“我们现在不能在这儿吃东西了。”兔子想啊想。"
+    },
+    {
+      "text": "\"I have an idea,\" says Rabbit. \"Look at that big tree.\" The tree is tall and green. They can sit under it. Duck is carrying the basket. Bear is carrying the cloth.",
+      "translation": "“我有个主意，”兔子说，“看那棵大树。”那棵树又高又绿。它们可以坐在树下。鸭子抬着篮子，熊拿着红布。"
+    },
+    {
+      "text": "Now they are sitting under the tree. They are eating and talking. Duck is telling a funny story. Bear is laughing loudly. Rabbit is drinking warm juice.",
+      "translation": "现在它们坐在树下。它们一边吃一边聊天。鸭子在讲一个好笑的故事。熊哈哈大笑。兔子喝着温温的果汁。"
+    },
+    {
+      "text": "\"Rain is not bad,\" says Duck. \"We like picnics with friends.\" The rain is stopping slowly. A rainbow is in the sky. They are all smiling happily.",
+      "translation": "“下雨也不错呀，”鸭子说，“我们喜欢和朋友一起野餐。”雨慢慢停了。天上出现了一道彩虹。它们都开心地笑着。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is the weather like in the morning?",
+      "audioText": "What is the weather like in the morning?",
+      "options": [
+        {
+          "emoji": "☀️",
+          "value": "sunny",
+          "text": "Sunny"
+        },
+        {
+          "emoji": "🌧️",
+          "value": "rainy",
+          "text": "Rainy"
+        },
+        {
+          "emoji": "❄️",
+          "value": "snowy",
+          "text": "Snowy"
+        }
+      ],
+      "answer": "sunny"
+    },
+    {
+      "type": "image_choice",
+      "question": "What is Duck putting on the plate?",
+      "audioText": "What is Duck putting on the plate?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "apples",
+          "text": "Apples"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        },
+        {
+          "emoji": "🍌",
+          "value": "bananas",
+          "text": "Bananas"
+        }
+      ],
+      "answer": "apples"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "word_builder",
+      "word": "rainbow",
+      "audioText": "rainbow"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Duck",
+        "is",
+        "singing",
+        "a",
+        "happy",
+        "song."
+      ],
+      "audioText": "Duck is singing a happy song."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Now they are sitting ___ the tree.",
+      "choices": [
+        "under",
+        "on",
+        "in"
+      ],
+      "answer": "under",
+      "audioText": "Now they are sitting under the tree."
+    }
+  ],
+  "_unknownWords": [
+    "putting",
+    "can't",
+    "sitting",
+    "talking",
+    "rainbow",
+    "happily"
+  ]
+}

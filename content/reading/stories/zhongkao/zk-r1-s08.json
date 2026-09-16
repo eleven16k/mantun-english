@@ -1,0 +1,133 @@
+{
+  "id": "zk-r1-s08",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 8,
+  "title": "My First Class Speech",
+  "titleCn": "我的第一次班级演讲",
+  "coverEmoji": "🎤",
+  "paragraphs": [
+    {
+      "text": "Every autumn our school holds a big speech day. Each class sends one student to speak in the hall. I am usually quiet, and I never raise my hand.",
+      "translation": "每年秋天，我们学校都会举办一场大型演讲日。每个班派一名学生到礼堂演讲。我平时很安静，从不举手。"
+    },
+    {
+      "text": "Last Monday our teacher, Miss Lin, looked at the whole class. She said that we needed a speaker for this year. Everyone looked down at their desks quietly. I thought that the job was too hard for me.",
+      "translation": "上周一，我们的老师林老师看着全班同学。她说今年我们需要一名演讲者。大家都默默地低头看着课桌。我觉得这件事对我来说太难了。"
+    },
+    {
+      "text": "After class, Miss Lin asked me to stay for a minute. She told me that my voice was clear and warm. \"You can do it,\" she said with a smile. I still felt afraid, but I said yes.",
+      "translation": "下课后，林老师让我留下来待一会儿。她说我的声音清亮又温暖。“你能做到的，”她笑着说。我心里还是害怕，但我答应了。"
+    },
+    {
+      "text": "For a week I practiced in front of the mirror every night. My little sister often listened and clapped for me. I knew that she was my best fan at home.",
+      "translation": "有一个星期，我每天晚上都在镜子前练习。我的小妹妹常常听我讲，还为我鼓掌。我知道在家里她是我的头号支持者。"
+    },
+    {
+      "text": "On Friday morning I stood on the big stage in the hall. My hands were cold, and my heart beat fast. Then I saw Miss Lin near the door. She smiled at me, and I began to speak.",
+      "translation": "周五早上，我站在礼堂的大舞台上。我的手冰凉，心跳得飞快。这时我看见门口附近的林老师。她朝我微笑，我便开始演讲。"
+    },
+    {
+      "text": "My speech was about helping others at school. When I finished, the whole hall clapped loudly. I know that I am still shy sometimes. But now I always put up my hand in class.",
+      "translation": "我的演讲是关于在学校帮助他人的。当我讲完时，整个礼堂都热烈鼓掌。我知道自己有时还是很害羞。但现在我总在课堂上举手。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where do the students speak on speech day?",
+      "audioText": "Where do the students speak on speech day?",
+      "options": [
+        {
+          "emoji": "🏫",
+          "value": "hall",
+          "text": "In the school hall"
+        },
+        {
+          "emoji": "🌳",
+          "value": "park",
+          "text": "In the park"
+        },
+        {
+          "emoji": "🏠",
+          "value": "home",
+          "text": "At home"
+        }
+      ],
+      "answer": "hall"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She said that we ___ a speaker for this year.",
+      "choices": [
+        "needed",
+        "needs",
+        "need"
+      ],
+      "answer": "needed",
+      "audioText": "She said that we needed a speaker for this year."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Then",
+        "I",
+        "saw",
+        "Miss",
+        "Lin",
+        "near",
+        "the",
+        "door."
+      ],
+      "audioText": "Then I saw Miss Lin near the door."
+    },
+    {
+      "type": "word_builder",
+      "word": "mirror",
+      "audioText": "mirror"
+    },
+    {
+      "type": "image_choice",
+      "question": "Who often listened and clapped for him at home?",
+      "audioText": "Who often listened and clapped for him at home?",
+      "options": [
+        {
+          "emoji": "👧",
+          "value": "sister",
+          "text": "His little sister"
+        },
+        {
+          "emoji": "👦",
+          "value": "brother",
+          "text": "His brother"
+        },
+        {
+          "emoji": "👩‍🏫",
+          "value": "teacher",
+          "text": "His teacher"
+        }
+      ],
+      "answer": "sister"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "When",
+        "I",
+        "finished,",
+        "the",
+        "whole",
+        "hall",
+        "clapped",
+        "loudly."
+      ],
+      "audioText": "When I finished, the whole hall clapped loudly."
+    }
+  ],
+  "_unknownWords": [
+    "big",
+    "speech",
+    "asked",
+    "stage"
+  ]
+}

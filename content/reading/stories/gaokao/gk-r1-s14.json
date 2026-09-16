@@ -1,0 +1,126 @@
+{
+  "type": "json_object",
+  "id": "gk-r1-s14",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 14,
+  "title": "The Mountain That Is Still Growing",
+  "titleCn": "仍在长高的山",
+  "coverEmoji": "🏔️",
+  "paragraphs": [
+    {
+      "text": "Mount Everest, which stands 8,849 metres above sea level, is the highest point on our planet. Surprisingly, this famous peak is still growing, rising by a few millimetres every single year. The fact that a mountain can slowly grow taller still surprises many people today.",
+      "translation": "珠穆朗玛峰海拔8849米，是我们这个星球上的最高点。令人惊讶的是，这座著名的山峰至今仍在长高，每年上升几毫米。一座山竟能慢慢变高，这一事实今天仍让许多人感到意外。"
+    },
+    {
+      "text": "Millions of years ago, the land that we now call India was a large island moving north. Pushing slowly into the Asian continent, it pressed the ground into huge folds. Lifted and folded over ages, the ancient seabed gradually became the Himalayas. Climbers can still find sea shells near the top, which shows that this rock once lay under water.",
+      "translation": "数百万年前，我们如今称为印度的这片陆地是一个向北移动的大岛。它缓缓挤入亚洲大陆，把地面挤压成巨大的褶皱。经过漫长岁月被抬升、被折叠，古老的海床渐渐变成了喜马拉雅山脉。登山者至今仍能在接近峰顶的地方找到海贝壳，这说明这里的岩石曾经位于水下。"
+    },
+    {
+      "text": "Scientists track this movement with satellites, which send signals down to fixed points on the rocks. Comparing the measurements year after year, they build a clear picture of the slow rise. The belief that the ground beneath our feet never moves has proved completely wrong.",
+      "translation": "科学家用卫星追踪这一运动，卫星向岩石上固定的观测点发送信号。年复一年地比较这些测量数据，他们拼出了一幅缓慢抬升的清晰图景。认为我们脚下的地面永不移动，这个看法已被证明是完全错误的。"
+    },
+    {
+      "text": "At the same time, wind, ice and rivers are wearing these mountains down. Carved by deep valleys and broken by winter frost, the peaks lose height almost as fast as they gain it. What we see today, therefore, is a balance between building and breaking.",
+      "translation": "与此同时，风、冰和河流正在把这些山脉一点点削低。被深谷切割、被冬日的霜冻冻裂，山峰降低的速度几乎和它升高的速度一样快。因此，我们今天看到的，是建造与破坏之间的一种平衡。"
+    },
+    {
+      "text": "This slow battle shapes far more than the landscape itself. Pushed upward, the mountains force the air to rise, which cools it and brings heavy rain. The monsoon, which waters much of South Asia, depends on the growth of the Himalayas. The idea that mountains and climate are separate systems is no longer accepted by scientists.",
+      "translation": "这场缓慢的较量塑造的远不止地貌本身。被向上推起的山脉迫使空气上升，空气因此冷却并带来大雨。滋养南亚大片地区的季风，依赖于喜马拉雅山的生长。认为山脉与气候是两个互不相干的系统，这一想法已不再被科学家接受。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What can climbers still find near the top of the Himalayas?",
+      "audioText": "What can climbers still find near the top of the Himalayas?",
+      "options": [
+        {
+          "emoji": "🐚",
+          "value": "shells",
+          "text": "Sea shells"
+        },
+        {
+          "emoji": "🌵",
+          "value": "cactus",
+          "text": "Desert plants"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Living fish"
+        }
+      ],
+      "answer": "shells"
+    },
+    {
+      "type": "word_builder",
+      "word": "monsoon",
+      "audioText": "monsoon"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Scientists",
+        "track",
+        "this",
+        "movement",
+        "with",
+        "satellites"
+      ],
+      "audioText": "Scientists track this movement with satellites."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "the",
+        "ancient",
+        "seabed",
+        "gradually",
+        "became",
+        "the",
+        "Himalayas"
+      ],
+      "audioText": "The ancient seabed gradually became the Himalayas."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The idea ___ mountains and climate are separate systems is no longer accepted by scientists.",
+      "choices": [
+        "that",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "audioText": "The idea that mountains and climate are separate systems is no longer accepted by scientists."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Climbers can still find sea shells near the top, ___ shows that this rock once lay under water.",
+      "choices": [
+        "which",
+        "that",
+        "who"
+      ],
+      "answer": "which",
+      "audioText": "Climbers can still find sea shells near the top, which shows that this rock once lay under water."
+    }
+  ],
+  "_unknownWords": [
+    "mount",
+    "surprisingly",
+    "peak",
+    "seabed",
+    "himalayas",
+    "climbers",
+    "shells",
+    "measurements",
+    "beneath",
+    "carved",
+    "broken",
+    "peaks",
+    "landscape",
+    "upward",
+    "monsoon"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "xsc-r7-s05",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r7",
+  "order": 5,
+  "title": "The Golden Feather",
+  "titleCn": "金色的羽毛",
+  "coverEmoji": "🪶",
+  "paragraphs": [
+    {
+      "text": "One day, Lily found a golden feather. It was near the old castle. The feather was small but very bright. When she touched it, it felt warm. \"It must be magic,\" she said to herself.",
+      "translation": "一天，莉莉发现了一根金色的羽毛，就在那座老城堡旁边。羽毛很小，却非常明亮。当她碰到它的时候，感觉暖暖的。“这一定是魔法，”她自言自语道。"
+    },
+    {
+      "text": "That night, a dragon came to her window. \"Please help me,\" the dragon said. \"I lost my golden feather,\" he said. \"It is the most important thing for my family.\" Lily was afraid, but she wanted to help.",
+      "translation": "那天晚上，一条龙来到她的窗前。“请帮帮我，”龙说。“我丢了我的金色羽毛，”他说，“它对我家来说是最重要的东西。”莉莉很害怕，但她想要帮忙。"
+    },
+    {
+      "text": "They walked into the dark forest together. The trees were taller than the castle. While they were walking, Lily heard a sound. A big river was in front of them. It was deeper than it looked.",
+      "translation": "他们一起走进了黑黑的森林。那里的树比城堡还高。他们走着走着，莉莉听到了一个声音。一条大河出现在他们面前，河水比看上去还要深。"
+    },
+    {
+      "text": "\"We can't swim across,\" the dragon said. \"But I can fly over it. You must sit on my back.\" Lily was scared, but she climbed on. The dragon flew higher and higher.",
+      "translation": "“我们游不过去，”龙说，“但我可以飞过去。你必须坐在我的背上。”莉莉很害怕，但她还是爬了上去。龙飞得越来越高。"
+    },
+    {
+      "text": "On the other side, they found a small cave. The feather was inside, near a sleeping owl. Lily walked very quietly and got the feather. The owl woke up, but it did not move. She gave the feather back to the dragon.",
+      "translation": "到了对岸，他们发现了一个小山洞。羽毛就在里面，在一只睡着的猫头鹰旁边。莉莉轻轻地走过去，拿到了羽毛。猫头鹰醒了，但它没有动。莉莉把羽毛还给了那条龙。"
+    },
+    {
+      "text": "\"You are the bravest girl I know,\" he said. He smiled and flew home. Lily watched him go and felt happy. She was not afraid now. She knows that she can be brave.",
+      "translation": "“你是我认识的最勇敢的女孩，”他说。他笑了笑，飞回了家。莉莉看着他离开，心里很开心。她现在不再害怕了。她知道自己可以很勇敢。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Lily find near the old castle?",
+      "audioText": "What did Lily find near the old castle?",
+      "options": [
+        {
+          "emoji": "🪶",
+          "value": "feather",
+          "text": "A feather"
+        },
+        {
+          "emoji": "🌸",
+          "value": "flower",
+          "text": "A flower"
+        },
+        {
+          "emoji": "🪨",
+          "value": "stone",
+          "text": "A stone"
+        }
+      ],
+      "answer": "feather"
+    },
+    {
+      "type": "word_builder",
+      "word": "dragon",
+      "audioText": "dragon"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "gave",
+        "the",
+        "feather",
+        "back",
+        "to",
+        "the",
+        "dragon."
+      ],
+      "audioText": "She gave the feather back to the dragon."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "While",
+        "they",
+        "were",
+        "walking,",
+        "Lily",
+        "heard",
+        "a",
+        "sound."
+      ],
+      "audioText": "While they were walking, Lily heard a sound."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The trees were ___ than the castle.",
+      "choices": [
+        "taller",
+        "tallest",
+        "tall"
+      ],
+      "answer": "taller",
+      "audioText": "The trees were taller than the castle."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "You are the ___ girl I know.",
+      "choices": [
+        "bravest",
+        "braver",
+        "brave"
+      ],
+      "answer": "bravest",
+      "audioText": "You are the bravest girl I know."
+    }
+  ],
+  "_unknownWords": [
+    "feather",
+    "can't",
+    "scared",
+    "woke",
+    "bravest"
+  ]
+}

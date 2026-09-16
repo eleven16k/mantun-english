@@ -1,0 +1,138 @@
+{
+  "id": "xsc-r1-s03",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 3,
+  "title": "Big Red Apples",
+  "titleCn": "又大又红的苹果",
+  "coverEmoji": "🍎",
+  "paragraphs": [
+    {
+      "text": "It is a sunny day. The sky is blue. My family is at the orchard.",
+      "translation": "今天阳光明媚，天空很蓝。我们一家人来到了苹果园。"
+    },
+    {
+      "text": "There are many apple trees. The trees are tall and green. Red apples are on the trees.",
+      "translation": "这里有许多苹果树，树又高又绿。红红的苹果挂在树上。"
+    },
+    {
+      "text": "My sister has a small basket. The basket is yellow and round. She can pick apples with me.",
+      "translation": "妹妹有一个小篮子，篮子又黄又圆。她可以和我一起摘苹果。"
+    },
+    {
+      "text": "A little dog runs to us. It is white and brown. It has a red ball. The dog can run fast.",
+      "translation": "一只小狗朝我们跑过来。它身上有白毛和棕毛。它有一个红色的球。这只小狗跑得很快。"
+    },
+    {
+      "text": "My mother picks ten red apples. My father picks five more apples. We put them in the basket.",
+      "translation": "妈妈摘了十个红苹果，爸爸又摘了五个。我们把苹果放进篮子里。"
+    },
+    {
+      "text": "I eat one big apple. It is sweet and juicy. I love the apple orchard. We are all happy.",
+      "translation": "我吃了一个大苹果，它又甜又多汁。我喜欢这片苹果园，我们都很开心。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What color are the apples on the trees?",
+      "audioText": "What color are the apples on the trees?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "🟡",
+          "value": "yellow",
+          "text": "Yellow"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "What color is the small basket?",
+      "audioText": "What color is the small basket?",
+      "options": [
+        {
+          "emoji": "💛",
+          "value": "yellow",
+          "text": "Yellow"
+        },
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue"
+        },
+        {
+          "emoji": "🤎",
+          "value": "brown",
+          "text": "Brown"
+        }
+      ],
+      "answer": "yellow"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does the little dog have?",
+      "audioText": "What does the little dog have?",
+      "options": [
+        {
+          "emoji": "⚽",
+          "value": "ball",
+          "text": "A ball"
+        },
+        {
+          "emoji": "🎈",
+          "value": "balloon",
+          "text": "A balloon"
+        },
+        {
+          "emoji": "🧸",
+          "value": "teddy",
+          "text": "A teddy bear"
+        }
+      ],
+      "answer": "ball"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "dog",
+        "can",
+        "run",
+        "fast",
+        "."
+      ],
+      "audioText": "The dog can run fast."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It is ___ and juicy.",
+      "choices": [
+        "sweet",
+        "tall",
+        "blue"
+      ],
+      "answer": "sweet",
+      "audioText": "It is sweet and juicy."
+    }
+  ],
+  "_unknownWords": [
+    "orchard",
+    "juicy"
+  ]
+}

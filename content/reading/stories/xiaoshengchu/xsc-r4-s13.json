@@ -1,0 +1,133 @@
+{
+  "id": "xsc-r4-s13",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 13,
+  "title": "The Starfish and the Old Net",
+  "titleCn": "海星与旧渔网",
+  "coverEmoji": "⭐",
+  "paragraphs": [
+    {
+      "text": "Last Sunday, Mia went to the beach. The sea was blue and quiet. Suddenly, she saw something under the water. It looked like a big orange star.",
+      "translation": "上周日，米娅去了海边。大海又蓝又平静。突然，她看见水下有个东西。它看起来像一颗大大的橙色星星。"
+    },
+    {
+      "text": "“Grandpa, look! A starfish!” she said. The starfish was smaller than Mia's hand. Its arm was caught in an old net. The net was heavier than a big stone.",
+      "translation": "“爷爷，快看！一只海星！”她说。这只海星比米娅的手还小。它的一条腕被一张旧渔网缠住了。那张网比一块大石头还重。"
+    },
+    {
+      "text": "Mia put on her mask and dived. She swam down to the little starfish. The water was colder than the beach. Slowly, she pulled the net away.",
+      "translation": "米娅戴上潜水镜，潜了下去。她游到小海星身边。水里比沙滩上冷多了。她慢慢地把渔网拉开。"
+    },
+    {
+      "text": "The starfish moved its arms. It looked happier than before. Then Mia saw some plastic near the rocks. There were bottles, bags and old ropes.",
+      "translation": "海星动了动它的腕。它看起来比刚才开心了。接着，米娅在岩石附近看到了一些塑料。那里有瓶子、袋子和旧绳子。"
+    },
+    {
+      "text": "Mia and Grandpa worked together. They put the plastic in a big bag. Their bag was fuller than they thought. The beach looked cleaner and brighter.",
+      "translation": "米娅和爷爷一起干了起来。他们把塑料装进一个大袋子里。他们的袋子比想象中装得还满。沙滩看起来更干净、更亮堂了。"
+    },
+    {
+      "text": "Before she left, Mia waved to the sea. “I will come back soon,” she said. A clean ocean is better for everyone. Even a small hand can help a lot.",
+      "translation": "离开前，米娅朝大海挥了挥手。“我很快就会回来的。”她说。干净的海洋对大家都更好。哪怕是一只小手，也能帮上大忙。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Mia see under the water?",
+      "audioText": "What did Mia see under the water?",
+      "options": [
+        {
+          "emoji": "⭐",
+          "value": "starfish",
+          "text": "A starfish"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A fish"
+        },
+        {
+          "emoji": "🦀",
+          "value": "crab",
+          "text": "A crab"
+        }
+      ],
+      "answer": "starfish"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Mia find near the rocks?",
+      "audioText": "What did Mia find near the rocks?",
+      "options": [
+        {
+          "emoji": "🍾",
+          "value": "bottles",
+          "text": "Bottles"
+        },
+        {
+          "emoji": "🧦",
+          "value": "socks",
+          "text": "Socks"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apples",
+          "text": "Apples"
+        }
+      ],
+      "answer": "bottles"
+    },
+    {
+      "type": "word_builder",
+      "word": "starfish",
+      "audioText": "starfish"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "water",
+        "was",
+        "colder",
+        "than",
+        "the",
+        "beach."
+      ],
+      "audioText": "The water was colder than the beach."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The starfish was ___ than Mia's hand.",
+      "choices": [
+        "smaller",
+        "small",
+        "smallest"
+      ],
+      "answer": "smaller",
+      "audioText": "The starfish was smaller than Mia's hand."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Last Sunday, Mia ___ to the beach.",
+      "choices": [
+        "went",
+        "goes",
+        "going"
+      ],
+      "answer": "went",
+      "audioText": "Last Sunday, Mia went to the beach."
+    }
+  ],
+  "_unknownWords": [
+    "starfish",
+    "mia's",
+    "net",
+    "heavier",
+    "mask",
+    "dived",
+    "happier",
+    "waved"
+  ]
+}

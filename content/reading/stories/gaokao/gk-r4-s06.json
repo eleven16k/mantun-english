@@ -1,0 +1,118 @@
+{
+  "id": "gk-r4-s06",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 6,
+  "title": "Feed Your Brain, Lift Your Mood",
+  "titleCn": "喂饱大脑，照亮心情",
+  "coverEmoji": "🥗",
+  "paragraphs": [
+    {
+      "text": "Have you ever felt tired, angry or unable to concentrate after eating a large meal of fast food? Scientists now believe that what we eat every day can slowly change the way we feel. The two are closely connected. Choosing healthy meals is not only about keeping a good weight; it is also about protecting our mood. Skipping breakfast, for example, may make it much harder to focus during morning lessons.",
+      "translation": "你有没有在吃了一顿快餐大餐之后，感到疲惫、生气，或者无法集中注意力？科学家现在认为，我们每天吃的东西会慢慢改变我们的感受。两者密切相关。选择健康的饮食不仅仅是为了保持合适的体重，也是为了保护我们的情绪。比如，不吃早餐会让你在上午的课上更难集中精神。"
+    },
+    {
+      "text": "To keep the brain working well, we need to give it certain nutrients every day. Omega-3 fats, which are found in fish and nuts, help to build strong brain cells. Vitamins from vegetables and fruit support the chemicals that control our feelings. Eating a colourful plate at every meal is a simple way to get enough of them.",
+      "translation": "为了让大脑良好运转，我们需要每天给它提供某些营养素。鱼类和坚果中含有的欧米伽-3脂肪酸，有助于构建强健的脑细胞。来自蔬菜和水果的维生素，则支撑着那些控制我们情绪的化学物质。每餐都吃一盘色彩丰富的食物，是摄取足够营养的简单方法。"
+    },
+    {
+      "text": "Blood sugar also plays an important part in our mood. When we eat sweets, our energy rises quickly and then falls just as fast. That sudden drop can make us anxious. If you felt tired an hour after lunch yesterday, you should have chosen a handful of nuts instead of a sweet drink.",
+      "translation": "血糖也在我们的情绪中扮演着重要角色。当我们吃甜食时，能量会迅速升高，然后又同样迅速地下降。这种骤降会让我们感到焦虑。如果你昨天午饭后一小时就觉得累，那你本应该选一把坚果，而不是一杯甜饮料。"
+    },
+    {
+      "text": "How we eat matters just as much as what we eat. Eating slowly helps the body to notice when it is full. Sharing meals makes us feel connected. Turning off your phone at dinner is a small change, but it allows you to enjoy your food and your company.",
+      "translation": "我们怎么吃，和我们吃什么同样重要。细嚼慢咽能帮助身体察觉到什么时候已经吃饱了。和别人一起吃饭会让我们感到与人相连。晚餐时关掉手机是个小小的改变，但它能让你好好享受食物和身边人的陪伴。"
+    },
+    {
+      "text": "Improving your diet does not mean giving up everything you love. Trying to add one healthy food each day is a realistic goal. Your brain will thank you, and studying may feel easier too.",
+      "translation": "改善饮食并不意味着要放弃所有你爱吃的东西。试着每天增加一种健康食物，是一个切实可行的目标。你的大脑会感谢你，学习也可能变得轻松一些。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, which food helps to build strong brain cells?",
+      "audioText": "According to the passage, which food helps to build strong brain cells?",
+      "options": [
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        },
+        {
+          "emoji": "🍬",
+          "value": "candy",
+          "text": "Candy"
+        },
+        {
+          "emoji": "🥤",
+          "value": "sweet drink",
+          "text": "Sweet drink"
+        }
+      ],
+      "answer": "fish"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Skipping ___, for example, may make it much harder to focus during morning lessons.",
+      "choices": [
+        "breakfast",
+        "homework",
+        "exercise"
+      ],
+      "answer": "breakfast",
+      "audioText": "Skipping breakfast, for example, may make it much harder to focus during morning lessons."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "two",
+        "are",
+        "closely",
+        "connected."
+      ],
+      "audioText": "The two are closely connected."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you felt tired an hour after lunch yesterday, you should have ___ a handful of nuts instead of a sweet drink.",
+      "choices": [
+        "chosen",
+        "choose",
+        "choosing"
+      ],
+      "answer": "chosen",
+      "audioText": "If you felt tired an hour after lunch yesterday, you should have chosen a handful of nuts instead of a sweet drink."
+    },
+    {
+      "type": "word_builder",
+      "word": "vitamins",
+      "audioText": "vitamins"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Sharing",
+        "meals",
+        "makes",
+        "us",
+        "feel",
+        "connected."
+      ],
+      "audioText": "Sharing meals makes us feel connected."
+    }
+  ],
+  "_unknownWords": [
+    "mood",
+    "skipping",
+    "nutrients",
+    "omega",
+    "nuts",
+    "vitamins",
+    "colourful",
+    "chosen",
+    "realistic",
+    "easier"
+  ]
+}

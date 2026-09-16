@@ -1,0 +1,134 @@
+{
+  "id": "xsc-r4-s09",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 9,
+  "title": "The Whale's Long Journey",
+  "titleCn": "鲸鱼的长途旅行",
+  "coverEmoji": "🐋",
+  "paragraphs": [
+    {
+      "text": "Last summer, I visited Ocean Park with my dad. We took a small boat on the sea. A young whale swam near our boat.",
+      "translation": "去年夏天，我和爸爸去了海洋乐园。我们坐上一艘小船，出海了。一头小鲸鱼游到了我们船边。"
+    },
+    {
+      "text": "The whale was much longer than our boat. Its skin looked darker and smoother than glass. It made a low sound, like a sad song.",
+      "translation": "这头鲸鱼比我们的船长得多。它的皮肤看起来比玻璃还深、还光滑。它发出低低的声音，像一首悲伤的歌。"
+    },
+    {
+      "text": "Our guide said it was on a long journey. It swam from cold water to warm places. But the sea is not as clean as before. Some plastic bags floated near us.",
+      "translation": "导游说，它正在长途旅行。它从冰冷的海水游向温暖的地方。可是大海不像从前那么干净了。一些塑料袋就漂在我们旁边。"
+    },
+    {
+      "text": "The whale opened its big mouth slowly. It took in water, but no plastic, luckily. \"Whales are smarter than we think,\" Dad said. Still, plastic is more dangerous for them.",
+      "translation": "鲸鱼慢慢张开大嘴。幸运的是，它喝进了水，却没有吃到塑料。爸爸说：“鲸鱼比我们想的更聪明。”可是塑料对它们来说越来越危险。"
+    },
+    {
+      "text": "We picked up plastic bags with our nets. It was easier than it looked. Then the whale went deeper and swam away. Its tail was the biggest I ever saw.",
+      "translation": "我们用网把塑料袋捞了起来。这比看上去要容易。然后鲸鱼潜向更深处，游走了。它的尾巴是我见过最大的。"
+    },
+    {
+      "text": "That day, I learned something important. The sea is home for many animals. They need cleaner water to live well. If we all help, the ocean will be safer.",
+      "translation": "那一天，我懂得了一件重要的事。大海是许多动物的家。它们需要更干净的海水才能好好生活。如果我们一起帮忙，海洋就会更安全。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which animal swam near the boat?",
+      "audioText": "Which animal swam near the boat?",
+      "options": [
+        {
+          "emoji": "🐋",
+          "value": "whale",
+          "text": "Whale"
+        },
+        {
+          "emoji": "🐢",
+          "value": "turtle",
+          "text": "Turtle"
+        },
+        {
+          "emoji": "🐬",
+          "value": "dolphin",
+          "text": "Dolphin"
+        }
+      ],
+      "answer": "whale"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did they pick up from the sea?",
+      "audioText": "What did they pick up from the sea?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "plastic bag",
+          "text": "Plastic bag"
+        },
+        {
+          "emoji": "🐠",
+          "value": "fish",
+          "text": "Fish"
+        },
+        {
+          "emoji": "🌿",
+          "value": "sea plant",
+          "text": "Sea plant"
+        }
+      ],
+      "answer": "plastic bag"
+    },
+    {
+      "type": "word_builder",
+      "word": "plastic",
+      "audioText": "plastic"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Some",
+        "plastic",
+        "bags",
+        "floated",
+        "near",
+        "us"
+      ],
+      "audioText": "Some plastic bags floated near us."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The whale was much ___ than our boat.",
+      "choices": [
+        "longer",
+        "long",
+        "longest"
+      ],
+      "answer": "longer",
+      "audioText": "The whale was much longer than our boat."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Our guide said the whale was on a long ___.",
+      "choices": [
+        "journey",
+        "holiday",
+        "lesson"
+      ],
+      "answer": "journey",
+      "audioText": "Our guide said the whale was on a long journey."
+    }
+  ],
+  "_unknownWords": [
+    "skin",
+    "guide",
+    "journey",
+    "floated",
+    "mouth",
+    "luckily",
+    "nets",
+    "easier",
+    "biggest",
+    "safer"
+  ]
+}

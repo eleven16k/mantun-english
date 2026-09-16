@@ -1,0 +1,115 @@
+{
+  "id": "gk-r7-s09",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 9,
+  "title": "Building Tomorrow, Piece by Piece",
+  "titleCn": "一点一点，建造明天",
+  "coverEmoji": "🌌",
+  "paragraphs": [
+    {
+      "text": "Whenever people talk about the future, they usually describe either a shining paradise or a ruined planet, as if only two endings were possible for us. Yet the truth is that tomorrow will not arrive fully formed; it will be assembled, piece by piece, from the small decisions we make today. Rarely have we held so much power to shape what comes next, and rarely have we been so uncertain about how to use it.",
+      "translation": "每当人们谈起未来，往往要么描绘一个光辉的乐园，要么描绘一颗被毁掉的星球，仿佛我们只可能有两种结局。可事实上，明天不会以完整的面貌到来；它是被我们今天所做的每一个细小决定，一点一点拼装而成的。我们很少拥有如此大的力量去塑造接下来发生的一切，也很少像现在这样不确定该如何使用它。"
+    },
+    {
+      "text": "Think of a city: what if we designed it the way a forest grows, so that every street cooled the air instead of heating it? Were we to plant roofs with grass and cover walls with vines, buildings would breathe, and summer heat would lose much of its bite. Such cities would not require us to give up comfort; they would simply ask us to define comfort differently, as something shared rather than something bought.",
+      "translation": "想一想一座城市：如果我们像森林生长那样去设计它，让每条街道都为空气降温，而不是让它变热，那会怎样？倘若我们在屋顶种上草、让墙上爬满藤蔓，建筑就会呼吸，夏日的酷热也会失去大半威力。这样的城市并不要求我们放弃舒适；它只是要求我们重新定义舒适——把它看作共享之物，而不是买来的东西。"
+    },
+    {
+      "text": "Meanwhile, thousands of kilometres above our heads, engineers are testing whether humans can live beyond the thin blue shell that protects us. Some argue that we should first repair what we have broken at home; others, that a species which never leaves its own planet will slowly stop growing. Yet these two dreams are not enemies: the same curiosity that sends a probe past Jupiter can also teach a village how to store clean water.",
+      "translation": "与此同时，在我们头顶数千公里之外，工程师们正在检验人类能否生活在那层保护我们的薄薄的蓝色外壳之外。有人认为，我们应当先修复自己在地球上造成的破坏；也有人认为，一个永远不离开自己星球的物种终将慢慢停止成长。然而这两个梦想并非敌人：那份把探测器送过木星的求知欲，同样能教会一个村庄如何储存干净的水。"
+    },
+    {
+      "text": "If the future could speak, it would probably not ask how fast we travelled or how much we owned. It would ask instead whether we learned to share a limited planet, and whether we kept our promises to those who came after us. Only when we answer those questions honestly will the word 'progress' begin to mean something worth defending.",
+      "translation": "如果未来能够开口说话，它大概不会问我们走得有多快、拥有多少。它更可能问的是：我们是否学会了共享一颗资源有限的星球，我们是否信守了对后来者的承诺。只有当我们诚实地回答这些问题，“进步”这个词才开始意味着某种值得我们捍卫的东西。"
+    },
+    {
+      "text": "So the future is neither a gift nor a punishment; it is a project, and like every project it needs patience, imagination and a great many hands. None of us can build it alone, and none of us can escape the part we are already playing. The best thing we can do, perhaps, is to keep asking better questions — and to start answering them today.",
+      "translation": "所以未来既不是礼物，也不是惩罚；它是一项工程，而像每一项工程一样，它需要耐心、想象力，以及许许多多双手。我们没有人能独自把它建成，也没有人能逃避自己已经在扮演的角色。也许我们所能做的最好的事，就是不断提出更好的问题——并且从今天起开始回答它们。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "word_builder",
+      "word": "curiosity",
+      "audioText": "curiosity"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Rarely",
+        "have",
+        "we",
+        "held",
+        "so",
+        "much",
+        "power"
+      ],
+      "audioText": "Rarely have we held so much power."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "None",
+        "of",
+        "us",
+        "can",
+        "build",
+        "it",
+        "alone"
+      ],
+      "audioText": "None of us can build it alone."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Think of a city: what if we designed it the way a ___ grows, so that every street cooled the air instead of heating it?",
+      "choices": [
+        "forest",
+        "factory",
+        "highway"
+      ],
+      "answer": "forest",
+      "audioText": "Think of a city: what if we designed it the way a forest grows, so that every street cooled the air instead of heating it?"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Some argue that we should first repair what we have broken at home; others, that a species which never leaves its own ___ will slowly stop growing.",
+      "choices": [
+        "planet",
+        "office",
+        "garden"
+      ],
+      "answer": "planet",
+      "audioText": "Some argue that we should first repair what we have broken at home; others, that a species which never leaves its own planet will slowly stop growing."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If the future could speak, it ___ probably not ask how fast we travelled or how much we owned.",
+      "choices": [
+        "would",
+        "will",
+        "should"
+      ],
+      "answer": "would",
+      "audioText": "If the future could speak, it would probably not ask how fast we travelled or how much we owned."
+    }
+  ],
+  "_unknownWords": [
+    "paradise",
+    "ruined",
+    "fully",
+    "assembled",
+    "uncertain",
+    "vines",
+    "simply",
+    "define",
+    "meanwhile",
+    "shell",
+    "broken",
+    "species",
+    "curiosity",
+    "probe",
+    "travelled",
+    "imagination"
+  ]
+}

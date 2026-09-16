@@ -1,0 +1,120 @@
+{
+  "id": "gk-r4-s04",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 4,
+  "title": "Three Keys to a Healthier Mind",
+  "titleCn": "让内心更健康的三个关键",
+  "coverEmoji": "🧠",
+  "paragraphs": [
+    {
+      "text": "Many students believe that studying for longer hours is the only way to do well in exams. However, doctors and teachers now say that resting well matters just as much as working hard. In fact, the way you sleep, move and eat may shape your mood more than you realise. Here are three simple keys to a calmer and healthier mind.",
+      "translation": "许多学生认为，长时间学习是考出好成绩的唯一途径。然而，医生和老师现在都说，休息好和努力学习同样重要。事实上，你睡觉、运动和饮食的方式，可能比你想的更能影响你的情绪。以下是让内心更平静、更健康的三把钥匙。"
+    },
+    {
+      "text": "Getting enough sleep is not a waste of time, because your brain keeps working while you rest. During deep sleep, it quietly sorts out everything you learned and stores it away. Teenagers need about eight to ten hours each night, yet many of them get far less. Sleep is when your brain repairs itself. If you often feel tired in class, you should have gone to bed earlier instead of watching videos. Trying to stay up late to study usually makes your memory worse, not better.",
+      "translation": "睡够觉并不是浪费时间，因为你休息时大脑仍在工作。在深度睡眠中，它会悄悄整理你白天学到的一切，并把它们储存起来。青少年每晚大约需要八到十个小时的睡眠，但很多人远远不够。睡眠是大脑自我修复的时候。如果你上课常常觉得累，你本该早点上床睡觉，而不是看视频。想靠熬夜来学习，通常只会让你的记忆力更糟，而不是更好。"
+    },
+    {
+      "text": "Moving your body is another key to feeling calm and focused during a busy week. When you exercise, your brain releases chemicals that improve your mood and reduce stress. You do not need to run a marathon; even a short walk after dinner helps. Some students prefer to play ball games, while others enjoy dancing with friends. The important thing is to choose an activity you actually like doing.",
+      "translation": "让身体动起来，是在忙碌的一周里保持平静和专注的另一把钥匙。运动时，大脑会释放改善情绪、减轻压力的化学物质。你不必去跑马拉松；晚饭后哪怕只是散散步也有帮助。有些学生喜欢打球，另一些则喜欢和朋友一起跳舞。重要的是选择一项你真正喜欢的活动。"
+    },
+    {
+      "text": "What you eat matters too. Skipping breakfast may leave you unable to concentrate during your morning lessons. Instead of reaching for sugary drinks and snacks, try to eat fruit, eggs or nuts. Drinking enough water sounds simple, but it keeps your brain working properly all day. A balanced diet does not mean being perfect; it means making sensible choices most of the time.",
+      "translation": "你吃什么也很重要。不吃早餐可能让你在上午的课堂上无法集中注意力。与其伸手去拿含糖饮料和零食，不如试着吃点水果、鸡蛋或坚果。喝够水听起来很简单，但它能让你的大脑一整天正常运转。均衡饮食并不意味着做到完美，而是意味着大部分时间做出明智的选择。"
+    },
+    {
+      "text": "None of these habits costs much money or requires special equipment. To build a healthier mind, you simply need to start with one small change and keep going. Remember that it is never too late to take better care of yourself.",
+      "translation": "这些习惯都不怎么花钱，也不需要特别的器材。要养成更健康的心态，你只需从一个小小的改变开始，并坚持下去。记住，更好地照顾自己，永远都不算晚。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, which activity helps your brain reduce stress?",
+      "audioText": "According to the text, which activity helps your brain reduce stress?",
+      "options": [
+        {
+          "emoji": "🏃",
+          "value": "exercise",
+          "text": "Exercise"
+        },
+        {
+          "emoji": "📱",
+          "value": "videos",
+          "text": "Watching videos"
+        },
+        {
+          "emoji": "🍬",
+          "value": "sweets",
+          "text": "Sugary snacks"
+        }
+      ],
+      "answer": "exercise"
+    },
+    {
+      "type": "word_builder",
+      "word": "breakfast",
+      "audioText": "breakfast"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Sleep",
+        "is",
+        "when",
+        "your",
+        "brain",
+        "repairs",
+        "itself."
+      ],
+      "audioText": "Sleep is when your brain repairs itself."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "What",
+        "you",
+        "eat",
+        "matters",
+        "too."
+      ],
+      "audioText": "What you eat matters too."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you often feel tired in class, you ___ have gone to bed earlier instead of watching videos.",
+      "choices": [
+        "should",
+        "must",
+        "can"
+      ],
+      "answer": "should",
+      "audioText": "If you often feel tired in class, you should have gone to bed earlier instead of watching videos."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ enough water sounds simple, but it keeps your brain working properly all day.",
+      "choices": [
+        "Drinking",
+        "Drink",
+        "Drank"
+      ],
+      "answer": "Drinking",
+      "audioText": "Drinking enough water sounds simple, but it keeps your brain working properly all day."
+    }
+  ],
+  "_unknownWords": [
+    "mood",
+    "healthier",
+    "getting",
+    "gone",
+    "earlier",
+    "skipping",
+    "sugary",
+    "snacks",
+    "nuts",
+    "sensible",
+    "simply"
+  ]
+}

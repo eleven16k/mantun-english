@@ -1,0 +1,120 @@
+{
+  "id": "zk-r7-s08",
+  "track": "zhongkao",
+  "regionId": "zk-r7",
+  "order": 8,
+  "title": "The Gift of Time",
+  "titleCn": "时间的礼物",
+  "coverEmoji": "⏳",
+  "paragraphs": [
+    {
+      "text": "Many students believe that helping others always means giving away their money. In fact, to give your own time is often a more useful and warmer gift.",
+      "translation": "许多学生以为，帮助别人就意味着捐出钱来。其实，献出你自己的时间，往往是一份更有用、也更温暖的礼物。"
+    },
+    {
+      "text": "Last month, a group of students in our school visited an old people's home. They read the news, played games and simply listened to the old people's stories. Nobody paid them, but everyone in the room was smiling when they left.",
+      "translation": "上个月，我们学校的一群学生去了一家敬老院。他们给老人读新闻、陪他们做游戏，也只是安安静静地听老人讲故事。没有人付钱给他们，但他们离开时，屋子里的每个人都在微笑。"
+    },
+    {
+      "text": "I wish more teenagers could feel how happy a small act of kindness makes us. If I were busier with my homework, I would still find one free hour for others. Time is something we can always share, even when our money is short.",
+      "translation": "我希望有更多青少年能体会到，一个小小的善举会让我们多么快乐。就算我的作业再多再忙，我也还是会为别人留出一小时。时间是我们总能分享的东西，哪怕钱不多的时候也一样。"
+    },
+    {
+      "text": "Volunteer work also teaches us something important about rules and promises. If everyone arrives late or leaves early, the people we help will feel upset. That is why volunteers should keep their promises and follow the plan together.",
+      "translation": "志愿工作也教会我们一些关于规则和承诺的重要道理。如果每个人都迟到早退，我们帮助的人就会难过。这就是为什么志愿者应该信守承诺，一起按计划行事。"
+    },
+    {
+      "text": "To help without asking for anything back is a habit, not a talent. If more of us gave an hour each week, our city would be a kinder place. Start this weekend, and you will see how your own heart slowly changes.",
+      "translation": "不求回报地去帮助别人，是一种习惯，而不是一种天赋。如果我们中有更多人每周拿出一小时，我们的城市会变得更友善。这个周末就开始吧，你会看到自己的心在慢慢发生变化。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, which gift is often more useful and warmer than money?",
+      "audioText": "According to the text, which gift is often more useful and warmer than money?",
+      "options": [
+        {
+          "emoji": "⏰",
+          "value": "time",
+          "text": "Time"
+        },
+        {
+          "emoji": "💰",
+          "value": "money",
+          "text": "Money"
+        },
+        {
+          "emoji": "🍬",
+          "value": "candy",
+          "text": "Candy"
+        }
+      ],
+      "answer": "time"
+    },
+    {
+      "type": "word_builder",
+      "word": "kindness",
+      "audioText": "kindness"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Time",
+        "is",
+        "something",
+        "we",
+        "can",
+        "always",
+        "share"
+      ],
+      "audioText": "Time is something we can always share."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "That",
+        "is",
+        "why",
+        "volunteers",
+        "should",
+        "keep",
+        "their",
+        "promises"
+      ],
+      "audioText": "That is why volunteers should keep their promises."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "In fact, to give your own ___ is often a more useful and warmer gift.",
+      "choices": [
+        "time",
+        "money",
+        "space"
+      ],
+      "answer": "time",
+      "audioText": "In fact, to give your own time is often a more useful and warmer gift."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If I ___ busier with my homework, I would still find one free hour for others.",
+      "choices": [
+        "were",
+        "am",
+        "be"
+      ],
+      "answer": "were",
+      "audioText": "If I were busier with my homework, I would still find one free hour for others."
+    }
+  ],
+  "_unknownWords": [
+    "people's",
+    "simply",
+    "room",
+    "kindness",
+    "busier",
+    "upset",
+    "asking",
+    "talent"
+  ]
+}

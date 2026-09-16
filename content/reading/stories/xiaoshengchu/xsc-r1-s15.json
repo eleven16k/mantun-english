@@ -1,0 +1,139 @@
+{
+  "id": "xsc-r1-s15",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 15,
+  "title": "Apples for My Little Sister",
+  "titleCn": "给小妹的苹果",
+  "coverEmoji": "🍎",
+  "paragraphs": [
+    {
+      "text": "I have a little sister. Her name is Lily. She is four years old. She likes apples very much.",
+      "translation": "我有一个小妹妹。她叫莉莉。她四岁了。她非常喜欢苹果。"
+    },
+    {
+      "text": "We go to the apple orchard. The apple trees are very tall. There are many red apples. Some apples are green too.",
+      "translation": "我们去苹果园。苹果树很高。那里有许多红苹果。有些苹果也是绿色的。"
+    },
+    {
+      "text": "My father has a big basket. He can reach the high apples. I pick the low apples. Lily holds a small basket.",
+      "translation": "爸爸有一个大篮子。他够得到高处的苹果。我摘低处的苹果。莉莉拿着一个小篮子。"
+    },
+    {
+      "text": "Lily finds a yellow apple. It is like the sun! She puts it in her basket. She smiles at me.",
+      "translation": "莉莉找到一个黄苹果。它就像太阳一样！她把它放进篮子里，冲我笑。"
+    },
+    {
+      "text": "Our dog Max runs to us. He likes apples too. He eats a small red apple. He is very happy now.",
+      "translation": "我们的狗马克斯跑到我们身边。它也喜欢苹果。它吃了一个小红苹果。它现在很开心。"
+    },
+    {
+      "text": "We go home with three baskets. My mother makes apple juice. Lily drinks two big cups. We are a happy family.",
+      "translation": "我们带着三篮苹果回家。妈妈做了苹果汁。莉莉喝了两大杯。我们是快乐的一家人。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Who is Lily?",
+      "audioText": "Who is Lily?",
+      "options": [
+        {
+          "emoji": "👧",
+          "value": "sister",
+          "text": "Sister"
+        },
+        {
+          "emoji": "👩",
+          "value": "mother",
+          "text": "Mother"
+        },
+        {
+          "emoji": "🐶",
+          "value": "dog",
+          "text": "Dog"
+        }
+      ],
+      "answer": "sister"
+    },
+    {
+      "type": "image_choice",
+      "question": "What color is the apple in Lily's basket?",
+      "audioText": "What color is the apple in Lily's basket?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟡",
+          "value": "yellow",
+          "text": "Yellow"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        }
+      ],
+      "answer": "yellow"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does the dog eat?",
+      "audioText": "What does the dog eat?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        },
+        {
+          "emoji": "🥛",
+          "value": "milk",
+          "text": "Milk"
+        }
+      ],
+      "answer": "apple"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "My",
+        "father",
+        "has",
+        "a",
+        "big",
+        "basket."
+      ],
+      "audioText": "My father has a big basket."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "My mother makes apple ___.",
+      "choices": [
+        "juice",
+        "tea",
+        "milk"
+      ],
+      "answer": "juice",
+      "audioText": "My mother makes apple juice."
+    }
+  ],
+  "_unknownWords": [
+    "lily",
+    "orchard",
+    "max"
+  ]
+}

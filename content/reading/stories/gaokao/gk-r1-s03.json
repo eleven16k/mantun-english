@@ -1,0 +1,121 @@
+{
+  "id": "gk-r1-s03",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 3,
+  "title": "The Cooling Power of City Trees",
+  "titleCn": "城市树木的降温力量",
+  "coverEmoji": "🌳",
+  "paragraphs": [
+    {
+      "text": "On a hot summer afternoon, the temperature in a city center can be several degrees higher than in the nearby countryside. Scientists call this difference the urban heat island effect, which grows stronger as cities expand. Caused mainly by dark roads and buildings that soak up sunlight, it makes city summers increasingly uncomfortable.",
+      "translation": "在炎热的夏日午后，市中心的温度可能比附近的乡村高出好几度。科学家把这种差异称为城市热岛效应，随着城市不断扩张，这种效应也愈发明显。它主要由吸收阳光的深色道路和建筑物造成，使城市的夏天越来越难熬。"
+    },
+    {
+      "text": "Trees offer one of the simplest solutions. Standing between the sun and the ground, a large tree can block much of the sunlight before it warms the streets below. Its leaves also release water into the air, a process that cools the surroundings just as sweat cools our skin.",
+      "translation": "树木为这个问题提供了最简单的解决办法之一。一棵大树站在太阳和地面之间，能在阳光把下方的街道晒热之前挡住大部分光线。它的叶子还会向空气中释放水分，这一过程会让周围变凉，就像汗水让我们皮肤变凉一样。"
+    },
+    {
+      "text": "Beyond cooling the air, trees improve city life in several other important ways. They trap tiny dust particles, which would otherwise pass into our lungs. Their roots also help rainwater sink into the soil instead of flooding the busy streets. The fact that a single healthy tree can support hundreds of insects and birds shows how much wildlife depends on these green neighbors.",
+      "translation": "除了给空气降温，树木还在其他几个重要方面改善着城市生活。它们能吸附微小的尘粒，否则这些尘粒就会进入我们的肺里。树根还能帮助雨水渗入土壤，而不是让繁忙的街道积水。一棵健康的树能为数百只昆虫和鸟类提供栖息之所，这一事实说明野生动物多么依赖这些绿色的邻居。"
+    },
+    {
+      "text": "However, planting trees is not as easy as it sounds. Young trees need years of watering and protection before they can cool a street, and many die in their first summers. Encouraged by new research, some cities are now choosing native species that survive heat and drought far better than foreign ones do.",
+      "translation": "然而，种树并不像听起来那么容易。幼树需要多年的浇水和保护才能为街道降温，许多树在第一个夏天就死掉了。在新研究的推动下，一些城市如今正在选择那些比外来树种更能耐热耐旱的本土树种。"
+    },
+    {
+      "text": "For ordinary citizens, the message is quite simple. Supporting local tree projects, we can all help our cities stay cooler and greener. A city that plants for the future is a city that truly cares about the people living in it.",
+      "translation": "对普通市民来说，这个信息相当简单。支持本地的植树项目，我们就能帮助城市保持更凉爽、更绿意盎然。毕竟，一座为未来种树的城市，才是一座真正关心居住其中的人们的城市。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, which of these helps cool the air around a tree?",
+      "audioText": "According to the text, which of these helps cool the air around a tree?",
+      "options": [
+        {
+          "emoji": "💧",
+          "value": "water",
+          "text": "Water released by its leaves"
+        },
+        {
+          "emoji": "🔥",
+          "value": "heat",
+          "text": "Heat stored in the road"
+        },
+        {
+          "emoji": "🧱",
+          "value": "bricks",
+          "text": "Bricks used in buildings"
+        }
+      ],
+      "answer": "water"
+    },
+    {
+      "type": "word_builder",
+      "word": "drought",
+      "audioText": "drought"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Trees",
+        "offer",
+        "one",
+        "of",
+        "the",
+        "simplest",
+        "solutions."
+      ],
+      "audioText": "Trees offer one of the simplest solutions."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "For",
+        "ordinary",
+        "citizens,",
+        "the",
+        "message",
+        "is",
+        "quite",
+        "simple."
+      ],
+      "audioText": "For ordinary citizens, the message is quite simple."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Scientists call this difference the urban heat island ___.",
+      "choices": [
+        "effect",
+        "affect",
+        "effort"
+      ],
+      "answer": "effect",
+      "audioText": "Scientists call this difference the urban heat island effect."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ by new research, some cities are now choosing native species.",
+      "choices": [
+        "Encouraged",
+        "Encouraging",
+        "Encourage"
+      ],
+      "answer": "Encouraged",
+      "audioText": "Encouraged by new research, some cities are now choosing native species."
+    }
+  ],
+  "_unknownWords": [
+    "soak",
+    "sunlight",
+    "increasingly",
+    "simplest",
+    "solutions",
+    "particles",
+    "rainwater",
+    "species",
+    "truly"
+  ]
+}

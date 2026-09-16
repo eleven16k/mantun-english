@@ -1,0 +1,126 @@
+{
+  "id": "xsc-r5-s11",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 11,
+  "title": "The Best View in Dino Valley",
+  "titleCn": "恐龙谷里最美的风景",
+  "coverEmoji": "🦕",
+  "paragraphs": [
+    {
+      "text": "One morning, little Rex found an old map. The map showed a hill near the lake.",
+      "translation": "一天早上，小雷克斯找到了一张旧地图。地图上画着湖附近的一座小山。"
+    },
+    {
+      "text": "Rex wanted the best view of the valley. He asked Grandpa, because Grandpa knew every place. \"The highest hill is behind the lake,\" he said.",
+      "translation": "雷克斯想看看恐龙谷最美的风景。他去问爷爷，因为爷爷认得每一处地方。“最高的山就在湖后面，”爷爷说。"
+    },
+    {
+      "text": "Rex walked with his friend Pip for hours. They crossed a river and climbed big rocks. Pip was tired because the rocks were hot.",
+      "translation": "雷克斯和他的朋友皮普走了好几个小时。他们蹚过一条小河，还爬上了一些大石头。皮普累了，因为那些石头又烫又热。"
+    },
+    {
+      "text": "At last, they stood on the highest hill. It was the most beautiful view of all. Below them were the lake, trees, and hills.",
+      "translation": "终于，他们站在了最高的那座山上。那是所有风景中最美的一幅。在他们脚下，是湖泊、树木和小山。"
+    },
+    {
+      "text": "\"This is the best day,\" Rex said to Pip. Good things are better when you share them. Then they went home and told Grandpa everything.",
+      "translation": "“这是最好的一天，”雷克斯对皮普说。好东西和别人一起分享会更好。然后他们回到家，把一切都讲给爷爷听。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Rex find one morning?",
+      "audioText": "What did Rex find one morning?",
+      "options": [
+        {
+          "emoji": "🗺️",
+          "value": "map",
+          "text": "A map"
+        },
+        {
+          "emoji": "🥚",
+          "value": "egg",
+          "text": "An egg"
+        },
+        {
+          "emoji": "🎈",
+          "value": "balloon",
+          "text": "A balloon"
+        }
+      ],
+      "answer": "map"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Rex and Pip see below the hill?",
+      "audioText": "What did Rex and Pip see below the hill?",
+      "options": [
+        {
+          "emoji": "🏞️",
+          "value": "lake",
+          "text": "A lake"
+        },
+        {
+          "emoji": "🕳️",
+          "value": "cave",
+          "text": "A cave"
+        },
+        {
+          "emoji": "⛵",
+          "value": "boat",
+          "text": "A boat"
+        }
+      ],
+      "answer": "lake"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The ___ hill is behind the lake.",
+      "choices": [
+        "highest",
+        "high",
+        "higher"
+      ],
+      "answer": "highest",
+      "audioText": "The highest hill is behind the lake."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Pip was tired ___ the rocks were hot.",
+      "choices": [
+        "because",
+        "but",
+        "so"
+      ],
+      "answer": "because",
+      "audioText": "Pip was tired because the rocks were hot."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "the",
+        "most",
+        "beautiful",
+        "view",
+        "of",
+        "all."
+      ],
+      "audioText": "It was the most beautiful view of all."
+    },
+    {
+      "type": "word_builder",
+      "word": "valley",
+      "audioText": "valley"
+    }
+  ],
+  "_unknownWords": [
+    "rex",
+    "view",
+    "asked",
+    "pip"
+  ]
+}

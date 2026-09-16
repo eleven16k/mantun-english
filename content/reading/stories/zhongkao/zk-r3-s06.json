@@ -1,0 +1,121 @@
+{
+  "id": "zk-r3-s06",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 6,
+  "title": "Robots on the Sidewalk",
+  "titleCn": "人行道上的小机器人",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "In some cities today, small robots can be seen on the sidewalks. They are used to carry food, drinks and small packages to people's homes. If a small box moves by itself, it must be a robot. These robots move slowly and always stop when people walk near them.",
+      "translation": "如今在一些城市里，人行道上能看到小小的机器人。它们被用来把食物、饮料和小包裹送到人们家门口。如果一个小盒子自己在往前移动，那它一定是个机器人。这些机器人走得很慢，只要有人走近，它们就会停下来。"
+    },
+    {
+      "text": "How does a delivery robot work on a busy street? First, an order is sent to the robot by a phone app. Then the robot is given a map of the streets nearby. Its box is locked, so nobody can open it on the way.",
+      "translation": "在繁忙的街道上，送东西的机器人是怎么工作的呢？首先，订单会通过手机应用发送给机器人。接着，机器人会拿到一份附近街道的地图。它的箱子是锁着的，所以路上没人能把它打开。"
+    },
+    {
+      "text": "When the robot arrives, a message is sent to your phone. You can open the box with a code. The trip is usually finished in thirty minutes.",
+      "translation": "机器人到达的时候，你的手机会收到一条消息。你可以用一个取件码打开箱子。这一趟路程通常三十分钟内就完成了。"
+    },
+    {
+      "text": "These robots were designed to work both day and night. They must follow traffic rules on the street. They can't cross busy roads alone. Some people believe robots might take jobs away from humans. In fact, new jobs are also created.",
+      "translation": "这些机器人被设计成白天黑夜都能工作。它们必须遵守街上的交通规则，不能独自穿过繁忙的马路。有些人认为机器人可能会抢走人类的工作。事实上，新的工作岗位也随之出现了。"
+    },
+    {
+      "text": "In the future, more smart machines may be built for our cities. But they can't do everything, and they must be checked often. So a warm “thank you” must still come from a real person.",
+      "translation": "未来，也许会有更多智能机器为我们的城市而造。但它们并不是什么都做得了，而且还必须经常被检查。所以，一句温暖的“谢谢”，还是得由真正的人说出口。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In some cities, what carries food and small packages to people's homes?",
+      "audioText": "In some cities, what carries food and small packages to people's homes?",
+      "options": [
+        {
+          "emoji": "🤖",
+          "value": "robot",
+          "text": "A small robot"
+        },
+        {
+          "emoji": "🚚",
+          "value": "truck",
+          "text": "A big truck"
+        },
+        {
+          "emoji": "✈️",
+          "value": "plane",
+          "text": "A plane"
+        }
+      ],
+      "answer": "robot"
+    },
+    {
+      "type": "word_builder",
+      "word": "message",
+      "audioText": "message"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "can't",
+        "cross",
+        "busy",
+        "roads",
+        "alone."
+      ],
+      "audioText": "They can't cross busy roads alone."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "trip",
+        "is",
+        "usually",
+        "finished",
+        "in",
+        "thirty",
+        "minutes."
+      ],
+      "audioText": "The trip is usually finished in thirty minutes."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "First, an order ___ sent to the robot by a phone app.",
+      "choices": [
+        "is",
+        "are",
+        "were"
+      ],
+      "answer": "is",
+      "audioText": "First, an order is sent to the robot by a phone app."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "In the future, more smart machines may ___ built for our cities.",
+      "choices": [
+        "be",
+        "is",
+        "are"
+      ],
+      "answer": "be",
+      "audioText": "In the future, more smart machines may be built for our cities."
+    }
+  ],
+  "_unknownWords": [
+    "seen",
+    "sidewalks",
+    "people's",
+    "delivery",
+    "busy",
+    "app",
+    "given",
+    "code",
+    "designed",
+    "can't"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "zk-r5-s04",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 4,
+  "title": "The Boy Who Built a Book Corner",
+  "titleCn": "建起图书角的男孩",
+  "coverEmoji": "📚",
+  "paragraphs": [
+    {
+      "text": "Wang Lin lives in a small village that sits between two green mountains. The nearest bookshop is more than fifty kilometres away. When he was a boy, he often wished that he could read more books.",
+      "translation": "王林住在一个小村庄里，村子坐落在两座青山之间。离他最近的书店也在五十多公里以外。小时候，他常常盼着自己能读到更多的书。"
+    },
+    {
+      "text": "His grandfather, who had been a teacher, loved books all his life. Before he died, he had collected a big box of old books. The box stayed in a dark corner for years.",
+      "translation": "他的爷爷当过老师，一辈子都爱书。去世前，爷爷收藏了一大箱旧书。那只箱子在一个昏暗的角落里放了好些年。"
+    },
+    {
+      "text": "One rainy afternoon, Wang Lin opened the old box and began to read. The books were full of red marks which his grandfather had made. The storybooks that his grandfather had loved made him smile. Then Wang Lin had a good idea. He thought other children in the village would love these books too.",
+      "translation": "一个下雨的午后，王林打开那只旧箱子，读了起来。书上满是他爷爷留下的红色记号。爷爷当年喜爱的那些故事书让他笑了起来。接着，王林有了一个好主意。他觉得村里别的孩子也会喜欢这些书。"
+    },
+    {
+      "text": "With his mother's help, he cleaned an old room next to his house. He put the books on three wooden shelves that his father had built. Then he made a small wooden sign for the door. The sign said, 'Free Book Corner'.",
+      "translation": "在妈妈的帮助下，他把家旁边的一间旧屋子打扫干净。他把书放在爸爸做好的三个木架子上。然后他给门做了一块小木牌。牌子上写着：“免费图书角”。"
+    },
+    {
+      "text": "At first, only five children came. Soon more than thirty children came to the corner every week. Kids who had never owned a book borrowed one or two. Wang Lin also read aloud to those who could not read well.",
+      "translation": "一开始，只有五个孩子来。很快，每个星期都有三十多个孩子来到这个小角落。从没拥有过一本书的孩子可以借走一两本。王林还会给那些读不好的孩子大声朗读。"
+    },
+    {
+      "text": "So far, the little corner has lent out more than six hundred books. Wang Lin says the best thing is the smile on a child's face. A boy who once hated reading now reads a story every week.",
+      "translation": "到现在为止，这个小角落已经借出了六百多本书。王林说，最好的事情是孩子脸上的笑容。一个曾经讨厌读书的男孩，现在每周都会读一个故事。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where did Wang Lin put the old books?",
+      "audioText": "Where did Wang Lin put the old books?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "shelves",
+          "text": "On wooden shelves"
+        },
+        {
+          "emoji": "🪑",
+          "value": "chair",
+          "text": "On a chair"
+        },
+        {
+          "emoji": "🚪",
+          "value": "door",
+          "text": "Behind the door"
+        }
+      ],
+      "answer": "shelves"
+    },
+    {
+      "type": "word_builder",
+      "word": "village",
+      "audioText": "village"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Then",
+        "Wang",
+        "Lin",
+        "had",
+        "a",
+        "good",
+        "idea."
+      ],
+      "audioText": "Then Wang Lin had a good idea."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Before he died, Wang Lin's grandfather had ___ a big box of old books.",
+      "choices": [
+        "collected",
+        "borrowed",
+        "sold"
+      ],
+      "answer": "collected",
+      "audioText": "Before he died, Wang Lin's grandfather had collected a big box of old books."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "At",
+        "first,",
+        "only",
+        "five",
+        "children",
+        "came."
+      ],
+      "audioText": "At first, only five children came."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Wang Lin also read aloud to those ___ could not read well.",
+      "choices": [
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer": "who",
+      "audioText": "Wang Lin also read aloud to those who could not read well."
+    }
+  ],
+  "_unknownWords": [
+    "wang",
+    "bookshop",
+    "kilometres",
+    "big",
+    "storybooks",
+    "mother's",
+    "room",
+    "wooden",
+    "sign",
+    "borrowed",
+    "lent",
+    "child's"
+  ]
+}

@@ -177,6 +177,7 @@ export default function QuizScreen() {
           : 1;
 
     // Optimistic local update for instant UI（闪电剩余秒数参与提分值倍率）
+    const before = useGameStore.getState(); // 对账基线（P0：session 计数以服务端权威值为准）
     answerQuestion(i, { lightningLeftSec: st.sessionLightning ? lightningLeft : undefined });
 
     // 🔥 连击触发 Fever 的即时反馈
@@ -205,9 +206,23 @@ export default function QuizScreen() {
             hearts: result.hearts,
             coins: result.coinsEarned > 0 ? coins + result.coinsEarned : coins,
             scorePoints: result.spEarned > 0 ? scorePoints + Math.floor(result.spEarned * speedMultRef.current) : scorePoints,
+            weekSP: result.weekSP,
             streak: result.streak,
             heartsDepletedAt: result.hearts === 0 ? Date.now() : null,
           });
+          // P0 对账：session 计数器（结算页奖励展示）改用服务端权威增量，
+          // 消除本地算式（20/30/40·5/8/10）与服务端口径（30/8·衰减）的偏差
+          const localSpDelta = after.sessionSPEarned - before.sessionSPEarned;
+          const serverSp = Math.floor(result.spEarned * speedMultRef.current);
+          const spDiff = serverSp - localSpDelta;
+          const localCoinDelta = after.sessionCoinsEarned - before.sessionCoinsEarned;
+          const coinDiff = result.coinsEarned - localCoinDelta;
+          if (spDiff !== 0 || coinDiff !== 0) {
+            useGameStore.setState({
+              sessionSPEarned: after.sessionSPEarned + spDiff,
+              sessionCoinsEarned: after.sessionCoinsEarned + coinDiff,
+            });
+          }
         })
         .catch(err => {
           // Server unreachable → stay on local state (offline mode)
@@ -408,7 +423,7 @@ export default function QuizScreen() {
       )}
       {/* 👹 Boss 战：血条 + 击杀提示 */}
       {bossBattle && (
-        <div className="boss-bar mx-4 mb-1 rounded-2xl border-2 border-[var(--bg-critical-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-critical-emphasis-default)_10%,transparent)] px-4 py-2">
+        <div className="mx-4 mb-1 rounded-2xl border-2 border-[var(--ink)] bg-surface px-4 py-2 shadow-[0_3px_0_0_rgba(0,0,0,0.1)]">
           <div className="flex items-center justify-between text-xs font-black text-primary">
             <span>👹 BOSS · {bossBattle.word}</span>
             <span className={bossBattle.defeated ? 'text-positive' : 'text-critical'}>
@@ -431,7 +446,7 @@ export default function QuizScreen() {
       <div className="flex items-center justify-center gap-3 pb-2">
         <span className="text-xs font-bold text-brand-text">{currentQIndex + 1} / {total}</span>
         {scoreBoostActive && (
-          <span className="flex items-center gap-1 text-xs font-bold text-white bg-brand px-2.5 py-0.5 rounded-full animate-pop shadow-sm">
+          <span className="flex items-center gap-1 text-xs font-bold text-white bg-brand px-2.5 py-0.5 rounded-full animate-pop">
             <BoltIcon size={11} /> {t('quiz.x2Boost')}
           </span>
         )}
@@ -439,7 +454,7 @@ export default function QuizScreen() {
 
       {/* Question card */}
       <div className="flex-1 px-4 flex flex-col overflow-hidden">
-        <div className="g-card-hero flex-1 flex flex-col items-center justify-between text-center relative mx-4 my-2 py-6 overflow-y-auto shadow-sm">
+        <div className="g-card-hero flex-1 flex flex-col items-center justify-between text-center relative mx-4 my-2 py-6 overflow-y-auto">
           {/* Floating reward animation */}
           {floatReward && (
           <div key={floatReward.key} className="float-reward top-1/3 left-1/2 -translate-x-1/2" style={{ color: floatReward.color }}>
@@ -524,19 +539,19 @@ export default function QuizScreen() {
               let iconEl: React.ReactNode = null;
 
               if (isEliminated) {
-                btnClass = 'flex w-full items-center gap-3 rounded-xl border-2 border-b-4 border-subtle bg-surface px-4 py-3.5 text-left text-[15px] font-bold text-primary pointer-events-none opacity-30 line-through';
+                btnClass = 'game-chip pointer-events-none flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left text-[15px] font-bold text-primary opacity-30 line-through';
                 badgeClass = 'bg-canvas text-tertiary';
               } else if (showFeedback) {
                 if (isCorrectAns) {
-                  btnClass = 'flex w-full items-center gap-3 rounded-xl border-2 border-b-4 px-4 py-3.5 text-left text-[15px] font-bold text-primary cursor-default border-[var(--bg-positive-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-positive-emphasis-default)_12%,transparent)]';
+                  btnClass = 'game-chip game-chip--right pointer-events-none flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left text-[15px] font-bold cursor-default';
                   badgeClass = 'bg-positive text-white';
                   iconEl = <CheckIcon size={16} />;
                 } else if (isSelected) {
-                  btnClass = 'flex w-full items-center gap-3 rounded-xl border-2 border-b-4 px-4 py-3.5 text-left text-[15px] font-bold text-primary cursor-default border-[var(--bg-critical-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-critical-emphasis-default)_12%,transparent)]';
+                  btnClass = 'game-chip game-chip--wrong pointer-events-none flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left text-[15px] font-bold cursor-default';
                   badgeClass = 'bg-critical text-white';
                   iconEl = <XIcon size={16} />;
                 } else {
-                  btnClass = 'flex w-full items-center gap-3 rounded-xl border-2 border-b-4 border-subtle px-4 py-3.5 text-left text-[15px] font-bold text-primary cursor-default opacity-40';
+                  btnClass = 'game-chip pointer-events-none flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left text-[15px] font-bold text-primary opacity-40 cursor-default';
                   badgeClass = 'bg-canvas text-tertiary';
                 }
               }
@@ -563,7 +578,7 @@ export default function QuizScreen() {
       {/* Action bar (pre-answer) / feedback bar (post-answer) */}
       {showFeedback ? (
         <div className="px-4 pb-6 pt-3 screen-enter">
-          <div className={`rounded-2xl p-4 mb-3 ${isCorrect ? 'bg-[color-mix(in_srgb,var(--text-positive-default)_10%,transparent)] border border-[var(--bg-positive-emphasis-default)]' : 'bg-[color-mix(in_srgb,var(--text-critical-default)_10%,transparent)] border border-[var(--bg-critical-emphasis-default)]'}`}>
+          <div className={`rounded-2xl p-4 mb-3 ${isCorrect ? 'bg-[#F0FDF4] border-2 border-[#22C55E]' : 'bg-[#FEF2F2] border-2 border-[#EF4444]'}`}>
             <div className={`font-heading font-extrabold text-sm mb-1 ${isCorrect ? 'text-positive' : 'text-critical'}`}>
               {isCorrect ? '\u2713 ' + t('quiz.correct') : '\u2717 ' + t('quiz.answer') + ' ' + (isTyped ? (q.answer ?? '') : (q.choices?.[q.correctIndex] ?? q.correctIndex))}
             </div>
@@ -671,7 +686,7 @@ export default function QuizScreen() {
           <button
             onClick={handleHint}
             disabled={hintsOwned === 0 || eliminated.length > 0 || isTyped}
-            className="flex items-center gap-1.5 rounded-pill border border-subtle bg-surface px-4 py-2.5 font-bold text-sm text-secondary shadow-sm transition hover:border-brandborder disabled:opacity-40 active:scale-95"
+            className="flex items-center gap-1.5 rounded-pill border border-subtle bg-surface px-4 py-2.5 font-bold text-sm text-secondary transition hover:border-brandborder disabled:opacity-40 active:scale-95"
           >
             <span className="text-base">{'\uD83D\uDCA1'}</span> {t('quiz.hint')}
             {hintsOwned > 0 && <span className="text-gold">({hintsOwned})</span>}
@@ -679,7 +694,7 @@ export default function QuizScreen() {
           <button
             onClick={handleBoost}
             disabled={scoreBoostsOwned === 0 || scoreBoostActive}
-            className="flex items-center gap-1.5 rounded-pill border border-subtle bg-surface px-4 py-2.5 font-bold text-sm text-secondary shadow-sm transition hover:border-brandborder disabled:opacity-40 active:scale-95"
+            className="flex items-center gap-1.5 rounded-pill border border-subtle bg-surface px-4 py-2.5 font-bold text-sm text-secondary transition hover:border-brandborder disabled:opacity-40 active:scale-95"
           >
             <BoltIcon size={15} className="text-brand-text" /> {t('quiz.x2Score')}
             {scoreBoostsOwned > 0 && <span className="text-brand-text">({scoreBoostsOwned})</span>}
@@ -706,7 +721,7 @@ function OutOfHeartsScreen({ backHref }: { backHref: string }) {
         <button onClick={refillHearts} className="w-full rounded-pill border-2 border-subtle py-3 text-sm font-bold text-secondary transition hover:border-brandborder hover:text-primary">
           {t('quiz.watchAd')}
         </button>
-        <button onClick={() => router.push('/pricing')} className="w-full rounded-pill bg-brand py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90">
+        <button onClick={() => router.push('/pricing')} className="w-full rounded-pill bg-brand py-3 text-sm font-bold text-white transition hover:opacity-90">
           {t('quiz.upgradeMember')}
         </button>
         <button onClick={() => router.push(backHref)} className="text-tertiary text-sm font-bold mt-2">{t('quiz.later')}</button>

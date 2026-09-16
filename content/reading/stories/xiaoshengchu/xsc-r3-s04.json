@@ -1,0 +1,128 @@
+{
+  "id": "xsc-r3-s04",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 4,
+  "title": "The Candy Town Sweet Festival",
+  "titleCn": "糖果镇的甜蜜节",
+  "coverEmoji": "🍭",
+  "paragraphs": [
+    {
+      "text": "Last Saturday was a special day. It was the Sweet Festival in Candy Town. All the people were very happy. My family went to the town square.",
+      "translation": "上周六是个特别的日子。那天是糖果镇的甜蜜节。所有人都非常开心。我们一家人去了镇上的广场。"
+    },
+    {
+      "text": "The square was full of small shops. We saw three big candy houses. They looked like real houses. I ate a pink candy cloud.",
+      "translation": "广场上到处都是小店铺。我们看见了三座大大的糖果屋。它们看起来就像真的房子。我吃了一朵粉色的糖果云。"
+    },
+    {
+      "text": "Mom bought some chocolate cookies for us. Dad had a cup of sweet tea. My little brother played a fun game. He won a small candy star.",
+      "translation": "妈妈给我们买了一些巧克力饼干。爸爸喝了一杯甜甜的茶。我的小弟弟玩了一个有趣的游戏。他赢了一颗小小的糖果星星。"
+    },
+    {
+      "text": "At noon, we watched a candy parade. Candy cars moved slowly down the street. People sang and danced together. Everyone laughed a lot.",
+      "translation": "中午，我们看了一场糖果游行。糖果汽车沿着街道慢慢开过。人们一起唱歌跳舞。每个人都笑个不停。"
+    },
+    {
+      "text": "In the afternoon, we played outside again. We looked for candy in big boxes. I found three red sweets. My brother found only one.",
+      "translation": "下午，我们又在外面玩。我们在大箱子里找糖果。我找到了三颗红色的糖。我弟弟只找到了一颗。"
+    },
+    {
+      "text": "In the evening, we walked home together. The day was fun and sweet. I was tired but happy. I want to go again next year.",
+      "translation": "傍晚，我们一起走路回家。这一天又好玩又甜蜜。我很累但很开心。明年我还想再去一次。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the boy eat at the festival?",
+      "audioText": "What did the boy eat at the festival?",
+      "options": [
+        {
+          "emoji": "🍬",
+          "value": "candy",
+          "text": "Candy"
+        },
+        {
+          "emoji": "🍪",
+          "value": "cookie",
+          "text": "Cookie"
+        },
+        {
+          "emoji": "🍰",
+          "value": "cake",
+          "text": "Cake"
+        }
+      ],
+      "answer": "candy"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Dad have at the festival?",
+      "audioText": "What did Dad have at the festival?",
+      "options": [
+        {
+          "emoji": "🍵",
+          "value": "tea",
+          "text": "Tea"
+        },
+        {
+          "emoji": "🥛",
+          "value": "milk",
+          "text": "Milk"
+        },
+        {
+          "emoji": "🧃",
+          "value": "juice",
+          "text": "Juice"
+        }
+      ],
+      "answer": "tea"
+    },
+    {
+      "type": "word_builder",
+      "word": "festival",
+      "audioText": "festival"
+    },
+    {
+      "type": "word_builder",
+      "word": "parade",
+      "audioText": "parade"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "looked",
+        "for",
+        "candy",
+        "in",
+        "big",
+        "boxes."
+      ],
+      "audioText": "We looked for candy in big boxes."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Last Saturday ___ a special day.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": "was",
+      "audioText": "Last Saturday was a special day."
+    }
+  ],
+  "_unknownWords": [
+    "went",
+    "saw",
+    "ate",
+    "bought",
+    "cookies",
+    "won",
+    "parade",
+    "sang",
+    "found"
+  ]
+}

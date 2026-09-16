@@ -1,0 +1,120 @@
+{
+  "id": "gk-r2-s05",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 5,
+  "title": "When an Algorithm Says No",
+  "titleCn": "当算法说“不”",
+  "coverEmoji": "⚖️",
+  "paragraphs": [
+    {
+      "text": "Every day, decisions that used to be made by people are now being made by software. An algorithm may decide whether you get a loan, a job interview or a place at a university. Most of us never meet the person who designed it, and we are rarely told why it said no. The answer simply arrives, and there is no one to argue with.",
+      "translation": "每天，过去由人做出的决定如今正由软件做出。算法可能决定你能否获得贷款、得到面试机会或被大学录取。我们大多数人从未见过设计它的人，也很少被告知它为什么说了“不”。答案就这样到来，而你找不到任何人可以争辩。"
+    },
+    {
+      "text": "These systems are trained on huge amounts of data that has been collected from our past behaviour. What they learn is not always fair, because the data itself may carry old unfairness. If a company has mostly hired one kind of worker, the program will simply repeat that pattern. It is easy to believe that a machine judges fairly, yet unfairness can be built in from the very beginning.",
+      "translation": "这些系统是用从我们过去的行为中收集来的海量数据训练出来的。它们学到的东西并不总是公平的，因为数据本身可能带着旧有的不公。如果一家公司过去大多雇用某一类员工，程序就会简单地重复这种模式。人们很容易相信机器判断公正，然而不公可能从一开始就被编了进去。"
+    },
+    {
+      "text": "When someone is refused, the reasons usually stay hidden. It is hard to know what went wrong, and even harder to prove it. The company often explains that the decision was made by a computer system, as if no one were responsible. This answer satisfies no one. A machine cannot explain itself, and the rules inside it are protected as business secrets. Whether the process is fair has become a question that courts are now being asked to answer.",
+      "translation": "当有人被拒绝时，原因通常不会公开。人们很难知道哪里出了问题，更难去证明。公司往往解释说，这个决定是由电脑系统做出的，仿佛没有人需要负责。这样的回答谁也无法接受。机器无法解释自己，而它内部的规则又被当作商业秘密保护起来。这个流程是否公平，如今已成为法院被要求回答的问题。"
+    },
+    {
+      "text": "Some governments have started to act. New laws require that people be told when a machine decides about them, and that they be given a chance to ask for a human review. Whether these rules will work is still unclear, but the direction certainly seems right. Responsibility cannot be downloaded into a program.",
+      "translation": "一些政府已经开始行动。新法律要求：当机器对人做出决定时，必须告知当事人，并给他们机会要求人工复核。这些规定是否有效仍不清楚，但方向无疑是正确的。责任，终究无法被下载进程序里。"
+    },
+    {
+      "text": "It is time to ask a simpler question: who actually benefits when nobody is blamed? If companies are allowed to hide behind their algorithms, public trust in technology will slowly disappear. The real test of a smart society is not how clever its machines are, but how honestly their limits are admitted.",
+      "translation": "是时候问一个更简单的问题了：当没有人被追责时，究竟是谁获益？如果公司被允许躲在算法背后，公众对技术的信任将会慢慢消失。一个智慧社会真正的考验，不在于它的机器有多聪明，而在于人们有多坦诚地承认机器的局限。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, what may an algorithm decide for you?",
+      "audioText": "According to the passage, what may an algorithm decide for you?",
+      "options": [
+        {
+          "emoji": "🏦",
+          "value": "loan",
+          "text": "A loan"
+        },
+        {
+          "emoji": "🍔",
+          "value": "lunch",
+          "text": "Your lunch"
+        },
+        {
+          "emoji": "🎵",
+          "value": "song",
+          "text": "A song"
+        }
+      ],
+      "answer": "loan"
+    },
+    {
+      "type": "word_builder",
+      "word": "algorithm",
+      "audioText": "algorithm"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "This",
+        "answer",
+        "satisfies",
+        "no",
+        "one."
+      ],
+      "audioText": "This answer satisfies no one."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Responsibility",
+        "cannot",
+        "be",
+        "downloaded",
+        "into",
+        "a",
+        "program."
+      ],
+      "audioText": "Responsibility cannot be downloaded into a program."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Whether these rules will work ___ still unclear, but the direction certainly seems right.",
+      "choices": [
+        "is",
+        "are",
+        "be"
+      ],
+      "answer": "is",
+      "audioText": "Whether these rules will work is still unclear, but the direction certainly seems right."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If companies are allowed to hide behind their algorithms, public ___ in technology will slowly disappear.",
+      "choices": [
+        "trust",
+        "trouble",
+        "truth"
+      ],
+      "answer": "trust",
+      "audioText": "If companies are allowed to hide behind their algorithms, public trust in technology will slowly disappear."
+    }
+  ],
+  "_unknownWords": [
+    "algorithm",
+    "loan",
+    "simply",
+    "unfairness",
+    "hidden",
+    "cannot",
+    "given",
+    "unclear",
+    "simpler",
+    "algorithms",
+    "admitted"
+  ]
+}

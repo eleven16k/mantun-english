@@ -1,0 +1,119 @@
+{
+  "id": "gk-r4-s09",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 9,
+  "title": "The Mind-Body Link",
+  "titleCn": "身心之间的纽带",
+  "coverEmoji": "🧘",
+  "paragraphs": [
+    {
+      "text": "Feeling tired after a long week is normal, but your body may be sending a message. Many students believe that pushing through stress is brave, yet scientists say that ignoring such signals is a serious mistake. Learning to notice them early can protect both your mind and your body.",
+      "translation": "漫长的一周过后感到疲惫是正常的，但你的身体也许正在向你传递某个信号。许多学生认为咬牙硬扛压力才算勇敢，然而科学家表示，忽视这些信号是个严重的错误。学会及早察觉它们，既能保护你的心理，也能保护你的身体。"
+    },
+    {
+      "text": "Doctors recommend moving your body for at least thirty minutes every day. To walk quickly, swim, or dance is enough to change your mood. When you exercise, your brain releases chemicals that reduce worry and help you think more clearly. Refusing to move because you feel sad is like refusing to eat because you feel tired.",
+      "translation": "医生建议每天至少活动身体三十分钟。快走、游泳或跳舞，就足以改变你的情绪。运动时，大脑会释放出能减少忧虑、帮助你更清晰思考的化学物质。因为心情低落而拒绝运动，就好比因为疲惫而拒绝吃饭一样。"
+    },
+    {
+      "text": "Sleep is not wasted time; it is when your brain repairs itself. Trying to study until three in the morning usually makes learning harder, not easier. Experts suggest going to bed at the same hour and avoiding bright screens before sleep. Students who should have slept earlier often find that they cannot concentrate the next day.",
+      "translation": "睡眠不是被浪费掉的时间，它正是大脑自我修复的时段。硬撑到凌晨三点还在学习，通常只会让学习更难，而不是更容易。专家建议每天在同一时间上床，并在睡前远离明亮的屏幕。那些本该早点睡觉的学生常常发现，第二天自己根本无法集中注意力。"
+    },
+    {
+      "text": "What you eat also shapes how you feel, both today and in the long run. Choosing whole grains, fruit, and fresh vegetables can keep your energy steady through a busy day. It is wiser to eat a proper breakfast than to skip it and buy sweets at noon. Many people should have drunk more water instead of reaching for sweet drinks every afternoon.",
+      "translation": "你吃的东西同样塑造着你的感受，无论是当下还是长远来看。选择全谷物、水果和新鲜蔬菜，能让你在忙碌的一天里精力保持稳定。好好吃顿早餐，比不吃早餐、中午再去买甜食要明智得多。很多人本该多喝水，而不是每到下午就伸手去拿含糖饮料。"
+    },
+    {
+      "text": "Luckily, none of these ideas requires a perfect daily routine or any expensive equipment. Starting with one small change, such as walking after dinner, is easier than changing everything at once. Paying attention to your body is not a sign of weakness; it is simply good science. Your mind and body work as a team, so you should have treated them as one all along.",
+      "translation": "幸运的是，这些做法都不需要完美的日常安排，也不需要昂贵的器材。从一个小改变开始，比如晚饭后散散步，比一次把所有事情都改掉要容易得多。关注自己的身体并非软弱的表现，它只是简单的科学道理。你的心理和身体是一支队伍，所以从一开始你就该把它们当作一个整体来对待。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what is enough to change your mood?",
+      "audioText": "According to the text, what is enough to change your mood?",
+      "options": [
+        {
+          "emoji": "🏊",
+          "value": "swimming",
+          "text": "Swimming"
+        },
+        {
+          "emoji": "🎂",
+          "value": "sweets",
+          "text": "Sweets"
+        },
+        {
+          "emoji": "📺",
+          "value": "tv",
+          "text": "Watching TV"
+        }
+      ],
+      "answer": "swimming"
+    },
+    {
+      "type": "word_builder",
+      "word": "routine",
+      "audioText": "routine"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Sleep",
+        "is",
+        "not",
+        "wasted",
+        "time"
+      ],
+      "audioText": "Sleep is not wasted time."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Doctors recommend ___ your body for at least thirty minutes every day.",
+      "choices": [
+        "moving",
+        "to move",
+        "move"
+      ],
+      "answer": "moving",
+      "audioText": "Doctors recommend moving your body for at least thirty minutes every day."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "What",
+        "you",
+        "eat",
+        "also",
+        "shapes",
+        "how",
+        "you",
+        "feel"
+      ],
+      "audioText": "What you eat also shapes how you feel."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Students who should have ___ earlier often find that they cannot concentrate the next day.",
+      "choices": [
+        "slept",
+        "sleep",
+        "sleeping"
+      ],
+      "answer": "slept",
+      "audioText": "Students who should have slept earlier often find that they cannot concentrate the next day."
+    }
+  ],
+  "_unknownWords": [
+    "mood",
+    "easier",
+    "earlier",
+    "cannot",
+    "steady",
+    "wiser",
+    "skip",
+    "luckily",
+    "simply"
+  ]
+}

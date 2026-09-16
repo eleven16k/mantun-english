@@ -1,0 +1,127 @@
+{
+  "id": "xsc-r5-s09",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 9,
+  "title": "The Smallest Dinosaur in Dino Valley",
+  "titleCn": "恐龙谷里最小的恐龙",
+  "coverEmoji": "🦕",
+  "paragraphs": [
+    {
+      "text": "Lily and Ben walked into Dino Valley last Saturday. The sun was warm and bright. They heard a small sound near a rock. It was the smallest voice in the valley.",
+      "translation": "上周六，莉莉和本走进了恐龙谷。阳光温暖又明亮。他们在一块岩石旁听到一个很轻的声音。那是山谷里最小的声音。"
+    },
+    {
+      "text": "Behind the rock, they found a little dinosaur. It was smaller than a chicken and very cute. Its name was Pip, and it looked sad. \"Why are you crying?\" Ben asked the little dinosaur.",
+      "translation": "在岩石后面，他们发现了一只小恐龙。它比小鸡还小，非常可爱。它叫皮普，看上去很伤心。\"你为什么哭呀？\"本问这只小恐龙。"
+    },
+    {
+      "text": "\"I am the smallest dinosaur here,\" said Pip. \"I lost my family because I ran too far.\" Lily smiled and said, \"We can help you.\"",
+      "translation": "\"我是这里最小的恐龙，\"皮普说。\"我跑得太远了，所以找不到家人了。\"莉莉笑着说：\"我们可以帮你。\""
+    },
+    {
+      "text": "They walked past the longest river. Pip was the slowest walker, so they walked slowly. Then they heard a loud call from the hills. It was the loudest sound of the day.",
+      "translation": "他们走过了最长的那条河。皮普是走得最慢的，所以他们走得很慢。接着，他们听到山那边传来响亮的叫声。那是那天最响亮的声音。"
+    },
+    {
+      "text": "Pip's mother stood near a warm nest. She was the happiest dinosaur in the valley. Pip ran to her because he missed her. \"Thank you!\" said Pip's mother with a big smile.",
+      "translation": "皮普的妈妈站在一个温暖的巢旁边。她是山谷里最快乐的恐龙。皮普朝她跑过去，因为他很想她。\"谢谢你们！\"皮普的妈妈笑得很开心。"
+    },
+    {
+      "text": "Lily and Ben walked home in the evening. It was the most exciting day of their trip. Small friends can have the biggest hearts.",
+      "translation": "傍晚，莉莉和本走回家。这是他们这次旅行中最精彩的一天。小小的朋友也能有最大的心。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Lily and Ben find behind the rock?",
+      "audioText": "What did Lily and Ben find behind the rock?",
+      "options": [
+        {
+          "emoji": "🦕",
+          "value": "dinosaur",
+          "text": "A small dinosaur"
+        },
+        {
+          "emoji": "🥚",
+          "value": "egg",
+          "text": "A big egg"
+        },
+        {
+          "emoji": "🦶",
+          "value": "footprint",
+          "text": "A big footprint"
+        }
+      ],
+      "answer": "dinosaur"
+    },
+    {
+      "type": "image_choice",
+      "question": "What can small friends have?",
+      "audioText": "What can small friends have?",
+      "options": [
+        {
+          "emoji": "💗",
+          "value": "hearts",
+          "text": "Big hearts"
+        },
+        {
+          "emoji": "🦶",
+          "value": "feet",
+          "text": "Big feet"
+        },
+        {
+          "emoji": "🔊",
+          "value": "voices",
+          "text": "Loud voices"
+        }
+      ],
+      "answer": "hearts"
+    },
+    {
+      "type": "word_builder",
+      "word": "smallest",
+      "audioText": "smallest"
+    },
+    {
+      "type": "word_builder",
+      "word": "slowest",
+      "audioText": "slowest"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Pip",
+        "ran",
+        "to",
+        "her",
+        "because",
+        "he",
+        "missed",
+        "her."
+      ],
+      "audioText": "Pip ran to her because he missed her."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Pip was the ___ walker, so they walked slowly.",
+      "choices": [
+        "slow",
+        "slowest",
+        "slower"
+      ],
+      "answer": "slowest",
+      "audioText": "Pip was the slowest walker, so they walked slowly."
+    }
+  ],
+  "_unknownWords": [
+    "cute",
+    "pip",
+    "asked",
+    "pip's",
+    "nest",
+    "happiest",
+    "biggest"
+  ]
+}

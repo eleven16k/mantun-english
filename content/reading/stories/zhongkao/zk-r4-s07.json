@@ -1,0 +1,115 @@
+{
+  "id": "zk-r4-s07",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 7,
+  "title": "Bring Your Own Bottle",
+  "titleCn": "带上自己的水杯",
+  "coverEmoji": "🚰",
+  "paragraphs": [
+    {
+      "text": "Every day, people around the world buy millions of plastic bottles. We drink the water quickly and throw the empty bottle away. Many bottles end up in rivers, and some of them reach the sea. If we keep doing this, our beautiful planet will be in trouble.",
+      "translation": "每天，世界各地的人们都会买下数百万个塑料瓶。我们把水很快喝完，就把空瓶子扔掉。很多瓶子最后流进了河里，有些还会漂到大海。如果我们继续这样做，我们美丽的星球就会陷入麻烦。"
+    },
+    {
+      "text": "Sea animals sometimes mistake plastic for food, and this can hurt them. Turtles and fish may eat small pieces of plastic every day. If you love animals, please think before you buy a bottle. You can help them with one small change in your life.",
+      "translation": "海洋动物有时会把塑料误当成食物，这会伤害它们。海龟和鱼每天可能都会吃下小片塑料。如果你喜欢动物，买瓶子之前请先想一想。只要在生活中做一点小小的改变，你就能帮到它们。"
+    },
+    {
+      "text": "A bottle you can use again is a simple answer. Fill it with clean water at home. If you carry your own bottle, you will save money every week. You will also drink more water, so your body stays healthy.",
+      "translation": "一个可以重复使用的瓶子，就是一个简单的解决办法。在家把它装满干净的水。如果你随身带着自己的水杯，每周都能省下一些钱。你还会喝更多的水，身体也会更健康。"
+    },
+    {
+      "text": "Some students say they often forget to bring their bottle. Put it in your bag before bed, next to your books. If you see a friend with a plastic bottle, share this idea. Tell them kindly, and they may join you tomorrow.",
+      "translation": "有些同学说，他们常常忘记带自己的水杯。睡觉前把它放进书包，挨着你的书。如果你看到朋友手里拿着塑料瓶，就把这个主意告诉他。友善地跟他们说，他们明天也许就会和你一起做。"
+    },
+    {
+      "text": "Small habits can grow into big changes for our shared home. Say no to plastic waste. Bring your own bottle every day, and the sea will be cleaner. If we all work together, our planet will thank us. Let's start today, because our home needs our help now.",
+      "translation": "小小的习惯，能长成影响我们共同家园的大改变。对塑料垃圾说不。每天带上自己的水杯，大海就会更干净。如果我们一起努力，我们的星球会感谢我们。让我们从今天开始吧，因为我们的家现在就需要我们的帮助。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What can hurt sea animals?",
+      "audioText": "What can hurt sea animals?",
+      "options": [
+        {
+          "emoji": "🧴",
+          "value": "plastic",
+          "text": "Plastic"
+        },
+        {
+          "emoji": "💧",
+          "value": "water",
+          "text": "Clean water"
+        },
+        {
+          "emoji": "🌊",
+          "value": "sea",
+          "text": "The sea"
+        }
+      ],
+      "answer": "plastic"
+    },
+    {
+      "type": "word_builder",
+      "word": "bottle",
+      "audioText": "bottle"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Fill",
+        "it",
+        "with",
+        "clean",
+        "water",
+        "at",
+        "home"
+      ],
+      "audioText": "Fill it with clean water at home."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you carry your own bottle, you ___ save money every week.",
+      "choices": [
+        "will",
+        "are",
+        "do"
+      ],
+      "answer": "will",
+      "audioText": "If you carry your own bottle, you will save money every week."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Say",
+        "no",
+        "to",
+        "plastic",
+        "waste"
+      ],
+      "audioText": "Say no to plastic waste."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "You can help them ___ one small change in your life.",
+      "choices": [
+        "with",
+        "for",
+        "of"
+      ],
+      "answer": "with",
+      "audioText": "You can help them with one small change in your life."
+    }
+  ],
+  "_unknownWords": [
+    "world",
+    "millions",
+    "hurt",
+    "join",
+    "big",
+    "let's"
+  ]
+}

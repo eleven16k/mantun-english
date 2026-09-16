@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { DeckIcon, DECK_ICONS, DECK_COLORS } from "@/components/DeckIcon";
@@ -84,8 +85,8 @@ export default function DecksPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t("deck.title")}</h1>
+      <div className="page-shell">
+        <PageHeader badge="🃏 MY DECKS" title={t("deck.title")} />
 
         <div className="grid grid-cols-3 gap-3">
           {visibleBuiltin.map((deck) => (
@@ -95,7 +96,7 @@ export default function DecksPage() {
                 startQuiz(10, deck.questionType);
                 router.push("/quiz?from=decks");
               }}
-              className="g-card shadow-sm relative flex flex-col gap-2 p-4 text-left transition hover:border-brandborder"
+              className="g-card relative flex flex-col gap-2 p-4 text-left transition hover:border-brandborder"
               style={{ minHeight: 130 }}
             >
               <DeleteBadge onClick={() => setDeckToDelete(`builtin:${deck.titleKey}`)} label={t("deck.delete")} />
@@ -119,7 +120,7 @@ export default function DecksPage() {
             <button
               key={deck.id}
               onClick={() => playUserDeck(i)}
-              className="g-card shadow-sm relative flex flex-col gap-2 p-4 text-left transition hover:border-brandborder"
+              className="g-card relative flex flex-col gap-2 p-4 text-left transition hover:border-brandborder"
               style={{ minHeight: 130 }}
             >
               <DeleteBadge onClick={() => setDeckToDelete(`user:${deck.id}`)} label={t("deck.delete")} />
@@ -151,8 +152,8 @@ export default function DecksPage() {
 
       {/* New deck dialog */}
       {showDialog && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-6" onClick={() => setShowDialog(false)}>
-          <div className="w-full max-w-sm rounded-3xl bg-surface p-5 shadow-xl" onClick={(e) => e.stopPropagation()}>
+        <div className="game-overlay fixed inset-0 z-50 flex items-center justify-center p-6" onClick={() => setShowDialog(false)}>
+          <div className="game-modal w-full max-w-sm p-5" onClick={(e) => e.stopPropagation()}>
             <h2 className="font-booster text-lg font-extrabold text-primary">{t("deck.createTitle")}</h2>
             <input
               autoFocus
@@ -223,7 +224,7 @@ export default function DecksPage() {
               <button
                 onClick={createDeck}
                 disabled={!name.trim()}
-                className="flex-1 rounded-pill bg-brand py-2.5 text-sm font-bold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
+                className="flex-1 rounded-pill bg-brand py-2.5 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-40"
               >
                 {t("deck.createBtn")}
               </button>
@@ -233,8 +234,8 @@ export default function DecksPage() {
       )}
       {/* Delete deck confirmation */}
       {deckToDelete && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-6" onClick={() => setDeckToDelete(null)}>
-          <div className="w-full max-w-sm rounded-3xl bg-surface p-5 shadow-xl" onClick={(e) => e.stopPropagation()}>
+        <div className="game-overlay fixed inset-0 z-50 flex items-center justify-center p-6" onClick={() => setDeckToDelete(null)}>
+          <div className="game-modal w-full max-w-sm p-5" onClick={(e) => e.stopPropagation()}>
             <h2 className="font-booster text-lg font-extrabold text-primary">{t("deck.deleteTitle")}</h2>
             <p className="mt-2 text-sm text-secondary">
               {t("deck.deletePrefix")}{deckTitleFor(deckToDelete)}{t("deck.deleteSuffix")}
@@ -248,7 +249,7 @@ export default function DecksPage() {
               </button>
               <button
                 onClick={confirmDelete}
-                className="flex-1 rounded-pill bg-critical py-2.5 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
+                className="flex-1 rounded-pill bg-critical py-2.5 text-sm font-bold text-white transition hover:opacity-90"
               >
                 {t("deck.deleteBtn")}
               </button>

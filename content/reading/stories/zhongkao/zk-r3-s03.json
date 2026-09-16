@@ -1,0 +1,114 @@
+{
+  "id": "zk-r3-s03",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 3,
+  "title": "AI Helps Us Every Day",
+  "titleCn": "人工智能每天都在帮助我们",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "Today, AI is used in many places around us. It helps people at home, at school and at work. Maybe you use it every day and never know it.",
+      "translation": "如今，人工智能被用在我们的许多生活场景中。它在家、在学校、在工作中帮助人们。也许你每天都在用它，却从来没有察觉。"
+    },
+    {
+      "text": "Many apps on your phone are built with AI. When you speak to a voice helper, your words are heard and understood. A map app can find the best way for you. It was made by a team of clever engineers.",
+      "translation": "你手机上的很多应用都是用人工智能做出来的。当你对着语音助手说话时，你说的话会被听到、被理解。地图应用能为你找到最好的路线，它是由一群聪明的工程师做出来的。"
+    },
+    {
+      "text": "Robots are used in many factories today. They can work all day and never feel tired. In some homes, small robots are used to clean the floor. These machines were designed to help busy people.",
+      "translation": "如今很多工厂里都用上了机器人。它们能整天工作，从不觉得累。在一些家庭里，小机器人被用来打扫地板。这些机器是为了帮助忙碌的人们而设计出来的。"
+    },
+    {
+      "text": "Smart cars are tested in many cities today. They can see the road with small cameras. A shared bike can be found with your phone in a minute. This kind of travel may be green and cheap.",
+      "translation": "现在许多城市都在测试智能汽车。它们能用小摄像头“看”路。用手机一分钟就能找到一辆共享单车。这种出行方式也许既环保又便宜。"
+    },
+    {
+      "text": "AI may become much smarter in the future. Some people think it could do more work than us. But it cannot love, dream or feel real joy. A machine may look clever, but it is not alive.",
+      "translation": "未来人工智能可能会变得聪明得多。有人觉得它能做比我们更多的工作。但它不会爱，不会做梦，也感受不到真正的快乐。机器也许看起来很聪明，但它并不是活的生命。"
+    },
+    {
+      "text": "AI is a tool, and people are its owners. It should be used in a good and careful way. Will it change our life? Maybe. Let us learn to use it well.",
+      "translation": "人工智能是一种工具，而它的主人是人。它应该被好好、谨慎地使用。它会改变我们的生活吗？也许吧。让我们学会好好地使用它。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In the text, what is used to clean the floor in some homes?",
+      "audioText": "In the text, what is used to clean the floor in some homes?",
+      "options": [
+        {
+          "emoji": "🤖",
+          "value": "robot",
+          "text": "A small robot"
+        },
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "A phone app"
+        },
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "A shared bike"
+        }
+      ],
+      "answer": "robot"
+    },
+    {
+      "type": "word_builder",
+      "word": "robot",
+      "audioText": "robot"
+    },
+    {
+      "type": "word_builder",
+      "word": "machine",
+      "audioText": "machine"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Robots",
+        "are",
+        "used",
+        "in",
+        "many",
+        "factories",
+        "today."
+      ],
+      "audioText": "Robots are used in many factories today."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Many apps on your phone ___ built with AI.",
+      "choices": [
+        "are",
+        "is",
+        "was"
+      ],
+      "answer": "are",
+      "audioText": "Many apps on your phone are built with AI."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "AI ___ become much smarter in the future.",
+      "choices": [
+        "may",
+        "need",
+        "must"
+      ],
+      "answer": "may",
+      "audioText": "AI may become much smarter in the future."
+    }
+  ],
+  "_unknownWords": [
+    "ai",
+    "apps",
+    "app",
+    "designed",
+    "busy",
+    "cannot",
+    "owners"
+  ]
+}

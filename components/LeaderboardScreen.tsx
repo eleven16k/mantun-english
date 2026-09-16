@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from 'next/navigation';
 import { useGameStore } from '@/lib/store';
 import { useI18n } from '@/lib/i18n';
@@ -13,15 +14,16 @@ import { TrophyIcon, RocketIcon, AlertIcon, MedalIcon } from './SvgIcons';
  */
 
 // `name` holds an i18n key (lb.*) resolved via t() at render time
+// P1-2：阈值与服务端 ×2 校准保持同步（0/400/1000/1800/2800/4000/5600/8000）
 const LEAGUE_TIERS = [
   { name: 'lb.tier1', min: 0 },
-  { name: 'lb.tier2', min: 200 },
-  { name: 'lb.tier3', min: 500 },
-  { name: 'lb.tier4', min: 900 },
-  { name: 'lb.tier5', min: 1400 },
-  { name: 'lb.tier6', min: 2000 },
-  { name: 'lb.tier7', min: 2800 },
-  { name: 'lb.tier8', min: 4000 },
+  { name: 'lb.tier2', min: 400 },
+  { name: 'lb.tier3', min: 1000 },
+  { name: 'lb.tier4', min: 1800 },
+  { name: 'lb.tier5', min: 2800 },
+  { name: 'lb.tier6', min: 4000 },
+  { name: 'lb.tier7', min: 5600 },
+  { name: 'lb.tier8', min: 8000 },
 ] as const;
 
 function getTierIndex(sp: number): number {
@@ -101,16 +103,18 @@ export default function LeaderboardScreen() {
       : (friendPlayers ?? [{ name: 'Me', sp: scorePoints, isMe: true }]);
   const myRank = activePlayers.findIndex(p => p.isMe) + 1;
 
-  const tierIdx = getTierIndex(scorePoints);
+  // 段位 = 服务端 league 语义（本周提分值驱动，周重置）——P0 口径统一
+  const weekSP = useGameStore((s) => s.weekSP);
+  const tierIdx = getTierIndex(weekSP);
   const tier = LEAGUE_TIERS[tierIdx];
   const nextTier = LEAGUE_TIERS[Math.min(tierIdx + 1, LEAGUE_TIERS.length - 1)];
   const isMax = tierIdx >= LEAGUE_TIERS.length - 1;
-  const tierProgress = isMax ? 1 : Math.min(1, (scorePoints - tier.min) / (nextTier.min - tier.min));
+  const tierProgress = isMax ? 1 : Math.min(1, (weekSP - tier.min) / (nextTier.min - tier.min));
 
 
   return (
-    <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-      <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t('lb.title')}</h1>
+    <div className="page-shell">
+      <PageHeader badge="🏆 LEAGUE" title={t("lb.title")} />
 
       {/* Reset banner */}
       <div className="mb-4 flex items-center justify-center gap-1.5 rounded-pill border border-subtle bg-surface px-3 py-1.5 text-[11px] font-semibold text-tertiary">
@@ -122,9 +126,9 @@ export default function LeaderboardScreen() {
       </div>
 
       {/* Tier card — 768px r16 white */}
-      <section className="relative overflow-hidden g-card p-6 mb-5 shadow-sm">
+      <section className="relative overflow-hidden g-card p-6 mb-5">
         <div
-          className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full opacity-25 blur-3xl"
+          className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-[rgba(77,150,255,0.10)]"
           style={{ background: 'var(--bg-brand-emphasis-default)' }}
           aria-hidden
         />
@@ -164,7 +168,7 @@ export default function LeaderboardScreen() {
       </section>
 
       {/* Friends / School tabs */}
-      <div className="g-card shadow-sm mb-3">
+      <div className="g-card mb-3">
         <div className="flex rounded-t-card overflow-hidden">
           {(['friends', 'school'] as const).map(tb => (
             <button

@@ -1,0 +1,114 @@
+{
+  "id": "xsc-r7-s08",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r7",
+  "order": 8,
+  "title": "The Tower of Stars",
+  "titleCn": "星之塔",
+  "coverEmoji": "🌟",
+  "paragraphs": [
+    {
+      "text": "Last night, a cold wind blew in. It opened the windows and shook the doors. When Mia woke up, the great hall was dark. The little stars on the ceiling did not shine. \"The castle is sad,\" said her owl, Bo.",
+      "translation": "昨天夜里，一阵冷风吹进了城堡。它吹开了窗户，摇动着门。米娅醒来时，大厅里一片漆黑。天花板上的小星星不再发光。“城堡难过了。”她的猫头鹰波波说。"
+    },
+    {
+      "text": "\"The stars are in the tallest tower,\" said Bo. \"Someone must climb up and light them.\" Mia looked at the long, long stairs. They were higher than the tallest tree. \"I am the smallest one here,\" she said quietly. \"But I can try.\"",
+      "translation": "“星星在最高的那座塔上，”波波说，“必须有人爬上去把它们点亮。”米娅看着长长长长的楼梯。它比最高的树还要高。“我是这里最小的一个。”她轻声说，“但我可以试一试。”"
+    },
+    {
+      "text": "So Mia began to climb. It was darker than the deepest night. While she climbed, the wind pulled her coat. At the top, she saw a golden lamp. It was the oldest lamp in the castle. The lamp was cold and quiet.",
+      "translation": "于是米娅开始往上爬。那里比最深的夜晚还要黑。她向上爬的时候，风吹扯着她的外套。到了塔顶，她看到一盏金色的灯。那是城堡里最古老的一盏灯。灯又冷又安静。"
+    },
+    {
+      "text": "Mia put her hand on the lamp. \"Please shine again,\" she said softly. She thought about her friends below. \"I must be brave,\" she said. Then the lamp gave a warm little light. One star, then two, then a hundred stars shone.",
+      "translation": "米娅把手放在灯上。“请再亮起来吧。”她轻轻地说。她想起了下面的朋友们。“我必须勇敢。”她说。接着，那盏灯发出了一小团温暖的光。一颗星星，两颗星星，然后一百颗星星亮了起来。"
+    },
+    {
+      "text": "The castle grew bright and warm again. Everyone ran into the great hall to see. \"You are braver than all of us,\" said Bo. Mia smiled at her little friend. \"I was afraid,\" she said. \"But I did not stop.\"",
+      "translation": "城堡重新变得明亮又温暖。大家都跑进大厅来看。“你比我们所有人都勇敢。”波波说。米娅冲小伙伴笑了笑。“我也害怕过。”她说，“但我没有停下。”"
+    },
+    {
+      "text": "That night, the castle sang a soft song. Its stars shone like little candles above the hall. Mia slept under the bright stars and smiled.",
+      "translation": "那天夜里，城堡唱起了一首轻柔的歌。城堡的星星像小蜡烛一样，在大厅上方闪闪发亮。米娅在明亮的星光下睡着了，脸上还带着笑。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Mia find at the top of the tower?",
+      "audioText": "What did Mia find at the top of the tower?",
+      "options": [
+        {
+          "emoji": "🪔",
+          "value": "lamp",
+          "text": "A golden lamp"
+        },
+        {
+          "emoji": "🔔",
+          "value": "bell",
+          "text": "A silver bell"
+        },
+        {
+          "emoji": "🪞",
+          "value": "mirror",
+          "text": "A magic mirror"
+        }
+      ],
+      "answer": "lamp"
+    },
+    {
+      "type": "word_builder",
+      "word": "tower",
+      "audioText": "tower"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The stars are in the ___ tower.",
+      "choices": [
+        "tallest",
+        "taller",
+        "tall"
+      ],
+      "answer": "tallest",
+      "audioText": "The stars are in the tallest tower."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "While",
+        "she",
+        "climbed,",
+        "the",
+        "wind",
+        "pulled",
+        "her",
+        "coat."
+      ],
+      "audioText": "While she climbed, the wind pulled her coat."
+    },
+    {
+      "type": "word_builder",
+      "word": "brave",
+      "audioText": "brave"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The castle ___ bright and warm again.",
+      "choices": [
+        "grew",
+        "grow",
+        "grows"
+      ],
+      "answer": "grew",
+      "audioText": "The castle grew bright and warm again."
+    }
+  ],
+  "_unknownWords": [
+    "blew",
+    "woke",
+    "bo",
+    "tower",
+    "shone",
+    "braver"
+  ]
+}

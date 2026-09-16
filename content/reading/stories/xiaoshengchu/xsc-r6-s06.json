@@ -1,0 +1,124 @@
+{
+  "id": "xsc-r6-s06",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r6",
+  "order": 6,
+  "title": "The Space Post Office",
+  "titleCn": "太空邮局",
+  "coverEmoji": "📮",
+  "paragraphs": [
+    {
+      "text": "Welcome to our little post office in space. Every Monday a small rocket will bring new letters. These letters come from children on Earth. They write to their friends on the station.",
+      "translation": "欢迎来到我们设在太空里的小小邮局。每个星期一，一枚小火箭都会送来新的信件。这些信来自地球上的孩子们，他们写信给太空站里的朋友。"
+    },
+    {
+      "text": "Tom is nine years old and he works here. He must wear a big blue suit every day. He should check each letter before it goes out. \"Could you help me, Robot Zip?\" he asks.",
+      "translation": "汤姆九岁，在这里工作。他每天必须穿着一件大大的蓝色航天服。每一封信寄出前，他都应该检查一遍。“机器人齐普，你能帮帮我吗？”他问。"
+    },
+    {
+      "text": "Zip is a clever robot with silver arms. It will fly letters to the Moon tonight. The trip is short, so letters will arrive tomorrow. \"You must not lose any letter,\" says Tom.",
+      "translation": "齐普是一个聪明的机器人，有一双银色的手臂。今晚它会把信件飞送到月球去。路程很短，所以信件明天就能送到。“你千万不能弄丢任何一封信。”汤姆说。"
+    },
+    {
+      "text": "Today a red letter is for a girl on Mars. She will get it in three days. Tom draws a small star on the letter. \"Every letter should make someone happy,\" he says.",
+      "translation": "今天有一封红色的信，是寄给火星上一位女孩的。她三天后就会收到。汤姆在信上画了一颗小星星。“每一封信都应该让某个人开心。”他说。"
+    },
+    {
+      "text": "Next year the post office will be much bigger. More rockets will carry mail to other planets. Tom wants to be a space postman one day. He will write his own letter to Earth soon.",
+      "translation": "明年，这家邮局会大得多。会有更多火箭把邮件送到别的星球上。汤姆希望有一天能成为太空邮递员。他很快就要写一封自己的信寄回地球。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does the small rocket bring to the post office every Monday?",
+      "audioText": "What does the small rocket bring to the post office every Monday?",
+      "options": [
+        {
+          "emoji": "✉️",
+          "value": "letters",
+          "text": "Letters"
+        },
+        {
+          "emoji": "🍎",
+          "value": "food",
+          "text": "Food"
+        },
+        {
+          "emoji": "💧",
+          "value": "water",
+          "text": "Water"
+        }
+      ],
+      "answer": "letters"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Tom draw on the letter for the girl on Mars?",
+      "audioText": "What does Tom draw on the letter for the girl on Mars?",
+      "options": [
+        {
+          "emoji": "⭐",
+          "value": "star",
+          "text": "A star"
+        },
+        {
+          "emoji": "🌙",
+          "value": "moon",
+          "text": "A moon"
+        },
+        {
+          "emoji": "🤖",
+          "value": "robot",
+          "text": "A robot"
+        }
+      ],
+      "answer": "star"
+    },
+    {
+      "type": "word_builder",
+      "word": "rocket",
+      "audioText": "rocket"
+    },
+    {
+      "type": "word_builder",
+      "word": "postman",
+      "audioText": "postman"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "will",
+        "fly",
+        "letters",
+        "to",
+        "the",
+        "Moon",
+        "tonight."
+      ],
+      "audioText": "It will fly letters to the Moon tonight."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "He ___ wear a big blue suit every day.",
+      "choices": [
+        "must",
+        "could",
+        "will"
+      ],
+      "answer": "must",
+      "audioText": "He must wear a big blue suit every day."
+    }
+  ],
+  "_unknownWords": [
+    "rocket",
+    "tom",
+    "suit",
+    "zip",
+    "asks",
+    "mars",
+    "bigger",
+    "rockets"
+  ]
+}

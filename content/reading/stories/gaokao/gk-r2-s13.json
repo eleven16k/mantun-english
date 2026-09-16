@@ -1,0 +1,126 @@
+{
+  "id": "gk-r2-s13",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 13,
+  "title": "When Machines Guess How We Feel",
+  "titleCn": "当机器猜测我们的感受",
+  "coverEmoji": "🎭",
+  "paragraphs": [
+    {
+      "text": "Cameras are now being installed in shops, classrooms and job interviews, where software has been trained to guess how people feel. Supporters claim such tools make services friendlier, while critics say a private emotion is being turned into a product.",
+      "translation": "如今，摄像头正被安装在商店、教室甚至求职面试中，而其背后的软件经过训练，用来推测人们的感受。支持者声称这类工具能让服务更友善，批评者则说，一种私人的情绪正在被变成商品。"
+    },
+    {
+      "text": "How does it work? The system studies facial expressions, voice tone and heart rate, then compares them with what it has learned from millions of labelled examples. It is easy to forget that the software only reports a pattern, not a feeling. Whether a smile means joy or polite patience depends on culture, context and the person.",
+      "translation": "它是如何运作的呢？系统会研究面部表情、语调以及心率，再把它们与从数百万条标注样本中学到的东西作比较。人们很容易忘记：软件报告的只是一种模式，而不是一种情感。一个微笑意味着喜悦还是礼貌的耐心，取决于文化、情境和具体的人。"
+    },
+    {
+      "text": "Accuracy is another worry. Studies suggest that these systems are less reliable when they are tested on faces that were rare in the training data. So people whose expressions do not match the sample may be misread far more often. The results are often treated as facts. A wrong guess can then follow someone into a hiring decision or a medical record.",
+      "translation": "准确性是另一个令人担忧的问题。研究表明，当这些系统被用来测试训练数据中少见的面孔时，可靠性会降低。因此，那些表情与样本不符的人可能会被更频繁地误读。结果常常被当作事实。于是一个错误的判断可能跟着某人进入一次招聘决定，或者一份医疗记录。"
+    },
+    {
+      "text": "Consent is the harder question. Most of us have never agreed to have our moods measured while we shop or study. In some cities such tools have been banned in public places, and new rules are being written about emotion data. It is argued that clear permission should be required before any feeling is analysed.",
+      "translation": "同意是更难的问题。我们大多数人都从未同意在购物或学习时让自己的情绪被测量。在一些城市，这类工具在公共场所已被禁止，关于情绪数据的新规也正在制定中。有人认为，在分析任何情绪之前，都应该先获得明确的许可。"
+    },
+    {
+      "text": "None of this means the technology is useless. Clear, honest systems might help a teacher notice a quiet student who is struggling. But what a machine records about our inner life should not be decided by companies alone. Before the guessing spreads further, we should ask whether some parts of us ought to stay unmeasured.",
+      "translation": "这一切并不意味着这项技术毫无用处。清晰、诚实的系统也许能帮助老师注意到一个正在苦苦挣扎的安静学生。但机器记录下的关于我们内心生活的内容，不应只由公司来决定。在“猜测”进一步扩散之前，我们应该问一问：我们身上的某些部分是否应当保持不被测量。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what does the software really report?",
+      "audioText": "According to the text, what does the software really report?",
+      "options": [
+        {
+          "emoji": "💗",
+          "value": "feeling",
+          "text": "A true feeling"
+        },
+        {
+          "emoji": "📊",
+          "value": "pattern",
+          "text": "A pattern in the data"
+        },
+        {
+          "emoji": "✍️",
+          "value": "promise",
+          "text": "A written promise"
+        }
+      ],
+      "answer": "pattern"
+    },
+    {
+      "type": "word_builder",
+      "word": "consent",
+      "audioText": "consent"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "None",
+        "of",
+        "this",
+        "means",
+        "the",
+        "technology",
+        "is",
+        "useless"
+      ],
+      "audioText": "None of this means the technology is useless."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "results",
+        "are",
+        "often",
+        "treated",
+        "as",
+        "facts"
+      ],
+      "audioText": "The results are often treated as facts."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Before the guessing spreads further, we should ask ___ some parts of us ought to stay unmeasured.",
+      "choices": [
+        "whether",
+        "that",
+        "what"
+      ],
+      "answer": "whether",
+      "audioText": "Before the guessing spreads further, we should ask whether some parts of us ought to stay unmeasured."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Most of us have never agreed to have our moods ___ while we shop or study.",
+      "choices": [
+        "measured",
+        "measuring",
+        "measure"
+      ],
+      "answer": "measured",
+      "audioText": "Most of us have never agreed to have our moods measured while we shop or study."
+    }
+  ],
+  "_unknownWords": [
+    "supporters",
+    "claim",
+    "friendlier",
+    "facial",
+    "tone",
+    "labelled",
+    "context",
+    "sample",
+    "misread",
+    "consent",
+    "moods",
+    "written",
+    "analysed",
+    "unmeasured"
+  ]
+}

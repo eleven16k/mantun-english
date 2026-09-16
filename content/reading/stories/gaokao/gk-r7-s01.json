@@ -1,0 +1,113 @@
+{
+  "id": "gk-r7-s01",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 1,
+  "title": "The Future Is Still Ours",
+  "titleCn": "未来仍在我们手中",
+  "coverEmoji": "🌍",
+  "paragraphs": [
+    {
+      "text": "Not until we imagine the world of 2060 can we decide what we ought to do today. If every nation treated clean energy as a shared goal rather than a private race, the air above our cities would be far easier to breathe. Such a future is not a dream that only scientists can design; it is a choice that ordinary people make each morning. Yet the choice is still ours.",
+      "translation": "只有当我们想象 2060 年的世界时，我们才能决定今天该做什么。如果每个国家都把清洁能源当作共同的目标，而不是一场各自的竞赛，那么城市上空的空气会好呼吸得多。这样的未来并不是只有科学家才能设计的梦想；它是普通人每天早上做出的选择。而选择权，仍然在我们手里。"
+    },
+    {
+      "text": "Exploration, whether it leads to the moon or to Mars, has always asked the same question: how far can human curiosity reach? Were we to abandon space research, we would lose the satellites that guide our ships and warn us of storms. What worries many critics is not the cost of rockets but the thought that we might repeat, on another planet, the mistakes we have made on this one. The fear is easy to understand.",
+      "translation": "探索，无论是走向月球还是火星，始终在追问同一个问题：人类的好奇心能走多远？倘若我们放弃太空研究，我们就会失去那些为船只导航、为我们预警风暴的卫星。让许多批评者担忧的，并不是火箭的造价，而是这样一种想法：我们可能会在另一个星球上重犯在这颗星球上犯过的错误。这种担忧不难理解。"
+    },
+    {
+      "text": "If we are to survive this century, cooperation must replace competition, and patience must replace speed. Only when the richest countries share their technology with the poorest will the phrase 'a sustainable future' mean anything at all. Nobody claims that such changes are easy, yet nobody can honestly claim that they are impossible either.",
+      "translation": "如果我们要在这个世纪生存下去，合作就必须取代竞争，耐心就必须取代速度。只有当最富裕的国家把技术分享给最贫穷的国家时，“可持续的未来”这个说法才会有真正的意义。没有人说这些改变容易，但也没有人能坦然说它们不可能。"
+    },
+    {
+      "text": "The young people who sit in classrooms today are the engineers, farmers and teachers who will run the world of tomorrow. Rather than wait for perfect leaders, they can begin with small habits: saving power, questioning waste, and reading about science instead of merely fearing it. Should each of them take one small step, the direction of the whole century might quietly change.",
+      "translation": "今天坐在教室里的年轻人，就是明天将要管理这个世界的工程师、农民和教师。与其等待完美的领袖，他们可以从微小的习惯做起：节约用电、质疑浪费、去了解科学，而不只是害怕它。只要他们每人迈出一小步，整个世纪的方向也许会悄然改变。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which picture best matches the future the writer hopes for?",
+      "audioText": "Which picture best matches the future the writer hopes for?",
+      "options": [
+        {
+          "emoji": "🌱",
+          "value": "green",
+          "text": "A green and clean world"
+        },
+        {
+          "emoji": "🚀",
+          "value": "race",
+          "text": "A race to other planets"
+        },
+        {
+          "emoji": "🏭",
+          "value": "factory",
+          "text": "More factories everywhere"
+        }
+      ],
+      "answer": "green"
+    },
+    {
+      "type": "word_builder",
+      "word": "curiosity",
+      "audioText": "curiosity"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Yet",
+        "the",
+        "choice",
+        "is",
+        "still",
+        "ours."
+      ],
+      "audioText": "Yet the choice is still ours."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "fear",
+        "is",
+        "easy",
+        "to",
+        "understand."
+      ],
+      "audioText": "The fear is easy to understand."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ we to abandon space research, we would lose the satellites that guide our ships and warn us of storms.",
+      "choices": [
+        "Were",
+        "Was",
+        "Had"
+      ],
+      "answer": "Were",
+      "audioText": "Were we to abandon space research, we would lose the satellites that guide our ships and warn us of storms."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Only when the richest countries share their technology with the poorest ___ the phrase 'a sustainable future' mean anything at all.",
+      "choices": [
+        "will",
+        "would",
+        "does"
+      ],
+      "answer": "will",
+      "audioText": "Only when the richest countries share their technology with the poorest will the phrase 'a sustainable future' mean anything at all."
+    }
+  ],
+  "_unknownWords": [
+    "easier",
+    "exploration",
+    "curiosity",
+    "cooperation",
+    "replace",
+    "sustainable",
+    "claims",
+    "claim"
+  ]
+}

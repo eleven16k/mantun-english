@@ -1,0 +1,96 @@
+{
+  "track": "gaokao",
+  "label": "高中高考",
+  "name": "Reading Quest · 高考",
+  "cnName": "悦读馆 · 高考",
+  "theme": "racing",
+  "vocabTier": "高考 3500 词范围（允许少量超纲派生词）",
+  "quizPerStory": 6,
+  "passScore": 60,
+  "regions": [
+    {
+      "id": "gk-r1",
+      "name": "Nature & Science",
+      "cnName": "自然与科学",
+      "icon": "🌍",
+      "stories": 14,
+      "sentenceLen": [15, 20],
+      "paraCount": [4, 5],
+      "grammar": "分词短语作状语、非限制性定语从句、同位语从句",
+      "genre": "科普说明文：气候、生态、天文、地理（高考阅读 A/B 篇风格）",
+      "quizMix": { "image_choice": 0.1, "word_builder": 0.2, "sentence_order": 0.3, "fill_blank": 0.4 }
+    },
+    {
+      "id": "gk-r2",
+      "name": "Tech & Society",
+      "cnName": "科技与社会",
+      "icon": "🛰️",
+      "stories": 14,
+      "sentenceLen": [16, 22],
+      "paraCount": [4, 5],
+      "grammar": "被动语态复杂式、名词性从句（what/whether）、it 形式主语",
+      "genre": "科技评论：AI 伦理、社交网络、隐私、数字生活",
+      "quizMix": { "image_choice": 0.1, "word_builder": 0.15, "sentence_order": 0.3, "fill_blank": 0.45 }
+    },
+    {
+      "id": "gk-r3",
+      "name": "Humanities",
+      "cnName": "人文历史",
+      "icon": "🏛️",
+      "stories": 13,
+      "sentenceLen": [16, 22],
+      "paraCount": [4, 5],
+      "grammar": "虚拟语气（与过去/现在事实相反）、部分倒装（not only/no sooner）、强调句",
+      "genre": "历史事件、文化遗产、文学艺术、人物评传",
+      "quizMix": { "image_choice": 0.05, "word_builder": 0.2, "sentence_order": 0.3, "fill_blank": 0.45 }
+    },
+    {
+      "id": "gk-r4",
+      "name": "Health & Life",
+      "cnName": "健康生活",
+      "icon": "🫀",
+      "stories": 13,
+      "sentenceLen": [15, 20],
+      "paraCount": [4, 5],
+      "grammar": "动名词/不定式作主语与宾语、情态动词完成式（should have done）",
+      "genre": "心理健康、运动科学、睡眠、饮食习惯（高考说明文高频题材）",
+      "quizMix": { "image_choice": 0.1, "word_builder": 0.15, "sentence_order": 0.3, "fill_blank": 0.45 }
+    },
+    {
+      "id": "gk-r5",
+      "name": "Education & Growth",
+      "cnName": "教育与成长",
+      "icon": "🎓",
+      "stories": 12,
+      "sentenceLen": [17, 24],
+      "paraCount": [4, 5],
+      "grammar": "复杂定语从句（介词+which/whom）、独立主格接触、插入语",
+      "genre": "教育理念、成长记叙、gap year、终身学习（高考夹叙夹议风格）",
+      "quizMix": { "image_choice": 0.05, "word_builder": 0.15, "sentence_order": 0.35, "fill_blank": 0.45 }
+    },
+    {
+      "id": "gk-r6",
+      "name": "Business & Economy",
+      "cnName": "商业与经济",
+      "icon": "📈",
+      "stories": 12,
+      "sentenceLen": [17, 24],
+      "paraCount": [4, 5],
+      "grammar": "让步状语从句（although/while/despite）、as 引导的非限制性定语从句",
+      "genre": "消费行为、创业故事、经济现象、广告心理（高考 D 篇风格）",
+      "quizMix": { "image_choice": 0.05, "word_builder": 0.15, "sentence_order": 0.35, "fill_blank": 0.45 }
+    },
+    {
+      "id": "gk-r7",
+      "name": "Future Visions",
+      "cnName": "未来思考",
+      "icon": "🔮",
+      "stories": 12,
+      "sentenceLen": [18, 25],
+      "paraCount": [4, 5],
+      "grammar": "综合长难句：多重从句嵌套、省略、倒装 + 虚拟语气综合",
+      "genre": "议论/展望：可持续未来、太空探索、人类命运（高考读后续写素材风格）",
+      "quizMix": { "image_choice": 0.05, "word_builder": 0.15, "sentence_order": 0.35, "fill_blank": 0.45 }
+    }
+  ]
+}

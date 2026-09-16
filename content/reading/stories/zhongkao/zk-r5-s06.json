@@ -1,0 +1,123 @@
+{
+  "id": "zk-r5-s06",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 6,
+  "title": "The Girl Who Cleaned the Lake",
+  "titleCn": "清理湖泊的女孩",
+  "coverEmoji": "💧",
+  "paragraphs": [
+    {
+      "text": "Lily is a thirteen-year-old girl who lives in a small town in Yunnan. Every morning, she walks to school along a lake which she loves very much.",
+      "translation": "莉莉是一个十三岁的女孩，住在云南的一个小镇上。每天早晨，她都沿着一个她非常喜欢的湖走去上学。"
+    },
+    {
+      "text": "But last year, the lake that had once been blue turned grey and dirty. People threw bottles and bags into the water, and the fish disappeared.",
+      "translation": "但去年，这个曾经碧蓝的湖变得又灰又脏。人们把瓶子和袋子扔进水里，湖里的鱼也不见了。"
+    },
+    {
+      "text": "Lily felt sad about this. She went to her science teacher, Ms. Wang, and asked her for help. Ms. Wang was a kind woman who loved nature and always helped others. She told Lily that one person could make a big difference in the world.",
+      "translation": "莉莉为此感到难过。她去找她的科学老师王老师，向她求助。王老师是一位热爱自然、总是乐于助人的善良女性。她告诉莉莉，一个人也能给世界带来很大的改变。"
+    },
+    {
+      "text": "So they started a club which they called Blue Water. Twenty students who joined the club met every Saturday morning. They picked up rubbish, planted small trees, and put up signs by the lake. By that autumn, they had collected over three hundred bags of rubbish.",
+      "translation": "于是她们创办了一个俱乐部，取名“蓝水”。加入俱乐部的二十名学生每周六早上集合。他们捡垃圾、种小树，还在湖边立起告示牌。到那年秋天，他们已经收集了三百多袋垃圾。"
+    },
+    {
+      "text": "At first, some people laughed at them and said the lake was too dirty. But Lily and her friends did not stop. Slowly, the water became clear again, and birds came back to the lake.",
+      "translation": "起初，有些人嘲笑他们，说这湖太脏了。但莉莉和她的朋友们没有停下来。慢慢地，湖水又变清了，鸟儿也回到了湖边。"
+    },
+    {
+      "text": "Now Lily is fifteen years old, and her club has over one hundred members. Two years ago, she had never believed a small idea could change a town. \"If we all do a little,\" she says, \"the world will be better.\"",
+      "translation": "如今莉莉十五岁了，她的俱乐部已有一百多名成员。两年前，她还从未相信一个小小的想法能改变一个小镇。“如果我们每个人都做一点点，”她说，“世界就会变得更好。”"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "How did the lake look after Lily and her friends worked hard?",
+      "audioText": "How did the lake look after Lily and her friends worked hard?",
+      "options": [
+        {
+          "emoji": "🌊",
+          "value": "clear",
+          "text": "Clear and clean"
+        },
+        {
+          "emoji": "🗑️",
+          "value": "rubbish",
+          "text": "Full of rubbish"
+        },
+        {
+          "emoji": "🏜️",
+          "value": "dry",
+          "text": "Dry and empty"
+        }
+      ],
+      "answer": "clear"
+    },
+    {
+      "type": "word_builder",
+      "word": "rubbish",
+      "audioText": "rubbish"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "But",
+        "Lily",
+        "and",
+        "her",
+        "friends",
+        "did",
+        "not",
+        "stop."
+      ],
+      "audioText": "But Lily and her friends did not stop."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Lily",
+        "felt",
+        "sad",
+        "about",
+        "this."
+      ],
+      "audioText": "Lily felt sad about this."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Ms. Wang was a kind woman ___ loved nature and always helped others.",
+      "choices": [
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer": "who",
+      "audioText": "Ms. Wang was a kind woman who loved nature and always helped others."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "By that autumn, they ___ collected over three hundred bags of rubbish.",
+      "choices": [
+        "had",
+        "have",
+        "has"
+      ],
+      "answer": "had",
+      "audioText": "By that autumn, they had collected over three hundred bags of rubbish."
+    }
+  ],
+  "_unknownWords": [
+    "yunnan",
+    "grey",
+    "disappeared",
+    "wang",
+    "asked",
+    "big",
+    "world",
+    "joined",
+    "signs"
+  ]
+}

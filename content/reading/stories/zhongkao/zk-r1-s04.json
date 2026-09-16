@@ -1,0 +1,129 @@
+{
+  "id": "zk-r1-s04",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 4,
+  "title": "One Page a Day",
+  "titleCn": "每天一页",
+  "coverEmoji": "📖",
+  "paragraphs": [
+    {
+      "text": "My name is Li Ming, and I am in Grade Nine. Every morning I ride my bike to school at seven. I often arrive ten minutes before the first class. I think that a good morning makes a good day.",
+      "translation": "我叫李明，是一名九年级学生。每天早上七点，我骑自行车去学校。我常常在第一节课前十分钟到校。我觉得，好的早晨能带来美好的一天。"
+    },
+    {
+      "text": "Last September our English teacher, Miss Wang, started a reading club. She said that reading could open a new world for us. At first I didn't join it because my English was poor. I felt afraid of reading long stories in front of others.",
+      "translation": "去年九月，我们的英语老师王老师创办了一个阅读社。她说，阅读能为我们打开一个新世界。起初我没有参加，因为我的英语很差。我害怕在别人面前读长故事。"
+    },
+    {
+      "text": "One Tuesday afternoon, Miss Wang asked me to stay after class. She gave me a thin book with many short stories. She said that I could read one page a day. \"Nobody becomes a good reader in one night,\" she told me. I took the book home. I read the first page slowly.",
+      "translation": "一个周二的下午，王老师让我下课后留下来。她给了我一本书，薄薄的，里面有很多短故事。她说我可以每天读一页。“没有人能在一夜之间成为好读者，”她对我说。我把书带回了家，慢慢地读了第一页。"
+    },
+    {
+      "text": "For two months I read a page every evening before bed. Sometimes I met new words, so I wrote them in a small notebook. On Fridays the club members always shared their favourite stories. I listened carefully and never said anything at first.",
+      "translation": "有两个月的时间，我每天晚上睡前都读一页。有时我会碰到生词，就把它们记在一个小本子上。每到周五，社团的成员们总会分享他们最喜欢的故事。我认真地听着，一开始什么也没说。"
+    },
+    {
+      "text": "Then one Friday I stood up and read a short story aloud. I was very nervous at first. My voice was low, but my classmates clapped for me. Miss Wang smiled and said that my reading was getting better. I knew that I had made real progress that day.",
+      "translation": "后来有一个周五，我站起来大声读了一个短故事。一开始我非常紧张。我的声音很小，但同学们为我鼓了掌。王老师笑了，说我的朗读在进步。我知道，那天我真的进步了。"
+    },
+    {
+      "text": "Now I am a member of the reading club, and I never miss a Friday meeting. I still read one page a day, but I am not afraid any more. I think that small steps can take us a long way.",
+      "translation": "现在我是阅读社的一员，从不错过周五的聚会。我仍然每天读一页，但我不再害怕了。我认为，小小的步伐也能带我们走很远。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "How does Li Ming go to school every morning?",
+      "audioText": "How does Li Ming go to school every morning?",
+      "options": [
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "By bike"
+        },
+        {
+          "emoji": "🚌",
+          "value": "bus",
+          "text": "By bus"
+        },
+        {
+          "emoji": "🚶",
+          "value": "walk",
+          "text": "On foot"
+        }
+      ],
+      "answer": "bike"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Miss Wang give Li Ming one Tuesday afternoon?",
+      "audioText": "What did Miss Wang give Li Ming one Tuesday afternoon?",
+      "options": [
+        {
+          "emoji": "📖",
+          "value": "book",
+          "text": "A thin book"
+        },
+        {
+          "emoji": "✏️",
+          "value": "pencil",
+          "text": "A pencil"
+        },
+        {
+          "emoji": "🎒",
+          "value": "bag",
+          "text": "A school bag"
+        }
+      ],
+      "answer": "book"
+    },
+    {
+      "type": "word_builder",
+      "word": "reader",
+      "audioText": "reader"
+    },
+    {
+      "type": "word_builder",
+      "word": "notebook",
+      "audioText": "notebook"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Nobody",
+        "becomes",
+        "a",
+        "good",
+        "reader",
+        "in",
+        "one",
+        "night."
+      ],
+      "audioText": "Nobody becomes a good reader in one night."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She said ___ I could read one page a day.",
+      "choices": [
+        "that",
+        "what",
+        "which"
+      ],
+      "answer": "that",
+      "audioText": "She said that I could read one page a day."
+    }
+  ],
+  "_unknownWords": [
+    "li",
+    "english",
+    "wang",
+    "world",
+    "didn't",
+    "join",
+    "asked",
+    "favourite",
+    "getting"
+  ]
+}

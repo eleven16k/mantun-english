@@ -1,0 +1,119 @@
+{
+  "id": "gk-r2-s03",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 3,
+  "title": "When AI Makes a Mistake",
+  "titleCn": "当人工智能犯错时",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "Every day, millions of small decisions are being made by machines instead of by human beings. Some programs decide who gets a job, who receives a loan, and even who is stopped by the police. Machines do not have feelings, so it is easy to say that a computer is always fair. However, a machine only repeats what it has been taught by the data of human beings.",
+      "translation": "每一天，数以百万计的小决定正由机器而不是人来做出。有些程序决定谁能得到一份工作、谁能拿到贷款，甚至谁会被警察拦下。机器没有感情，所以人们很容易说电脑永远公正。然而，机器只是重复它从人类数据中被教给的东西。"
+    },
+    {
+      "text": "Last year, a large company used a new system to read the applications of job hunters. The system had been trained on ten years of successful employees, so it learned to prefer certain schools and certain names. Hundreds of good applications were refused within seconds, and nobody in the office could explain why. What the program had really learned was not skill, but the old habits of the past.",
+      "translation": "去年，一家大公司用一套新系统来阅读求职者的申请。这套系统曾用十年成功员工的数据进行训练，于是它学会了偏爱某些学校和某些名字。数百份优秀的申请在几秒钟内被拒绝，办公室里没人能解释为什么。这个程序真正学到的不是技能，而是过去的旧习惯。"
+    },
+    {
+      "text": "It is not clear whether the company broke any law, because the rules were written before such systems appeared. Lawyers are now arguing about who should be blamed when a machine makes a wrong choice. Should the programmer be punished for the mistake, or should the manager who bought the software be responsible? Some people even ask whether the machine itself should be treated as the guilty one.",
+      "translation": "目前还不清楚这家公司是否违法，因为相关规则早在这类系统出现之前就已写下。律师们正在争论：当机器做出错误选择时，该由谁来承担责任。程序员应该为这个错误受到惩罚吗？还是买下这款软件的经理该负责？甚至有人问，机器本身是否应该被当作有罪的一方。"
+    },
+    {
+      "text": "Most experts agree that the answer cannot be found in a single sentence. A system can be tested again and again, but it cannot explain its own choices. After all, the system cannot be interviewed. What people really need is a clear record of every decision, so that mistakes can be found early. Some governments are now asking companies to explain how their programs work.",
+      "translation": "多数专家认为，答案不是一句话就能找到的。一套系统可以反复测试，却无法解释自己的选择。毕竟，系统是无法被访谈的。人们真正需要的是每一次决定的清晰记录，这样错误才能被及早发现。一些国家的政府正要求公司解释它们的程序如何运作。"
+    },
+    {
+      "text": "None of this means that AI should be thrown away, since it has already helped doctors and scientists in many ways. It simply means that we should not hand over everything to a program. A human must make the final decision. Whether we like it or not, machines will keep judging us, and it is our job to judge them in return.",
+      "translation": "这一切并不意味着人工智能应该被抛弃，因为它已经在很多方面帮助了医生和科学家。它只是意味着，我们不该把所有事情都交给程序。最终的决定必须由人来做出。不管我们喜不喜欢，机器都会继续评判我们，而评判它们，正是我们的责任。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the company's new system learn to prefer?",
+      "audioText": "What did the company's new system learn to prefer?",
+      "options": [
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "Certain schools and names"
+        },
+        {
+          "emoji": "🧠",
+          "value": "skill",
+          "text": "Real skills and experience"
+        },
+        {
+          "emoji": "⏰",
+          "value": "time",
+          "text": "The working hours"
+        }
+      ],
+      "answer": "school"
+    },
+    {
+      "type": "word_builder",
+      "word": "blamed",
+      "audioText": "blamed"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "A",
+        "human",
+        "must",
+        "make",
+        "the",
+        "final",
+        "decision."
+      ],
+      "audioText": "A human must make the final decision."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "After",
+        "all,",
+        "the",
+        "system",
+        "cannot",
+        "be",
+        "interviewed."
+      ],
+      "audioText": "After all, the system cannot be interviewed."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It is not clear ___ the company broke any law.",
+      "choices": [
+        "whether",
+        "that",
+        "what"
+      ],
+      "answer": "whether",
+      "audioText": "It is not clear whether the company broke any law."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The system had ___ trained on ten years of successful employees.",
+      "choices": [
+        "been",
+        "be",
+        "being"
+      ],
+      "answer": "been",
+      "audioText": "The system had been trained on ten years of successful employees."
+    }
+  ],
+  "_unknownWords": [
+    "loan",
+    "employees",
+    "written",
+    "programmer",
+    "cannot",
+    "ai",
+    "thrown",
+    "simply"
+  ]
+}

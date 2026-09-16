@@ -1,0 +1,131 @@
+{
+  "id": "xsc-r6-s04",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r6",
+  "order": 4,
+  "title": "Our Robot Friend in Space",
+  "titleCn": "我们在太空的机器人朋友",
+  "coverEmoji": "🛰️",
+  "paragraphs": [
+    {
+      "text": "Mei is a young scientist in space. She will stay there for six months. Every morning she looks out of the window. The Earth looks like a blue and white ball.",
+      "translation": "梅是太空里的一名小科学家。她将在那里待六个月。每天早上，她都从窗户向外望。地球看起来像一个蓝白相间的球。"
+    },
+    {
+      "text": "Today a small robot will arrive at the station. Its name is Lulu. Lulu will help people with their work. It can carry food and clean the rooms.",
+      "translation": "今天，一个小机器人将抵达太空站。它的名字叫露露。露露会帮助人们干活。它能搬运食物，还能打扫房间。"
+    },
+    {
+      "text": "Mei wants to teach Lulu something new. \"You must be careful in space,\" she says. \"You should move slowly near the windows.\" Lulu blinks its lights and says, \"I will remember that.\"",
+      "translation": "梅想教露露一些新东西。“在太空里你必须小心，”她说。“在窗户附近你应该慢慢移动。”露露眨眨灯光，说：“我会记住的。”"
+    },
+    {
+      "text": "At first Lulu could not walk at all. The floor is strange without gravity. So Mei shows it how to pull and float. Now Lulu moves like a soft balloon.",
+      "translation": "一开始，露露根本不会走路。没有重力，地板很奇怪。于是梅教它怎么拉、怎么飘。现在露露动起来像一个软软的气球。"
+    },
+    {
+      "text": "Next week Lulu will help Mei with a test. They will grow small plants in a box. Mei thinks the plants will grow tall. Then everyone will eat fresh salad!",
+      "translation": "下周，露露会帮梅做一个实验。她们会在一个盒子里种小植物。梅觉得这些植物会长得很高。到时候大家就能吃上新鲜沙拉了！"
+    },
+    {
+      "text": "One day people will live on many stations. Robots like Lulu will be their good friends. \"Space is big,\" Mei says. \"We must all work together.\"",
+      "translation": "将来有一天，人们会生活在很多太空站上。像露露这样的机器人会成为他们的好朋友。“太空很大，”梅说。“我们必须一起努力。”"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does the Earth look like from the window?",
+      "audioText": "What does the Earth look like from the window?",
+      "options": [
+        {
+          "emoji": "🌍",
+          "value": "blue",
+          "text": "A blue and white ball"
+        },
+        {
+          "emoji": "🔥",
+          "value": "red",
+          "text": "A red and hot star"
+        },
+        {
+          "emoji": "🟩",
+          "value": "green",
+          "text": "A green and flat map"
+        }
+      ],
+      "answer": "blue"
+    },
+    {
+      "type": "image_choice",
+      "question": "What will Lulu do at the station?",
+      "audioText": "What will Lulu do at the station?",
+      "options": [
+        {
+          "emoji": "🍲",
+          "value": "carry",
+          "text": "Carry food and clean rooms"
+        },
+        {
+          "emoji": "🚀",
+          "value": "fly",
+          "text": "Fly people to the Moon"
+        },
+        {
+          "emoji": "🎨",
+          "value": "paint",
+          "text": "Paint pictures of the Earth"
+        }
+      ],
+      "answer": "carry"
+    },
+    {
+      "type": "word_builder",
+      "word": "balloon",
+      "audioText": "balloon"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "You",
+        "must",
+        "be",
+        "careful",
+        "in",
+        "space."
+      ],
+      "audioText": "You must be careful in space."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "will",
+        "stay",
+        "there",
+        "for",
+        "six",
+        "months."
+      ],
+      "audioText": "She will stay there for six months."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "One day people will ___ on many stations.",
+      "choices": [
+        "live",
+        "lives",
+        "living"
+      ],
+      "answer": "live",
+      "audioText": "One day people will live on many stations."
+    }
+  ],
+  "_unknownWords": [
+    "mei",
+    "lulu",
+    "blinks",
+    "gravity",
+    "float"
+  ]
+}

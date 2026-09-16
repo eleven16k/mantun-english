@@ -20,7 +20,7 @@
  * down-samples to 16 kHz PCM16 chunks; playback resamples the server stream
  * up to the context rate with a queue that can be wiped mid-sentence.
  */
-import { s2sOutputRate } from "./config";
+import { BASE_PATH, s2sOutputRate } from "./config";
 
 export type CallStatus =
   | "idle"
@@ -144,8 +144,8 @@ export class RealtimeCall {
     }
 
     const outRate = this.opts.outputRate ?? s2sOutputRate();
-    await ctx.audioWorklet.addModule("/worklets/lexi-mic-capture.js");
-    await ctx.audioWorklet.addModule("/worklets/lexi-audio-playback.js");
+    await ctx.audioWorklet.addModule(`${BASE_PATH}/worklets/lexi-mic-capture.js`);
+    await ctx.audioWorklet.addModule(`${BASE_PATH}/worklets/lexi-audio-playback.js`);
     if (this.closed) {
       this.micStream.getTracks().forEach((t) => t.stop());
       void ctx.close();

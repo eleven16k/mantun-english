@@ -1,0 +1,119 @@
+{
+  "id": "zk-r2-s02",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 2,
+  "title": "A Day in Suzhou",
+  "titleCn": "苏州一日",
+  "coverEmoji": "🏯",
+  "paragraphs": [
+    {
+      "text": "Last spring, my family took a trip to Suzhou. Suzhou is an old and beautiful city in the south of China. It is famous for its gardens and canals. We arrived on a warm Friday morning.",
+      "translation": "去年春天，我们一家人去苏州旅行。苏州是中国南方一座古老而美丽的城市，以园林和运河而闻名。我们在一个温暖的周五上午到达了那里。"
+    },
+    {
+      "text": "Our first stop was a classical garden in the old town. When we walked through the gate, I felt like I was inside a quiet painting. The garden was smaller than a park, but it was more interesting. While my mother took photos, I watched the fish in the clear pool. Before we left, we took a family photo by the water.",
+      "translation": "我们的第一站是老城里的一座古典园林。当我们穿过大门时，我觉得自己走进了一幅安静的画里。这座园林比公园小，却更有趣。妈妈拍照的时候，我看着清澈池塘里的鱼。离开之前，我们在水边拍了一张全家福。"
+    },
+    {
+      "text": "After we finished lunch, we took a boat trip on the old canal. Our boat moved slowly under the stone bridges. Our guide told us this canal was the longest one in the city. I liked it better than the busy streets.",
+      "translation": "吃完午饭后，我们坐船游览了古老的运河。我们的小船在石桥下缓缓前行。导游告诉我们，这条运河是城里最长的。比起繁忙的街道，我更喜欢它。"
+    },
+    {
+      "text": "In the afternoon, we visited a silk museum near the town centre. A woman showed us how people made silk many years ago. While she worked, we watched her hands carefully. The silk felt softer than my own clothes.",
+      "translation": "下午，我们参观了市中心附近的一座丝绸博物馆。一位女士向我们展示了很久以前人们是怎样制作丝绸的。她工作时，我们仔细地看着她的双手。那丝绸摸起来比我自己的衣服还要柔软。"
+    },
+    {
+      "text": "In the evening, we tried some local snacks beside the river. They were the best food in the whole city. My father said they were more delicious than the ones at home. We laughed and talked for a long time.",
+      "translation": "傍晚，我们在河边尝了一些当地小吃。那是全城最好吃的东西。爸爸说它们比家里的更好吃。我们笑了很久，也聊了很久。"
+    },
+    {
+      "text": "When night came, we walked back to our hotel slowly. The city looked even more beautiful with all the lights on. I hope I can visit Suzhou again some day. It was a trip that I will never forget.",
+      "translation": "当夜晚来临时，我们慢慢地走回旅馆。华灯初上，这座城市看起来更加美丽了。我希望有一天能再去苏州。这是一次我永远不会忘记的旅行。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the writer watch in the clear pool?",
+      "audioText": "What did the writer watch in the clear pool?",
+      "options": [
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "Bird"
+        },
+        {
+          "emoji": "🚤",
+          "value": "boat",
+          "text": "Boat"
+        }
+      ],
+      "answer": "fish"
+    },
+    {
+      "type": "word_builder",
+      "word": "canal",
+      "audioText": "canal"
+    },
+    {
+      "type": "word_builder",
+      "word": "museum",
+      "audioText": "museum"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Our",
+        "boat",
+        "moved",
+        "slowly",
+        "under",
+        "the",
+        "stone",
+        "bridges."
+      ],
+      "audioText": "Our boat moved slowly under the stone bridges."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "While my mother took photos, I ___ the fish in the clear pool.",
+      "choices": [
+        "watch",
+        "watched",
+        "watching"
+      ],
+      "answer": "watched",
+      "audioText": "While my mother took photos, I watched the fish in the clear pool."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It is famous ___ its gardens and canals.",
+      "choices": [
+        "for",
+        "to",
+        "with"
+      ],
+      "answer": "for",
+      "audioText": "It is famous for its gardens and canals."
+    }
+  ],
+  "_unknownWords": [
+    "suzhou",
+    "china",
+    "canals",
+    "classical",
+    "canal",
+    "guide",
+    "busy",
+    "silk",
+    "local",
+    "snacks",
+    "talked"
+  ]
+}

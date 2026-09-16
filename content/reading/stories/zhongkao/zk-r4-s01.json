@@ -1,0 +1,122 @@
+{
+  "id": "zk-r4-s01",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 1,
+  "title": "Small Actions, Big Changes",
+  "titleCn": "小小的行动，大大的改变",
+  "coverEmoji": "♻️",
+  "paragraphs": [
+    {
+      "text": "Our school starts a Green Action Week today. Every class will join in and do something useful for our city. If we work together, small actions can make a big difference.",
+      "translation": "我们学校今天开启了“绿色行动周”。每个班级都会参与，为我们的城市做些有用的事。只要我们一起努力，小小的行动也能带来大大的改变。"
+    },
+    {
+      "text": "The first step is sorting rubbish at school. There are four bins near the school gate: blue, green, red and grey. Please put paper and glass bottles in the blue bin.",
+      "translation": "第一步是在学校里进行垃圾分类。校门口有四个垃圾桶：蓝色、绿色、红色和灰色。请把纸张和玻璃瓶放进蓝色垃圾桶。"
+    },
+    {
+      "text": "If you bring your own bottle, you will not need to buy drinks. Please do not use paper cups or plastic bags anymore. Always turn off the lights when you leave.",
+      "translation": "如果你自己带水杯，就不用买饮料了。请不要再使用纸杯或塑料袋。离开的时候一定要随手关灯。"
+    },
+    {
+      "text": "Animals need our help too. We can plant trees to give birds safe homes. If we keep the river clean, fish will come back to it. Never throw waste into the water.",
+      "translation": "动物也需要我们的帮助。我们可以种树，为鸟儿提供安全的家。如果我们让河水保持干净，鱼儿就会重新回到河里。绝不要把垃圾扔进水里。"
+    },
+    {
+      "text": "Healthy habits are part of a green life. Walk or ride a bike to school if your home is near. Eat more vegetables and fruit every day. These choices are good for you and for the Earth.",
+      "translation": "健康的习惯也是绿色生活的一部分。如果家离学校近，就走路或骑车去上学。每天多吃蔬菜和水果。这些选择对你和地球都有好处。"
+    },
+    {
+      "text": "Let's start with one small action this week. If everyone does a little, our world will be cleaner. Join us and make every day a Green Day!",
+      "translation": "这个星期，让我们从一件小事开始。如果每个人都出一份力，我们的世界会更干净。加入我们，让每一天都成为绿色日！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which bin should we put paper and glass bottles in?",
+      "audioText": "Which bin should we put paper and glass bottles in?",
+      "options": [
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "The blue bin"
+        },
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "The red bin"
+        },
+        {
+          "emoji": "⚫",
+          "value": "grey",
+          "text": "The grey bin"
+        }
+      ],
+      "answer": "blue"
+    },
+    {
+      "type": "word_builder",
+      "word": "plastic",
+      "audioText": "plastic"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Always",
+        "turn",
+        "off",
+        "the",
+        "lights",
+        "when",
+        "you",
+        "leave."
+      ],
+      "audioText": "Always turn off the lights when you leave."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Animals",
+        "need",
+        "our",
+        "help",
+        "too."
+      ],
+      "audioText": "Animals need our help too."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you bring your own ___, you will not need to buy drinks.",
+      "choices": [
+        "bottle",
+        "bag",
+        "book"
+      ],
+      "answer": "bottle",
+      "audioText": "If you bring your own bottle, you will not need to buy drinks."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Walk or ride a bike to school if your home is ___.",
+      "choices": [
+        "near",
+        "far",
+        "new"
+      ],
+      "answer": "near",
+      "audioText": "Walk or ride a bike to school if your home is near."
+    }
+  ],
+  "_unknownWords": [
+    "join",
+    "big",
+    "bins",
+    "grey",
+    "bin",
+    "anymore",
+    "let's",
+    "world"
+  ]
+}

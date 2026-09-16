@@ -1,0 +1,123 @@
+{
+  "id": "zk-r2-s09",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 9,
+  "title": "A Boat Trip on the Li River",
+  "titleCn": "漓江泛舟记",
+  "coverEmoji": "🛶",
+  "paragraphs": [
+    {
+      "text": "Last summer, my family took a train to Guilin in the south. The journey was long, but we were very excited. When we arrived, warm air and green hills welcomed us. Our guide met us at the station with a big smile.",
+      "translation": "去年夏天，我们一家人坐火车去了南方的桂林。旅途很长，但我们非常兴奋。到达的时候，温暖的空气和青翠的山峦迎接着我们。导游带着大大的笑容在车站接我们。"
+    },
+    {
+      "text": "On the first morning, we took a boat down the Li River. The water was clearer than any river I had seen before. While we were sailing, tall hills rose on both sides. Some of them looked like animals and old men. My brother said the ride was better than a cartoon.",
+      "translation": "第一天早上，我们乘船顺漓江而下。江水比我以前见过的任何河流都要清澈。我们航行的时候，高高的山从两岸耸起。其中一些看起来像动物，也像老人。弟弟说这次坐船比看动画片还好。"
+    },
+    {
+      "text": "After the boat trip, we walked around the West Street in Yangshuo. It was busier than any street in my hometown. We tasted rice noodles and bought small gifts for friends. Before the sun went down, we climbed a small hill nearby. From the top, the whole town looked like a colorful picture.",
+      "translation": "游船之后，我们在阳朔的西街逛了逛。那里比我家乡镇上的任何街道都热闹。我们尝了米粉，还给朋友们买了小礼物。太阳落山前，我们爬上了附近的一座小山。从山顶看，整个小镇就像一幅彩色的画。"
+    },
+    {
+      "text": "The next day was the most exciting day of our trip. We rode bikes along a quiet country road for two hours. While we were riding, farmers were working in the green fields. A friendly old man gave us some sweet oranges. After we thanked him, we took a photo.",
+      "translation": "第二天是我们旅行中最激动人心的一天。我们沿着一条安静的乡间小路骑了两个小时的自行车。我们骑车的时候，农民们正在绿色的田野里干活。一位友善的老人给了我们一些甜甜的橙子。我们谢过他之后，一起拍了一张照片。"
+    },
+    {
+      "text": "On the last evening, we sat by the river and watched the lights. The hills turned dark, but the water still looked bright. My father said Guilin was the most beautiful place he knew. I thought he was right, though I missed home too.",
+      "translation": "最后一个晚上，我们坐在江边看灯火。山变暗了，但水面看起来依然明亮。爸爸说桂林是他知道的最美的地方。我觉得他说得对，虽然我也很想家。"
+    },
+    {
+      "text": "Now, when I look at our photos, I always smile. Travelling teaches me more than books can do. The world is bigger and kinder than I once thought. I hope I can visit more places in the future.",
+      "translation": "现在，每当我看着我们的照片，总会微笑。旅行教给我的东西比书本更多。这个世界比我曾经以为的更大、更友善。我希望将来能去更多的地方。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "How did the family get to Guilin?",
+      "audioText": "How did the family get to Guilin?",
+      "options": [
+        {
+          "emoji": "🚂",
+          "value": "train",
+          "text": "Train"
+        },
+        {
+          "emoji": "✈️",
+          "value": "plane",
+          "text": "Plane"
+        },
+        {
+          "emoji": "🚌",
+          "value": "bus",
+          "text": "Bus"
+        }
+      ],
+      "answer": "train"
+    },
+    {
+      "type": "word_builder",
+      "word": "journey",
+      "audioText": "journey"
+    },
+    {
+      "type": "word_builder",
+      "word": "beautiful",
+      "audioText": "beautiful"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "After",
+        "we",
+        "thanked",
+        "him",
+        "we",
+        "took",
+        "a",
+        "photo"
+      ],
+      "audioText": "After we thanked him, we took a photo."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The water was ___ than any river I had seen before.",
+      "choices": [
+        "clear",
+        "clearer",
+        "clearest"
+      ],
+      "answer": "clearer",
+      "audioText": "The water was clearer than any river I had seen before."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "My father said Guilin was the most ___ place he knew.",
+      "choices": [
+        "beautiful",
+        "more beautiful",
+        "beautifully"
+      ],
+      "answer": "beautiful",
+      "audioText": "My father said Guilin was the most beautiful place he knew."
+    }
+  ],
+  "_unknownWords": [
+    "guilin",
+    "journey",
+    "guide",
+    "big",
+    "li",
+    "seen",
+    "men",
+    "cartoon",
+    "yangshuo",
+    "busier",
+    "rice",
+    "colorful",
+    "travelling",
+    "world",
+    "bigger"
+  ]
+}

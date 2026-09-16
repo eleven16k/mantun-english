@@ -1,0 +1,122 @@
+{
+  "id": "xsc-r2-s04",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 4,
+  "title": "The Kite in the Tree",
+  "titleCn": "树上的风筝",
+  "coverEmoji": "🪁",
+  "paragraphs": [
+    {
+      "text": "It is a sunny morning in Animal Village. Rabbit is flying a kite. The wind is blowing hard. The kite goes up, up, up. Look! It is in a big tree.",
+      "translation": "动物村里，这是一个晴朗的早晨。兔子正在放风筝。风刮得很大。风筝越飞越高，越飞越高。看！它卡在一棵大树上。"
+    },
+    {
+      "text": "Rabbit is sad. \"I can't get my kite,\" she says. \"Don't worry,\" says Bear. \"I can help you.\"",
+      "translation": "兔子很难过。“我拿不到我的风筝了。”她说。“别担心，”熊说，“我可以帮你。”"
+    },
+    {
+      "text": "Bear is tall and strong. He is reaching for the kite. But the kite is too high. Bear can't get it.",
+      "translation": "熊又高又壮。他伸手去够风筝。可是风筝太高了。熊够不到它。"
+    },
+    {
+      "text": "Little Bird is singing in the tree. \"I can help!\" she says. She is flying to the kite. She is pulling it with her beak.",
+      "translation": "小鸟正在树上唱歌。“我可以帮忙！”她说。她飞到风筝旁边，用嘴巴把它拉下来。"
+    },
+    {
+      "text": "The kite comes down. Rabbit is very happy. \"Thank you, Little Bird!\" she says. \"You are a good friend.\"",
+      "translation": "风筝落了下来。兔子非常高兴。“谢谢你，小鸟！”她说，“你真是我的好朋友。”"
+    },
+    {
+      "text": "Now they are playing together. Bear is flying the kite. Rabbit and Little Bird are laughing. They like playing in the sun.",
+      "translation": "现在他们在一起玩。熊在放风筝。兔子和小鸟哈哈大笑。他们喜欢在阳光下玩耍。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where is the kite?",
+      "audioText": "Where is the kite?",
+      "options": [
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "In a tree"
+        },
+        {
+          "emoji": "🏠",
+          "value": "house",
+          "text": "In a house"
+        },
+        {
+          "emoji": "⛰️",
+          "value": "hill",
+          "text": "On a hill"
+        }
+      ],
+      "answer": "tree"
+    },
+    {
+      "type": "image_choice",
+      "question": "Who helps Rabbit get the kite?",
+      "audioText": "Who helps Rabbit get the kite?",
+      "options": [
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "Little Bird"
+        },
+        {
+          "emoji": "🐻",
+          "value": "bear",
+          "text": "Bear"
+        },
+        {
+          "emoji": "🐰",
+          "value": "rabbit",
+          "text": "Rabbit"
+        }
+      ],
+      "answer": "bird"
+    },
+    {
+      "type": "word_builder",
+      "word": "kite",
+      "audioText": "kite"
+    },
+    {
+      "type": "word_builder",
+      "word": "friend",
+      "audioText": "friend"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Little",
+        "Bird",
+        "is",
+        "singing",
+        "in",
+        "the",
+        "tree."
+      ],
+      "audioText": "Little Bird is singing in the tree."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The kite is too ___ for Bear.",
+      "choices": [
+        "high",
+        "small",
+        "old"
+      ],
+      "answer": "high",
+      "audioText": "The kite is too high for Bear."
+    }
+  ],
+  "_unknownWords": [
+    "can't",
+    "don't",
+    "beak"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "gk-r4-s10",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 10,
+  "title": "Move More, Worry Less",
+  "titleCn": "多动一动，烦恼少一点",
+  "coverEmoji": "🏃",
+  "paragraphs": [
+    {
+      "text": "When exams are near, many students sit at their desks for hours without moving their bodies at all. They believe that studying longer is the only way to do better in their tests. However, scientists have found that moving your body regularly can improve both your mood and your memory.",
+      "translation": "考试临近时，很多学生一连几个小时坐在书桌前，身体一动不动。他们相信学得更久才是考得更好的唯一办法。然而科学家发现，经常活动身体既能改善情绪，也能增强记忆力。"
+    },
+    {
+      "text": "Regular exercise works on the brain in ways that may genuinely surprise you. To keep your mind sharp, you should stand up and stretch between lessons instead of sitting still. Doing twenty minutes of exercise helps your brain release chemicals that make you feel calm. Choosing an activity you truly enjoy matters far more than exercising for a long time.",
+      "translation": "规律运动对大脑起作用的方式可能真的会让你惊讶。想让头脑保持敏锐，你该在课间站起来伸展一下，而不是一直坐着。做二十分钟运动，能帮助大脑释放让你感到平静的化学物质。选一项你真正喜欢的活动，远比长时间锻炼更重要。"
+    },
+    {
+      "text": "Sleep is another important part of the picture. Going to bed at the same time each night trains your body clock and protects your daily energy. If you slept badly last week, you should have gone to bed earlier instead of checking your phone. Refusing to look at your phone before sleep is a simple habit that is worth building.",
+      "translation": "睡眠是这幅图景中另一个重要的部分。每晚在同一时间上床，能训练你的生物钟，守住你每天的精力。如果你上周没睡好，你本该早点上床，而不是一直刷手机。睡前不去看手机，是一个值得养成的简单习惯。"
+    },
+    {
+      "text": "What you eat also shapes how you feel during the whole day, from morning to night. Eating too much sugar can make your energy rise and then fall suddenly. To keep your mood steady, choose whole grains, fruit, and vegetables at every meal. Missing breakfast may leave you feeling tired and unable to focus properly in class.",
+      "translation": "你吃的东西还会影响你一整天的状态，从早到晚都是如此。摄入过多糖分，会让你的精力先升后骤降。为了让情绪保持平稳，每餐都应选择全谷物、水果和蔬菜。不吃早餐可能会让你感到疲惫，上课时无法好好集中注意力。"
+    },
+    {
+      "text": "None of these habits works alone. Trying to change everything at once usually ends in failure, so pick one habit and give it enough time. Starting with one small change is enough. To take care of your mind, you must first take care of your body and your daily routine.",
+      "translation": "这些习惯没有一个是单独起作用的。想一次改变所有事情，往往以失败告终，所以挑一个习惯，给它足够的时间。从一个小小的改变开始，就已经足够。要照顾好自己的心理，你必须先照顾好自己的身体和日常作息。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you slept badly last week, you ___ gone to bed earlier instead of checking your phone.",
+      "choices": [
+        "should have",
+        "should",
+        "will have"
+      ],
+      "answer": "should have",
+      "audioText": "If you slept badly last week, you should have gone to bed earlier instead of checking your phone."
+    },
+    {
+      "type": "word_builder",
+      "word": "memory",
+      "audioText": "memory"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "None",
+        "of",
+        "these",
+        "habits",
+        "works",
+        "alone."
+      ],
+      "audioText": "None of these habits works alone."
+    },
+    {
+      "type": "image_choice",
+      "question": "According to the text, what helps your brain release chemicals that make you feel calm?",
+      "audioText": "According to the text, what helps your brain release chemicals that make you feel calm?",
+      "options": [
+        {
+          "emoji": "🏃",
+          "value": "exercise",
+          "text": "Exercise"
+        },
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "Checking your phone"
+        },
+        {
+          "emoji": "🍰",
+          "value": "sugar",
+          "text": "Eating sugar"
+        }
+      ],
+      "answer": "exercise"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Choosing an activity you truly enjoy ___ far more than exercising for a long time.",
+      "choices": [
+        "matters",
+        "mattering",
+        "to matter"
+      ],
+      "answer": "matters",
+      "audioText": "Choosing an activity you truly enjoy matters far more than exercising for a long time."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Starting",
+        "with",
+        "one",
+        "small",
+        "change",
+        "is",
+        "enough."
+      ],
+      "audioText": "Starting with one small change is enough."
+    }
+  ],
+  "_unknownWords": [
+    "mood",
+    "genuinely",
+    "stretch",
+    "sitting",
+    "truly",
+    "gone",
+    "earlier",
+    "steady"
+  ]
+}

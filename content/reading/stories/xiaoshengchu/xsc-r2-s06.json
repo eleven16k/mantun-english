@@ -1,0 +1,120 @@
+{
+  "id": "xsc-r2-s06",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 6,
+  "title": "Duck's Lost Ball",
+  "titleCn": "小鸭子找球",
+  "coverEmoji": "🦆",
+  "paragraphs": [
+    {
+      "text": "It is a sunny morning. Duck is playing with a red ball. She likes playing by the river.",
+      "translation": "这是一个晴朗的早晨。小鸭子正在玩一个红皮球。她喜欢在河边玩。"
+    },
+    {
+      "text": "Oh no! Her ball falls into the river. Duck is crying by the water. \"My ball! My ball!\" she says.",
+      "translation": "哎呀！她的球掉进了河里。小鸭子在水边哭了起来。“我的球！我的球！”她说。"
+    },
+    {
+      "text": "Bear is walking near the river. He sees Duck and stops. \"Do not worry,\" says Bear. \"I can help you.\"",
+      "translation": "小熊正在河边散步。他看见小鸭子，就停了下来。“别着急，”小熊说，“我可以帮你。”"
+    },
+    {
+      "text": "Bear gets a long stick. He is trying to reach the ball. Duck is watching him.",
+      "translation": "小熊找来一根长长的棍子。他正试着把球够过来。小鸭子看着他。"
+    },
+    {
+      "text": "Rabbit is coming with a net. \"I can help you too!\" she says. They are working together.",
+      "translation": "小兔子拿着一个网兜走来了。“我也能帮上忙！”她说。他们一起努力。"
+    },
+    {
+      "text": "Now the ball is safe. Duck is very happy. \"Thank you, my good friends!\" she says. They play together again.",
+      "translation": "现在球没事了。小鸭子特别开心。“谢谢你们，我的好朋友！”她说。他们又一起玩了起来。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is Duck playing with?",
+      "audioText": "What is Duck playing with?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "ball",
+          "text": "A red ball"
+        },
+        {
+          "emoji": "🪁",
+          "value": "kite",
+          "text": "A kite"
+        },
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "A toy car"
+        }
+      ],
+      "answer": "ball"
+    },
+    {
+      "type": "image_choice",
+      "question": "How does Duck feel at the end?",
+      "audioText": "How does Duck feel at the end?",
+      "options": [
+        {
+          "emoji": "😊",
+          "value": "happy",
+          "text": "Happy"
+        },
+        {
+          "emoji": "😢",
+          "value": "sad",
+          "text": "Sad"
+        },
+        {
+          "emoji": "😴",
+          "value": "sleepy",
+          "text": "Sleepy"
+        }
+      ],
+      "answer": "happy"
+    },
+    {
+      "type": "word_builder",
+      "word": "river",
+      "audioText": "river"
+    },
+    {
+      "type": "word_builder",
+      "word": "worry",
+      "audioText": "worry"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Duck",
+        "is",
+        "playing",
+        "with",
+        "a",
+        "red",
+        "ball"
+      ],
+      "audioText": "Duck is playing with a red ball."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Rabbit is coming with a ___.",
+      "choices": [
+        "net",
+        "book",
+        "cup"
+      ],
+      "answer": "net",
+      "audioText": "Rabbit is coming with a net."
+    }
+  ],
+  "_unknownWords": [
+    "net"
+  ]
+}

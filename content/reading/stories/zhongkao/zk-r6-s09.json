@@ -1,0 +1,129 @@
+{
+  "id": "zk-r6-s09",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 9,
+  "title": "When Tea Travels the World",
+  "titleCn": "当茶走向世界",
+  "coverEmoji": "🍵",
+  "paragraphs": [
+    {
+      "text": "My cousin Emma came from London last spring to see how Chinese people live. I told her that our small town was famous for its green tea. She smiled and said that she drank tea every day in England too.",
+      "translation": "去年春天，我的表姐艾玛从伦敦来，想看看中国人是怎样生活的。我告诉她，我们的小镇以绿茶闻名。她笑着说，她在英国也每天都喝茶。"
+    },
+    {
+      "text": "On the first morning, we walked up a hill which was covered with tea bushes. An old farmer showed us how to pick the young leaves that grow at the top. Emma learned so quickly that the farmer praised her in front of everyone. It was such a clear morning that we could see the hills far away.",
+      "translation": "第一天早上，我们爬上一座长满茶树的小山。一位老农教我们采摘长在顶端的新叶。艾玛学得特别快，老农当着大家的面夸奖了她。那是一个如此晴朗的早晨，我们连远处的山丘都能看见。"
+    },
+    {
+      "text": "The farmer then invited us into his little house, where he taught us how to make tea. He told us that the water should not be too hot. We watched him pour the tea into small cups that were as white as snow. The smell was so sweet that Emma closed her eyes and took a deep breath.",
+      "translation": "随后，老农把我们请进他的小屋，在那里教我们怎样泡茶。他告诉我们，水不能太烫。我们看着他往白得像雪一样的小杯子里倒茶。那香味如此清甜，艾玛闭上眼睛深深吸了一口气。"
+    },
+    {
+      "text": "Then Emma asked whether she could make tea in her own way. She added milk and sugar, which surprised the farmer at first. She explained that most people in Britain drink tea with milk. The farmer laughed and said that he had never tried it.",
+      "translation": "接着，艾玛问她能不能按自己的方式泡茶。她加了牛奶和糖，这让老农一开始很惊讶。她解释说，英国大多数人喝茶都加牛奶。老农笑了，说他从没这样试过。"
+    },
+    {
+      "text": "When he tasted Emma's tea, he nodded and said it was not bad at all. The tea tasted light and fresh. I realized that tea is a drink which connects people from different countries. Emma said that she would take some green tea home for her family. We were both so happy that we forgot the time.",
+      "translation": "他尝过艾玛的茶后，点点头说味道其实很不错。那茶喝起来清淡又清新。我意识到，茶是一种把不同国家的人联系在一起的饮品。艾玛说她要带些绿茶回家给家人。我们俩都那么开心，把时间都忘了。"
+    },
+    {
+      "text": "That evening, we sat by the window and talked about the journey of tea. Emma told me that tea had traveled from China to the world hundreds of years ago. A drink which begins in one country can become a friend of many others. A cup of tea is a small bridge.",
+      "translation": "那天傍晚，我们坐在窗边，聊起了茶的旅程。艾玛告诉我，几百年前茶就从中国传到了世界各地。一种起源于一个国家的饮品，可以成为许多人的朋友。一杯茶就是一座小小的桥。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Emma add to her tea?",
+      "audioText": "What did Emma add to her tea?",
+      "options": [
+        {
+          "emoji": "🥛",
+          "value": "milk",
+          "text": "Milk"
+        },
+        {
+          "emoji": "🍋",
+          "value": "lemon",
+          "text": "Lemon"
+        },
+        {
+          "emoji": "🍯",
+          "value": "honey",
+          "text": "Honey"
+        }
+      ],
+      "answer": "milk"
+    },
+    {
+      "type": "word_builder",
+      "word": "bridge",
+      "audioText": "bridge"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She added milk and ___, which surprised the farmer at first.",
+      "choices": [
+        "sugar",
+        "salt",
+        "honey"
+      ],
+      "answer": "sugar",
+      "audioText": "She added milk and sugar, which surprised the farmer at first."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "tea",
+        "tasted",
+        "light",
+        "and",
+        "fresh."
+      ],
+      "audioText": "The tea tasted light and fresh."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The smell was ___ sweet that Emma closed her eyes and took a deep breath.",
+      "choices": [
+        "so",
+        "such",
+        "too"
+      ],
+      "answer": "so",
+      "audioText": "The smell was so sweet that Emma closed her eyes and took a deep breath."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "A",
+        "cup",
+        "of",
+        "tea",
+        "is",
+        "a",
+        "small",
+        "bridge."
+      ],
+      "audioText": "A cup of tea is a small bridge."
+    }
+  ],
+  "_unknownWords": [
+    "london",
+    "chinese",
+    "england",
+    "bushes",
+    "pour",
+    "asked",
+    "added",
+    "britain",
+    "emma's",
+    "nodded",
+    "talked",
+    "journey",
+    "china",
+    "world"
+  ]
+}

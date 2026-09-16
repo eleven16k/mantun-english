@@ -1,0 +1,114 @@
+{
+  "id": "gk-r6-s04",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 4,
+  "title": "Why Prices End in Nine",
+  "titleCn": "价格为什么以 9 结尾",
+  "coverEmoji": "🏷️",
+  "paragraphs": [
+    {
+      "text": "Walk into almost any supermarket, and you will notice that many price tags end with the number nine. Although a shirt marked 199 yuan costs only one yuan less than one marked 200, shoppers treat the two prices very differently. Researchers call this the left-digit effect, as the first number we see shapes our judgment more strongly than the digits that follow.",
+      "translation": "走进任何一家超市，你都会注意到很多价签都以数字 9 结尾。虽然标价 199 元的衬衫只比标价 200 元的便宜一元，购物者对这两个价格的态度却大不相同。研究者把这种现象称为“首位数字效应”，因为我们看到的第一个数字，比后面那些数字更能左右我们的判断。"
+    },
+    {
+      "text": "When we read 199, our eyes fix on the first digit, while the rest of the number slips quietly into the background. Our brains, as a result, file the price under 'about one hundred' rather than 'nearly two hundred', which feels far more expensive. Despite the tiny real difference, the imagined saving is big enough to push a hesitant customer towards the checkout.",
+      "translation": "看到 199 时，我们的目光会停在第一个数字上，而数字的其余部分则悄悄退到背景里。于是大脑把价格归入“大约一百”，而不是“将近两百”——后者让人感觉贵得多。尽管实际差价微乎其微，想象出来的省钱感却足以把犹豫的顾客推向收银台。"
+    },
+    {
+      "text": "Not every business relies on this trick, and a bakery owner in my town once refused to follow it. Ms Lin priced her cakes at round numbers, because she believed that honest figures would build trust with regular customers. Her cakes were excellent, as everyone in the neighbourhood agreed, yet the sales figures stayed flat for months.",
+      "translation": "并非所有商家都靠这一招，我镇上的一位面包店老板就曾拒绝这么做。林女士把蛋糕定成整数价，因为她相信诚实的数字能赢得老顾客的信任。她的蛋糕确实很棒，这一点街坊邻居都认同，可销售额却连续几个月毫无起色。"
+    },
+    {
+      "text": "Ms Lin eventually tried 8.9 yuan for a slice instead of 9, and the result surprised her. Within a week, the number of customers rose by nearly a third, while her total income actually increased. She still laughs about it, saying that people are not foolish; they simply enjoy the feeling of a good deal.",
+      "translation": "林女士最终把一块蛋糕的标价从 9 元改成 8.9 元，结果让她大吃一惊。不到一周，顾客人数就增加了近三分之一，而她的总收入竟然还上升了。如今她提起这事还会笑，说顾客并不傻，他们只是喜欢“捡到便宜”的那种感觉。"
+    },
+    {
+      "text": "Understanding such tricks does not mean that we must stop buying the things we genuinely need. Instead, it helps us ask a simple question: would I still want this if the price were a whole number? As more shoppers learn to pause before they pay, companies may find that clever pricing alone cannot keep them loyal.",
+      "translation": "看穿这些花招，并不意味着我们必须停止购买真正需要的东西。它只是帮我们多问一句：要是这个价格是个整数，我还想买吗？随着越来越多的购物者学会在付钱前先停一停，商家或许会发现，光是定价聪明，并不能让顾客一直忠于自己。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Researchers call this the left-digit effect, as the first number we see shapes our ___ more strongly than the digits that follow.",
+      "choices": [
+        "judgment",
+        "income",
+        "trust"
+      ],
+      "answer": "judgment",
+      "audioText": "Researchers call this the left-digit effect, as the first number we see shapes our judgment more strongly than the digits that follow."
+    },
+    {
+      "type": "word_builder",
+      "word": "digit",
+      "audioText": "digit"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "our",
+        "eyes",
+        "fix",
+        "on",
+        "the",
+        "first",
+        "digit"
+      ],
+      "audioText": "Our eyes fix on the first digit."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Despite the tiny real difference, the imagined ___ is big enough to push a hesitant customer towards the checkout.",
+      "choices": [
+        "saving",
+        "discount",
+        "profit"
+      ],
+      "answer": "saving",
+      "audioText": "Despite the tiny real difference, the imagined saving is big enough to push a hesitant customer towards the checkout."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "the",
+        "sales",
+        "figures",
+        "stayed",
+        "flat",
+        "for",
+        "months"
+      ],
+      "audioText": "The sales figures stayed flat for months."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "As more shoppers learn to pause before they pay, companies may find that clever pricing alone cannot keep them ___.",
+      "choices": [
+        "loyal",
+        "foolish",
+        "silent"
+      ],
+      "answer": "loyal",
+      "audioText": "As more shoppers learn to pause before they pay, companies may find that clever pricing alone cannot keep them loyal."
+    }
+  ],
+  "_unknownWords": [
+    "tags",
+    "shoppers",
+    "researchers",
+    "digit",
+    "judgment",
+    "digits",
+    "despite",
+    "hesitant",
+    "checkout",
+    "neighbourhood",
+    "foolish",
+    "simply",
+    "genuinely",
+    "cannot",
+    "loyal"
+  ]
+}

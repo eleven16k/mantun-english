@@ -7,6 +7,7 @@
  */
 import { useState } from "react";
 import { AppShell } from "@/components/AppShell";
+import { PageHeader } from "@/components/PageHeader";
 import { useI18n, type MessageKey } from "@/lib/i18n";
 import { generateWordQuest, bankScenarioReward, type WordQuestQuestion } from "@/lib/api";
 import { useGameStore } from "@/lib/store";
@@ -42,8 +43,11 @@ export default function WordQuestPage() {
   const [status, setStatus] = useState<GameStatus>("selecting");
   const [selected, setSelected] = useState<string | null>(null);
 
+  const [quotaError, setQuotaError] = useState(false);
+
   const startLevel = async (lvl: QuestLevel) => {
     setLevel(lvl);
+    setQuotaError(false);
     setStatus("loading");
     try {
       const res = await generateWordQuest(lvl);
@@ -51,7 +55,9 @@ export default function WordQuestPage() {
       setIndex(0);
       setScore(0);
       setStatus("playing");
-    } catch {
+    } catch (e) {
+      // M1 配额闸门：免费 3 次/天，第 4 次被服务端 429 拒绝 → 明确提示而非静默
+      setQuotaError(String((e as Error).message).includes("ai_quota_exceeded"));
       setStatus("selecting");
     }
   };
@@ -102,12 +108,16 @@ export default function WordQuestPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto max-w-3xl px-4 pb-24 pt-20 lg:pt-24">
+      <div className="page-shell">
         {status === "selecting" && (
           <>
+            {quotaError && (
+              <div className="mb-4 rounded-2xl border-2 border-b-4 border-[#F4C430] bg-[#FEF9C3] p-4 text-center text-sm font-bold text-primary">
+                ⚡ {t("scn.wqQuota")}
+              </div>
+            )}
             <header className="mb-6">
-              <h1 className="font-booster text-3xl font-extrabold">🎮 {t("nav.wordquest")}</h1>
-              <p className="mt-1 text-sm text-tertiary">{t("scn.wqSelectLevel")}</p>
+              <PageHeader badge="🎮 WORD QUEST" title={t("nav.wordquest")} sub={t("scn.wqSelectLevel")} />
             </header>
             <div className="grid gap-4 md:grid-cols-3">
               {LEVELS.map((lvl, i) => {
@@ -117,10 +127,10 @@ export default function WordQuestPage() {
                     key={lvl.id}
                     onClick={() => isUnlocked && startLevel(lvl.id)}
                     disabled={!isUnlocked}
-                    className={`relative overflow-hidden rounded-card border p-6 text-left transition-all ${
+                    className={`relative overflow-hidden rounded-card p-6 text-left transition-all ${
                       isUnlocked
-                        ? "border-subtle bg-surface shadow-sm hover:-translate-y-1 hover:border-brandborder hover:shadow-md"
-                        : "cursor-not-allowed border-subtle bg-canvas opacity-50"
+                        ? "g-card"
+                        : "g-card pointer-events-none bg-canvas opacity-50"
                     }`}
                   >
                     {!isUnlocked && (
@@ -171,7 +181,7 @@ export default function WordQuestPage() {
               </div>
             </div>
 
-            <div className="space-y-6 rounded-herocard border border-subtle bg-surface p-8 text-center shadow-sm">
+            <div className="g-card space-y-6 p-8 text-center">
               {isSpellingFallback ? (
                 <>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-tertiary">🔊 Spell it right</p>
@@ -195,17 +205,17 @@ export default function WordQuestPage() {
               {options.map((option) => {
                 const isCorrectOption = option === q.correct;
                 const isSelected = selected === option;
-                let cls = "border-subtle bg-surface hover:border-brandborder";
+                let cls = "";
                 if (selected) {
-                  if (isCorrectOption) cls = "border-positive/50 bg-positive/10 text-positive";
-                  else if (isSelected) cls = "border-critical/50 bg-critical/10 text-critical";
+                  if (isCorrectOption) cls = "game-chip--right pointer-events-none";
+                  else if (isSelected) cls = "game-chip--wrong pointer-events-none";
                 }
                 return (
                   <button
                     key={option}
                     onClick={() => answer(option)}
                     disabled={!!selected}
-                    className={`flex items-center justify-between rounded-2xl border p-4 text-left text-base font-semibold transition-all ${cls}`}
+                    className={`game-chip flex items-center justify-between p-4 text-left text-base font-semibold ${cls}`}
                   >
                     {option}
                     {selected && isCorrectOption && <span aria-hidden>✅</span>}
@@ -217,7 +227,7 @@ export default function WordQuestPage() {
 
             {selected && (
               <div
-                className={`fixed bottom-28 left-1/2 -translate-x-1/2 rounded-full px-7 py-3 font-booster text-base font-extrabold text-white shadow-2xl lg:bottom-10 ${
+                className={`fixed bottom-28 left-1/2 -translate-x-1/2 rounded-full border-2 border-[var(--ink)] px-7 py-3 font-booster text-base font-extrabold text-white shadow-[0_4px_0_0_rgba(0,0,0,0.15)] lg:bottom-10 ${
                   selected === q.correct ? "bg-positive" : "bg-critical"
                 }`}
               >
@@ -228,8 +238,8 @@ export default function WordQuestPage() {
         )}
 
         {(status === "gameOver" || status === "congratulations") && (
-          <div className="fixed inset-0 z-[150] grid place-items-center bg-black/40 p-6 backdrop-blur-sm">
-            <div className="w-full max-w-sm space-y-6 rounded-herocard border border-subtle bg-surface p-10 text-center shadow-2xl">
+          <div className="game-overlay fixed inset-0 z-[150] grid place-items-center p-6">
+            <div className="game-modal w-full max-w-sm space-y-6 p-10 text-center">
               <div
                 className={`mx-auto grid h-20 w-20 place-items-center rounded-3xl text-4xl ${
                   status === "congratulations" ? "bg-positive/10" : "bg-critical/10"
@@ -255,14 +265,14 @@ export default function WordQuestPage() {
                 {status === "congratulations" && (
                   <button
                     onClick={() => setStatus("selecting")}
-                    className="w-full rounded-2xl bg-brand py-3.5 font-bold text-white transition hover:brightness-105"
+                    className="game-btn w-full bg-brand py-3.5 text-white"
                   >
                     {t("scn.wqNextLevel")}
                   </button>
                 )}
                 <button
                   onClick={() => setStatus("selecting")}
-                  className="w-full rounded-2xl border border-subtle bg-canvas py-3.5 font-bold text-secondary transition hover:text-primary"
+                  className="game-btn w-full bg-surface py-3.5 text-secondary"
                 >
                   {t("scn.wqBackToMap")}
                 </button>

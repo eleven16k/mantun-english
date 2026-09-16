@@ -1,0 +1,117 @@
+{
+  "id": "zk-r3-s01",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 1,
+  "title": "AI Around Us",
+  "titleCn": "身边的AI",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "Have you ever talked to a smart machine? Today, AI is used in many places around us. It can help people do many different things every day.",
+      "translation": "你和智能机器说过话吗？如今，AI 被用在我们的许多地方。它每天都能帮人们做很多不同的事。"
+    },
+    {
+      "text": "In many homes, smart speakers are used every day. You can ask them about the weather or your favourite music. They may answer you in a friendly voice.",
+      "translation": "在很多家庭里，智能音箱每天都会被使用。你可以问它们天气，或者问它们你最喜欢的音乐。它们可能会用友好的声音回答你。"
+    },
+    {
+      "text": "In hospitals, AI is used to read photos of the body. Doctors can find problems faster with its help. Some robots are also used to help doctors at work every day.",
+      "translation": "在医院里，AI 被用来读取身体照片。有了它的帮助，医生能更快地发现问题。有些机器人每天也被用来在工作中帮助医生。"
+    },
+    {
+      "text": "On the road, self-driving cars can be seen in some cities. The cars must be watched by a person at all times. One day, they may take us to school safely and quickly.",
+      "translation": "在马路上，有些城市已经能看到无人驾驶汽车。这些车必须随时有人看管。总有一天，它们可能会又快又安全地送我们去上学。"
+    },
+    {
+      "text": "AI can also be found inside your phone. Apps can be used to learn English or take photos. They can even guess what you want to do next.",
+      "translation": "你的手机里也能找到 AI。各种 App 能被用来学英语或拍照。它们甚至能猜出你接下来想做什么。"
+    },
+    {
+      "text": "Will AI take our jobs one day in the future? Nobody knows the answer for sure. But it should be used to help people, not to hurt them.",
+      "translation": "将来有一天，AI 会抢走我们的工作吗？没有人确切知道答案。但它应该被用来帮助人们，而不是伤害人们。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which one is used in many homes to answer your questions?",
+      "audioText": "Which one is used in many homes to answer your questions?",
+      "options": [
+        {
+          "emoji": "🔊",
+          "value": "speaker",
+          "text": "Smart speaker"
+        },
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "Self-driving car"
+        },
+        {
+          "emoji": "📷",
+          "value": "camera",
+          "text": "Camera"
+        }
+      ],
+      "answer": "speaker"
+    },
+    {
+      "type": "word_builder",
+      "word": "robot",
+      "audioText": "robot"
+    },
+    {
+      "type": "word_builder",
+      "word": "voice",
+      "audioText": "voice"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "may",
+        "answer",
+        "you",
+        "in",
+        "a",
+        "friendly",
+        "voice."
+      ],
+      "audioText": "They may answer you in a friendly voice."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "In hospitals, AI ___ used to read photos of the body.",
+      "choices": [
+        "is",
+        "are",
+        "be"
+      ],
+      "answer": "is",
+      "audioText": "In hospitals, AI is used to read photos of the body."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The cars must be ___ by a person at all times.",
+      "choices": [
+        "watch",
+        "watched",
+        "watching"
+      ],
+      "answer": "watched",
+      "audioText": "The cars must be watched by a person at all times."
+    }
+  ],
+  "_unknownWords": [
+    "talked",
+    "ai",
+    "ask",
+    "favourite",
+    "self",
+    "seen",
+    "apps",
+    "english",
+    "hurt"
+  ]
+}

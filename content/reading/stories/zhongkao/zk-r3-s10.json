@@ -1,0 +1,115 @@
+{
+  "id": "zk-r3-s10",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 10,
+  "title": "The Bus That Drives Itself",
+  "titleCn": "会自己开车的公交车",
+  "coverEmoji": "🚌",
+  "paragraphs": [
+    {
+      "text": "Have you ever seen a bus without a driver? In a few Chinese cities, such buses can be seen on the road today. They look like small boxes with big windows. No driver sits in the front, but the bus still moves.",
+      "translation": "你见过没有司机的公交车吗？在中国的一些城市，如今这样的公交车已经能在路上看到了。它们看上去像装了大窗户的小盒子。前面没有司机坐着，可车子照样行驶。"
+    },
+    {
+      "text": "How does it work? The bus is controlled by a computer inside it. Cameras on the bus watch the road all the time. Pictures are sent to the computer at once. Then the computer decides when to stop and when to go.",
+      "translation": "它是怎么工作的呢？这辆车由车内的一台电脑控制。车上的摄像头一直注视着路面。画面会立刻传送到电脑里。然后由电脑决定什么时候停车、什么时候前行。"
+    },
+    {
+      "text": "The bus was tested for many months before people got on it. Engineers followed it and watched every move. If anything went wrong, the bus could be stopped by a button. Anyone on the bus can press that button.",
+      "translation": "在有人上车之前，这种公交车经过了几个月的测试。工程师们跟在它后面，观察它的每一个动作。万一出了状况，这辆车可以被一个按钮停下来。车上任何人都能按下那个按钮。"
+    },
+    {
+      "text": "Today such buses are used in parks and on quiet streets. They carry people slowly, so the ride feels soft and safe. \"It must be safer than my dad's car,\" a young boy said. His mother smiled and nodded.",
+      "translation": "如今，这类公交车被用在公园里和安静的路段上。它们慢慢地载着人，所以坐起来平稳又安全。“它肯定比我爸爸的车还安全，”一个小男孩说道。他妈妈笑着点了点头。"
+    },
+    {
+      "text": "Some people still ask questions about these buses. \"Can a computer really see a child or a dog?\" they ask. Engineers say the cameras can see more than our eyes can. That may be true, but many people are not sure. In the future, such buses may be seen on more streets. Still, human drivers are needed in most cities today.",
+      "translation": "有些人仍然对这种公交车存有疑问。“电脑真的能看见一个小孩或者一只狗吗？”他们问。工程师们说，摄像头的视力比我们的眼睛还要好。这也许是真的，但很多人并不确定。将来，这样的公交车可能会出现在更多的街道上。不过，如今大多数城市里还是需要人类司机的。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What watches the road for the bus all the time?",
+      "audioText": "What watches the road for the bus all the time?",
+      "options": [
+        {
+          "emoji": "📷",
+          "value": "camera",
+          "text": "A camera"
+        },
+        {
+          "emoji": "🐕",
+          "value": "dog",
+          "text": "A dog"
+        },
+        {
+          "emoji": "🎈",
+          "value": "balloon",
+          "text": "A balloon"
+        }
+      ],
+      "answer": "camera"
+    },
+    {
+      "type": "word_builder",
+      "word": "computer",
+      "audioText": "computer"
+    },
+    {
+      "type": "word_builder",
+      "word": "driver",
+      "audioText": "driver"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Pictures",
+        "are",
+        "sent",
+        "to",
+        "the",
+        "computer",
+        "at",
+        "once."
+      ],
+      "audioText": "Pictures are sent to the computer at once."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The bus is ___ by a computer inside it.",
+      "choices": [
+        "controlled",
+        "carried",
+        "cleaned"
+      ],
+      "answer": "controlled",
+      "audioText": "The bus is controlled by a computer inside it."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "In the future, such buses ___ be seen on more streets.",
+      "choices": [
+        "may",
+        "can't",
+        "must not"
+      ],
+      "answer": "may",
+      "audioText": "In the future, such buses may be seen on more streets."
+    }
+  ],
+  "_unknownWords": [
+    "seen",
+    "chinese",
+    "big",
+    "controlled",
+    "wrong",
+    "button",
+    "press",
+    "safer",
+    "dad's",
+    "nodded",
+    "ask"
+  ]
+}

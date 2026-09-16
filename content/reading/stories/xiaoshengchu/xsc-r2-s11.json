@@ -1,0 +1,125 @@
+{
+  "id": "xsc-r2-s11",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 11,
+  "title": "Fox's Small Garden",
+  "titleCn": "狐狸的小花园",
+  "coverEmoji": "🦊",
+  "paragraphs": [
+    {
+      "text": "Fox has a small garden. It is near the hill. He is planting seeds today. Rabbit is bringing water. She is carrying a big blue bucket.",
+      "translation": "狐狸有一小块花园。它就在小山附近。他今天在种种子。兔子在运水。她正提着一个蓝色的大桶。"
+    },
+    {
+      "text": "Bear is digging holes with Fox. He is strong and works fast. Duck is putting the seeds in. She likes helping her friends.",
+      "translation": "熊和狐狸一起挖坑。他很强壮，干活很快。鸭子把种子放进去。她喜欢帮助朋友们。"
+    },
+    {
+      "text": "Look! Squirrel is coming with a bag. She can carry many little seeds. Now everyone is working together. The garden is getting busy.",
+      "translation": "看！松鼠背着一个袋子来了。她能搬很多小种子。现在大家一起干活。花园里热闹起来了。"
+    },
+    {
+      "text": "Fox is very happy. He is smiling at his friends. \"Thank you,\" says Fox. \"We are making a nice garden.\"",
+      "translation": "狐狸非常开心。他冲着朋友们笑。“谢谢你们，”狐狸说，“我们正在做一个小花园呢。”"
+    },
+    {
+      "text": "Now they are singing songs. Duck is dancing in the sun. Bear is clapping his big hands. The little seeds are sleeping in the soil.",
+      "translation": "现在他们唱起了歌。鸭子在阳光下跳舞。熊拍着他的大手。小小的种子在泥土里睡觉。"
+    },
+    {
+      "text": "Soon the seeds can grow into plants. The friends are waiting for flowers. They like working in the garden. Every day is a happy day.",
+      "translation": "很快种子就能长成植物。朋友们在等着花儿开放。他们喜欢在花园里干活。每一天都是快乐的一天。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is Rabbit carrying?",
+      "audioText": "What is Rabbit carrying?",
+      "options": [
+        {
+          "emoji": "🪣",
+          "value": "bucket",
+          "text": "A bucket"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        },
+        {
+          "emoji": "📚",
+          "value": "book",
+          "text": "A book"
+        }
+      ],
+      "answer": "bucket"
+    },
+    {
+      "type": "word_builder",
+      "word": "garden",
+      "audioText": "garden"
+    },
+    {
+      "type": "image_choice",
+      "question": "Who is coming with a bag?",
+      "audioText": "Who is coming with a bag?",
+      "options": [
+        {
+          "emoji": "🐿️",
+          "value": "squirrel",
+          "text": "Squirrel"
+        },
+        {
+          "emoji": "🐰",
+          "value": "rabbit",
+          "text": "Rabbit"
+        },
+        {
+          "emoji": "🐻",
+          "value": "bear",
+          "text": "Bear"
+        }
+      ],
+      "answer": "squirrel"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Fox ___ a small garden.",
+      "choices": [
+        "has",
+        "have",
+        "having"
+      ],
+      "answer": "has",
+      "audioText": "Fox has a small garden."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Duck",
+        "is",
+        "dancing",
+        "in",
+        "the",
+        "sun."
+      ],
+      "audioText": "Duck is dancing in the sun."
+    },
+    {
+      "type": "word_builder",
+      "word": "squirrel",
+      "audioText": "squirrel"
+    }
+  ],
+  "_unknownWords": [
+    "seeds",
+    "bucket",
+    "putting",
+    "squirrel",
+    "getting",
+    "busy",
+    "soil"
+  ]
+}

@@ -38,6 +38,11 @@ let dt = detectWebDeepTutorBase();
 let s2s = detectWebS2sBase();
 let onUnauthorized: (() => void) | null = null;
 
+/** URL prefix the app is deployed under (NEXT_BASE_PATH at build time, e.g.
+ *  "/app" on english.mt-health.com). Prefix raw <img src> and static asset
+ *  URLs with it — <Link>/router already get it from Next's basePath. */
+export const BASE_PATH: string = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 function trimSlash(base: string) {
   return base.replace(/\/+$/, "");
 }

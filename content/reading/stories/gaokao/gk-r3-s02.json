@@ -1,0 +1,115 @@
+{
+  "id": "gk-r3-s02",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 2,
+  "title": "An Army Beneath the Field",
+  "titleCn": "田地下沉睡的军队",
+  "coverEmoji": "🏺",
+  "paragraphs": [
+    {
+      "text": "In the spring of 1974, a group of farmers in Shaanxi Province were digging a well in a dry field. Suddenly their spades hit something hard, and they pulled out a broken head made of clay. If they had thrown it away and gone home, one of the greatest discoveries in history would have been lost. Instead, they carried the pieces to a local office and told the officials what they had found.",
+      "translation": "1974年春天，陕西省的一群农民正在一块干旱的田地里打井。突然，他们的铁锹碰到了硬物，他们挖出了一个破损的陶土人头。如果他们当时把它扔掉、回家去了，史上最伟大的发现之一就会永远遗失。但他们没有这样做，而是把碎片送到了当地的一个办事处，把自己发现的东西告诉了工作人员。"
+    },
+    {
+      "text": "No sooner had experts arrived than they realized the farmers had stumbled upon an ancient army. It was more than eight thousand life-sized clay soldiers that had been buried for over two thousand years. They had been made for Qin Shi Huang, the first emperor of a unified China. Not only did the figures guard his tomb, but they also showed the power of his empire.",
+      "translation": "专家们一到就意识到，这些农民偶然发现了一支古代的军队。那是八千多个真人大小的陶土士兵，已经被埋藏了两千多年。它们是为秦始皇——中国第一位统一天下的皇帝——而制作的。这些陶俑不仅守卫着他的陵墓，也彰显了他帝国的强大。"
+    },
+    {
+      "text": "Each soldier carries a different face, and modern visitors are often amazed by the details. If the craftsmen had worked less carefully, the faces would all look the same today. The figures were once painted in bright colours, but most of the paint disappeared long ago. Scientists say that if the pits were opened too quickly now, the remaining colour would fade within hours.",
+      "translation": "每个士兵都有一张不同的面孔，今天的参观者常常为这些细节惊叹。如果当年的工匠做得不那么用心，今天所有的面孔就会一模一样。这些陶俑曾经色彩鲜艳，但大部分颜料很久以前就消失了。科学家说，如果现在把俑坑打开得太快，残留的颜色会在几个小时内褪去。"
+    },
+    {
+      "text": "Digging has continued slowly since then, and three large pits have been found so far. Hundreds of figures have been repaired, yet thousands more still lie quietly under the soil. It is patience, rather than speed, that has protected this cultural heritage. If workers had rushed the excavation, much of the evidence would have been destroyed forever.",
+      "translation": "从那以后，发掘工作一直在缓慢进行，到目前为止已经发现了三个大俑坑。数百个陶俑已经修复，但仍有成千上万个静静地躺在泥土之下。正是耐心，而非速度，保护了这份文化遗产。如果当初工人们赶进度，许多证据就会永远被毁掉。"
+    },
+    {
+      "text": "Today the site is a museum, and it attracts millions of visitors from around the world every year. The story reminds us that great history is sometimes found by ordinary people with simple tools. If those farmers had kept silent, we would know far less about our shared past. It is their honesty, not their luck, that we should remember most.",
+      "translation": "如今这里是一座博物馆，每年吸引着来自世界各地的数百万游客。这个故事提醒我们，伟大的历史有时是由普通人用简单的工具发现的。如果那些农民当时保持沉默，我们对共同过去的了解会少得多。我们最应该记住的，是他们的诚实，而不是他们的运气。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If they ___ thrown it away and gone home, one of the greatest discoveries in history would have been lost.",
+      "choices": [
+        "have",
+        "had",
+        "has"
+      ],
+      "answer": "had",
+      "audioText": "If they had thrown it away and gone home, one of the greatest discoveries in history would have been lost."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "No sooner ___ experts arrived than they realized the farmers had stumbled upon an ancient army.",
+      "choices": [
+        "have",
+        "were",
+        "had"
+      ],
+      "answer": "had",
+      "audioText": "No sooner had experts arrived than they realized the farmers had stumbled upon an ancient army."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It is patience, rather than speed, ___ has protected this cultural heritage.",
+      "choices": [
+        "what",
+        "that",
+        "who"
+      ],
+      "answer": "that",
+      "audioText": "It is patience, rather than speed, that has protected this cultural heritage."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Suddenly",
+        "their",
+        "spades",
+        "hit",
+        "something",
+        "hard"
+      ],
+      "audioText": "Suddenly their spades hit something hard."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "the",
+        "remaining",
+        "colour",
+        "would",
+        "fade",
+        "within",
+        "hours"
+      ],
+      "audioText": "The remaining colour would fade within hours."
+    },
+    {
+      "type": "word_builder",
+      "word": "heritage",
+      "audioText": "heritage"
+    }
+  ],
+  "_unknownWords": [
+    "shaanxi",
+    "broken",
+    "thrown",
+    "gone",
+    "stumbled",
+    "qin",
+    "shi",
+    "huang",
+    "unified",
+    "details",
+    "craftsmen",
+    "pits",
+    "cultural",
+    "heritage",
+    "excavation",
+    "forever",
+    "honesty"
+  ]
+}

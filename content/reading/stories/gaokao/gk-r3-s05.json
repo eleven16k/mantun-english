@@ -1,0 +1,128 @@
+{
+  "id": "gk-r3-s05",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 5,
+  "title": "The Man Who Made Ideas Travel",
+  "titleCn": "让思想传播的人",
+  "coverEmoji": "🖨️",
+  "paragraphs": [
+    {
+      "text": "Before the eleventh century, almost every book in China was copied by hand, one character at a time. A skilled copyist might spend several months on a single volume, so only wealthy families could own a small library. If paper had been cheaper and copying had been faster, new ideas would have travelled much further than they did.",
+      "translation": "在十一世纪之前，中国的几乎每一本书都是靠人手一字一字抄写而成的。一位熟练的抄书人要花上几个月才能抄完一卷书，因此只有富裕人家才买得起一个小小的藏书室。假如当年纸张更便宜、抄写更快，新思想本会比那时传播得远得多。"
+    },
+    {
+      "text": "In about 1040, a craftsman named Bi Sheng began to experiment with a completely new method of printing. He cut Chinese characters into soft clay, baked every block until it was hard, and arranged them on an iron plate. Not only did these small blocks make printing much faster, but they could also be used again and again.",
+      "translation": "大约在1040年，一位名叫毕昇的工匠开始尝试一种全新的印刷方法。他把汉字刻在柔软的胶泥上，把每个字块烘硬，再把它们排在一块铁板上。这些小字块不仅让印刷快了许多，而且还能一次又一次地重复使用。"
+    },
+    {
+      "text": "Because Chinese has thousands of characters, sorting the blocks correctly was the hardest part of his work. No sooner had the blocks been sorted by sound than a printer could set a whole page. It was this simple system of ordering that allowed workers to find any character quickly. If he had kept his method secret, the whole craft might have died together with him.",
+      "translation": "由于汉字有成千上万个，把字块正确地分类是他工作中最难的部分。字块刚一按读音排好，印刷工就能排出一整页。正是这套简单的排序方法，让工匠们能迅速找到任何一个字。假如他把自己的方法秘而不宣，这门手艺也许就随他一起消失了。"
+    },
+    {
+      "text": "Fortunately, a scholar named Shen Kuo wrote the method down, so nothing was lost to history. It was through this careful written record that later printers in many lands learned his clever technique. Printing spread slowly across Asia and Europe. Knowledge that had once belonged to a few wealthy readers now reached millions of ordinary people.",
+      "translation": "幸运的是，一位名叫沈括的学者把这种方法记录了下来，于是它没有在历史中失传。正是通过这份细致的文字记录，后来许多地方的印刷工才学会了他巧妙的技术。印刷术缓缓传遍亚洲和欧洲。曾经只属于少数富裕读书人的知识，如今传到了千千万万普通人手中。"
+    },
+    {
+      "text": "Bi Sheng never became rich or famous, and history records few details of his daily life. Yet every time we open a printed book, we are using an idea that began with his hands. Great changes do not always arrive with noise. Sometimes they arrive quietly, in the humble shape of small clay blocks.",
+      "translation": "毕昇一生既没有富贵，也没有名声，史书上几乎没留下他日常生活的细节。然而每当我们翻开一本印刷的书，我们用的都是始于他双手的一个想法。巨大的变化并不总是伴着喧哗到来。有时它们悄然而至，模样就是一块块不起眼的胶泥字。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What material did Bi Sheng cut Chinese characters into?",
+      "audioText": "What material did Bi Sheng cut Chinese characters into?",
+      "options": [
+        {
+          "emoji": "🧱",
+          "value": "clay",
+          "text": "Clay"
+        },
+        {
+          "emoji": "🪵",
+          "value": "wood",
+          "text": "Wood"
+        },
+        {
+          "emoji": "🪨",
+          "value": "stone",
+          "text": "Stone"
+        }
+      ],
+      "answer": "clay"
+    },
+    {
+      "type": "word_builder",
+      "word": "printing",
+      "audioText": "printing"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Printing",
+        "spread",
+        "slowly",
+        "across",
+        "Asia",
+        "and",
+        "Europe"
+      ],
+      "audioText": "Printing spread slowly across Asia and Europe."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Great",
+        "changes",
+        "do",
+        "not",
+        "always",
+        "arrive",
+        "with",
+        "noise"
+      ],
+      "audioText": "Great changes do not always arrive with noise."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If movable type had never been invented, the modern world ___ very different.",
+      "choices": [
+        "would look",
+        "will look",
+        "looks"
+      ],
+      "answer": "would look",
+      "audioText": "If movable type had never been invented, the modern world would look very different."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was through this careful written record ___ later printers in many lands learned his clever technique.",
+      "choices": [
+        "that",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "audioText": "It was through this careful written record that later printers in many lands learned his clever technique."
+    }
+  ],
+  "_unknownWords": [
+    "eleventh",
+    "copyist",
+    "volume",
+    "travelled",
+    "craftsman",
+    "bi",
+    "sheng",
+    "craft",
+    "shen",
+    "kuo",
+    "written",
+    "printers",
+    "technique",
+    "readers",
+    "details",
+    "humble"
+  ]
+}

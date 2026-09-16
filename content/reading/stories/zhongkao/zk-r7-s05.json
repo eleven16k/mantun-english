@@ -1,0 +1,121 @@
+{
+  "id": "zk-r7-s05",
+  "track": "zhongkao",
+  "regionId": "zk-r7",
+  "order": 5,
+  "title": "Kindness Behind the Screen",
+  "titleCn": "屏幕背后的善意",
+  "coverEmoji": "💬",
+  "paragraphs": [
+    {
+      "text": "Today, most middle school students spend a lot of their free time online. We chat with friends, watch short videos, and share photos with others. However, some people use the internet in a bad and careless way. They say unkind words online and make other people feel sad.",
+      "translation": "如今，大多数中学生把大量空闲时间花在网上。我们和朋友聊天、看短视频、和别人分享照片。然而，有些人使用网络的方式很不友好，也很不小心。他们在网上说不友善的话，让别人感到难过。"
+    },
+    {
+      "text": "Maybe those people think that nobody can see them online. They believe that the internet is a free world without rules. If I were one of them, I would feel very lonely too.",
+      "translation": "也许那些人以为，网上没人看得见自己。他们相信互联网是一个没有规则的自由世界。如果我是他们中的一员，我也会感到非常孤独。"
+    },
+    {
+      "text": "To be kind online is not hard. Before you write a message, ask yourself one simple question. How would I feel if someone said these words to me? If I were you, I would send a warm word instead.",
+      "translation": "在网上对别人友善一点也不难。在写消息之前，先问自己一个简单的问题：如果有人对我说这些话，我会有什么感受？如果我是你，我会改发一句温暖的话。"
+    },
+    {
+      "text": "Volunteering online is another good way to help other people. Some students teach old people how to use phones through video calls. Others share useful study notes with classmates who really need them. Although these actions look small, they can make a real difference.",
+      "translation": "做线上志愿者是帮助别人的另一种好方式。有些学生通过视频通话教老年人使用手机。另一些学生把有用的学习笔记分享给真正需要的同学。虽然这些行动看起来很小，却能带来真正的改变。"
+    },
+    {
+      "text": "Rules matter on the internet as well as in real life. Words can hurt more than we think. We should not tell lies or hurt others with our words. I wish everyone could remember this simple rule all the time. Be polite online, just as you are in your daily life.",
+      "translation": "规则在网上和在现实生活中一样重要。言语带来的伤害比我们想象的更大。我们不应该说谎，也不应该用语言伤害别人。我希望每个人都能一直记住这条简单的规则。在网上要有礼貌，就像你在日常生活中一样。"
+    },
+    {
+      "text": "Nobody is perfect, and we all make mistakes sometimes. The important thing is to learn from them and do better. To make the internet a warmer place, we can start with one kind sentence today.",
+      "translation": "没有人是完美的，我们有时候都会犯错。重要的是从中学习，做得更好。为了让网络变得更温暖，我们可以从今天的一句善意的话开始。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, which action is a good way to use the internet?",
+      "audioText": "According to the passage, which action is a good way to use the internet?",
+      "options": [
+        {
+          "emoji": "😡",
+          "value": "unkind",
+          "text": "Say unkind words"
+        },
+        {
+          "emoji": "💬",
+          "value": "warm",
+          "text": "Send a warm word"
+        },
+        {
+          "emoji": "📋",
+          "value": "copy",
+          "text": "Copy others' work"
+        }
+      ],
+      "answer": "warm"
+    },
+    {
+      "type": "word_builder",
+      "word": "polite",
+      "audioText": "polite"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "To",
+        "be",
+        "kind",
+        "online",
+        "is",
+        "not",
+        "hard."
+      ],
+      "audioText": "To be kind online is not hard."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Words",
+        "can",
+        "hurt",
+        "more",
+        "than",
+        "we",
+        "think."
+      ],
+      "audioText": "Words can hurt more than we think."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If I ___ you, I would send a warm word instead.",
+      "choices": [
+        "am",
+        "were",
+        "will be"
+      ],
+      "answer": "were",
+      "audioText": "If I were you, I would send a warm word instead."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The important thing is ___ from them and do better.",
+      "choices": [
+        "to learn",
+        "learn",
+        "learns"
+      ],
+      "answer": "to learn",
+      "audioText": "The important thing is to learn from them and do better."
+    }
+  ],
+  "_unknownWords": [
+    "online",
+    "chat",
+    "unkind",
+    "world",
+    "ask",
+    "hurt"
+  ]
+}

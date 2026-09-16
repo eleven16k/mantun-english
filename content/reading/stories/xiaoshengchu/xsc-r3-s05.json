@@ -1,0 +1,128 @@
+{
+  "id": "xsc-r3-s05",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 5,
+  "title": "A Picnic in Sugar Park",
+  "titleCn": "糖糖公园的野餐",
+  "coverEmoji": "🧺",
+  "paragraphs": [
+    {
+      "text": "Last Saturday was a warm, sunny day. My family went to Sugar Park. We carried a big basket of food.",
+      "translation": "上周六是个温暖晴朗的日子。我们一家人去了糖糖公园。我们带了一大篮子食物。"
+    },
+    {
+      "text": "The park was full of happy people. Some children played games on the grass. A small band played sweet music nearby.",
+      "translation": "公园里满是快乐的人。一些孩子在草地上玩游戏。一支小乐队在附近演奏着甜甜的音乐。"
+    },
+    {
+      "text": "Mom put a red cloth on the grass. We had sandwiches, apples and candy cakes. I ate two candy cakes very fast. My little brother ate three of them!",
+      "translation": "妈妈把一块红布铺在草地上。我们吃了三明治、苹果和糖果蛋糕。我很快就吃掉两块糖果蛋糕。我弟弟吃了三块！"
+    },
+    {
+      "text": "After lunch, we played a fun game. Dad hid a golden candy in the flowers. Everyone looked for it with big smiles. My sister found it behind a small bush.",
+      "translation": "午饭后，我们玩了一个有趣的游戏。爸爸把一颗金色糖果藏在花丛里。大家都笑呵呵地去找。我妹妹在一小丛灌木后面找到了它。"
+    },
+    {
+      "text": "We watched a kite show near the lake. Ten colorful kites flew high in the sky. One kite looked like a big pink cat.",
+      "translation": "我们在湖边看了一场风筝表演。十只彩色的风筝高高地飞在天上。有一只风筝看起来像一只粉色的大猫。"
+    },
+    {
+      "text": "In the evening, we walked home slowly. I was tired but very happy. I want to go there again next year.",
+      "translation": "傍晚，我们慢慢地走回家。我很累，但非常开心。明年我还想再去那里。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where did the family go on Saturday?",
+      "audioText": "Where did the family go on Saturday?",
+      "options": [
+        {
+          "emoji": "🌳",
+          "value": "park",
+          "text": "A park"
+        },
+        {
+          "emoji": "🏪",
+          "value": "shop",
+          "text": "A shop"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "A school"
+        }
+      ],
+      "answer": "park"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the sister find behind the small bush?",
+      "audioText": "What did the sister find behind the small bush?",
+      "options": [
+        {
+          "emoji": "🍬",
+          "value": "candy",
+          "text": "Candy"
+        },
+        {
+          "emoji": "🪁",
+          "value": "kite",
+          "text": "A kite"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        }
+      ],
+      "answer": "candy"
+    },
+    {
+      "type": "word_builder",
+      "word": "flowers",
+      "audioText": "flowers"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "My",
+        "sister",
+        "found",
+        "it",
+        "behind",
+        "a",
+        "small",
+        "bush."
+      ],
+      "audioText": "My sister found it behind a small bush."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "We ___ sandwiches, apples and candy cakes.",
+      "choices": [
+        "had",
+        "has",
+        "have"
+      ],
+      "answer": "had",
+      "audioText": "We had sandwiches, apples and candy cakes."
+    }
+  ],
+  "_unknownWords": [
+    "went",
+    "band",
+    "ate",
+    "hid",
+    "found",
+    "bush",
+    "colorful",
+    "flew"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "zk-r7-s03",
+  "track": "zhongkao",
+  "regionId": "zk-r7",
+  "order": 3,
+  "title": "Rules and Kindness Online",
+  "titleCn": "网络上的规则与善意",
+  "coverEmoji": "🌐",
+  "paragraphs": [
+    {
+      "text": "The internet is now a big part of our daily life. It lets us talk with friends and find useful information quickly and easily. However, it can also bring problems when people forget to be kind.",
+      "translation": "如今，互联网是我们日常生活中很重要的一部分。它让我们能和朋友们聊天，也能又快又方便地找到有用的信息。不过，当人们忘记友善时，它也会带来问题。"
+    },
+    {
+      "text": "In the real world, we follow rules on the road and in the classroom. If there were no rules, our city would be a dangerous place. The online world works in the same way, because it is a shared space. Rules keep our shared space safe and fair. If someone shares false news, other people may believe it and feel worried.",
+      "translation": "在现实世界里，我们在马路上、在教室里都要遵守规则。如果没有规则，我们的城市会变得很危险。网络世界也是这样运作的，因为它同样是一个共享的空间。规则让我们的共享空间安全而公平。如果有人传播虚假消息，其他人可能会信以为真，并因此感到担忧。"
+    },
+    {
+      "text": "Being polite online is not difficult, but it needs a little thought. We should think twice before we type angry words on a screen. Words can hurt more than we think. If I were a writer with many readers, I would choose my words carefully. To hurt other people with words is never a brave or clever thing. In fact, a kind comment can make the person who reads it feel much happier.",
+      "translation": "在网上讲礼貌并不难，只是需要多想一步。在屏幕上敲下愤怒的字句之前，我们应该多想一想。言语带来的伤害比我们想象的要大。如果我是一位拥有很多读者的作家，我也会谨慎地选择自己的用词。用言语去伤害别人，从来都不是勇敢或聪明的做法。其实，一条友善的评论就能让读到它的人开心许多。"
+    },
+    {
+      "text": "Rules are important, and kindness is just as important as rules in our lives. Many students spend their free time helping other people in need. Some of them teach old people how to use smart phones. Others clean parks or collect rubbish with their friends at weekends. If I had more free time, I would join a volunteer team too.",
+      "translation": "规则很重要，而在我们的生活中，善意和规则同样重要。许多学生把空闲时间用来帮助有需要的人。他们中有些人教老人使用智能手机，还有些人在周末和朋友一起打扫公园、捡拾垃圾。如果我有更多空闲时间，我也会加入一个志愿者团队。"
+    },
+    {
+      "text": "To help other people is really a way of helping ourselves. When we give our time, we also learn new skills and make new friends. I wish more young people could feel this kind of happiness.",
+      "translation": "帮助别人其实也是在帮助自己。当我们付出时间时，我们也会学到新技能、交到新朋友。我希望更多年轻人能感受到这种快乐。"
+    },
+    {
+      "text": "So why not start from today and from small things? We can follow the rules, speak kindly online, and help someone nearby. If each of us did one small good thing, our world would be much warmer.",
+      "translation": "那么，何不从今天开始、从小事开始呢？我们可以遵守规则，在网上友善发言，也可以帮助身边的人。如果我们每个人都做一件小小的好事，我们的世界会温暖得多。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What do some students teach old people to use?",
+      "audioText": "What do some students teach old people to use?",
+      "options": [
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "A smart phone"
+        },
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "A bicycle"
+        },
+        {
+          "emoji": "🎸",
+          "value": "guitar",
+          "text": "A guitar"
+        }
+      ],
+      "answer": "phone"
+    },
+    {
+      "type": "word_builder",
+      "word": "volunteer",
+      "audioText": "volunteer"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Rules",
+        "keep",
+        "our",
+        "shared",
+        "space",
+        "safe",
+        "and",
+        "fair."
+      ],
+      "audioText": "Rules keep our shared space safe and fair."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Words",
+        "can",
+        "hurt",
+        "more",
+        "than",
+        "we",
+        "think."
+      ],
+      "audioText": "Words can hurt more than we think."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If there were no rules, our city ___ be a dangerous place.",
+      "choices": [
+        "would",
+        "will",
+        "was"
+      ],
+      "answer": "would",
+      "audioText": "If there were no rules, our city would be a dangerous place."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Many students spend their free time ___ other people in need.",
+      "choices": [
+        "helping",
+        "help",
+        "helps"
+      ],
+      "answer": "helping",
+      "audioText": "Many students spend their free time helping other people in need."
+    }
+  ],
+  "_unknownWords": [
+    "big",
+    "talk",
+    "easily",
+    "world",
+    "online",
+    "false",
+    "type",
+    "hurt",
+    "writer",
+    "readers",
+    "choose",
+    "comment",
+    "happier",
+    "kindness",
+    "join",
+    "happiness"
+  ]
+}

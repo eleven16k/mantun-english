@@ -1,0 +1,116 @@
+{
+  "id": "zk-r3-s14",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 14,
+  "title": "A Home That Listens",
+  "titleCn": "会听话的家",
+  "coverEmoji": "🏠",
+  "paragraphs": [
+    {
+      "text": "Imagine a home that listens to your voice and knows what you need. In many cities today, this is no longer just a story. Smart homes are built with small computers inside their walls. These computers never sleep, and they are always ready to help.",
+      "translation": "想象一个能听懂你的声音、知道你需要什么的房子。在今天许多城市里，这已经不再只是故事。智能住宅的墙体里装着小电脑。这些电脑从不睡觉，随时准备帮忙。"
+    },
+    {
+      "text": "In the morning, the lights are turned on by a soft voice. \"Good morning,\" you say, and the curtains open slowly. The radio is set to your favorite music. The water is heated for your shower. Everything is ready before you leave your bed.",
+      "translation": "早晨，一句轻声的话就能把灯打开。你说一声“早上好”，窗帘便慢慢拉开。收音机被调到你喜欢听的音乐。洗澡水已经热好了。你还没下床，一切就已准备妥当。"
+    },
+    {
+      "text": "Sensors are placed in every room of the house. They can feel the temperature, the light and even the air. If the air is too dry, a small machine might add water to it. If a window is left open, a message may be sent to your phone.",
+      "translation": "房子的每个房间都装了传感器。它们能感知温度、光线，甚至空气。如果空气太干，小机器可能会给它加些水分。如果窗户没关，你的手机上可能会收到一条信息。"
+    },
+    {
+      "text": "Safety is another big part of the smart home. The front door can be locked by your phone from far away. A camera can be checked at any time from your office. When something looks wrong, a warning is sent to you at once.",
+      "translation": "安全是智能住宅的另一个重要部分。即使你身在远处，也能用手机把前门锁好。在办公室，你随时都能查看摄像头。一旦有什么不对劲，警告会立刻发给你。"
+    },
+    {
+      "text": "Some people worry that their homes know too much about them. Your daily habits are recorded, and this information must be kept safe. Companies are asked to protect it, and new laws are made in many countries.",
+      "translation": "有些人担心，这样的家对他们了解得太多。你的日常习惯会被记录下来，而这些信息必须被妥善保护。公司被要求保护好这些信息，许多国家也制定了新的法律。"
+    },
+    {
+      "text": "A smart home cannot cook a perfect dinner or love you like a family. But it can save time, energy and water every single day. The house is not alive, yet it works like a quiet helper. Maybe your next home will be one of them.",
+      "translation": "智能住宅没法做出一顿完美的晚餐，也不会像家人那样爱你。但它每天都能省下时间、能源和水。房子并没有生命，却像一位安静的帮手。也许你的下一个家，就是这样的房子。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In the passage, which thing can be checked at any time?",
+      "audioText": "In the passage, which thing can be checked at any time?",
+      "options": [
+        {
+          "emoji": "📷",
+          "value": "camera",
+          "text": "Camera"
+        },
+        {
+          "emoji": "🪟",
+          "value": "window",
+          "text": "Window"
+        },
+        {
+          "emoji": "🔊",
+          "value": "radio",
+          "text": "Radio"
+        }
+      ],
+      "answer": "camera"
+    },
+    {
+      "type": "word_builder",
+      "word": "sensor",
+      "audioText": "sensor"
+    },
+    {
+      "type": "word_builder",
+      "word": "warning",
+      "audioText": "warning"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "A",
+        "message",
+        "may",
+        "be",
+        "sent",
+        "to",
+        "your",
+        "phone."
+      ],
+      "audioText": "A message may be sent to your phone."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "In the morning, the lights are ___ on by a soft voice.",
+      "choices": [
+        "turned",
+        "turns",
+        "turning"
+      ],
+      "answer": "turned",
+      "audioText": "In the morning, the lights are turned on by a soft voice."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If the air is too dry, a small machine ___ add water to it.",
+      "choices": [
+        "might",
+        "must",
+        "cannot"
+      ],
+      "answer": "might",
+      "audioText": "If the air is too dry, a small machine might add water to it."
+    }
+  ],
+  "_unknownWords": [
+    "curtains",
+    "sensors",
+    "room",
+    "add",
+    "big",
+    "wrong",
+    "asked",
+    "cannot"
+  ]
+}

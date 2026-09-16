@@ -1,0 +1,114 @@
+{
+  "id": "xsc-r7-s03",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r7",
+  "order": 3,
+  "title": "Lily and the Little Dragon",
+  "titleCn": "莉莉和小龙",
+  "coverEmoji": "🐉",
+  "paragraphs": [
+    {
+      "text": "Lily was a quiet girl. She was smaller than her friends. One day, she found a small door in the garden. The door was open. She could see a soft light inside.",
+      "translation": "莉莉是个安静的女孩。她比朋友们都瘦小。一天，她在花园里发现了一扇小门。门开着，里面透出柔和的光。"
+    },
+    {
+      "text": "Lily walked in. She saw a magic castle. It was taller than any castle in her books. A little dragon sat by the gate. It was crying. 'I can't fly,' it said. 'My wings are too small.'",
+      "translation": "莉莉走了进去。她看见一座魔法城堡，比书里任何一座城堡都高。一条小龙坐在大门旁，正在哭泣。“我飞不起来，”它说，“我的翅膀太小了。”"
+    },
+    {
+      "text": "Lily said, 'Don't be sad. I can help you.' The dragon smiled. They went to the tallest tower. The wind was strong there. 'Jump when I count to three,' Lily said.",
+      "translation": "莉莉说：“别难过，我可以帮你。”小龙笑了。他们来到最高的塔楼上，那里的风很大。“我数到三，你就跳。”莉莉说。"
+    },
+    {
+      "text": "The dragon was afraid. Lily held its hand. 'You are braver than you think,' she said. While the wind blew, the dragon opened its wings. Then it jumped. For a moment, it went down. Then it went up!",
+      "translation": "小龙很害怕。莉莉握住它的手。“你比自己想的更勇敢。”她说。风呼呼地吹着，小龙张开了翅膀，然后跳了下去。有一瞬间它往下坠，接着就飞了起来！"
+    },
+    {
+      "text": "The dragon flew higher and higher. It was the happiest dragon in the world. 'Thank you, Lily,' it said. 'You are my best friend.' Lily laughed. She was not afraid now.",
+      "translation": "小龙越飞越高。它是世界上最快乐的小龙。“谢谢你，莉莉，”它说，“你是我最好的朋友。”莉莉笑了，现在她一点也不害怕了。"
+    },
+    {
+      "text": "When Lily went home, the door was still there. She was still small, but she felt big inside. She knew she could do hard things too.",
+      "translation": "当莉莉回到家时，那扇门还在那里。她依然瘦小，但心里觉得自己长大了。她知道，自己也能做成难事。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Who was crying by the gate?",
+      "audioText": "Who was crying by the gate?",
+      "options": [
+        {
+          "emoji": "🐉",
+          "value": "dragon",
+          "text": "A dragon"
+        },
+        {
+          "emoji": "🐕",
+          "value": "dog",
+          "text": "A dog"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A bird"
+        }
+      ],
+      "answer": "dragon"
+    },
+    {
+      "type": "word_builder",
+      "word": "castle",
+      "audioText": "castle"
+    },
+    {
+      "type": "word_builder",
+      "word": "braver",
+      "audioText": "braver"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "was",
+        "smaller",
+        "than",
+        "her",
+        "friends."
+      ],
+      "audioText": "She was smaller than her friends."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was the ___ dragon in the world.",
+      "choices": [
+        "happiest",
+        "happy",
+        "happier"
+      ],
+      "answer": "happiest",
+      "audioText": "It was the happiest dragon in the world."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "While the wind ___, the dragon opened its wings.",
+      "choices": [
+        "blew",
+        "blows",
+        "blowing"
+      ],
+      "answer": "blew",
+      "audioText": "While the wind blew, the dragon opened its wings."
+    }
+  ],
+  "_unknownWords": [
+    "can't",
+    "don't",
+    "tower",
+    "count",
+    "braver",
+    "blew",
+    "happiest",
+    "world"
+  ]
+}

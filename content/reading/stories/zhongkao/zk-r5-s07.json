@@ -1,0 +1,121 @@
+{
+  "id": "zk-r5-s07",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 7,
+  "title": "The Teacher Who Grew a Forest",
+  "titleCn": "种出一片森林的老师",
+  "coverEmoji": "🌳",
+  "paragraphs": [
+    {
+      "text": "Mr. Chen was a teacher who lived in a small village in the north. The hills around his home were dry and brown. When he was a boy, he had seen tall trees on those hills. But by 1990, most of them were gone.",
+      "translation": "陈先生是一位住在北方小村庄里的老师。他家周围的山丘又干又秃。小时候，他曾在那些山上见过高大的树。可是到了1990年，它们大多都不见了。"
+    },
+    {
+      "text": "One spring morning, Mr. Chen found a small plant which grew near a rock. It was the only green thing on the hill that year. He looked at it for a long time. Then he made a plan that changed his whole life.",
+      "translation": "一个春天的早晨，陈先生发现岩石边长着一棵小植物。那是那年山上唯一的绿色。他盯着它看了很久。然后，他定下了一个改变他一生的计划。"
+    },
+    {
+      "text": "He began to plant trees on the hill every weekend. Many people laughed at him, because the ground was too dry. His wife, who always believed in him, helped him carry water. In the first year, only three young trees lived.",
+      "translation": "他开始每个周末都到山上种树。很多人嘲笑他，因为那里的土太干了。他的妻子一直相信他，帮他挑水。第一年，只有三棵小树活了下来。"
+    },
+    {
+      "text": "After that, he learned which trees could grow in dry ground. He collected seeds from other villages and small towns. He walked for hours to find the right ones. By 2010, he had planted ten thousand trees.",
+      "translation": "在那之后，他弄清了哪些树能在干旱的土地上生长。他从别的村庄和小镇收集种子。为了找到合适的种子，他一走就是好几个小时。到2010年，他已经种下了一万棵树。"
+    },
+    {
+      "text": "Today the hill is covered with green leaves and tall trees. Birds that had left the village long ago have come back. The air is cooler, and the ground is soft and rich. Children play under trees which Mr. Chen planted with his own hands.",
+      "translation": "如今，山丘上盖满了绿叶和高大的树木。很久以前离开村子的鸟儿又回来了。空气更凉爽了，土地松软又肥沃。孩子们在陈先生亲手种下的树下玩耍。"
+    },
+    {
+      "text": "Mr. Chen is over eighty now, but he still works on the hill. \"A forest begins with one small seed,\" he says with a smile. His students, who call him Grandpa Green, often come to help him.",
+      "translation": "陈先生现在八十多岁了，但他仍然在山上干活。“一片森林，始于一颗小小的种子。”他笑着说。他的学生们都叫他“绿色爷爷”，常常来帮他。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the hills look like before Mr. Chen planted trees?",
+      "audioText": "What did the hills look like before Mr. Chen planted trees?",
+      "options": [
+        {
+          "emoji": "🟤",
+          "value": "dry",
+          "text": "Dry and brown"
+        },
+        {
+          "emoji": "🌳",
+          "value": "green",
+          "text": "Green and full of trees"
+        },
+        {
+          "emoji": "❄️",
+          "value": "snow",
+          "text": "Covered with snow"
+        }
+      ],
+      "answer": "dry"
+    },
+    {
+      "type": "word_builder",
+      "word": "forest",
+      "audioText": "forest"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "He",
+        "looked",
+        "at",
+        "it",
+        "for",
+        "a",
+        "long",
+        "time."
+      ],
+      "audioText": "He looked at it for a long time."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "By",
+        "2010,",
+        "he",
+        "had",
+        "planted",
+        "ten",
+        "thousand",
+        "trees."
+      ],
+      "audioText": "By 2010, he had planted ten thousand trees."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Mr. Chen was a teacher ___ lived in a small village in the north.",
+      "choices": [
+        "who",
+        "which",
+        "what"
+      ],
+      "answer": "who",
+      "audioText": "Mr. Chen was a teacher who lived in a small village in the north."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "He collected ___ from other villages and small towns.",
+      "choices": [
+        "seeds",
+        "leaves",
+        "rocks"
+      ],
+      "answer": "seeds",
+      "audioText": "He collected seeds from other villages and small towns."
+    }
+  ],
+  "_unknownWords": [
+    "chen",
+    "seen",
+    "gone",
+    "seeds"
+  ]
+}

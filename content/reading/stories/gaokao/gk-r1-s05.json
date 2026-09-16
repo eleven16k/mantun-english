@@ -1,0 +1,122 @@
+{
+  "id": "gk-r1-s05",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 5,
+  "title": "The Tree That Keeps a Diary",
+  "titleCn": "会写日记的树",
+  "coverEmoji": "🌳",
+  "paragraphs": [
+    {
+      "text": "Look at the cut surface of a tree trunk, and you will notice a series of rings spreading from the centre. Each ring marks one year of growth, which makes the trunk a natural diary. Growing in a wet, warm summer, a tree adds a wide ring; facing a cold, dry season, it adds a narrow one. These patterns, hidden in the wood, have recorded the weather for centuries.",
+      "translation": "看一看树干被锯开的截面，你会注意到一圈圈从中心向外扩散的纹路。每一圈代表一年的生长，这让树干成了一本天然的日记。遇上湿润温暖的夏天，树就长出一圈宽纹；面对寒冷干燥的季节，它就长出一圈窄纹。这些藏在木质里的纹路，已经记录了数百年的天气。"
+    },
+    {
+      "text": "Scientists who study these rings work like detectives. The idea that a tree keeps a record of rainfall is not new, but modern methods are far more exact. Measuring the width of each ring, researchers can date a piece of wood to the very year. This skill, developed over the past century, now supports many other fields.",
+      "translation": "研究这些年轮的科学家像侦探一样工作。树木会记录降雨量，这个想法并不新鲜，但现代方法要精确得多。通过测量每一圈年轮的宽度，研究人员能把一块木头确定到具体年份。这项在过去一百年里发展起来的技能，如今支撑着许多其他领域。"
+    },
+    {
+      "text": "A ring that is unusually narrow may point to a year of drought, when the tree struggled to grow. Reading hundreds of rings together, scientists have rebuilt the climate of the past two thousand years. Builders and historians also depend on this method, since the wood in an old roof can tell its own age.",
+      "translation": "如果某一圈年轮窄得反常，那可能意味着那一年发生了干旱，树木长得很艰难。把成百上千圈年轮放在一起解读，科学家重建了过去两千年的气候。建筑者和历史学家也依赖这种方法，因为老屋顶上的木料能说出自己的年纪。"
+    },
+    {
+      "text": "Sometimes the story becomes dramatic. After a huge volcano sends dust into the sky, the following summer is cool and grey, so the ring for that year stays thin. Such marks, found in trees on several continents, help us date ancient volcanoes. Known as 'frost rings', they are like special notes in the diary.",
+      "translation": "有时，这本日记里的故事会变得很戏剧化。一座巨大的火山把尘埃送入天空后，接下来那个夏天又冷又阴暗，于是那一年的年轮就很薄。这些在几大洲的树木中都能找到的痕迹，帮助我们确定古代火山喷发的时间。它们被称为“霜轮”，就像是日记里特别的批注。"
+    },
+    {
+      "text": "Today the diaries are still being written. As the climate changes, new rings are adding pages that no one has read yet. Whether the coming rings will be wide or narrow depends partly on us, because the air around every tree is shaped by the choices we make.",
+      "translation": "今天，这些日记仍在被书写。随着气候变化，新的年轮正在增添还没有人读过的页面。未来的年轮是宽是窄，部分取决于我们，因为每棵树周围的空气，都由我们做出的选择塑造。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what appears on the cut surface of a tree trunk?",
+      "audioText": "According to the text, what appears on the cut surface of a tree trunk?",
+      "options": [
+        {
+          "emoji": "⭕",
+          "value": "rings",
+          "text": "Rings spreading from the centre"
+        },
+        {
+          "emoji": "➖",
+          "value": "lines",
+          "text": "Straight parallel lines"
+        },
+        {
+          "emoji": "🔺",
+          "value": "triangles",
+          "text": "Sharp triangles"
+        }
+      ],
+      "answer": "rings"
+    },
+    {
+      "type": "word_builder",
+      "word": "diary",
+      "audioText": "diary"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Each",
+        "ring",
+        "marks",
+        "one",
+        "year",
+        "of",
+        "growth"
+      ],
+      "audioText": "Each ring marks one year of growth."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Sometimes",
+        "the",
+        "story",
+        "becomes",
+        "dramatic"
+      ],
+      "audioText": "Sometimes the story becomes dramatic."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Growing in a wet, warm summer, a tree ___ a wide ring.",
+      "choices": [
+        "adds",
+        "removes",
+        "hides"
+      ],
+      "answer": "adds",
+      "audioText": "Growing in a wet, warm summer, a tree adds a wide ring."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The idea ___ a tree keeps a record of rainfall is not new.",
+      "choices": [
+        "that",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "audioText": "The idea that a tree keeps a record of rainfall is not new."
+    }
+  ],
+  "_unknownWords": [
+    "trunk",
+    "series",
+    "hidden",
+    "rainfall",
+    "width",
+    "researchers",
+    "rebuilt",
+    "builders",
+    "historians",
+    "dramatic",
+    "grey",
+    "known",
+    "written"
+  ]
+}

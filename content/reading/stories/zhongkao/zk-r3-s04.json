@@ -1,0 +1,117 @@
+{
+  "id": "zk-r3-s04",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 4,
+  "title": "A Watch That Knows Your Heart",
+  "titleCn": "懂你心跳的手表",
+  "coverEmoji": "⌚",
+  "paragraphs": [
+    {
+      "text": "Smart watches are worn by millions of people today. Many years ago, a watch was only used to tell the time. Now these small machines can do much more than that.",
+      "translation": "如今，智能手表被数以百万计的人佩戴着。很多年前，手表只被用来报时。现在，这些小机器能做的事情远不止这些。"
+    },
+    {
+      "text": "Your watch can count your steps and measure how fast your heart beats. The information is sent to your phone at once. You can read it on a small screen, day and night. Some watches can even say that you should move more.",
+      "translation": "你的手表能计步，还能测出你的心跳有多快。这些信息会立刻被发送到你的手机上。你可以在一个小屏幕上随时查看。有些手表甚至会提醒你该多活动活动。"
+    },
+    {
+      "text": "A tiny part inside the watch is used to check your heart. It sends a light through your skin and watches the blood. The results are stored in the watch and studied by a program.",
+      "translation": "手表内部有一个小小的部件，被用来监测你的心脏。它发出一束光穿过你的皮肤，观察血液的流动。这些结果会被保存在手表里，并由一个程序进行分析。"
+    },
+    {
+      "text": "Last year, a man in the UK was woken by his watch at night. His heart was beating much too fast. He thought that something must be wrong with his heart. He called a doctor at once, and his life was saved.",
+      "translation": "去年，英国一位男士夜里被他的手表叫醒了。他的心跳得太快了。他觉得自己的心脏一定出了问题。他立刻叫来了医生，他的生命被救了回来。"
+    },
+    {
+      "text": "However, a smart watch is not a real doctor. Its advice might not always be right. The numbers must be checked by a doctor. So do not worry too much about them.",
+      "translation": "不过，智能手表并不是真正的医生。它给出的建议可能并不总是正确的。这些数据必须由医生来核实。所以不要为它们过分担心。"
+    },
+    {
+      "text": "Today, smart watches are used by people of all ages. They can help us live more healthily and feel safe. But remember that they are only tools. You must still take good care of yourself.",
+      "translation": "如今，各个年龄段的人都在使用智能手表。它们能帮助我们生活得更健康，也让我们感到安心。但请记住，它们只是工具。你仍然必须好好照顾自己。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does the watch send through your skin?",
+      "audioText": "What does the watch send through your skin?",
+      "options": [
+        {
+          "emoji": "💡",
+          "value": "light",
+          "text": "Light"
+        },
+        {
+          "emoji": "💧",
+          "value": "water",
+          "text": "Water"
+        },
+        {
+          "emoji": "🎵",
+          "value": "music",
+          "text": "Music"
+        }
+      ],
+      "answer": "light"
+    },
+    {
+      "type": "word_builder",
+      "word": "measure",
+      "audioText": "measure"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "A tiny part inside the watch ___ used to check your heart.",
+      "choices": [
+        "is",
+        "are",
+        "were"
+      ],
+      "answer": "is",
+      "audioText": "A tiny part inside the watch is used to check your heart."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "numbers",
+        "must",
+        "be",
+        "checked",
+        "by",
+        "a",
+        "doctor."
+      ],
+      "audioText": "The numbers must be checked by a doctor."
+    },
+    {
+      "type": "word_builder",
+      "word": "screen",
+      "audioText": "screen"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "He thought that something ___ be wrong with his heart.",
+      "choices": [
+        "must",
+        "mustn't",
+        "can't"
+      ],
+      "answer": "must",
+      "audioText": "He thought that something must be wrong with his heart."
+    }
+  ],
+  "_unknownWords": [
+    "worn",
+    "millions",
+    "count",
+    "measure",
+    "skin",
+    "uk",
+    "woken",
+    "wrong",
+    "healthily"
+  ]
+}

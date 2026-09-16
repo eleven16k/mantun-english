@@ -1,0 +1,124 @@
+{
+  "id": "xsc-r3-s13",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 13,
+  "title": "The Candy Town Baking Day",
+  "titleCn": "糖果镇烘焙日",
+  "coverEmoji": "🎂",
+  "paragraphs": [
+    {
+      "text": "Last Saturday was a special day. The people of Candy Town were very happy. They wanted to bake a giant candy cake.",
+      "translation": "上周六是个特别的日子。糖果镇的人们都特别开心。他们想烤一个巨大的糖果蛋糕。"
+    },
+    {
+      "text": "Lily and Tom went to Grandma's house early. Grandma had a big red bowl. She put sugar and eggs in it. Tom mixed them with a long spoon. Lily added some sweet candy drops.",
+      "translation": "莉莉和汤姆一大早就去了奶奶家。奶奶有一个大大的红碗。她把糖和鸡蛋放了进去。汤姆用一把长勺子把它们拌匀。莉莉又加了一些甜甜的糖果粒。"
+    },
+    {
+      "text": "Then they carried the cake to the square. All their friends were there. Mr. Bell played his small guitar. The children sang and danced happily. Everyone waited for the big cake.",
+      "translation": "然后他们把蛋糕搬到了广场上。朋友们都在那儿。贝尔先生弹起了他的小吉他。孩子们开心地又唱又跳。大家都等着那个大蛋糕。"
+    },
+    {
+      "text": "The cake was as big as a table. It had pink cream and candy stars. Grandma cut it into small pieces. Lily ate two pieces very fast. Tom said it was the best cake.",
+      "translation": "那蛋糕有一张桌子那么大。上面有粉色的奶油和糖果星星。奶奶把它切成了小块。莉莉很快就吃了两块。汤姆说这是最好吃的蛋糕。"
+    },
+    {
+      "text": "After that, they played games on the grass. They ran and jumped and laughed a lot. The sun went down slowly. Soon the bright stars came out.",
+      "translation": "之后，他们在草地上玩游戏。他们跑跑跳跳，笑了好多。太阳慢慢落下去了。很快，明亮的星星出来了。"
+    },
+    {
+      "text": "At night, they sat around a warm fire. Grandma told them a funny story. Everyone clapped their hands and laughed. It was a wonderful day for all.",
+      "translation": "晚上，他们围着一堆温暖的篝火坐下。奶奶给他们讲了一个好笑的故事。大家拍着手笑了起来。对所有人来说，这都是美好的一天。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Grandma put in the big red bowl?",
+      "audioText": "What did Grandma put in the big red bowl?",
+      "options": [
+        {
+          "emoji": "🥚",
+          "value": "eggs",
+          "text": "Eggs"
+        },
+        {
+          "emoji": "🍫",
+          "value": "chocolate",
+          "text": "Chocolate"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apples",
+          "text": "Apples"
+        }
+      ],
+      "answer": "eggs"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Mr. Bell play for the children?",
+      "audioText": "What did Mr. Bell play for the children?",
+      "options": [
+        {
+          "emoji": "🎸",
+          "value": "guitar",
+          "text": "A guitar"
+        },
+        {
+          "emoji": "🥁",
+          "value": "drum",
+          "text": "A drum"
+        },
+        {
+          "emoji": "🎺",
+          "value": "trumpet",
+          "text": "A trumpet"
+        }
+      ],
+      "answer": "guitar"
+    },
+    {
+      "type": "word_builder",
+      "word": "danced",
+      "audioText": "danced"
+    },
+    {
+      "type": "word_builder",
+      "word": "guitar",
+      "audioText": "guitar"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Tom",
+        "mixed",
+        "them",
+        "with",
+        "a",
+        "long",
+        "spoon."
+      ],
+      "audioText": "Tom mixed them with a long spoon."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The cake ___ as big as a table.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": "was",
+      "audioText": "The cake was as big as a table."
+    }
+  ],
+  "_unknownWords": [
+    "bake",
+    "grandma's",
+    "mixed",
+    "added",
+    "happily"
+  ]
+}

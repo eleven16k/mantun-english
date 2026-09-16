@@ -1,0 +1,122 @@
+{
+  "id": "xsc-r6-s05",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r6",
+  "order": 5,
+  "title": "Pip, Our Space Robot",
+  "titleCn": "我们的太空机器人皮普",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "Hello! I am Leo. I am a young scientist in space. I live on Space Station Blue with my family.",
+      "translation": "你好！我是利奥。我是太空里的一名小科学家。我和家人住在蓝色太空站上。"
+    },
+    {
+      "text": "Tomorrow will be a big day for us. A new space bus will arrive at ten. It will bring food, water, and some new books.",
+      "translation": "明天对我们来说会是重要的一天。一辆新的太空巴士将在十点到达。它会带来食物、水和一些新书。"
+    },
+    {
+      "text": "My robot Pip and I must check the garden. The plants must have water and light every day. My little sister should help me. But she is sleeping now.",
+      "translation": "我和我的机器人皮普必须去检查花园。这些植物每天都必须有水和光。我的小妹妹本该来帮我。可她现在正在睡觉。"
+    },
+    {
+      "text": "Pip could do the work alone. But I want to learn. I will write down every plant in my notebook. A good scientist must ask many questions.",
+      "translation": "皮普可以独自完成这些活儿。但我想学着自己做。我会把每一株植物都记在我的笔记本上。好的科学家必须问很多问题。"
+    },
+    {
+      "text": "After lunch, we will wait by the big window. We could see the bus from far away. It will look like a bright, small star.",
+      "translation": "午饭后，我们会在那扇大窗户边等着。我们能从很远的地方看见那辆巴士。它看上去会像一颗明亮的小星星。"
+    },
+    {
+      "text": "The bus will stop at our station. I will say hello to the pilot. One day, I will fly a space bus too. What will you do in space?",
+      "translation": "巴士会在我们的太空站停下来。我会向飞行员问好。总有一天，我也会驾驶太空巴士。你在太空里会做些什么呢？"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What will the space bus bring to the station?",
+      "audioText": "What will the space bus bring to the station?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "books",
+          "text": "Books"
+        },
+        {
+          "emoji": "🐶",
+          "value": "dog",
+          "text": "A dog"
+        },
+        {
+          "emoji": "🎸",
+          "value": "guitar",
+          "text": "A guitar"
+        }
+      ],
+      "answer": "books"
+    },
+    {
+      "type": "image_choice",
+      "question": "What will the bus look like from far away?",
+      "audioText": "What will the bus look like from far away?",
+      "options": [
+        {
+          "emoji": "⭐",
+          "value": "star",
+          "text": "A bright star"
+        },
+        {
+          "emoji": "🌙",
+          "value": "moon",
+          "text": "The moon"
+        },
+        {
+          "emoji": "☁️",
+          "value": "cloud",
+          "text": "A cloud"
+        }
+      ],
+      "answer": "star"
+    },
+    {
+      "type": "word_builder",
+      "word": "robot",
+      "audioText": "robot"
+    },
+    {
+      "type": "word_builder",
+      "word": "garden",
+      "audioText": "garden"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "A",
+        "good",
+        "scientist",
+        "must",
+        "ask",
+        "many",
+        "questions."
+      ],
+      "audioText": "A good scientist must ask many questions."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The plants must have water and ___ every day.",
+      "choices": [
+        "light",
+        "milk",
+        "music"
+      ],
+      "answer": "light",
+      "audioText": "The plants must have water and light every day."
+    }
+  ],
+  "_unknownWords": [
+    "leo",
+    "pip",
+    "ask"
+  ]
+}

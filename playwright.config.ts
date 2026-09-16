@@ -29,9 +29,9 @@ export default defineConfig({
   ],
   webServer: [
     {
-      // lexi-api (standalone backend + Socket.IO) on :4199 with an isolated DB
-      command: "rm -rf .tmp/e2e-apidata && DATA_DIR=./.tmp/e2e-apidata PORT=4199 JWT_SECRET=test-secret node server.js",
-      cwd: "../lexi-api",
+      // mt-teach-api (standalone backend + Socket.IO) on :4199 with an isolated DB
+      command: "rm -rf .tmp/e2e-apidata && DATA_DIR=./.tmp/e2e-apidata NEXT_DIST_DIR=.next-e2e PORT=4199 JWT_SECRET=test-secret node server.js",
+      cwd: "../mt-teach-api",
       url: "http://localhost:4199/api/health",
       reuseExistingServer: !process.env.CI,
       timeout: 150_000,

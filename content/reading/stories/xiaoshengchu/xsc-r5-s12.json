@@ -1,0 +1,132 @@
+{
+  "id": "xsc-r5-s12",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 12,
+  "title": "The Deepest Cave in Dino Valley",
+  "titleCn": "恐龙谷最深的洞穴",
+  "coverEmoji": "🕳️",
+  "paragraphs": [
+    {
+      "text": "Last week, Tio found an old map. The map showed the deepest cave in Dino Valley. \"Let's go there!\" Tio said to his two friends. His friends, Momo and Rex, said yes.",
+      "translation": "上周，蒂奥发现了一张旧地图。地图上标着恐龙谷最深的洞穴。“我们去那儿吧！”蒂奥对他的两个朋友说。他的朋友莫莫和雷克斯答应了。"
+    },
+    {
+      "text": "They passed the tallest trees and the biggest rocks. The cave was dark and very cold inside. Tio felt a little afraid because it was so dark. But his friends said, \"We are with you.\"",
+      "translation": "他们走过最高的树和最大的石头。洞里又黑又冷。蒂奥有点害怕，因为里面太黑了。但朋友们说：“我们陪着你呢。”"
+    },
+    {
+      "text": "They went into the cave very slowly. Rex found a long rope near the door. Momo held the rope because she was the strongest. They climbed down and down for a long time.",
+      "translation": "他们慢慢地走进洞里。雷克斯在洞口附近找到一根长绳子。莫莫抓着绳子，因为她最强壮。他们往下爬了很久很久。"
+    },
+    {
+      "text": "At the bottom, they found a beautiful blue lake. It was the most quiet place in the valley. Small lights shone on the water like stars. The friends sat down and ate sweet apples.",
+      "translation": "在洞底，他们发现了一个美丽的蓝色湖泊。这是山谷里最安静的地方。小小的光点在水面上闪烁，像星星一样。朋友们坐下来，吃着甜甜的苹果。"
+    },
+    {
+      "text": "Then Tio heard a soft sound behind a rock. A baby dinosaur was sleeping there. It was the smallest dinosaur in the valley. They gave it apples and it smiled at them.",
+      "translation": "这时，蒂奥听到一块石头后面传来轻轻的声音。一只恐龙宝宝正睡在那儿。它是山谷里最小的恐龙。他们给了它苹果，它朝他们笑了。"
+    },
+    {
+      "text": "They walked home and told everyone about the cave. It was the best day of their lives. Tio said, \"I am not afraid because I have good friends.\"",
+      "translation": "他们走回家，把洞穴的事讲给每个人听。这是他们一生中最棒的一天。蒂奥说：“我不害怕，因为我有好朋友。”"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Tio find last week?",
+      "audioText": "What did Tio find last week?",
+      "options": [
+        {
+          "emoji": "🗺️",
+          "value": "map",
+          "text": "A map"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        },
+        {
+          "emoji": "🪢",
+          "value": "rope",
+          "text": "A rope"
+        }
+      ],
+      "answer": "map"
+    },
+    {
+      "type": "image_choice",
+      "question": "What was sleeping behind the rock?",
+      "audioText": "What was sleeping behind the rock?",
+      "options": [
+        {
+          "emoji": "🦕",
+          "value": "dino",
+          "text": "A baby dinosaur"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A fish"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A bird"
+        }
+      ],
+      "answer": "dino"
+    },
+    {
+      "type": "word_builder",
+      "word": "deepest",
+      "audioText": "deepest"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "cave",
+        "was",
+        "dark",
+        "and",
+        "very",
+        "cold",
+        "inside."
+      ],
+      "audioText": "The cave was dark and very cold inside."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "They passed the ___ trees and the biggest rocks.",
+      "choices": [
+        "tallest",
+        "taller",
+        "tall"
+      ],
+      "answer": "tallest",
+      "audioText": "They passed the tallest trees and the biggest rocks."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Tio felt a little afraid ___ it was so dark.",
+      "choices": [
+        "because",
+        "but",
+        "so"
+      ],
+      "answer": "because",
+      "audioText": "Tio felt a little afraid because it was so dark."
+    }
+  ],
+  "_unknownWords": [
+    "tio",
+    "let's",
+    "momo",
+    "rex",
+    "biggest",
+    "shone"
+  ]
+}

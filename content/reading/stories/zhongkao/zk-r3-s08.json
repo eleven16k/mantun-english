@@ -1,0 +1,113 @@
+{
+  "id": "zk-r3-s08",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 8,
+  "title": "Delivery Robots Come to Town",
+  "titleCn": "送货机器人进城了",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "In some cities, small robots are seen on the streets every day. They are used to carry meals, letters and other small things. The first ones were tested in a few cities a few years ago. These robots move on six wheels and are not much taller than a dog.",
+      "translation": "在一些城市，人们每天都能在街上看到小机器人。它们被用来运送饭菜、信件和其他小物品。几年前，第一批这样的机器人曾在几个城市里进行过测试。它们靠六个轮子移动，个头并不比一只狗高多少。"
+    },
+    {
+      "text": "A robot is told where to go by a phone app. Then it opens its box, and the food is put inside. The box can only be opened by the person who ordered it. So the meal must be safe on the way.",
+      "translation": "手机应用会告诉机器人该去哪里。接着它打开自己的箱子，食物被放进去。箱子只能由下单的那个人打开。所以饭菜在路上一定是安全的。"
+    },
+    {
+      "text": "These machines are not as clever as people, but they are very careful. When a robot meets a person, it will stop and wait. Cameras help it to see the road and the traffic lights. If the road is busy, the robot might choose another way.",
+      "translation": "这些机器不像人那么聪明，但它们非常小心。当机器人遇到行人时，它会停下来等待。摄像头帮助它看清道路和红绿灯。如果路上很拥挤，机器人可能会挑选另一条路。"
+    },
+    {
+      "text": "Some people are worried about these new workers. Will drivers lose their jobs? Maybe not. In fact, more people are needed to check and repair the robots. New jobs are created when new machines arrive.",
+      "translation": "有些人对这些新“员工”感到担心。司机会失去工作吗？也许不会。事实上，需要更多的人来检查和维修机器人。当新机器出现时，新的工作也会随之产生。"
+    },
+    {
+      "text": "Robots cannot climb stairs yet, and rain is still a problem. Some robots are stopped by steps, and water can get inside them. So engineers are trying to make them stronger and smarter.",
+      "translation": "机器人目前还不会爬楼梯，下雨也仍然是个问题。有些机器人会被台阶挡住，水也可能进到它们里面。因此工程师们正努力让它们变得更强壮、更聪明。"
+    },
+    {
+      "text": "In the future, robots might be as common as bikes in our cities. Maybe one day a robot will knock on your door with your dinner. That day may not be far away.",
+      "translation": "将来，机器人在我们的城市里也许会像自行车一样常见。也许有一天，机器人会端着你的晚餐来敲你家的门。那一天可能并不遥远。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "How tall are these delivery robots?",
+      "audioText": "How tall are these delivery robots?",
+      "options": [
+        {
+          "emoji": "🐕",
+          "value": "dog",
+          "text": "About as tall as a dog"
+        },
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "About as big as a car"
+        },
+        {
+          "emoji": "🏠",
+          "value": "house",
+          "text": "About as big as a house"
+        }
+      ],
+      "answer": "dog"
+    },
+    {
+      "type": "word_builder",
+      "word": "wheel",
+      "audioText": "wheel"
+    },
+    {
+      "type": "word_builder",
+      "word": "repair",
+      "audioText": "repair"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "New",
+        "jobs",
+        "are",
+        "created",
+        "when",
+        "new",
+        "machines",
+        "arrive."
+      ],
+      "audioText": "New jobs are created when new machines arrive."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The box can only be ___ by the person who ordered it.",
+      "choices": [
+        "opened",
+        "opening",
+        "opens"
+      ],
+      "answer": "opened",
+      "audioText": "The box can only be opened by the person who ordered it."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If the road is busy, the robot ___ choose another way.",
+      "choices": [
+        "might",
+        "must",
+        "cannot"
+      ],
+      "answer": "might",
+      "audioText": "If the road is busy, the robot might choose another way."
+    }
+  ],
+  "_unknownWords": [
+    "seen",
+    "app",
+    "busy",
+    "choose",
+    "cannot"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "xsc-r6-s07",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r6",
+  "order": 7,
+  "title": "The Space Mail Rocket",
+  "titleCn": "太空邮件火箭",
+  "coverEmoji": "🚀",
+  "paragraphs": [
+    {
+      "text": "Lily is a young scientist in space. She works at Space Station Six. People send letters from here to far planets. Every morning she puts on her blue space suit. Her small office looks out at the stars.",
+      "translation": "莉莉是一名太空中的小科学家。她在六号太空站工作。人们从这里把信寄往遥远的星球。每天早上，她都会穿上蓝色的宇航服。她的小办公室能看到外面的星星。"
+    },
+    {
+      "text": "Today a big mail rocket will arrive at nine. It will carry letters to Mars. Some letters will go to the Moon too. \"We must be quick,\" says Lily. \"The rocket will not wait for us.\" She puts the letters into a strong box.",
+      "translation": "今天九点会有一艘大型邮件火箭到达。它会把信送到火星，有些信也会寄往月球。“我们必须快一点，”莉莉说，“火箭不会等我们。”她把信放进一个结实的箱子里。"
+    },
+    {
+      "text": "Then a red light starts to blink. \"Oh no,\" says Lily. \"The box is too heavy!\" She thinks about the problem carefully. \"We could send the big books later,\" she says. \"Then the box should be light enough.\"",
+      "translation": "这时，一盏红灯开始闪烁。“哦不，”莉莉说，“箱子太重了！”她认真地想了想这个问题。“我们可以晚一点再寄那些大书，”她说，“这样箱子应该就够轻了。”"
+    },
+    {
+      "text": "Lily and her robot Tom work very fast. They take out the books and close the box. Now the box is light and ready. \"You must hold it with both hands,\" says Tom. They run to the door of the rocket.",
+      "translation": "莉莉和她的机器人汤姆干得飞快。他们把书拿出来，再把箱子合上。现在箱子又轻又准备好了。“你必须用两只手抱住它，”汤姆说。他们朝火箭的门跑去。"
+    },
+    {
+      "text": "At nine the rocket flies into the sky. It will reach Mars in three days. Lily waves from her small window. \"Next time we will send more letters!\"",
+      "translation": "九点钟，火箭飞向天空。它将在三天后到达火星。莉莉在小窗边挥手告别。“下一次，我们要寄更多的信！”"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What will the mail rocket carry to Mars?",
+      "audioText": "What will the mail rocket carry to Mars?",
+      "options": [
+        {
+          "emoji": "✉️",
+          "value": "letters",
+          "text": "Letters"
+        },
+        {
+          "emoji": "📚",
+          "value": "books",
+          "text": "Books"
+        },
+        {
+          "emoji": "💧",
+          "value": "water",
+          "text": "Water"
+        }
+      ],
+      "answer": "letters"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Lily put on every morning?",
+      "audioText": "What does Lily put on every morning?",
+      "options": [
+        {
+          "emoji": "🧑‍🚀",
+          "value": "suit",
+          "text": "Blue space suit"
+        },
+        {
+          "emoji": "🧢",
+          "value": "hat",
+          "text": "Red hat"
+        },
+        {
+          "emoji": "👟",
+          "value": "shoes",
+          "text": "New shoes"
+        }
+      ],
+      "answer": "suit"
+    },
+    {
+      "type": "word_builder",
+      "word": "rocket",
+      "audioText": "rocket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "will",
+        "reach",
+        "Mars",
+        "in",
+        "three",
+        "days."
+      ],
+      "audioText": "It will reach Mars in three days."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "puts",
+        "the",
+        "letters",
+        "into",
+        "a",
+        "strong",
+        "box."
+      ],
+      "audioText": "She puts the letters into a strong box."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The box is too ___!",
+      "choices": [
+        "heavy",
+        "light",
+        "fast"
+      ],
+      "answer": "heavy",
+      "audioText": "The box is too heavy!"
+    }
+  ],
+  "_unknownWords": [
+    "lily",
+    "suit",
+    "rocket",
+    "mars",
+    "blink",
+    "later",
+    "tom",
+    "waves"
+  ]
+}

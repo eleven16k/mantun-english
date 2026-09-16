@@ -1,0 +1,118 @@
+{
+  "id": "zk-r2-s05",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 5,
+  "title": "Riding on the Old City Wall",
+  "titleCn": "骑行古城墙",
+  "coverEmoji": "🏯",
+  "paragraphs": [
+    {
+      "text": "Last summer, my family took a short trip to Xi'an. Xi'an is one of the oldest cities in China. We arrived on a warm Friday morning in July. The sun was brighter there than in our small town.",
+      "translation": "去年夏天，我们一家人去西安做了一次短途旅行。西安是中国最古老的城市之一。我们在七月一个温暖的周五早晨到达。那里的阳光比我们小镇的更明亮。"
+    },
+    {
+      "text": "After we left the station, we walked to the old City Wall. It is the largest and oldest city wall in China. The wall is about fourteen kilometers long and twelve meters high. When we climbed up the stone steps, we saw many bikes.",
+      "translation": "离开车站后，我们步行前往古老的城墙。它是中国规模最大、历史最久的城墙。城墙大约十四公里长、十二米高。当我们爬上石阶时，看见了许多自行车。"
+    },
+    {
+      "text": "My father rented three bikes for the four of us. My little sister rode a small bike while I took photos. Before we started, the shop owner gave us a small map. Riding on the wall was more fun than walking.",
+      "translation": "爸爸给我们四个人租了三辆自行车。妹妹骑着一辆小自行车，我则负责拍照。出发前，店主给了我们一张小地图。在城墙上骑车比走路更有趣。"
+    },
+    {
+      "text": "The old city looked like a big picture. We could see small houses, tall towers and green trees everywhere. After we rode for an hour, we stopped near the south gate. A kind guide told us stories about the wall.",
+      "translation": "老城看起来像一幅巨大的图画。我们到处都能看到小房子、高塔和绿树。骑了一个小时后，我们在南门附近停了下来。一位和善的导游给我们讲了关于城墙的故事。"
+    },
+    {
+      "text": "In the evening, we visited a busy food street nearby. The noodles there were the most delicious food of our trip. While we were eating, a light rain began to fall. We ran back to the hotel and laughed all the way.",
+      "translation": "傍晚，我们去了附近一条热闹的美食街。那里的面条是我们旅途中最美味的食物。我们吃饭时，下起了小雨。我们跑回酒店，一路上都在笑。"
+    },
+    {
+      "text": "Before we left Xi'an, I bought a small model of the wall. It sits on my desk and makes me smile every day. Travelling is the best way to learn about history. I hope I can visit more old cities soon.",
+      "translation": "离开西安前，我买了一个城墙的小模型。它摆在我的书桌上，每天都让我微笑。旅行是了解历史的最好方式。我希望不久还能去更多古老的城市。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the family ride on the old city wall?",
+      "audioText": "What did the family ride on the old city wall?",
+      "options": [
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "Bikes"
+        },
+        {
+          "emoji": "🚌",
+          "value": "bus",
+          "text": "A bus"
+        },
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "A car"
+        }
+      ],
+      "answer": "bike"
+    },
+    {
+      "type": "word_builder",
+      "word": "wall",
+      "audioText": "wall"
+    },
+    {
+      "type": "word_builder",
+      "word": "history",
+      "audioText": "history"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "old",
+        "city",
+        "looked",
+        "like",
+        "a",
+        "big",
+        "picture."
+      ],
+      "audioText": "The old city looked like a big picture."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ we left the station, we walked to the old City Wall.",
+      "choices": [
+        "After",
+        "Before",
+        "While"
+      ],
+      "answer": "After",
+      "audioText": "After we left the station, we walked to the old City Wall."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The noodles there were the most ___ food of our trip.",
+      "choices": [
+        "delicious",
+        "deliciously",
+        "more delicious"
+      ],
+      "answer": "delicious",
+      "audioText": "The noodles there were the most delicious food of our trip."
+    }
+  ],
+  "_unknownWords": [
+    "xi'an",
+    "china",
+    "largest",
+    "rented",
+    "big",
+    "towers",
+    "guide",
+    "busy",
+    "model",
+    "travelling"
+  ]
+}

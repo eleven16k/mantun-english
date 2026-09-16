@@ -1,0 +1,126 @@
+{
+  "id": "gk-r1-s11",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 11,
+  "title": "The Lights Above the Poles",
+  "titleCn": "极地上空的灯光",
+  "coverEmoji": "🌌",
+  "paragraphs": [
+    {
+      "text": "On a clear winter night, the dark sky suddenly fills with moving curtains of green and red light. Local people call this the aurora, a light show that has amazed humans for thousands of years. Though it looks like magic, the aurora is a scientific event, and its story begins 150 million kilometres away.",
+      "translation": "在一个晴朗的冬夜，漆黑的天空突然布满一片片移动的绿色与红色光幕。当地人把它称作极光，一场让人类惊叹了数千年的光影表演。虽然它看上去像魔法，但极光其实是一种科学现象，而它的故事要从一亿五千万公里之外说起。"
+    },
+    {
+      "text": "The sun constantly sends out a stream of charged particles, which we call the solar wind. Travelling at hundreds of kilometres per second, these particles reach the Earth in a few days. Luckily, our planet is protected by a magnetic field, which works like an invisible shield. The field guides them toward the poles.",
+      "translation": "太阳不断向外抛射带电粒子流，我们称之为太阳风。这些粒子以每秒数百公里的速度飞行，几天后就会抵达地球。幸运的是，我们的星球被一个磁场保护着，它就像一面看不见的盾牌。磁场把这些粒子引向地球的两极。"
+    },
+    {
+      "text": "High above the poles, these fast-moving particles crash into the thin gases of the upper atmosphere. Excited by the energy they receive, atoms of oxygen and nitrogen release that energy as light. Oxygen produces green and red. Nitrogen, on the other hand, usually adds blue and purple to the edges of the display. The exact colour depends on the height and the gas involved, so a single display may contain several shades.",
+      "translation": "在两极高空，这些高速粒子撞上上层大气中稀薄的气体。氧原子和氮原子获得能量后受到激发，又把这份能量以光的形式释放出来。氧产生绿色和红色。而氮则通常给同一片光幕的边缘添上蓝色和紫色。具体的颜色取决于高度和所涉及的气体，因此一次极光可能包含好几种色调。"
+    },
+    {
+      "text": "Scientists have long known that the aurora follows the activity of the sun. The fact that large solar storms create brighter auroras helps researchers predict them a day or two ahead. Such storms can also disturb satellites, radio signals and power lines. That is why space weather forecasts now matter to everyone, from airlines to phone companies.",
+      "translation": "科学家早就知道，极光与太阳的活动有关。大型太阳风暴会带来更明亮的极光，这一事实帮助研究人员提前一两天做出预测。这类风暴还会干扰卫星、无线电信号和电力线路。正因如此，太空天气预报如今对每个人都变得重要，从航空公司到电话公司都不例外。"
+    },
+    {
+      "text": "For most travellers, however, the aurora is simply a beautiful sight that is worth waiting for. Standing in the cold, many people say they finally understand how small our planet really is. The lights remind us that the Earth and the sun are connected, and that space itself is full of motion.",
+      "translation": "不过对大多数旅行者来说，极光只是一道值得等待的美丽风景。站在寒冷中，许多人说他们终于明白我们的星球有多么渺小。这束光提醒我们：地球与太阳是相连的，而太空本身也充满运动。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what colour does nitrogen add to the aurora?",
+      "audioText": "According to the text, what colour does nitrogen add to the aurora?",
+      "options": [
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        }
+      ],
+      "answer": "blue"
+    },
+    {
+      "type": "word_builder",
+      "word": "magnetic",
+      "audioText": "magnetic"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "field",
+        "guides",
+        "them",
+        "toward",
+        "the",
+        "poles."
+      ],
+      "audioText": "The field guides them toward the poles."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Oxygen",
+        "produces",
+        "green",
+        "and",
+        "red."
+      ],
+      "audioText": "Oxygen produces green and red."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Excited by the energy they receive, atoms of oxygen and nitrogen release that energy as ___.",
+      "choices": [
+        "light",
+        "heat",
+        "noise"
+      ],
+      "answer": "light",
+      "audioText": "Excited by the energy they receive, atoms of oxygen and nitrogen release that energy as light."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Travelling at hundreds of kilometres per second, these ___ reach the Earth in a few days.",
+      "choices": [
+        "particles",
+        "shadows",
+        "signals"
+      ],
+      "answer": "particles",
+      "audioText": "Travelling at hundreds of kilometres per second, these particles reach the Earth in a few days."
+    }
+  ],
+  "_unknownWords": [
+    "aurora",
+    "particles",
+    "solar",
+    "travelling",
+    "luckily",
+    "magnetic",
+    "invisible",
+    "shield",
+    "nitrogen",
+    "display",
+    "involved",
+    "known",
+    "auroras",
+    "researchers",
+    "travellers",
+    "simply",
+    "motion"
+  ]
+}

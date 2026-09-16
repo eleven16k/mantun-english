@@ -1,0 +1,138 @@
+{
+  "id": "zk-r1-s06",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 6,
+  "title": "Our Class Wall Newspaper",
+  "titleCn": "我们的班级墙报",
+  "coverEmoji": "📰",
+  "paragraphs": [
+    {
+      "text": "Last month, Ms. Lin told us some exciting news. Our class would make a wall newspaper for Open Day. We felt happy but a little worried. I thought that it was a hard job for us.",
+      "translation": "上个月，林老师告诉了我们一个令人兴奋的消息。我们班要为开放日制作一份墙报。我们很开心，但也有点担心。我觉得这对我们来说是个很难的任务。"
+    },
+    {
+      "text": "On Monday, we had a class meeting about the plan. Ms. Lin said that everyone should join one group. I usually write short stories, so I chose the writing group. Li Hua often draws animals and plants. So she joined the art group.",
+      "translation": "周一，我们开了一次班会来讨论这个计划。林老师说，每个人都应该加入一个小组。我平时喜欢写小故事，所以选了写作组。李华经常画动物和植物，于是她加入了美术组。"
+    },
+    {
+      "text": "After school, we always met in the classroom for an hour. Some students looked for good photos on the Internet. Others cut colorful paper into small pieces. We talked and laughed while we worked.",
+      "translation": "放学后，我们总是留在教室里一个小时。一些同学上网找好看的图片，另一些同学把彩纸剪成小片。我们一边干活，一边聊天、大笑。"
+    },
+    {
+      "text": "On Thursday, I finished my story about our school garden. I read it again and knew that something was wrong. The story was too long and boring. I felt sad and wanted to give up.",
+      "translation": "周四，我写完了那篇关于学校花园的故事。我又读了一遍，发现有些地方不对劲。这个故事太长、太无聊了。我很难过，想要放弃。"
+    },
+    {
+      "text": "Ms. Lin smiled and said that I could make it shorter. Then she helped me choose the best parts. My classmates said that the new story was much better. I learned that a good story needs clear ideas.",
+      "translation": "林老师笑着说，我可以把它改短一些。然后她帮我挑出最好的部分。同学们都说新故事好多了。我明白了，好故事需要有清晰的想法。"
+    },
+    {
+      "text": "On Open Day, many parents came to our classroom. They stood in front of our wall newspaper and read it. Our teacher said that we did a great job. Now I know that teamwork makes hard things easy.",
+      "translation": "开放日那天，很多家长来到我们教室。他们站在我们的墙报前，认真地读了起来。老师说我们做得非常棒。现在我知道了，团队合作能让难事变简单。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does Li Hua often draw?",
+      "audioText": "What does Li Hua often draw?",
+      "options": [
+        {
+          "emoji": "🌿",
+          "value": "plants",
+          "text": "Animals and plants"
+        },
+        {
+          "emoji": "🚗",
+          "value": "cars",
+          "text": "Cars and buses"
+        },
+        {
+          "emoji": "⚽",
+          "value": "balls",
+          "text": "Balls and games"
+        }
+      ],
+      "answer": "plants"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where did the students always meet after school?",
+      "audioText": "Where did the students always meet after school?",
+      "options": [
+        {
+          "emoji": "🏫",
+          "value": "classroom",
+          "text": "In the classroom"
+        },
+        {
+          "emoji": "🌳",
+          "value": "park",
+          "text": "In the park"
+        },
+        {
+          "emoji": "📚",
+          "value": "library",
+          "text": "In the library"
+        }
+      ],
+      "answer": "classroom"
+    },
+    {
+      "type": "word_builder",
+      "word": "newspaper",
+      "audioText": "newspaper"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "felt",
+        "sad",
+        "and",
+        "wanted",
+        "to",
+        "give",
+        "up."
+      ],
+      "audioText": "I felt sad and wanted to give up."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "talked",
+        "and",
+        "laughed",
+        "while",
+        "we",
+        "worked."
+      ],
+      "audioText": "We talked and laughed while we worked."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Ms. Lin ___ that everyone should join one group.",
+      "choices": [
+        "said",
+        "says",
+        "saying"
+      ],
+      "answer": "said",
+      "audioText": "Ms. Lin said that everyone should join one group."
+    }
+  ],
+  "_unknownWords": [
+    "join",
+    "chose",
+    "li",
+    "hua",
+    "joined",
+    "colorful",
+    "talked",
+    "wrong",
+    "choose",
+    "teamwork"
+  ]
+}

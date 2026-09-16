@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { VOCAB, getDistractors } from "@/lib/vocab";
@@ -52,8 +53,8 @@ export default function VocabPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t("vocab.title")}</h1>
+      <div className="page-shell">
+        <PageHeader badge="📚 VOCAB" title={t("vocab.title")} />
 
         {/* Tier cards */}
         <div className="grid gap-3 sm:grid-cols-3">
@@ -63,8 +64,8 @@ export default function VocabPage() {
               <button
                 key={tier.id}
                 onClick={() => setSelectedTier(tier.id === selectedTier ? null : tier.id)}
-                className={`g-card flex flex-col gap-2 p-5 text-left shadow-sm transition ${
-                  selectedTier === tier.id ? "border-2 border-brandborder" : "hover:border-brandborder"
+                className={`g-card flex flex-col gap-2 p-5 text-left transition ${
+                  selectedTier === tier.id ? "!border-[var(--ink)]" : ""
                 }`}
               >
                 <span className="grid h-10 w-10 place-items-center rounded-2xl text-white" style={{ background: tier.color }}>
@@ -87,7 +88,7 @@ export default function VocabPage() {
               </h2>
               <button
                 onClick={startTierQuiz}
-                className="rounded-pill bg-brand px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:opacity-90"
+                className="rounded-pill bg-brand px-4 py-2 text-xs font-bold text-white transition hover:opacity-90"
               >
                 {t("vocab.quizTier")}
               </button>
@@ -95,7 +96,7 @@ export default function VocabPage() {
 
             <div className="mt-3 flex flex-col gap-2">
               {tierWords.map(word => (
-                <div key={word.id} className="g-card flex items-center gap-3 p-3 shadow-sm">
+                <div key={word.id} className="g-card flex items-center gap-3 p-3">
                   <div className="min-w-0 flex-1">
                     <div className="flex items-baseline gap-2">
                       <span className="font-booster text-sm font-extrabold text-primary">{word.en}</span>

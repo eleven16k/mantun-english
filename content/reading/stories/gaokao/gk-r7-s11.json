@@ -1,0 +1,126 @@
+{
+  "id": "gk-r7-s11",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 11,
+  "title": "Two Frontiers, One Home",
+  "titleCn": "两个疆界，同一个家园",
+  "coverEmoji": "🚀",
+  "paragraphs": [
+    {
+      "text": "For centuries, humans have looked in two directions: up at the silent stars, and down at the fragile ground beneath our feet. Neither direction is a luxury; each is simply a different way of asking who we are. The question facing our generation is not which frontier to choose, but how to keep both in view.",
+      "translation": "几个世纪以来，人类一直同时望向两个方向：向上，是沉默的星空；向下，是脚下那片脆弱却养育我们的土地。这两个方向都不是奢侈，它们只是追问“我们是谁”的不同方式。摆在我们这一代人面前的问题，不是该选择哪一片疆界，而是如何把两者都放在心上。"
+    },
+    {
+      "text": "Space exploration is often criticized as an expensive escape from problems we have failed to solve at home. Yet the satellites above us guide our ships, warn us of storms, and connect villages that no cable could ever reach. Had we never dared to leave the atmosphere, we would still be guessing about the weather and the climate. Only by studying other worlds can we truly understand how rare and delicate our own world is.",
+      "translation": "太空探索常被批评为“花大钱逃离我们未能解决的家园难题”。然而，我们头顶的卫星为船只导航、预警风暴，还把电缆永远无法抵达的村庄连接起来。假如我们从未敢于离开大气层，今天恐怕还在猜测天气与气候。只有研究其他世界，我们才能真正明白自己的星球何其稀有、何其脆弱。"
+    },
+    {
+      "text": "The same technology that carries us outward can also be turned back toward Earth, where it is needed just as urgently. Solar panels designed for spacecraft now light homes; water systems built for astronauts now clean rivers. Were we to treat our planet as carelessly as we sometimes do, no rocket could ever carry the smell of rain to another world.",
+      "translation": "载我们飞向远方的同一项技术，也可以转回地球，而地球同样迫切需要它。为航天器设计的太阳能板如今点亮了民居；为宇航员建造的水处理系统如今在净化河流。如果我们像有时那样漫不经心地对待自己的星球，那么再先进的火箭也无法把雨的气息带到另一个世界去。"
+    },
+    {
+      "text": "Some argue that we should spend less on rockets and more on rivers; others, that we cannot afford to choose between them. It is not a matter of either/or, but of how wisely we share our limited attention and money. Young people today will inherit both the sky and the soil, and they will be asked to protect both.",
+      "translation": "有人认为我们该少花钱造火箭、多花钱治理河流；也有人认为，我们根本承担不起在两者之间做选择。这不是“二选一”的问题，而是如何明智地分配我们有限的精力与资金。今天的年轻人将同时继承天空与土地，也将被要求守护好这两样东西。"
+    },
+    {
+      "text": "What the next century demands of us is not a single grand answer but a habit of careful, patient thinking. Whether we look up or down, the question remains the same: what kind of people do we intend to become? If we can answer that honestly, the future will belong to everyone, not just to those who reach it first.",
+      "translation": "下个世纪对我们的要求，不是一个宏大的答案，而是一种审慎而耐心的思考习惯。无论我们向上看还是向下看，问题始终如一：我们想成为什么样的人？如果我们能诚实地回答这个问题，未来就属于每一个人，而不只是那些抢先抵达的人。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which image best matches what the writer calls \"the fragile ground beneath our feet\"?",
+      "audioText": "Which image best matches what the writer calls the fragile ground beneath our feet?",
+      "options": [
+        {
+          "emoji": "🚀",
+          "value": "rocket",
+          "text": "A rocket leaving Earth"
+        },
+        {
+          "emoji": "🌍",
+          "value": "earth",
+          "text": "The Earth we live on"
+        },
+        {
+          "emoji": "🌕",
+          "value": "moon",
+          "text": "The moon in the night sky"
+        }
+      ],
+      "answer": "earth"
+    },
+    {
+      "type": "word_builder",
+      "word": "atmosphere",
+      "audioText": "atmosphere"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Solar",
+        "panels",
+        "designed",
+        "for",
+        "spacecraft",
+        "now",
+        "light",
+        "homes"
+      ],
+      "audioText": "Solar panels designed for spacecraft now light homes."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "the",
+        "future",
+        "will",
+        "belong",
+        "to",
+        "everyone"
+      ],
+      "audioText": "The future will belong to everyone."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Were we to treat our planet as ___ as we sometimes do, no rocket could ever carry the smell of rain to another world.",
+      "choices": [
+        "carelessly",
+        "careless",
+        "carefulness"
+      ],
+      "answer": "carelessly",
+      "audioText": "Were we to treat our planet as carelessly as we sometimes do, no rocket could ever carry the smell of rain to another world."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Young people today will ___ both the sky and the soil, and they will be asked to protect both.",
+      "choices": [
+        "inherit",
+        "inherits",
+        "inherited"
+      ],
+      "answer": "inherit",
+      "audioText": "Young people today will inherit both the sky and the soil, and they will be asked to protect both."
+    }
+  ],
+  "_unknownWords": [
+    "fragile",
+    "beneath",
+    "luxury",
+    "simply",
+    "generation",
+    "exploration",
+    "solve",
+    "cable",
+    "truly",
+    "outward",
+    "solar",
+    "panels",
+    "spacecraft",
+    "cannot",
+    "inherit"
+  ]
+}

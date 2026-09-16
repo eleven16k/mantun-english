@@ -1,0 +1,124 @@
+{
+  "id": "gk-r4-s12",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 12,
+  "title": "Balance Is a Skill You Build",
+  "titleCn": "平衡是一项可以练成的技能",
+  "coverEmoji": "🧘",
+  "paragraphs": [
+    {
+      "text": "Many students believe that feeling calm is simply a matter of luck, as if a good mood were the weather. They sit and wait for happiness to arrive, instead of asking what their own minds really need. In fact, researchers now describe balance as a practical skill that anyone can learn and practise. Learning to notice your own needs is the first step, and it costs nothing at all.",
+      "translation": "许多学生认为，感到平静纯粹是运气的事，仿佛好心情就是天气一样。他们坐在那里等着快乐自己到来，而不是问问自己的内心真正需要什么。事实上，研究者如今把“平衡”描述为一种任何人都能学会并练习的实用技能。学会留意自己的需求是第一步，而这一步不需要任何成本。"
+    },
+    {
+      "text": "Moving your body changes how you feel. After just twenty minutes of walking, the brain releases chemicals that quiet worry and sharpen your attention. You do not need to run a race or to train for several hours in a gym every week. Choosing to climb the stairs instead of taking the lift already counts as a useful form of exercise.",
+      "translation": "活动身体能改变你的感受。只要步行二十分钟，大脑就会释放出能平息忧虑、让注意力更集中的化学物质。你不需要去赛跑，也不需要每周在健身房练上好几个小时。选择爬楼梯而不是坐电梯，已经算是一种有用的锻炼了。"
+    },
+    {
+      "text": "Sleep is not wasted time. Treating rest as an unnecessary luxury is a mistake that many hard-working students make every week. During deep sleep, the brain sorts the events of the day and stores the information that truly matters. Students who should have gone to bed earlier often wonder why their memory fails them during exams.",
+      "translation": "睡眠不是被浪费掉的时间。把休息当成多余的奢侈品，是许多用功的学生每周都在犯的错误。在深度睡眠中，大脑会整理白天发生的事情，并储存真正重要的信息。那些本该早点上床睡觉的学生常常纳闷，为什么考试时记忆会失灵。"
+    },
+    {
+      "text": "Eating well supports the mind as much as it supports the body, and the two cannot be separated. Skipping breakfast may seem harmless, yet it makes concentration much harder by the middle of the morning. To keep your energy steady, choose whole grains, fruit, vegetables, and enough water every day. Try to avoid drinking too many sweet drinks, which lift your mood quickly and then drop it again.",
+      "translation": "吃得好对心智的支撑和对身体的支撑一样多，二者无法分开。不吃早餐看似无害，但它会让上午过半时的专注变得困难得多。为了保持精力稳定，每天要选择全谷物、水果、蔬菜和足够的水。尽量别喝太多甜饮料，它们会迅速让你的情绪高涨，然后又让它低落下来。"
+    },
+    {
+      "text": "None of these habits works alone, and expecting perfect balance every single day is completely unrealistic. What matters is deciding to begin, and then returning to your routine after a bad night or a busy week. Balance is a skill you build.",
+      "translation": "这些习惯没有哪一个能单独起作用，而期待每一天都完美平衡是完全不现实的。重要的是决定开始，然后在某个糟糕的夜晚或忙碌的一周之后回到自己的日常节奏中。平衡是你一点点建立起来的技能。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what helps the brain sort the day's events and store what truly matters?",
+      "audioText": "According to the text, what helps the brain sort the day's events and store what truly matters?",
+      "options": [
+        {
+          "emoji": "😴",
+          "value": "sleep",
+          "text": "A deep sleep"
+        },
+        {
+          "emoji": "🏃",
+          "value": "run",
+          "text": "A long run"
+        },
+        {
+          "emoji": "🥗",
+          "value": "meal",
+          "text": "A light meal"
+        }
+      ],
+      "answer": "sleep"
+    },
+    {
+      "type": "word_builder",
+      "word": "balance",
+      "audioText": "balance"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Sleep",
+        "is",
+        "not",
+        "wasted",
+        "time"
+      ],
+      "audioText": "Sleep is not wasted time."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Try to avoid ___ too many sweet drinks, which lift your mood quickly and then drop it again.",
+      "choices": [
+        "drinking",
+        "to drink",
+        "drink"
+      ],
+      "answer": "drinking",
+      "audioText": "Try to avoid drinking too many sweet drinks, which lift your mood quickly and then drop it again."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Moving",
+        "your",
+        "body",
+        "changes",
+        "how",
+        "you",
+        "feel"
+      ],
+      "audioText": "Moving your body changes how you feel."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Students who should have ___ to bed earlier often wonder why their memory fails them during exams.",
+      "choices": [
+        "gone",
+        "went",
+        "going"
+      ],
+      "answer": "gone",
+      "audioText": "Students who should have gone to bed earlier often wonder why their memory fails them during exams."
+    }
+  ],
+  "_unknownWords": [
+    "simply",
+    "mood",
+    "researchers",
+    "sharpen",
+    "unnecessary",
+    "luxury",
+    "truly",
+    "gone",
+    "earlier",
+    "cannot",
+    "skipping",
+    "harmless",
+    "concentration",
+    "steady",
+    "unrealistic"
+  ]
+}

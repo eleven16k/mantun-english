@@ -1,0 +1,631 @@
+/*
+  拼读馆 — juyouenglish 皮肤（子主题）。
+  视觉语言取自 juyou-clone/app/globals.css 的设计 DNA：
+    暖米黄底 #FFFBEB · 白卡 + 4px 描边（浅灰 #F1F5F9 / 强调黑 #0F172A）
+    贴纸标签（黄 #FFD93D + 黑描边 + rotate(-2deg) + 硬阴影）
+    亮蓝主色 #4D96FF（按下位移的 chunky 按钮）· 字重 900 标题
+    hover: translateY(-0.5rem) + 边框变黑
+  全部类名 ph- 前缀，仅作用于拼读馆路由；拼读模块保持暖色浅色主题
+  （低龄子主题决策，见方案 §7 R3——不跟随全站深色模式）。
+*/
+
+.ph-page {
+  --ph-ink: #0f172a;
+  --ph-ink-2: #475569;
+  --ph-ink-3: #94a3b8;
+  --ph-blue: #4d96ff;
+  --ph-blue-deep: #2563eb;
+  --ph-yellow: #ffd93d;
+  --ph-orange: #f97316;
+  --ph-green: #15803d;
+  --ph-green-bg: #dcfce7;
+  --ph-red: #b91c1c;
+  --ph-red-bg: #fee2e2;
+  --ph-line: #f1f5f9;
+  --ph-card-line: #e2e8f0;
+
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(77, 150, 255, 0.08), transparent 34%),
+    radial-gradient(circle at 88% 16%, rgba(255, 217, 61, 0.16), transparent 38%),
+    #fffbeb;
+  color: var(--ph-ink);
+  font-family: "Noto Sans SC", Nunito, sans-serif;
+  padding: 5.5rem 1.25rem 3rem;
+}
+
+@media (min-width: 1024px) {
+  .ph-page {
+    padding-top: 6.5rem;
+  }
+}
+
+.ph-wrap {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+/* ── 标题区：贴纸 + 900 字重大标题 ── */
+.ph-sticker {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--ph-ink);
+  background: var(--ph-yellow);
+  border: 2px solid var(--ph-ink);
+  border-radius: 999px;
+  transform: rotate(-2deg);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+}
+
+.ph-h1 {
+  margin-top: 1.25rem;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.ph-sub {
+  margin-top: 0.5rem;
+  color: var(--ph-ink-3);
+  font-size: 0.95rem;
+}
+
+/* ── 卡片：白底 4px 浅边 2rem 圆角，hover 抬起变黑边 ── */
+.ph-card {
+  background: #fff;
+  border: 4px solid var(--ph-line);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  transition: all 0.15s linear;
+}
+
+.ph-card--lift {
+  cursor: pointer;
+}
+
+.ph-card--lift:hover {
+  transform: translateY(-0.5rem);
+  border-color: var(--ph-ink);
+}
+
+/* 黑描边 chunky 卡（重点容器/结算/窗口隐喻） */
+.ph-card--ink {
+  background: #fff;
+  border: 4px solid var(--ph-ink);
+  border-radius: 2rem;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1), 0 8px 24px rgba(149, 157, 165, 0.1);
+}
+
+/* ── 按钮：亮蓝 chunky，按下位移 ── */
+.ph-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-weight: 900;
+  font-size: 1rem;
+  color: #fff;
+  background: var(--ph-blue);
+  border: 3px solid var(--ph-ink);
+  border-radius: 999px;
+  box-shadow: 0 4px 0 0 var(--ph-ink);
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.ph-btn:hover {
+  filter: brightness(1.05);
+}
+
+.ph-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 var(--ph-ink);
+}
+
+.ph-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ph-btn--ghost {
+  color: var(--ph-ink-2);
+  background: #fff;
+  box-shadow: 0 4px 0 0 var(--ph-card-line);
+  border-color: var(--ph-card-line);
+}
+
+.ph-btn--ghost:active {
+  box-shadow: 0 0 0 0 var(--ph-card-line);
+}
+
+.ph-btn--sm {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  border-width: 2px;
+  box-shadow: 0 3px 0 0 var(--ph-card-line);
+}
+
+/* ── 徽章 pill（good/bad/info，对齐 juyou lexi-quiz 语言）── */
+.ph-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.875rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.ph-pill--info {
+  color: var(--ph-blue-deep);
+  background: #dbeafe;
+}
+
+.ph-pill--good {
+  color: var(--ph-green);
+  background: var(--ph-green-bg);
+}
+
+.ph-pill--bad {
+  color: var(--ph-red);
+  background: var(--ph-red-bg);
+}
+
+.ph-pill--gold {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+/* ── 分组标题 ── */
+.ph-group-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 2rem 0 0.9rem;
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+.ph-group-title small {
+  color: var(--ph-ink-3);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.ph-group-title::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 3px solid var(--ph-ink);
+  align-self: center;
+}
+
+/* ── 音标图鉴格 ── */
+.ph-phoneme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6.2rem, 1fr));
+  gap: 0.75rem;
+}
+
+.ph-phoneme {
+  position: relative;
+  background: #fff;
+  border: 3px solid var(--ph-line);
+  border-radius: 1.25rem;
+  padding: 0.8rem 0.4rem 0.65rem;
+  text-align: center;
+  transition: all 0.15s linear;
+  cursor: pointer;
+}
+
+.ph-phoneme:hover {
+  transform: translateY(-0.35rem);
+  border-color: var(--ph-ink);
+}
+
+.ph-phoneme b {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--ph-ink);
+}
+
+.ph-phoneme span {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  color: var(--ph-ink-3);
+  font-weight: 600;
+}
+
+.ph-phoneme .ph-dot {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+}
+
+/* 已点亮（掌握）态：蓝底白字 */
+.ph-phoneme--on {
+  background: var(--ph-blue);
+  border-color: var(--ph-blue-deep);
+}
+
+.ph-phoneme--on b,
+.ph-phoneme--on span {
+  color: #fff;
+}
+
+.ph-phoneme--on span {
+  opacity: 0.85;
+}
+
+/* ── 课程（关卡）卡 ── */
+.ph-level-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ph-unit-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ph-unit-num {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  border: 3px solid var(--ph-ink);
+  background: var(--ph-yellow);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.ph-unit-num--done {
+  background: var(--ph-green-bg);
+  color: var(--ph-green);
+}
+
+.ph-unit-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.ph-unit-title {
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+.ph-unit-meta {
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--ph-ink-3);
+  font-weight: 600;
+}
+
+/* ── 训练页：词卡舞台 ── */
+.ph-stage {
+  text-align: center;
+}
+
+.ph-emoji {
+  font-size: 5rem;
+  line-height: 1.1;
+  filter: drop-shadow(0 6px 0 rgba(15, 23, 42, 0.08));
+}
+
+.ph-word-ipa {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--ph-ink-2);
+  letter-spacing: 0.02em;
+}
+
+/* 拆音块（IPA chips）*/
+.ph-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  min-height: 2.4rem;
+}
+
+.ph-chip {
+  padding: 0.35rem 0.9rem;
+  border-radius: 0.9rem;
+  border: 2px solid var(--ph-card-line);
+  background: #fff;
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: var(--ph-ink-2);
+  transition: all 0.12s ease;
+}
+
+.ph-chip--hot {
+  transform: scale(1.12);
+  border-color: var(--ph-blue);
+  color: var(--ph-blue-deep);
+  background: #eff6ff;
+  box-shadow: 0 3px 0 0 rgba(37, 99, 235, 0.25);
+}
+
+/* ── 字母槽与字母块 ── */
+.ph-slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+}
+
+.ph-slot {
+  width: 2.9rem;
+  height: 3.2rem;
+  display: grid;
+  place-items: center;
+  border: 3px dashed var(--ph-card-line);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.6);
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--ph-ink);
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.ph-slot--filled {
+  border-style: solid;
+  border-color: var(--ph-ink);
+  background: #fff;
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.ph-slot--filled:hover {
+  border-color: var(--ph-red);
+  color: var(--ph-red);
+}
+
+.ph-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.ph-tile {
+  width: 3.2rem;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: var(--ph-ink);
+  background: #fff;
+  border: 3px solid var(--ph-ink);
+  border-radius: 1rem;
+  box-shadow: 0 4px 0 0 var(--ph-ink);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.ph-tile:hover {
+  background: #eff6ff;
+}
+
+.ph-tile:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 var(--ph-ink);
+}
+
+.ph-tile--used {
+  opacity: 0.18;
+  pointer-events: none;
+  box-shadow: none;
+  transform: scale(0.92);
+}
+
+/* 抖动（答错）与揭示（3 次失败后展示答案） */
+@keyframes ph-shake {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-7px); }
+  40%, 60% { transform: translateX(7px); }
+}
+
+.ph-shake {
+  animation: ph-shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.ph-reveal {
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--ph-blue-deep);
+  letter-spacing: 0.12em;
+}
+
+/* 进度条（闯关顶部）*/
+.ph-progress {
+  height: 0.7rem;
+  border-radius: 999px;
+  background: #fff;
+  border: 2px solid var(--ph-ink);
+  overflow: hidden;
+}
+
+.ph-progress i {
+  display: block;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--ph-yellow),
+    var(--ph-yellow) 8px,
+    #ffdf6b 8px,
+    #ffdf6b 16px
+  );
+  transition: width 0.3s ease;
+}
+
+/* 听音辨词选项 */
+.ph-choice {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ph-ink);
+  background: #fff;
+  border: 3px solid var(--ph-line);
+  border-radius: 1.25rem;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.ph-choice:hover {
+  border-color: var(--ph-ink);
+  transform: translateY(-2px);
+}
+
+.ph-choice--right {
+  border-color: #22c55e;
+  background: var(--ph-green-bg);
+}
+
+.ph-choice--wrong {
+  border-color: #ef4444;
+  background: var(--ph-red-bg);
+}
+
+.ph-choice .ph-emoji-sm {
+  font-size: 1.5rem;
+}
+
+/* 大喇叭按钮 */
+.ph-sound {
+  display: inline-grid;
+  place-items: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  background: #fff;
+  border: 3px solid var(--ph-ink);
+  box-shadow: 0 4px 0 0 var(--ph-ink);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.ph-sound:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 var(--ph-ink);
+}
+
+.ph-sound--blue {
+  background: var(--ph-blue);
+}
+
+/* 复习本列表 */
+.ph-review-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.8rem 1rem;
+  background: #fff;
+  border: 3px solid var(--ph-line);
+  border-radius: 1.25rem;
+}
+
+/* 结算页统计块 */
+.ph-stat {
+  text-align: center;
+  padding: 0.9rem 0.5rem;
+  border-radius: 1.25rem;
+  border: 3px solid var(--ph-line);
+  background: #fff;
+}
+
+.ph-stat b {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.ph-stat span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ph-ink-3);
+}
+
+/* 音标详情页大卡 */
+.ph-phoneme-hero {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* 返回行 */
+.ph-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--ph-ink-2);
+  margin-bottom: 1rem;
+}
+
+.ph-back:hover {
+  color: var(--ph-ink);
+}
+
+/* 锁定课程卡 */
+.ph-card--locked {
+  opacity: 0.62;
+  background: repeating-linear-gradient(-45deg, #fff, #fff 12px, #fffbeb 12px, #fffbeb 24px);
+}
+
+@media (max-width: 480px) {
+  .ph-slot { width: 2.4rem; height: 2.8rem; font-size: 1.2rem; }
+  .ph-tile { width: 2.7rem; height: 3rem; font-size: 1.3rem; }
+  .ph-emoji { font-size: 4rem; }
+  .ph-h1 { font-size: 1.6rem; }
+}
+
+/* 例词发音位下划线（grapheme 标注） */
+.ph-ul {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+  border-radius: 1px;
+}
+.ph-ul-word {
+  display: inline-block;
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  color: var(--ph-ink-3);
+  font-weight: 600;
+  white-space: nowrap; /* 例词整体一行：下划线分片 + .ph-phoneme span 的 block 规则会打断连排 */
+}
+.ph-phoneme .ph-ul-word > span,
+.ph-phoneme .ph-ul-word > i {
+  display: inline; /* 对冲 .ph-phoneme span 的 block（否则每片一行竖排） */
+}

@@ -1,0 +1,119 @@
+{
+  "id": "zk-r3-s11",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 11,
+  "title": "When Drones Bring Your Food",
+  "titleCn": "当无人机送来你的食物",
+  "coverEmoji": "🚁",
+  "paragraphs": [
+    {
+      "text": "A drone is a small flying machine with no pilot inside. It can be controlled by a person standing on the ground. Today drones are used in many different ways around the world. Some of them can carry a small box through the air.",
+      "translation": "无人机是一种小型飞行器，里面没有飞行员。它可以由站在地面上的人来控制。如今，无人机在世界各地被用于许多不同的用途。其中一些能带着一个小箱子在空中飞行。"
+    },
+    {
+      "text": "In some cities, hot food is delivered by drone every day. You order your meal on a phone app in a few seconds. Then the food is put into a special box. The box is fixed under the drone. Ten minutes later, the drone lands quietly near your home.",
+      "translation": "在一些城市，热腾腾的饭菜每天由无人机配送。你只需在手机应用上花几秒钟点餐。然后食物会被装进一个特制的盒子里，盒子牢牢固定在无人机下方。十分钟后，无人机就会安静地降落在你家附近。"
+    },
+    {
+      "text": "Every drone must be checked carefully before it goes up. Each flight is planned by a computer on the ground. The machine must not fly over busy roads or tall buildings. If the wind is too strong, the flight may be stopped.",
+      "translation": "每架无人机起飞前都必须经过仔细检查。每一次飞行都由地面上的电脑来规划。机器不能飞越繁忙的马路或高楼。如果风太大，飞行可能会被叫停。"
+    },
+    {
+      "text": "The first delivery drones were tested about ten years ago. At that time, they were used only in a few small towns. People were surprised by those strange flying boxes in the sky. Some of them thought the machines might be dangerous.",
+      "translation": "最早的配送无人机大约在十年前进行测试。那时，它们只在少数小镇使用。人们看到天空中那些奇怪的飞行盒子都很惊讶，有些人觉得这些机器可能很危险。"
+    },
+    {
+      "text": "Drones cannot carry heavy things, so large orders must be sent by truck. Their batteries must also be changed many times a day. Some people say that the noise may be a problem at night. Others think that the flying cameras may bring new problems.",
+      "translation": "无人机搬不动重物，所以大批订单必须用卡车运送。它们的电池每天也得更换很多次。有人说，夜晚的噪音可能会成为问题；也有人认为，会飞的摄像头可能带来新的麻烦。"
+    },
+    {
+      "text": "In the future, more things may be carried by drone. Perhaps your new shoes will be dropped outside your window. However, drones cannot do everything, and people are still needed. A machine can fly, but only a person can understand you.",
+      "translation": "将来，可能会有更多东西由无人机运送。也许你的新鞋会被送到你的窗外。不过，无人机并不能做所有事情，人们仍然不可缺少。机器会飞，但只有人才能理解你。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In the passage, what carries hot food to people in some cities?",
+      "audioText": "In the passage, what carries hot food to people in some cities?",
+      "options": [
+        {
+          "emoji": "🚁",
+          "value": "drone",
+          "text": "A drone"
+        },
+        {
+          "emoji": "🚚",
+          "value": "truck",
+          "text": "A truck"
+        },
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "A bike"
+        }
+      ],
+      "answer": "drone"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Every drone must be ___ carefully before it goes up.",
+      "choices": [
+        "checked",
+        "check",
+        "checking"
+      ],
+      "answer": "checked",
+      "audioText": "Every drone must be checked carefully before it goes up."
+    },
+    {
+      "type": "word_builder",
+      "word": "drone",
+      "audioText": "drone"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "box",
+        "is",
+        "fixed",
+        "under",
+        "the",
+        "drone."
+      ],
+      "audioText": "The box is fixed under the drone."
+    },
+    {
+      "type": "word_builder",
+      "word": "flight",
+      "audioText": "flight"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Some of them thought the machines ___ be dangerous.",
+      "choices": [
+        "might",
+        "must",
+        "should"
+      ],
+      "answer": "might",
+      "audioText": "Some of them thought the machines might be dangerous."
+    }
+  ],
+  "_unknownWords": [
+    "drone",
+    "controlled",
+    "drones",
+    "world",
+    "delivered",
+    "app",
+    "later",
+    "flight",
+    "busy",
+    "delivery",
+    "cannot",
+    "batteries"
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "zk-r5-s05",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 5,
+  "title": "The Girl Who Started a Library",
+  "titleCn": "办起一座图书馆的女孩",
+  "coverEmoji": "📚",
+  "paragraphs": [
+    {
+      "text": "Lin Yue was a middle school student who lived in a small mountain town. She loved reading more than anything else in the world. The books on her shelf were like her best friends. She had read every one of them many times before.",
+      "translation": "林月是一名住在山间小镇的初中生。她爱读书，胜过世上任何别的事情。书架上的书就像她最好的朋友。每一本她都已经读过很多遍了。"
+    },
+    {
+      "text": "One winter, Lin Yue visited her cousin in a village far up the mountain. The village had no library, and the school had only a few old textbooks. The children there had never seen a storybook. Lin Yue felt sad, and a small idea began to grow in her heart.",
+      "translation": "一年冬天，林月去大山深处的一个村子看望表姐。村里没有图书馆，学校也只有几本旧课本。那里的孩子从没见过故事书。林月心里很难过，一个小小的念头开始在心里萌生。"
+    },
+    {
+      "text": "Back home, she asked her friends for books that they no longer needed. Many classmates brought storybooks which they had finished long ago. In two months, Lin Yue had collected more than three hundred books. Her father, who was a driver, helped her carry them up the mountain.",
+      "translation": "回到家后，她向朋友们讨要那些他们不再需要的书。许多同学带来了自己早就读完的故事书。两个月里，林月已经收集了三百多本书。她的爸爸是司机，帮她把书运上了山。"
+    },
+    {
+      "text": "The village school gave her a small room which had one window. Lin Yue cleaned it and put the books on six wooden shelves. More than forty children came on the first day. She told them that a book can open a door to a bigger world.",
+      "translation": "村小学给了她一间只有一扇窗户的小屋。林月把它打扫干净，把书摆在六个木书架上。第一天就来了四十多个孩子。她告诉他们，一本书能打开一扇通向更大世界的门。"
+    },
+    {
+      "text": "Every summer, Lin Yue returns to the village which she calls her second home. Some of her first readers have grown up and become teachers. They say that the little library changed their lives. Lin Yue smiles and says that she has learned something important too.",
+      "translation": "每年夏天，林月都会回到那个她称为第二故乡的村子。她最早的一批小读者已经长大，当上了老师。他们说，这座小小的图书馆改变了他们的人生。林月也笑着说，自己同样学到了重要的东西。"
+    },
+    {
+      "text": "One small girl can help a whole village. You do not need to be rich or famous to do something good. If you love something, you can share it with others.",
+      "translation": "一个小女孩也能帮助整个村子。想做点好事，你不需要富有，也不需要出名。只要你喜欢某样东西，就可以把它分享给别人。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Lin Yue love more than anything else?",
+      "audioText": "What did Lin Yue love more than anything else?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "books",
+          "text": "Books"
+        },
+        {
+          "emoji": "⚽",
+          "value": "football",
+          "text": "Football"
+        },
+        {
+          "emoji": "🎨",
+          "value": "painting",
+          "text": "Painting"
+        }
+      ],
+      "answer": "books"
+    },
+    {
+      "type": "word_builder",
+      "word": "library",
+      "audioText": "library"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "children",
+        "there",
+        "had",
+        "never",
+        "seen",
+        "a",
+        "storybook."
+      ],
+      "audioText": "The children there had never seen a storybook."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "One",
+        "small",
+        "girl",
+        "can",
+        "help",
+        "a",
+        "whole",
+        "village."
+      ],
+      "audioText": "One small girl can help a whole village."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Lin Yue was a middle school student ___ lived in a small mountain town.",
+      "choices": [
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer": "who",
+      "audioText": "Lin Yue was a middle school student who lived in a small mountain town."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "In two months, Lin Yue ___ collected more than three hundred books.",
+      "choices": [
+        "had",
+        "has",
+        "have"
+      ],
+      "answer": "had",
+      "audioText": "In two months, Lin Yue had collected more than three hundred books."
+    }
+  ],
+  "_unknownWords": [
+    "yue",
+    "world",
+    "winter",
+    "textbooks",
+    "seen",
+    "storybook",
+    "asked",
+    "storybooks",
+    "room",
+    "wooden",
+    "bigger",
+    "readers",
+    "grown"
+  ]
+}

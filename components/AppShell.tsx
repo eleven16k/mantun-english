@@ -9,12 +9,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useGameStore } from "@/lib/store";
+import { BASE_PATH } from "@/lib/config";
 import { useAppSync } from "@/lib/useAppSync";
 import { useI18n, type MessageKey } from "@/lib/i18n";
 
-const ASSETS = "/sites/assets";
+const ASSETS = `${BASE_PATH}/sites/assets`;
 
 /* Inline stroke icons (18px) — cloned-site icon language */
 const I = {
@@ -27,6 +28,7 @@ const I = {
   bolt: "M13 2 3 14h9l-1 8 10-12h-9l1-8z",
   trophy: "M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M18 2H6v7a6 6 0 0 0 12 0V2z",
   users: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75",
+  book: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z",
   classroom: "M22 10 12 5 2 10l10 5 10-5zM6 12v5c3 3 9 3 12 0v-5",
   history: "M12 8v4l3 3M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9z",
   alert: "M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01",
@@ -35,17 +37,26 @@ const I = {
   share: "M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13",
   phone: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z",
   gamepad: "M6 12h4m-2-2v4M15 11h.01M18 13h.01M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z",
+  puzzle: "M4 7h3a2 2 0 1 1 4 0h3v3a2 2 0 1 0 0 4v3h-3a2 2 0 1 0-4 0H4v-3a2 2 0 1 1 0-4V7zM14 7h6v6h-4a2 2 0 1 0 0 4h4",
   gear: "M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z",
 };
 
 interface NavItem { href: string; labelKey: MessageKey; icon: string }
 interface NavSection { titleKey: MessageKey; items: NavItem[] }
 
+// AppShell 随每个页面各自渲染，跳转即重挂载——把侧边栏的滚动位置与搜索词
+// 存到模块级，重挂载后立即恢复，避免菜单视觉跳动（点击菜单项后位置不变）。
+let savedNavScroll = 0;
+let savedNavQuery = "";
+
 const NAV_SECTIONS: NavSection[] = [
   {
     titleKey: "nav.sectionLearn",
     items: [
       { href: "/chat", labelKey: "nav.home", icon: I.home },
+      { href: "/phonics", labelKey: "nav.phonics", icon: I.book },
+      { href: "/sentence", labelKey: "nav.sentence", icon: I.puzzle },
+      { href: "/reading", labelKey: "nav.reading", icon: I.book },
       { href: "/scenarios", labelKey: "nav.scenarios", icon: I.phone },
       { href: "/progress", labelKey: "nav.progress", icon: I.progress },
       { href: "/solve", labelKey: "nav.solve", icon: I.solve },
@@ -59,7 +70,7 @@ const NAV_SECTIONS: NavSection[] = [
       // route/page still exist at /decks/public.
       // { href: "/decks/public", labelKey: "nav.publicDecks", icon: I.globe },
       { href: "/vocab", labelKey: "nav.vocab", icon: I.deck },
-      { href: "/add", labelKey: "nav.addCard", icon: I.bolt },
+      // /add（手工单卡编辑器）已下线：数据仅存本地、与上传课件/新建卡组重叠
     ],
   },
   {
@@ -109,7 +120,14 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
   const coins = useGameStore((s) => s.coins);
   const streak = useGameStore((s) => s.streak);
   const hearts = useGameStore((s) => s.hearts);
-  const [navQuery, setNavQuery] = useState("");
+  const [navQuery, setNavQuery] = useState(savedNavQuery);
+  const navRef = useRef<HTMLElement | null>(null);
+
+  // 恢复上一次的侧边栏滚动位置（重挂载后 scrollTop 归零会导致菜单跳动）
+  useEffect(() => {
+    const el = navRef.current;
+    if (el && savedNavScroll > 0) el.scrollTop = savedNavScroll;
+  }, []);
 
   const sections = useMemo(() => {
     const q = navQuery.trim().toLowerCase();
@@ -135,7 +153,7 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
           <Link href="/chat" className="flex items-center gap-2">
             <span className="game-chunky grid h-8 w-8 place-items-center rounded-xl bg-surface">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/sites/assets/dolphin.png" alt="" className="h-6 w-6" />
+              <img src={`${BASE_PATH}/sites/assets/dolphin.png`} alt="" className="h-6 w-6" />
             </span>
             <span className="font-booster text-lg font-extrabold">漫豚英语</span>
           </Link>
@@ -173,7 +191,10 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
             </svg>
             <input
               value={navQuery}
-              onChange={(e) => setNavQuery(e.target.value)}
+              onChange={(e) => {
+                setNavQuery(e.target.value);
+                savedNavQuery = e.target.value;
+              }}
               placeholder={t("nav.searchPh")}
               className="w-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-tertiary"
             />
@@ -181,28 +202,37 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
         </div>
 
         {/* grouped nav list */}
-        <nav className="flex-1 overflow-y-auto px-2 pb-3">
+        <nav
+          ref={navRef}
+          onScroll={(e) => {
+            savedNavScroll = e.currentTarget.scrollTop;
+          }}
+          className="flex-1 overflow-y-auto px-2 pb-3"
+        >
           {sections.map((section) => (
             <div key={section.titleKey} className="mb-1">
               <p className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-tertiary">
                 {t(section.titleKey)}
               </p>
-              {section.items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`flex items-center gap-2.5 rounded-xl px-3 py-2 transition-colors ${
-                    isActive(item.href)
-                      ? "bg-canvas text-primary"
-                      : "text-secondary hover:bg-canvas hover:text-primary"
-                  }`}
-                >
-                  <svg viewBox="0 0 24 24" className={`h-[18px] w-[18px] shrink-0 ${isActive(item.href) ? "text-brand-text" : "text-tertiary"}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d={item.icon} />
-                  </svg>
-                  <span className="truncate text-sm font-medium">{t(item.labelKey)}</span>
-                </Link>
-              ))}
+              {section.items.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`flex items-center gap-2.5 px-3 py-2 transition-all ${
+                      active
+                        ? "game-chunky rounded-xl bg-surface text-primary" // juyou 贴纸态：白底黑描边硬阴影
+                        : "rounded-xl text-secondary hover:bg-canvas hover:text-primary"
+                    }`}
+                  >
+                    <svg viewBox="0 0 24 24" className={`h-[18px] w-[18px] shrink-0 ${active ? "text-brand-text" : "text-tertiary"}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d={item.icon} />
+                    </svg>
+                    <span className={`truncate text-sm ${active ? "font-black" : "font-medium"}`}>{t(item.labelKey)}</span>
+                  </Link>
+                );
+              })}
             </div>
           ))}
           {sections.length === 0 && (
@@ -283,11 +313,11 @@ export function AppShell({ children, hideChrome = false }: { children: React.Rea
 
         {/* Mobile bottom nav — iOS Liquid Glass floating tab bar */}
         <div className="sticky bottom-0 z-30 px-4 pb-[max(0.875rem,env(safe-area-inset-bottom))] pt-2 lg:hidden">
-          <nav className="relative mx-auto flex max-w-md items-stretch justify-around rounded-[26px] border border-white/55 bg-surface/55 py-1.5 shadow-[0_10px_36px_-6px_rgba(15,23,42,0.22)] backdrop-blur-2xl backdrop-saturate-150 dark:border-white/10 dark:bg-surface/60 dark:shadow-[0_10px_36px_-6px_rgba(0,0,0,0.6)]">
+          <nav className="relative mx-auto flex max-w-md items-stretch justify-around rounded-[26px] border border-white/55 bg-surface/55 py-1.5 shadow-[0_10px_36px_-6px_rgba(15,23,42,0.22)] backdrop-blur-2xl backdrop-saturate-150">
             {/* specular glass highlight */}
             <span
               aria-hidden
-              className="pointer-events-none absolute inset-0 rounded-[26px] bg-gradient-to-b from-white/50 via-white/10 to-transparent dark:from-white/[0.08] dark:via-transparent"
+              className="pointer-events-none absolute inset-0 rounded-[26px] bg-gradient-to-b from-white/50 via-white/10 to-transparent"
             />
             {MOBILE_TABS.map((tab) => {
               const active = isActive(tab.href);

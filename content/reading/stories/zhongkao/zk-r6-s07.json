@@ -1,0 +1,131 @@
+{
+  "id": "zk-r6-s07",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 7,
+  "title": "Scissors That Brought Us Together",
+  "titleCn": "把我们连在一起的剪刀",
+  "coverEmoji": "✂️",
+  "paragraphs": [
+    {
+      "text": "Last month, a girl from London came to our school and joined our class. Her name is Anna, and she told us that she loved Chinese culture. Our teacher said that each of us should show her one traditional Chinese art. I chose paper cutting, which my grandmother had taught me when I was small.",
+      "translation": "上个月，一个来自伦敦的女孩来到我们学校，加入了我们班。她叫安娜，她告诉我们她很喜欢中国文化。老师说，我们每个人都应该向她展示一门中国传统艺术。我选了剪纸，那是我小时候奶奶教我的。"
+    },
+    {
+      "text": "Paper cutting is a Chinese art that is more than a thousand years old. People use small scissors to cut red paper into flowers, animals and words. My grandmother said that red paper brings good luck to every family. She was such a patient teacher that I soon fell in love with the art.",
+      "translation": "剪纸是一门有一千多年历史的中国艺术。人们用小剪刀把红纸剪成花朵、动物和文字。奶奶说，红纸会给每个家庭带来好运。她是一位非常有耐心的老师，我很快就爱上了这门艺术。"
+    },
+    {
+      "text": "On Friday afternoon, I put my scissors and some red paper on the desk. Anna sat next to me, and her eyes were full of questions and excitement. I showed her how to fold the paper and where to cut carefully. She was so excited that she cut the first shape without waiting for me.",
+      "translation": "周五下午，我把剪刀和一些红纸放在桌上。安娜坐在我旁边，眼里满是好奇和兴奋。我教她怎么折纸，在哪儿下剪刀要小心。她太兴奋了，还没等我反应过来就剪出了第一个图形。"
+    },
+    {
+      "text": "Her first piece looked like a strange bird. It was such a difficult skill that she wanted to give up at once. I told her that nobody could cut a perfect flower in one minute. She laughed, took a new piece of paper and tried again very slowly.",
+      "translation": "她的第一件作品看起来像一只奇怪的鸟。这门手艺太难了，她一下子就想放弃。我告诉她，没有人能在一分钟内剪出一朵完美的花。她笑了，拿起一张新纸，又非常慢慢地试了一次。"
+    },
+    {
+      "text": "Half an hour later, a beautiful butterfly appeared in her two hands. She held up the butterfly and asked me what it meant in China. I told her the answer with a smile. In China, a butterfly stands for love and a happy life. Anna said that she would teach this art to her friends in London.",
+      "translation": "半小时后，一只美丽的蝴蝶出现在她手中。她把蝴蝶举起来，问我它在中国是什么意思。我笑着告诉了她答案。在中国，蝴蝶象征着爱与幸福的生活。安娜说，她会把这门手艺教给伦敦的朋友们。"
+    },
+    {
+      "text": "Before she left, she gave me a card with a small paper flower on it. I now understand that culture is like paper cutting, which needs patience and care. When we share what we love, the world becomes a warmer and smaller place. Anna and I are still friends, and our scissors cut a bridge between us.",
+      "translation": "临走前，她送给我一张卡片，上面贴着一朵小小的纸花。现在我明白了，文化就像剪纸，需要耐心和用心。当我们分享自己热爱的东西时，世界会变得更温暖、更小。安娜和我现在还是朋友，我们的剪刀在我们之间剪出了一座桥。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the writer use to cut the red paper?",
+      "audioText": "What did the writer use to cut the red paper?",
+      "options": [
+        {
+          "emoji": "✂️",
+          "value": "scissors",
+          "text": "Scissors"
+        },
+        {
+          "emoji": "🔪",
+          "value": "knife",
+          "text": "Knife"
+        },
+        {
+          "emoji": "🖌️",
+          "value": "brush",
+          "text": "Brush"
+        }
+      ],
+      "answer": "scissors"
+    },
+    {
+      "type": "word_builder",
+      "word": "butterfly",
+      "audioText": "butterfly"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Her",
+        "first",
+        "piece",
+        "looked",
+        "like",
+        "a",
+        "strange",
+        "bird."
+      ],
+      "audioText": "Her first piece looked like a strange bird."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "told",
+        "her",
+        "the",
+        "answer",
+        "with",
+        "a",
+        "smile."
+      ],
+      "audioText": "I told her the answer with a smile."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She was ___ excited that she cut the first shape without waiting for me.",
+      "choices": [
+        "very",
+        "so",
+        "such"
+      ],
+      "answer": "so",
+      "audioText": "She was so excited that she cut the first shape without waiting for me."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "I told her ___ nobody could cut a perfect flower in one minute.",
+      "choices": [
+        "which",
+        "that",
+        "what"
+      ],
+      "answer": "that",
+      "audioText": "I told her that nobody could cut a perfect flower in one minute."
+    }
+  ],
+  "_unknownWords": [
+    "london",
+    "joined",
+    "chinese",
+    "traditional",
+    "chose",
+    "cutting",
+    "scissors",
+    "excitement",
+    "fold",
+    "later",
+    "asked",
+    "china",
+    "patience",
+    "world"
+  ]
+}

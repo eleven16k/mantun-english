@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { usePKBattle, type PKQuestion } from "@/lib/usePKBattle";
@@ -8,11 +9,15 @@ import { LOGIN_URL } from "@/lib/api";
 import { VOCAB, makeQuestion } from "@/lib/vocab";
 import { isLoggedIn, getMe } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
+import { allWords } from "@/content/phonics/data";
+import { makeListenQuestion, shuffle, speakWord, stopSpeech, unlockAudio } from "@/lib/phonics";
 
 /**
  * /battle — H3: 1v1 real-time quiz battle over Socket.IO.
  * Host creates a room (5 random word questions); the battle auto-starts
  * once an opponent joins with the code. Live scores from the room state.
+ * 「拼读快答」= 听音辨词题源（拼读馆联动）：题目由房主客户端从拼读内容包
+ * 生成，`audioWord` 随 Socket 题目载荷原样转发——协议零改动。
  */
 export default function BattlePage() {
   const router = useRouter();
@@ -46,6 +51,14 @@ export default function BattlePage() {
     }
   }, [pk.phase]);
 
+  // 听音辨词题（拼读快答）：题目出现即自动播一次
+  useEffect(() => {
+    if (pk.phase === "playing" && q?.audioWord) void speakWord(q.audioWord, 0.9);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pk.phase, qIdx]);
+
+  useEffect(() => () => stopSpeech(), []);
+
   // Host: auto-start as soon as an opponent is in
   useEffect(() => {
     if (pk.phase === "lobby" && pk.roomCode && pk.players.length >= 2) {
@@ -61,6 +74,27 @@ export default function BattlePage() {
       return { id: made.id, prompt: made.prompt, choices: made.choices, correctIndex: made.correctIndex };
     });
     pk.createRoom("1v1 Battle", user.id, user.nickname, qs);
+  };
+
+  // 拼读快答：从拼读内容包出 5 道听音辨词（干扰项优先同单元近音词）
+  const hostPhonicsBattle = () => {
+    if (!user) return;
+    unlockAudio();
+    const pool = allWords();
+    const qs: PKQuestion[] = shuffle(pool)
+      .slice(0, 5)
+      .map((w, i) => {
+        const unitWords = pool.filter((x) => x.unitId === w.unitId);
+        const q = makeListenQuestion(w, unitWords);
+        return {
+          id: `ph-${i}`,
+          prompt: "🔊",
+          choices: q.choices.map((c) => `${c.emoji} ${c.text}`),
+          correctIndex: q.choices.findIndex((c) => c.text === w.text),
+          audioWord: w.text,
+        };
+      });
+    pk.createRoom("Phonics Duel", user.id, user.nickname, qs);
   };
 
   const joinBattle = () => {
@@ -93,15 +127,15 @@ export default function BattlePage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-2">{t("battle.title")}</h1>
+      <div className="page-shell">
+        <PageHeader badge="⚔️ 1V1 BATTLE" title={t("battle.title")} />
         <p className="mb-5 text-sm text-tertiary">
           {pk.connected ? `🟢 ${t("battle.liveTag")}` : `🔴 ${t("pk.connecting")}`}
         </p>
 
         {/* IDLE: host or join */}
         {pk.phase === "idle" && (
-          <div className="g-card-hero p-8 text-center shadow-sm">
+          <div className="g-card-hero p-8 text-center">
             <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-brand-subtle text-brand-text">
               <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14.5 17.5 3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M19 21l3-3" />
@@ -112,10 +146,19 @@ export default function BattlePage() {
             <button
               onClick={hostBattle}
               disabled={!pk.connected || !user}
-              className="mt-5 rounded-pill bg-brand px-8 py-3 font-booster text-base font-extrabold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
+              className="mt-5 rounded-pill bg-brand px-8 py-3 font-booster text-base font-extrabold text-white transition hover:opacity-90 disabled:opacity-40"
             >
               {t("battle.findOpponent")}
             </button>
+            <div className="mt-2">
+              <button
+                onClick={hostPhonicsBattle}
+                disabled={!pk.connected || !user}
+                className="rounded-pill border-2 border-subtle bg-surface px-6 py-2 text-sm font-bold text-secondary transition hover:border-brandborder disabled:opacity-40"
+              >
+                🔤 {t("phonics.battleQuick")}
+              </button>
+            </div>
 
             {/* Join with a code */}
             <div className="mt-6 flex gap-2">
@@ -129,7 +172,7 @@ export default function BattlePage() {
               <button
                 onClick={joinBattle}
                 disabled={joinCode.length !== 6 || !pk.connected || !user}
-                className="rounded-pill border border-subtle bg-surface px-5 py-2.5 text-sm font-bold text-secondary shadow-sm transition hover:border-brandborder disabled:opacity-40"
+                className="rounded-pill border border-subtle bg-surface px-5 py-2.5 text-sm font-bold text-secondary transition hover:border-brandborder disabled:opacity-40"
               >
                 {t("battle.joinBtn")}
               </button>
@@ -140,7 +183,7 @@ export default function BattlePage() {
 
         {/* LOBBY: waiting for the opponent */}
         {pk.phase === "lobby" && (
-          <div className="g-card-hero p-6 text-center shadow-sm">
+          <div className="g-card-hero p-6 text-center">
             <p className="text-xs font-bold uppercase text-tertiary">{t("pk.roomCode")}</p>
             <p className="mt-2 font-booster text-5xl font-extrabold tracking-[0.2em] text-primary">{pk.roomCode}</p>
             <button
@@ -172,7 +215,7 @@ export default function BattlePage() {
         {pk.phase === "playing" && q && (
           <div className="flex flex-col gap-4">
             {/* Live score bar (2 players from the room) */}
-            <div className="g-card flex items-center justify-between p-3 shadow-sm">
+            <div className="g-card flex items-center justify-between p-3">
               {pk.players.slice(0, 2).map((p, i) => (
                 <div key={i} className={`flex items-center gap-2 ${i === 1 ? "flex-row-reverse text-right" : ""}`}>
                   <span className={`grid h-8 w-8 place-items-center rounded-full text-xs font-extrabold text-white ${i === 0 ? "bg-brand" : "bg-tertiary"}`}>
@@ -188,9 +231,21 @@ export default function BattlePage() {
             </div>
 
             {/* Question */}
-            <div className="g-card-hero p-6 text-center shadow-sm">
-              <p className="text-xs font-bold uppercase text-tertiary mb-2">{q.prompt.includes("______") ? "" : ""}</p>
-              <p className="font-booster text-3xl font-extrabold text-primary break-words">{q.prompt}</p>
+            <div className="g-card-hero p-6 text-center">
+              {q.audioWord ? (
+                <>
+                  <button
+                    onClick={() => void speakWord(q.audioWord!, 0.9)}
+                    className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-brand text-3xl text-white transition hover:opacity-90"
+                    aria-label="play word"
+                  >
+                    🔊
+                  </button>
+                  <p className="mt-3 text-xs font-bold uppercase text-tertiary">{t("phonics.listenPick")}</p>
+                </>
+              ) : (
+                <p className="font-booster text-3xl font-extrabold text-primary break-words">{q.prompt}</p>
+              )}
             </div>
 
             {/* Choices */}
@@ -198,10 +253,9 @@ export default function BattlePage() {
               {q.choices.map((c, i) => {
                 const isSel = selected === i;
                 const isCorrect = i === q.correctIndex;
-                let cls = "flex w-full items-center gap-3 rounded-2xl border-2 border-subtle bg-surface px-4 py-3 text-left text-[15px] font-semibold transition";
-                if (answered && isCorrect) cls += " border-[var(--bg-positive-emphasis-default)]";
-                else if (answered && isSel) cls += " border-[var(--bg-critical-emphasis-default)]";
-                else cls += " hover:border-brandborder hover:bg-canvas";
+                let cls = "game-chip flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
+                if (answered && isCorrect) cls = "game-chip game-chip--right pointer-events-none flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
+                else if (answered && isSel) cls = "game-chip game-chip--wrong pointer-events-none flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
                 return (
                   <button key={i} disabled={answered} onClick={() => answer(i)} className={cls}>
                     <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-canvas text-sm font-extrabold text-tertiary">{"ABCD"[i]}</span>
@@ -215,7 +269,7 @@ export default function BattlePage() {
 
         {/* ENDED */}
         {pk.phase === "ended" && (
-          <div className="g-card-hero p-8 text-center shadow-sm">
+          <div className="g-card-hero p-8 text-center">
             <span className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-brand-subtle text-4xl">{meWon ? "🏆" : "💪"}</span>
             <h2 className="mt-4 font-booster text-2xl font-extrabold text-primary">{meWon ? t("battle.victory") : t("battle.close")}</h2>
             <div className="mt-4 flex flex-col gap-2">
@@ -230,7 +284,7 @@ export default function BattlePage() {
               ))}
             </div>
             <div className="mt-5 flex flex-col gap-2">
-              <button onClick={restart} className="rounded-pill bg-brand py-3 font-booster font-extrabold text-white shadow-sm transition hover:opacity-90">
+              <button onClick={restart} className="rounded-pill bg-brand py-3 font-booster font-extrabold text-white transition hover:opacity-90">
                 {t("battle.again")}
               </button>
               <button onClick={() => router.push("/chat")} className="text-sm font-bold text-tertiary transition hover:text-secondary">

@@ -1,0 +1,125 @@
+{
+  "id": "xsc-r3-s03",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 3,
+  "title": "The Candy Fair",
+  "titleCn": "糖果集市",
+  "coverEmoji": "🍭",
+  "paragraphs": [
+    {
+      "text": "Last Saturday was a big day. The Candy Fair came to our town. All the streets were full of sweet smells.",
+      "translation": "上周六是个大日子。糖果集市来到了我们镇上。所有街道都飘着甜甜的香味。"
+    },
+    {
+      "text": "Lily and I went to the fair. We saw a big tent near the river. Many families were there with their kids.",
+      "translation": "莉莉和我去了集市。我们在河边看见一个大帐篷。许多家庭带着孩子在那里。"
+    },
+    {
+      "text": "Lily ate a pink candy apple. I had a small chocolate cake. The cake was soft and very sweet.",
+      "translation": "莉莉吃了一个粉色的糖苹果。我吃了一小块巧克力蛋糕。蛋糕又软又甜。"
+    },
+    {
+      "text": "Then we watched a funny parade. People walked and played happy music. A girl in a red dress danced.",
+      "translation": "然后我们看了一场有趣的游行。人们边走边演奏欢快的音乐。一个穿红裙子的女孩跳起了舞。"
+    },
+    {
+      "text": "After lunch we played a candy game. It was easy and lots of fun. We laughed a lot with our friends.",
+      "translation": "午饭后我们玩了一个糖果游戏。游戏很简单，也非常好玩。我们和朋友们笑了好久。"
+    },
+    {
+      "text": "At six o'clock we walked home. We were tired but very happy. I want to go again next year.",
+      "translation": "六点钟我们走回了家。我们很累，但特别开心。明年我还想再去一次。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Lily eat at the fair?",
+      "audioText": "What did Lily eat at the fair?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "candy apple",
+          "text": "Candy apple"
+        },
+        {
+          "emoji": "🍰",
+          "value": "cake",
+          "text": "Cake"
+        },
+        {
+          "emoji": "🍫",
+          "value": "chocolate",
+          "text": "Chocolate"
+        }
+      ],
+      "answer": "candy apple"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Lily and I see near the river?",
+      "audioText": "What did Lily and I see near the river?",
+      "options": [
+        {
+          "emoji": "⛺",
+          "value": "tent",
+          "text": "A tent"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "A school"
+        },
+        {
+          "emoji": "🌉",
+          "value": "bridge",
+          "text": "A bridge"
+        }
+      ],
+      "answer": "tent"
+    },
+    {
+      "type": "word_builder",
+      "word": "parade",
+      "audioText": "parade"
+    },
+    {
+      "type": "word_builder",
+      "word": "candy",
+      "audioText": "candy"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Lily",
+        "ate",
+        "a",
+        "pink",
+        "candy",
+        "apple."
+      ],
+      "audioText": "Lily ate a pink candy apple."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The cake ___ soft and very sweet.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": "was",
+      "audioText": "The cake was soft and very sweet."
+    }
+  ],
+  "_unknownWords": [
+    "came",
+    "lily",
+    "went",
+    "saw",
+    "ate",
+    "parade",
+    "o'clock"
+  ]
+}

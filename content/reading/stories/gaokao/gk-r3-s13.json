@@ -1,0 +1,112 @@
+{
+  "id": "gk-r3-s13",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 13,
+  "title": "The Stage That Taught a City",
+  "titleCn": "教化一座城邦的舞台",
+  "coverEmoji": "🎭",
+  "paragraphs": [
+    {
+      "text": "Long before books were cheap, the citizens of Athens gathered outdoors to watch stories acted out beneath the sun. If there had been no theatre, most of them would never have met a hero, a queen or a traitor at all. What they saw on those stone steps was not simply entertainment but a lesson about being human.",
+      "translation": "早在书籍还很便宜之前，雅典的公民就聚集在露天，观看在阳光下演出的故事。假如没有戏剧，他们中的大多数人根本不会遇见英雄、女王或叛徒。他们在那些石阶上看到的，不只是娱乐，而是一堂关于如何做人的课。"
+    },
+    {
+      "text": "Not only did the actors wear masks, but they also changed their voices, so that one man could play several parts. A wide mouth in the mask carried the words to the furthest row. The painted face told you at once whether the character was young or old, honest or dangerous. No sooner had the audience sat down than the chorus began to speak for the whole community.",
+      "translation": "演员不仅戴着面具，还变换嗓音，于是一个人就能扮演好几个角色。面具上宽大的嘴把台词送到最远的一排。彩绘的脸让你一眼就能看出这个角色是年轻还是年老，是诚实还是危险。观众刚一坐下，歌队就开始为整个城邦发声。"
+    },
+    {
+      "text": "Many of these plays asked uncomfortable questions. A tragedy might show a ruler who destroys his own family because he refuses to listen to advice. A comedy might laugh at a politician who talks far too much. Because every citizen was expected to attend, the theatre became a place where a city argued with itself in public.",
+      "translation": "这些剧作中有许多提出了令人不安的问题。悲剧可能展示一位统治者因为拒绝听取建议而毁掉自己的家庭。喜剧则可能嘲笑一个话太多的政客。由于每个公民都被期待到场，剧场便成了一个城邦公开与自身争论的地方。"
+    },
+    {
+      "text": "The stone buildings themselves were engineering marvels of their age. It was the shape of the seating, not any machine, that carried a whisper to the back row. No sooner had the Romans taken Greece than they copied these designs and built theatres across their empire. Not only did they keep the old plays alive, but they also spread the habit of listening together.",
+      "translation": "这些石头建筑本身就是那个时代的工程奇迹。把一句低语送到后排的，是座位的形状，而不是任何机器。罗马人一拿下希腊，就照搬了这些设计，并在帝国各地修建剧场。他们不仅让古老的剧本活了下来，还把一起聆听的习惯传播开来。"
+    },
+    {
+      "text": "If you sat in one of those theatres today, you would still feel the same trick at work. A single voice reaches every ear. That is why these ruins still matter. They remind us that a city is held together not by walls but by the stories its people agree to share.",
+      "translation": "如果你今天坐在其中一座剧场里，你仍会感到同样的机关在起作用——一个声音就能传到每一只耳朵。这就是这些废墟至今仍然重要的原因。它们提醒我们：把一座城市联结在一起的，不是城墙，而是人们愿意共同分享的故事。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "word_builder",
+      "word": "tragedy",
+      "audioText": "tragedy"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Many",
+        "of",
+        "these",
+        "plays",
+        "asked",
+        "uncomfortable",
+        "questions."
+      ],
+      "audioText": "Many of these plays asked uncomfortable questions."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "That",
+        "is",
+        "why",
+        "these",
+        "ruins",
+        "still",
+        "matter."
+      ],
+      "audioText": "That is why these ruins still matter."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Not only ___ the actors wear masks, but they also changed their voices.",
+      "choices": [
+        "did",
+        "do",
+        "had"
+      ],
+      "answer": "did",
+      "audioText": "Not only did the actors wear masks, but they also changed their voices."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If there ___ no theatre, most of them would never have met a hero, a queen or a traitor at all.",
+      "choices": [
+        "had been",
+        "were",
+        "has been"
+      ],
+      "answer": "had been",
+      "audioText": "If there had been no theatre, most of them would never have met a hero, a queen or a traitor at all."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was the shape of the seating, not any machine, ___ carried a whisper to the back row.",
+      "choices": [
+        "that",
+        "what",
+        "whose"
+      ],
+      "answer": "that",
+      "audioText": "It was the shape of the seating, not any machine, that carried a whisper to the back row."
+    }
+  ],
+  "_unknownWords": [
+    "athens",
+    "beneath",
+    "traitor",
+    "simply",
+    "masks",
+    "mask",
+    "furthest",
+    "community",
+    "comedy",
+    "marvels",
+    "romans",
+    "taken",
+    "ruins"
+  ]
+}

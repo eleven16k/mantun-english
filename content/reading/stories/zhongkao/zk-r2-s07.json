@@ -1,0 +1,115 @@
+{
+  "id": "zk-r2-s07",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 7,
+  "title": "Biking on the Old City Wall",
+  "titleCn": "骑行古城墙",
+  "coverEmoji": "🚲",
+  "paragraphs": [
+    {
+      "text": "Last spring, my father and I took a train to Xi'an. The trip took about four hours, but I did not feel bored. When we arrived, the sun was already high in the sky. Xi'an is one of the oldest cities in China.",
+      "translation": "去年春天，我和爸爸坐火车去了西安。路上大约花了四个小时，但我一点也不觉得无聊。我们到达的时候，太阳已经高高挂在天上。西安是中国最古老的城市之一。"
+    },
+    {
+      "text": "Our first stop was the old city wall near the south gate. It is one of the longest city walls in China. We got two bikes and started to ride slowly. The wall was much wider than I expected. While we were riding, a soft wind touched our faces.",
+      "translation": "我们的第一站是南门附近的古城墙。它是中国最长的城墙之一。我们弄到两辆自行车，慢慢骑了起来。城墙比我想象的宽得多。我们骑行的时候，一阵柔和的微风拂过脸颊。"
+    },
+    {
+      "text": "After we rode for an hour, we stopped to look down. Below us, the old streets were full of people and shops. We saw small gardens, tall trees and old houses. Everything below us looked smaller than it really was.",
+      "translation": "骑了一个小时后，我们停下来往下看。在我们脚下，老街上满是行人和店铺。我们看到了小花园、高大的树木和老房子。下面的一切看起来都比实际的样子要小。"
+    },
+    {
+      "text": "Before we left the wall, we took a lot of photos. My father said the wall was older than any building in our town. Then we walked to a busy old street to find some food. We tried cold noodles and sweet cakes with tea. They tasted better than the food at home.",
+      "translation": "离开城墙之前，我们拍了很多照片。爸爸说这堵城墙比我们镇上的任何建筑都古老。随后我们走到一条热闹的老街去找吃的。我们尝了凉面和甜饼，还喝了茶。它们的味道比家里的饭好多了。"
+    },
+    {
+      "text": "In the afternoon, we visited a famous history museum. The old coins and pots there were hundreds of years old. I read every small sign slowly because I wanted to understand. Time went by faster than I thought.",
+      "translation": "下午，我们参观了一座著名的历史博物馆。那里的古钱币和陶罐都有几百年的历史。我把每块小说明牌都慢慢地读了一遍，因为我想看懂它们。时间过得比我想象的要快。"
+    },
+    {
+      "text": "When evening came, we watched the lights on the wall. They were brighter than the stars above us. I told my father that this was my best trip ever. Before I went to bed, I wrote about the trip in my diary. I hope I can come back to Xi'an one day.",
+      "translation": "傍晚来临时，我们看着城墙上的灯光。它们比头顶的星星还要亮。我告诉爸爸，这是我最好的一次旅行。睡觉前，我把这次旅行写进了日记。我希望有一天能再回到西安。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the writer and his father ride on the old city wall?",
+      "audioText": "What did the writer and his father ride on the old city wall?",
+      "options": [
+        {
+          "emoji": "🚲",
+          "value": "bikes",
+          "text": "Bikes"
+        },
+        {
+          "emoji": "🚌",
+          "value": "bus",
+          "text": "Bus"
+        },
+        {
+          "emoji": "🚂",
+          "value": "train",
+          "text": "Train"
+        }
+      ],
+      "answer": "bikes"
+    },
+    {
+      "type": "word_builder",
+      "word": "arrived",
+      "audioText": "arrived"
+    },
+    {
+      "type": "word_builder",
+      "word": "museum",
+      "audioText": "museum"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "were",
+        "brighter",
+        "than",
+        "the",
+        "stars",
+        "above",
+        "us."
+      ],
+      "audioText": "They were brighter than the stars above us."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "When we ___, the sun was already high in the sky.",
+      "choices": [
+        "arrived",
+        "arrive",
+        "arriving"
+      ],
+      "answer": "arrived",
+      "audioText": "When we arrived, the sun was already high in the sky."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The wall was much ___ than I expected.",
+      "choices": [
+        "wide",
+        "wider",
+        "widest"
+      ],
+      "answer": "wider",
+      "audioText": "The wall was much wider than I expected."
+    }
+  ],
+  "_unknownWords": [
+    "xi'an",
+    "bored",
+    "china",
+    "wider",
+    "busy",
+    "pots",
+    "sign"
+  ]
+}

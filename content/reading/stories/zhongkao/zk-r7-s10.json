@@ -1,0 +1,133 @@
+{
+  "id": "zk-r7-s10",
+  "track": "zhongkao",
+  "regionId": "zk-r7",
+  "order": 10,
+  "title": "One Hour a Week",
+  "titleCn": "每周一小时",
+  "coverEmoji": "🤝",
+  "paragraphs": [
+    {
+      "text": "In many Chinese cities, students now spend part of their weekends helping others. Some of them teach old people how to use a smartphone. Others help clean a community park or read to children in a hospital. It is easy to believe that only special people become volunteers. In fact, most of them are ordinary students just like you.",
+      "translation": "在中国许多城市，学生们现在会把一部分周末时间用来帮助别人。有些学生教老人使用智能手机。还有些人会帮忙打扫社区公园，或者去医院给孩子们读书。人们很容易以为，只有特别的人才会去当志愿者。事实上，他们大多是和你一样的普通学生。"
+    },
+    {
+      "text": "To give up a free Saturday morning is never easy. New volunteers often feel a little nervous at first. \"If I were braver, I would have joined earlier,\" one boy said. After a few weeks, he found that helping others made him happier than playing games.",
+      "translation": "放弃一个自由的周六上午从来都不容易。刚加入的志愿者一开始常常会有点紧张。“如果我当时更勇敢一些，我早就加入了。”一个男孩这样说。几周后，他发现帮助别人比玩游戏更让他开心。"
+    },
+    {
+      "text": "Good volunteers follow a few simple rules. To arrive on time is the first rule, because others are waiting for you. They also listen more than they talk and never laugh at a slow learner. If everyone did whatever he liked, the whole plan would soon become a mess.",
+      "translation": "好的志愿者会遵守几条简单的规则。准时到达就是第一条，因为别人正在等你。他们还会多听少说，从不嘲笑学得慢的人。如果每个人都随心所欲，整个计划很快就会变得一团糟。"
+    },
+    {
+      "text": "The internet gives us new ways to help. Some students make short videos to show farmers how to sell fruit online. Others answer questions for younger children in a weekend study group. I wish more people knew how much good a phone can do.",
+      "translation": "互联网给了我们新的助人方式。一些学生制作短视频，教农民如何在网上卖水果。还有一些人在周末的学习小组里为低年级的孩子解答问题。我真希望有更多人知道，一部手机能带来多大的好处。"
+    },
+    {
+      "text": "Volunteering is not about doing big things once or twice. It is about doing small things again and again, week after week. If I were asked what I learned from it, I would say patience. That is a lesson that no textbook can ever give us.",
+      "translation": "做志愿不在于偶尔做一两件大事。它在于一件件小事反复去做，一周又一周。如果问我从中学会了什么，我会说是耐心。这是任何课本都给不了我们的一课。"
+    },
+    {
+      "text": "So why not begin this weekend? Choose one thing you can do well, and then give it one hour. What matters is not how much you give, but whether you keep going. Your hour may look small, but someone's whole day may change because of it.",
+      "translation": "那么这个周末为什么不开始呢？选一件你能做好的事，然后给它一个小时。重要的不是你付出多少，而是你是否坚持下去。你的一个小时也许看起来微不足道，但某个人的一整天可能会因此改变。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, what do some students teach old people to use?",
+      "audioText": "According to the passage, what do some students teach old people to use?",
+      "options": [
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "A smartphone"
+        },
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "A bike"
+        },
+        {
+          "emoji": "🎸",
+          "value": "guitar",
+          "text": "A guitar"
+        }
+      ],
+      "answer": "phone"
+    },
+    {
+      "type": "word_builder",
+      "word": "volunteer",
+      "audioText": "volunteer"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Good",
+        "volunteers",
+        "follow",
+        "a",
+        "few",
+        "simple",
+        "rules."
+      ],
+      "audioText": "Good volunteers follow a few simple rules."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "internet",
+        "gives",
+        "us",
+        "new",
+        "ways",
+        "to",
+        "help."
+      ],
+      "audioText": "The internet gives us new ways to help."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "To ___ on time is the first rule, because others are waiting for you.",
+      "choices": [
+        "arrive",
+        "arriving",
+        "arrived"
+      ],
+      "answer": "arrive",
+      "audioText": "To arrive on time is the first rule, because others are waiting for you."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If I ___ braver, I would have joined earlier.",
+      "choices": [
+        "am",
+        "were",
+        "will be"
+      ],
+      "answer": "were",
+      "audioText": "If I were braver, I would have joined earlier."
+    }
+  ],
+  "_unknownWords": [
+    "chinese",
+    "smartphone",
+    "community",
+    "ordinary",
+    "braver",
+    "joined",
+    "earlier",
+    "happier",
+    "talk",
+    "mess",
+    "online",
+    "big",
+    "asked",
+    "patience",
+    "textbook",
+    "choose",
+    "someone's"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "zk-r7-s01",
+  "track": "zhongkao",
+  "regionId": "zk-r7",
+  "order": 1,
+  "title": "The City We Share",
+  "titleCn": "我们共享的城市",
+  "coverEmoji": "🚲",
+  "paragraphs": [
+    {
+      "text": "In our city, thousands of people use the same buses, parks and shared bikes every day. Sharing these things sounds simple, but it quietly tests how we treat other people.",
+      "translation": "在我们这座城市里，成千上万的人每天使用同样的公交车、公园和共享单车。共享这些东西听起来很简单，但它却在悄悄检验我们如何对待他人。"
+    },
+    {
+      "text": "Last week, I saw a young man leave his shared bike in the middle of the road. An old woman with a heavy bag had to walk around it slowly. Nobody said anything, but everybody noticed.",
+      "translation": "上周，我看见一个年轻人把共享单车停在了路中间。一位提着沉重袋子的老奶奶只好慢慢地绕过去。没有人说什么，但每个人都看到了。"
+    },
+    {
+      "text": "Why does this happen so often in a busy city? Perhaps he was in a hurry and simply forgot other people. I wish everyone could think about the person behind them.",
+      "translation": "在繁忙的城市里，为什么这种事常常发生呢？也许他赶时间，只是忘了还有别人。我真希望每个人都能想到自己身后的人。"
+    },
+    {
+      "text": "Rules do not take our freedom away; they are the reason we can share. A rule tells us where to park, so the next person can ride. Without such rules, a busy city would soon become a messy one.",
+      "translation": "规则并没有夺走我们的自由；恰恰是规则让我们能够共享。规则告诉我们该把车停在哪里，下一个人才能骑。没有这些规则，繁忙的城市很快就会变得乱糟糟的。"
+    },
+    {
+      "text": "To put a bike in the right place takes only five seconds. To help a neighbor costs nothing at all. If I were the city leader, I would thank such people every day.",
+      "translation": "把单车放到该放的地方只需要五秒钟。帮邻居一下完全不花一分钱。如果我是这座城市的负责人，我会每天感谢这样的人。"
+    },
+    {
+      "text": "So the next time you use something shared, ask yourself one simple question. Am I leaving this place a little better than I found it? Small choices, made by many people, can change a whole city.",
+      "translation": "所以，下一次使用共享的东西时，请问自己一个简单的问题：我离开的时候，有没有让这个地方比我发现它时更好一点？许多人的小小选择，可以改变一整座城市。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the young man leave in the middle of the road?",
+      "audioText": "What did the young man leave in the middle of the road?",
+      "options": [
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "A shared bike"
+        },
+        {
+          "emoji": "🧺",
+          "value": "bag",
+          "text": "A heavy bag"
+        },
+        {
+          "emoji": "🚌",
+          "value": "bus",
+          "text": "A city bus"
+        }
+      ],
+      "answer": "bike"
+    },
+    {
+      "type": "word_builder",
+      "word": "shared",
+      "audioText": "shared"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "To",
+        "help",
+        "a",
+        "neighbor",
+        "costs",
+        "nothing",
+        "at",
+        "all."
+      ],
+      "audioText": "To help a neighbor costs nothing at all."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Nobody",
+        "said",
+        "anything,",
+        "but",
+        "everybody",
+        "noticed."
+      ],
+      "audioText": "Nobody said anything, but everybody noticed."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If I ___ the city leader, I would thank such people every day.",
+      "choices": [
+        "am",
+        "was",
+        "were"
+      ],
+      "answer": "were",
+      "audioText": "If I were the city leader, I would thank such people every day."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "To put a bike in the right place ___ only five seconds.",
+      "choices": [
+        "take",
+        "takes",
+        "taking"
+      ],
+      "answer": "takes",
+      "audioText": "To put a bike in the right place takes only five seconds."
+    }
+  ],
+  "_unknownWords": [
+    "busy",
+    "simply",
+    "freedom",
+    "messy",
+    "ask"
+  ]
+}

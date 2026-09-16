@@ -1,0 +1,121 @@
+{
+  "id": "xsc-r3-s11",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 11,
+  "title": "The Candy Town Music Night",
+  "titleCn": "糖果镇音乐之夜",
+  "coverEmoji": "🎵",
+  "paragraphs": [
+    {
+      "text": "Last Saturday was a special day in Candy Town. There was a music night in Sugar Park. Everyone was very happy.",
+      "translation": "上周六是糖果镇一个特别的日子。糖糖公园里有一场音乐之夜。大家都很开心。"
+    },
+    {
+      "text": "Lily and Tom went to the park with their parents. They saw many bright lights on the trees. The lights were red, yellow and pink.",
+      "translation": "莉莉和汤姆跟着爸爸妈妈去了公园。他们看到树上挂着许多明亮的彩灯。那些灯有红的、黄的和粉的。"
+    },
+    {
+      "text": "A band played happy songs on the big stage. Lily danced with her friends. Tom ate a big candy apple.",
+      "translation": "一支乐队在大舞台上演奏了欢快的歌曲。莉莉和朋友们一起跳舞。汤姆吃了一个大大的糖苹果。"
+    },
+    {
+      "text": "Then Grandpa Joe sang an old song for everyone. His voice was warm and soft. People clapped and smiled at him.",
+      "translation": "接着，乔爷爷为大家唱了一首老歌。他的声音温暖又柔和。人们为他鼓掌，冲他微笑。"
+    },
+    {
+      "text": "At eight o'clock, the music stopped. The sky was dark and quiet. People walked home slowly with big smiles.",
+      "translation": "八点钟，音乐停了下来。天空又黑又静。人们带着灿烂的笑容慢慢走回家。"
+    },
+    {
+      "text": "Lily smiled all the way home. \"I loved this music night,\" she said. \"We had a great time.\"",
+      "translation": "莉莉一路笑着回家。“我好喜欢这个音乐之夜，”她说。“我们玩得很开心。”"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Tom eat at the music night?",
+      "audioText": "What did Tom eat at the music night?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "candy apple",
+          "text": "Candy apple"
+        },
+        {
+          "emoji": "🍕",
+          "value": "pizza",
+          "text": "Pizza"
+        },
+        {
+          "emoji": "🍜",
+          "value": "noodles",
+          "text": "Noodles"
+        }
+      ],
+      "answer": "candy apple"
+    },
+    {
+      "type": "word_builder",
+      "word": "sang",
+      "audioText": "sang"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "His",
+        "voice",
+        "was",
+        "warm",
+        "and",
+        "soft."
+      ],
+      "audioText": "His voice was warm and soft."
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Lily do at the music night?",
+      "audioText": "What did Lily do at the music night?",
+      "options": [
+        {
+          "emoji": "💃",
+          "value": "danced",
+          "text": "Danced"
+        },
+        {
+          "emoji": "🎤",
+          "value": "sang",
+          "text": "Sang"
+        },
+        {
+          "emoji": "😴",
+          "value": "slept",
+          "text": "Slept"
+        }
+      ],
+      "answer": "danced"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "People ___ and smiled at him.",
+      "choices": [
+        "clapped",
+        "clap",
+        "claps"
+      ],
+      "answer": "clapped",
+      "audioText": "People clapped and smiled at him."
+    },
+    {
+      "type": "word_builder",
+      "word": "danced",
+      "audioText": "danced"
+    }
+  ],
+  "_unknownWords": [
+    "band",
+    "stage",
+    "o'clock"
+  ]
+}

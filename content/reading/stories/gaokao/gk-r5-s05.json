@@ -1,0 +1,118 @@
+{
+  "id": "gk-r5-s05",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 5,
+  "title": "Lessons Beyond the Classroom",
+  "titleCn": "课堂之外的功课",
+  "coverEmoji": "📚",
+  "paragraphs": [
+    {
+      "text": "When my cousin Wei announced that he would spend a year working in a small village library, the whole family fell silent. Almost everyone had expected him to enter a famous university at once, a path that our town deeply admired. His mother, to everyone's surprise, said that she trusted his choice and would support him whatever happened. The plan, as she explained it later, was to let him meet the world he had only read about in books.",
+      "translation": "当我的表兄伟宣布他要在上大学之前到一个小村庄的图书馆工作一年时，全家人都沉默了。几乎所有人都以为他会直接考进一所名牌大学，那是我们小镇上人人羡慕的一条路。然而出乎大家意料的是，他母亲说她相信他的选择，无论发生什么都支持他。她后来解释说，这个打算是想让他去见识那个他此前只在书里读到过的世界。"
+    },
+    {
+      "text": "For the first few months, Wei lived in a room above the library, where he sorted old books and helped children with their reading. The librarian, from whom he learned how to repair broken shelves and damaged pages, soon became a close friend. Every evening, with the lamps lit and the children gone, he wrote down what he had learned during the day. Sometimes he wondered whether he had made a mistake, but the quiet joy of helping others kept him going. He learned far more than he had expected.",
+      "translation": "头几个月，伟住在图书馆楼上的一个小房间里，在那里整理旧书，还帮孩子们读书。他从图书管理员那里学会了修补破损的书架和书页，她很快成了他的好朋友。每天晚上，灯亮着、孩子们都走了，他就把白天学到的东西记下来。有时他也会怀疑自己是不是犯了个错误，但帮助别人带来的那份安静的快乐让他坚持了下来。他学到的东西远远超出了自己的预期。"
+    },
+    {
+      "text": "One rainy afternoon, a retired teacher came in to borrow a book about local history. Wei spent two hours listening to her talk about the students she had taught over forty years. The old woman said that a person's education never ends, and that every job, however small, teaches something worth keeping. That conversation, which Wei later called a turning point, changed the way he thought about learning. That lesson stayed with him.",
+      "translation": "一个下雨的下午，一位退休教师走进来，想借一本关于当地历史的书。伟花了两个小时听她讲她四十多年来教过的那些学生。这位老人说，一个人的教育永远不会结束，每一份工作无论多么微小，都能教给人一些值得留下的东西。那次谈话——伟后来称之为一个转折点——改变了他对学习的看法。这一课一直留在他心里。"
+    },
+    {
+      "text": "When the year ended, Wei came home with stronger hands, a notebook full of ideas and a clearer purpose. He did enter university in the end, but he chose a course in which he could use what he had learned. His year in the village, far from wasting time, had given him the confidence to learn on his own.",
+      "translation": "那一年结束时，伟回到家中，双手更有力气了，带回来一本写满想法的笔记本和一个更明确的目标。他最终还是上了大学，但他选了一门能够用上自己所学东西的课程。他在村子里的那一年，非但没有浪费时间，反而给了他独自学习的信心。"
+    },
+    {
+      "text": "Many people still believe that a straight road is always the best road, yet life rarely works that way. What matters is not how quickly we arrive, but whether we keep asking questions along the way. Learning is not a race that finishes on graduation day; it is a habit that lasts a lifetime.",
+      "translation": "许多人仍然相信笔直的路总是最好的路，然而生活很少按照这种方式运转。重要的不是我们多快到达，而是一路上我们是否一直在提问。学习并不是一场在毕业那天就结束的比赛，而是一种会持续一生的习惯。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where did Wei spend the year before he entered university?",
+      "audioText": "Where did Wei spend the year before he entered university?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "library",
+          "text": "In a village library"
+        },
+        {
+          "emoji": "🏙️",
+          "value": "office",
+          "text": "In a city office"
+        },
+        {
+          "emoji": "✈️",
+          "value": "abroad",
+          "text": "Travelling abroad"
+        }
+      ],
+      "answer": "library"
+    },
+    {
+      "type": "word_builder",
+      "word": "purpose",
+      "audioText": "purpose"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "He",
+        "learned",
+        "far",
+        "more",
+        "than",
+        "he",
+        "had",
+        "expected."
+      ],
+      "audioText": "He learned far more than he had expected."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "That",
+        "lesson",
+        "stayed",
+        "with",
+        "him."
+      ],
+      "audioText": "That lesson stayed with him."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The librarian, from ___ he learned how to repair broken shelves and damaged pages, soon became a close friend.",
+      "choices": [
+        "whom",
+        "which",
+        "who"
+      ],
+      "answer": "whom",
+      "audioText": "The librarian, from whom he learned how to repair broken shelves and damaged pages, soon became a close friend."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "His year in the village, far from wasting time, had given him the ___ to learn on his own.",
+      "choices": [
+        "confidence",
+        "silence",
+        "permission"
+      ],
+      "answer": "confidence",
+      "audioText": "His year in the village, far from wasting time, had given him the confidence to learn on his own."
+    }
+  ],
+  "_unknownWords": [
+    "wei",
+    "everyone's",
+    "broken",
+    "gone",
+    "person's",
+    "given",
+    "confidence",
+    "graduation"
+  ]
+}

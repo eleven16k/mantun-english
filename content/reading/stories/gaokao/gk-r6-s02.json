@@ -1,0 +1,107 @@
+{
+  "id": "gk-r6-s02",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 2,
+  "title": "Why We Buy More Than We Need",
+  "titleCn": "我们为何买得比需要的多",
+  "coverEmoji": "🛒",
+  "paragraphs": [
+    {
+      "text": "Most shoppers believe that every choice they make in a store is completely rational, yet the truth is far more complicated than that. Although we like to think we compare prices carefully, our decisions are often influenced by colours, music and the way products are placed on shelves. While few customers notice these details, they can quietly change what we finally put into our baskets.",
+      "translation": "多数购物者相信，他们在商店里做出的每一个选择都完全理性，但事实远比这复杂。虽然我们喜欢认为自己会仔细比较价格，我们的决定却常常受到颜色、音乐以及商品摆放方式的影响。尽管很少有顾客注意到这些细节，它们却能悄悄地改变我们最终放进购物篮里的东西。"
+    },
+    {
+      "text": "Prices rarely tell the whole story. Consider the familiar price of 9.99 yuan, which feels much cheaper than ten although the difference is only one cent. Stores also create a sense of urgency by announcing that an offer will end soon, as countless advertisements do every day. Despite knowing that such messages are designed to push us, many of us still rush to buy before the clock runs out.",
+      "translation": "价格很少能说明全部问题。想一想那个熟悉的 9.99 元，虽然只差一分钱，它却让人觉得比十元便宜得多。商店还会宣布优惠即将结束，从而制造出一种紧迫感，正如每天无数广告所做的那样。尽管知道这类信息就是为了促使我们消费，我们中的许多人还是会在倒计时结束前抢着下单。"
+    },
+    {
+      "text": "Small changes in a shop can quietly shape our shopping decisions. A young owner of a small tea shop once told me how she used a simple trick to raise her sales. Although her medium cup had always been the most popular choice, she added a larger size that cost just two yuan more. While customers rarely chose the biggest cup, the medium one suddenly looked like a reasonable bargain. Her daily income rose by almost a third.",
+      "translation": "商店里的一些小改动就能悄悄左右我们的购物决定。一位开小茶店的年轻店主曾告诉我，她是如何用一个简单的花招提高销量的。虽然她的中杯一直是最受欢迎的选择，她还是增加了一个只贵两元的大杯。尽管顾客很少选最大的那杯，中杯却突然显得很划算。她的日营业额因此增长了将近三分之一。"
+    },
+    {
+      "text": "Being a smart consumer does not mean refusing to buy anything, but it does mean asking why a product feels so attractive. As researchers have pointed out, the best protection against clever marketing is simply a little patience. Once we understand these tricks, we can enjoy shopping without letting them empty our wallets.",
+      "translation": "做一个聪明的消费者并不意味着什么都不买，而是意味着要问一问：为什么一件商品看起来如此诱人。正如研究者所指出的，抵御高明营销的最好办法其实就是多一点耐心。一旦我们看懂了这些花招，我们就能享受购物的乐趣，而不让它们掏空我们的钱包。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Although we like to think we compare prices carefully, our decisions are often ___ by colours, music and the way products are placed on shelves.",
+      "choices": [
+        "influenced",
+        "refused",
+        "divided"
+      ],
+      "answer": "influenced",
+      "audioText": "Although we like to think we compare prices carefully, our decisions are often influenced by colours, music and the way products are placed on shelves."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Prices",
+        "rarely",
+        "tell",
+        "the",
+        "whole",
+        "story."
+      ],
+      "audioText": "Prices rarely tell the whole story."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Stores also create a sense of ___ by announcing that an offer will end soon, as countless advertisements do every day.",
+      "choices": [
+        "urgency",
+        "safety",
+        "beauty"
+      ],
+      "answer": "urgency",
+      "audioText": "Stores also create a sense of urgency by announcing that an offer will end soon, as countless advertisements do every day."
+    },
+    {
+      "type": "word_builder",
+      "word": "patience",
+      "audioText": "patience"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Her",
+        "daily",
+        "income",
+        "rose",
+        "by",
+        "almost",
+        "a",
+        "third."
+      ],
+      "audioText": "Her daily income rose by almost a third."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ customers rarely chose the biggest cup, the medium one suddenly looked like a reasonable bargain.",
+      "choices": [
+        "While",
+        "Because",
+        "Unless"
+      ],
+      "answer": "While",
+      "audioText": "While customers rarely chose the biggest cup, the medium one suddenly looked like a reasonable bargain."
+    }
+  ],
+  "_unknownWords": [
+    "shoppers",
+    "rational",
+    "complicated",
+    "details",
+    "urgency",
+    "countless",
+    "despite",
+    "larger",
+    "biggest",
+    "researchers",
+    "simply",
+    "letting"
+  ]
+}

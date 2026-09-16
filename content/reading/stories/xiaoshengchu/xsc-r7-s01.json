@@ -1,0 +1,108 @@
+{
+  "id": "xsc-r7-s01",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r7",
+  "order": 1,
+  "title": "The Castle Behind the Trees",
+  "titleCn": "树后的魔法城堡",
+  "coverEmoji": "🏰",
+  "paragraphs": [
+    {
+      "text": "Lily lived in a small village near the woods. One sunny morning, she walked into the trees alone. She wanted to find the oldest tree.",
+      "translation": "莉莉住在一个靠近树林的小村庄里。一个晴朗的早晨，她独自走进了树林。她想找到那棵最古老的树。"
+    },
+    {
+      "text": "She saw a big grey castle behind the trees. It was taller than any house in her village. The door was small and blue.",
+      "translation": "她看见树后有一座灰色的大城堡。它比她村子里的任何一座房子都要高。城堡的门很小，是蓝色的。"
+    },
+    {
+      "text": "She knocked three times, but nobody came. Suddenly the door opened very slowly. A little old man smiled at her kindly.",
+      "translation": "她敲了三下门，可是没有人来。突然，门慢慢地打开了。一位个子矮矮的老爷爷对她和蔼地笑了。"
+    },
+    {
+      "text": "\"Welcome, brave girl,\" the old man said kindly. \"You are the first child to find this castle.\" \"You can take one thing from here,\" he said. \"But you must be brave and kind.\"",
+      "translation": "“欢迎你，勇敢的小姑娘。”老爷爷亲切地说。“你是第一个找到这座城堡的孩子。”“你可以从这里带走一样东西。”他说。“但你一定要勇敢、善良。”"
+    },
+    {
+      "text": "When Lily walked inside, the lights turned warm. She saw a golden key on a small table. While she held the key, the walls began to shine.",
+      "translation": "当莉莉走进去时，里面的灯光变得温暖起来。她看见一张小桌子上放着一把金色的钥匙。当她握着钥匙的时候，墙壁开始闪闪发光。"
+    },
+    {
+      "text": "A little dragon flew down to her feet. It looked cold, so Lily gave it her red scarf. The dragon smiled, and the castle sang a happy song. Lily felt prouder than ever before. She knew she could come back again. She came back every summer after that.",
+      "translation": "一条小龙飞到她的脚边。它看起来很冷，于是莉莉把自己的红围巾给了它。小龙笑了，整座城堡唱起了一首快乐的歌。莉莉感到比以往任何时候都更自豪。她知道自己还能再回来。从那以后，她每年夏天都会回到这里。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Lily see behind the trees?",
+      "audioText": "What did Lily see behind the trees?",
+      "options": [
+        {
+          "emoji": "🏰",
+          "value": "castle",
+          "text": "A castle"
+        },
+        {
+          "emoji": "🏠",
+          "value": "house",
+          "text": "A house"
+        },
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "A tree"
+        }
+      ],
+      "answer": "castle"
+    },
+    {
+      "type": "word_builder",
+      "word": "castle",
+      "audioText": "castle"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was ___ than any house in her village.",
+      "choices": [
+        "taller",
+        "tallest",
+        "tall"
+      ],
+      "answer": "taller",
+      "audioText": "It was taller than any house in her village."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "wanted",
+        "to",
+        "find",
+        "the",
+        "oldest",
+        "tree."
+      ],
+      "audioText": "She wanted to find the oldest tree."
+    },
+    {
+      "type": "word_builder",
+      "word": "brave",
+      "audioText": "brave"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She knew she ___ come back again.",
+      "choices": [
+        "could",
+        "can",
+        "must"
+      ],
+      "answer": "could",
+      "audioText": "She knew she could come back again."
+    }
+  ],
+  "_unknownWords": [
+    "grey"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "gk-r2-s14",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 14,
+  "title": "The Shadow Profile You Never Made",
+  "titleCn": "你从未创建过的影子档案",
+  "coverEmoji": "🕵️",
+  "paragraphs": [
+    {
+      "text": "Most people believe that a private life is still possible. They imagine that if you never post a photo or share a location, no company can build a file about you. This comfortable idea has been quietly challenged by researchers who study data markets. It turns out that a detailed picture of you can be created without your permission — and without a single click of your own.",
+      "translation": "多数人相信，私生活仍然是可能的。他们以为，只要你从不发照片、不分享位置，就没有哪家公司能为你建立一份档案。这个令人安心的想法，已经被研究数据市场的研究者们悄悄推翻了。事实证明，一份关于你的详细画像可以在未经你许可的情况下生成——而且不需要你点击任何一次。"
+    },
+    {
+      "text": "Such a picture is called a shadow profile. It is assembled from the traces that other people leave behind, and it can keep growing without your knowledge. When a friend uploads a group photo, your face may be scanned and matched to a name. When a relative lists the family members on a shopping site, that connection is quietly stored in a database. Phone numbers, home addresses and even the names of your old classmates are being traded every day. None of this information was given by you. Yet all of it is being used, every day, to describe who you are.",
+      "translation": "这样的画像被称为“影子档案”。它是用别人留下的痕迹拼凑而成的，而且会在你毫不知情的情况下不断长大。当朋友上传一张合影时，你的脸可能被扫描，然后与一个名字对应起来。当亲戚在购物网站上列出家庭成员时，那条关系就被悄悄存进了数据库。电话号码、家庭住址，甚至你老同学的名字，每天都在被交易。这些信息没有一条是你提供的。然而它们全都被用来描述你是谁，每一天都是如此。"
+    },
+    {
+      "text": "It is estimated that a typical shadow profile contains hundreds of data points. Whether those points are accurate is often impossible to check, because the companies involved are not required to show them. What worries lawyers most is not the collecting itself but the deciding. A score that has been calculated in secret may decide whether you are offered a job, a loan or a place at university. It is the secrecy, rather than the technology, that makes the system so hard to fight.",
+      "translation": "据估计，一份典型的影子档案包含数百个数据点。这些数据点是否准确，往往无法核实，因为相关公司没有被要求公开它们。最让律师们担忧的不是收集本身，而是做出判断。一个秘密计算出来的分数，可能决定你是否能获得一份工作、一笔贷款或一个大学名额。让这套系统如此难以对抗的，是它的隐秘性，而不是技术。"
+    },
+    {
+      "text": "Some governments have started to respond. Under new rules, citizens must be told what information is held about them and why it was collected. Companies that ignore these rules can be fined, and in a few cases their databases have been ordered to be deleted. Critics argue, however, that the rules are easy to avoid and hard to enforce. A firm based in one country can simply move its servers to another, and the shadow profile follows the person, not the machine.",
+      "translation": "一些政府已经开始作出回应。根据新规，公民必须被告知自己被掌握了哪些信息、这些信息为何被收集。无视这些规定的公司可能被罚款，在少数情况下，它们的数据库已被下令删除。然而，批评者认为，这些规定既容易被规避，又难以执行。一家设在某国的公司只需把服务器搬到另一个国家，而影子档案跟随的是人，不是机器。"
+    },
+    {
+      "text": "Perhaps the real question is not whether technology can protect us, but whether we are willing to ask for protection. A shadow profile is invisible, and what is invisible is rarely discussed. If digital privacy is treated as a luxury rather than a right, the people with the least power will be the ones most carefully watched. That is a future which should not be accepted without a serious argument.",
+      "translation": "也许真正的问题不是技术能否保护我们，而是我们是否愿意主动要求保护。影子档案是无形的，而无形的存在很少被人讨论。如果数字隐私被当作一种奢侈，而不是一项权利，那么权力最小的人将是被监视得最仔细的人。这样的未来，不该在一场严肃争论缺席的情况下被接受。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, where does the information in a shadow profile mainly come from?",
+      "audioText": "According to the text, where does the information in a shadow profile mainly come from?",
+      "options": [
+        {
+          "emoji": "📸",
+          "value": "photos",
+          "text": "Photos and posts shared by friends"
+        },
+        {
+          "emoji": "📝",
+          "value": "forms",
+          "text": "Forms you fill in yourself"
+        },
+        {
+          "emoji": "🏦",
+          "value": "bank",
+          "text": "Bank records you sign"
+        }
+      ],
+      "answer": "photos"
+    },
+    {
+      "type": "word_builder",
+      "word": "profile",
+      "audioText": "profile"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Such",
+        "a",
+        "picture",
+        "is",
+        "called",
+        "a",
+        "shadow",
+        "profile."
+      ],
+      "audioText": "Such a picture is called a shadow profile."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "None",
+        "of",
+        "this",
+        "information",
+        "was",
+        "given",
+        "by",
+        "you."
+      ],
+      "audioText": "None of this information was given by you."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It ___ that a typical shadow profile contains hundreds of data points.",
+      "choices": [
+        "is estimated",
+        "estimates",
+        "has estimated"
+      ],
+      "answer": "is estimated",
+      "audioText": "It is estimated that a typical shadow profile contains hundreds of data points."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ those points are accurate is often impossible to check.",
+      "choices": [
+        "Whether",
+        "What",
+        "That"
+      ],
+      "answer": "Whether",
+      "audioText": "Whether those points are accurate is often impossible to check."
+    }
+  ],
+  "_unknownWords": [
+    "location",
+    "researchers",
+    "detailed",
+    "profile",
+    "assembled",
+    "traces",
+    "uploads",
+    "given",
+    "typical",
+    "involved",
+    "loan",
+    "secrecy",
+    "respond",
+    "enforce",
+    "simply",
+    "servers",
+    "invisible",
+    "digital",
+    "privacy",
+    "luxury"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "zk-r1-s02",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 2,
+  "title": "Our New Reading Club",
+  "titleCn": "我们的新读书俱乐部",
+  "coverEmoji": "📚",
+  "paragraphs": [
+    {
+      "text": "Last month our school started a new reading club. I joined it on the first day. Our English teacher, Miss Li, is the club leader. She says that reading opens a new world for us.",
+      "translation": "上个月，我们学校成立了一个新的读书俱乐部。我在第一天就加入了。我们的英语老师李老师是俱乐部的负责人。她说，阅读为我们打开了一个新世界。"
+    },
+    {
+      "text": "We meet in the school library every Tuesday afternoon. I usually arrive ten minutes early. My friend Wang Ming is always the first to come. He often reads two books in one week.",
+      "translation": "我们每周二下午在学校图书馆活动。我通常会早到十分钟。我的朋友王明总是第一个来。他常常一周读两本书。"
+    },
+    {
+      "text": "Last Tuesday Miss Li gave us a small task. She asked us to choose one book and share it. I thought that the story was really interesting. So I told my classmates about it.",
+      "translation": "上周二，李老师给我们布置了一个小任务。她让我们选一本书并分享它。我觉得这个故事真的很有趣。于是我把这本书讲给了同学们听。"
+    },
+    {
+      "text": "I stood in front of the class and felt nervous. My hands were cold and my voice was low. But Miss Li smiled and said that I did well. After that, I felt much better.",
+      "translation": "我站在全班同学面前，感到很紧张。我的手冰凉，声音也很小。但李老师微笑着说我做得不错。那之后，我感觉好多了。"
+    },
+    {
+      "text": "Now I know that reading is not boring at all. I always carry a book in my school bag. Sometimes I read for twenty minutes before dinner. Books help me think and learn new things.",
+      "translation": "现在我知道，阅读一点也不无聊。我总是把一本书放在书包里。有时我会在晚饭前读二十分钟。书帮助我思考，也让我学到新东西。"
+    },
+    {
+      "text": "Our club has twenty members now. We never feel lonely when we read together. I think that everyone can find a good book. Would you like to join us next Tuesday?",
+      "translation": "我们俱乐部现在有二十名成员。一起读书时，我们从不会感到孤单。我认为每个人都能找到一本好书。下周二你愿意加入我们吗？"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where does the reading club meet every Tuesday?",
+      "audioText": "Where does the reading club meet every Tuesday?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "library",
+          "text": "In the school library"
+        },
+        {
+          "emoji": "🏀",
+          "value": "playground",
+          "text": "On the playground"
+        },
+        {
+          "emoji": "🍜",
+          "value": "dining",
+          "text": "In the dining hall"
+        }
+      ],
+      "answer": "library"
+    },
+    {
+      "type": "image_choice",
+      "question": "How did the writer feel when he stood in front of the class?",
+      "audioText": "How did the writer feel when he stood in front of the class?",
+      "options": [
+        {
+          "emoji": "😰",
+          "value": "nervous",
+          "text": "Nervous"
+        },
+        {
+          "emoji": "😄",
+          "value": "happy",
+          "text": "Happy"
+        },
+        {
+          "emoji": "😴",
+          "value": "sleepy",
+          "text": "Sleepy"
+        }
+      ],
+      "answer": "nervous"
+    },
+    {
+      "type": "word_builder",
+      "word": "library",
+      "audioText": "library"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "thought",
+        "that",
+        "the",
+        "story",
+        "was",
+        "really",
+        "interesting"
+      ],
+      "audioText": "I thought that the story was really interesting."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Miss Li ___ us a small task last Tuesday.",
+      "choices": [
+        "gave",
+        "gives",
+        "give"
+      ],
+      "answer": "gave",
+      "audioText": "Miss Li gave us a small task last Tuesday."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Now I know ___ reading is not boring at all.",
+      "choices": [
+        "that",
+        "what",
+        "who"
+      ],
+      "answer": "that",
+      "audioText": "Now I know that reading is not boring at all."
+    }
+  ],
+  "_unknownWords": [
+    "joined",
+    "english",
+    "li",
+    "world",
+    "wang",
+    "asked",
+    "choose",
+    "join"
+  ]
+}

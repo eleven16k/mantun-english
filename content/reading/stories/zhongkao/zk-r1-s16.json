@@ -1,0 +1,128 @@
+{
+  "id": "zk-r1-s16",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 16,
+  "title": "The Box for Our Future",
+  "titleCn": "写给未来的盒子",
+  "coverEmoji": "📦",
+  "paragraphs": [
+    {
+      "text": "Last Friday Ms. Lin came into our classroom with a big smile. She put a wooden box on the teacher's desk. She told us that it was a special box for our class. We all looked at the box and felt very curious.",
+      "translation": "上周五，林老师带着满脸笑容走进我们的教室。她把一个木盒子放在讲桌上。她告诉我们，那是给我们班的一个特别的盒子。我们都看着那个盒子，心里非常好奇。"
+    },
+    {
+      "text": "Ms. Lin said that we would write a letter to the future. Every student would put one letter into the box. She said that we would keep it for three years. Then we could remember what we hoped for that day.",
+      "translation": "林老师说，我们要给未来写一封信。每个同学都要把一封信放进盒子里。她说，这个盒子我们要保存三年。到那时，我们就能想起那一天自己期盼着什么。"
+    },
+    {
+      "text": "At first, I did not know what to write. I sat and looked at the white paper for a while. I thought about my English and my math. I was often worried before a big exam. When I did badly in a test, I felt sad for days.",
+      "translation": "起初，我不知道该写些什么。我坐着，盯着那张白纸看了一会儿。我想到了我的英语和数学。大考前我常常感到担心。有一次考试考砸了，我难过了好几天。"
+    },
+    {
+      "text": "But my teacher always said that we should never give up. I wrote that I wanted to be braver next year. I also wrote about my best friend, Wang Lei. I said that I hoped he would be happy every day.",
+      "translation": "但老师总是说，我们绝不应该放弃。我写道，明年我想变得更勇敢。我还写了我的好朋友王磊。我说，我希望他每天都开开心心。"
+    },
+    {
+      "text": "After we finished, everyone put the letters into the box. Ms. Lin closed the box and smiled at us. She said that hard work always brings good results. We all believed that she was right.",
+      "translation": "我们写完后，每个人都把信放进了盒子里。林老师把盒子盖上，冲我们笑了笑。她说，努力总会带来好结果。我们都相信她说得对。"
+    },
+    {
+      "text": "Now the box sits quietly on a shelf in our classroom. Sometimes I look at it and remember that day. I know that I am growing up a little every day. Three years later, we will open the box together.",
+      "translation": "现在，那个盒子安安静静地待在我们教室的书架上。有时我会看着它，想起那一天。我知道自己每天都在一点点长大。三年后，我们会一起打开这个盒子。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Ms. Lin put on the teacher's desk?",
+      "audioText": "What did Ms. Lin put on the teacher's desk?",
+      "options": [
+        {
+          "emoji": "📦",
+          "value": "box",
+          "text": "A box"
+        },
+        {
+          "emoji": "📕",
+          "value": "book",
+          "text": "A book"
+        },
+        {
+          "emoji": "✏️",
+          "value": "pencil",
+          "text": "A pencil"
+        }
+      ],
+      "answer": "box"
+    },
+    {
+      "type": "word_builder",
+      "word": "letter",
+      "audioText": "letter"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where does the box sit now?",
+      "audioText": "Where does the box sit now?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "shelf",
+          "text": "On a shelf"
+        },
+        {
+          "emoji": "🚪",
+          "value": "door",
+          "text": "Near the door"
+        },
+        {
+          "emoji": "🪟",
+          "value": "window",
+          "text": "By the window"
+        }
+      ],
+      "answer": "shelf"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "all",
+        "believed",
+        "that",
+        "she",
+        "was",
+        "right."
+      ],
+      "audioText": "We all believed that she was right."
+    },
+    {
+      "type": "word_builder",
+      "word": "future",
+      "audioText": "future"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "I was ___ worried before a big exam.",
+      "choices": [
+        "often",
+        "never",
+        "yet"
+      ],
+      "answer": "often",
+      "audioText": "I was often worried before a big exam."
+    }
+  ],
+  "_unknownWords": [
+    "big",
+    "wooden",
+    "teacher's",
+    "curious",
+    "english",
+    "braver",
+    "wang",
+    "lei",
+    "later"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "gk-r3-s09",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 9,
+  "title": "The Boy Who Painted Mountains",
+  "titleCn": "画出群山的少年",
+  "coverEmoji": "🏔️",
+  "paragraphs": [
+    {
+      "text": "In a quiet hall of a museum in Beijing hangs a handscroll that is almost twelve metres long. The long silk is covered with brilliant blues and greens that seem to glow with their own light. It shows quiet rivers, crowded bridges, small villages and endless mountains stretching towards the far horizon. The work is called A Thousand Li of Rivers and Mountains, and for centuries people believed that only an old master could have painted it. The truth is more surprising still.",
+      "translation": "在北京一家博物馆安静的大厅里，悬挂着一幅近十二米长的手卷。长长的绢帛上铺满明亮的青绿色，仿佛自身在发光。画中绘有安静的河流、拥挤的桥梁、小小的村庄，以及一直延伸到远方地平线的群山。这幅作品名为《千里江山图》，几个世纪以来，人们都相信只有年迈的大师才能画得出它。而真相更加出人意料。"
+    },
+    {
+      "text": "It was a teenager named Wang Ximeng who created this masterpiece when he was only eighteen years old. Emperor Huizong, who ruled China in the early twelfth century, had set up a special school for young painters. Not only did he choose the students himself, but he also corrected their brushwork with his own hand. If the emperor had not noticed this shy boy, the famous scroll would never have come into being.",
+      "translation": "画出这幅杰作的，是一位名叫王希孟的少年，当时他年仅十八岁。十二世纪初统治中国的皇帝宋徽宗，曾创办了一所专门培养年轻画家的学校。他不仅亲自挑选学生，还亲手批改他们的笔法。倘若皇帝没有留意到这个腼腆的少年，这幅名卷就永远不会诞生。"
+    },
+    {
+      "text": "Wang Ximeng worked for half a year, covering the long silk with colours made from rare and costly minerals. His blues and greens have never faded. Even after nine hundred years, the mountains still look as fresh as they did on the day he finished them. No sooner had he completed the scroll than he fell ill and died, leaving behind only a single work.",
+      "translation": "王希孟画了半年之久，用珍稀而昂贵的矿石制成的颜料铺满长长的绢帛。他的青绿之色从未褪去。即使过了九百年，那些山峦看上去仍像他画完那天一样新鲜。可就在他完成这幅长卷之后，他便病倒离世，只留下一件作品。"
+    },
+    {
+      "text": "Only one work by his hand survives today, and it is protected as a national treasure. What we know about the painter comes from a short note added to the scroll by an official of that time. Without that short note, the name of the painter might have been lost forever. If the official had kept silent, we would never have known who painted these blue mountains.",
+      "translation": "如今，出自他手的作品仅存这一件，被当作国宝一样保护着。我们对这位画家所知的一切，都来自当时一位官员在卷后写下的简短题记。若没有那段题记，这位画家的名字也许早已湮没无闻。假如那位官员当时保持沉默，我们便永远不会知道是谁画下了这些青绿群山。"
+    },
+    {
+      "text": "Today crowds wait patiently in long lines to see the scroll inside its glass case. Visitors often say that they feel quite small before such a long and detailed landscape. It reminds them that great art does not always come from long years of experience. Were it not for one gifted teenager, this view of old China would not exist at all.",
+      "translation": "今天，人们排着长队耐心等待，只为看一眼玻璃展柜中的这幅长卷。参观者常说，面对这样一幅绵长而精细的山水，他们会觉得自己十分渺小。它提醒人们：伟大的艺术并不总是来自长年的经验。若不是这位天赋异禀的少年，这幅古老中国的景象便根本不会存在。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does the handscroll mainly show?",
+      "audioText": "What does the handscroll mainly show?",
+      "options": [
+        {
+          "emoji": "🏔️",
+          "value": "mountains",
+          "text": "Mountains and rivers"
+        },
+        {
+          "emoji": "🐎",
+          "value": "horses",
+          "text": "Horses and riders"
+        },
+        {
+          "emoji": "⛵",
+          "value": "ships",
+          "text": "Ships and sailors"
+        }
+      ],
+      "answer": "mountains"
+    },
+    {
+      "type": "word_builder",
+      "word": "emperor",
+      "audioText": "emperor"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "truth",
+        "is",
+        "more",
+        "surprising",
+        "still."
+      ],
+      "audioText": "The truth is more surprising still."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "His",
+        "blues",
+        "and",
+        "greens",
+        "have",
+        "never",
+        "faded."
+      ],
+      "audioText": "His blues and greens have never faded."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "No sooner had he completed the scroll ___ he fell ill and died.",
+      "choices": [
+        "than",
+        "then",
+        "when"
+      ],
+      "answer": "than",
+      "audioText": "No sooner had he completed the scroll than he fell ill and died."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If the official had kept silent, we ___ never have known who painted these blue mountains.",
+      "choices": [
+        "would",
+        "will",
+        "must"
+      ],
+      "answer": "would",
+      "audioText": "If the official had kept silent, we would never have known who painted these blue mountains."
+    }
+  ],
+  "_unknownWords": [
+    "beijing",
+    "handscroll",
+    "glow",
+    "endless",
+    "stretching",
+    "horizon",
+    "li",
+    "wang",
+    "ximeng",
+    "masterpiece",
+    "huizong",
+    "brushwork",
+    "scroll",
+    "forever",
+    "known",
+    "detailed",
+    "landscape"
+  ]
+}

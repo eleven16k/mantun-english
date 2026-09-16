@@ -1,0 +1,128 @@
+{
+  "id": "xsc-r5-s08",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 8,
+  "title": "Momo and the Blue Stone",
+  "titleCn": "莫莫和蓝石头",
+  "coverEmoji": "🦕",
+  "paragraphs": [
+    {
+      "text": "Last Saturday, Momo walked to the hills with his friend Lily. The hills were far away. Momo was the smallest dinosaur in his family. But he was brave and happy.",
+      "translation": "上周六，莫莫和好朋友莉莉一起走到了山丘那边。山丘离家很远。莫莫是家里最小的恐龙，可他既勇敢又快乐。"
+    },
+    {
+      "text": "Behind some tall trees, they found a big cave. It was dark and cold inside. Lily said, \"This is the oldest cave here.\"",
+      "translation": "在高高的树后面，他们发现了一个大山洞。洞里又黑又冷。莉莉说：“这是这儿最古老的山洞。”"
+    },
+    {
+      "text": "They walked in slowly because they were a little afraid. Then they saw old pictures on the wall. The pictures were the most amazing thing in the valley. They showed big dinosaurs and blue rivers.",
+      "translation": "他们因为有点儿害怕，所以慢慢地走了进去。接着，他们看到了墙上的古老图画。那些图画是山谷里最神奇的东西。画上有大恐龙和蓝色的河流。"
+    },
+    {
+      "text": "Near the wall, Momo found a small blue stone. It was the most beautiful stone in Dino Valley. Momo put it in his bag.",
+      "translation": "在墙边，莫莫发现了一块小小的蓝石头。那是恐龙谷里最漂亮的石头。莫莫把它放进了自己的包里。"
+    },
+    {
+      "text": "Suddenly, a loud sound came from outside. It was the loudest roar of the day. They ran out quickly because they felt afraid.",
+      "translation": "突然，外面传来一声巨响。那是那一天最响亮的吼叫声。他们因为害怕，飞快地跑了出来。"
+    },
+    {
+      "text": "Outside, Grandpa Dino was waiting for them. \"That was my loudest roar!\" he said with a smile. Momo laughed and showed him the blue stone. \"This cave is the oldest place in the valley,\" said Grandpa. \"Please keep it a secret.\"",
+      "translation": "洞外，恐龙爷爷正在等他们。“那是我最响亮的吼声！”他笑着说。莫莫也笑了，把蓝石头拿给他看。“这个山洞是山谷里最古老的地方，”爷爷说，“请你们保守这个秘密。”"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where did Momo and Lily find the cave?",
+      "audioText": "Where did Momo and Lily find the cave?",
+      "options": [
+        {
+          "emoji": "🌳",
+          "value": "trees",
+          "text": "Behind tall trees"
+        },
+        {
+          "emoji": "🏠",
+          "value": "home",
+          "text": "Near their home"
+        },
+        {
+          "emoji": "🌊",
+          "value": "river",
+          "text": "Under a river"
+        }
+      ],
+      "answer": "trees"
+    },
+    {
+      "type": "image_choice",
+      "question": "How was the cave inside?",
+      "audioText": "How was the cave inside?",
+      "options": [
+        {
+          "emoji": "❄️",
+          "value": "cold",
+          "text": "Dark and cold"
+        },
+        {
+          "emoji": "☀️",
+          "value": "warm",
+          "text": "Warm and bright"
+        },
+        {
+          "emoji": "🎵",
+          "value": "noisy",
+          "text": "Loud and noisy"
+        }
+      ],
+      "answer": "cold"
+    },
+    {
+      "type": "word_builder",
+      "word": "brave",
+      "audioText": "brave"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "ran",
+        "out",
+        "quickly",
+        "because",
+        "they",
+        "felt",
+        "afraid."
+      ],
+      "audioText": "They ran out quickly because they felt afraid."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "This cave is the ___ place in the valley.",
+      "choices": [
+        "oldest",
+        "old",
+        "older"
+      ],
+      "answer": "oldest",
+      "audioText": "This cave is the oldest place in the valley."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Momo put the blue stone in his ___.",
+      "choices": [
+        "bag",
+        "cave",
+        "hill"
+      ],
+      "answer": "bag",
+      "audioText": "Momo put the blue stone in his bag."
+    }
+  ],
+  "_unknownWords": [
+    "momo",
+    "roar"
+  ]
+}

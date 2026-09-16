@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { usePKBattle } from "@/lib/usePKBattle";
+import { speakWord, stopSpeech, unlockAudio } from "@/lib/phonics";
 import { LOGIN_URL } from "@/lib/api";
 import { isLoggedIn, getMe } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
@@ -48,9 +50,17 @@ export default function PKPage() {
     return () => clearInterval(timer);
   }, [pk.phase, pk.endsAt]);
 
+  // 拼读题源（听音辨词）：题目出现即自动播词
+  useEffect(() => {
+    if (pk.phase === "playing" && q?.audioWord) void speakWord(q.audioWord, 0.9);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pk.phase, qIdx]);
+  useEffect(() => () => stopSpeech(), []);
+
   // Student joins
   const handleJoin = () => {
     if (joinCode.length !== 6 || !user) return;
+    unlockAudio();
     pk.joinRoom(joinCode, user.id, user.nickname);
   };
 
@@ -96,15 +106,15 @@ export default function PKPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-2">{t("pk.title")}</h1>
+      <div className="page-shell">
+        <PageHeader badge="🏫 CLASS PK" title={t("pk.title")} />
         <p className="mb-5 text-sm text-tertiary">
           {pk.connected ? `🟢 ${t("pk.connected")}` : `🔴 ${t("pk.connecting")}`} · {t("pk.realtime")}
         </p>
 
         {/* IDLE: join by room code — hosting is the teacher app's job */}
         {pk.phase === "idle" && (
-          <div className="g-card p-5 shadow-sm">
+          <div className="g-card p-5">
             <label className="flex flex-col gap-2">
               <span className="text-xs font-bold uppercase tracking-wide text-tertiary">{t("pk.roomCode")}</span>
               <input
@@ -112,13 +122,13 @@ export default function PKPage() {
                 onChange={e => setJoinCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
                 placeholder={t("pk.codePh")}
                 inputMode="numeric"
-                className="rounded-xl border border-subtle bg-app px-3 py-2.5 text-center text-lg font-bold tracking-widest outline-none focus:border-brandborder"
+                className="rounded-xl border-2 border-b-4 border-[#cbd5e1] bg-surface px-3 py-2.5 text-center text-lg font-bold tracking-widest outline-none transition focus:border-brand"
               />
             </label>
             <button
               onClick={handleJoin}
               disabled={joinCode.length !== 6 || !pk.connected || !user}
-              className="mt-4 w-full rounded-pill bg-brand py-3 font-booster font-extrabold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
+              className="mt-4 w-full rounded-pill bg-brand py-3 font-booster font-extrabold text-white transition hover:opacity-90 disabled:opacity-40"
             >
               {t("pk.joinBattle")}
             </button>
@@ -129,7 +139,7 @@ export default function PKPage() {
 
         {/* LOBBY: waiting for the teacher to start */}
         {pk.phase === "lobby" && (
-          <div className="g-card-hero p-6 text-center shadow-sm">
+          <div className="g-card-hero p-6 text-center">
             <p className="text-xs font-bold uppercase text-tertiary">{t("pk.roomCode")}</p>
             <p className="mt-2 font-booster text-5xl font-extrabold tracking-[0.2em] text-primary">{pk.roomCode}</p>
             <p className="mt-2 text-sm text-tertiary">{pk.className}</p>
@@ -162,7 +172,7 @@ export default function PKPage() {
         {pk.phase === "playing" && q && (
           <div className="flex flex-col gap-3">
             {/* Timer + live leaderboard */}
-            <div className="g-card flex items-center justify-between p-3 shadow-sm">
+            <div className="g-card flex items-center justify-between p-3">
               <div className="flex items-center gap-2">
                 <span className={`font-booster text-xl font-extrabold ${timeLeft <= 10 ? "text-critical" : "text-primary"}`}>
                   ⏱ {timeLeft}{t("pk.sec")}
@@ -178,9 +188,19 @@ export default function PKPage() {
             </div>
 
             {/* Question */}
-            <div className="g-card-hero p-6 text-center shadow-sm">
+            <div className="g-card-hero p-6 text-center">
               <p className="text-xs font-bold uppercase text-tertiary mb-2">Q{qIdx + 1}/{pk.questions.length}</p>
-              <p className="font-booster text-3xl font-extrabold text-primary">{q.prompt}</p>
+              {q.audioWord ? (
+                <button
+                  onClick={() => void speakWord(q.audioWord!, 0.9)}
+                  className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-brand text-3xl text-white transition hover:opacity-90"
+                  aria-label="play word"
+                >
+                  🔊
+                </button>
+              ) : (
+                <p className="font-booster text-3xl font-extrabold text-primary">{q.prompt}</p>
+              )}
             </div>
 
             {/* Choices */}
@@ -188,10 +208,9 @@ export default function PKPage() {
               {q.choices.map((c, i) => {
                 const isSel = selected === i;
                 const isCor = i === q.correctIndex;
-                let cls = "flex w-full items-center gap-3 rounded-2xl border-2 border-subtle bg-surface px-4 py-3 text-left text-[15px] font-semibold transition";
-                if (answered && isCor) cls += " border-[var(--bg-positive-emphasis-default)]";
-                else if (answered && isSel) cls += " border-[var(--bg-critical-emphasis-default)]";
-                else cls += " hover:border-brandborder hover:bg-canvas";
+                let cls = "game-chip flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
+                if (answered && isCor) cls = "game-chip game-chip--right pointer-events-none flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
+                else if (answered && isSel) cls = "game-chip game-chip--wrong pointer-events-none flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
                 return (
                   <button key={i} disabled={answered} onClick={() => answer(i)} className={cls}>
                     <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-canvas text-sm font-extrabold text-tertiary">{"ABCD"[i]}</span>
@@ -204,7 +223,7 @@ export default function PKPage() {
             {answered && qIdx < pk.questions.length - 1 && (
               <button
                 onClick={nextQ}
-                className="mt-2 rounded-pill bg-action py-3 font-booster font-extrabold text-white shadow-sm transition hover:bg-actionhover"
+                className="mt-2 rounded-pill bg-action py-3 font-booster font-extrabold text-white transition hover:bg-actionhover"
               >
                 {t("pk.nextQ")}
               </button>
@@ -214,7 +233,7 @@ export default function PKPage() {
 
         {/* ENDED: results */}
         {pk.phase === "ended" && (
-          <div className="g-card-hero p-8 text-center shadow-sm">
+          <div className="g-card-hero p-8 text-center">
             <span className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-brand-subtle text-4xl">🏁</span>
             <h2 className="mt-4 font-booster text-2xl font-extrabold text-primary">{t("pk.battleOver")}</h2>
             <div className="mt-4 flex flex-col gap-2">
@@ -233,7 +252,7 @@ export default function PKPage() {
             <div className="mt-5 flex flex-col gap-2">
               <button
                 onClick={() => { pk.reset(); setJoinCode(""); }}
-                className="rounded-pill bg-brand py-3 font-booster font-extrabold text-white shadow-sm transition hover:opacity-90"
+                className="rounded-pill bg-brand py-3 font-booster font-extrabold text-white transition hover:opacity-90"
               >
                 {t("pk.newBattle")}
               </button>

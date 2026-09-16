@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
 import { getParentLinks, actOnParentLink, isLoggedIn, type ParentLink } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
@@ -50,11 +51,11 @@ export default function FamilyPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t("family.title")}</h1>
+      <div className="page-shell">
+        <PageHeader badge="👨‍👩‍👧 FAMILY" title={t("family.title")} />
 
         {loaded && pending.length === 0 && active.length === 0 && (
-          <div className="g-card p-6 text-center shadow-sm">
+          <div className="g-card p-6 text-center">
             <p className="text-sm text-secondary">{t("family.empty")}</p>
           </div>
         )}
@@ -64,7 +65,7 @@ export default function FamilyPage() {
             <h2 className="mb-3 px-1 text-sm font-bold text-primary">{t("family.requests")}</h2>
             <div className="mb-6 flex flex-col gap-3">
               {pending.map((l) => (
-                <div key={l.peerId} className="g-card flex items-center gap-3 p-4 shadow-sm">
+                <div key={l.peerId} className="g-card flex items-center gap-3 p-4">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand text-sm font-extrabold text-white">
                     {l.nickname.slice(0, 1)}
                   </span>
@@ -80,7 +81,7 @@ export default function FamilyPage() {
                   </button>
                   <button
                     onClick={() => act(l.peerId, "accept")}
-                    className="rounded-pill bg-brand px-4 py-1.5 text-xs font-bold text-white shadow-sm transition hover:opacity-90"
+                    className="rounded-pill bg-brand px-4 py-1.5 text-xs font-bold text-white transition hover:opacity-90"
                   >
                     {t("family.accept")}
                   </button>
@@ -95,7 +96,7 @@ export default function FamilyPage() {
             <h2 className="mb-3 px-1 text-sm font-bold text-primary">{t("family.bound")}</h2>
             <div className="flex flex-col gap-3">
               {active.map((l) => (
-                <div key={l.peerId} className="g-card p-4 shadow-sm">
+                <div key={l.peerId} className="g-card p-4">
                   <div className="flex items-center gap-3">
                     <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand text-sm font-extrabold text-white">
                       {l.nickname.slice(0, 1)}

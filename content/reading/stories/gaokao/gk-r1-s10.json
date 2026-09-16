@@ -1,0 +1,130 @@
+{
+  "id": "gk-r1-s10",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 10,
+  "title": "The Dust That Feeds a Rainforest",
+  "titleCn": "喂养雨林的尘埃",
+  "coverEmoji": "🏜️",
+  "paragraphs": [
+    {
+      "text": "Every year, strong winds lift millions of tons of fine dust from the Sahara, the largest hot desert on Earth. Rising high into the air, this dust may travel for thousands of kilometres. Many people see it as a nuisance, for it dirties cars and darkens the sky. Scientists, however, have found that it carries something valuable.",
+      "translation": "每年，强风从撒哈拉——地球上最大的炎热沙漠——卷起数百万吨细尘。这些尘埃升入高空，可以飘行数千公里。许多人把它看作一种麻烦，因为它弄脏汽车、遮暗天空。然而科学家发现，它携带着某种宝贵的东西。"
+    },
+    {
+      "text": "Crossing the Atlantic Ocean, the dust finally reaches the Amazon, which is home to the largest rainforest on Earth. There it falls with the rain. The soil of the forest is surprisingly poor. The dust brings back the minerals that heavy rain has washed away over millions of years.",
+      "translation": "尘埃横越整个大西洋，最终抵达亚马孙——地球上最大雨林的家园。在那里，它随雨水落下。这片森林的土壤贫瘠得令人意外。尘埃带回了数百万年来大雨冲走的矿物质。"
+    },
+    {
+      "text": "The key mineral is phosphorus, which plants need in order to grow. The idea that a desert could feed a rainforest once seemed strange to many researchers. Today, however, satellite images have made the journey easy to follow. They show huge clouds of dust moving west. Such clouds are especially thick in spring, when the winds are strong.",
+      "translation": "其中最关键的矿物质是磷，植物要靠它才能生长。沙漠竟然能供养一片雨林，这个想法一度让许多研究者觉得古怪。但如今，卫星图像让这段旅程变得容易追踪。它们显示出巨大的尘云向西移动。这类尘云在春季尤其浓密，那时风力很强。"
+    },
+    {
+      "text": "The journey has another effect, which scientists are still studying. Some of the dust reflects sunlight, cooling the surface of the sea slightly. Other particles help clouds to form, changing rainfall patterns far from Africa. Given such complex links, researchers warn that the desert should not be treated as a useless place.",
+      "translation": "这段旅程还有另一种效应，科学家仍在研究它。一部分尘埃反射阳光，使海面略微降温。另一些颗粒则有助于成云，改变着远离非洲的降雨格局。鉴于这些复杂的联系，研究者提醒我们，不该把沙漠当作无用之地。"
+    },
+    {
+      "text": "Nature, it seems, keeps its accounts in unexpected ways. Having travelled across an entire ocean, a grain of sand from the Sahara may end up inside a leaf in Brazil. Understanding these connections helps us see the planet as one system, not a collection of separate parts.",
+      "translation": "看来，大自然记账的方式出人意料。在横越整片海洋之后，一粒来自撒哈拉的沙，也许最终会落进巴西的一片叶子里。理解这些联系，有助于我们把地球看成一个完整的系统，而不是若干孤立部分的集合。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, which journey does the dust make?",
+      "audioText": "According to the text, which journey does the dust make?",
+      "options": [
+        {
+          "emoji": "🏜️➡️🌳",
+          "value": "desert_rainforest",
+          "text": "From a desert to a rainforest"
+        },
+        {
+          "emoji": "🌊➡️🏔️",
+          "value": "ocean_mountain",
+          "text": "From an ocean to a mountain"
+        },
+        {
+          "emoji": "🌙➡️⭐",
+          "value": "moon_star",
+          "text": "From the moon to a star"
+        }
+      ],
+      "answer": "desert_rainforest"
+    },
+    {
+      "type": "word_builder",
+      "word": "minerals",
+      "audioText": "minerals"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "soil",
+        "of",
+        "the",
+        "forest",
+        "is",
+        "surprisingly",
+        "poor."
+      ],
+      "audioText": "The soil of the forest is surprisingly poor."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "show",
+        "huge",
+        "clouds",
+        "of",
+        "dust",
+        "moving",
+        "west."
+      ],
+      "audioText": "They show huge clouds of dust moving west."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Every year, strong winds lift millions of tons of fine dust from the ___.",
+      "choices": [
+        "Sahara",
+        "Amazon",
+        "Atlantic"
+      ],
+      "answer": "Sahara",
+      "audioText": "Every year, strong winds lift millions of tons of fine dust from the Sahara."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The key mineral is phosphorus, which plants need in order to ___.",
+      "choices": [
+        "grow",
+        "travel",
+        "reflect"
+      ],
+      "answer": "grow",
+      "audioText": "The key mineral is phosphorus, which plants need in order to grow."
+    }
+  ],
+  "_unknownWords": [
+    "sahara",
+    "largest",
+    "nuisance",
+    "darkens",
+    "amazon",
+    "rainforest",
+    "surprisingly",
+    "phosphorus",
+    "researchers",
+    "images",
+    "sunlight",
+    "particles",
+    "rainfall",
+    "given",
+    "unexpected",
+    "travelled",
+    "brazil"
+  ]
+}

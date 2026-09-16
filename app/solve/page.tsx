@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
 import { solvePhoto, pingDeepTutor } from "@/lib/deeptutor";
 import { Md } from "@/components/Markdown";
@@ -91,9 +92,8 @@ export default function SolvePage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-2">{t("solve.title")}</h1>
-        <p className="mb-5 text-sm text-tertiary">{t("solve.intro")}</p>
+      <div className="page-shell">
+        <PageHeader badge="📷 PHOTO SOLVE" title={t("solve.title")} sub={t("solve.intro")} />
 
         {/* Photo picker / preview */}
         <input
@@ -119,14 +119,14 @@ export default function SolvePage() {
           </button>
         ) : (
           <>
-            <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black/5">
+            <div className="overflow-hidden rounded-3xl border-2 border-b-4 border-[var(--ink)] shadow-[0_3px_0_0_rgba(0,0,0,0.1)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={imageBase64} alt="" className="max-h-72 w-full object-contain bg-app" />
             </div>
             <div className="mt-3 flex gap-2">
               <button
                 onClick={() => { setImageBase64(null); setSolution(""); }}
-                className="rounded-pill border border-subtle bg-surface px-4 py-2 text-xs font-bold text-secondary shadow-sm transition hover:bg-canvas"
+                className="rounded-pill border border-subtle bg-surface px-4 py-2 text-xs font-bold text-secondary transition hover:bg-canvas"
               >
                 {t("solve.retake")}
               </button>
@@ -139,7 +139,7 @@ export default function SolvePage() {
               <button
                 onClick={solve}
                 disabled={solving}
-                className="rounded-pill bg-brand px-5 py-2 text-sm font-bold text-white shadow-sm transition hover:opacity-90 disabled:opacity-50"
+                className="rounded-pill bg-brand px-5 py-2 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-50"
               >
                 {solving ? t("solve.solving") : t("solve.solveBtn")}
               </button>
@@ -149,7 +149,7 @@ export default function SolvePage() {
 
         {/* Streamed walkthrough */}
         {(solution || solving) && (
-          <div className="mt-5 g-card p-5 shadow-sm">
+          <div className="mt-5 g-card p-5">
             <p className="mb-2 text-xs font-bold uppercase tracking-wide text-tertiary">{t("solve.steps")}</p>
             {solving && !solution && (
               <div className="flex items-center gap-2 text-xs font-bold text-brand-text">

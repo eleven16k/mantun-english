@@ -8,10 +8,11 @@
 
 import { HeartFilledIcon } from '@/components/SvgIcons';
 import { useGameStore } from "@/lib/store";
+import { BASE_PATH } from "@/lib/config";
 import { useI18n } from "@/lib/i18n";
 import type { ScreenName } from "@/lib/types";
 
-const ASSETS = "/sites/assets";
+const ASSETS = `${BASE_PATH}/sites/assets`;
 
 export function GizmoSidebar() {
   const { t } = useI18n();
@@ -56,7 +57,7 @@ export function GizmoSidebar() {
       <div className="mt-6 flex flex-col gap-3 px-4">
         <button
           onClick={() => useGameStore.getState().startQuiz(10)}
-          className="flex h-[40px] items-center justify-center gap-2 rounded-pill bg-action px-5 text-[14px] font-bold text-white shadow-sm transition hover:bg-actionhover"
+          className="flex h-[40px] items-center justify-center gap-2 rounded-pill bg-action px-5 text-[14px] font-bold text-white transition hover:bg-actionhover"
         >
           <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="url(#lexi-study-g)" strokeWidth="2.5" strokeLinecap="round">
             <defs>
@@ -120,7 +121,7 @@ export function GizmoTopBar() {
       <div className="pointer-events-auto flex items-center gap-2">
         <button
           onClick={() => navigate("leaderboard")}
-          className="flex h-9 items-center gap-2 rounded-pill bg-surface px-3 text-sm font-semibold text-primary shadow-sm transition hover:bg-canvas"
+          className="flex h-9 items-center gap-2 rounded-pill bg-surface px-3 text-sm font-semibold text-primary transition hover:bg-canvas"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={`${ASSETS}/nav-joystick.png`} alt="" className="h-5 w-5" />
@@ -128,13 +129,13 @@ export function GizmoTopBar() {
         </button>
         <button
           onClick={() => navigate("shop")}
-          className="flex h-9 items-center gap-1.5 rounded-pill bg-surface px-3 text-sm font-bold text-primary shadow-sm transition hover:bg-canvas"
+          className="flex h-9 items-center gap-1.5 rounded-pill bg-surface px-3 text-sm font-bold text-primary transition hover:bg-canvas"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={`${ASSETS}/coin.png`} alt="" className="h-5 w-5" />
           {coins}
         </button>
-        <button className="grid h-9 w-9 place-items-center rounded-pill bg-surface text-primary shadow-sm transition hover:bg-canvas">
+        <button className="grid h-9 w-9 place-items-center rounded-pill bg-surface text-primary transition hover:bg-canvas">
           <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
             <path d="M13.73 21a2 2 0 0 1-3.46 0" />

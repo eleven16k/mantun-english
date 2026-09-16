@@ -1,0 +1,114 @@
+{
+  "id": "gk-r4-s05",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 5,
+  "title": "Exercise: A Medicine For The Mind",
+  "titleCn": "运动：治愈心灵的良药",
+  "coverEmoji": "🏃",
+  "paragraphs": [
+    {
+      "text": "Taking care of your mental health is just as important as keeping your body strong and fit. Many students believe that lying in bed for hours is the best cure for a bad mood. Movement often works faster. If you have felt low for several weeks, you should have asked for help much earlier. Even a short walk in the fresh air is still a good first step.",
+      "translation": "照顾心理健康，和保持身体强壮健康同样重要。许多学生认为，在床上躺上几个小时是治疗坏心情的最佳办法。而运动往往见效更快。如果你已经情绪低落好几个星期了，你早该去寻求帮助。不过，哪怕只是在清新的空气中散一小会儿步，仍然是很好的第一步。"
+    },
+    {
+      "text": "Scientists have found that moving your body changes the chemistry of your brain in helpful ways. When you run, swim or dance, your brain releases chemicals that calm worry and improve your mood. Your mood can change within minutes. Understanding this process helps us to see exercise as a kind of medicine rather than a duty.",
+      "translation": "科学家发现，活动身体会以有益的方式改变大脑的化学状态。当你跑步、游泳或跳舞时，大脑会释放出让人平静、让人心情变好的化学物质。你的情绪可能在几分钟内就发生变化。理解这一过程，有助于我们把运动看成一种药，而不是一项任务。"
+    },
+    {
+      "text": "You do not need to train for hours at a gym to feel the benefit. Walking to school, cycling to a friend's house or dancing in your room all count. Choosing an activity that you really enjoy is more important than following a strict plan, because you are more likely to keep it up.",
+      "translation": "你不需要在健身房里练上好几个小时才能感受到好处。走路上学、骑车去朋友家，或者在自己房间里跳舞，都算数。选择一个你真正喜欢的活动，比照着严格的计划去做更重要，因为这样你更有可能坚持下去。"
+    },
+    {
+      "text": "Sleep and food work together with regular exercise to keep your mind steady and calm. Going to bed at the same time each night helps your body to rest properly. Skipping breakfast may leave you tired in class, so eating a simple meal each morning is worth the effort.",
+      "translation": "睡眠和饮食与规律的运动共同作用，让你的心情保持平稳。每晚在同一时间上床睡觉，有助于身体得到充分的休息。不吃早餐可能会让你在课堂上感到疲惫，所以每天早上吃一顿简单的饭是值得的。"
+    },
+    {
+      "text": "Nobody expects you to change everything about your life in a single day. Starting with just ten minutes of movement or one extra hour of sleep is usually enough. You should have treated your mind kindly long ago, and now is a perfect moment to begin.",
+      "translation": "没人指望你在一天之内改变生活的一切。从仅仅十分钟的运动，或者多睡一个小时开始，通常就已经足够了。你早就应该善待自己的心，而现在正是开始的绝佳时机。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ to bed at the same time each night helps your body to rest properly.",
+      "choices": [
+        "Going",
+        "Go",
+        "Gone"
+      ],
+      "answer": "Going",
+      "audioText": "Going to bed at the same time each night helps your body to rest properly."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Movement",
+        "often",
+        "works",
+        "faster."
+      ],
+      "audioText": "Movement often works faster."
+    },
+    {
+      "type": "word_builder",
+      "word": "movement",
+      "audioText": "movement"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you have felt low for several weeks, you should ___ asked for help much earlier.",
+      "choices": [
+        "have",
+        "has",
+        "had"
+      ],
+      "answer": "have",
+      "audioText": "If you have felt low for several weeks, you should have asked for help much earlier."
+    },
+    {
+      "type": "image_choice",
+      "question": "According to the text, which activity helps your brain release chemicals that calm worry?",
+      "audioText": "According to the text, which activity helps your brain release chemicals that calm worry?",
+      "options": [
+        {
+          "emoji": "🏃",
+          "value": "running",
+          "text": "Running"
+        },
+        {
+          "emoji": "🛌",
+          "value": "resting",
+          "text": "Resting In Bed"
+        },
+        {
+          "emoji": "🍿",
+          "value": "watching",
+          "text": "Watching A Film"
+        }
+      ],
+      "answer": "running"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Your",
+        "mood",
+        "can",
+        "change",
+        "within",
+        "minutes."
+      ],
+      "audioText": "Your mood can change within minutes."
+    }
+  ],
+  "_unknownWords": [
+    "mental",
+    "lying",
+    "mood",
+    "earlier",
+    "friend's",
+    "steady",
+    "skipping"
+  ]
+}

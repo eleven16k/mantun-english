@@ -1,0 +1,119 @@
+{
+  "id": "gk-r5-s02",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 2,
+  "title": "The Gap Year That Changed My Mind",
+  "titleCn": "改变我心态的间隔年",
+  "coverEmoji": "🌉",
+  "paragraphs": [
+    {
+      "text": "When I failed to get into my dream university, many people advised me to take a gap year, during which I could rethink my future. At first I felt ashamed of myself. But my parents, who had always trusted me, encouraged me to try something completely different instead of sitting at home and waiting.",
+      "translation": "当我没能考上理想的大学时，很多人建议我休学一年，在这一年里我可以重新思考自己的未来。起初我为自己感到羞愧。但我的父母一直信任我，他们鼓励我去尝试一些完全不同的事情，而不是坐在家里干等。"
+    },
+    {
+      "text": "So I volunteered at a small library in a mountain village, where I helped children with their reading every afternoon. The children, most of whom had never owned a book of their own, treated every story as a precious treasure. Working there for six months, I gradually understood what learning really meant to them and to me. It was not about marks at all.",
+      "translation": "于是我到一个山村的小图书馆做志愿者，每天下午在那里帮孩子们阅读。那些孩子大多从未拥有过一本属于自己的书，他们把每个故事都当作珍贵的宝物。在那里工作了六个月后，我渐渐明白学习对他们、对我究竟意味着什么。这根本与分数无关。"
+    },
+    {
+      "text": "Back in the city, I began to study again, but my attitude towards books had completely changed. Textbooks, which once bored me to tears, now seemed like doors opening onto unknown worlds. My teacher, an experienced woman in whom I found a true guide, often said that education was not a race but a lifelong journey.",
+      "translation": "回到城市后，我重新开始学习，但我对书的态度已经完全改变了。曾经让我厌烦得想哭的课本，如今就像一扇扇通向未知世界的大门。我的老师是一位经验丰富的女性，在她身上我找到了真正的引路人，她常说教育不是一场赛跑，而是一段终身的旅程。"
+    },
+    {
+      "text": "Now I am preparing for the college entrance examination with a much clearer mind than I had before. My confidence growing day by day, I no longer fear failure as I used to. Every mistake I make, small as it is, adds a brick to the road along which I walk.",
+      "translation": "现在，我正以比以前清晰得多的心态备战高考。我的信心与日俱增，不再像过去那样害怕失败。我犯的每一个错误，无论多么微小，都为我要走的那条路添上一块砖。"
+    },
+    {
+      "text": "Looking back, I realize that a gap year is not a gap at all in a person's life. It is a bridge, across which young people can walk slowly from confusion to purpose. Whether we study in a classroom or in a village, learning never stops as long as we stay curious.",
+      "translation": "回首往事，我意识到，间隔年在人的一生中根本不是一段空白。它是一座桥，年轻人可以沿着它慢慢从迷茫走向目标。无论我们在教室里还是在山村里学习，只要我们保持好奇，学习就永远不会停止。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where did the writer spend six months during the gap year?",
+      "audioText": "Where did the writer spend six months during the gap year?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "library",
+          "text": "In a village library"
+        },
+        {
+          "emoji": "🏭",
+          "value": "factory",
+          "text": "In a city factory"
+        },
+        {
+          "emoji": "🏖",
+          "value": "beach",
+          "text": "At a seaside hotel"
+        }
+      ],
+      "answer": "library"
+    },
+    {
+      "type": "word_builder",
+      "word": "curious",
+      "audioText": "curious"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "At",
+        "first",
+        "I",
+        "felt",
+        "ashamed",
+        "of",
+        "myself."
+      ],
+      "audioText": "At first I felt ashamed of myself."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "not",
+        "about",
+        "marks",
+        "at",
+        "all."
+      ],
+      "audioText": "It was not about marks at all."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The children, most of ___ had never owned a book of their own, treated every story as a precious treasure.",
+      "choices": [
+        "whom",
+        "which",
+        "who"
+      ],
+      "answer": "whom",
+      "audioText": "The children, most of whom had never owned a book of their own, treated every story as a precious treasure."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Working there for six months, I gradually understood what learning really ___ to them and to me.",
+      "choices": [
+        "meant",
+        "minded",
+        "mattered"
+      ],
+      "answer": "meant",
+      "audioText": "Working there for six months, I gradually understood what learning really meant to them and to me."
+    }
+  ],
+  "_unknownWords": [
+    "gap",
+    "rethink",
+    "sitting",
+    "textbooks",
+    "lifelong",
+    "confidence",
+    "person's",
+    "confusion"
+  ]
+}

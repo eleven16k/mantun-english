@@ -58,15 +58,6 @@ const en = {
   'weak.choiceSkip': 'Skip',
   'weak.choiceHint': 'Hint',
 
-  // — /add —
-  'add.back': 'back',
-  'add.save': 'Save',
-  'add.saved': 'Saved',
-  'add.myDeck': 'My cards',
-  'add.saveHint': 'Saved into the "My cards" deck — quiz it from My decks.',
-  'add.frontPlaceholder': 'Front (word or term)…',
-  'add.backPlaceholder': 'Back (definition, example, notes)…',
-
   // — /import —
   'imp.title': 'Import & Generate',
   'imp.tabUpload': 'Upload',
@@ -208,15 +199,6 @@ const zh: Record<keyof typeof en, string> = {
   'weak.choiceReview': '复习',
   'weak.choiceSkip': '跳过',
   'weak.choiceHint': '提示',
-
-  // — /新建卡片 —
-  'add.back': '返回',
-  'add.save': '保存',
-  'add.saved': '已保存',
-  'add.myDeck': '我的卡片',
-  'add.saveHint': '保存后进入「我的卡片」卡组，可从我的卡组开始练习。',
-  'add.frontPlaceholder': '正面（单词或词组）…',
-  'add.backPlaceholder': '背面（释义、例句、笔记）…',
 
   // — /导入 —
   'imp.title': '导入并生成',

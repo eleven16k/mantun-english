@@ -1,0 +1,117 @@
+{
+  "id": "zk-r3-s09",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 9,
+  "title": "AI Behind the Wheel",
+  "titleCn": "方向盘后的 AI",
+  "coverEmoji": "🚗",
+  "paragraphs": [
+    {
+      "text": "Look at the road. In some cities, cars without drivers are already moving along the streets. These cars are called self-driving cars, and they are tested every day.",
+      "translation": "看看马路。在一些城市里，没有司机的汽车已经在街道上行驶了。这些车被称为自动驾驶汽车，而且每天都要接受测试。"
+    },
+    {
+      "text": "How can a car drive itself? Many small cameras and sensors are fixed on the top and sides. They watch the road and send pictures to a computer inside the car. The computer must decide what to do next in a second.",
+      "translation": "一辆车怎么能自己开呢？许多小型摄像头和传感器被装在车顶和车身两侧。它们观察道路，并把画面发送给车里的电脑。电脑必须在一秒之内决定下一步怎么做。"
+    },
+    {
+      "text": "The computer is trained with millions of road pictures. In this way, it learns to know people, bikes and traffic lights. When a child runs into the street, the car may stop at once. A human driver might not be so fast.",
+      "translation": "这台电脑是用数百万张道路图片训练出来的。这样一来，它学会了识别行人、自行车和红绿灯。当有孩子跑进街道时，汽车可能会立刻停下。而人类司机也许没有那么快。"
+    },
+    {
+      "text": "There are still problems. Bad weather can make the cameras blind, so the car cannot see clearly. Sometimes the car must be controlled by a person again. Rules for these cars are also written in many countries.",
+      "translation": "不过问题依然存在。恶劣的天气会让摄像头“失明”，于是汽车就看不清楚了。有时，汽车必须重新由人来控制。许多国家也在为这类汽车制定规则。"
+    },
+    {
+      "text": "Will we all own a self-driving car one day? Maybe not. Shared robot taxis could be used more often in big cities. You may call one with your phone, and it will come to you. Then the roads might become safer and quieter.",
+      "translation": "将来我们都会拥有一辆自动驾驶汽车吗？也许不会。共享的机器人出租车可能会在大城市里被更频繁地使用。你可以用手机叫一辆，它就会来到你身边。到那时，道路可能会变得更安全、更安静。"
+    },
+    {
+      "text": "Self-driving cars are not perfect yet. But they are getting better each year. One day, they may take us to school while we read or rest. The future on the road could be very different.",
+      "translation": "自动驾驶汽车目前还不完美。但它们一年比一年更好。总有一天，它们可能会在我们读书或休息时送我们去学校。路上的未来可能会大不一样。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which thing helps a self-driving car see the road?",
+      "audioText": "Which thing helps a self-driving car see the road?",
+      "options": [
+        {
+          "emoji": "📷",
+          "value": "camera",
+          "text": "Camera"
+        },
+        {
+          "emoji": "🔊",
+          "value": "speaker",
+          "text": "Speaker"
+        },
+        {
+          "emoji": "🪑",
+          "value": "seat",
+          "text": "Seat"
+        }
+      ],
+      "answer": "camera"
+    },
+    {
+      "type": "word_builder",
+      "word": "computer",
+      "audioText": "computer"
+    },
+    {
+      "type": "word_builder",
+      "word": "traffic",
+      "audioText": "traffic"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "a",
+        "human",
+        "driver",
+        "might",
+        "not",
+        "be",
+        "so",
+        "fast"
+      ],
+      "audioText": "A human driver might not be so fast."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Sometimes the car must be ___ by a person again.",
+      "choices": [
+        "controlled",
+        "controlling",
+        "control"
+      ],
+      "answer": "controlled",
+      "audioText": "Sometimes the car must be controlled by a person again."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "You ___ call one with your phone, and it will come to you.",
+      "choices": [
+        "may",
+        "must",
+        "can't"
+      ],
+      "answer": "may",
+      "audioText": "You may call one with your phone, and it will come to you."
+    }
+  ],
+  "_unknownWords": [
+    "self",
+    "sensors",
+    "millions",
+    "cannot",
+    "controlled",
+    "written",
+    "big",
+    "safer",
+    "getting"
+  ]
+}

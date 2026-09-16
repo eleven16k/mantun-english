@@ -1,0 +1,139 @@
+{
+  "id": "xsc-r6-s09",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r6",
+  "order": 9,
+  "title": "The Little Space Scientist",
+  "titleCn": "小小太空科学家",
+  "coverEmoji": "🔭",
+  "paragraphs": [
+    {
+      "text": "Amy is a young scientist in space. She lives on a big space station. Every morning she checks the plants in her lab. The plants will grow tall and green soon. She must water them before she eats breakfast.",
+      "translation": "艾米是一位在太空中工作的年轻科学家。她住在一座巨大的太空站里。每天早上，她都会检查实验室里的植物。这些植物很快就能长得又高又绿。她必须在吃早饭前给它们浇水。"
+    },
+    {
+      "text": "The station goes around the Earth very fast. Amy can see blue oceans from the window. Next year, a space bus will fly to the Moon. Amy will ride it with her family. They will visit the Moon base for two weeks.",
+      "translation": "太空站绕着地球飞快地飞行。从窗口望出去，艾米能看到蓝色的海洋。明年，一辆太空巴士将飞往月球。艾米会和家人一起乘坐它。他们要在月球基地待上两个星期。"
+    },
+    {
+      "text": "Life on the station is fun but busy. You must keep your things in the right place. You should sleep inside a sleeping bag. You could even float to the kitchen. But you must never open the big door alone.",
+      "translation": "太空站上的生活既有趣又忙碌。你必须把东西放在固定的位置。你应该睡在睡袋里。你甚至可以一路飘到厨房去。但你绝不能一个人打开那扇大门。"
+    },
+    {
+      "text": "Today Amy will try a new water experiment. She will put a drop in a box. The water will become a big floating ball. Everyone should watch it and write down the size.",
+      "translation": "今天，艾米要尝试一个新的水实验。她会把一滴水放进一个盒子里。水会变成一个漂浮的大水球。每个人都应该仔细观察，并记下它有多大。"
+    },
+    {
+      "text": "Amy wants to be a space scientist. She will study planets like Mars and Venus. She must learn maths, science and much more. She should run and swim to stay strong. Maybe she could work on Mars one day.",
+      "translation": "艾米想成为一名太空科学家。她将研究火星、金星这样的行星。她必须学好数学、科学以及更多知识。她应该跑步、游泳，让自己保持强壮。也许有一天，她能在火星上工作。"
+    },
+    {
+      "text": "After work, Amy calls her family on Earth. 'I will come home next month,' she says. 'Then we will look at the stars together.' Space is big, but home is warm.",
+      "translation": "工作结束后，艾米给地球上的家人打电话。'下个月我就回家，'她说，'到时候我们一起看星星。'太空很大，但家很温暖。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What will grow tall and green in Amy's lab?",
+      "audioText": "What will grow tall and green in Amy's lab?",
+      "options": [
+        {
+          "emoji": "🌱",
+          "value": "plant",
+          "text": "Plant"
+        },
+        {
+          "emoji": "🚀",
+          "value": "rocket",
+          "text": "Rocket"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        }
+      ],
+      "answer": "plant"
+    },
+    {
+      "type": "word_builder",
+      "word": "station",
+      "audioText": "station"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "must",
+        "water",
+        "them",
+        "before",
+        "she",
+        "eats",
+        "breakfast."
+      ],
+      "audioText": "She must water them before she eats breakfast."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She ___ learn maths, science and much more.",
+      "choices": [
+        "must",
+        "shouldn't",
+        "couldn't"
+      ],
+      "answer": "must",
+      "audioText": "She must learn maths, science and much more."
+    },
+    {
+      "type": "image_choice",
+      "question": "What can Amy see from the window?",
+      "audioText": "What can Amy see from the window?",
+      "options": [
+        {
+          "emoji": "🌊",
+          "value": "oceans",
+          "text": "Oceans"
+        },
+        {
+          "emoji": "🏠",
+          "value": "houses",
+          "text": "Houses"
+        },
+        {
+          "emoji": "🌳",
+          "value": "trees",
+          "text": "Trees"
+        }
+      ],
+      "answer": "oceans"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "water",
+        "will",
+        "become",
+        "a",
+        "big",
+        "floating",
+        "ball."
+      ],
+      "audioText": "The water will become a big floating ball."
+    }
+  ],
+  "_unknownWords": [
+    "amy",
+    "base",
+    "busy",
+    "float",
+    "floating",
+    "mars",
+    "venus",
+    "'i",
+    "'",
+    "'then"
+  ]
+}

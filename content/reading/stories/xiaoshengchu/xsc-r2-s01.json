@@ -1,0 +1,122 @@
+{
+  "id": "xsc-r2-s01",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 1,
+  "title": "Welcome to Animal Village",
+  "titleCn": "欢迎来到动物村",
+  "coverEmoji": "🐻",
+  "paragraphs": [
+    {
+      "text": "Welcome to Animal Village! Many animals live here together. The sun is shining today. The birds are singing in the trees.",
+      "translation": "欢迎来到动物村！许多动物一起住在这里。今天阳光灿烂。鸟儿在树上唱歌。"
+    },
+    {
+      "text": "Look! A little rabbit is on the grass. She is running and jumping happily. Her name is Lily. She is new in the village. She is looking for a friend.",
+      "translation": "看！草地上有一只小兔子。她正开心地跑着跳着。她叫莉莉。她刚来村子里。她在找朋友。"
+    },
+    {
+      "text": "A big bear is walking by. He is carrying a heavy box. \"Can I help you?\" says Lily. \"Yes, please!\" says the bear. His name is Ben.",
+      "translation": "一只大熊走了过来。他正搬着一个很重的箱子。“我能帮你吗？”莉莉说。“好啊，谢谢你！”大熊说。他叫本。"
+    },
+    {
+      "text": "Lily and Ben are working together. They are putting the box under a tree. \"Thank you, Lily,\" says Ben. \"You are very kind.\" Lily is smiling happily.",
+      "translation": "莉莉和本一起干活。他们把箱子放到一棵树下。“谢谢你，莉莉，”本说，“你真是太好了。”莉莉开心地笑了。"
+    },
+    {
+      "text": "Now they are good friends. They like playing together every day. Ben can climb trees. Lily can run very fast. They are helping each other.",
+      "translation": "现在他们是好朋友了。他们喜欢每天一起玩。本会爬树。莉莉跑得非常快。他们互相帮助。"
+    },
+    {
+      "text": "In Animal Village, everyone is happy. Good friends are always around you. Come and meet them!",
+      "translation": "在动物村里，大家都很开心。好朋友就在你身边。快来认识他们吧！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is the little rabbit doing?",
+      "audioText": "What is the little rabbit doing?",
+      "options": [
+        {
+          "emoji": "🏃",
+          "value": "running",
+          "text": "Running"
+        },
+        {
+          "emoji": "😴",
+          "value": "sleeping",
+          "text": "Sleeping"
+        },
+        {
+          "emoji": "🍎",
+          "value": "eating",
+          "text": "Eating"
+        }
+      ],
+      "answer": "running"
+    },
+    {
+      "type": "image_choice",
+      "question": "What is the big bear carrying?",
+      "audioText": "What is the big bear carrying?",
+      "options": [
+        {
+          "emoji": "📦",
+          "value": "box",
+          "text": "A box"
+        },
+        {
+          "emoji": "🎈",
+          "value": "balloon",
+          "text": "A balloon"
+        },
+        {
+          "emoji": "🍯",
+          "value": "honey",
+          "text": "Honey"
+        }
+      ],
+      "answer": "box"
+    },
+    {
+      "type": "word_builder",
+      "word": "rabbit",
+      "audioText": "rabbit"
+    },
+    {
+      "type": "word_builder",
+      "word": "friend",
+      "audioText": "friend"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "are",
+        "helping",
+        "each",
+        "other",
+        "."
+      ],
+      "audioText": "They are helping each other."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Ben can ___ trees.",
+      "choices": [
+        "climb",
+        "run",
+        "sing"
+      ],
+      "answer": "climb",
+      "audioText": "Ben can climb trees."
+    }
+  ],
+  "_unknownWords": [
+    "happily",
+    "lily",
+    "ben",
+    "putting"
+  ]
+}

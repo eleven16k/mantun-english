@@ -1,0 +1,125 @@
+{
+  "id": "gk-r2-s01",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 1,
+  "title": "What Your Phone Knows About You",
+  "titleCn": "你的手机知道些什么",
+  "coverEmoji": "📱",
+  "paragraphs": [
+    {
+      "text": "Every day, millions of small decisions are being made by software that most of us never notice. Your phone suggests a song, a shop, or a friend. It seems that these choices come from nowhere. In fact, they are produced by programs that study what you tap and where you pause. It is easy to forget that someone may be reading the same information about you.",
+      "translation": "每一天，数以百万计的小决定正由我们大多数人从未留意的软件做出。你的手机会推荐一首歌、一家店，或者一个朋友。这些选择看上去像是凭空冒出来的。事实上，它们是由那些研究你点了什么、在哪里停顿的程序产生的。人们很容易忘记，某个地方的某个人也许正在读着关于你的同样的信息。"
+    },
+    {
+      "text": "This kind of personal data has been collected for years, often without clear permission. Companies explain that the information is used to improve their services, and in many ways it truly is. Yet it is not always obvious whether the benefits are shared fairly with the people who provide the data. When a free app asks for your location, the real price may be hidden in rules that nobody reads.",
+      "translation": "这类个人数据已经被收集了很多年，而且常常没有明确的许可。公司解释说，这些信息是被用来改进它们的服务的，而在许多方面，情况确实如此。然而，这些好处是否被公平地分享给了提供数据的人，这一点并不总是显而易见。当一款免费应用索要你的位置时，真正的代价可能就藏在那份没人会去读的规则里。"
+    },
+    {
+      "text": "It is therefore important that young people learn to ask simple but powerful questions. Who owns the pictures that I upload? What happens to my messages after I delete them? Could my face be recognized in a crowd without my knowledge? Such questions are not about refusing technology, because they are really about understanding it. A citizen who knows how these systems work is much harder to fool.",
+      "translation": "因此，年轻人学会提出简单却有力的问题就很重要了。我上传的照片归谁所有？我删掉的消息接下来会怎样？在人群里，没有我的知情，我的脸会被识别出来吗？这些问题并不是要拒绝技术，因为它们其实关乎理解技术。懂得这些系统如何运作的公民，要难被糊弄得多。"
+    },
+    {
+      "text": "Governments and companies are now being asked to explain their rules more clearly. In some countries, new laws have been written to protect personal information. Companies that break these rules can be given heavy fines. It remains uncertain whether such protection will travel fast enough to catch up with the technology itself. Still, the direction seems right, and public pressure is part of the reason.",
+      "translation": "政府和公司如今正被要求更清楚地解释它们的规则。在一些国家，新的法律已经被制定出来，用来保护个人信息。违反这些规则的公司可能被处以巨额罚款。这样的保护能否足够快地追上技术本身，仍不确定。不过，方向看起来是对的，而公众压力正是原因之一。"
+    },
+    {
+      "text": "For all its problems, the digital world has given us tools that earlier generations could only dream of. The aim is not to fear it, but to shape it. If enough people ask what a machine is doing with their data, better answers will be demanded. That is how a fairer digital life is built, one question at a time.",
+      "translation": "尽管有种种问题，数字世界还是给了我们前人只能梦想的工具。目的不是害怕它，而是塑造它。如果有足够多的人追问机器正拿他们的数据做什么，人们就会要求更好的答案。一个更公平的数字生活就是这样建立起来的——一次一个问题。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In paragraph 1, what do the programs study?",
+      "audioText": "In paragraph one, what do the programs study?",
+      "options": [
+        {
+          "emoji": "👆",
+          "value": "taps",
+          "text": "What you tap"
+        },
+        {
+          "emoji": "😴",
+          "value": "sleep",
+          "text": "When you sleep"
+        },
+        {
+          "emoji": "🍜",
+          "value": "meals",
+          "text": "What you eat"
+        }
+      ],
+      "answer": "taps"
+    },
+    {
+      "type": "word_builder",
+      "word": "permission",
+      "audioText": "permission"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "seems",
+        "that",
+        "these",
+        "choices",
+        "come",
+        "from",
+        "nowhere."
+      ],
+      "audioText": "It seems that these choices come from nowhere."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Who",
+        "owns",
+        "the",
+        "pictures",
+        "that",
+        "I",
+        "upload?"
+      ],
+      "audioText": "Who owns the pictures that I upload?"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "This kind of personal data has ___ collected for years, often without clear permission.",
+      "choices": [
+        "been",
+        "being",
+        "be"
+      ],
+      "answer": "been",
+      "audioText": "This kind of personal data has been collected for years, often without clear permission."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It remains uncertain ___ such protection will travel fast enough to catch up with the technology itself.",
+      "choices": [
+        "whether",
+        "what",
+        "which"
+      ],
+      "answer": "whether",
+      "audioText": "It remains uncertain whether such protection will travel fast enough to catch up with the technology itself."
+    }
+  ],
+  "_unknownWords": [
+    "tap",
+    "truly",
+    "app",
+    "location",
+    "hidden",
+    "powerful",
+    "upload",
+    "written",
+    "given",
+    "uncertain",
+    "digital",
+    "earlier",
+    "generations"
+  ]
+}

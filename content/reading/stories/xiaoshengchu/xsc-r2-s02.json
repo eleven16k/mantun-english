@@ -1,0 +1,120 @@
+{
+  "id": "xsc-r2-s02",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 2,
+  "title": "Rabbit's New House",
+  "titleCn": "兔子的新房子",
+  "coverEmoji": "🏡",
+  "paragraphs": [
+    {
+      "text": "It is a sunny morning. The animals are playing in Animal Village. Rabbit is carrying a big box. She is walking to her new house.",
+      "translation": "这是一个阳光明媚的早晨。动物村里的动物们正在玩耍。兔子正搬着一个大箱子。她正走向自己的新房子。"
+    },
+    {
+      "text": "The box is very heavy. Rabbit is tired. \"Can you help me?\" she asks Bear. Bear is reading under a tree.",
+      "translation": "箱子非常重。兔子累坏了。“你能帮帮我吗？”她问熊。熊正在一棵树下看书。"
+    },
+    {
+      "text": "\"Of course!\" says Bear. He is strong. He carries the box with Rabbit. They are talking and laughing.",
+      "translation": "“当然可以！”熊说。他很强壮。他和兔子一起搬箱子。他们有说有笑。"
+    },
+    {
+      "text": "Now they are at the new house. Duck and Cat are waiting there. They are painting the door. It is blue and yellow.",
+      "translation": "现在他们到了新房子。鸭子和猫正在那里等着。他们正在刷门。门是蓝色和黄色的。"
+    },
+    {
+      "text": "\"We like your new house!\" says Duck. Rabbit is very happy. She can make new friends here.",
+      "translation": "“我们喜欢你的新房子！”鸭子说。兔子非常开心。她可以在这里交到新朋友。"
+    },
+    {
+      "text": "In the evening, they are eating cake together. Animal Village is a warm place. Friends are always happy to help.",
+      "translation": "傍晚，他们一起吃蛋糕。动物村是个温暖的地方。朋友们总是乐于帮忙。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is Rabbit carrying?",
+      "audioText": "What is Rabbit carrying?",
+      "options": [
+        {
+          "emoji": "📦",
+          "value": "box",
+          "text": "Box"
+        },
+        {
+          "emoji": "🍰",
+          "value": "cake",
+          "text": "Cake"
+        },
+        {
+          "emoji": "📖",
+          "value": "book",
+          "text": "Book"
+        }
+      ],
+      "answer": "box"
+    },
+    {
+      "type": "image_choice",
+      "question": "What are Duck and Cat doing?",
+      "audioText": "What are Duck and Cat doing?",
+      "options": [
+        {
+          "emoji": "🎨",
+          "value": "painting",
+          "text": "Painting"
+        },
+        {
+          "emoji": "📖",
+          "value": "reading",
+          "text": "Reading"
+        },
+        {
+          "emoji": "😴",
+          "value": "sleeping",
+          "text": "Sleeping"
+        }
+      ],
+      "answer": "painting"
+    },
+    {
+      "type": "word_builder",
+      "word": "rabbit",
+      "audioText": "rabbit"
+    },
+    {
+      "type": "word_builder",
+      "word": "friends",
+      "audioText": "friends"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Rabbit",
+        "is",
+        "carrying",
+        "a",
+        "big",
+        "box."
+      ],
+      "audioText": "Rabbit is carrying a big box."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Bear ___ reading under a tree.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "is",
+      "audioText": "Bear is reading under a tree."
+    }
+  ],
+  "_unknownWords": [
+    "asks",
+    "talking"
+  ]
+}

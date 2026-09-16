@@ -1,0 +1,122 @@
+{
+  "id": "zk-r5-s08",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 8,
+  "title": "The Woman Who Planted a Forest",
+  "titleCn": "种下一片森林的女人",
+  "coverEmoji": "🌳",
+  "paragraphs": [
+    {
+      "text": "In a small village in the north, there was a hill which had no trees. Every spring, strong winds blew sand into the windows of the houses. Many families had left before Mei came home. She was born in the village, and she loved it.",
+      "translation": "在北方的一个小村子里，有一座光秃秃的山，山上连一棵树也没有。每年春天，大风都会把沙子吹进村民家的窗户里。在梅回到家乡之前，很多人家已经搬走了。她出生在这个村子，也深爱着这里。"
+    },
+    {
+      "text": "After Mei finished school in the city, she worked in a big shop for three years. Then one day she read a book which was about planting trees. The book said that a hill without trees can slowly turn into a desert. Mei thought about her village for many nights.",
+      "translation": "梅在城里念完书后，在一家大商店里工作了三年。后来有一天，她读到一本关于种树的书。书上说，一座没有树的山会慢慢变成沙漠。梅一连好几个晚上都在想着自己的村子。"
+    },
+    {
+      "text": "When she went back, some old people laughed at her. \"A girl who digs holes all day is wasting her time,\" they said. Mei smiled and kept working. She carried water up the hill in two heavy buckets, and nobody helped her at first.",
+      "translation": "她回到村里时，一些老人嘲笑她。他们说：“一个整天挖坑的姑娘是在浪费时间。”梅笑了笑，继续干活。她用两只沉甸甸的水桶把水挑上山，起初没有一个人帮她。"
+    },
+    {
+      "text": "In the first year, most of the small trees died because the ground was too dry. Mei had planted them too late, so she learned to wait for the rain. She also found a way which kept the water in the soil. Slowly, some green leaves appeared.",
+      "translation": "第一年，因为土地太干，大部分小树都死了。梅种得太晚了，于是她学会了等雨。她还找到了一种能把水分留在土壤里的办法。渐渐地，一些绿叶冒了出来。"
+    },
+    {
+      "text": "Three years later, the hill looked quite different. Birds that had never come before began to build nests there. The village children helped Mei every weekend, carrying water and pulling out dry grass.",
+      "translation": "三年后，这座山的样子大不一样了。以前从没来过的鸟儿开始在山上筑巢。村里的孩子们每个周末都来帮梅，挑水、拔枯草。"
+    },
+    {
+      "text": "Today, more than ten thousand trees stand on the hill, and people call it \"Mei's Forest\". Mei often tells visitors that one person cannot do everything, but one person can do something. That is how a hill becomes green again.",
+      "translation": "如今，一万多棵树挺立在这座山上，人们把它叫做“梅的森林”。梅常常对来访的人说，一个人不可能做完所有的事，但一个人可以做一件事。一座山就是这样重新变绿的。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In the story, what did Mei use to carry water up the hill?",
+      "audioText": "In the story, what did Mei use to carry water up the hill?",
+      "options": [
+        {
+          "emoji": "🪣",
+          "value": "buckets",
+          "text": "Buckets"
+        },
+        {
+          "emoji": "🧺",
+          "value": "baskets",
+          "text": "Baskets"
+        },
+        {
+          "emoji": "🎒",
+          "value": "bags",
+          "text": "School bags"
+        }
+      ],
+      "answer": "buckets"
+    },
+    {
+      "type": "word_builder",
+      "word": "forest",
+      "audioText": "forest"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Mei",
+        "smiled",
+        "and",
+        "kept",
+        "working."
+      ],
+      "audioText": "Mei smiled and kept working."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "That",
+        "is",
+        "how",
+        "a",
+        "hill",
+        "becomes",
+        "green",
+        "again."
+      ],
+      "audioText": "That is how a hill becomes green again."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Birds ___ had never come before began to build nests on the hill.",
+      "choices": [
+        "that",
+        "what",
+        "whose"
+      ],
+      "answer": "that",
+      "audioText": "Birds that had never come before began to build nests on the hill."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Mei had ___ them too late, so most of the small trees died.",
+      "choices": [
+        "planted",
+        "picked",
+        "painted"
+      ],
+      "answer": "planted",
+      "audioText": "Mei had planted them too late, so most of the small trees died."
+    }
+  ],
+  "_unknownWords": [
+    "blew",
+    "big",
+    "buckets",
+    "soil",
+    "later",
+    "nests",
+    "mei's",
+    "cannot"
+  ]
+}

@@ -1,0 +1,344 @@
+/*
+  句法馆 — 句法训练专属件（建立在 ph- juyou 皮肤之上）。
+  变量沿用 .ph-page 的 --ph-* token；本文件只补词级槽位、打字 token
+  配色、麦克风/得分件、玩法切换 tabs、馆页玩法卡等 ph- 没有的部件。
+  类名 sn- 前缀，仅作用于 /sentence 路由。
+*/
+
+/* ── 馆页：三种玩法介绍卡 ── */
+.sn-modes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.9rem;
+}
+
+.sn-mode-card {
+  position: relative;
+  background: #fff;
+  border: 3px solid var(--ph-line);
+  border-radius: 1.25rem;
+  padding: 1rem 0.9rem 0.85rem;
+  text-align: center;
+  transition: all 0.15s linear;
+}
+
+.sn-mode-card:hover {
+  transform: translateY(-0.35rem);
+  border-color: var(--ph-ink);
+}
+
+.sn-mode-card i {
+  display: inline-grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  font-size: 1.3rem;
+  font-style: normal;
+  border-radius: 0.9rem;
+  border: 2px solid var(--ph-ink);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.sn-mode-card i.puzzle { background: var(--ph-yellow); }
+.sn-mode-card i.typing { background: #dbeafe; }
+.sn-mode-card i.speaking { background: var(--ph-green-bg); }
+
+.sn-mode-card b {
+  display: block;
+  margin-top: 0.55rem;
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+.sn-mode-card span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ph-ink-3);
+}
+
+/* 每课行内的三玩法通关点（hall） */
+.sn-mode-dots {
+  display: inline-flex;
+  gap: 0.25rem;
+  vertical-align: middle;
+}
+
+.sn-mode-dots i {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--ph-card-line);
+  background: #fff;
+}
+
+.sn-mode-dots i.on {
+  border-color: var(--ph-green);
+  background: var(--ph-green);
+}
+
+/* ── 会话页：玩法切换 tabs ── */
+.sn-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.sn-tab {
+  padding: 0.45rem 1.1rem;
+  font-weight: 900;
+  font-size: 0.85rem;
+  color: var(--ph-ink-2);
+  background: #fff;
+  border: 2px solid var(--ph-card-line);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.sn-tab:hover {
+  border-color: var(--ph-ink);
+}
+
+.sn-tab--on {
+  color: var(--ph-ink);
+  background: var(--ph-yellow);
+  border-color: var(--ph-ink);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+/* ── 拼图：中文题干 + 词级槽位 + 词卡 ── */
+.sn-cn {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--ph-ink);
+  line-height: 1.35;
+}
+
+.sn-slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin: 1.25rem 0;
+  min-height: 3rem;
+}
+
+.sn-slot {
+  min-width: 3.4rem;
+  height: 2.9rem;
+  padding: 0 0.7rem;
+  display: grid;
+  place-items: center;
+  border: 3px dashed var(--ph-card-line);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.6);
+  font-weight: 900;
+  font-size: 1.05rem;
+  color: var(--ph-ink);
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.sn-slot--filled {
+  border-style: solid;
+  border-color: var(--ph-ink);
+  background: #fff;
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.sn-slot--filled:hover {
+  border-color: var(--ph-red);
+  color: var(--ph-red);
+}
+
+.sn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 3rem;
+}
+
+.sn-chip-word {
+  padding: 0.55rem 1rem;
+  font-weight: 900;
+  font-size: 1.05rem;
+  color: var(--ph-ink);
+  background: #fff;
+  border: 3px solid var(--ph-ink);
+  border-radius: 1rem;
+  box-shadow: 0 4px 0 0 var(--ph-ink);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.sn-chip-word:hover {
+  background: #eff6ff;
+  color: var(--ph-blue-deep);
+}
+
+.sn-chip-word:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 var(--ph-ink);
+}
+
+.sn-chip-word--used {
+  opacity: 0.15;
+  pointer-events: none;
+  box-shadow: none;
+  transform: scale(0.94);
+}
+
+/* 看答案（2 秒揭示） */
+.sn-peek {
+  margin: 0.9rem auto 0;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--ph-blue-deep);
+  background: #eff6ff;
+  border: 2px dashed var(--ph-blue);
+  border-radius: 1rem;
+}
+
+/* ── 打字：目标句 token 渲染 ── */
+.sn-toks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.75rem;
+  row-gap: 0.5rem;
+  margin: 1.25rem 0 0.75rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--ph-ink);
+}
+
+.sn-tok--pending {
+  color: var(--ph-ink-3);
+  opacity: 0.55;
+}
+
+.sn-tok--ok {
+  color: var(--ph-green);
+}
+
+.sn-tok--bad {
+  color: var(--ph-red);
+  text-decoration: line-through;
+}
+
+.sn-tok--current {
+  color: var(--ph-blue-deep);
+}
+
+.sn-tok--current .caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: 1px;
+  vertical-align: -0.15em;
+  background: var(--ph-blue-deep);
+  animation: sn-blink 1s step-end infinite;
+}
+
+@keyframes sn-blink {
+  50% { opacity: 0; }
+}
+
+.sn-char--ok { color: var(--ph-green); }
+.sn-char--bad {
+  color: var(--ph-red);
+  text-decoration: underline wavy var(--ph-red) 2px;
+  text-underline-offset: 0.2em;
+}
+
+/* 隐形输入层：盖住舞台收集击键（绝不 display:none——iOS 无法聚焦） */
+.sn-input-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.01;
+  font-size: 16px; /* <16px 会触发 iOS Safari 聚焦缩放 */
+  border: none;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+/* ── 口语：句子展示 + 得分 ── */
+.sn-en {
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: var(--ph-ink);
+  line-height: 1.45;
+}
+
+.sn-en .sn-tok--ok { color: var(--ph-green); }
+.sn-en .sn-tok--bad { color: var(--ph-red); text-decoration: none; }
+
+.sn-score-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.sn-score-row .ph-progress { flex: 1; }
+
+.sn-score-row b {
+  font-weight: 900;
+  font-size: 1.05rem;
+  color: var(--ph-blue-deep);
+  min-width: 3.2rem;
+  text-align: right;
+}
+
+.sn-extras {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ph-ink-3);
+}
+
+.sn-transcript {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ph-ink-2);
+  background: #f8fafc;
+  border: 2px dashed var(--ph-card-line);
+  border-radius: 1rem;
+}
+
+/* 听写中的呼吸红点 */
+.sn-rec {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  background: #ef4444;
+  animation: sn-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes sn-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@media (max-width: 480px) {
+  .sn-cn { font-size: 1.2rem; }
+  .sn-en { font-size: 1.25rem; }
+  .sn-toks { font-size: 1.2rem; }
+  .sn-slot { min-width: 2.9rem; height: 2.6rem; font-size: 0.95rem; }
+  .sn-chip-word { padding: 0.45rem 0.8rem; font-size: 0.95rem; }
+}

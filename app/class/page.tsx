@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import {
@@ -8,6 +9,7 @@ import {
   getAssignments, getAssignment, wordlistQuiz, getMyOrgRanking,
   getNotifications, markNotificationsRead,
 } from "@/lib/api";
+import { getProfile, setProfile } from "@/lib/plan";
 import type { AssignmentRow, OrgRanking, AppNotification } from "@/lib/api";
 import { adaptQuizPairs } from "@/lib/deeptutor";
 import { useGameStore } from "@/lib/store";
@@ -89,7 +91,17 @@ export default function ClassPage() {
     if (joinCode.length !== 6) return;
     setJoinError("");
     try {
-      await joinClass(joinCode);
+      const res = await joinClass(joinCode);
+      // 班级声明学段 = 权威源：服务端已覆盖 users.track，这里同步本地档案
+      if (res?.track) {
+        const p = getProfile();
+        setProfile({
+          track: res.track,
+          targetScore: p?.targetScore ?? 0,
+          examDate: p?.examDate ?? "",
+          estimatedScore: p?.estimatedScore,
+        });
+      }
       setJoinCode("");
       await refresh();
     } catch (e) {
@@ -133,6 +145,11 @@ export default function ClassPage() {
     setStartingId(id);
     try {
       const detail = await getAssignment(id);
+      // 拼读作业：深链拼读馆训练页（完成后由训练页回报进度）
+      if (detail.sourceType === "phonics_unit" && detail.phonicsUnitId) {
+        router.push(`/phonics/unit/${detail.phonicsUnitId}?asg=${detail.id}`);
+        return;
+      }
       if (!detail.words?.length) return;
       const { pairs } = await wordlistQuiz(detail.words.map((w) => w.word), detail.words.length);
       const adapted = adaptQuizPairs(pairs);
@@ -183,11 +200,11 @@ export default function ClassPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t("class.title")}</h1>
+      <div className="page-shell">
+        <PageHeader badge="🏫 CLASS" title={t("class.title")} />
 
         {/* Join card */}
-        <div className="g-card p-5 shadow-sm">
+        <div className="g-card p-5">
           <label className="flex flex-col gap-2">
             <span className="text-xs font-bold uppercase tracking-wide text-tertiary">{t("class.codeLabel")}</span>
             <input
@@ -202,7 +219,7 @@ export default function ClassPage() {
           <button
             disabled={joinCode.length !== 6}
             onClick={handleJoin}
-            className="mt-4 w-full rounded-pill bg-brand py-3 font-booster font-extrabold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
+            className="mt-4 w-full rounded-pill bg-brand py-3 font-booster font-extrabold text-white transition hover:opacity-90 disabled:opacity-40"
           >
             {t("class.join")}
           </button>
@@ -211,7 +228,7 @@ export default function ClassPage() {
 
         {/* Reminder banner (V6 N2) — teacher nudges, max 2 shown */}
         {reminders.map((n) => (
-          <div key={n.id} className="mt-5 flex items-center gap-3 rounded-2xl border border-brandborder bg-brand-subtle px-4 py-3 shadow-sm">
+          <div key={n.id} className="mt-5 flex items-center gap-3 rounded-2xl border border-brandborder bg-brand-subtle px-4 py-3">
             <span className="text-lg">🔔</span>
             <span className="min-w-0 flex-1">
               <span className="block truncate text-sm font-bold text-primary">
@@ -224,7 +241,7 @@ export default function ClassPage() {
             {n.payload.assignmentId && (
               <button
                 onClick={() => goReminder(n)}
-                className="shrink-0 rounded-pill bg-brand px-4 py-1.5 text-xs font-bold text-white shadow-sm transition hover:opacity-90"
+                className="shrink-0 rounded-pill bg-brand px-4 py-1.5 text-xs font-bold text-white transition hover:opacity-90"
               >
                 {t("reminder.go")}
               </button>
@@ -236,7 +253,7 @@ export default function ClassPage() {
         {orgRanking?.org && (
           <button
             onClick={() => router.push("/org")}
-            className="mt-6 flex w-full items-center gap-3 rounded-2xl border border-brandborder bg-brand-subtle p-5 text-left shadow-sm transition hover:opacity-95"
+            className="mt-6 flex w-full items-center gap-3 rounded-2xl border border-brandborder bg-brand-subtle p-5 text-left transition hover:opacity-95"
           >
             <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand text-base">🏆</span>
             <span className="min-w-0 flex-1">
@@ -258,11 +275,16 @@ export default function ClassPage() {
           <>
             <h2 className="mb-3 mt-6 px-1 text-sm font-bold text-primary">{t("class.assignments")}</h2>
             <div className="flex flex-col gap-3">
-              {assignments.map((a) => (
-                <div key={a.id} className="g-card p-5 shadow-sm">
+              {assignments.map((a) => {
+                const isPhonics = a.sourceType === "phonics_unit" && !!a.phonicsUnitId;
+                return (
+                <div key={a.id} className="g-card p-5">
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
-                      <p className="truncate text-[15px] font-bold text-primary">{a.title}</p>
+                      <p className="truncate text-[15px] font-bold text-primary">
+                        {isPhonics && <span className="mr-1">🔤</span>}
+                        {a.title}
+                      </p>
                       <p className="mt-0.5 text-xs text-tertiary">
                         {a.className} · {a.wordCount} {t("class.wordCount")} · {t("class.due")} {new Date(a.dueAt * 1000).toLocaleDateString(locale === 'zh' ? 'zh-CN' : 'en-US')}
                       </p>
@@ -278,15 +300,22 @@ export default function ClassPage() {
                   <div className="mt-3 flex items-center justify-between">
                     <span className="text-xs font-bold text-tertiary">{a.progress} / {a.targetWords}</span>
                     <button
-                      onClick={() => startAssignment(a.id)}
+                      onClick={() =>
+                        isPhonics
+                          ? router.push(`/phonics/unit/${a.phonicsUnitId}?asg=${a.id}`) // 拼读作业 → 深链拼读馆训练
+                          : startAssignment(a.id)
+                      }
                       disabled={startingId === a.id}
-                      className="rounded-pill bg-brand px-4 py-1.5 text-xs font-bold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
+                      className="rounded-pill bg-brand px-4 py-1.5 text-xs font-bold text-white transition hover:opacity-90 disabled:opacity-40"
                     >
-                      {startingId === a.id ? "…" : a.status === "done" ? t("class.practiceAgain") : t("class.start")}
+                      {isPhonics
+                        ? t("class.startPhonics")
+                        : startingId === a.id ? "…" : a.status === "done" ? t("class.practiceAgain") : t("class.start")}
                     </button>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </>
         )}
@@ -294,13 +323,13 @@ export default function ClassPage() {
         {/* My classes */}
         <h2 className="mb-3 mt-6 px-1 text-sm font-bold text-primary">{t("class.myClasses")}</h2>
         {loaded && classes.length === 0 && (
-          <div className="g-card p-6 text-center shadow-sm">
+          <div className="g-card p-6 text-center">
             <p className="text-sm text-secondary">{t("class.empty")}</p>
           </div>
         )}
         <div className="flex flex-col gap-3">
           {classes.map((c) => (
-            <div key={c.code} className="g-card overflow-hidden shadow-sm">
+            <div key={c.code} className="g-card overflow-hidden">
               <button
                 onClick={() => toggleOpen(c.code)}
                 className="flex w-full items-center gap-3 px-5 py-4 text-left transition hover:bg-canvas"

@@ -1,0 +1,116 @@
+{
+  "id": "zk-r3-s07",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 7,
+  "title": "Smart Streets, Safe Rides",
+  "titleCn": "智慧街道，安全出行",
+  "coverEmoji": "🚦",
+  "paragraphs": [
+    {
+      "text": "Cities around the world are growing fast. More and more cars are on the roads every year. To keep people safe, many cities are trying new ideas. Some streets are becoming smart streets. They may change the way we travel.",
+      "translation": "世界各地的城市正在快速变大。每年路上的汽车越来越多。为了保障人们的安全，许多城市正在尝试新的办法。有些街道正在变成“智慧街道”。它们也许会改变我们出行的方式。"
+    },
+    {
+      "text": "A smart street uses cameras and small computers. These computers are placed inside boxes near the road. The cameras can see how many cars and bikes are passing. This information is sent to a computer center in a few seconds.",
+      "translation": "智慧街道会用到摄像头和小型电脑。这些电脑被安放在路边的小箱子里。摄像头能看清有多少汽车和自行车正在经过。这些信息会在几秒钟内被送到一个电脑中心。"
+    },
+    {
+      "text": "Traffic lights are controlled by this center. When the road is busy, the green light can be made longer. When no cars are waiting, the light is changed quickly. So drivers and walkers do not have to wait so long.",
+      "translation": "交通灯由这个中心控制。当路上车多时，绿灯可以被调得更长一些。当没有车在等的时候，灯会很快变换。所以司机和行人都用不着等那么久。"
+    },
+    {
+      "text": "Smart streets can also help buses. A bus may be given a green light first. Then it can move faster than cars. This idea was tested in some cities last year. After the test, more people chose to take the bus to work.",
+      "translation": "智慧街道也能帮助公交车。公交车可能先得到绿灯。这样它就能比小汽车跑得更快。这个办法去年在一些城市做了测试。测试之后，更多人选择坐公交车上班。"
+    },
+    {
+      "text": "Some people may worry about the cameras. They think their faces or car numbers might be recorded. City workers say the pictures are used only for traffic. They are kept for just a short time, and this rule must be followed by everyone.",
+      "translation": "有些人可能会担心这些摄像头。他们认为自己的脸或车牌号码也许会被录下来。城市的工作人员说，这些画面只用于交通方面。它们只会被保留很短的一段时间，而且这条规定必须被每个人遵守。"
+    },
+    {
+      "text": "Smart streets are still new, and nobody knows all the answers. But one thing is clear: technology can be a good helper. With the right rules, our cities may become safer, cleaner and easier to live in.",
+      "translation": "智慧街道还很新，没有人知道所有的答案。但有一点很清楚：科技可以是一个好帮手。有了合适的规则，我们的城市可能会变得更安全、更干净，也更适合生活。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is placed inside the boxes near the road?",
+      "audioText": "What is placed inside the boxes near the road?",
+      "options": [
+        {
+          "emoji": "💻",
+          "value": "computer",
+          "text": "A small computer"
+        },
+        {
+          "emoji": "🍕",
+          "value": "pizza",
+          "text": "A pizza"
+        },
+        {
+          "emoji": "🎸",
+          "value": "guitar",
+          "text": "A guitar"
+        }
+      ],
+      "answer": "computer"
+    },
+    {
+      "type": "word_builder",
+      "word": "traffic",
+      "audioText": "traffic"
+    },
+    {
+      "type": "word_builder",
+      "word": "cameras",
+      "audioText": "cameras"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "This",
+        "information",
+        "is",
+        "sent",
+        "to",
+        "a",
+        "computer",
+        "center."
+      ],
+      "audioText": "This information is sent to a computer center."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Traffic lights are ___ by this center.",
+      "choices": [
+        "controlled",
+        "control",
+        "controlling"
+      ],
+      "answer": "controlled",
+      "audioText": "Traffic lights are controlled by this center."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Some people may ___ about the cameras.",
+      "choices": [
+        "worry",
+        "worried",
+        "worries"
+      ],
+      "answer": "worry",
+      "audioText": "Some people may worry about the cameras."
+    }
+  ],
+  "_unknownWords": [
+    "world",
+    "controlled",
+    "busy",
+    "walkers",
+    "given",
+    "chose",
+    "safer",
+    "easier"
+  ]
+}

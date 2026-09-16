@@ -1,0 +1,134 @@
+{
+  "id": "xsc-r4-s06",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 6,
+  "title": "The Sea Needs Our Help",
+  "titleCn": "大海需要我们的帮助",
+  "coverEmoji": "🐢",
+  "paragraphs": [
+    {
+      "text": "Last Sunday, our class went to Ocean Park. A kind guide met us at the gate. She took us to a big blue pool.",
+      "translation": "上周日，我们班去了海洋乐园。一位和善的导游在门口迎接我们。她把我们带到一个很大的蓝色水池边。"
+    },
+    {
+      "text": "Two sea turtles swam in the clear water. The green one looked bigger and older. The small one was faster and more playful. They raced to the other side.",
+      "translation": "两只海龟在清澈的水里游着。那只绿色的看起来更大、更年长。那只小的游得更快，也更爱玩。它们一路游到了水池的另一边。"
+    },
+    {
+      "text": "Then we saw a dolphin show. Dolphins are smarter than most fish. One dolphin jumped higher than the others. It caught a ball in the air. We clapped and shouted happily.",
+      "translation": "接着我们看了一场海豚表演。海豚比大多数鱼都聪明。有一只海豚跳得比别的都高，还在空中接住了一个球。我们开心地拍手欢呼。"
+    },
+    {
+      "text": "After lunch, we walked along the beach. The sand was warm and soft. But we found plastic bags and old bottles. The sea looked sad and dirty there.",
+      "translation": "午饭后，我们沿着海滩散步。沙子又暖又软。可我们却发现了塑料袋和旧瓶子。那一片的海看起来又脏又伤心。"
+    },
+    {
+      "text": "We put on gloves and picked up rubbish. Our bags became heavier and heavier. A small crab waved its claw at us. Maybe it was saying thank you.",
+      "translation": "我们戴上手套，捡起垃圾。袋子变得越来越重。一只小螃蟹朝我们挥着钳子，也许它是在说谢谢吧。"
+    },
+    {
+      "text": "Now I know the sea needs our help. If we keep it clean, the fish will be happier. I want to come back next summer.",
+      "translation": "现在我知道，大海需要我们的帮助。如果我们让它保持干净，鱼儿会更快乐。我想明年夏天再来看它们。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which animals did the children see first?",
+      "audioText": "Which animals did the children see first?",
+      "options": [
+        {
+          "emoji": "🐢",
+          "value": "turtles",
+          "text": "Turtles"
+        },
+        {
+          "emoji": "🐬",
+          "value": "dolphins",
+          "text": "Dolphins"
+        },
+        {
+          "emoji": "🦀",
+          "value": "crabs",
+          "text": "Crabs"
+        }
+      ],
+      "answer": "turtles"
+    },
+    {
+      "type": "image_choice",
+      "question": "Which animal jumped higher than the others?",
+      "audioText": "Which animal jumped higher than the others?",
+      "options": [
+        {
+          "emoji": "🐬",
+          "value": "dolphin",
+          "text": "The dolphin"
+        },
+        {
+          "emoji": "🐢",
+          "value": "turtle",
+          "text": "The turtle"
+        },
+        {
+          "emoji": "🦀",
+          "value": "crab",
+          "text": "The crab"
+        }
+      ],
+      "answer": "dolphin"
+    },
+    {
+      "type": "word_builder",
+      "word": "dolphin",
+      "audioText": "dolphin"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Two",
+        "sea",
+        "turtles",
+        "swam",
+        "in",
+        "the",
+        "clear",
+        "water."
+      ],
+      "audioText": "Two sea turtles swam in the clear water."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Last Sunday, our class ___ to Ocean Park.",
+      "choices": [
+        "went",
+        "go",
+        "goes"
+      ],
+      "answer": "went",
+      "audioText": "Last Sunday, our class went to Ocean Park."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Dolphins are ___ than most fish.",
+      "choices": [
+        "smarter",
+        "smart",
+        "smartest"
+      ],
+      "answer": "smarter",
+      "audioText": "Dolphins are smarter than most fish."
+    }
+  ],
+  "_unknownWords": [
+    "guide",
+    "bigger",
+    "playful",
+    "happily",
+    "heavier",
+    "waved",
+    "claw",
+    "happier"
+  ]
+}

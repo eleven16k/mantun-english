@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>漫豚英语 · 音标录音工作台</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #FFFBEB; color: #0F172A; padding: 24px; }
+  h1 { font-size: 22px; margin-bottom: 6px; }
+  .sub { color: #64748B; font-size: 13px; margin-bottom: 18px; line-height: 1.6; }
+  .sub b { color: #0F172A; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+  .card { background: #fff; border: 3px solid #0F172A; border-radius: 14px; padding: 14px; box-shadow: 0 4px 0 #0F172A; }
+  .card.done { border-color: #22C55E; background: #F0FDF4; }
+  .card.rec { border-color: #EF4444; background: #FEF2F2; }
+  .ipa { font-size: 30px; font-weight: 900; font-family: "Charis SIL", "Gentium", serif; }
+  .word { color: #4D96FF; font-weight: 800; font-size: 14px; margin: 2px 0 10px; }
+  .row { display: flex; gap: 6px; }
+  button { border: 2px solid #0F172A; border-radius: 9px; background: #fff; font-weight: 800; font-size: 13px; padding: 7px 10px; cursor: pointer; box-shadow: 0 2px 0 #0F172A; }
+  button:active { transform: translateY(2px); box-shadow: none; }
+  .rec-btn { background: #EF4444; color: #fff; flex: 1; }
+  .card.rec .rec-btn { background: #0F172A; }
+  .play-btn { background: #FFD93D; }
+  .status { font-size: 11px; color: #64748B; margin-top: 8px; min-height: 15px; }
+  .bar { position: sticky; top: 0; background: #FFFBEB; padding: 10px 0; border-bottom: 2px solid #0F172A; margin-bottom: 16px; display: flex; gap: 12px; align-items: center; z-index: 10; }
+  .bar b { font-size: 16px; }
+  .dl { background: #4D96FF; color: #fff; padding: 9px 16px; font-size: 14px; }
+  .hint { font-size: 12px; color: #475569; }
+</style>
+</head>
+<body>
+<div class="bar">
+  <b>音标录音工作台</b>
+  <span class="hint" id="progress">0 / 44 已录</span>
+  <button class="dl" id="dlAll" disabled>⬇ 下载全部 (ZIP)</button>
+  <span class="hint">要求：安静房间 · 每个音发一次纯音（约 1 秒，不读例词）· 不满意可重录</span>
+</div>
+<p class="sub">
+  <b>录法：</b>点 🔴 开始 → <b>看着音标发音一次</b>（纯音，不带例词）→ 自动停止（最长 2 秒）→ ▶ 试听，不满意重录。
+  元音拉长发（/æ/ →「æ——」），辅音可带极轻的元音尾（/b/ →「buh」）。绿色卡片 = 已录。
+  全部录完点「下载全部」，把 zip 发给开发。
+</p>
+<div class="grid" id="grid"></div>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script>
+// slug, IPA, 例词, 发音要领
+const P = [
+  ["ih","ɪ","fish","短促的 i，嘴微开"],["eh","e","bed","类似「诶」的短音"],["ae","æ","cat","嘴张大，扁唇拉长「æ——」"],
+  ["uh","ʌ","sun","中央元音，放松短「阿」"],["o","ɒ","dog","圆唇短「奥」"],["uu","ʊ","book","圆唇短「乌」"],
+  ["schwa","ə","about","最轻的央元音「呃」"],["ee","iː","see","拉长「衣——」"],["ar","ɑː","car","拉长「啊——」"],
+  ["or","ɔː","fork","圆唇拉长「奥——」"],["oo","uː","blue","圆唇拉长「乌——」"],["er","ɜː","bird","卷舌拉长「呃——」"],
+  ["ay","eɪ","cake","「诶——」双元音滑音"],["eye","aɪ","kite","「啊—衣」滑动"],["oy","ɔɪ","boy","「奥—衣」滑动"],
+  ["ow","aʊ","cow","「啊—乌」滑动"],["oh","əʊ","nose","「呃—乌」滑动"],["eer","ɪə","ear","「衣—呃」滑动"],
+  ["air","eə","air","「诶—呃」滑动"],["oor","ʊə","tour","「乌—呃」滑动"],
+  ["p","p","pen","双唇爆开，送气（轻带呃）"],["b","b","bag","双唇爆开，浊音（轻带呃）"],
+  ["t","t","ten","舌尖爆开，送气"],["d","d","dog","舌尖爆开，浊音"],
+  ["k","k","cat","喉部爆开，送气"],["g","g","go","喉部爆开，浊音"],
+  ["f","f","fish","拉长唇齿摩擦「夫——」"],["v","v","van","拉长唇齿浊摩擦「夫——」(声带振)"],
+  ["th","θ","three","舌尖轻咬，拉长送气（不发声）"],["dh","ð","this","舌尖轻咬，拉长浊摩擦（发声）"],
+  ["s","s","sun","拉长「丝——」"],["z","z","zoo","拉长浊「丝——」(声带振)"],
+  ["sh","ʃ","ship","拉长「施——」"],["zh","ʒ","vision","拉长浊「施——」(声带振)"],
+  ["h","h","hat","轻呼气「哈」"],["ch","tʃ","chair","「施」+爆开"],["dj","dʒ","jump","浊「施」+爆开"],
+  ["m","m","map","闭嘴拉长鼻音「姆——」"],["n","n","net","舌尖拉长鼻音「恩——」"],["ng","ŋ","sing","喉部鼻音拉长（不读恩）"],
+  ["l","l","leg","舌尖抵上颚拉长「勒——」"],["r","r","red","卷舌拉长「若——」(不读若的汉字音)"],
+  ["y","j","yes","「衣」快速滑向元音"],["w","w","wet","圆唇「乌」快速滑向元音"],
+];
+const clips = {}; // slug → Blob
+const grid = document.getElementById("grid");
+
+P.forEach(([slug, ipa, word, hint]) => {
+  const card = document.createElement("div");
+  card.className = "card"; card.id = `card-${slug}`;
+  card.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span class="ipa">/${ipa}/</span><span class="play-btn-slot"></span>
+    </div>
+    <div class="word">${word} · ${hint}</div>
+    <div class="row">
+      <button class="rec-btn">🔴 录音</button>
+      <button class="play-btn" disabled>▶</button>
+    </div>
+    <div class="status"></div>`;
+  grid.appendChild(card);
+  const [recBtn, playBtn] = card.querySelectorAll("button");
+  const status = card.querySelector(".status");
+  playBtn.querySelector; // noop
+  card.querySelector(".play-btn-slot").outerHTML = "";
+  card.querySelectorAll("button").forEach(b => { if (b !== recBtn) b.remove(); });
+  // 重新构建按钮行（保持简单：录音 + 试听）
+  const row = card.querySelector(".row");
+  row.innerHTML = "";
+  const rb = document.createElement("button"); rb.className = "rec-btn"; rb.textContent = "🔴 录音";
+  const pb = document.createElement("button"); pb.className = "play-btn"; pb.textContent = "▶"; pb.disabled = true;
+  row.append(rb, pb);
+
+  let media = null, recorder = null, chunks = [], timer = null;
+  rb.onclick = async () => {
+    if (recorder && recorder.state === "recording") return;
+    try {
+      media = media || await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch { status.textContent = "❌ 麦克风权限被拒"; return; }
+    chunks = [];
+    recorder = new MediaRecorder(media);
+    recorder.ondataavailable = (e) => chunks.push(e.data);
+    recorder.onstop = () => {
+      const blob = new Blob(chunks, { type: "audio/webm" });
+      clips[slug] = blob;
+      pb.disabled = false;
+      card.classList.add("done"); card.classList.remove("rec");
+      rb.textContent = "🔴 重录";
+      status.textContent = `✓ 已录 ${(blob.size/1024).toFixed(0)}KB · 试听后可重录`;
+      updateProgress();
+    };
+    recorder.start();
+    card.classList.add("rec"); status.textContent = "● 录音中…（发音一次）";
+    timer = setTimeout(() => recorder.state === "recording" && recorder.stop(), 2000);
+  };
+  pb.onclick = () => {
+    if (!clips[slug]) return;
+    new Audio(URL.createObjectURL(clips[slug])).play();
+  };
+});
+
+function updateProgress() {
+  const n = Object.keys(clips).length;
+  document.getElementById("progress").textContent = `${n} / 44 已录`;
+  document.getElementById("dlAll").disabled = n < 44;
+}
+document.getElementById("dlAll").onclick = async () => {
+  const zip = new JSZip();
+  for (const [slug, blob] of Object.entries(clips)) zip.file(`${slug}.webm`, blob);
+  const url = URL.createObjectURL(await zip.generateAsync({ type: "blob" }));
+  const a = document.createElement("a");
+  a.href = url; a.download = "lexi-phonemes-recording.zip"; a.click();
+};
+</script>
+</body>
+</html>

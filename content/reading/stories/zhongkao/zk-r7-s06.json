@@ -1,0 +1,129 @@
+{
+  "id": "zk-r7-s06",
+  "track": "zhongkao",
+  "regionId": "zk-r7",
+  "order": 6,
+  "title": "Think Before You Share",
+  "titleCn": "转发之前，先想一想",
+  "coverEmoji": "🤔",
+  "paragraphs": [
+    {
+      "text": "Every day, millions of people share messages, photos and short videos with friends online. Sharing takes only a second, and it feels like a very small thing. However, small things can travel far, and they can change how other people feel.",
+      "translation": "每天，数百万人通过网络和朋友们分享消息、照片和短视频。分享只需要一秒钟，感觉是件很小的事。可是，小事也能传得很远，还能影响别人的心情。"
+    },
+    {
+      "text": "Have you ever read a story online that made you angry or worried? Perhaps the story was not true at all. Some people write exciting stories to get more readers. Many of us then share them too quickly.",
+      "translation": "你有没有在网上读到过一个让你生气或担心的故事？也许那个故事根本不是真的。有些人为了吸引更多读者，专门写些耸动的故事。而我们很多人，转得太快了。"
+    },
+    {
+      "text": "If I were you, I would check a story before sharing it. If I were that writer, I would not feel proud at all. So we should ask ourselves some simple questions. Who wrote this? Where did it come from? These questions take only a minute, but they can save a lot of trouble.",
+      "translation": "如果我是你，我会先核实再转发。如果我是那个作者，我一点也不会感到自豪。所以，我们应该问问自己几个简单的问题：这是谁写的？它来自哪里？问这些问题只要一分钟，却能省去很多麻烦。"
+    },
+    {
+      "text": "To check a story takes only a minute. To say sorry after hurting someone may take much longer. That is why thinking first is much better than saying sorry later.",
+      "translation": "核实一个故事只要一分钟，而伤害了别人再道歉，可能要花长得多的时间。所以说，先想一想，总比事后道歉好得多。"
+    },
+    {
+      "text": "I wish everyone could remember one simple rule: we are responsible for what we pass on. When we share a message, it is like throwing a stone into a lake. The waves travel far, and they reach people we have never met.",
+      "translation": "我希望每个人都能记住一条简单的规则：我们要为自己转发的东西负责。我们转发一条消息，就像往湖里扔了一块石头。水波会传得很远，一直传到我们从未见过的人那里。"
+    },
+    {
+      "text": "So before you press the share button, stop and think for a moment. If we all did this, the internet would be a kinder and safer place for everyone.",
+      "translation": "所以，按下转发键之前，先停下来想一想。如果我们都这样做，网络对每个人来说都会变得更友善、更安全。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does the writer ask us to do before we share a message?",
+      "audioText": "What does the writer ask us to do before we share a message?",
+      "options": [
+        {
+          "emoji": "🔍",
+          "value": "check",
+          "text": "Check the story first"
+        },
+        {
+          "emoji": "⚡",
+          "value": "quick",
+          "text": "Share it as fast as we can"
+        },
+        {
+          "emoji": "🙈",
+          "value": "never",
+          "text": "Never read any news again"
+        }
+      ],
+      "answer": "check"
+    },
+    {
+      "type": "word_builder",
+      "word": "message",
+      "audioText": "message"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Many",
+        "of",
+        "us",
+        "then",
+        "share",
+        "them",
+        "too",
+        "quickly."
+      ],
+      "audioText": "Many of us then share them too quickly."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Perhaps",
+        "the",
+        "story",
+        "was",
+        "not",
+        "true",
+        "at",
+        "all."
+      ],
+      "audioText": "Perhaps the story was not true at all."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "To check a story ___ only a minute.",
+      "choices": [
+        "takes",
+        "take",
+        "taking"
+      ],
+      "answer": "takes",
+      "audioText": "To check a story takes only a minute."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "I wish everyone ___ remember one simple rule.",
+      "choices": [
+        "could",
+        "can",
+        "will"
+      ],
+      "answer": "could",
+      "audioText": "I wish everyone could remember one simple rule."
+    }
+  ],
+  "_unknownWords": [
+    "millions",
+    "online",
+    "readers",
+    "writer",
+    "ask",
+    "hurting",
+    "later",
+    "responsible",
+    "waves",
+    "press",
+    "button",
+    "safer"
+  ]
+}

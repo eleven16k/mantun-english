@@ -1,0 +1,122 @@
+{
+  "id": "gk-r1-s07",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 7,
+  "title": "A Sunbeam's Long Journey",
+  "titleCn": "一束阳光的漫长旅程",
+  "coverEmoji": "☀️",
+  "paragraphs": [
+    {
+      "text": "Every morning, sunlight reaches your face after a journey of about eight minutes. That light, however, began as energy deep inside the sun, where the temperature reaches fifteen million degrees.",
+      "translation": "每天早上，阳光在经历了大约八分钟的旅程后照到你的脸上。然而，那束光最初只是太阳深处的一股能量，而那里的温度高达一千五百万度。"
+    },
+    {
+      "text": "In the sun's core, simple atoms join together to form heavier ones. Joining together, they release huge amounts of energy. This energy first appears as invisible rays. These rays, which carry far more power than the light we can see, cannot travel far at first.",
+      "translation": "在太阳的核心，简单的原子彼此结合，形成更重的原子。在结合的过程中，它们释放出巨大的能量。这种能量最初以看不见的射线形式出现。这些射线携带的力量远远超过我们肉眼能看到的光，因此一开始它们走不了多远。"
+    },
+    {
+      "text": "The journey outward is slow. Surrounded by thick layers of gas, a single ray strikes one atom after another. Bouncing from atom to atom, the energy may take a hundred thousand years to reach the surface.",
+      "translation": "向外走的这段旅程十分缓慢。被厚厚的燃气层包围着，一束射线只能撞上一个又一个原子。就这样在原子之间弹来弹去，这股能量也许要花上十万年才能到达太阳表面。"
+    },
+    {
+      "text": "Once it reaches the surface, the light is free. Travelling through empty space at 300,000 kilometres per second, it covers the distance to Earth in just over eight minutes. This fact, that ancient energy arrives as fresh morning light, still surprises many students.",
+      "translation": "一旦到达表面，光就自由了。它以每秒三十万千米的速度穿行于空旷的太空，用八分钟多一点的时间走完通往地球的路程。这个事实——古老的能源竟以清晨新鲜的阳光抵达我们身边——至今仍让许多学生感到惊讶。"
+    },
+    {
+      "text": "So the next time you stand in the sun, remember the long story behind that warmth. Nothing arrives instantly, and even a simple sunbeam carries the memory of a journey longer than our species.",
+      "translation": "所以，下次你站在阳光下时，请记住那份温暖背后漫长的故事。没有什么东西是瞬间到来的，即使是一束简单的阳光，也承载着一段比我们人类这一物种还要久远的旅程的记忆。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what travels through empty space and reaches Earth in just over eight minutes?",
+      "audioText": "According to the text, what travels through empty space and reaches Earth in just over eight minutes?",
+      "options": [
+        {
+          "emoji": "☀️",
+          "value": "sunlight",
+          "text": "Sunlight"
+        },
+        {
+          "emoji": "🌙",
+          "value": "moonlight",
+          "text": "Moonlight"
+        },
+        {
+          "emoji": "🌬️",
+          "value": "wind",
+          "text": "Wind"
+        }
+      ],
+      "answer": "sunlight"
+    },
+    {
+      "type": "word_builder",
+      "word": "surface",
+      "audioText": "surface"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "journey",
+        "outward",
+        "is",
+        "slow."
+      ],
+      "audioText": "The journey outward is slow."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "This",
+        "energy",
+        "first",
+        "appears",
+        "as",
+        "invisible",
+        "rays."
+      ],
+      "audioText": "This energy first appears as invisible rays."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ from atom to atom, the energy may take a hundred thousand years to reach the surface.",
+      "choices": [
+        "Bouncing",
+        "Bounced",
+        "To bounce"
+      ],
+      "answer": "Bouncing",
+      "audioText": "Bouncing from atom to atom, the energy may take a hundred thousand years to reach the surface."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Travelling through empty space at 300,000 kilometres per second, it covers the distance to Earth in just over ___ minutes.",
+      "choices": [
+        "eight",
+        "eighteen",
+        "eighty"
+      ],
+      "answer": "eight",
+      "audioText": "Travelling through empty space at 300,000 kilometres per second, it covers the distance to Earth in just over eight minutes."
+    }
+  ],
+  "_unknownWords": [
+    "sunlight",
+    "sun's",
+    "core",
+    "heavier",
+    "invisible",
+    "cannot",
+    "outward",
+    "layers",
+    "travelling",
+    "warmth",
+    "instantly",
+    "sunbeam",
+    "species"
+  ]
+}

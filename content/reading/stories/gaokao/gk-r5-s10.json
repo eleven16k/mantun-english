@@ -1,0 +1,123 @@
+{
+  "id": "gk-r5-s10",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 10,
+  "title": "The Night School on Our Street",
+  "titleCn": "我们街上的夜校",
+  "coverEmoji": "🌙",
+  "paragraphs": [
+    {
+      "text": "Every Tuesday and Thursday evening, the community centre at the end of our street opens its doors to a group of adults, most of whom have not sat in a classroom for thirty years. They arrive on foot or by bicycle, carrying notebooks in which the first page is always the hardest to fill. The lights above the entrance stay on until ten, when the last student, tired but satisfied, walks slowly home.",
+      "translation": "每周二和周四晚上，我们街道尽头的社区中心都会向一群成年人敞开大门，他们中的大多数人已经三十年没坐进过教室了。他们有的步行，有的骑车，带着笔记本——那笔记本的第一页总是最难填满的。入口上方的灯一直亮到十点，那时最后一名学生虽然疲惫却心满意足，慢慢走回家。"
+    },
+    {
+      "text": "Among the students is Mrs Lin, a retired bus conductor whom I have known since I was a child. She spent thirty-one years selling tickets on Route 7, and for most of that time she kept a small dictionary in her pocket, in which she wrote down every English word she heard from foreign visitors. Last autumn, at the age of sixty-two, she finally signed up for a course in English and basic mathematics. “I never had the chance to finish what I started,” she explained, “and I refuse to let my age decide what I can do.”",
+      "translation": "这些学生中有林女士，一位退休的公交车售票员，我从小就认识她。她在7路车上卖了三十一年车票，那段时间里她口袋里一直揣着一本小词典，把从外国游客那里听到的每个英语单词都记在里面。去年秋天，六十二岁的她终于报名参加了一门英语和基础数学课程。「我从没机会把已经开始的事做完，」她解释说，「我也不会让年龄来决定我能做什么。」"
+    },
+    {
+      "text": "The class is small, consisting of about a dozen learners, several of whom are older than my own grandparents. Their teacher, a young man in his twenties, admits that he often learns more from them than from any textbook he studied at university. What they lack in speed, he says, they make up for in patience and in the questions, carefully prepared in advance, that keep the whole room thinking. The lesson over, several of them stay behind to argue about grammar.",
+      "translation": "这个班很小，大约十来个人，其中好几位比我的祖父母年纪还大。他们的老师是个二十多岁的年轻人，他承认自己从他们身上学到的，往往比在大学读过的任何教科书都多。他说，他们在速度上有所欠缺，却以耐心弥补，还有那些事先精心准备好、让整间教室都思考起来的问题。下课之后，他们中总有几个留下来争论语法。"
+    },
+    {
+      "text": "Watching them, I have come to understand something that my generation tends to forget. We treat education as a stage of life, a box to be ticked before we start working, rather than a habit to be kept for a lifetime. Yet the people in that room, none of whom are chasing a certificate or a promotion, study simply because learning gives them pleasure and keeps their minds alive. Age has little to do with it. Their example suggests that curiosity does not fade with age; it fades only when we stop feeding it.",
+      "translation": "看着他们，我渐渐明白了一些我这一代人容易忘记的事。我们把教育看作人生的一个阶段、一个开始工作前必须勾掉的方框，而不是一种要终身保持的习惯。然而那间屋子里的人——他们没有一个人是在追求证书或升职——学习只是因为学习给他们乐趣，让他们的头脑保持鲜活。年龄与此几乎无关。他们的例子说明，好奇心不会随年龄消退；它只在我们停止喂养它时才消失。"
+    },
+    {
+      "text": "Last month Mrs Lin passed her first exam, and the whole class celebrated with tea and biscuits in the corridor. She told me afterwards that she had already chosen her next course, in which she hopes to read simple novels. When I complained that my own homework was too heavy, she laughed and reminded me that the only real reason to stop learning is to decide that you have learned enough. I have not complained since.",
+      "translation": "上个月林女士通过了她的第一次考试，全班在走廊上用茶和饼干庆祝了一番。后来她告诉我，她已经选好了下一门课，希望能读懂简单的小说。当我抱怨自己的作业太重时，她笑了，提醒我停止学习的唯一真正理由，就是认定自己已经学够了。从那以后，我再没抱怨过。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where do the evening classes take place?",
+      "audioText": "Where do the evening classes take place?",
+      "options": [
+        {
+          "emoji": "🏫",
+          "value": "community_centre",
+          "text": "A community centre"
+        },
+        {
+          "emoji": "🚌",
+          "value": "bus_station",
+          "text": "A bus station"
+        },
+        {
+          "emoji": "📚",
+          "value": "library",
+          "text": "A library"
+        }
+      ],
+      "answer": "community_centre"
+    },
+    {
+      "type": "word_builder",
+      "word": "curiosity",
+      "audioText": "curiosity"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "age",
+        "has",
+        "little",
+        "to",
+        "do",
+        "with",
+        "it"
+      ],
+      "audioText": "Age has little to do with it."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "they",
+        "arrive",
+        "on",
+        "foot",
+        "or",
+        "by",
+        "bicycle"
+      ],
+      "audioText": "They arrive on foot or by bicycle."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Mrs Lin is a retired bus ___.",
+      "choices": [
+        "conductor",
+        "driver",
+        "manager"
+      ],
+      "answer": "conductor",
+      "audioText": "Mrs Lin is a retired bus conductor."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The people in that room study simply because learning gives them ___ and keeps their minds alive.",
+      "choices": [
+        "pleasure",
+        "pressure",
+        "profit"
+      ],
+      "answer": "pleasure",
+      "audioText": "The people in that room study simply because learning gives them pleasure and keeps their minds alive."
+    }
+  ],
+  "_unknownWords": [
+    "community",
+    "known",
+    "route",
+    "learners",
+    "textbook",
+    "generation",
+    "ticked",
+    "promotion",
+    "simply",
+    "curiosity",
+    "corridor",
+    "chosen"
+  ]
+}

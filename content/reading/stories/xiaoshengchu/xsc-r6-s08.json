@@ -1,0 +1,124 @@
+{
+  "id": "xsc-r6-s08",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r6",
+  "order": 8,
+  "title": "The Space Bus to the Moon",
+  "titleCn": "开往月球的太空巴士",
+  "coverEmoji": "🚌",
+  "paragraphs": [
+    {
+      "text": "Lily is a young scientist at our station. Every day she draws new space buses. Her little desk is full of paper models.",
+      "translation": "莉莉是我们太空站里的一位小科学家。她每天都画新的太空巴士。她的小桌子上摆满了纸做的模型。"
+    },
+    {
+      "text": "She shows us a picture of a bus. It will fly to the Moon next year. It will carry twelve students and one teacher.",
+      "translation": "她给我们看了一张巴士的图。明年这辆巴士将飞往月球。它将载着十二名学生和一位老师。"
+    },
+    {
+      "text": "We must wear warm suits on the bus. We should sit down and wear our belts. We could look out at stars and planets.",
+      "translation": "在巴士上我们必须穿保暖服。我们应该坐下来系好安全带。我们可以向外看星星和行星。"
+    },
+    {
+      "text": "The bus will stop at a space garden. We will pick some tomatoes for lunch. Then we will take photos of Earth.",
+      "translation": "巴士会停在一个太空花园。我们会摘些西红柿当午餐。然后我们会给地球拍照。"
+    },
+    {
+      "text": "Lily says we must keep space clean. We should not throw things into space. Everyone could help to clean the windows.",
+      "translation": "莉莉说我们必须保持太空干净。我们不应该把东西扔进太空里。每个人都可以帮忙擦窗户。"
+    },
+    {
+      "text": "Next week we will build a bus model. It will be green and very light. In my dream, I will be the driver.",
+      "translation": "下周我们会做一个巴士模型。它会又绿又轻。在我的梦里，我就是那个司机。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where will the bus fly next year?",
+      "audioText": "Where will the bus fly next year?",
+      "options": [
+        {
+          "emoji": "🌕",
+          "value": "moon",
+          "text": "The Moon"
+        },
+        {
+          "emoji": "☀️",
+          "value": "sun",
+          "text": "The Sun"
+        },
+        {
+          "emoji": "🌍",
+          "value": "earth",
+          "text": "Earth"
+        }
+      ],
+      "answer": "moon"
+    },
+    {
+      "type": "word_builder",
+      "word": "station",
+      "audioText": "station"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "should",
+        "not",
+        "throw",
+        "things",
+        "into",
+        "space."
+      ],
+      "audioText": "We should not throw things into space."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It will carry twelve students and one ___.",
+      "choices": [
+        "teacher",
+        "driver",
+        "farmer"
+      ],
+      "answer": "teacher",
+      "audioText": "It will carry twelve students and one teacher."
+    },
+    {
+      "type": "image_choice",
+      "question": "What will we pick for lunch in the space garden?",
+      "audioText": "What will we pick for lunch in the space garden?",
+      "options": [
+        {
+          "emoji": "🍅",
+          "value": "tomatoes",
+          "text": "Tomatoes"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apples",
+          "text": "Apples"
+        },
+        {
+          "emoji": "🥕",
+          "value": "carrots",
+          "text": "Carrots"
+        }
+      ],
+      "answer": "tomatoes"
+    },
+    {
+      "type": "word_builder",
+      "word": "tomatoes",
+      "audioText": "tomatoes"
+    }
+  ],
+  "_unknownWords": [
+    "lily",
+    "models",
+    "suits",
+    "belts",
+    "model"
+  ]
+}

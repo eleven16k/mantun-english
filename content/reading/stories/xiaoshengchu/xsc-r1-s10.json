@@ -1,0 +1,138 @@
+{
+  "id": "xsc-r1-s10",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 10,
+  "title": "Grandma's Apple Pie",
+  "titleCn": "奶奶的苹果派",
+  "coverEmoji": "🥧",
+  "paragraphs": [
+    {
+      "text": "Look at my grandma. She is in the kitchen. She has a big red apple.",
+      "translation": "快看我的奶奶。她在厨房里。她有一个又大又红的苹果。"
+    },
+    {
+      "text": "Grandma cuts the apple. She puts it in a bowl. Apples are sweet, she says.",
+      "translation": "奶奶把苹果切开，放进碗里。她说，苹果真甜。"
+    },
+    {
+      "text": "I can help my grandma. I wash three green apples. My little sister brings a spoon.",
+      "translation": "我能帮奶奶干活。我洗了三个青苹果。我的小妹妹拿来一把勺子。"
+    },
+    {
+      "text": "There is flour on the table. There are apples in the pie. The kitchen smells very good.",
+      "translation": "桌上放着面粉。馅饼里包着苹果。厨房里香喷喷的。"
+    },
+    {
+      "text": "My dog sits by the door. He can smell the apple pie. He wants a small piece.",
+      "translation": "我的小狗坐在门边。它能闻到苹果派的香味。它想要一小块。"
+    },
+    {
+      "text": "We eat the apple pie. Grandma smiles at us. We are a happy family.",
+      "translation": "我们一起吃苹果派。奶奶冲我们微笑。我们是快乐的一家人。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where is Grandma?",
+      "audioText": "Where is Grandma?",
+      "options": [
+        {
+          "emoji": "🍳",
+          "value": "kitchen",
+          "text": "Kitchen"
+        },
+        {
+          "emoji": "🛏️",
+          "value": "bedroom",
+          "text": "Bedroom"
+        },
+        {
+          "emoji": "🛁",
+          "value": "bathroom",
+          "text": "Bathroom"
+        }
+      ],
+      "answer": "kitchen"
+    },
+    {
+      "type": "image_choice",
+      "question": "What color is Grandma's apple?",
+      "audioText": "What color is Grandma's apple?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "🟡",
+          "value": "yellow",
+          "text": "Yellow"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "What can the dog smell?",
+      "audioText": "What can the dog smell?",
+      "options": [
+        {
+          "emoji": "🥧",
+          "value": "pie",
+          "text": "Pie"
+        },
+        {
+          "emoji": "🌸",
+          "value": "flower",
+          "text": "Flower"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        }
+      ],
+      "answer": "pie"
+    },
+    {
+      "type": "word_builder",
+      "word": "kitchen",
+      "audioText": "kitchen"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "has",
+        "a",
+        "big",
+        "red",
+        "apple."
+      ],
+      "audioText": "She has a big red apple."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "My dog sits by the ___.",
+      "choices": [
+        "door",
+        "table",
+        "tree"
+      ],
+      "answer": "door",
+      "audioText": "My dog sits by the door."
+    }
+  ],
+  "_unknownWords": [
+    "flour",
+    "pie"
+  ]
+}

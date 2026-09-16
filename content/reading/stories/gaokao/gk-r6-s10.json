@@ -1,0 +1,117 @@
+{
+  "id": "gk-r6-s10",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 10,
+  "title": "The Shop That Refused to Grow",
+  "titleCn": "拒绝做大的小店",
+  "coverEmoji": "🧵",
+  "paragraphs": [
+    {
+      "text": "On a narrow street in the old town stands a small repair shop that has fixed shoes and bags for thirty years. Its owner, Mrs. Lin, learned the trade from her father, and she still works behind the same wooden counter. Although large chains have opened nearby, her shop stays busy, as anyone who walks past at noon can see. Customers often wait a week for a simple repair, yet few of them seem to complain about it.",
+      "translation": "老城区的一条窄街上有家小小的修补店，三十年来一直为人修鞋、修包。店主林太太的手艺是从父亲那里学来的，如今她仍在那张旧木柜台后面干活。尽管附近开起了大型连锁店，她的小店依旧忙碌——任何在中午路过的人都看得出来。顾客常常为一个简单的修补等上一星期，但似乎很少有人抱怨。"
+    },
+    {
+      "text": "Ten years ago, a businessman offered to invest, promising to turn the workshop into a chain of twenty branches. While the money would have paid for new machines and a bigger team, Mrs. Lin hesitated for a month. She added up the rent, the salaries and the advertising, and the figures looked attractive on paper. Despite the promise of higher profits, something about the plan troubled her, though she could not name it. Although the money looked attractive, she said no.",
+      "translation": "十年前，一位商人提出投资，承诺把这间小作坊变成拥有二十家分店的连锁企业。这笔钱本可以买来新机器、组建更大的团队，林太太却犹豫了整整一个月。她算过租金、工资和广告费用，账面上的数字相当诱人。尽管意味着更高的利润，这个计划却让她心里不安，可她又说不出究竟为什么。虽然那笔钱很诱人，她还是说了“不”。"
+    },
+    {
+      "text": "Growth, as she explained to her puzzled friends, would have changed what the shop actually sold. A chain needs managers and quick standard repairs, while her customers came for careful work and honest advice. She feared that speed would slowly replace skill, and that the shop would lose the trust built over decades. A large loan, moreover, would have tied her to monthly payments, even in seasons when few customers appear.",
+      "translation": "她向不解的朋友解释说，扩张会改变这家店真正出售的东西。连锁店需要经理和快速的标准化修补，而她的顾客来这里，图的是细致的做工和诚实的建议。她担心速度会慢慢取代手艺，担心这家店会失掉几十年积累起来的信任。而且，一笔大额贷款会让她每月都得还钱，哪怕是在顾客稀少的淡季。"
+    },
+    {
+      "text": "Today the shop still occupies one room, although its waiting list has grown longer than ever. Mrs. Lin now trains two young workers, teaching them to mend carefully rather than to rush their work. Her income is modest, as she freely admits, yet the business has never missed a single payment. Neighbours bring their broken umbrellas and bags, knowing that the work will last for many years.",
+      "translation": "如今这家店仍然只占一间屋子，尽管排队等候的名单比以往任何时候都长。林太太现在带着两个年轻工人，教他们仔细修补，而不是赶工。她坦率地承认自己收入并不高，可这家店从未拖欠过任何一笔款项。邻居们把坏了的雨伞和包送来，因为他们知道这活儿能撑很多年。"
+    },
+    {
+      "text": "Economists sometimes describe such decisions as wasted opportunities, since a larger firm could serve more people. Yet Mrs. Lin argues that not every business must grow, and that quality can matter more than size. Whether she was right or wrong, her story suggests that profit is not the only measure of success.",
+      "translation": "经济学家有时把这类决定称为“错失的机会”，因为规模更大的公司能以更低的价格服务更多人。然而林太太认为，并非每门生意都必须做大，品质可以比规模更重要。无论她说得对不对，她的故事都提醒我们：利润并不是衡量成功的唯一标准。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ the promise of higher profits, something about the plan troubled her.",
+      "choices": [
+        "Despite",
+        "Although",
+        "However"
+      ],
+      "answer": "Despite",
+      "audioText": "Despite the promise of higher profits, something about the plan troubled her."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Growth, ___ she explained to her puzzled friends, would have changed what the shop actually sold.",
+      "choices": [
+        "as",
+        "that",
+        "what"
+      ],
+      "answer": "as",
+      "audioText": "Growth, as she explained to her puzzled friends, would have changed what the shop actually sold."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She feared that speed would slowly ___ skill.",
+      "choices": [
+        "replace",
+        "repair",
+        "repeat"
+      ],
+      "answer": "replace",
+      "audioText": "She feared that speed would slowly replace skill."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Although",
+        "the",
+        "money",
+        "looked",
+        "attractive,",
+        "she",
+        "said",
+        "no."
+      ],
+      "audioText": "Although the money looked attractive, she said no."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Not",
+        "every",
+        "business",
+        "must",
+        "grow."
+      ],
+      "audioText": "Not every business must grow."
+    },
+    {
+      "type": "word_builder",
+      "word": "profit",
+      "audioText": "profit"
+    }
+  ],
+  "_unknownWords": [
+    "wooden",
+    "businessman",
+    "workshop",
+    "bigger",
+    "advertising",
+    "despite",
+    "puzzled",
+    "replace",
+    "loan",
+    "moreover",
+    "payments",
+    "occupies",
+    "grown",
+    "payment",
+    "neighbours",
+    "broken",
+    "economists",
+    "opportunities",
+    "larger"
+  ]
+}

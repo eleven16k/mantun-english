@@ -55,7 +55,7 @@ export default function ResultsScreen() {
   if (!lastResults) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <button onClick={() => router.push(backHref)} className="rounded-pill bg-action px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-actionhover active:scale-[0.98]">{t('res.backToHome')}</button>
+        <button onClick={() => router.push(backHref)} className="rounded-pill bg-action px-5 py-2.5 text-sm font-bold text-white transition hover:bg-actionhover active:scale-[0.98]">{t('res.backToHome')}</button>
       </div>
     );
   }
@@ -93,7 +93,7 @@ export default function ResultsScreen() {
       <div className="flex justify-center mb-6">
         <div className="relative w-40 h-40">
           <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#F1F5F9" strokeWidth="8" />
             <circle cx="50" cy="50" r="42" fill="none" stroke={gradeColor} strokeWidth="8"
               strokeLinecap="round"
               strokeDasharray={`${(accuracy / 100) * 264} 264`}
@@ -108,22 +108,22 @@ export default function ResultsScreen() {
 
       {/* Quick stats */}
       <div className="grid grid-cols-3 gap-3 mb-5">
-        <div className="g-card p-5 shadow-sm !p-3 text-center">
+        <div className="g-card p-5 !p-3 text-center">
           <p className="font-heading text-2xl font-extrabold text-positive">{correct}/{total}</p>
           <p className="text-xs text-tertiary font-bold">{t('res.correct')}</p>
         </div>
-        <div className="g-card p-5 shadow-sm !p-3 text-center">
+        <div className="g-card p-5 !p-3 text-center">
           <p className="font-heading text-2xl font-extrabold text-secondary">{mins}:{secs.toString().padStart(2, '0')}</p>
           <p className="text-xs text-tertiary font-bold">{t('res.time')}</p>
         </div>
-        <div className="g-card p-5 shadow-sm !p-3 text-center">
+        <div className="g-card p-5 !p-3 text-center">
           <p className="font-heading text-2xl font-extrabold text-amber-500">+{newWords}</p>
           <p className="text-xs text-tertiary font-bold">{t('res.newWords')}</p>
         </div>
       </div>
 
       {/* Rewards earned */}
-      <div className="g-card p-5 shadow-sm mb-4">
+      <div className="g-card p-5 mb-4">
         <h3 className="font-heading font-extrabold text-secondary mb-3 flex items-center gap-2">
           <GiftIcon size={18} className="text-brand-text" /> {t('res.sessionRewards')}
         </h3>
@@ -156,7 +156,7 @@ export default function ResultsScreen() {
       </div>
 
       {/* League progress */}
-      <div className="g-card p-5 shadow-sm mb-5">
+      <div className="g-card p-5 mb-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-lg">{tier.icon}</span>

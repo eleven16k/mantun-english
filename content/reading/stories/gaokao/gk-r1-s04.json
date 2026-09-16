@@ -1,0 +1,123 @@
+{
+  "id": "gk-r1-s04",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 4,
+  "title": "The Great Green Wall",
+  "titleCn": "绿色长城",
+  "coverEmoji": "🌳",
+  "paragraphs": [
+    {
+      "text": "The Sahara, which stretches across the north of Africa, is the largest hot desert on Earth. For decades, scientists have watched it creep southward, turning farmland into dry and dusty ground. Faced with this problem, African leaders came together in 2007 and agreed on a bold plan. The idea was simple: build a wall of trees across the continent.",
+      "translation": "撒哈拉沙漠横贯非洲北部，是地球上最大的热带沙漠。几十年来，科学家们眼看着它缓缓向南推进，把农田变成干燥多尘的土地。面对这一问题，非洲各国领导人于2007年齐聚一堂，商定了一项大胆的计划。这个想法很简单：在整个非洲大陆上种起一道树墙。"
+    },
+    {
+      "text": "The Great Green Wall is not a wall in the usual sense. It is a wide band of trees and grass, stretching about 8,000 kilometers from west to east. The belief that trees can stop the desert is at the heart of the project. Working together, farmers plant trees that hold water in the soil and protect crops from strong winds.",
+      "translation": "绿色长城并不是通常意义上的墙。它是一条宽阔的树木和草地，自西向东绵延约8000公里。树木能够阻止沙漠扩张，这一信念正是该项目的核心。农民们合力种下树木，这些树能把水分留在土壤中，并保护庄稼不受强风侵袭。"
+    },
+    {
+      "text": "Progress has been slower than many people hoped. Some young trees died because of drought. Money was not always enough. However, the news that millions of trees have already been planted gives people hope. Local people, who once cut trees for firewood, now care for them as a source of food and income.",
+      "translation": "进展比许多人期望的要慢。一些幼苗因干旱而枯死，资金也常常不足。不过，已有数百万棵树被种下的消息给人们带来了希望。当地居民过去砍树当柴烧，如今却把这些树当作食物和收入的来源来悉心照料。"
+    },
+    {
+      "text": "The benefits go far beyond farming. Trees cool the air, so the land around them becomes less hot. Shade provided by new trees helps animals survive the dry season. Surprised by the change, some villagers say that birds and insects have returned to places where they had disappeared.",
+      "translation": "这些好处远不止于农业。树木能降低气温，因此周围的土地不再那么炎热。新树投下的阴凉帮助动物度过旱季。一些村民对这种变化感到惊讶，他们说鸟和昆虫已经回到了曾经消失的地方。"
+    },
+    {
+      "text": "The project is far from finished, and experts warn that trees alone cannot solve every problem. Yet the Great Green Wall shows what people can achieve when they share a common purpose. Greening the desert is slow work. Still, it may leave a greener world for the next generation.",
+      "translation": "这一项目远未完成，专家也提醒说，仅靠树木无法解决所有问题。但绿色长城展示了当人们拥有共同目标时能够取得的成就。绿化沙漠是一项缓慢的工程。不过，它也许能为下一代留下一个更绿的世界。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is the Great Green Wall actually made of?",
+      "audioText": "What is the Great Green Wall actually made of?",
+      "options": [
+        {
+          "emoji": "🌳",
+          "value": "trees",
+          "text": "Trees and grass"
+        },
+        {
+          "emoji": "🧱",
+          "value": "bricks",
+          "text": "Bricks and stones"
+        },
+        {
+          "emoji": "🌊",
+          "value": "water",
+          "text": "Rivers and lakes"
+        }
+      ],
+      "answer": "trees"
+    },
+    {
+      "type": "word_builder",
+      "word": "drought",
+      "audioText": "drought"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Some",
+        "young",
+        "trees",
+        "died",
+        "because",
+        "of",
+        "drought"
+      ],
+      "audioText": "Some young trees died because of drought."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Greening",
+        "the",
+        "desert",
+        "is",
+        "slow",
+        "work"
+      ],
+      "audioText": "Greening the desert is slow work."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The Sahara, ___ stretches across the north of Africa, is the largest hot desert on Earth.",
+      "choices": [
+        "which",
+        "who",
+        "what"
+      ],
+      "answer": "which",
+      "audioText": "The Sahara, which stretches across the north of Africa, is the largest hot desert on Earth."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Faced ___ this problem, African leaders came together in 2007 and agreed on a bold plan.",
+      "choices": [
+        "with",
+        "by",
+        "of"
+      ],
+      "answer": "with",
+      "audioText": "Faced with this problem, African leaders came together in 2007 and agreed on a bold plan."
+    }
+  ],
+  "_unknownWords": [
+    "sahara",
+    "stretches",
+    "largest",
+    "creep",
+    "southward",
+    "farmland",
+    "dusty",
+    "bold",
+    "stretching",
+    "source",
+    "cannot",
+    "solve",
+    "generation"
+  ]
+}

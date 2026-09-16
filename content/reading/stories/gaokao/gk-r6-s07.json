@@ -1,0 +1,135 @@
+{
+  "id": "gk-r6-s07",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 7,
+  "title": "Why Stories Sell Better Than Facts",
+  "titleCn": "为什么故事比事实更好卖",
+  "coverEmoji": "📖",
+  "paragraphs": [
+    {
+      "text": "Step into a modern supermarket, and you will notice a quiet change in the way products speak to us. Although two bottles of shampoo may contain almost identical ingredients, the one with a touching story on its label often ends up in more shopping carts. While price and quality still matter, they are no longer the only forces guiding our choices.",
+      "translation": "走进任何一家现代超市，你都会注意到商品与我们对话的方式发生了悄然的变化。虽然两瓶洗发水的成分可能几乎完全相同，但标签上写着动人故事的那一瓶，往往会被更多人放进购物车。价格和质量固然重要，但它们不再是左右我们选择的唯一力量。"
+    },
+    {
+      "text": "Advertising agencies understood this shift long ago, and today they sell narratives rather than lists of facts. A story needs a hero, a struggle and a happy ending, as a novel needs a plot to keep readers turning pages. A family farm that nearly closed, a grandmother's secret recipe, a founder who failed four times — such tales give ordinary goods an emotional weight that numbers alone cannot carry. Despite the higher prices, customers gladly pay more for the feeling that they are part of something real.",
+      "translation": "广告公司很早就察觉到了这种转变，如今它们卖的是故事，而不是一串串事实。一个故事需要主角、波折和圆满的结局，就像小说需要情节才能让读者一页页读下去。一家差点关门的家庭农场、祖母的秘方、一位失败了四次的创业者——这些故事赋予普通商品一种单凭数字永远无法承载的情感分量。尽管价格更高，顾客仍乐于为「自己属于某件真实之事」的感觉多掏钱。"
+    },
+    {
+      "text": "Economists call this extra willingness to pay the 'story premium'. Researchers once asked volunteers to taste two identical pieces of chocolate, telling them that one came from a small craft workshop and the other from a large factory. Although the chocolate was exactly the same, most participants described the 'craft' one as richer and smoother, and they offered to pay twice as much for it. The brain, it seems, tastes the story as much as the sugar.",
+      "translation": "经济学家把这种额外的付费意愿称为「故事溢价」。研究人员曾请志愿者品尝两块一模一样的巧克力，并告诉他们一块来自小型手工作坊，另一块来自大型工厂。尽管巧克力完全相同，大多数参与者仍觉得「手工」那块更醇厚顺滑，并表示愿意为此付双倍的价钱。看来，大脑尝到的不只是糖，还有故事。"
+    },
+    {
+      "text": "This does not mean that facts are worthless. While a good story attracts attention, a poor product destroys trust, as disappointed customers share their anger online within hours. Trust, once broken, is hard to repair. Successful young companies treat the story as a door rather than a house: it invites people in, but the quality inside decides whether they stay.",
+      "translation": "这并不意味着事实毫无价值。好故事固然能吸引注意，但糟糕的产品会毁掉信任，因为失望的顾客几小时内就会在网上发泄不满。信任一旦破碎，就很难修复。因此，成功的年轻公司把故事当成一扇门，而不是一座房子：它把人请进来，但里面的品质决定他们是否留下。"
+    },
+    {
+      "text": "For anyone hoping to start a business, the lesson is encouraging. You may not have a huge budget for advertising, but you probably have a genuine reason for doing what you do. Although a modest budget cannot hire a famous actor, it can tell an honest story, and honest stories are the ones we remember and repeat.",
+      "translation": "对任何想创业的人来说，这一课令人鼓舞。你也许没有巨额广告预算，但你大概有一个做这件事的真实理由。虽然有限的预算请不起明星，却能讲出一个真诚的故事，而真诚的故事正是我们记住并反复讲起的那些。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, how did most volunteers describe the chocolate said to come from a craft workshop?",
+      "audioText": "According to the passage, how did most volunteers describe the chocolate said to come from a craft workshop?",
+      "options": [
+        {
+          "emoji": "😋",
+          "value": "richer",
+          "text": "Richer and smoother"
+        },
+        {
+          "emoji": "💰",
+          "value": "cheaper",
+          "text": "Cheaper than the other one"
+        },
+        {
+          "emoji": "🚫",
+          "value": "refused",
+          "text": "They refused to taste it"
+        }
+      ],
+      "answer": "richer"
+    },
+    {
+      "type": "word_builder",
+      "word": "premium",
+      "audioText": "premium"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "This",
+        "does",
+        "not",
+        "mean",
+        "that",
+        "facts",
+        "are",
+        "worthless."
+      ],
+      "audioText": "This does not mean that facts are worthless."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Trust,",
+        "once",
+        "broken,",
+        "is",
+        "hard",
+        "to",
+        "repair."
+      ],
+      "audioText": "Trust, once broken, is hard to repair."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Although two bottles of shampoo may contain almost identical ___, the one with a touching story on its label often ends up in more shopping carts.",
+      "choices": [
+        "ingredients",
+        "labels",
+        "customers"
+      ],
+      "answer": "ingredients",
+      "audioText": "Although two bottles of shampoo may contain almost identical ingredients, the one with a touching story on its label often ends up in more shopping carts."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ the higher prices, customers gladly pay more for the feeling that they are part of something real.",
+      "choices": [
+        "Despite",
+        "Although",
+        "While"
+      ],
+      "answer": "Despite",
+      "audioText": "Despite the higher prices, customers gladly pay more for the feeling that they are part of something real."
+    }
+  ],
+  "_unknownWords": [
+    "shampoo",
+    "identical",
+    "ingredients",
+    "label",
+    "advertising",
+    "shift",
+    "narratives",
+    "readers",
+    "grandmother's",
+    "emotional",
+    "cannot",
+    "despite",
+    "economists",
+    "willingness",
+    "premium",
+    "researchers",
+    "craft",
+    "workshop",
+    "participants",
+    "worthless",
+    "online",
+    "broken",
+    "genuine"
+  ]
+}

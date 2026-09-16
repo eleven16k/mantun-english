@@ -1,0 +1,118 @@
+{
+  "id": "gk-r5-s03",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 3,
+  "title": "The Classroom Without Walls",
+  "titleCn": "没有围墙的教室",
+  "coverEmoji": "🎒",
+  "paragraphs": [
+    {
+      "text": "When my cousin Lin graduated from high school, she made a decision that surprised almost everyone in our family. Instead of going straight to university, she chose to take a gap year. Her parents, who had saved money for her college fees for years, were worried at first. Yet Lin argued that twelve months of real experience, during which she could test her own interests, might be worth more than a hurried choice.",
+      "translation": "我的表姐林高中毕业时，做了一个让家里人几乎都感到意外的决定。她没有直接升入大学，而是选择休一个间隔年。她的父母多年来一直为她攒大学学费，起初十分担心。但林认为，十二个月的真实经历——在这段时间里她可以检验自己真正的兴趣——也许比仓促做出的选择更有价值。"
+    },
+    {
+      "text": "She spent the first three months working in a small library in her hometown, where she sorted books and helped children find stories they loved. It was a quiet job that changed her. The librarian, a patient woman in her fifties, taught her how to organize a reading club. Watching those children argue about heroes and endings, Lin began to understand something that no textbook had ever told her: learning is not a race but a habit.",
+      "translation": "她头三个月在家乡的一家小图书馆工作，在那里整理图书，帮孩子们找到他们喜欢的故事。那是一份悄悄改变了她自己的安静工作。那位图书管理员是位五十多岁、很有耐心的女士，教她怎样组织读书会。看着那些孩子为故事里的英雄和结局争个不停，林开始明白一件课本从未告诉过她的事：学习不是一场赛跑，而是一种习惯。"
+    },
+    {
+      "text": "Later she volunteered at a nature center, where she guided visitors along mountain paths. Her shift over, she often stayed to read about the plants whose names she had just learned. Some days were hard. Sometimes she doubted whether the whole year was a waste of time. Yet each small task, however ordinary it seemed, added a piece to a picture that she was slowly drawing of herself. Learning, she discovered, never really stops.",
+      "translation": "后来她到一个自然中心做志愿者，带着游客沿山间小路行走。下班以后，她常常留下来读一读那些自己刚知道名字的植物。有些日子并不好过。有时她也怀疑这一年是不是在浪费时间。但每一件小事，无论看起来多么平常，都在为一幅她慢慢描绘的自我画像添上一笔。她发现，学习其实从不会真正停止。"
+    },
+    {
+      "text": "By the time she applied to university, Lin had changed. The girl who once chose her major by following her friends now spoke about forests, children and books with quiet confidence. 'A year off,' she told me, 'is not a year lost.' Her parents, to whom she had once been afraid to explain her plan, now told the story proudly to every visitor.",
+      "translation": "等到她申请大学时，林已经变了。那个曾经跟着朋友选专业的女孩，如今会平静而自信地谈起森林、孩子和书。'休学一年，'她对我说，'不是浪费一年。'她的父母——她曾经不敢向他们解释自己的计划——如今骄傲地把这个故事讲给每一位来客听。"
+    },
+    {
+      "text": "I used to think that learning happened only inside classrooms, with bells ringing and exams waiting. Now I believe that education is a lifelong journey, on which every experience, pleasant or painful, can leave a mark. Lin's gap year taught me that growing up is not about rushing to the next door, but about knowing why you choose to open it.",
+      "translation": "我曾以为学习只发生在教室里，铃声响起，考试在等着你。现在我相信，教育是一段终身的旅程，在这段旅程上，每一次经历，无论愉快还是痛苦，都会留下痕迹。林的间隔年让我明白：成长不是急着去推开下一扇门，而是明白自己为什么选择打开它。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Her parents, ___ had saved money for her college fees for years, were worried at first.",
+      "choices": [
+        "who",
+        "which",
+        "whom"
+      ],
+      "answer": "who",
+      "audioText": "Her parents, who had saved money for her college fees for years, were worried at first."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "a",
+        "quiet",
+        "job",
+        "that",
+        "changed",
+        "her"
+      ],
+      "audioText": "It was a quiet job that changed her."
+    },
+    {
+      "type": "word_builder",
+      "word": "confidence",
+      "audioText": "confidence"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where did Lin work during her first three months after high school?",
+      "audioText": "Where did Lin work during her first three months after high school?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "library",
+          "text": "A library"
+        },
+        {
+          "emoji": "🏔️",
+          "value": "mountain",
+          "text": "A mountain path"
+        },
+        {
+          "emoji": "🏫",
+          "value": "classroom",
+          "text": "A classroom"
+        }
+      ],
+      "answer": "library"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Learning",
+        "she",
+        "discovered",
+        "never",
+        "really",
+        "stops"
+      ],
+      "audioText": "Learning, she discovered, never really stops."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Lin argued that twelve months of real experience, during ___ she could test her own interests, might be worth more than a hurried choice.",
+      "choices": [
+        "which",
+        "who",
+        "what"
+      ],
+      "answer": "which",
+      "audioText": "Lin argued that twelve months of real experience, during which she could test her own interests, might be worth more than a hurried choice."
+    }
+  ],
+  "_unknownWords": [
+    "gap",
+    "textbook",
+    "shift",
+    "applied",
+    "confidence",
+    "lifelong",
+    "lin's"
+  ]
+}

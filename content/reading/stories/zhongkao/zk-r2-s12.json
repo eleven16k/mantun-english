@@ -1,0 +1,117 @@
+{
+  "id": "zk-r2-s12",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 12,
+  "title": "Sunrise on Mount Tai",
+  "titleCn": "泰山看日出",
+  "coverEmoji": "🌄",
+  "paragraphs": [
+    {
+      "text": "Last summer, my parents and I took a train to Tai'an. Mount Tai is one of the most famous mountains in China. Many people go there to see the sunrise. We wanted to be there before the sun came up.",
+      "translation": "去年夏天，我和爸爸妈妈坐火车去了泰安。泰山是中国最著名的山之一。很多人去那里看日出。我们想赶在太阳升起之前到达山顶。"
+    },
+    {
+      "text": "We started to climb at two in the morning. It was dark, and the stars were brighter than in our city. While we were walking, my father told me stories about the mountain. I walked faster than him at first.",
+      "translation": "我们凌晨两点开始爬山。天很黑，星星比我们城里的亮得多。我们一边走，爸爸一边给我讲这座山的故事。一开始我走得比他还快。"
+    },
+    {
+      "text": "After two more hours, my legs felt heavy and I was very tired. The top was still far away. When I wanted to stop, my mother gave me some water. She said the best view always comes after the hardest climb.",
+      "translation": "又过了两个小时，我的腿开始发沉，人累得不行。山顶还远着呢。每当我想停下来，妈妈就递给我一些水。她说，最美的风景总在最艰难的攀登之后。"
+    },
+    {
+      "text": "Before five o'clock, we reached the top. It was colder and the wind was much stronger up there. We stood together and waited quietly. The sky was grey, then red, then bright orange.",
+      "translation": "不到五点，我们就登上了山顶。上面更冷，风也大得多。我们站在一起，静静地等着。天空先是灰的，接着变红，然后亮成了橙色。"
+    },
+    {
+      "text": "When the sun came up, everyone shouted happily. The light turned the clouds gold. I saw the most beautiful view in my life. After the sun was high, we began to walk down. My legs hurt, but I felt great.",
+      "translation": "太阳升起时，大家高兴地欢呼起来。阳光把云染成了金色。那是我这辈子见过的最美的景色。太阳升高之后，我们开始下山。腿虽然疼，我心里却特别痛快。"
+    },
+    {
+      "text": "Before we left, we ate hot noodles in a small shop. Then we bought some small gifts for my grandparents. That trip taught me something important. The best things in life are not easy to get. I hope I can climb Mount Tai again one day.",
+      "translation": "离开之前，我们在一家小店里吃了热腾腾的面条，又给爷爷奶奶买了些小礼物。那次旅行让我懂得了一个重要的道理：人生中最好的东西都不容易得到。我希望有一天能再爬一次泰山。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the family go to Mount Tai to see?",
+      "audioText": "What did the family go to Mount Tai to see?",
+      "options": [
+        {
+          "emoji": "🌄",
+          "value": "sunrise",
+          "text": "The sunrise"
+        },
+        {
+          "emoji": "🐼",
+          "value": "panda",
+          "text": "Pandas"
+        },
+        {
+          "emoji": "🚌",
+          "value": "bus",
+          "text": "A bus"
+        }
+      ],
+      "answer": "sunrise"
+    },
+    {
+      "type": "word_builder",
+      "word": "mountain",
+      "audioText": "mountain"
+    },
+    {
+      "type": "word_builder",
+      "word": "sunrise",
+      "audioText": "sunrise"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "walked",
+        "faster",
+        "than",
+        "him",
+        "at",
+        "first."
+      ],
+      "audioText": "I walked faster than him at first."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Mount Tai is one of the most ___ mountains in China.",
+      "choices": [
+        "famous",
+        "faster",
+        "highest"
+      ],
+      "answer": "famous",
+      "audioText": "Mount Tai is one of the most famous mountains in China."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ I wanted to stop, my mother gave me some water.",
+      "choices": [
+        "When",
+        "While",
+        "Before"
+      ],
+      "answer": "When",
+      "audioText": "When I wanted to stop, my mother gave me some water."
+    }
+  ],
+  "_unknownWords": [
+    "tai'an",
+    "mount",
+    "tai",
+    "china",
+    "sunrise",
+    "view",
+    "o'clock",
+    "grey",
+    "happily",
+    "hurt"
+  ]
+}

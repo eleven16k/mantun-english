@@ -1,0 +1,123 @@
+{
+  "id": "gk-r1-s08",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 8,
+  "title": "The Desert That Feeds a Forest",
+  "titleCn": "喂养森林的沙漠",
+  "coverEmoji": "🏜️",
+  "paragraphs": [
+    {
+      "text": "Every year, the Sahara Desert, which covers much of northern Africa, lifts hundreds of millions of tons of dust into the sky. Driven by strong winds, this fine dust rises high above the ground and begins a long journey west. Within days, it reaches the Atlantic Ocean, where it can travel for weeks before touching land again.",
+      "translation": "每年，覆盖北非大部分地区的撒哈拉沙漠都会把数亿吨沙尘扬入天空。在强风的推动下，这些细小的尘埃升到高空，开始向西的长途旅行。几天之内，它就抵达大西洋，而此后可能要在海上飘行数周才会再一次接触陆地。"
+    },
+    {
+      "text": "This dust is not just sand. It is a mixture of minerals, including phosphorus, which green plants need in order to grow. Carried west by the trade winds, this dust crosses more than 2,500 kilometres of open ocean. Satellites have tracked these enormous clouds, showing that the journey takes about a week.",
+      "translation": "这些尘埃并不只是沙子。它是多种矿物质的混合物，其中含有磷，而绿色植物需要磷才能生长。在信风的吹送下，这些尘埃向西越过两千五百多公里的开阔洋面。卫星追踪过这些巨大的尘云，显示这趟旅程大约需要一周时间。"
+    },
+    {
+      "text": "When the dust finally falls, it lands on the Amazon rainforest, one of the wettest places on Earth. Here the soil is ancient and poor. The minerals in the dust act like a natural fertilizer, feeding plants that would otherwise struggle to survive. The fact that a distant desert helps to feed the world's largest rainforest surprises many people.",
+      "translation": "当尘埃最终落下时，它落到了亚马孙雨林——地球上最湿润的地方之一。这里的土壤古老而贫瘠。尘埃中的矿物质就像天然肥料，滋养着那些本来难以存活的植物。一片遥远的沙漠竟然帮助养育着世界上最大的雨林，这一事实让许多人感到惊讶。"
+    },
+    {
+      "text": "Researchers collect samples in both places, comparing African dust with rain water collected from the Amazon. They also use satellites, which can measure how much dust crosses the ocean in a single year. The two regions are closely linked.",
+      "translation": "研究人员在两处采集样本，把非洲的尘埃与从亚马孙收集来的雨水进行比较。他们还借助卫星，卫星能够测量出每年有多少尘埃越过大洋。这两个地区紧密相连。"
+    },
+    {
+      "text": "This connection reminds us that the planet works as a single system, where every part affects the others. Protecting the Amazon, therefore, may also depend on protecting the Sahara and the winds above it. If one region changes, the effects may be felt far away, in ways we are only beginning to understand.",
+      "translation": "这种联系提醒我们：地球是一个整体系统，其中每一部分都影响着其他部分。因此，保护亚马孙也许同样有赖于保护撒哈拉以及它上空的风。如果一个地区发生变化，其影响可能会在很远的地方被感受到，而我们对这些影响才刚刚开始有所了解。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What carries the Saharan dust across the ocean?",
+      "audioText": "What carries the Saharan dust across the ocean?",
+      "options": [
+        {
+          "emoji": "💨",
+          "value": "wind",
+          "text": "Wind"
+        },
+        {
+          "emoji": "🌊",
+          "value": "current",
+          "text": "Ocean current"
+        },
+        {
+          "emoji": "☀️",
+          "value": "sunlight",
+          "text": "Sunlight"
+        }
+      ],
+      "answer": "wind"
+    },
+    {
+      "type": "word_builder",
+      "word": "phosphorus",
+      "audioText": "phosphorus"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "This",
+        "dust",
+        "is",
+        "not",
+        "just",
+        "sand."
+      ],
+      "audioText": "This dust is not just sand."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Here",
+        "the",
+        "soil",
+        "is",
+        "ancient",
+        "and",
+        "poor."
+      ],
+      "audioText": "Here the soil is ancient and poor."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Driven by strong winds, this fine dust ___ high above the ground and begins a long journey west.",
+      "choices": [
+        "rises",
+        "falls",
+        "stops"
+      ],
+      "answer": "rises",
+      "audioText": "Driven by strong winds, this fine dust rises high above the ground and begins a long journey west."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The fact ___ a distant desert helps to feed the world's largest rainforest surprises many people.",
+      "choices": [
+        "that",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "audioText": "The fact that a distant desert helps to feed the world's largest rainforest surprises many people."
+    }
+  ],
+  "_unknownWords": [
+    "sahara",
+    "driven",
+    "phosphorus",
+    "amazon",
+    "rainforest",
+    "wettest",
+    "fertilizer",
+    "world's",
+    "largest",
+    "researchers",
+    "samples",
+    "regions",
+    "region"
+  ]
+}

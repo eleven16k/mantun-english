@@ -1,0 +1,120 @@
+{
+  "id": "gk-r1-s12",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 12,
+  "title": "The Seeds That Sleep for Centuries",
+  "titleCn": "沉睡百年的种子",
+  "coverEmoji": "🌱",
+  "paragraphs": [
+    {
+      "text": "Most people think of a seed as something small and simple, yet it is really a tiny survival machine. Wrapped in a hard coat, a seed can wait for years before it starts to grow at all. While it rests, its life processes slow down almost to a stop, which helps it live through hard times.",
+      "translation": "多数人把种子看作又小又简单的东西，其实它是一台微型的生存机器。种子裹在坚硬的种皮里，可以等上好几年才开始发芽。在它休眠的时候，体内的生命活动几乎慢到停止，这帮助它熬过艰难的时期。"
+    },
+    {
+      "text": "Scientists call this long sleep dormancy, a state in which a seed uses almost no energy. Seeds buried in cold soil can stay alive through winters, droughts and even fires. The hard coat keeps water out, and this simple barrier decides when growth can safely begin.",
+      "translation": "科学家把这种长时间的睡眠叫做休眠，即一种几乎不消耗能量的状态。埋在寒冷土壤里的种子，可以熬过冬天、干旱甚至火灾而存活。坚硬的种皮挡住水分，这层简单的屏障决定着生长何时才能安全开始。"
+    },
+    {
+      "text": "Some seeds sleep far longer than anyone expected. In the frozen ground of Siberia, scientists found seeds buried for tens of thousands of years. The news that a seed could survive so long surprised the whole team. Carefully fed with warmth and water, one of the oldest seeds finally opened. It grew into a small white flower.",
+      "translation": "有些种子沉睡的时间远比任何人预想的要长。在西伯利亚的冻土中，科学家发现了被埋藏数万年的种子。一颗种子竟能存活如此之久，这个消息让整个团队感到惊讶。在温暖和水的悉心照料下，其中一颗最古老的种子终于裂开了。它长成了一朵白色的小花。"
+    },
+    {
+      "text": "Because such stories matter for our future, people have built seed banks around the world. The most famous one, which lies inside a mountain in Norway, holds more than a million samples. The idea that we might lose a useful crop forever worries many scientists today. If a disease or a drought destroys a harvest, farmers can ask for those seeds. Stored safely in the dark, they wait for the day when they are needed again.",
+      "translation": "因为这类故事关系到我们的未来，人们已在世界各地建起了种子库。其中最著名的一座坐落在挪威的一座山体内部，保存着一百多万份种子样本。一想到我们可能永远失去某种有用的作物，许多科学家就深感忧虑。如果某种病害或干旱毁掉了一季收成，农民就可以申请取用那些种子。它们被安全地存放在黑暗中，等待再次被需要的那一天。"
+    },
+    {
+      "text": "Seeds are therefore much more than food; they are small libraries of living time. Sleeping quietly in soil or in a frozen vault, they carry the past into the future. So the next time you see a seed, remember the quiet patience hidden inside it.",
+      "translation": "所以种子远不只是食物，它们是一座座活着的时光图书馆。它们静静睡在土壤里或冰冷的种子库中，把过去带向未来。所以下次你看到一粒种子时，请记住藏在它里面的那份安静的耐心。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, what did one of the ancient seeds finally grow into?",
+      "audioText": "According to the passage, what did one of the ancient seeds finally grow into?",
+      "options": [
+        {
+          "emoji": "🌸",
+          "value": "flower",
+          "text": "A small white flower"
+        },
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "A tall tree"
+        },
+        {
+          "emoji": "🌾",
+          "value": "rice",
+          "text": "A field of rice"
+        }
+      ],
+      "answer": "flower"
+    },
+    {
+      "type": "word_builder",
+      "word": "survive",
+      "audioText": "survive"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Some",
+        "seeds",
+        "sleep",
+        "far",
+        "longer",
+        "than",
+        "anyone",
+        "expected."
+      ],
+      "audioText": "Some seeds sleep far longer than anyone expected."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "grew",
+        "into",
+        "a",
+        "small",
+        "white",
+        "flower."
+      ],
+      "audioText": "It grew into a small white flower."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The hard coat keeps water ___, and this simple barrier decides when growth can safely begin.",
+      "choices": [
+        "out",
+        "in",
+        "off"
+      ],
+      "answer": "out",
+      "audioText": "The hard coat keeps water out, and this simple barrier decides when growth can safely begin."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The news ___ a seed could survive so long surprised the whole team.",
+      "choices": [
+        "that",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "audioText": "The news that a seed could survive so long surprised the whole team."
+    }
+  ],
+  "_unknownWords": [
+    "wrapped",
+    "dormancy",
+    "frozen",
+    "siberia",
+    "warmth",
+    "samples",
+    "forever",
+    "hidden"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "xsc-r2-s08",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 8,
+  "title": "Bear's Big Cake",
+  "titleCn": "小熊的大蛋糕",
+  "coverEmoji": "🐻",
+  "paragraphs": [
+    {
+      "text": "Bear is busy today. He is making a big cake. He is putting honey in the bowl. The kitchen smells sweet. Bear is very happy.",
+      "translation": "小熊今天很忙。他在做一个大蛋糕。他把蜂蜜放进大碗里。厨房里香香的。小熊非常开心。"
+    },
+    {
+      "text": "Rabbit comes to the window. She looks at Bear. \"What are you doing?\" she asks. \"I am making a cake,\" says Bear. \"I can smell the honey!\" \"Me too,\" says Rabbit.",
+      "translation": "兔子来到窗边。她看着小熊。“你在做什么？”她问。“我在做蛋糕，”小熊说。“我能闻到蜂蜜的香味！”“我也闻到了，”兔子说。"
+    },
+    {
+      "text": "\"Can I help you?\" asks Rabbit. \"Yes, please,\" says Bear. \"You can wash the apples.\" Rabbit is washing the apples now. She is singing a happy song.",
+      "translation": "“我能帮你吗？”兔子问。“好啊，谢谢你，”小熊说。“你可以去洗苹果。”兔子现在正在洗苹果。她唱着一首快乐的歌。"
+    },
+    {
+      "text": "Duck is walking by the river. She sees the warm light. She comes to the door. \"Can I help too?\" she asks. \"Yes,\" says Bear. \"You can bring some water.\" Duck is carrying a small pot.",
+      "translation": "鸭子正沿着河边散步。她看到了暖暖的灯光。她来到门口。“我也能帮忙吗？”她问。“可以，”小熊说。“你可以带些水来。”鸭子正端着一个小罐子。"
+    },
+    {
+      "text": "Now the cake is in the oven. The friends are waiting and singing. Bear is smiling at them. \"I like making cakes with you,\" he says. \"We like helping you,\" say Rabbit and Duck.",
+      "translation": "现在蛋糕在烤箱里。朋友们一边等，一边唱歌。小熊对着他们笑。“我喜欢和你们一起做蛋糕，”他说。“我们喜欢帮你，”兔子和鸭子说。"
+    },
+    {
+      "text": "Soon the cake is ready. It smells sweet and warm. Everyone is eating happily. \"Friends make everything better,\" says Bear. Everyone is laughing.",
+      "translation": "很快蛋糕就做好了。它闻起来又甜又暖。大家都开心地吃着。“有朋友在，什么都更好，”小熊说。大家都在笑。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is Bear making?",
+      "audioText": "What is Bear making?",
+      "options": [
+        {
+          "emoji": "🍰",
+          "value": "cake",
+          "text": "A cake"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        },
+        {
+          "emoji": "🍪",
+          "value": "cookie",
+          "text": "A cookie"
+        }
+      ],
+      "answer": "cake"
+    },
+    {
+      "type": "image_choice",
+      "question": "What is Duck carrying?",
+      "audioText": "What is Duck carrying?",
+      "options": [
+        {
+          "emoji": "💧",
+          "value": "water",
+          "text": "Water"
+        },
+        {
+          "emoji": "🧺",
+          "value": "apples",
+          "text": "Apples"
+        },
+        {
+          "emoji": "🌻",
+          "value": "flowers",
+          "text": "Flowers"
+        }
+      ],
+      "answer": "water"
+    },
+    {
+      "type": "word_builder",
+      "word": "honey",
+      "audioText": "honey"
+    },
+    {
+      "type": "word_builder",
+      "word": "water",
+      "audioText": "water"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Rabbit",
+        "is",
+        "washing",
+        "the",
+        "apples",
+        "now",
+        "."
+      ],
+      "audioText": "Rabbit is washing the apples now."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "He is ___ honey in the bowl.",
+      "choices": [
+        "putting",
+        "eating",
+        "drinking"
+      ],
+      "answer": "putting",
+      "audioText": "He is putting honey in the bowl."
+    }
+  ],
+  "_unknownWords": [
+    "busy",
+    "putting",
+    "honey",
+    "asks",
+    "pot",
+    "oven",
+    "happily"
+  ]
+}

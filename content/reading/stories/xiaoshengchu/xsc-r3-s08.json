@@ -1,0 +1,123 @@
+{
+  "id": "xsc-r3-s08",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 8,
+  "title": "The Candy Town Kite Day",
+  "titleCn": "糖果镇风筝日",
+  "coverEmoji": "🪁",
+  "paragraphs": [
+    {
+      "text": "Last Saturday was Kite Day in Candy Town. The sky was blue and the wind was soft. All the children were happy.",
+      "translation": "上周六是糖果镇的风筝日。天空湛蓝，微风轻柔。孩子们都很开心。"
+    },
+    {
+      "text": "Lily and Ben went to Sugar Hill. They carried two big kites and a bag. The bag had cakes and lemon candy.",
+      "translation": "莉莉和本去了糖山。他们带着两只大风筝和一个袋子。袋子里装着蛋糕和柠檬糖。"
+    },
+    {
+      "text": "Many friends were on the green hill. They saw many kites in the sky. Tom's kite looked like a pink cat.",
+      "translation": "绿色的山坡上有很多朋友。他们看见天上飞着许多风筝。汤姆的风筝看起来像一只粉色的猫。"
+    },
+    {
+      "text": "The wind helped the kites fly high. Lily's kite danced above the tall trees. Ben ran and jumped on the grass.",
+      "translation": "风帮着风筝飞得高高的。莉莉的风筝在高高的树梢上跳舞。本在草地上又跑又跳。"
+    },
+    {
+      "text": "At noon, they sat down and ate lunch. The cakes were sweet and soft. The lemon candy was very sour.",
+      "translation": "中午，他们坐下来吃午饭。蛋糕又甜又软。柠檬糖非常酸。"
+    },
+    {
+      "text": "In the afternoon, the wind stopped. The children walked home with big smiles. It was a wonderful Kite Day.",
+      "translation": "到了下午，风停了。孩子们带着大大的笑容走回家。这真是美妙的风筝日。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Tom's kite look like?",
+      "audioText": "What did Tom's kite look like?",
+      "options": [
+        {
+          "emoji": "🐱",
+          "value": "cat",
+          "text": "A pink cat"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A blue fish"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A small bird"
+        }
+      ],
+      "answer": "cat"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where did Lily and Ben go on Kite Day?",
+      "audioText": "Where did Lily and Ben go on Kite Day?",
+      "options": [
+        {
+          "emoji": "⛰️",
+          "value": "hill",
+          "text": "Sugar Hill"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "School"
+        },
+        {
+          "emoji": "🏖️",
+          "value": "beach",
+          "text": "The beach"
+        }
+      ],
+      "answer": "hill"
+    },
+    {
+      "type": "word_builder",
+      "word": "kite",
+      "audioText": "kite"
+    },
+    {
+      "type": "word_builder",
+      "word": "laughed",
+      "audioText": "laughed"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Ben",
+        "ran",
+        "and",
+        "jumped",
+        "on",
+        "the",
+        "grass."
+      ],
+      "audioText": "Ben ran and jumped on the grass."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The wind ___ the kites fly high.",
+      "choices": [
+        "helped",
+        "help",
+        "helping"
+      ],
+      "answer": "helped",
+      "audioText": "The wind helped the kites fly high."
+    }
+  ],
+  "_unknownWords": [
+    "lemon",
+    "tom's",
+    "lily's",
+    "sour"
+  ]
+}

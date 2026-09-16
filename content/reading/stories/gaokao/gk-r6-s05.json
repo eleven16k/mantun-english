@@ -1,0 +1,117 @@
+{
+  "id": "gk-r6-s05",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 5,
+  "title": "The Hidden Cost of Free Delivery",
+  "titleCn": "免费送货的隐藏成本",
+  "coverEmoji": "📦",
+  "paragraphs": [
+    {
+      "text": "Online shoppers often treat free delivery as a basic right, although they rarely stop to ask who really pays for it. While the van, the driver and the fuel all cost money, free delivery still makes a shop feel more generous than its competitors.",
+      "translation": "网购的人常常把免费送货当成一项基本权利，尽管他们很少停下来想一想究竟是谁在为它买单。虽然货车、司机和燃油都要花钱，但“免费送货”仍然会让一家店显得比同行更大方。"
+    },
+    {
+      "text": "Free delivery is never truly free. For a small business, however, free delivery is not a gift; it is a discount the owner quietly pays out of his own pocket. Although the customer sees a simple zero on the screen, the shop must recover that cost somewhere. It usually does so by raising the price of the goods.",
+      "translation": "免费送货从来都不是真的免费。不过对小本生意来说，免费送货并不是礼物，而是店主悄悄从自己口袋里掏出来的一笔折扣。尽管顾客在屏幕上只看到一个简简单单的“0”，店家却必须在别处把这笔成本找回来。它通常的做法就是抬高商品的价格。"
+    },
+    {
+      "text": "Consider Lily, who runs a small online tea company from a rented room in Hangzhou, China. When she first offered free shipping on every order, her sales rose quickly, as is common with new online shops. Yet her profits fell, because each package of cheap tea cost more to post than the tea itself was worth.",
+      "translation": "来看看莉莉，她在中国杭州一间租来的屋子里经营着一家小小的茶叶网店。她起初对每一笔订单都提供免费配送时，销量很快上升，这在新的网店里很常见。然而她的利润却下降了，因为每寄一包便宜的茶叶，邮费比茶叶本身还贵。"
+    },
+    {
+      "text": "Despite the disappointing numbers, Lily refused to give up her young business, which she had built from nothing. She studied her records carefully and noticed that most of her customers ordered only one small box at a time. While a single small box lost her money, three or more boxes earned her a safe profit.",
+      "translation": "尽管数字令人失望，莉莉还是不肯放弃这家她白手起家做起来的年轻小店。她仔细研究了自己的记录，发现大多数顾客一次只订一小盒。虽然单独一小盒让她亏钱，但三盒以上就能让她稳稳赚上一笔。"
+    },
+    {
+      "text": "So Lily kept free delivery, but only for orders above a certain amount, and her customers accepted the new rule without complaint. That small change saved her business. As the story clearly shows, a clever price can turn a heavy cost into a reason to buy more.",
+      "translation": "于是莉莉保留了免费送货，但只针对达到一定金额的订单，而顾客们毫无怨言地接受了这条新规矩。这个小小的改变救了她的生意。正如这个故事清楚地表明的那样，聪明的定价能把一笔沉重的成本变成让人多买的理由。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, how does a shop usually recover the cost of free delivery?",
+      "audioText": "According to the passage, how does a shop usually recover the cost of free delivery?",
+      "options": [
+        {
+          "emoji": "⬆️",
+          "value": "raise",
+          "text": "By raising prices"
+        },
+        {
+          "emoji": "🚚",
+          "value": "vans",
+          "text": "By sending fewer vans"
+        },
+        {
+          "emoji": "🎁",
+          "value": "gifts",
+          "text": "By giving real gifts"
+        }
+      ],
+      "answer": "raise"
+    },
+    {
+      "type": "word_builder",
+      "word": "delivery",
+      "audioText": "delivery"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Free",
+        "delivery",
+        "is",
+        "never",
+        "truly",
+        "free."
+      ],
+      "audioText": "Free delivery is never truly free."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Although the customer sees a simple ___ on the screen, the shop must recover that cost somewhere.",
+      "choices": [
+        "zero",
+        "gift",
+        "discount"
+      ],
+      "answer": "zero",
+      "audioText": "Although the customer sees a simple zero on the screen, the shop must recover that cost somewhere."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "That",
+        "small",
+        "change",
+        "saved",
+        "her",
+        "business."
+      ],
+      "audioText": "That small change saved her business."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ a single small box lost her money, three or more boxes earned her a safe profit.",
+      "choices": [
+        "While",
+        "Despite",
+        "Because"
+      ],
+      "answer": "While",
+      "audioText": "While a single small box lost her money, three or more boxes earned her a safe profit."
+    }
+  ],
+  "_unknownWords": [
+    "online",
+    "shoppers",
+    "delivery",
+    "van",
+    "truly",
+    "hangzhou",
+    "despite",
+    "complaint"
+  ]
+}

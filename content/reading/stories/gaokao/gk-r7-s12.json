@@ -1,0 +1,115 @@
+{
+  "id": "gk-r7-s12",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 12,
+  "title": "Between the Stars and the Soil",
+  "titleCn": "星辰与土壤之间",
+  "coverEmoji": "🚀",
+  "paragraphs": [
+    {
+      "text": "Whenever people ask what the next hundred years will look like, two pictures tend to appear: one of rockets lifting away from a crowded planet, and one of rivers running clear again beneath quiet skies. Rarely do we stop to ask whether these pictures must compete at all. Perhaps the more useful question is not which future to choose, but how the two might be made to depend on each other. Neither picture, on its own, is complete.",
+      "translation": "每当人们问起未来一百年会是什么样子，两幅画面往往会出现：一幅是火箭从拥挤的星球上腾空而起，另一幅是河流在寂静的天空下重新变得清澈。我们很少停下来问一句，这两幅画面是否真的必须彼此竞争。也许更有用的问题并不是选择哪一种未来，而是如何让两者相互依存。单看任何一幅画面，都是不完整的。"
+    },
+    {
+      "text": "Space programmes, so often described as escapes from reality, are in fact among the most practical things we do. The satellites that watch our weather, the materials that keep food fresh, the maps that guide ships — none of these would exist had we never looked upward. What is easy to forget is that the engineers who design such systems are also the people who learn to measure a planet's health with unusual care. Seen from orbit, the atmosphere that protects us looks thin enough to worry about. That view changes people.",
+      "translation": "太空项目常常被说成是对现实的逃避，事实上却是我们所做的最实际的事情之一。观测天气的卫星、让食物保鲜的材料、为船只导航的地图——假如我们从未抬头仰望，这一切都不会存在。容易被人忘记的是，设计这些系统的工程师，也正是那些学会以格外细心的方式去测量一颗星球健康状况的人。从轨道上看，保护我们的大气层薄得令人担忧。这种景象会改变人。"
+    },
+    {
+      "text": "On the ground, meanwhile, the work is slower and less dramatic, yet no less urgent. Soil takes centuries to build and moments to wash away, and every farmer who plants trees along a hillside knows this better than any report. Had previous generations been told that their choices would still be measured in the year 2100, they might have laughed; we, however, have no such excuse. Our decisions travel further than we imagine.",
+      "translation": "与此同时，在大地上的工作更缓慢、更不引人注目，却同样紧迫。土壤需要几个世纪才能形成，却可能在瞬间被冲走，而每个在山坡上种树的农民都比任何报告更清楚这一点。假如有人告诉前几代人，他们的选择到 2100 年仍会被检验，他们或许会一笑置之；可我们却没有这样的借口。我们的决定走得比我们想象的更远。"
+    },
+    {
+      "text": "So the choice is not between the stars and the soil. Were we to treat space as an escape, we would waste both; were we to treat Earth as a closed room, we would lose the very curiosity that keeps us careful. What the coming century demands, then, is not one grand decision but thousands of small, patient ones — made by people who understand that the future is not somewhere we arrive, but something we keep building. The building never really ends.",
+      "translation": "所以，选择并不在星辰与土壤之间。倘若我们只把太空当作逃离之地，就会两者尽失；倘若我们只把地球当作一间封闭的屋子，就会丢掉那份让我们保持谨慎的好奇心。那么，未来一百年所需要的，并不是一个宏大的决定，而是成千上万个细小而耐心的决定——由那些懂得未来不是我们抵达的某个地方、而是我们不断建造的东西的人做出。建造永远不会真正结束。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the writer, how does the atmosphere look when seen from orbit?",
+      "audioText": "According to the writer, how does the atmosphere look when seen from orbit?",
+      "options": [
+        {
+          "emoji": "🌫️",
+          "value": "thin",
+          "text": "Thin enough to worry about"
+        },
+        {
+          "emoji": "🧱",
+          "value": "solid",
+          "text": "Thick and solid"
+        },
+        {
+          "emoji": "🌈",
+          "value": "bright",
+          "text": "Bright and cheerful"
+        }
+      ],
+      "answer": "thin"
+    },
+    {
+      "type": "word_builder",
+      "word": "curiosity",
+      "audioText": "curiosity"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Neither",
+        "picture",
+        "on",
+        "its",
+        "own",
+        "is",
+        "complete"
+      ],
+      "audioText": "Neither picture, on its own, is complete."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Our",
+        "decisions",
+        "travel",
+        "further",
+        "than",
+        "we",
+        "imagine"
+      ],
+      "audioText": "Our decisions travel further than we imagine."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ takes centuries to build and moments to wash away.",
+      "choices": [
+        "Soil",
+        "Steel",
+        "Paper"
+      ],
+      "answer": "Soil",
+      "audioText": "Soil takes centuries to build and moments to wash away."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Were we to treat space as an escape, we would ___ both.",
+      "choices": [
+        "waste",
+        "save",
+        "share"
+      ],
+      "answer": "waste",
+      "audioText": "Were we to treat space as an escape, we would waste both."
+    }
+  ],
+  "_unknownWords": [
+    "beneath",
+    "upward",
+    "planet's",
+    "seen",
+    "meanwhile",
+    "dramatic",
+    "generations",
+    "curiosity"
+  ]
+}

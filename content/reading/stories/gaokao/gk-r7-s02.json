@@ -1,0 +1,124 @@
+{
+  "id": "gk-r7-s02",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 2,
+  "title": "The Future We Are Writing",
+  "titleCn": "我们正在书写的未来",
+  "coverEmoji": "🌍",
+  "paragraphs": [
+    {
+      "text": "Ask a group of teenagers to describe the world in 2070, and you will receive two very different pictures. Some imagine clean cities floating above green fields, while others describe crowded streets where nobody dares to breathe. Which picture finally becomes real, scientists insist, depends less on technology than on the choices that ordinary people make every day.",
+      "translation": "让一群青少年描述2070年的世界，你会得到两幅截然不同的画面。一些人想象着绿色田野上空漂浮的洁净城市，另一些人描述的却是拥挤得没人敢呼吸的街道。科学家们坚持认为，最终哪幅画面成真，与其说取决于技术，不如说取决于普通人每天所做的选择。"
+    },
+    {
+      "text": "Not only does space exploration give us better satellites and weather forecasts, but it also forces us to think about how fragile our home planet really is. Looking back at the blue Earth from the Moon, astronauts often say that borders disappear and that humanity seems to be one small crew. Were we to treat our planet as carefully as astronauts treat their spacecraft, many of today's problems might have been avoided long ago.",
+      "translation": "太空探索不仅带给我们更好的卫星和天气预报，还迫使我们思考：我们的家园星球究竟有多么脆弱。从月球上回望这颗蓝色地球，宇航员常说国界消失了，全人类就像一个小小的乘组。倘若我们能像宇航员爱护飞船那样细心地对待地球，今天的许多问题或许早已避免。"
+    },
+    {
+      "text": "If we continue to burn fuel as carelessly as we do today, the oceans may rise and the forests may shrink. Should governments and companies act together, however, the damage could still be limited. Wind farms, solar panels and electric buses are no longer dreams; they are ordinary machines that thousands of engineers improve every single year.",
+      "translation": "如果我们继续像今天这样粗心地燃烧燃料，海洋可能会上升，森林可能会缩小。不过，如果各国政府与企业携手行动，损失仍然有可能被控制住。风力发电场、太阳能板和电动公交已不再是梦想；它们是成千上万工程师年年在改进的普通机器。"
+    },
+    {
+      "text": "History teaches us that no single nation, however rich or clever, can solve a global problem alone. Where people cooperate, progress happens quickly. Where they do not, the same problems simply return in a new form. A shared future therefore demands shared rules, shared research and a shared willingness to listen.",
+      "translation": "历史告诉我们，任何一个国家，无论多么富有或聪明，都无法独自解决全球性问题。人们合作的地方，进步来得很快；不合作的地方，同样的问题只会以新的形式卷土重来。因此，共同的未来需要共同的规则、共同的研究，以及共同的倾听意愿。"
+    },
+    {
+      "text": "The future is not a distant land that waits for us to arrive; it is a story we are writing now. Whether the ending is hopeful depends on what we do today, and on whether we are willing to do it together.",
+      "translation": "未来并不是一片等着我们抵达的遥远大陆；它是一段我们此刻正在书写的故事。结局是否充满希望，取决于我们今天做什么，也取决于我们是否愿意一起去完成。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which picture shows the hopeful future that some teenagers imagine?",
+      "audioText": "Which picture shows the hopeful future that some teenagers imagine?",
+      "options": [
+        {
+          "emoji": "🌿",
+          "value": "green",
+          "text": "Clean cities above green fields"
+        },
+        {
+          "emoji": "🌫️",
+          "value": "crowded",
+          "text": "Crowded streets and dirty air"
+        },
+        {
+          "emoji": "🌕",
+          "value": "moon",
+          "text": "A base built on the Moon"
+        }
+      ],
+      "answer": "green"
+    },
+    {
+      "type": "word_builder",
+      "word": "fragile",
+      "audioText": "fragile"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "is",
+        "a",
+        "story",
+        "we",
+        "are",
+        "writing",
+        "now."
+      ],
+      "audioText": "It is a story we are writing now."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Where",
+        "people",
+        "cooperate,",
+        "progress",
+        "happens",
+        "quickly."
+      ],
+      "audioText": "Where people cooperate, progress happens quickly."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Which picture finally becomes real, scientists insist, depends ___ on technology than on the choices that ordinary people make every day.",
+      "choices": [
+        "less",
+        "more",
+        "fewer"
+      ],
+      "answer": "less",
+      "audioText": "Which picture finally becomes real, scientists insist, depends less on technology than on the choices that ordinary people make every day."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Should governments and companies act together, ___, the damage could still be limited.",
+      "choices": [
+        "however",
+        "therefore",
+        "otherwise"
+      ],
+      "answer": "however",
+      "audioText": "Should governments and companies act together, however, the damage could still be limited."
+    }
+  ],
+  "_unknownWords": [
+    "exploration",
+    "fragile",
+    "humanity",
+    "spacecraft",
+    "today's",
+    "solar",
+    "panels",
+    "solve",
+    "global",
+    "cooperate",
+    "simply",
+    "willingness",
+    "hopeful"
+  ]
+}

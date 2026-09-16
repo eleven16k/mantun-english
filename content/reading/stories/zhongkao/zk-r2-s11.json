@@ -1,0 +1,117 @@
+{
+  "id": "zk-r2-s11",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 11,
+  "title": "Three Days by the Li River",
+  "titleCn": "漓江三日",
+  "coverEmoji": "🛶",
+  "paragraphs": [
+    {
+      "text": "Last summer, my family took a train to Guilin for a holiday. When we arrived in the evening, a light rain was falling. The air felt cooler and fresher than the air in our city. After we found our small hotel, we walked down to the river.",
+      "translation": "去年夏天，我们一家人坐火车去桂林度了个假。我们傍晚到达时，正下着小雨。空气比我们城市里的空气更凉爽、更清新。找到那家小旅馆后，我们走到了江边。"
+    },
+    {
+      "text": "The next morning, we took a boat trip on the Li River. While we were moving slowly, we passed many strange green hills. Some hills looked like tall horses, and others looked like sleeping elephants. I took more photos than my parents did.",
+      "translation": "第二天早上，我们在漓江上坐船游览。船缓缓前行时，我们经过了许多奇形怪状的绿色山丘。有些山看起来像高大的马，有些则像睡着的大象。那天我拍的照比父母拍的还多。"
+    },
+    {
+      "text": "After two hours, the boat stopped at a small town called Yangshuo. It was quieter and smaller than Guilin, but also more interesting. While my mother was shopping, my father and I rented two bikes. We rode along a country road between green fields.",
+      "translation": "两个小时后，船停在一个叫阳朔的小镇。这里比桂林更安静、更小，但也更有意思。妈妈买东西的时候，我和爸爸租了两辆自行车。我们沿着一条乡间小路骑行，两边都是绿色的田野。"
+    },
+    {
+      "text": "For lunch, we tried the famous rice noodles of the town. They were the cheapest and the most delicious food of our trip. Before we left the restaurant, the owner showed us how to make them. I ate two big bowls, more than anyone else in my family.",
+      "translation": "午饭时，我们尝了当地有名的米粉。那是我们整趟旅行中最便宜也最好吃的食物。离开餐馆前，老板还教我们怎么做米粉。我吃了两大碗，比家里任何人都吃得多。"
+    },
+    {
+      "text": "Before the sun came up, we climbed Xianggong Hill. When we reached the top, the river turned gold in front of us. It was the most beautiful view I have ever seen. We sat there quietly for a long time, and nobody spoke.",
+      "translation": "太阳升起前，我们爬上了相公山。到达山顶时，整条江在我们眼前变成了金色。那是我见过的最美的景色。我们静静地坐了很久，谁也不想说话。"
+    },
+    {
+      "text": "On the train home, I looked at all my photos again and again. My mother said Guilin was the best place we had visited. I hope I can go back there when I am older.",
+      "translation": "在回家的火车上，我一遍又一遍地翻看那些照片。妈妈说桂林是我们去过的最好的地方。我希望自己长大后还能再去那里。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did some of the green hills look like?",
+      "audioText": "What did some of the green hills look like?",
+      "options": [
+        {
+          "emoji": "🐘",
+          "value": "elephant",
+          "text": "An elephant"
+        },
+        {
+          "emoji": "🚂",
+          "value": "train",
+          "text": "A train"
+        },
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "A tree"
+        }
+      ],
+      "answer": "elephant"
+    },
+    {
+      "type": "word_builder",
+      "word": "noodles",
+      "audioText": "noodles"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was quieter and ___ than Guilin.",
+      "choices": [
+        "smaller",
+        "small",
+        "smallest"
+      ],
+      "answer": "smaller",
+      "audioText": "It was quieter and smaller than Guilin."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "took",
+        "more",
+        "photos",
+        "than",
+        "my",
+        "parents",
+        "did"
+      ],
+      "audioText": "I took more photos than my parents did."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was the ___ beautiful view I have ever seen.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "answer": "most",
+      "audioText": "It was the most beautiful view I have ever seen."
+    },
+    {
+      "type": "word_builder",
+      "word": "photos",
+      "audioText": "photos"
+    }
+  ],
+  "_unknownWords": [
+    "guilin",
+    "li",
+    "yangshuo",
+    "rented",
+    "rice",
+    "big",
+    "xianggong",
+    "view",
+    "seen"
+  ]
+}

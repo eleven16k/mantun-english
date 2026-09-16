@@ -5,8 +5,23 @@ import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { useGameStore } from "@/lib/store";
 import { useI18n, LOCALES } from "@/lib/i18n";
-import { getMe, updateProfile, logout, isLoggedIn, getParentLinks, LOGIN_URL } from "@/lib/api";
+import { getMe, getClasses, updateProfile, logout, isLoggedIn, getParentLinks, LOGIN_URL } from "@/lib/api";
+import { getProfile, setProfile } from "@/lib/plan";
 import { maskPhone } from "@/lib/maskPhone";
+
+/** 学段选项（label 复用 onboarding 卡文案键） */
+const TRACK_OPTIONS = [
+  { id: "xiaoshengchu", labelKey: "onb.trackXiaoshengchu" },
+  { id: "zhongkao", labelKey: "onb.trackZhongkao" },
+  { id: "gaokao", labelKey: "onb.trackGaokao" },
+] as const;
+
+function trackLabel(t: (k: "onb.trackXiaoshengchu" | "onb.trackZhongkao" | "onb.trackGaokao") => string, id: string | null | undefined) {
+  if (id === "gaokao") return t("onb.trackGaokao");
+  if (id === "xiaoshengchu") return t("onb.trackXiaoshengchu");
+  if (id === "zhongkao") return t("onb.trackZhongkao");
+  return null;
+}
 
 /* — toggle switch — */
 function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
@@ -21,7 +36,7 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean
       }`}
     >
       <span
-        className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow-sm transition-all duration-200 ${
+        className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow-[0_2px_0_0_rgba(0,0,0,0.12)] transition-all duration-200 ${
           checked ? "left-6" : "left-1"
         }`}
       />
@@ -34,7 +49,8 @@ function SettingGroup({ title, children }: { title: string; children: React.Reac
   return (
     <section>
       <h2 className="px-2 text-xs font-extrabold uppercase tracking-wide text-tertiary">{title}</h2>
-      <div className="mt-1.5 divide-y divide-[var(--border-subtle)] overflow-hidden rounded-2xl border border-subtle bg-surface">
+      {/* g-card 容器（4px 纸边 + 2rem 圆角，静默不加 hover）；行分隔保留弱分割线 */}
+      <div className="g-card g-card--static mt-1.5 divide-y divide-[var(--border-subtle)] overflow-hidden p-0">
         {children}
       </div>
     </section>
@@ -70,7 +86,7 @@ function LanguageRow() {
             aria-pressed={locale === l.value}
             onClick={() => setLocale(l.value)}
             className={`rounded-full px-3 py-1.5 text-sm font-bold transition ${
-              locale === l.value ? "bg-brand text-white shadow-sm" : "text-tertiary hover:text-secondary"
+              locale === l.value ? "bg-gold text-primary shadow-[0_2px_0_0_rgba(0,0,0,0.12)]" : "text-tertiary hover:text-secondary"
             }`}
           >
             {l.label}
@@ -104,8 +120,8 @@ export default function SettingsPage() {
   const { t } = useI18n();
 
   // Preferences persist in localStorage and survive reloads.
-  // Dark mode applies via the .dark class on <html> (CSS vars auto-flip).
-  const [darkMode, setDarkMode] = useState(false);
+  // Dark mode was retired (product decision: fixed cream light theme) —
+  // a leftover `darkMode` key in saved lexi-settings is simply ignored.
   const [focusMode, setFocusMode] = useState(false);
   const [soundOn, setSoundOn] = useState(true);
   const [hapticOn, setHapticOn] = useState(true);
@@ -122,7 +138,12 @@ export default function SettingsPage() {
   const [nicknameError, setNicknameError] = useState("");
   const [pendingBindings, setPendingBindings] = useState(0);
 
-  const prefs = { darkMode, focusMode, soundOn, hapticOn, notifPush, notifStreak };
+  // 学段（升学机制）：显示当前 track；入班且班级声明学段时只读（班级 = 权威源）
+  const [userTrack, setUserTrack] = useState<string | null>(null);
+  const [classTrack, setClassTrack] = useState<string | null>(null);
+  const [trackModal, setTrackModal] = useState(false);
+
+  const prefs = { focusMode, soundOn, hapticOn, notifPush, notifStreak };
 
   useEffect(() => {
     setMounted(true);
@@ -131,22 +152,28 @@ export default function SettingsPage() {
         .then((d) => {
           setAccountPhone(d.user.phone ?? null);
           setAccountNickname(d.user.nickname ?? "");
+          setUserTrack(d.user.track ?? null);
           // Family red-dot (V4 S3): pending parent-binding requests count
           getParentLinks()
             .then((links) => setPendingBindings((links.links ?? []).filter((l) => l.status === "pending").length))
             .catch(() => {});
         })
         .catch(() => {});
+      // 已加入的班级里若有声明学段的，该学段锁定本行（机构场景班级为权威源）
+      getClasses()
+        .then((d) => {
+          const locked = (d.joined ?? []).find((c) => c.track);
+          if (locked?.track) setClassTrack(locked.track);
+        })
+        .catch(() => {});
     }
     try {
       const saved = JSON.parse(localStorage.getItem("lexi-settings") || "{}");
-      if (typeof saved.darkMode === "boolean") setDarkMode(saved.darkMode);
       if (typeof saved.focusMode === "boolean") setFocusMode(saved.focusMode);
       if (typeof saved.soundOn === "boolean") setSoundOn(saved.soundOn);
       if (typeof saved.hapticOn === "boolean") setHapticOn(saved.hapticOn);
       if (typeof saved.notifPush === "boolean") setNotifPush(saved.notifPush);
       if (typeof saved.notifStreak === "boolean") setNotifStreak(saved.notifStreak);
-      if (saved.darkMode) document.documentElement.classList.add("dark");
     } catch { /* fresh start */ }
   }, []);
 
@@ -155,12 +182,7 @@ export default function SettingsPage() {
     if (!mounted) return;
     localStorage.setItem("lexi-settings", JSON.stringify(prefs));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [darkMode, focusMode, soundOn, hapticOn, notifPush, notifStreak, mounted]);
-
-  const toggleDark = (v: boolean) => {
-    setDarkMode(v);
-    document.documentElement.classList.toggle("dark", v);
-  };
+  }, [focusMode, soundOn, hapticOn, notifPush, notifStreak, mounted]);
 
   // Nickname edit — client validation mirrors the server rule (1..16 chars)
   const saveNickname = async () => {
@@ -188,7 +210,7 @@ export default function SettingsPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-md px-3 pb-6 pt-[84px] sm:px-4">
+      <div className="page-shell">
         <h1 className="px-2 pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t("settings.title")}</h1>
 
         {(
@@ -242,12 +264,6 @@ export default function SettingsPage() {
 
             {/* Appearance */}
             <SettingGroup title={t("settings.appearance")}>
-              <ToggleRow
-                label={t("settings.darkMode")}
-                checked={mounted && darkMode}
-                onChange={toggleDark}
-                hint={t("settings.darkModeHint")}
-              />
               <ToggleRow
                 label={t("settings.focusMode")}
                 checked={focusMode}
@@ -321,6 +337,13 @@ export default function SettingsPage() {
 
             {/* Study preferences */}
             <SettingGroup title={t("settings.study")}>
+              <LinkRow
+                label={t("settings.track")}
+                value={classTrack
+                  ? `${trackLabel(t, classTrack) ?? classTrack} · ${t("settings.trackLocked")}`
+                  : trackLabel(t, userTrack) ?? trackLabel(t, getProfile()?.track) ?? "—"}
+                onClick={() => { if (!classTrack) setTrackModal(true); }}
+              />
               <LinkRow label={t("settings.dailyGoal")} value={t("settings.dailyGoalValue")} />
               <LinkRow label={t("settings.difficulty")} value={t("settings.difficultyValue")} />
             </SettingGroup>
@@ -338,6 +361,46 @@ export default function SettingsPage() {
             <p className="px-4 text-center text-[11px] text-tertiary">
               {t("settings.footer")}
             </p>
+          </div>
+        )}
+
+        {/* 学段切换：确认 → 服务端 PATCH + 本地档案同步 → 定级测试（完成后落悦读馆新轨） */}
+        {trackModal && (
+          <div className="game-overlay fixed inset-0 z-50 flex items-center justify-center p-6" onClick={() => setTrackModal(false)}>
+            <div className="game-modal w-full max-w-sm p-5" onClick={(e) => e.stopPropagation()}>
+              <h3 className="font-booster text-lg font-extrabold text-primary">{t("settings.track")}</h3>
+              <p className="mt-1 text-xs text-tertiary">{t("settings.trackNote")}</p>
+              <div className="mt-4 flex flex-col gap-2">
+                {TRACK_OPTIONS.map((opt) => {
+                  const current = (classTrack ?? userTrack ?? getProfile()?.track) === opt.id;
+                  return (
+                    <button
+                      key={opt.id}
+                      type="button"
+                      onClick={async () => {
+                        setTrackModal(false);
+                        if (current) return;
+                        // 本地档案立即生效（服务端由定级测试页的 updateProfile 权威写入）
+                        const p = getProfile();
+                        setProfile({
+                          track: opt.id,
+                          targetScore: p?.targetScore ?? 0,
+                          examDate: p?.examDate ?? "",
+                          estimatedScore: p?.estimatedScore,
+                        });
+                        router.push(`/onboarding?step=goal&track=${opt.id}&next=/reading`);
+                      }}
+                      className={`g-card flex items-center justify-between p-4 text-left ${current ? "!border-[var(--ink)] bg-brand-subtle" : ""}`}
+                    >
+                      <span className="font-booster text-base font-extrabold text-primary">
+                        {trackLabel(t, opt.id)}
+                      </span>
+                      {current && <span className="text-xs font-bold text-brand-text">✓</span>}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         )}
       </div>

@@ -1,0 +1,125 @@
+{
+  "id": "gk-r7-s03",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 3,
+  "title": "Seeds for a Distant Sky",
+  "titleCn": "播向远空的种子",
+  "coverEmoji": "🌱",
+  "paragraphs": [
+    {
+      "text": "Close your eyes for a moment and imagine the year 2075, when the cities we build may finally have learned to breathe. Not only will those cities grow their own food, but they may also tend the floating gardens that circle quietly above them. Were we to design such a world today, we would surely begin not with rockets but with a handful of ordinary soil.",
+      "translation": "闭上眼睛，想象 2075 年——那时我们建造的城市也许终于学会了呼吸。这些城市不仅会自己种植粮食，还可能照料那些在它们上空静静环绕的漂浮花园。倘若今天我们就要设计这样一个世界，我们想必不会从火箭开始，而是从一把普普通通的泥土开始。"
+    },
+    {
+      "text": "Some people argue that space exploration is a luxury we cannot afford while the Earth still struggles. That view, though understandable, misses something important: the technologies invented for distant missions often return home as tools for cleaner energy and smarter farming. Satellites already watch our forests, measure our oceans and warn us before a storm becomes a disaster.",
+      "translation": "有人认为，在地球仍在苦苦挣扎的时候，太空探索是一种我们负担不起的奢侈。这种看法虽可理解，却忽略了重要的一点：为遥远任务而发明的技术，常常会回到地球，成为更清洁的能源和更聪明的农业工具。卫星已经在注视着我们的森林、测量着我们的海洋，并在风暴酿成灾难之前向我们发出警告。"
+    },
+    {
+      "text": "Consider the closed-loop greenhouse now orbiting the Earth, in which every drop of water is recycled and every breath of air is counted. If a station can feed six people using almost nothing, then why should a city of six million not do the same? Whether we travel to Mars or stay at home, the question is identical: how do we live well without taking more than we return?",
+      "translation": "想一想那个如今正环绕地球运行的闭环温室吧：在那里，每一滴水都被循环利用，每一口空气都被精打细算。如果一个空间站几乎不消耗什么就能养活六个人，那么一座六百万人的城市为什么不能做同样的事？无论我们是飞向火星还是留在家中，问题都是一样的：我们怎样才能在索取不超过回馈的前提下，好好地生活？"
+    },
+    {
+      "text": "Some will say that such dreams cost too much, that the money would be better spent on hospitals and schools here. Yet the choice is not between the Earth and the stars, for a species that can do neither will soon be able to do nothing at all. What we need is not one heroic leap forward but thousands of small, patient steps taken together.",
+      "translation": "有人会说，这样的梦想代价太高，这些钱不如花在这里的医院和学校上。然而，这并非在地球与星辰之间做选择，因为一个两者都做不到的物种，很快就会什么都做不了。我们需要的不是一次英勇的飞跃，而是成千上万个耐心迈出的小小步伐。"
+    },
+    {
+      "text": "So when you look up tonight, do not see an empty sky or a distant, cold frontier. See instead a shared project that belongs to everyone who is willing to plant something and wait. The future will not arrive on its own; it must be built, patiently, by hands like yours.",
+      "translation": "所以今晚当你抬头仰望时，不要只看到一片空荡的天空或一处遥远寒冷的边疆。而要看到一个共同的事业，它属于每一个愿意种下些什么、并静静等待的人。未来不会自己到来；它必须由像你这样的双手，耐心地建造出来。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what should we begin with if we were to design a better world today?",
+      "audioText": "According to the text, what should we begin with if we were to design a better world today?",
+      "options": [
+        {
+          "emoji": "🌱",
+          "value": "soil",
+          "text": "A handful of soil"
+        },
+        {
+          "emoji": "🚀",
+          "value": "rocket",
+          "text": "A powerful rocket"
+        },
+        {
+          "emoji": "💰",
+          "value": "money",
+          "text": "A large sum of money"
+        }
+      ],
+      "answer": "soil"
+    },
+    {
+      "type": "word_builder",
+      "word": "greenhouse",
+      "audioText": "greenhouse"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "future",
+        "will",
+        "not",
+        "arrive",
+        "on",
+        "its",
+        "own"
+      ],
+      "audioText": "The future will not arrive on its own."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "space",
+        "exploration",
+        "is",
+        "a",
+        "luxury",
+        "we",
+        "cannot",
+        "afford"
+      ],
+      "audioText": "Space exploration is a luxury we cannot afford."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Not only ___ those cities grow their own food, but they may also tend the floating gardens that circle above them.",
+      "choices": [
+        "will",
+        "would",
+        "do"
+      ],
+      "answer": "will",
+      "audioText": "Not only will those cities grow their own food, but they may also tend the floating gardens that circle above them."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Were we to design such a world today, we ___ surely begin with a handful of ordinary soil.",
+      "choices": [
+        "would",
+        "will",
+        "should"
+      ],
+      "answer": "would",
+      "audioText": "Were we to design such a world today, we would surely begin with a handful of ordinary soil."
+    }
+  ],
+  "_unknownWords": [
+    "exploration",
+    "luxury",
+    "cannot",
+    "understandable",
+    "missions",
+    "loop",
+    "recycled",
+    "identical",
+    "species",
+    "heroic",
+    "leap",
+    "taken"
+  ]
+}

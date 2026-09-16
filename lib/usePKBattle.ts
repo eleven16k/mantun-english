@@ -22,6 +22,8 @@ export interface PKQuestion {
   prompt: string;
   choices: string[];
   correctIndex: number;
+  /** 拼读快答（听音辨词）：该字段 = 要播的单词；客户端自动 TTS + 🔊 重播 */
+  audioWord?: string;
 }
 
 export type PKPhase = "idle" | "lobby" | "countdown" | "playing" | "ended";
@@ -71,6 +73,11 @@ export function usePKBattle() {
     socket.on("pk:players", ({ players: ps, className: cn }) => {
       setPlayers(ps);
       if (cn) setClassName(cn);
+    });
+
+    // 加入者回执：拿到房间号（答题计分依赖它）
+    socket.on("pk:joined", ({ roomCode: rc }) => {
+      setRoomCode(rc);
     });
 
     socket.on("pk:started", ({ questions: qs, endsAt: ea }) => {

@@ -1,0 +1,125 @@
+{
+  "id": "zk-r1-s03",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 3,
+  "title": "Our Class Reading Club",
+  "titleCn": "我们班的阅读社",
+  "coverEmoji": "📚",
+  "paragraphs": [
+    {
+      "text": "My name is Li Hua, and I am a Grade Nine student. Our school is not big, but it is always full of life. Every morning, I usually get to class before seven thirty. I think that a good start makes the whole day easy.",
+      "translation": "我叫李华，是一名九年级学生。我们学校不大，但总是充满活力。每天早上，我通常七点半前就到教室。我觉得，一个好的开始能让一整天都轻松起来。"
+    },
+    {
+      "text": "Last Monday, our English teacher, Ms. Wang, gave us a surprise. She said that we would have a class reading club. We often read short stories in class, but this was different. Everyone in our class was excited about the news.",
+      "translation": "上周一，我们的英语老师王老师给了我们一个惊喜。她说我们要办一个班级阅读社。我们经常在课上读短篇故事，但这次不一样。班上每个人听到这个消息都很兴奋。"
+    },
+    {
+      "text": "The club meets every Wednesday after school. We sit in a circle and share our favorite books. Sometimes we act out a story in front of the class. I know that reading aloud helps me speak better English.",
+      "translation": "阅读社每周三放学后活动。我们围坐成一圈，分享自己最喜欢的书。有时我们会在全班面前把故事演出来。我知道，大声朗读能帮我把英语说得更好。"
+    },
+    {
+      "text": "Two weeks ago, we had a math test. I did badly and felt sad after school. My friend Zhang Ming told me that everyone fails sometimes. He said that we could study together in the library. I was happy to hear that.",
+      "translation": "两周前，我们进行了一次数学测验。我考得很差，放学后心里很难过。我的朋友张明告诉我，每个人都会有失败的时候。他说我们可以一起去图书馆学习。听到这话我很高兴。"
+    },
+    {
+      "text": "Now I usually stay after class to read with my friends. On Fridays, we sometimes play word games in the club. Ms. Wang always says that small steps lead to big changes. I think she is right.",
+      "translation": "现在，我通常放学后留下来和朋友们一起读书。每周五，我们有时会在社团里玩单词游戏。王老师总说，一小步一小步的积累会带来大的改变。我觉得她说得对。"
+    },
+    {
+      "text": "Last Friday, I read a story to the whole class. My hands were shaking, but I finished it. My classmates clapped for me, and I smiled for a long time. I know now that I am not afraid of speaking.",
+      "translation": "上周五，我给全班读了一个故事。我的手一直在抖，但我还是读完了。同学们为我鼓掌，我笑了很久。现在我知道，我不再害怕开口说话了。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "When does the class reading club meet?",
+      "audioText": "When does the class reading club meet?",
+      "options": [
+        {
+          "emoji": "📅",
+          "value": "wednesday",
+          "text": "Wednesday"
+        },
+        {
+          "emoji": "📆",
+          "value": "monday",
+          "text": "Monday"
+        },
+        {
+          "emoji": "🗓️",
+          "value": "friday",
+          "text": "Friday"
+        }
+      ],
+      "answer": "wednesday"
+    },
+    {
+      "type": "image_choice",
+      "question": "How did Li Hua feel after the math test?",
+      "audioText": "How did Li Hua feel after the math test?",
+      "options": [
+        {
+          "emoji": "😢",
+          "value": "sad",
+          "text": "Sad"
+        },
+        {
+          "emoji": "😄",
+          "value": "happy",
+          "text": "Happy"
+        },
+        {
+          "emoji": "😴",
+          "value": "tired",
+          "text": "Tired"
+        }
+      ],
+      "answer": "sad"
+    },
+    {
+      "type": "word_builder",
+      "word": "library",
+      "audioText": "library"
+    },
+    {
+      "type": "word_builder",
+      "word": "excited",
+      "audioText": "excited"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "often",
+        "read",
+        "short",
+        "stories",
+        "in",
+        "class."
+      ],
+      "audioText": "We often read short stories in class."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She said that we would have a class reading ___.",
+      "choices": [
+        "club",
+        "test",
+        "game"
+      ],
+      "answer": "club",
+      "audioText": "She said that we would have a class reading club."
+    }
+  ],
+  "_unknownWords": [
+    "li",
+    "hua",
+    "big",
+    "english",
+    "wang",
+    "zhang"
+  ]
+}

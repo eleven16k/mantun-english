@@ -1,0 +1,96 @@
+{
+  "track": "zhongkao",
+  "label": "初中中考",
+  "name": "Reading Quest · 中考",
+  "cnName": "悦读馆 · 中考",
+  "theme": "space",
+  "vocabTier": "中考 1600 词范围",
+  "quizPerStory": 6,
+  "passScore": 60,
+  "regions": [
+    {
+      "id": "zk-r1",
+      "name": "Campus Days",
+      "cnName": "校园生活",
+      "icon": "🎒",
+      "stories": 16,
+      "sentenceLen": [8, 11],
+      "paraCount": [5, 6],
+      "grammar": "一般现在/过去时；宾语从句入门（say/think/know + that）；频率副词",
+      "genre": "校园记叙：课堂、社团、师生、考试与成长（中考记叙文风格）",
+      "quizMix": { "image_choice": 0.25, "word_builder": 0.25, "sentence_order": 0.25, "fill_blank": 0.25 }
+    },
+    {
+      "id": "zk-r2",
+      "name": "Travel Notes",
+      "cnName": "旅行见闻",
+      "icon": "🧳",
+      "stories": 14,
+      "sentenceLen": [9, 12],
+      "paraCount": [5, 6],
+      "grammar": "过去时叙事 + 比较级/最高级 + 时间状语从句（when/while/before/after）",
+      "genre": "游记、城市与名胜介绍（中考阅读常用地域文化题材）",
+      "quizMix": { "image_choice": 0.2, "word_builder": 0.25, "sentence_order": 0.25, "fill_blank": 0.3 }
+    },
+    {
+      "id": "zk-r3",
+      "name": "Tech Trends",
+      "cnName": "科技前沿",
+      "icon": "🤖",
+      "stories": 14,
+      "sentenceLen": [10, 13],
+      "paraCount": [5, 6],
+      "grammar": "被动语态（一般现在/过去/情态被动）+ 情态动词推测",
+      "genre": "科普说明文：AI、机器人、APP、交通工具（中考说明文风格）",
+      "quizMix": { "image_choice": 0.15, "word_builder": 0.25, "sentence_order": 0.25, "fill_blank": 0.35 }
+    },
+    {
+      "id": "zk-r4",
+      "name": "Green Action",
+      "cnName": "环保行动",
+      "icon": "♻️",
+      "stories": 13,
+      "sentenceLen": [10, 13],
+      "paraCount": [5, 6],
+      "grammar": "if 条件句（真实条件）+ 情态动词建议句 + 祈使句",
+      "genre": "环保、垃圾分类、动物保护、健康生活倡议",
+      "quizMix": { "image_choice": 0.15, "word_builder": 0.2, "sentence_order": 0.3, "fill_blank": 0.35 }
+    },
+    {
+      "id": "zk-r5",
+      "name": "People Stories",
+      "cnName": "人物故事",
+      "icon": "🧑‍🚀",
+      "stories": 12,
+      "sentenceLen": [11, 14],
+      "paraCount": [5, 6],
+      "grammar": "定语从句入门（who/which/that）+ 过去完成时接触",
+      "genre": "励志人物、科学家、运动员、普通人的善举（中考任务型阅读风格）",
+      "quizMix": { "image_choice": 0.1, "word_builder": 0.2, "sentence_order": 0.3, "fill_blank": 0.4 }
+    },
+    {
+      "id": "zk-r6",
+      "name": "Culture Tour",
+      "cnName": "文化之旅",
+      "icon": "🏮",
+      "stories": 11,
+      "sentenceLen": [12, 15],
+      "paraCount": [5, 6],
+      "grammar": "宾语从句 + 定语从句综合；so...that / such...that 结果状语",
+      "genre": "中外节日、传统技艺、饮食文化、跨文化交流",
+      "quizMix": { "image_choice": 0.1, "word_builder": 0.2, "sentence_order": 0.3, "fill_blank": 0.4 }
+    },
+    {
+      "id": "zk-r7",
+      "name": "Social Lens",
+      "cnName": "社会观察",
+      "icon": "🔭",
+      "stories": 10,
+      "sentenceLen": [12, 15],
+      "paraCount": [5, 6],
+      "grammar": "综合从句 + 虚拟语气入门（If I were... / I wish...）+ 不定式作主语",
+      "genre": "社会现象议论短文：网络、志愿、规则意识（中考议论文风格）",
+      "quizMix": { "image_choice": 0.1, "word_builder": 0.15, "sentence_order": 0.3, "fill_blank": 0.45 }
+    }
+  ]
+}

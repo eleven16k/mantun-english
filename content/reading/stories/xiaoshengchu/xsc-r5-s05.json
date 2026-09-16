@@ -1,0 +1,124 @@
+{
+  "id": "xsc-r5-s05",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 5,
+  "title": "Little Pip's Big Day",
+  "titleCn": "小皮普的大日子",
+  "coverEmoji": "🦕",
+  "paragraphs": [
+    {
+      "text": "Last week, a small dinosaur came to Dino Valley. His name was Pip. He was the smallest dinosaur there. Pip had no friends because he was new.",
+      "translation": "上周，一只小恐龙来到了恐龙谷。他叫皮普。他是那里最小的恐龙。皮普没有朋友，因为他是新来的。"
+    },
+    {
+      "text": "The big dinosaurs played near the tallest tree. They were too busy to see little Pip. Pip felt sad because nobody played with him.",
+      "translation": "大恐龙们在最高的那棵树旁玩耍。他们太忙了，没有看见小皮普。皮普很难过，因为没有人跟他玩。"
+    },
+    {
+      "text": "Then a baby dinosaur got lost in the valley. He cried and looked for his mother. Pip ran to help him at once.",
+      "translation": "这时，一只恐龙宝宝在谷里迷了路。他哭着找妈妈。皮普立刻跑去帮忙。"
+    },
+    {
+      "text": "Pip took the baby to the biggest hill. From there, they saw the baby's home. His mother ran to him and said thank you.",
+      "translation": "皮普把宝宝带到了最大的那座小山上。从那里，他们看见了宝宝的家。他的妈妈跑过来，说了声谢谢。"
+    },
+    {
+      "text": "\"You are the kindest dinosaur in Dino Valley,\" she said. All the big dinosaurs came to Pip. They smiled and said, \"Welcome, little friend!\"",
+      "translation": "“你是恐龙谷里最善良的恐龙。”她说。所有的大恐龙都来到皮普身边。他们笑着说：“欢迎你，小朋友！”"
+    },
+    {
+      "text": "Pip was happy because he had many friends now. He was the smallest, but also the kindest. Dino Valley was the best home for him.",
+      "translation": "皮普很开心，因为现在他有很多朋友了。他是最小的，但也是最善良的。恐龙谷是他最好的家。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Who was the smallest dinosaur in Dino Valley?",
+      "audioText": "Who was the smallest dinosaur in Dino Valley?",
+      "options": [
+        {
+          "emoji": "🦕",
+          "value": "pip",
+          "text": "Pip"
+        },
+        {
+          "emoji": "🦖",
+          "value": "big",
+          "text": "The big dinosaurs"
+        },
+        {
+          "emoji": "🐣",
+          "value": "baby",
+          "text": "The baby dinosaur"
+        }
+      ],
+      "answer": "pip"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where did Pip take the baby dinosaur?",
+      "audioText": "Where did Pip take the baby dinosaur?",
+      "options": [
+        {
+          "emoji": "⛰️",
+          "value": "hill",
+          "text": "The biggest hill"
+        },
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "The tallest tree"
+        },
+        {
+          "emoji": "🏠",
+          "value": "home",
+          "text": "The baby's home"
+        }
+      ],
+      "answer": "hill"
+    },
+    {
+      "type": "word_builder",
+      "word": "smallest",
+      "audioText": "smallest"
+    },
+    {
+      "type": "word_builder",
+      "word": "friend",
+      "audioText": "friend"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Pip",
+        "felt",
+        "sad",
+        "because",
+        "nobody",
+        "played",
+        "with",
+        "him."
+      ],
+      "audioText": "Pip felt sad because nobody played with him."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "You are the ___ dinosaur in Dino Valley.",
+      "choices": [
+        "kindest",
+        "tallest",
+        "biggest"
+      ],
+      "answer": "kindest",
+      "audioText": "You are the kindest dinosaur in Dino Valley."
+    }
+  ],
+  "_unknownWords": [
+    "pip",
+    "busy",
+    "biggest",
+    "baby's"
+  ]
+}

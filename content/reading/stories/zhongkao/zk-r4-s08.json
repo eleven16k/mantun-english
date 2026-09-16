@@ -1,0 +1,126 @@
+{
+  "id": "zk-r4-s08",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 8,
+  "title": "Pack a Green Lunch",
+  "titleCn": "带一份绿色午餐",
+  "coverEmoji": "🍱",
+  "paragraphs": [
+    {
+      "text": "At twelve o'clock, the school dining hall becomes very busy. Hundreds of students open their lunch boxes at the same time. But after lunch, look at the bins near the door. They are full of plastic bags, paper cups and half-eaten food.",
+      "translation": "十二点一到，学校食堂就变得非常热闹。成百上千的学生同时打开饭盒。可午饭之后，看看门口那几个垃圾桶吧——里面塞满了塑料袋、纸杯和只吃了一半的食物。"
+    },
+    {
+      "text": "If you bring your own lunch box, you can cut down a lot of waste. A strong box can be washed and used again and again. Choose one made of glass or metal if you can. Then you will never need a paper box from the shop.",
+      "translation": "如果你自己带饭盒，就能少产生很多垃圾。结实的饭盒可以洗一洗反复使用。如果可以，就选玻璃或金属做的饭盒。这样你就再也不需要店里的一次性纸盒了。"
+    },
+    {
+      "text": "Food waste is a big problem too. If you take only what you can eat, you will not throw food away. Put a small amount of rice on your plate first. You can always go back for more if you are still hungry. Never leave food in your bowl. It is a waste of water and land.",
+      "translation": "食物浪费也是个大问题。如果你只盛自己吃得完的量，就不会把食物扔掉。先往盘子里盛一点点米饭。要是还饿，你随时可以再去添。千万别剩饭——那是在浪费水和土地。"
+    },
+    {
+      "text": "Drinks are easy to fix. Bring a water bottle from home and fill it at school. If you buy one bottle a day, you use two hundred a year. So do not buy sweet drinks in plastic bottles. Water is better for you and for the planet.",
+      "translation": "喝的问题很好解决。从家里带个水壶，在学校接满水。如果每天买一瓶，一年就要用掉两百瓶。所以别买塑料瓶装的甜饮料。水对你的身体和地球都更好。"
+    },
+    {
+      "text": "A green lunch is also good for your body. Put some vegetables and fruit in your box every day. If you eat slowly, you will feel full with less food. Try to finish your meal with a friend and talk about your day.",
+      "translation": "绿色午餐对你的身体也有好处。每天在饭盒里放些蔬菜和水果。如果吃得慢一些，你会用更少的食物就感到饱。试着和朋友一起吃完午饭，聊聊你们的一天。"
+    },
+    {
+      "text": "Every lunch time gives you a chance to help the Earth. If we all bring our own boxes and bottles, our school will make much less waste. So start tomorrow: pack a green lunch, and ask your friends to do the same.",
+      "translation": "每一顿午餐都是你帮助地球的机会。如果大家都带上自己的饭盒和水壶，学校产生的垃圾就会少得多。那就从明天开始吧：装一份绿色午餐，再叫上朋友们一起做。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is the best way to make less waste at lunch time?",
+      "audioText": "What is the best way to make less waste at lunch time?",
+      "options": [
+        {
+          "emoji": "🍱",
+          "value": "box",
+          "text": "Bring your own lunch box"
+        },
+        {
+          "emoji": "🥡",
+          "value": "paper",
+          "text": "Buy a paper box every day"
+        },
+        {
+          "emoji": "🛍️",
+          "value": "bag",
+          "text": "Use a new plastic bag"
+        }
+      ],
+      "answer": "box"
+    },
+    {
+      "type": "word_builder",
+      "word": "waste",
+      "audioText": "waste"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Food",
+        "waste",
+        "is",
+        "a",
+        "big",
+        "problem",
+        "too."
+      ],
+      "audioText": "Food waste is a big problem too."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Drinks",
+        "are",
+        "easy",
+        "to",
+        "fix."
+      ],
+      "audioText": "Drinks are easy to fix."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you take only what you can ___, you will not throw food away.",
+      "choices": [
+        "eat",
+        "buy",
+        "cook"
+      ],
+      "answer": "eat",
+      "audioText": "If you take only what you can eat, you will not throw food away."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Bring a water ___ from home and fill it at school.",
+      "choices": [
+        "bottle",
+        "box",
+        "bag"
+      ],
+      "answer": "bottle",
+      "audioText": "Bring a water bottle from home and fill it at school."
+    }
+  ],
+  "_unknownWords": [
+    "o'clock",
+    "dining",
+    "busy",
+    "bins",
+    "eaten",
+    "choose",
+    "big",
+    "amount",
+    "rice",
+    "less",
+    "talk",
+    "pack",
+    "ask"
+  ]
+}

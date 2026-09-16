@@ -1,0 +1,129 @@
+{
+  "id": "xsc-r4-s08",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 8,
+  "title": "The Dolphin and the Plastic Bag",
+  "titleCn": "海豚与塑料袋",
+  "coverEmoji": "🐬",
+  "paragraphs": [
+    {
+      "text": "Last Sunday, my family went to Ocean Park. The sea was bluer than the sky. My little brother Tom was more excited than me. We wanted to see the dolphins first.",
+      "translation": "上周日，我们一家人去了海洋乐园。海水比天空还要蓝。我弟弟汤姆比我还要兴奋。我们最想先去看海豚。"
+    },
+    {
+      "text": "We walked to the big dolphin pool. A dolphin jumped higher than the wall. Her name was Lucky, a park worker said. Lucky swam closer and looked at us. Her eyes were brighter than glass.",
+      "translation": "我们走到那个大大的海豚池边。一只海豚跳得比围墙还高。一位工作人员说，她的名字叫乐奇。乐奇游得更近了，看着我们。她的眼睛比玻璃还要亮。"
+    },
+    {
+      "text": "Then I saw a bag in the water. It moved slowly near Lucky's tail. The water there looked dirtier than before. Lucky's home was not clean or safe. My heart felt heavy and cold.",
+      "translation": "后来，我在水里看到一个袋子。它慢慢地漂在乐奇的尾巴旁边。那里的水看起来比以前更脏了。乐奇的家不干净，也不安全。我的心里又沉又凉。"
+    },
+    {
+      "text": "Dad and I told a park worker. She thanked us with a big smile. Some workers came and cleaned the pool. Lucky jumped higher and looked happier. She splashed water on my shoes!",
+      "translation": "我和爸爸把这件事告诉了一位工作人员。她笑着向我们道谢。几个工人过来把池子清理干净了。乐奇跳得更高了，看起来开心多了。她还把水花溅到了我的鞋子上！"
+    },
+    {
+      "text": "On the way home, I thought about Lucky. The ocean is bigger than any pool. Every plastic bag can hurt a sea animal. So I will use fewer bags now. Small hands can make the sea cleaner.",
+      "translation": "回家的路上，我一直想着乐奇。大海比任何池子都要大。每一个塑料袋都可能伤害海洋动物。所以从现在开始，我要少用袋子。小小的手也能让大海更干净。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where did the family go last Sunday?",
+      "audioText": "Where did the family go last Sunday?",
+      "options": [
+        {
+          "emoji": "🐬",
+          "value": "ocean_park",
+          "text": "Ocean Park"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "School"
+        },
+        {
+          "emoji": "🛒",
+          "value": "shop",
+          "text": "A shop"
+        }
+      ],
+      "answer": "ocean_park"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the writer see in the water?",
+      "audioText": "What did the writer see in the water?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "bag",
+          "text": "A bag"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A big fish"
+        },
+        {
+          "emoji": "👟",
+          "value": "shoe",
+          "text": "An old shoe"
+        }
+      ],
+      "answer": "bag"
+    },
+    {
+      "type": "word_builder",
+      "word": "dolphin",
+      "audioText": "dolphin"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Lucky",
+        "swam",
+        "closer",
+        "and",
+        "looked",
+        "at",
+        "us."
+      ],
+      "audioText": "Lucky swam closer and looked at us."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The sea was ___ than the sky.",
+      "choices": [
+        "bluer",
+        "blue",
+        "bluest"
+      ],
+      "answer": "bluer",
+      "audioText": "The sea was bluer than the sky."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Every plastic bag can ___ a sea animal.",
+      "choices": [
+        "hurt",
+        "help",
+        "hold"
+      ],
+      "answer": "hurt",
+      "audioText": "Every plastic bag can hurt a sea animal."
+    }
+  ],
+  "_unknownWords": [
+    "bluer",
+    "closer",
+    "lucky's",
+    "dirtier",
+    "happier",
+    "splashed",
+    "bigger",
+    "hurt"
+  ]
+}

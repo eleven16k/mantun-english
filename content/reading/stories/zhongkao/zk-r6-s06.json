@@ -1,0 +1,126 @@
+{
+  "id": "zk-r6-s06",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 6,
+  "title": "A Lesson in Paper Cutting",
+  "titleCn": "一堂剪纸课",
+  "coverEmoji": "✂️",
+  "paragraphs": [
+    {
+      "text": "Paper cutting is a traditional Chinese art that is more than 1,500 years old. People use red paper and a pair of scissors to make beautiful pictures. I once thought it was so easy that anyone could do it in a minute.",
+      "translation": "剪纸是一门古老的中国传统艺术，已经有一千五百多年的历史。人们用红纸和一把剪刀，剪出美丽的图案。我曾以为它太简单了，谁都能一分钟就学会。"
+    },
+    {
+      "text": "Last spring, an American exchange student named Emma came to our town. She told me that she wanted to learn something truly Chinese. So I took her to Grandma Li, who has cut paper for over fifty years.",
+      "translation": "去年春天，一位名叫艾玛的美国交换生来到我们镇上。她告诉我，她想学一点真正有中国味道的东西。于是我把她带到了李奶奶家——李奶奶剪纸已经剪了五十多年。"
+    },
+    {
+      "text": "Grandma Li showed us a box which was full of paper flowers, birds and fish. \"Each picture carries a wish,\" she said. \"Fish mean wealth, and flowers mean a happy life.\" Emma said that she couldn't believe how lively a piece of paper could be.",
+      "translation": "李奶奶给我们看了一个盒子，里面装满了纸剪的花、鸟和鱼。“每一幅图案都带着一份心愿，”她说。“鱼代表富足，花代表幸福的生活。”艾玛说，她简直不敢相信一张纸能这样活灵活现。"
+    },
+    {
+      "text": "Emma picked up the scissors and tried to cut a fish. Her first fish was such a strange shape that we all laughed. But Emma did not give up. Grandma Li held her hand and smiled. \"Patience matters more than speed,\" she said.",
+      "translation": "艾玛拿起剪刀，试着剪一条鱼。她的第一条鱼形状太奇怪了，我们都笑了起来。但艾玛没有放弃。李奶奶握住她的手，笑了。“耐心比速度更重要，”她说。"
+    },
+    {
+      "text": "After two hours, Emma finally cut out a real fish. It was not perfect, but Grandma Li said that it was the best one that day. Emma smiled and put it into her pocket carefully.",
+      "translation": "两个小时后，艾玛终于剪出了一条真正的鱼。它并不完美，但李奶奶说，这是那天她见过最好的一条。艾玛笑了，小心地把它放进了口袋。"
+    },
+    {
+      "text": "Before she left, Emma said that she would hang it in her room in New York. Now I understand that culture travels quietly, like a small red fish.",
+      "translation": "临走前，艾玛说她会把它挂在自己纽约的房间里。现在我明白了：文化会静静地流动，就像一条小小的红鱼。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Emma finally cut out of paper?",
+      "audioText": "What did Emma finally cut out of paper?",
+      "options": [
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        },
+        {
+          "emoji": "🌸",
+          "value": "flower",
+          "text": "Flower"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "Bird"
+        }
+      ],
+      "answer": "fish"
+    },
+    {
+      "type": "word_builder",
+      "word": "scissors",
+      "audioText": "scissors"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Her first fish was ___ a strange shape that we all laughed.",
+      "choices": [
+        "such",
+        "so",
+        "very"
+      ],
+      "answer": "such",
+      "audioText": "Her first fish was such a strange shape that we all laughed."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "So I took her to Grandma Li, ___ has cut paper for over fifty years.",
+      "choices": [
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer": "who",
+      "audioText": "So I took her to Grandma Li, who has cut paper for over fifty years."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Grandma",
+        "Li",
+        "held",
+        "her",
+        "hand",
+        "and",
+        "smiled"
+      ],
+      "audioText": "Grandma Li held her hand and smiled."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "But",
+        "Emma",
+        "did",
+        "not",
+        "give",
+        "up"
+      ],
+      "audioText": "But Emma did not give up."
+    }
+  ],
+  "_unknownWords": [
+    "cutting",
+    "traditional",
+    "chinese",
+    "scissors",
+    "american",
+    "exchange",
+    "truly",
+    "li",
+    "couldn't",
+    "patience",
+    "room",
+    "york"
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "xsc-r3-s12",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 12,
+  "title": "Game Day in Candy Town",
+  "titleCn": "糖果镇的游戏日",
+  "coverEmoji": "🏆",
+  "paragraphs": [
+    {
+      "text": "Last Sunday was a great day in town. There was a game day in the park.",
+      "translation": "上个星期天，镇上度过了很棒的一天。公园里举办了一场游戏日活动。"
+    },
+    {
+      "text": "In the morning, we went to the park. We saw bright flags and ten small tents.",
+      "translation": "早上，我们去了公园。我们看到鲜艳的旗子和十顶小帐篷。"
+    },
+    {
+      "text": "First, we played a game with a rope. Two teams pulled the rope hard.",
+      "translation": "首先，我们玩了一个拉绳子的游戏。两队使劲地拉绳子。"
+    },
+    {
+      "text": "At noon, we ate sweet food together. We had candy apples and warm milk tea.",
+      "translation": "中午，我们一起吃了甜甜的食物。我们吃了糖苹果，还喝了热奶茶。"
+    },
+    {
+      "text": "In the afternoon, we looked for candy eggs. I found five eggs under a red flag.",
+      "translation": "下午，我们去找糖果蛋。我在一面红旗下面找到了五个蛋。"
+    },
+    {
+      "text": "Then our teacher gave us a big cup. We were tired but happy.",
+      "translation": "然后老师给了我们一个大奖杯。我们虽然很累，但特别开心。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did we see in the park?",
+      "audioText": "What did we see in the park?",
+      "options": [
+        {
+          "emoji": "🚩",
+          "value": "flags",
+          "text": "Flags"
+        },
+        {
+          "emoji": "🚗",
+          "value": "cars",
+          "text": "Cars"
+        },
+        {
+          "emoji": "🐘",
+          "value": "elephants",
+          "text": "Elephants"
+        }
+      ],
+      "answer": "flags"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did we drink at noon?",
+      "audioText": "What did we drink at noon?",
+      "options": [
+        {
+          "emoji": "🧋",
+          "value": "milk tea",
+          "text": "Milk tea"
+        },
+        {
+          "emoji": "🥤",
+          "value": "cola",
+          "text": "Cola"
+        },
+        {
+          "emoji": "☕",
+          "value": "coffee",
+          "text": "Coffee"
+        }
+      ],
+      "answer": "milk tea"
+    },
+    {
+      "type": "word_builder",
+      "word": "morning",
+      "audioText": "morning"
+    },
+    {
+      "type": "word_builder",
+      "word": "tents",
+      "audioText": "tents"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Two",
+        "teams",
+        "pulled",
+        "the",
+        "rope",
+        "hard."
+      ],
+      "audioText": "Two teams pulled the rope hard."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "We ___ tired but happy.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": "were",
+      "audioText": "We were tired but happy."
+    }
+  ],
+  "_unknownWords": [
+    "went",
+    "saw",
+    "ate",
+    "found",
+    "gave"
+  ]
+}

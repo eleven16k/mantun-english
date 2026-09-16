@@ -1,0 +1,128 @@
+{
+  "id": "xsc-r1-s01",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 1,
+  "title": "Red Apples and Green Apples",
+  "titleCn": "红苹果和绿苹果",
+  "coverEmoji": "🍎",
+  "paragraphs": [
+    {
+      "text": "Welcome to our apple farm. It is big and green. There are many apple trees here.",
+      "translation": "欢迎来到我们的苹果园。这里又大又绿，有很多苹果树。"
+    },
+    {
+      "text": "Look at the apple trees. Some apples are red. Some apples are green.",
+      "translation": "看那些苹果树呀。有的苹果是红色的，有的苹果是绿色的。"
+    },
+    {
+      "text": "My dad has a big basket. He can pick the red apples. My mom can pick, too.",
+      "translation": "我爸爸有一个大篮子。他会摘红苹果，我妈妈也会摘。"
+    },
+    {
+      "text": "My little sister likes the green apples. She says they are sweet. Our dog Lucky runs in the grass.",
+      "translation": "我妹妹喜欢绿苹果。她说绿苹果很甜。我们的小狗 Lucky 在草地上跑来跑去。"
+    },
+    {
+      "text": "I put apples in my bag. My bag is very full now.",
+      "translation": "我把苹果放进我的包里。现在我的包满满的。"
+    },
+    {
+      "text": "I love my family. We are happy in the sun.",
+      "translation": "我爱我的家人。我们在阳光下开开心心。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which apples does Dad pick?",
+      "audioText": "Which apples does Dad pick?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "red",
+          "text": "Red apples"
+        },
+        {
+          "emoji": "🍏",
+          "value": "green",
+          "text": "Green apples"
+        },
+        {
+          "emoji": "🍊",
+          "value": "orange",
+          "text": "Orange apples"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "Who runs in the grass?",
+      "audioText": "Who runs in the grass?",
+      "options": [
+        {
+          "emoji": "🐶",
+          "value": "dog",
+          "text": "The dog"
+        },
+        {
+          "emoji": "🐱",
+          "value": "cat",
+          "text": "The cat"
+        },
+        {
+          "emoji": "🐰",
+          "value": "rabbit",
+          "text": "The rabbit"
+        }
+      ],
+      "answer": "dog"
+    },
+    {
+      "type": "image_choice",
+      "question": "Who likes the green apples?",
+      "audioText": "Who likes the green apples?",
+      "options": [
+        {
+          "emoji": "👧",
+          "value": "sister",
+          "text": "My little sister"
+        },
+        {
+          "emoji": "👨",
+          "value": "dad",
+          "text": "My dad"
+        },
+        {
+          "emoji": "👩",
+          "value": "mom",
+          "text": "My mom"
+        }
+      ],
+      "answer": "sister"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "word_builder",
+      "word": "family",
+      "audioText": "family"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "There ___ many apple trees here.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "are",
+      "audioText": "There are many apple trees here."
+    }
+  ],
+  "_unknownWords": []
+}

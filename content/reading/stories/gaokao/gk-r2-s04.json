@@ -1,0 +1,124 @@
+{
+  "id": "gk-r2-s04",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 4,
+  "title": "The Quiet Decisions Behind Your Screen",
+  "titleCn": "屏幕背后的无声决定",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "Every time you open a video app, a quiet decision has already been made for you. The clips on your screen were chosen by a system that was trained on millions of earlier clicks. Nobody typed those rules by hand. The patterns were learned, stored and then used again the next morning.",
+      "translation": "每当你打开一个视频应用，一个无声的决定早已替你做好了。你屏幕上的那些短片，是由一个系统挑选出来的，而这个系统是用数百万次早先的点击训练出来的。没有人用手写下那些规则。这些模式被学习、被储存，然后在第二天早上再次被使用。"
+    },
+    {
+      "text": "This kind of automation is now being introduced into schools, hospitals and banks, where the stakes are much higher. A model may decide whether a student needs extra help or whether a loan should be refused. What worries researchers is not the technology itself but the human choices hidden inside it.",
+      "translation": "这类自动化如今正被引入学校、医院和银行，而在这些地方，风险要高得多。一个模型可能决定一名学生是否需要额外帮助，也可能决定一笔贷款是否应被拒绝。让研究者担心的并不是技术本身，而是藏在其中的人的选择。"
+    },
+    {
+      "text": "It is easy to assume that numbers are fair, yet data can carry old mistakes. If a hiring system has been fed years of unequal decisions, it may quietly repeat them. That is why testing teams are now asked to check not only how fast a model works but also whom it fails to serve.",
+      "translation": "人们很容易以为数字是公平的，但数据可能带着旧的错误。如果一个招聘系统被喂进了多年不平等的决定，它可能会悄悄地把这些决定重复一遍。这就是为什么测试团队现在被要求检查的不只是一个模型运行得多快，还包括它没能服务到谁。"
+    },
+    {
+      "text": "Privacy belongs in the same discussion, because personal data is the fuel that these systems run on. Much of that data was collected without any clear conversation with the people involved. It should be explained, in plain language, what is being kept, why it is needed and how long it will stay. When users understand the deal, they can give real permission instead of a careless click.",
+      "translation": "隐私属于同一场讨论，因为个人数据正是这些系统赖以运转的燃料。其中大量数据是在没有与当事人进行任何清楚沟通的情况下被收集的。应该用平实的语言说明：哪些信息被保存下来、为什么需要它、它会保留多久。当用户理解了这笔交易，他们给出的才是真正的许可，而不是一次随手点击。"
+    },
+    {
+      "text": "None of this means we should turn our backs on useful tools. It simply means that the questions must be asked early, while the code is still being written. Machines will keep making choices for us. What matters is whether we keep choosing the rules.",
+      "translation": "这一切并不意味着我们应该背弃有用的工具。它只是意味着，这些问题必须在代码仍在被编写的时候就早早被提出。机器会继续替我们做选择。真正重要的是，我们是否继续在选择规则。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what was the system that chooses your video clips trained on?",
+      "audioText": "According to the text, what was the system that chooses your video clips trained on?",
+      "options": [
+        {
+          "emoji": "👆",
+          "value": "clicks",
+          "text": "Millions of earlier clicks"
+        },
+        {
+          "emoji": "📚",
+          "value": "books",
+          "text": "Printed school books"
+        },
+        {
+          "emoji": "🌦️",
+          "value": "weather",
+          "text": "Daily weather records"
+        }
+      ],
+      "answer": "clicks"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It should be ___ in plain language what is being kept.",
+      "choices": [
+        "explained",
+        "explaining",
+        "explain"
+      ],
+      "answer": "explained",
+      "audioText": "It should be explained in plain language what is being kept."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Nobody",
+        "typed",
+        "those",
+        "rules",
+        "by",
+        "hand."
+      ],
+      "audioText": "Nobody typed those rules by hand."
+    },
+    {
+      "type": "word_builder",
+      "word": "privacy",
+      "audioText": "privacy"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "What matters is ___ we keep choosing the rules.",
+      "choices": [
+        "whether",
+        "that",
+        "which"
+      ],
+      "answer": "whether",
+      "audioText": "What matters is whether we keep choosing the rules."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Machines",
+        "will",
+        "keep",
+        "making",
+        "choices",
+        "for",
+        "us."
+      ],
+      "audioText": "Machines will keep making choices for us."
+    }
+  ],
+  "_unknownWords": [
+    "app",
+    "clips",
+    "chosen",
+    "earlier",
+    "automation",
+    "stakes",
+    "loan",
+    "researchers",
+    "hidden",
+    "unequal",
+    "privacy",
+    "involved",
+    "simply",
+    "written"
+  ]
+}

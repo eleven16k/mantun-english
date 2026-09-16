@@ -1,0 +1,126 @@
+{
+  "id": "gk-r3-s01",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 1,
+  "title": "The Man Who Opened the Silk Road",
+  "titleCn": "开辟丝绸之路的人",
+  "coverEmoji": "🧭",
+  "paragraphs": [
+    {
+      "text": "More than two thousand years ago, a young official named Zhang Qian received a task that would change the world. It was Emperor Wu of the Han Dynasty who chose him to travel west and look for powerful allies. If Zhang Qian had refused this dangerous mission, the Silk Road might never have come into being.",
+      "translation": "两千多年前，一位名叫张骞的年轻官员接到了一项将改变世界的任务。正是汉武帝派他西行，去寻找强大的盟友。如果张骞当初拒绝了这项危险的使命，丝绸之路也许永远不会出现。"
+    },
+    {
+      "text": "Not only did the young man cross burning deserts, but he was also caught by the Xiongnu and held for about ten years. He never forgot his task. Even in those hard years, he kept in mind the purpose of his journey and waited patiently for a chance to escape. When the chance finally came, he escaped and continued westward, reaching lands that no Chinese official had ever seen.",
+      "translation": "这位年轻人不仅要穿越灼热的沙漠，还被匈奴人抓住，扣留了大约十年。他从未忘记自己的任务。即使在那些艰难的岁月里，他也始终记着此行的目的，耐心等待逃走的机会。当机会终于来临时，他逃了出来，继续向西，抵达了从来没有任何中国官员见过的土地。"
+    },
+    {
+      "text": "No sooner had he returned home than he reported everything he had learned to the emperor. His description of the western regions, including their rivers, cities and markets, was full of valuable details. It was this report that changed everything. The Han court finally understood how wide and rich the world beyond the mountains was.",
+      "translation": "他一回到家乡，就马上把自己了解到的一切报告给皇帝。他对西域——那里的河流、城市和集市——的描述充满了宝贵的细节。正是这份报告改变了一切。汉朝终于明白，山那边的世界有多么辽阔、多么富饶。"
+    },
+    {
+      "text": "Though Zhang Qian did not live to see it, the road he opened soon carried silk, spices and ideas between East and West. If he had not made that first long journey, goods and knowledge would have moved far more slowly. Today we call it the Silk Road. We still remember him today as a pioneer of cultural exchange.",
+      "translation": "虽然张骞没能活着看到这一切，但他开辟的这条路很快就让丝绸、香料和思想在东西方之间流动起来。如果他没有完成那第一次漫长的旅行，货物和知识的传播会缓慢得多。今天我们称它为丝绸之路。我们至今仍记得他，把他看作文化交流的先行者。"
+    },
+    {
+      "text": "History books often give us dates and names, but the stories behind them are what truly matter. Zhang Qian's story shows us that one determined person can connect whole worlds. If we look carefully at the roads we travel today, we may find that his footsteps are still there.",
+      "translation": "历史书常常只给我们日期和名字，但真正重要的是这些名字背后的故事。张骞的故事告诉我们，一个坚定的人可以连接起整个世界。如果我们仔细看看今天所走的道路，也许会发现他的足迹依然在那里。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what did the road opened by Zhang Qian carry between East and West?",
+      "audioText": "According to the text, what did the road opened by Zhang Qian carry between East and West?",
+      "options": [
+        {
+          "emoji": "🧵",
+          "value": "silk",
+          "text": "Silk, spices and ideas"
+        },
+        {
+          "emoji": "⚔️",
+          "value": "weapons",
+          "text": "Weapons and soldiers"
+        },
+        {
+          "emoji": "💰",
+          "value": "coins",
+          "text": "Only gold coins"
+        }
+      ],
+      "answer": "silk"
+    },
+    {
+      "type": "word_builder",
+      "word": "pioneer",
+      "audioText": "pioneer"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "He",
+        "never",
+        "forgot",
+        "his",
+        "task."
+      ],
+      "audioText": "He never forgot his task."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "this",
+        "report",
+        "that",
+        "changed",
+        "everything."
+      ],
+      "audioText": "It was this report that changed everything."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If Zhang Qian ___ refused this dangerous mission, the Silk Road might never have come into being.",
+      "choices": [
+        "had",
+        "has",
+        "have"
+      ],
+      "answer": "had",
+      "audioText": "If Zhang Qian had refused this dangerous mission, the Silk Road might never have come into being."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Not only ___ the young man cross burning deserts, but he was also caught by the Xiongnu.",
+      "choices": [
+        "did",
+        "does",
+        "was"
+      ],
+      "answer": "did",
+      "audioText": "Not only did the young man cross burning deserts, but he was also caught by the Xiongnu."
+    }
+  ],
+  "_unknownWords": [
+    "zhang",
+    "qian",
+    "wu",
+    "han",
+    "powerful",
+    "allies",
+    "mission",
+    "xiongnu",
+    "westward",
+    "seen",
+    "regions",
+    "details",
+    "spices",
+    "cultural",
+    "truly",
+    "qian's",
+    "footsteps"
+  ]
+}

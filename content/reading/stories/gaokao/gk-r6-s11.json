@@ -1,0 +1,124 @@
+{
+  "id": "gk-r6-s11",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 11,
+  "title": "Why the Middle Option Wins",
+  "titleCn": "为什么中间选项总能胜出",
+  "coverEmoji": "🍿",
+  "paragraphs": [
+    {
+      "text": "Walk into almost any cinema and you will face three sizes of popcorn, arranged neatly from small to large on the counter. Although most customers say they only want a small box, a surprising number of them walk out with the medium one in their hands. This pattern is not an accident at all. Sellers carefully design their menus so that the middle choice looks like the wisest and safest decision. The trick works, although few of us would ever admit that we have been influenced by it.",
+      "translation": "走进几乎任何一家电影院，你都会看到三种规格的爆米花，在柜台上从小到大地整齐排列着。尽管大多数顾客说他们只想要小份，但数量惊人的人最终手里拿着中份走了出来。这种规律绝非偶然。商家精心设计他们的菜单，让中间那个选择看起来最明智、最稳妥。这个花招很管用，尽管我们中很少有人会承认自己受了它的影响。"
+    },
+    {
+      "text": "Economists call this the decoy effect. In one famous experiment, a magazine offered its readers two choices: a web subscription for fifty-nine dollars, or a print-and-web package for one hundred and twenty-five dollars. While few readers chose the expensive package, most of them happily picked the cheaper one. Then the researchers added a third option — print only, also priced at one hundred and twenty-five dollars — and the picture changed completely. Suddenly the combined package seemed like a bargain, as it clearly offered far more for the same money. Sales of the costly option jumped, although not a single price had moved.",
+      "translation": "经济学家把这称为诱饵效应。在一个著名实验中，一家杂志给读者两个选择：59 美元的网页版订阅，或者 125 美元的印刷版加网页版套餐。虽然很少有读者选择那个昂贵的套餐，但大多数人还是乐呵呵地挑了便宜的那个。随后研究人员加上了第三个选项——只订印刷版，同样标价 125 美元——局面就完全变了。这个组合套餐突然显得很划算，因为它显然用同样的钱提供了多得多的东西。昂贵选项的销量猛增，尽管没有任何一个价格发生过变化。"
+    },
+    {
+      "text": "The reason lies in the way our brains compare things, and it is simpler than it sounds. We rarely judge a price on its own. Instead, we judge every number against whatever happens to sit next to it on the same page or shelf. A middle option, as researchers have found, offers a comfortable sense of balance between being too careful and too bold. A slightly cheaper box can suddenly make the neighbouring one look like a sensible compromise rather than a waste. Despite our belief that we are completely rational shoppers, we often choose the option that is easiest to explain to ourselves afterwards.",
+      "translation": "原因在于我们大脑比较事物的方式，而它比听起来要简单。我们很少单独去判断一个价格。相反，我们会把每个数字与碰巧跟它并排出现在同一页面或货架上的那个数字相比较。正如研究人员所发现的，中间选项提供了一种舒适的平衡感——既不会过于保守，也不会过于大胆。一个稍微便宜点的盒子，会突然让旁边那个看起来像是一种明智的折中，而不是浪费。尽管我们相信自己完全是理性的消费者，我们却常常选择那个事后最容易向自己解释的选项。"
+    },
+    {
+      "text": "Companies use this knowledge in many quiet ways, and few of us notice what they are doing. Coffee shops list a large cup beside an enormous one, while phone makers display three models with different amounts of storage. Although such design can guide customers gently towards a better choice, it can also push them into paying for something they never needed. That is why consumer groups urge buyers to decide what they really want before they look at the menu.",
+      "translation": "企业以许多不声不响的方式运用这一知识，而我们中很少有人察觉他们在做什么。咖啡店会把大杯和超大杯并列列出，手机厂商则展示三种存储容量不同的机型。尽管这样的设计能温和地引导顾客做出更好的选择，它也可能促使他们花钱买下自己根本不需要的东西。这就是为什么消费者团体呼吁买家在查看菜单之前，先想清楚自己真正想要什么。"
+    },
+    {
+      "text": "None of this means that the middle option is always wrong, since it is often the sensible choice. The point is simply that we should reach that conclusion by ourselves instead of letting a clever menu reach it for us.",
+      "translation": "这一切并不意味着中间选项总是错的，因为它往往是明智之选。关键在于，这个结论应当由我们自己得出，而不是让一份聪明的菜单替我们得出。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ most customers say they only want a small box, a surprising number of them walk out with the medium one in their hands.",
+      "choices": [
+        "Although",
+        "Despite",
+        "Because"
+      ],
+      "answer": "Although",
+      "audioText": "Although most customers say they only want a small box, a surprising number of them walk out with the medium one in their hands."
+    },
+    {
+      "type": "word_builder",
+      "word": "option",
+      "audioText": "option"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "This",
+        "pattern",
+        "is",
+        "not",
+        "an",
+        "accident",
+        "at",
+        "all."
+      ],
+      "audioText": "This pattern is not an accident at all."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "A middle option, ___ researchers have found, offers a comfortable sense of balance between being too careful and too bold.",
+      "choices": [
+        "as",
+        "that",
+        "which"
+      ],
+      "answer": "as",
+      "audioText": "A middle option, as researchers have found, offers a comfortable sense of balance between being too careful and too bold."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "rarely",
+        "judge",
+        "a",
+        "price",
+        "on",
+        "its",
+        "own."
+      ],
+      "audioText": "We rarely judge a price on its own."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Suddenly the combined package seemed like a ___, as it clearly offered far more for the same money.",
+      "choices": [
+        "bargain",
+        "burden",
+        "budget"
+      ],
+      "answer": "bargain",
+      "audioText": "Suddenly the combined package seemed like a bargain, as it clearly offered far more for the same money."
+    }
+  ],
+  "_unknownWords": [
+    "wisest",
+    "safest",
+    "economists",
+    "decoy",
+    "readers",
+    "subscription",
+    "happily",
+    "researchers",
+    "option",
+    "simpler",
+    "bold",
+    "neighbouring",
+    "sensible",
+    "despite",
+    "rational",
+    "shoppers",
+    "easiest",
+    "makers",
+    "display",
+    "gently",
+    "buyers",
+    "simply",
+    "letting"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "zk-r1-s10",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 10,
+  "title": "Our Class Lost and Found",
+  "titleCn": "我们班的失物招领箱",
+  "coverEmoji": "📦",
+  "paragraphs": [
+    {
+      "text": "Last month, small things often went missing in our classroom. We sometimes left pens and rulers on our desks. Nobody knew that a blue notebook was under the window.",
+      "translation": "上个月，我们教室里的小东西常常不见了。我们有时把钢笔和尺子落在课桌上。没有人知道，窗台下还躺着一本蓝色的笔记本。"
+    },
+    {
+      "text": "Our teacher, Ms. Lin, said that we needed a good plan. She always has clever ideas. We decided that a lost and found box would help.",
+      "translation": "我们的林老师说，我们需要一个好办法。她总是有聪明的点子。我们决定做一个失物招领箱，一定会有用。"
+    },
+    {
+      "text": "On Monday morning, we brought an old box to school. Li Ming found a red scarf and some pencils. Our monitor wrote Lost and Found on the box.",
+      "translation": "星期一早上，我们把一个旧箱子带到了学校。李明找到了一条红围巾和几支铅笔。我们的班长在箱子上写了“失物招领”。"
+    },
+    {
+      "text": "Soon, many students came to the box after class. They usually found their own lost things there. Everyone said that the box was great.",
+      "translation": "很快，很多同学下课后都来到箱子前。他们通常都能在那里找到自己丢的东西。大家都说这个箱子太棒了。"
+    },
+    {
+      "text": "One afternoon, I found a small notebook near the door. The name on it was Wang Fang's. I gave it back to her after class. She smiled and said thanks to me.",
+      "translation": "一天下午，我在门边发现了一本小笔记本。上面的名字是王芳的。下课后我还给了她。她笑了，还向我道谢。"
+    },
+    {
+      "text": "Now the box sits quietly in the corner of our classroom. We often put small things in it. I think that everyone should help each other.",
+      "translation": "现在，这个箱子静静地待在我们教室的角落里。我们常常把小东西放进去。我觉得每个人都应该互相帮助。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Li Ming find on Monday morning?",
+      "audioText": "What did Li Ming find on Monday morning?",
+      "options": [
+        {
+          "emoji": "🧣",
+          "value": "scarf",
+          "text": "A red scarf"
+        },
+        {
+          "emoji": "📦",
+          "value": "box",
+          "text": "An old box"
+        },
+        {
+          "emoji": "📓",
+          "value": "notebook",
+          "text": "A small notebook"
+        }
+      ],
+      "answer": "scarf"
+    },
+    {
+      "type": "image_choice",
+      "question": "Who found the small notebook near the door?",
+      "audioText": "Who found the small notebook near the door?",
+      "options": [
+        {
+          "emoji": "🙋",
+          "value": "me",
+          "text": "Me"
+        },
+        {
+          "emoji": "👧",
+          "value": "wangfang",
+          "text": "Wang Fang"
+        },
+        {
+          "emoji": "👩🏫",
+          "value": "mslin",
+          "text": "Ms. Lin"
+        }
+      ],
+      "answer": "me"
+    },
+    {
+      "type": "word_builder",
+      "word": "notebook",
+      "audioText": "notebook"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Everyone",
+        "said",
+        "that",
+        "the",
+        "box",
+        "was",
+        "great."
+      ],
+      "audioText": "Everyone said that the box was great."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "always",
+        "has",
+        "clever",
+        "ideas."
+      ],
+      "audioText": "She always has clever ideas."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "We ___ put small things in it.",
+      "choices": [
+        "often",
+        "never",
+        "hardly"
+      ],
+      "answer": "often",
+      "audioText": "We often put small things in it."
+    }
+  ],
+  "_unknownWords": [
+    "li",
+    "wang",
+    "fang's"
+  ]
+}

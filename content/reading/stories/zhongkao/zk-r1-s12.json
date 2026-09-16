@@ -1,0 +1,132 @@
+{
+  "id": "zk-r1-s12",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 12,
+  "title": "Our Class Garden",
+  "titleCn": "我们班的小菜园",
+  "coverEmoji": "🌱",
+  "paragraphs": [
+    {
+      "text": "Last spring, our class started a small garden behind the school building. Our science teacher, Ms. Lin, said that we could grow vegetables there. Everyone was excited about the new project.",
+      "translation": "去年春天，我们班在教学楼后面开了一小块菜园。我们的科学老师林老师说，我们可以在那里种蔬菜。大家都为这个新项目感到兴奋。"
+    },
+    {
+      "text": "At first, nobody knew how to plant anything. I thought that we would fail on the first day. But Ms. Lin showed us how to dig and water. We often stayed after class to take care of the seeds.",
+      "translation": "一开始，谁也不知道该怎么种东西。我以为我们第一天就会失败。但林老师教我们怎么松土、怎么浇水。我们常常放学后留下来照看种子。"
+    },
+    {
+      "text": "Two weeks later, small green leaves came out of the soil. Li Ming ran to the classroom and told everyone the good news. We usually checked the garden twice a day. Even the quietest students began to talk and laugh there.",
+      "translation": "两周后，土里冒出了小小的绿叶。李明跑回教室，把这个好消息告诉大家。我们通常一天去看两次菜园。就连最安静的同学也开始在那儿说笑了。"
+    },
+    {
+      "text": "Sometimes the weather was not kind to us. One heavy rain almost washed the young plants away. We knew that we had to work together to save them. So we built a small wall with stones and old boards.",
+      "translation": "有时候天气对我们并不友好。一场大雨差点把幼苗冲走。我们知道必须齐心协力才能救下它们，于是用石头和旧木板垒了一道小墙。"
+    },
+    {
+      "text": "In June, we picked our first tomatoes and cucumbers. Ms. Lin said that she was proud of our class. We shared the vegetables with other classes at lunch. I think that the garden taught us more than books.",
+      "translation": "六月里，我们摘下了第一批西红柿和黄瓜。林老师说，她为我们班感到骄傲。午饭时我们把蔬菜分给了其他班。我觉得这个小菜园教给我们的，比书本还多。"
+    },
+    {
+      "text": "Now I always look at that small corner when I pass by. I know that good things need time and care. Next term, our class will plant something new there.",
+      "translation": "现在每次路过，我总会看一眼那个小角落。我明白，美好的东西需要时间和用心。下学期，我们班要在那里种点新东西。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the students grow in their garden?",
+      "audioText": "What did the students grow in their garden?",
+      "options": [
+        {
+          "emoji": "🍅",
+          "value": "tomato",
+          "text": "Tomatoes"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "Apples"
+        },
+        {
+          "emoji": "🌻",
+          "value": "flower",
+          "text": "Flowers"
+        }
+      ],
+      "answer": "tomato"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the students build to save the young plants?",
+      "audioText": "What did the students build to save the young plants?",
+      "options": [
+        {
+          "emoji": "🧱",
+          "value": "wall",
+          "text": "A small wall"
+        },
+        {
+          "emoji": "🚪",
+          "value": "door",
+          "text": "A new door"
+        },
+        {
+          "emoji": "🪑",
+          "value": "chair",
+          "text": "A wooden chair"
+        }
+      ],
+      "answer": "wall"
+    },
+    {
+      "type": "word_builder",
+      "word": "garden",
+      "audioText": "garden"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Everyone",
+        "was",
+        "excited",
+        "about",
+        "the",
+        "new",
+        "project."
+      ],
+      "audioText": "Everyone was excited about the new project."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Two weeks later, small green ___ came out of the soil.",
+      "choices": [
+        "leaves",
+        "books",
+        "stones"
+      ],
+      "answer": "leaves",
+      "audioText": "Two weeks later, small green leaves came out of the soil."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Ms. Lin said that she was ___ of our class.",
+      "choices": [
+        "proud",
+        "afraid",
+        "tired"
+      ],
+      "answer": "proud",
+      "audioText": "Ms. Lin said that she was proud of our class."
+    }
+  ],
+  "_unknownWords": [
+    "project",
+    "seeds",
+    "later",
+    "soil",
+    "li",
+    "talk",
+    "cucumbers"
+  ]
+}

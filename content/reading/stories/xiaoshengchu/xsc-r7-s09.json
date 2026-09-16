@@ -1,0 +1,112 @@
+{
+  "id": "xsc-r7-s09",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r7",
+  "order": 9,
+  "title": "The Day the Castle Slept",
+  "titleCn": "城堡沉睡的那一天",
+  "coverEmoji": "🏰",
+  "paragraphs": [
+    {
+      "text": "Tom found a big castle behind the green hills. It was the oldest castle in the land. The gate was open, but no one was there. \"Hello?\" he called. Only the wind answered him.",
+      "translation": "汤姆在青山后面发现了一座大城堡。它是这片土地上最古老的城堡。大门敞开着，可是一个人也没有。“有人吗？”他喊道。只有风回应了他。"
+    },
+    {
+      "text": "Inside, he saw a very strange thing. All the people in the castle were sleeping. A cook slept near a cold pot. A tall knight slept on the stone stairs. They did not move when Tom walked by.",
+      "translation": "走进去，他看到一件非常奇怪的事。城堡里所有的人都睡着了。一个厨师睡在一口冷锅旁边。一位高个子骑士睡在石阶上。汤姆走过时，他们一动不动。"
+    },
+    {
+      "text": "Tom felt afraid and wanted to run home. Then he saw a little bird in a gold cage. \"Please help us,\" said the bird. \"You must wake the star on the tower.\" \"Only you can do it,\" the bird said.",
+      "translation": "汤姆害怕了，想跑回家。这时，他看到金笼子里有一只小鸟。“请帮帮我们，”小鸟说。“你必须唤醒塔上的那颗星星。”“只有你能做到，”小鸟说。"
+    },
+    {
+      "text": "The tower was higher than the trees. It was the tallest tower in the castle. Tom climbed and climbed, but he did not stop. While he climbed, the wind grew cold.",
+      "translation": "那座塔比树还高。它是城堡里最高的塔。汤姆爬呀爬，但他没有停下。他往上爬的时候，风越来越冷。"
+    },
+    {
+      "text": "At the top, he found a small, sleeping star. Tom was afraid of the dark. But he held the star in his hands. \"Please wake up,\" he said softly. Then the star opened one bright eye.",
+      "translation": "在塔顶，他发现了一颗小小的、沉睡的星星。汤姆怕黑。但他把星星捧在手里。“请醒醒吧，”他轻声说。接着，星星睁开了一只明亮的眼睛。"
+    },
+    {
+      "text": "The star flew up into the sky. Warm light filled the whole castle. The cook woke up, and the knight smiled. When the sun came, the castle was awake again. Tom was the bravest boy in the land.",
+      "translation": "星星飞上了天空。温暖的光充满了整座城堡。厨师醒了，骑士笑了。太阳出来时，城堡又醒过来了。汤姆成了这片土地上最勇敢的男孩。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Who was sleeping near the cold pot?",
+      "audioText": "Who was sleeping near the cold pot?",
+      "options": [
+        {
+          "emoji": "👨‍🍳",
+          "value": "cook",
+          "text": "A cook"
+        },
+        {
+          "emoji": "🛡️",
+          "value": "knight",
+          "text": "A knight"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A bird"
+        }
+      ],
+      "answer": "cook"
+    },
+    {
+      "type": "word_builder",
+      "word": "castle",
+      "audioText": "castle"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Tom was the ___ boy in the land.",
+      "choices": [
+        "brave",
+        "braver",
+        "bravest"
+      ],
+      "answer": "bravest",
+      "audioText": "Tom was the bravest boy in the land."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "tower",
+        "was",
+        "higher",
+        "than",
+        "the",
+        "trees."
+      ],
+      "audioText": "The tower was higher than the trees."
+    },
+    {
+      "type": "word_builder",
+      "word": "sleeping",
+      "audioText": "sleeping"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "While he ___, the wind grew cold.",
+      "choices": [
+        "climbed",
+        "climbs",
+        "climbing"
+      ],
+      "answer": "climbed",
+      "audioText": "While he climbed, the wind grew cold."
+    }
+  ],
+  "_unknownWords": [
+    "pot",
+    "cage",
+    "tower",
+    "woke",
+    "bravest"
+  ]
+}

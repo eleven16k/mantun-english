@@ -1,0 +1,124 @@
+{
+  "id": "gk-r7-s10",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 10,
+  "title": "Beyond the Next Horizon",
+  "titleCn": "越过下一个地平线",
+  "coverEmoji": "🔭",
+  "paragraphs": [
+    {
+      "text": "Ask anyone under twenty what the coming decades will look like, and you will hear answers ranging from cities on Mars to farms powered by sunlight. Yet the shape of that future depends far less on the machines we invent than on the choices we are willing to make together. Never before have we held so much power over our own tomorrow, and never before have we been so uncertain how to use it. This uncertainty is not a weakness; it is simply the price of living in an age of open possibilities.",
+      "translation": "随便问一个二十岁以下的年轻人，未来几十年会是什么样子，你听到的答案会从火星上的城市，一直排到靠阳光运转的农场。然而，未来的模样，取决于我们发明的机器，远不如取决于我们愿意共同做出的选择。我们从未像今天这样对自己的明天握有如此大的权力，也从未像今天这样不确定该如何使用它。这种不确定并不是弱点，它只是生活在一个充满开放可能性的时代所要付出的代价。"
+    },
+    {
+      "text": "Consider the cities we already have, where traffic, heat and waste have quietly become the weather of daily life. Were we to rebuild them around rivers, gardens and clean transport, millions of lives would improve within a single generation. Renewable energy, once a dream of engineers, now costs less than coal in many countries, and that change arrived faster than anyone predicted. Should we keep investing in such systems, the air our children breathe will be cleaner than the air we breathe today. Sustainability, then, is not about giving things up; it is about choosing better things to keep.",
+      "translation": "看看我们已有的城市吧——在那里，拥堵、高温和垃圾已经悄然成了日常生活的天气。如果我们围绕河流、花园和清洁交通来重建它们，数百万人的生活会在短短一代人之内得到改善。可再生能源曾是工程师的梦想，如今在许多国家成本已低于煤炭，而这一变化比任何人预言的都来得更快。如果我们持续投资这类系统，我们的孩子呼吸的空气将比我们今天呼吸的更干净。因此，可持续并不是要放弃什么，而是要选择更值得保留的东西。"
+    },
+    {
+      "text": "Space exploration, however, offers something that Earth alone cannot: a second perspective on ourselves. When astronauts describe the planet as a small blue marble floating in darkness, they are not being poetic; they are being accurate. Not only does space research produce better weather satellites and medical tools, but it also reminds us how rare our home is. Some argue that we should spend every penny on Earth rather than on rockets, and their concern deserves a serious answer. The honest answer is that we need both, for a horizon worth reaching and a home worth healing are not rivals.",
+      "translation": "然而，太空探索提供了地球本身给不了的东西：一个重新审视我们自己的视角。当宇航员把地球描述成一颗漂浮在黑暗中的蓝色小弹珠时，他们不是在抒情，而是在陈述事实。太空研究不仅造出了更好的气象卫星和医疗工具，还提醒我们：我们的家园何其稀有。有人认为，我们应该把每一分钱都花在地球上而不是花在火箭上，这种担忧值得认真回应。诚实的答案是：我们两者都需要——值得抵达的远方和值得治愈的家园，并不是对手。"
+    },
+    {
+      "text": "What will decide our fate, in the end, is not one brilliant invention but the ordinary habits of billions of people. If every household were to waste a little less, and every government to plan a little further ahead, the results would surprise us all. It is essential that young people, who will inherit whatever we leave behind, be included in these decisions now. Rarely in history have so many tools been available to so many hands at the same time. The future, therefore, is neither a gift nor a trap; it is a project, and it is ours to build.",
+      "translation": "最终决定我们命运的，不是某一项了不起的发明，而是数十亿人平凡的日常习惯。如果每个家庭都少浪费一点，每个政府都多往前规划一步，结果会让我们所有人吃惊。年轻人将继承我们留下的一切，因此他们现在就必须被纳入这些决定之中，这一点至关重要。历史上很少有那样的时刻：如此多的工具同时握在如此多的人手中。因此，未来既不是礼物，也不是陷阱；它是一个工程，而它由我们来建造。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the writer, what do we need for the future?",
+      "audioText": "According to the writer, what do we need for the future?",
+      "options": [
+        {
+          "emoji": "🌍",
+          "value": "both",
+          "text": "Both a healthy home planet and a distant horizon"
+        },
+        {
+          "emoji": "🚀",
+          "value": "space",
+          "text": "Only rockets and space travel"
+        },
+        {
+          "emoji": "🏙️",
+          "value": "cities",
+          "text": "Only bigger and busier cities"
+        }
+      ],
+      "answer": "both"
+    },
+    {
+      "type": "word_builder",
+      "word": "horizon",
+      "audioText": "horizon"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "need",
+        "both",
+        "for",
+        "a",
+        "horizon",
+        "worth",
+        "reaching"
+      ],
+      "audioText": "We need both, for a horizon worth reaching."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "results",
+        "would",
+        "surprise",
+        "us",
+        "all"
+      ],
+      "audioText": "The results would surprise us all."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Were we to rebuild them around rivers, gardens and clean transport, millions of lives ___ within a single generation.",
+      "choices": [
+        "would improve",
+        "will improve",
+        "have improved"
+      ],
+      "answer": "would improve",
+      "audioText": "Were we to rebuild them around rivers, gardens and clean transport, millions of lives would improve within a single generation."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It is essential that young people, who will inherit whatever we leave behind, ___ included in these decisions now.",
+      "choices": [
+        "be",
+        "are",
+        "were"
+      ],
+      "answer": "be",
+      "audioText": "It is essential that young people, who will inherit whatever we leave behind, be included in these decisions now."
+    }
+  ],
+  "_unknownWords": [
+    "sunlight",
+    "uncertain",
+    "uncertainty",
+    "simply",
+    "rebuild",
+    "generation",
+    "renewable",
+    "sustainability",
+    "exploration",
+    "cannot",
+    "perspective",
+    "poetic",
+    "horizon",
+    "healing",
+    "rivals",
+    "fate",
+    "inherit"
+  ]
+}

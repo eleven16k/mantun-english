@@ -1,0 +1,113 @@
+{
+  "type": "json_object",
+  "id": "gk-r4-s03",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 3,
+  "title": "The Secret Power of Sleep",
+  "titleCn": "睡眠的隐秘力量",
+  "coverEmoji": "😴",
+  "paragraphs": [
+    {
+      "text": "Most teenagers treat sleep as something they can simply skip when life gets busy. Yet scientists now believe that getting enough rest is as important to your health as eating well. Choosing to sleep eight hours a night may improve your memory, your mood and even your grades.",
+      "translation": "大多数青少年把睡眠看成一件忙起来就可以直接跳过的事。然而科学家现在认为，获得充足的休息对你的健康来说和吃得好一样重要。选择每晚睡够八小时，也许能改善你的记忆力、情绪，甚至成绩。"
+    },
+    {
+      "text": "During deep sleep, your brain sorts through everything you learned that day and stores it carefully. If you stay up late studying, you may remember less than you expect the next morning. Losing just a few hours of rest can make a whole lesson harder to recall.",
+      "translation": "在深度睡眠中，你的大脑会把当天学到的所有内容整理一遍，并仔细储存起来。如果你熬夜学习，第二天早上你能记住的东西可能比预想的要少。仅仅少睡几个小时，就可能让一整节课的内容都更难回想起来。"
+    },
+    {
+      "text": "Sleep and mood are closely connected, so it is hardly surprising that tired students feel anxious easily. Many doctors recommend taking a short walk outside when worries seem too heavy to carry. Moving your body for twenty minutes can calm your mind and help you think clearly again.",
+      "translation": "睡眠和情绪关系密切，所以疲惫的学生容易焦虑，一点也不奇怪。当烦恼沉重得难以承受时，许多医生建议到户外散一小会儿步。让身体活动二十分钟，可以让你静下心来，重新清晰地思考。"
+    },
+    {
+      "text": "What you eat also plays a part, since heavy meals late at night disturb your sleep. Perhaps you should have gone to bed earlier instead of checking your phone for another hour. Small changes are easy to start, but keeping them going is what really matters.",
+      "translation": "你吃的东西也起作用，因为深夜的大餐会扰乱你的睡眠。也许你本该早点上床，而不是再刷一个小时手机。小小的改变容易开始，但真正重要的是坚持下去。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, which activity helps your brain store what you learned?",
+      "audioText": "According to the passage, which activity helps your brain store what you learned?",
+      "options": [
+        {
+          "emoji": "🛏️",
+          "value": "sleep",
+          "text": "Sleeping well"
+        },
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "Checking your phone"
+        },
+        {
+          "emoji": "🍔",
+          "value": "meal",
+          "text": "A heavy late meal"
+        }
+      ],
+      "answer": "sleep"
+    },
+    {
+      "type": "word_builder",
+      "word": "memory",
+      "audioText": "memory"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Small",
+        "changes",
+        "are",
+        "easy",
+        "to",
+        "start"
+      ],
+      "audioText": "Small changes are easy to start."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "tired",
+        "students",
+        "feel",
+        "anxious",
+        "easily"
+      ],
+      "audioText": "tired students feel anxious easily"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Choosing to sleep eight hours a night ___ improve your memory, your mood and even your grades.",
+      "choices": [
+        "may",
+        "must",
+        "need"
+      ],
+      "answer": "may",
+      "audioText": "Choosing to sleep eight hours a night may improve your memory, your mood and even your grades."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Perhaps you ___ have gone to bed earlier instead of checking your phone for another hour.",
+      "choices": [
+        "should",
+        "would",
+        "can"
+      ],
+      "answer": "should",
+      "audioText": "Perhaps you should have gone to bed earlier instead of checking your phone for another hour."
+    }
+  ],
+  "_unknownWords": [
+    "simply",
+    "skip",
+    "getting",
+    "mood",
+    "recall",
+    "easily",
+    "gone",
+    "earlier"
+  ]
+}

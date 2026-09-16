@@ -1,0 +1,112 @@
+{
+  "id": "xsc-r7-s02",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r7",
+  "order": 2,
+  "title": "The Silver Key",
+  "titleCn": "银色钥匙",
+  "coverEmoji": "🗝️",
+  "paragraphs": [
+    {
+      "text": "One morning, Lily found a small key. It was under a red flower. The key was silver and very cold. It was colder than ice. \"Where can this key open a door?\" she said. Then she saw a little door in the wall.",
+      "translation": "一天早上，莉莉发现了一把小钥匙。它就在一朵红花下面。钥匙是银色的，冰凉冰凉，比冰还冷。“这把钥匙能打开哪扇门呢？”她说。这时，她看见墙上有一扇小门。"
+    },
+    {
+      "text": "Lily put the key into the little door. The door opened slowly, and she went in. Behind it, she saw a long dark road. At the end of the road stood a castle. The castle was taller than any tree.",
+      "translation": "莉莉把钥匙插进了那扇小门。门慢慢打开了，她走了进去。门后是一条又长又黑的路。路的尽头矗立着一座城堡。那城堡比任何一棵树都高。"
+    },
+    {
+      "text": "Lily walked into the castle. A small cat with green eyes came to her. \"Hello,\" said the cat. \"I am Tom, and I need your help. The magic flower is sleeping, so the castle is sad.\"",
+      "translation": "莉莉走进城堡。一只绿眼睛的小猫朝她走了过来。“你好，”小猫说，“我叫汤姆，我需要你的帮助。魔法花睡着了，所以城堡很伤心。”"
+    },
+    {
+      "text": "\"How can I help you?\" asked Lily. \"You must climb the highest tower,\" said Tom. \"But you should be brave. The stairs are old and dark.\" Lily took a deep breath and smiled. \"I can do it,\" she said.",
+      "translation": "“我怎么帮你呢？”莉莉问。“你必须爬上最高的塔楼，”汤姆说，“但你要勇敢。那些楼梯又旧又黑。”莉莉深吸一口气，笑了。“我能做到，”她说。"
+    },
+    {
+      "text": "While Lily climbed, the wind blew hard. Her legs were tired, but she did not stop. At the top, she saw a little blue flower. She touched it softly. The flower opened, and light filled the room.",
+      "translation": "莉莉往上爬的时候，风刮得很猛。她的腿累了，但她没有停下。在塔顶，她看见一朵蓝色的小花。她轻轻地碰了碰它。花开了，光充满了整个房间。"
+    },
+    {
+      "text": "Then everything in the castle woke up. The castle was brighter and warmer than before. \"Thank you, brave girl,\" said Tom. Lily went home with the key. She was small, but she was very brave.",
+      "translation": "接着，城堡里的一切都醒了过来。城堡比以前更明亮、更温暖了。“谢谢你，勇敢的女孩，”汤姆说。莉莉带着钥匙回了家。她的个子很小，但她非常勇敢。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Lily find in the garden?",
+      "audioText": "What did Lily find in the garden?",
+      "options": [
+        {
+          "emoji": "🔑",
+          "value": "key",
+          "text": "A key"
+        },
+        {
+          "emoji": "🌷",
+          "value": "flower",
+          "text": "A flower"
+        },
+        {
+          "emoji": "🐈",
+          "value": "cat",
+          "text": "A cat"
+        }
+      ],
+      "answer": "key"
+    },
+    {
+      "type": "word_builder",
+      "word": "castle",
+      "audioText": "castle"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The castle was brighter and ___ than before.",
+      "choices": [
+        "warmer",
+        "colder",
+        "smaller"
+      ],
+      "answer": "warmer",
+      "audioText": "The castle was brighter and warmer than before."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Lily",
+        "put",
+        "the",
+        "key",
+        "into",
+        "the",
+        "little",
+        "door."
+      ],
+      "audioText": "Lily put the key into the little door."
+    },
+    {
+      "type": "word_builder",
+      "word": "silver",
+      "audioText": "silver"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "But you ___ be brave, said Tom.",
+      "choices": [
+        "should",
+        "can",
+        "must"
+      ],
+      "answer": "should",
+      "audioText": "But you should be brave, said Tom."
+    }
+  ],
+  "_unknownWords": [
+    "asked",
+    "tower",
+    "blew",
+    "woke"
+  ]
+}

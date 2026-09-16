@@ -1,0 +1,111 @@
+{
+  "id": "xsc-r7-s06",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r7",
+  "order": 6,
+  "title": "The Bridge of Stars",
+  "titleCn": "星光之桥",
+  "coverEmoji": "🌉",
+  "paragraphs": [
+    {
+      "text": "Mia and Tom found an old castle last week. It was taller than any house in town. While they played, a big door opened. Tom ran in, and the door closed.",
+      "translation": "上周，米娅和汤姆发现了一座古老的城堡。它比镇上任何一座房子都高。他们正在玩耍的时候，一扇大门打开了。汤姆跑了进去，门随即关上了。"
+    },
+    {
+      "text": "Mia was afraid, but she did not leave. She pushed the door and walked inside. She called for Tom, but no one answered. A silver lamp stood on a small table.",
+      "translation": "米娅很害怕，但她没有离开。她推开那扇门，走了进去。她大声喊汤姆，可是没有人回答。一盏银色的小灯放在一张小桌子上。"
+    },
+    {
+      "text": "She took the lamp and walked on. Soon she found a river with no bridge. \"How can I cross?\" she thought. Then the little lamp spoke softly to her. \"Only a brave heart can make a bridge.\"",
+      "translation": "她拿起那盏灯，继续往前走。不久，她来到一条河边，河上没有桥。“我该怎么过去呢？”她想。这时，那盏小灯轻轻地对她说：“只有勇敢的心才能造出桥来。”"
+    },
+    {
+      "text": "Mia was the shyest girl in her class. When she moved, stars jumped out of the water. They made a shiny bridge over the river. Mia walked across it slowly and carefully. On the other side, she heard Tom crying. He was behind a tall wooden door.",
+      "translation": "米娅是班上最害羞的女孩。当她向前迈步时，星星从水里跳了出来。它们在河面上搭起了一座闪亮的桥。米娅慢慢地、小心地走了过去。在河对岸，她听见汤姆在哭。他就在一扇高高的木门后面。"
+    },
+    {
+      "text": "She opened the door and saw her brother. Tom was safe on the floor. He ran to Mia and hugged her. \"You are the bravest sister,\" he said. Mia smiled because she knew it was true.",
+      "translation": "她打开门，看见了弟弟。汤姆安全地待在地上。他跑到米娅身边，抱住了她。“你是最勇敢的姐姐。”他说。米娅笑了，因为她知道这是真的。"
+    },
+    {
+      "text": "They walked back over the star bridge together. The lamp went out, but the stars stayed. She was still shy, but she could be brave. Her heart was brighter than any lamp.",
+      "translation": "他们一起从星光桥上走了回去。灯熄灭了，但星星还在。她依旧害羞，但她可以变得勇敢。她的心比任何一盏灯都要明亮。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What made the bridge over the river?",
+      "audioText": "What made the bridge over the river?",
+      "options": [
+        {
+          "emoji": "⭐",
+          "value": "stars",
+          "text": "Stars"
+        },
+        {
+          "emoji": "🪵",
+          "value": "wood",
+          "text": "Wood"
+        },
+        {
+          "emoji": "🧊",
+          "value": "ice",
+          "text": "Ice"
+        }
+      ],
+      "answer": "stars"
+    },
+    {
+      "type": "word_builder",
+      "word": "bridge",
+      "audioText": "bridge"
+    },
+    {
+      "type": "word_builder",
+      "word": "castle",
+      "audioText": "castle"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "While",
+        "they",
+        "played,",
+        "a",
+        "big",
+        "door",
+        "opened."
+      ],
+      "audioText": "While they played, a big door opened."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was ___ than any house in town.",
+      "choices": [
+        "taller",
+        "tallest",
+        "tall"
+      ],
+      "answer": "taller",
+      "audioText": "It was taller than any house in town."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "\"Only a brave ___ can make a bridge.\"",
+      "choices": [
+        "heart",
+        "hand",
+        "head"
+      ],
+      "answer": "heart",
+      "audioText": "Only a brave heart can make a bridge."
+    }
+  ],
+  "_unknownWords": [
+    "shiny",
+    "wooden",
+    "hugged",
+    "bravest"
+  ]
+}

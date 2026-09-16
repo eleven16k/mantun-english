@@ -1,0 +1,117 @@
+{
+  "id": "zk-r3-s13",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 13,
+  "title": "Robots That Sort Our Rubbish",
+  "titleCn": "给垃圾分类的机器人",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "Every day, our city produces a huge amount of rubbish. Some of it can be recycled, but some of it cannot. In the past, this work was done by hand. It was slow, and people got very tired.",
+      "translation": "每天，我们的城市都会产生大量垃圾。其中一些可以回收，另一些却不行。过去，这项工作靠手工完成，速度很慢，人也累得不行。"
+    },
+    {
+      "text": "Today, smart robots are used in many recycling centres. They can pick up bottles, cans and paper very quickly. These machines never get tired, so they work all day and all night.",
+      "translation": "如今，许多回收中心都用上了智能机器人。它们能飞快地捡起瓶子、易拉罐和纸张。这些机器从不疲倦，所以可以日夜不停地工作。"
+    },
+    {
+      "text": "How do they know what is what? Cameras take photos of the rubbish as it moves along the belt. Then AI software studies the pictures and tells the robot what it sees. A plastic bottle may look like glass, so the AI must be very careful.",
+      "translation": "它们怎么知道什么是什么？当垃圾沿着传送带移动时，摄像机会给它拍照。接着 AI 软件分析这些照片，并告诉机器人它看到的是什么。塑料瓶可能看起来像玻璃瓶，所以 AI 必须非常小心。"
+    },
+    {
+      "text": "The robot's arm is moved by a small motor. When the AI says 'this is a bottle', the arm picks it up. Then the bottle is dropped into the right box. All of this can be done in less than a second.",
+      "translation": "机器人的手臂由一台小马达带动。当 AI 说出“这是一个瓶子”时，手臂就把它捡起来，然后瓶子被投进对应的箱子里。这一切在不到一秒钟内就能完成。"
+    },
+    {
+      "text": "These robots are helpful, but they cannot do everything. Soft or dirty things may be hard for them to hold. So people still work beside them and check the boxes. The robots and the workers make a good team.",
+      "translation": "这些机器人很有用，但并不是什么都能做。又软又脏的东西，它们可能很难抓起来。所以人们仍然在它们旁边工作，检查箱子里的东西。机器人和工人组成了一支好团队。"
+    },
+    {
+      "text": "In the future, more smart machines will be used in our cities. They could help us save energy and keep the Earth clean. Maybe one day, the rubbish bin itself will tell you where to put your cup!",
+      "translation": "将来，我们的城市会使用更多智能机器。它们或许能帮我们节约能源，让地球保持干净。也许有一天，垃圾桶自己就会告诉你，杯子该扔在哪里！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which of these do the smart robots pick up in the text?",
+      "audioText": "Which of these do the smart robots pick up in the text?",
+      "options": [
+        {
+          "emoji": "🥤",
+          "value": "bottle",
+          "text": "A bottle"
+        },
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "An old phone"
+        },
+        {
+          "emoji": "👟",
+          "value": "shoe",
+          "text": "An old shoe"
+        }
+      ],
+      "answer": "bottle"
+    },
+    {
+      "type": "word_builder",
+      "word": "rubbish",
+      "audioText": "rubbish"
+    },
+    {
+      "type": "word_builder",
+      "word": "careful",
+      "audioText": "careful"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "These",
+        "machines",
+        "never",
+        "get",
+        "tired."
+      ],
+      "audioText": "These machines never get tired."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "In the past, this work ___ done by hand.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": "was",
+      "audioText": "In the past, this work was done by hand."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "A plastic bottle ___ look like glass, so the AI must be careful.",
+      "choices": [
+        "may",
+        "must",
+        "can't"
+      ],
+      "answer": "may",
+      "audioText": "A plastic bottle may look like glass, so the AI must be careful."
+    }
+  ],
+  "_unknownWords": [
+    "amount",
+    "recycled",
+    "cannot",
+    "done",
+    "recycling",
+    "belt",
+    "ai",
+    "software",
+    "robot's",
+    "motor",
+    "less",
+    "bin"
+  ]
+}

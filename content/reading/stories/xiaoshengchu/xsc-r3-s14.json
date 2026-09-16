@@ -1,0 +1,123 @@
+{
+  "id": "xsc-r3-s14",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 14,
+  "title": "The Candy Town Sports Day",
+  "titleCn": "糖果镇运动会",
+  "coverEmoji": "🏅",
+  "paragraphs": [
+    {
+      "text": "Last Saturday was Sports Day in Candy Town. The sun was bright and warm. All the children were very happy. They went to Sugar Park with their parents.",
+      "translation": "上周六是糖果镇的运动会。阳光又亮又暖。孩子们都特别开心。他们和爸爸妈妈一起去了糖果公园。"
+    },
+    {
+      "text": "There were many games on the green grass. Tom was fast in the running game. Lily jumped over ten big candy boxes. She was the winner of that game.",
+      "translation": "绿草地上有很多游戏。汤姆在跑步比赛里跑得飞快。莉莉跳过了十个大糖果盒。她是那个比赛的冠军。"
+    },
+    {
+      "text": "At noon, everyone had a big lunch. They ate long candy bread and sweet cakes. The lemon juice was cold and sweet. The children loved it very much.",
+      "translation": "中午，大家都吃了一顿丰盛的午饭。他们吃了长长的糖果面包和甜甜的蛋糕。柠檬汁又凉又甜。孩子们特别喜欢。"
+    },
+    {
+      "text": "In the afternoon, the parents played a funny game. They walked with a candy on a spoon. Everyone laughed and cheered for them.",
+      "translation": "下午，爸爸妈妈们玩了一个好玩的游戏。他们用勺子托着一颗糖果走路。大家一边笑一边给他们加油。"
+    },
+    {
+      "text": "Then a kind man gave each child a gift. It was a box of candy. The children smiled and said thank you. They wanted to come again next year.",
+      "translation": "后来，一位好心的叔叔给每个孩子发了礼物。那是一盒糖果。孩子们笑着说了谢谢。他们都想明年再来。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What was the weather like on Sports Day?",
+      "audioText": "What was the weather like on Sports Day?",
+      "options": [
+        {
+          "emoji": "☀️",
+          "value": "sunny",
+          "text": "Sunny"
+        },
+        {
+          "emoji": "🌧️",
+          "value": "rainy",
+          "text": "Rainy"
+        },
+        {
+          "emoji": "❄️",
+          "value": "snowy",
+          "text": "Snowy"
+        }
+      ],
+      "answer": "sunny"
+    },
+    {
+      "type": "word_builder",
+      "word": "winner",
+      "audioText": "winner"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "was",
+        "the",
+        "winner",
+        "of",
+        "that",
+        "game."
+      ],
+      "audioText": "She was the winner of that game."
+    },
+    {
+      "type": "word_builder",
+      "word": "candy",
+      "audioText": "candy"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "They ___ to Sugar Park with their parents.",
+      "choices": [
+        "went",
+        "go",
+        "goes"
+      ],
+      "answer": "went",
+      "audioText": "They went to Sugar Park with their parents."
+    },
+    {
+      "type": "image_choice",
+      "question": "What was in the small gift?",
+      "audioText": "What was in the small gift?",
+      "options": [
+        {
+          "emoji": "🍬",
+          "value": "candy",
+          "text": "A box of candy"
+        },
+        {
+          "emoji": "🧦",
+          "value": "socks",
+          "text": "A pair of socks"
+        },
+        {
+          "emoji": "📚",
+          "value": "book",
+          "text": "A book"
+        }
+      ],
+      "answer": "candy"
+    }
+  ],
+  "_unknownWords": [
+    "went",
+    "tom",
+    "lily",
+    "ate",
+    "lemon",
+    "cheered",
+    "gave",
+    "said"
+  ]
+}

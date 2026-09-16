@@ -9,10 +9,24 @@ import { useEffect } from "react";
 import { useGameStore } from "./store";
 import { getMe, isLoggedIn } from "./api";
 
+// 模块级时间戳：AppShell 随页面重挂载，用它在重挂载间做 30s 节流
+let lastSyncAt = 0;
+// persist 回水只需在本页面生命周期做一次（store 是模块级单例，跨重挂载存活）
+let rehydrated = false;
+
 export function useAppSync() {
   useEffect(() => {
+    // 挂载后手动回水持久化状态（store 配了 skipHydration，避免 hydration 不匹配）
+    if (!rehydrated) {
+      rehydrated = true;
+      void useGameStore.persist.rehydrate();
+    }
+    // AppShell 随页面重挂载会重复触发本 effect——30 秒内不重复拉 /api/me，
+    // 避免每次跳转都打一次接口（顶部数值本就一致，纯属浪费）
+    if (Date.now() - lastSyncAt < 30_000) return;
     if (!isLoggedIn()) return;
 
+    lastSyncAt = Date.now();
     getMe()
       .then(data => {
         const eco = data.economy;
@@ -31,6 +45,7 @@ export function useAppSync() {
           maxHearts: 5,
           coins: eco.coins as number,
           scorePoints: eco.score_points as number,
+          weekSP: Number(eco.week_sp ?? 0),
           streak: eco.streak as number,
           hintsOwned: eco.hints_owned as number,
           superHeartsOwned: eco.super_hearts_owned as number,

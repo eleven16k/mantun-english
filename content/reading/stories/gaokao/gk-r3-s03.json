@@ -1,0 +1,118 @@
+{
+  "id": "gk-r3-s03",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 3,
+  "title": "The Songs That Almost Vanished",
+  "titleCn": "几乎消失的歌谣",
+  "coverEmoji": "🎶",
+  "paragraphs": [
+    {
+      "text": "Long before recorders became common, a young teacher named Lin Hui carried a notebook into a mountain village. She had heard that the old songs of that valley were slowly disappearing, and she wanted to hear them herself. At first the villagers stayed silent, for they believed their songs were too plain to interest any outsider. If she had not smiled and waited so patiently, they might never have sung a single note for her.",
+      "translation": "早在录音机普及之前，一位名叫林慧的年轻教师就带着一个笔记本走进了山村。她听说那个山谷里的古老歌谣正在慢慢消失，便想亲耳听一听。起初村民们沉默不语，因为他们觉得自己的歌太朴素，引不起外人的兴趣。如果她没有微笑着耐心等待，他们也许一个音都不会为她唱。"
+    },
+    {
+      "text": "Not only did she write down the words, but she also marked the rhythm with small dots above them. It was the grandmothers who remembered those verses. Each evening, Lin Hui sat beside the fire and repeated every line until her ear could hold it.",
+      "translation": "她不仅把歌词记了下来，还在上面用小圆点标出节奏。记住那些歌词的，正是村里的祖母们。每天傍晚，林慧坐在火堆旁，把每一句反复念到耳朵能记住为止。"
+    },
+    {
+      "text": "No sooner had she filled one notebook than she bought another, and then another after that. Were it not for her patience, most of these songs would be found in no library today. Had she stopped, the songs would have vanished. She walked from valley to valley, and every village gave her something that no printed page contained.",
+      "translation": "她刚记满一个笔记本，就又买了一个，接着再买一个。若不是她有这份耐心，这些歌谣如今在图书馆里一本都找不到。假如她当时停下来，这些歌就永远消失了。她从一个山谷走到另一个山谷，每个村子都给了她印刷书页里没有的东西。"
+    },
+    {
+      "text": "Years later, a music professor asked her why she had spent her whole youth on such a lonely task. She answered that a song is like a road: if nobody walks it, it quietly returns to grass. \"If I had stayed at home,\" she said, \"I would have kept my comfort, but I would have lost their voices.\"",
+      "translation": "多年以后，一位音乐教授问她，为什么要把整个青春花在这样一件寂寞的事上。她回答说，一首歌就像一条路：如果没有人走，它就会悄悄变回草地。“如果我当初留在家里，”她说，“我保住了安逸，却会失去他们的声音。”"
+    },
+    {
+      "text": "Her notebooks now rest in a small museum, and students still sing the songs that she saved. Money and fame fade quickly, she once wrote; it is the memory of a people that we must keep.",
+      "translation": "她的笔记本如今安放在一座小博物馆里，学生们仍在唱她保存下来的那些歌。金钱与名声很快会消散，她曾写道；我们必须留住的，是一个民族的记忆。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Lin Hui carry into the mountain village?",
+      "audioText": "What did Lin Hui carry into the mountain village?",
+      "options": [
+        {
+          "emoji": "📓",
+          "value": "notebook",
+          "text": "A notebook"
+        },
+        {
+          "emoji": "🎻",
+          "value": "violin",
+          "text": "A violin"
+        },
+        {
+          "emoji": "📷",
+          "value": "camera",
+          "text": "A camera"
+        }
+      ],
+      "answer": "notebook"
+    },
+    {
+      "type": "word_builder",
+      "word": "patience",
+      "audioText": "patience"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "the",
+        "grandmothers",
+        "who",
+        "remembered",
+        "those",
+        "verses."
+      ],
+      "audioText": "It was the grandmothers who remembered those verses."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Had",
+        "she",
+        "stopped,",
+        "the",
+        "songs",
+        "would",
+        "have",
+        "vanished."
+      ],
+      "audioText": "Had she stopped, the songs would have vanished."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If she ___ not smiled and waited so patiently, they might never have sung a single note for her.",
+      "choices": [
+        "had",
+        "has",
+        "did"
+      ],
+      "answer": "had",
+      "audioText": "If she had not smiled and waited so patiently, they might never have sung a single note for her."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Not only ___ she write down the words, but she also marked the rhythm with small dots above them.",
+      "choices": [
+        "did",
+        "does",
+        "had"
+      ],
+      "answer": "did",
+      "audioText": "Not only did she write down the words, but she also marked the rhythm with small dots above them."
+    }
+  ],
+  "_unknownWords": [
+    "outsider",
+    "sung",
+    "rhythm",
+    "verses",
+    "vanished"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "zk-r5-s10",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 10,
+  "title": "The Boy Who Counted Birds",
+  "titleCn": "数鸟的男孩",
+  "coverEmoji": "🐦",
+  "paragraphs": [
+    {
+      "text": "Lin Tao was a quiet boy who lived near a lake. Every morning before school, he walked to the lake with a small notebook. He had started this habit when he was only nine years old. In the book, he wrote down the names of the birds which he saw.",
+      "translation": "林涛是个安静的男孩，他家住在湖边。每天上学前，他都带着一个小本子走到湖边。他这个习惯从九岁就开始了。在本子上，他记下自己看到的鸟的名字。"
+    },
+    {
+      "text": "At first, Lin Tao knew only a few common birds. He wanted to learn the names of the others. So he borrowed a bird book from the school library. He had read it three times before the summer holiday ended. After that, he could name almost every bird that flew over the lake.",
+      "translation": "起初，林涛只认识几种常见的鸟。他想知道其他鸟的名字。于是他从学校图书馆借了一本关于鸟的书。暑假结束前，他已经把这本书读了三遍。从那以后，他几乎能叫出飞过湖面的每一只鸟的名字。"
+    },
+    {
+      "text": "One autumn, some workers came and cut down many trees by the lake. The birds had lived there for many years. They began to leave one by one. Lin Tao was worried, so he wrote a short report about the birds. He also drew a simple map which showed where each bird liked to stay.",
+      "translation": "有一年秋天，一些工人来到湖边，砍掉了许多树。这些鸟在那里已经生活了很多年。它们开始一只只地离开。林涛很担心，于是他写了一份关于这些鸟的简短报告。他还画了一张简单的地图，标出每种鸟喜欢待的地方。"
+    },
+    {
+      "text": "Then he took his notebook and his map to the village office. The head of the village read them carefully and said nothing at first. A few days later, he told Lin Tao that the village would plant new trees. Lin Tao had never felt so happy.",
+      "translation": "然后他把自己的本子和地图带到了村委会。村长仔细地看了这些材料，起初什么也没说。几天后，他告诉林涛，村里会种上新树。林涛从未这么开心过。"
+    },
+    {
+      "text": "Other children in the village soon joined him on his morning walks. They formed a small group which met by the lake every weekend. Together they counted the birds and wrote down what they had found. Last year, their lake became a small park for birds and people.",
+      "translation": "村里其他的孩子很快也加入了他的晨间散步。他们组成了一个小团体，每个周末都在湖边碰面。他们一起数鸟，并把发现的情况记下来。去年，他们的湖变成了一个供鸟和人们使用的小公园。"
+    },
+    {
+      "text": "Now Lin Tao is a student who studies birds at a famous university. He still keeps his first notebook, which is old and full of notes. He often tells young people about his small village. Small actions can change a place.",
+      "translation": "如今，林涛是一名在著名大学研究鸟类的学生。他仍然保留着自己的第一个本子，它已经很旧，里面写满了笔记。他常常向年轻人讲起自己那个小村庄。小小的行动也能改变一个地方。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which animal did Lin Tao watch and write about every morning?",
+      "audioText": "Which animal did Lin Tao watch and write about every morning?",
+      "options": [
+        {
+          "emoji": "🐦",
+          "value": "birds",
+          "text": "Birds"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        },
+        {
+          "emoji": "🐝",
+          "value": "bees",
+          "text": "Bees"
+        }
+      ],
+      "answer": "birds"
+    },
+    {
+      "type": "word_builder",
+      "word": "notebook",
+      "audioText": "notebook"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Lin",
+        "Tao",
+        "had",
+        "never",
+        "felt",
+        "so",
+        "happy."
+      ],
+      "audioText": "Lin Tao had never felt so happy."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "began",
+        "to",
+        "leave",
+        "one",
+        "by",
+        "one."
+      ],
+      "audioText": "They began to leave one by one."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "He had ___ it three times before the summer holiday ended.",
+      "choices": [
+        "read",
+        "reads",
+        "reading"
+      ],
+      "answer": "read",
+      "audioText": "He had read it three times before the summer holiday ended."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "After that, he could name almost every bird ___ flew over the lake.",
+      "choices": [
+        "that",
+        "who",
+        "where"
+      ],
+      "answer": "that",
+      "audioText": "After that, he could name almost every bird that flew over the lake."
+    }
+  ],
+  "_unknownWords": [
+    "tao",
+    "borrowed",
+    "later",
+    "joined",
+    "counted"
+  ]
+}

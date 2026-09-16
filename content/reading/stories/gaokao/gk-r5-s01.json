@@ -1,0 +1,112 @@
+{
+  "id": "gk-r5-s01",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 1,
+  "title": "The Year That Changed Her Mind",
+  "titleCn": "改变她想法的那一年",
+  "coverEmoji": "🎓",
+  "paragraphs": [
+    {
+      "text": "When my cousin Lily announced that she would delay university for a year, my aunt, who had dreamed of seeing her in a lecture hall that autumn, could hardly hide her worry. To many parents, a gap year sounds like a dangerous pause, or even a hole in a carefully planned life. Lily, however, had made up her mind.",
+      "translation": "当我的表姐莉莉宣布要推迟一年上大学时，我那一直盼着那年秋天能在大学讲堂里见到她的姨妈，几乎掩饰不住自己的担忧。在许多父母看来，间隔年听起来像是一次危险的停顿，甚至是精心规划的人生里的一个窟窿。然而莉莉已经下定了决心。"
+    },
+    {
+      "text": "Her plan was simple. She spent the first three months in a small mountain village, where she taught English to children whose school had only two teachers, both of whom shared one broken computer. Evenings were spent preparing lessons, her notebook filled with simple drawings meant to make new words easier to remember. Later she worked in a city library, sorting books and listening to readers who came simply for company.",
+      "translation": "她的计划很简单。头三个月她待在一个小山村，在那里教孩子们英语——那所学校只有两位老师，而他们俩合用一台坏了的电脑。晚上她都用来备课，笔记本上画满了简单的图画，为的是让新单词更容易记住。后来她到城里一家图书馆打工，整理图书，也听一些读者说话——他们来，只是为了有个伴。"
+    },
+    {
+      "text": "She admitted that the year was not, as some friends had imagined, a long holiday. There were mornings when she questioned her choice, and long evenings when she missed the classroom she had never entered. What kept her going, she said, was the moment a shy boy read a whole sentence aloud for the first time. That small victory, which no exam could ever measure, taught her more about patience than any lecture.",
+      "translation": "她承认，这一年并不像一些朋友想象的那样是个漫长的假期。有些早晨她会怀疑自己的选择，有些漫长的夜晚她会想念那个自己从未踏进过的教室。她说，支撑她走下去的，是一个害羞的男孩第一次大声读出一整句话的那一刻。那份小小的胜利，是任何考试都衡量不了的，它教给她的耐心，比任何一堂课都多。"
+    },
+    {
+      "text": "Now Lily is back at home, ready to begin her degree in education. The year away, during which she learned to listen before speaking, has changed the way she thinks about learning. Education, she now believes, does not begin at a school gate or end at a graduation ceremony. It is a habit of mind which, once formed, stays with us for the rest of our life.",
+      "translation": "如今莉莉回到了家，准备开始学习教育学学位。离校的这一年，她学会了先倾听再开口，也改变了她对学习的看法。她现在相信，教育并不始于校门，也不终于毕业典礼。它是一种思维习惯，一旦养成，便会伴随我们余生。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Lily teach the children in the small mountain village?",
+      "audioText": "What did Lily teach the children in the small mountain village?",
+      "options": [
+        {
+          "emoji": "📖",
+          "value": "english",
+          "text": "English"
+        },
+        {
+          "emoji": "➗",
+          "value": "maths",
+          "text": "Maths"
+        },
+        {
+          "emoji": "🎼",
+          "value": "music",
+          "text": "Music"
+        }
+      ],
+      "answer": "english"
+    },
+    {
+      "type": "word_builder",
+      "word": "patience",
+      "audioText": "patience"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Her",
+        "plan",
+        "was",
+        "simple."
+      ],
+      "audioText": "Her plan was simple."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Lily,",
+        "however,",
+        "had",
+        "made",
+        "up",
+        "her",
+        "mind."
+      ],
+      "audioText": "Lily, however, had made up her mind."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She taught English to children whose school had only two teachers, both of ___ shared one broken computer.",
+      "choices": [
+        "whom",
+        "which",
+        "who"
+      ],
+      "answer": "whom",
+      "audioText": "She taught English to children whose school had only two teachers, both of whom shared one broken computer."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Education, she now believes, does not begin at a school gate or end at a graduation ___.",
+      "choices": [
+        "ceremony",
+        "company",
+        "computer"
+      ],
+      "answer": "ceremony",
+      "audioText": "Education, she now believes, does not begin at a school gate or end at a graduation ceremony."
+    }
+  ],
+  "_unknownWords": [
+    "gap",
+    "broken",
+    "drawings",
+    "easier",
+    "readers",
+    "simply",
+    "admitted",
+    "graduation"
+  ]
+}

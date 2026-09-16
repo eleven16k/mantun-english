@@ -1,0 +1,121 @@
+{
+  "id": "zk-r2-s06",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 6,
+  "title": "A Weekend in Xi'an",
+  "titleCn": "西安周末游记",
+  "coverEmoji": "🏯",
+  "paragraphs": [
+    {
+      "text": "Last month, my family and I travelled to Xi'an by train. The trip from our city took about four hours. When we arrived, the old city wall was the first thing we saw. It is one of the longest walls in China.",
+      "translation": "上个月，我和家人坐火车去了西安。从我们这座城市出发，路上大约用了四个小时。到达的时候，我们第一眼看到的就是那座古老的城墙。它是中国最长的城墙之一。"
+    },
+    {
+      "text": "On the first morning, we climbed up the wall and rented bikes. Riding on the top of the wall was more exciting than I expected. While we were riding, we stopped to take photos of the old streets below. After two hours, my legs felt tired but happy.",
+      "translation": "第一天早上，我们爬上城墙，还租了自行车。在城墙顶上骑车比我想象的还要刺激。骑车的时候，我们停下来拍下面老街的照片。两个小时后，我的腿有点累，但心里很开心。"
+    },
+    {
+      "text": "In the afternoon, we visited the Big Wild Goose Pagoda. It was quieter than the busy city centre. Before we went inside, a friendly guide told us some stories. When he spoke, I could almost see those old days.",
+      "translation": "下午，我们去了大雁塔。那里比热闹的市中心安静多了。进去之前，一位友好的导游给我们讲了一些故事。他讲的时候，我几乎能看到从前的样子。"
+    },
+    {
+      "text": "For dinner, we tried the local noodles. They were the most delicious food of our trip. My father said they were better than any dish at home. We also learned that local people eat noodles with many sauces.",
+      "translation": "晚饭时，我们尝了当地的面条。那是我们这趟旅行中最好吃的东西。爸爸说它们比家里做的任何一道菜都好吃。我们还了解到，当地人吃面时会配很多种酱料。"
+    },
+    {
+      "text": "On the last day, we walked along the old market street. It was full of small shops and sweet smells. While we were walking, a shopkeeper smiled and gave me a free cake. That was the kindest thing of the whole trip.",
+      "translation": "最后一天，我们沿着老市场街散步。街上到处都是小店铺，还有甜甜的香味。我们走着的时候，一位店主笑着送给我一块免费的糕点。那是整趟旅行中最暖心的一件事。"
+    },
+    {
+      "text": "Xi'an is a big city with a long history. However, it felt warm and friendly to us. Now I often look at our photos and smile. I hope I can go back and ride on the wall again.",
+      "translation": "西安是一座历史悠久的大城市。但它给我们感觉很温暖、很亲切。现在我常常看着照片微笑。我希望还能再去一次，再在城墙上骑一回车。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the writer ride on the old city wall?",
+      "audioText": "What did the writer ride on the old city wall?",
+      "options": [
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "A bike"
+        },
+        {
+          "emoji": "🚌",
+          "value": "bus",
+          "text": "A bus"
+        },
+        {
+          "emoji": "🚂",
+          "value": "train",
+          "text": "A train"
+        }
+      ],
+      "answer": "bike"
+    },
+    {
+      "type": "word_builder",
+      "word": "climbed",
+      "audioText": "climbed"
+    },
+    {
+      "type": "word_builder",
+      "word": "kindest",
+      "audioText": "kindest"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "quieter",
+        "than",
+        "the",
+        "busy",
+        "city",
+        "centre."
+      ],
+      "audioText": "It was quieter than the busy city centre."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "When we ___, the old city wall was the first thing we saw.",
+      "choices": [
+        "arrived",
+        "arrive",
+        "arriving"
+      ],
+      "answer": "arrived",
+      "audioText": "When we arrived, the old city wall was the first thing we saw."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Riding on the top of the wall was ___ exciting than I expected.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "answer": "more",
+      "audioText": "Riding on the top of the wall was more exciting than I expected."
+    }
+  ],
+  "_unknownWords": [
+    "travelled",
+    "xi'an",
+    "china",
+    "rented",
+    "big",
+    "wild",
+    "pagoda",
+    "busy",
+    "guide",
+    "local",
+    "sauces",
+    "market",
+    "shopkeeper"
+  ]
+}

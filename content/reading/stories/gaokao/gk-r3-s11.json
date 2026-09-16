@@ -1,0 +1,132 @@
+{
+  "id": "gk-r3-s11",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 11,
+  "title": "A History Written in Silence",
+  "titleCn": "沉默中写成的历史",
+  "coverEmoji": "🖌️",
+  "paragraphs": [
+    {
+      "text": "More than two thousand years ago, a young man travelled across China with a brush and a roll of bamboo slips. His father had begun a great history of the known world but had died before he could finish it. If the son had refused that task, the memory of three thousand years might have disappeared forever. It was this promise, made at his father's bedside, that shaped the rest of his life.",
+      "translation": "两千多年前，一个年轻人带着一支笔和一卷竹简走遍了中国。他的父亲曾着手撰写一部关于已知世界的伟大历史，却没写完就去世了。倘若儿子拒绝了这项使命，三千年的记忆也许会永远消失。正是这个在父亲病榻前许下的承诺，塑造了他此后的一生。"
+    },
+    {
+      "text": "The young man's name was Sima Qian, and he believed that a historian must be patient as well as honest. Not only did he read every ancient book in the royal library, but he also walked to the places where history had happened. He stood on old battlefields and asked farmers and soldiers what their grandparents had told them. Wherever a story sounded too perfect, he compared it with another version and recorded his own doubts.",
+      "translation": "这个年轻人名叫司马迁，他相信历史学家既要诚实，也要有耐心。他不仅读遍了皇家藏书中的每一部古书，还亲自走到历史发生的地方。他站在古老的战场上，向农夫和士兵询问他们的祖辈讲过什么。凡是某个故事听起来太过完美，他都会与另一个版本对照，并记下自己的疑问。"
+    },
+    {
+      "text": "Then disaster arrived, and it arrived because of a single honest opinion. He spoke up for a general who had lost a battle, and the emperor was furious. The punishment that followed was so terrible that many people thought death would have been the easier choice. Had he chosen to die, he would have been remembered as a loyal official, but the great history in his hands would never have been completed.",
+      "translation": "后来灾难降临了，而起因只是一句诚实的看法。他为一位打了败仗的将军辩护，皇帝勃然大怒。随之而来的惩罚如此严酷，以至于许多人都认为死反而是更轻松的选择。如果他选择去死，他会被后人记作一位忠臣，但他手中的那部伟大历史却永远不会完成。"
+    },
+    {
+      "text": "Sima Qian chose to live, although he knew that many people would never understand why. For years he worked in silence, correcting, cutting and adding, until the bamboo slips filled a small room. It was not fame that kept him writing, but the belief that the past can guide the future. In the end his book contained one hundred and thirty chapters and covered three thousand years.",
+      "translation": "司马迁选择了活下去，尽管他知道很多人永远不会理解为什么。多年来他默默工作，修改、删减、添补，直到竹简堆满了一间小屋。让他坚持写作的并不是名声，而是“过去能够指引未来”这一信念。最终，他的书有一百三十篇，记述了三千年的历史。"
+    },
+    {
+      "text": "He called his great work the Records of the Grand Historian, a book that has been read for over two thousand years. Were it not for that quiet decision, later generations would have lost a mirror in which to see themselves. Students today still turn his pages, learning that courage sometimes means waiting and working rather than fighting. Not every hero carries a sword; some simply carry a brush and a promise.",
+      "translation": "他把这部巨著称为《史记》，一本两千多年来始终被人阅读的书。若不是那个安静的决定，后世便会失去一面照见自己的镜子。今天的学生仍在翻阅他的书页，从中懂得：勇气有时意味着等待和耕耘，而不是争斗。并非每个英雄都手持长剑；有些英雄只是握着一支笔和一个承诺。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what did Sima Qian use to record history?",
+      "audioText": "According to the text, what did Sima Qian use to record history?",
+      "options": [
+        {
+          "emoji": "🖌️",
+          "value": "brush",
+          "text": "A brush"
+        },
+        {
+          "emoji": "⚔️",
+          "value": "sword",
+          "text": "A sword"
+        },
+        {
+          "emoji": "🥁",
+          "value": "drum",
+          "text": "A drum"
+        }
+      ],
+      "answer": "brush"
+    },
+    {
+      "type": "word_builder",
+      "word": "historian",
+      "audioText": "historian"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Not",
+        "only",
+        "did",
+        "he",
+        "read",
+        "every",
+        "ancient",
+        "book"
+      ],
+      "audioText": "Not only did he read every ancient book."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "not",
+        "fame",
+        "that",
+        "kept",
+        "him",
+        "writing"
+      ],
+      "audioText": "It was not fame that kept him writing."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If the son ___ that task, the memory of three thousand years might have disappeared forever.",
+      "choices": [
+        "had refused",
+        "refused",
+        "would refuse"
+      ],
+      "answer": "had refused",
+      "audioText": "If the son had refused that task, the memory of three thousand years might have disappeared forever."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ it not for that quiet decision, later generations would have lost a mirror in which to see themselves.",
+      "choices": [
+        "Were",
+        "Was",
+        "Had"
+      ],
+      "answer": "Were",
+      "audioText": "Were it not for that quiet decision, later generations would have lost a mirror in which to see themselves."
+    }
+  ],
+  "_unknownWords": [
+    "travelled",
+    "begun",
+    "known",
+    "forever",
+    "father's",
+    "bedside",
+    "man's",
+    "sima",
+    "qian",
+    "historian",
+    "royal",
+    "battlefields",
+    "furious",
+    "easier",
+    "chosen",
+    "loyal",
+    "cutting",
+    "generations",
+    "simply"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "xsc-r5-s10",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 10,
+  "title": "The Darkest Cave in Dino Valley",
+  "titleCn": "恐龙谷里最黑的洞穴",
+  "coverEmoji": "🕳️",
+  "paragraphs": [
+    {
+      "text": "Last week, Dino Valley had a big surprise. A loud wind opened a hole in the hill. Little Pip looked inside the hole. \"This is the darkest cave in the valley!\" he said.",
+      "translation": "上周，恐龙谷发生了一件大事。一阵大风在山丘上吹开了一个洞。小皮普朝洞里看了看。“这是山谷里最黑的洞穴！”他说。"
+    },
+    {
+      "text": "Pip called his friends Rex and Mia. They came with a long rope and a lamp. \"We can go in because we are brave,\" said Rex. Then they walked slowly into the dark cave.",
+      "translation": "皮普叫来了他的朋友雷克斯和米娅。他们带来了一根长绳和一盏灯。“我们能进去，因为我们很勇敢。”雷克斯说。然后他们慢慢走进了黑黑的洞穴。"
+    },
+    {
+      "text": "Inside, the cave was cool and quiet. They saw old pictures on the stone wall. The pictures showed the biggest dinosaurs of long ago. \"This is the oldest story in Dino Valley,\" said Mia.",
+      "translation": "洞里又凉又安静。他们看见石壁上有古老的图画。那些图画画的是很久以前最大的恐龙。“这是恐龙谷里最古老的故事。”米娅说。"
+    },
+    {
+      "text": "Suddenly, the lamp went out. Everything was black and Pip felt afraid. He was afraid because he could not see. Then Rex found a little light in the corner. It was the most beautiful blue stone!",
+      "translation": "突然，灯灭了。四周一片漆黑，皮普感到害怕。他害怕是因为他什么也看不见。接着，雷克斯在角落里发现了一点亮光。那是一块最美丽的蓝色石头！"
+    },
+    {
+      "text": "The blue stone made the cave bright. The friends walked to the end of the cave. There they found a huge fossil egg. It was the heaviest egg in the world!",
+      "translation": "那块蓝色石头把洞穴照得亮亮的。朋友们一直走到了洞穴的尽头。在那里，他们发现了一枚巨大的化石蛋。这是世界上最重的蛋！"
+    },
+    {
+      "text": "They ran home and told Grandpa Dino. He smiled and said, \"You are the bravest kids in the valley.\" That night, Pip slept well because he was happy.",
+      "translation": "他们跑回家，把这件事告诉了恐龙爷爷。他笑着说：“你们是山谷里最勇敢的孩子。”那天晚上，皮普睡得很香，因为他很开心。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What opened a hole in the hill?",
+      "audioText": "What opened a hole in the hill?",
+      "options": [
+        {
+          "emoji": "💨",
+          "value": "wind",
+          "text": "A wind"
+        },
+        {
+          "emoji": "🦖",
+          "value": "dino",
+          "text": "A dinosaur"
+        },
+        {
+          "emoji": "🌧️",
+          "value": "rain",
+          "text": "Rain"
+        }
+      ],
+      "answer": "wind"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the friends see on the stone wall?",
+      "audioText": "What did the friends see on the stone wall?",
+      "options": [
+        {
+          "emoji": "🖼️",
+          "value": "pictures",
+          "text": "Old pictures"
+        },
+        {
+          "emoji": "🔢",
+          "value": "numbers",
+          "text": "Big numbers"
+        },
+        {
+          "emoji": "📝",
+          "value": "words",
+          "text": "New words"
+        }
+      ],
+      "answer": "pictures"
+    },
+    {
+      "type": "word_builder",
+      "word": "brave",
+      "audioText": "brave"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "saw",
+        "old",
+        "pictures",
+        "on",
+        "the",
+        "stone",
+        "wall."
+      ],
+      "audioText": "They saw old pictures on the stone wall."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The blue stone ___ the cave bright.",
+      "choices": [
+        "made",
+        "make",
+        "makes"
+      ],
+      "answer": "made",
+      "audioText": "The blue stone made the cave bright."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Pip felt afraid ___ he could not see.",
+      "choices": [
+        "because",
+        "but",
+        "or"
+      ],
+      "answer": "because",
+      "audioText": "Pip felt afraid because he could not see."
+    }
+  ],
+  "_unknownWords": [
+    "pip",
+    "rex",
+    "biggest",
+    "fossil",
+    "heaviest",
+    "world",
+    "bravest"
+  ]
+}

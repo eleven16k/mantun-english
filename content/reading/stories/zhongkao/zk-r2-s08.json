@@ -1,0 +1,121 @@
+{
+  "id": "zk-r2-s08",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 8,
+  "title": "Boating on the Li River",
+  "titleCn": "漓江泛舟",
+  "coverEmoji": "🛶",
+  "paragraphs": [
+    {
+      "text": "Last summer, my family took a trip to Guilin. We arrived by train late in the evening. When we walked out of the station, warm air met us. Before we went to our hotel, we stood by the river. The lights on the water looked like small stars.",
+      "translation": "去年夏天，我们一家人去桂林旅行。我们傍晚时分坐火车到达。走出车站时，温暖的空气迎面而来。去旅馆之前，我们站在江边。水面上的灯光看起来像一颗颗小星星。"
+    },
+    {
+      "text": "The next morning, we took a boat down the Li River. The water was much clearer than I expected. While the boat moved slowly, the mountains changed shape again and again. Some of them looked like horses, and others looked like old men.",
+      "translation": "第二天早上，我们坐船顺漓江而下。江水比我预想的清澈得多。船慢慢前行，群山一次又一次地变换着形状。有的山看起来像马，有的则像老人。"
+    },
+    {
+      "text": "The boat trip was the best part of our holiday. After two hours, we reached a small village beside the water. A local woman sold us fresh rice noodles with hot soup. They were cheaper and tastier than the ones at home.",
+      "translation": "坐船游览是我们假期中最棒的部分。两个小时后，我们到达江边的一个小村庄。一位当地妇女卖给我们配着热汤的新鲜米粉。这些米粉比家里的更便宜，也更好吃。"
+    },
+    {
+      "text": "In the afternoon, we rented bikes and rode through the rice fields. The road was narrower than the main street, so we rode slowly. After we passed a green forest, we found a quiet lake. It was the most peaceful place in the whole area.",
+      "translation": "下午，我们租了自行车骑过稻田。那条路比大街窄，所以我们骑得很慢。经过一片绿色的树林后，我们发现了一个安静的湖。那是整片地区最宁静的地方。"
+    },
+    {
+      "text": "When the sun went down, we returned to the town. The night market was busier than the day market. We tried some sweet cakes before we went back to the hotel. My little brother said Guilin was more beautiful than any city he knew.",
+      "translation": "太阳落下时，我们回到了镇上。夜市比白天的市场更热闹。回旅馆之前，我们尝了一些甜糕。我弟弟说桂林比他知道的任何城市都更美。"
+    },
+    {
+      "text": "On our last day, we climbed a hill to see the whole town. From the top, the river looked like a green line between the hills. I took many photos, but the real view was better. After we got home, I showed them to my friends. Now I still remember the quiet water and the soft green hills.",
+      "translation": "最后一天，我们爬上一座小山，去看整个小镇。从山顶看，江水像一条绿色的线穿行在群山之间。我拍了很多照片，但真实的景色更好。回到家以后，我把照片拿给朋友们看。现在我仍然记得那安静的水和柔和的青山。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the woman in the village sell to the family?",
+      "audioText": "What did the woman in the village sell to the family?",
+      "options": [
+        {
+          "emoji": "🍜",
+          "value": "noodles",
+          "text": "Noodles"
+        },
+        {
+          "emoji": "🍰",
+          "value": "cakes",
+          "text": "Cakes"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apples",
+          "text": "Apples"
+        }
+      ],
+      "answer": "noodles"
+    },
+    {
+      "type": "word_builder",
+      "word": "peaceful",
+      "audioText": "peaceful"
+    },
+    {
+      "type": "word_builder",
+      "word": "village",
+      "audioText": "village"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "water",
+        "was",
+        "much",
+        "clearer",
+        "than",
+        "I",
+        "expected."
+      ],
+      "audioText": "The water was much clearer than I expected."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "They were ___ and tastier than the ones at home.",
+      "choices": [
+        "cheaper",
+        "cheap",
+        "cheapest"
+      ],
+      "answer": "cheaper",
+      "audioText": "They were cheaper and tastier than the ones at home."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "When the sun went ___, we returned to the town.",
+      "choices": [
+        "down",
+        "up",
+        "off"
+      ],
+      "answer": "down",
+      "audioText": "When the sun went down, we returned to the town."
+    }
+  ],
+  "_unknownWords": [
+    "guilin",
+    "li",
+    "men",
+    "local",
+    "rice",
+    "soup",
+    "tastier",
+    "rented",
+    "narrower",
+    "peaceful",
+    "market",
+    "busier",
+    "view"
+  ]
+}

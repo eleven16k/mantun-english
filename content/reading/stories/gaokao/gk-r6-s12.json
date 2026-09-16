@@ -1,0 +1,118 @@
+{
+  "id": "gk-r6-s12",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 12,
+  "title": "Why We Keep Paying for What We Forget",
+  "titleCn": "为什么我们一直在为忘记的东西付费",
+  "coverEmoji": "💳",
+  "paragraphs": [
+    {
+      "text": "Subscription services have quietly replaced one-time purchases in many parts of daily life, from music and films to software and even coffee. Although most customers never plan to spend more each month, small payments feel harmless when compared with a single large bill. This is why a gym membership, a music app and a cloud storage plan can sit unnoticed on a bank statement for years.",
+      "translation": "订阅式服务已经悄悄取代了日常生活中许多一次性购买，从音乐、影视到软件甚至咖啡。尽管大多数顾客从未打算每月多花钱，但与一张大额账单相比，小额支付让人感觉无伤大雅。这就是为什么健身卡、音乐应用和云存储套餐可以在银行账单上被忽视好几年。"
+    },
+    {
+      "text": "Companies rely on this quiet inattention, as anyone who has ever tried to cancel a plan will understand. While a free trial sounds generous, it usually becomes a paid subscription the moment the trial period ends. The design is deliberate, since joining takes about ten seconds while leaving may require several screens and a long phone call.",
+      "translation": "企业正是依赖这种悄无声息的忽视，任何试过取消套餐的人都能明白这一点。虽然免费试用听起来很慷慨，但试用期一结束，它通常就变成了付费订阅。这种设计是有意为之的，因为注册大约只要十秒钟，而退出可能要好几个页面，外加一通漫长的电话。"
+    },
+    {
+      "text": "Economists describe this pattern as the subscription trap, and the numbers explain why. Although each individual payment seems tiny, the steady stream of them adds up to a surprising annual total. Despite the convenience that these services offer, many families continue paying for tools and channels they stopped using months ago.",
+      "translation": "经济学家把这种模式称为“订阅陷阱”，数据能说明原因。虽然每一笔单独的付款看起来微不足道，但这些小额款源源不断地累积起来，会变成一笔惊人的年度总额。尽管这些服务确实带来了便利，许多家庭仍在为几个月前就不再使用的工具和频道付费。"
+    },
+    {
+      "text": "Not every company, as recent surveys of the industry suggest, wants to keep its customers confused. Some businesses now send a friendly reminder before a yearly plan renews, and they allow people to cancel with a single click. Surprisingly, such honesty often builds loyalty, because customers stay by choice rather than because they cannot find the exit.",
+      "translation": "并非每家公司都想让顾客一头雾水，最近的行业调查就显示了这一点。如今有些企业会在年度套餐续费前发来一条友好提醒，并且让人一键就能取消。出人意料的是，这种诚实往往能带来忠诚：顾客留下来是因为自己愿意留下，而不是因为找不到出口。"
+    },
+    {
+      "text": "So before you sign up for another free month, read the terms and note the date when the payment begins. A subscription, as any careful customer knows, is simply a promise to keep paying until you decide to stop. The real question is whether the service is still worth the money that you quietly hand over each month.",
+      "translation": "所以，在你再次注册一个月免费服务之前，请读一读条款，记下开始扣款的日子。订阅，正如任何细心的顾客所知，不过是一个持续付钱、直到你决定停止的承诺。真正的问题是：这项服务是否还值得你每月悄悄交出去的那些钱。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Surprisingly",
+        "such",
+        "honesty",
+        "often",
+        "builds",
+        "loyalty"
+      ],
+      "audioText": "Surprisingly, such honesty often builds loyalty, because customers stay by choice rather than because they cannot find the exit."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Although each individual payment seems ___, the steady stream of them adds up to a surprising annual total.",
+      "choices": [
+        "tiny",
+        "tidy",
+        "tough"
+      ],
+      "answer": "tiny",
+      "audioText": "Although each individual payment seems tiny, the steady stream of them adds up to a surprising annual total."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "joining",
+        "takes",
+        "about",
+        "ten",
+        "seconds"
+      ],
+      "audioText": "The design is deliberate, since joining takes about ten seconds while leaving may require several screens and a long phone call."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Despite the ___ that these services offer, many families continue paying for tools and channels they stopped using months ago.",
+      "choices": [
+        "convenience",
+        "confidence",
+        "competition"
+      ],
+      "answer": "convenience",
+      "audioText": "Despite the convenience that these services offer, many families continue paying for tools and channels they stopped using months ago."
+    },
+    {
+      "type": "word_builder",
+      "word": "loyalty",
+      "audioText": "loyalty"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The real question is whether the service is still ___ the money that you quietly hand over each month.",
+      "choices": [
+        "worth",
+        "worthy",
+        "worthless"
+      ],
+      "answer": "worth",
+      "audioText": "The real question is whether the service is still worth the money that you quietly hand over each month."
+    }
+  ],
+  "_unknownWords": [
+    "subscription",
+    "replaced",
+    "purchases",
+    "payments",
+    "harmless",
+    "membership",
+    "app",
+    "unnoticed",
+    "inattention",
+    "deliberate",
+    "economists",
+    "individual",
+    "payment",
+    "steady",
+    "despite",
+    "confused",
+    "renews",
+    "surprisingly",
+    "honesty",
+    "loyalty",
+    "cannot",
+    "simply"
+  ]
+}

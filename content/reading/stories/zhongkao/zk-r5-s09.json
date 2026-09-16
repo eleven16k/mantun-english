@@ -1,0 +1,119 @@
+{
+  "id": "zk-r5-s09",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 9,
+  "title": "The Girl Who Made Clean Water",
+  "titleCn": "让水变干净的女孩",
+  "coverEmoji": "💧",
+  "paragraphs": [
+    {
+      "text": "Lily is a girl who lives in a small village near the mountains. The old river that runs past her home was often very dirty. Many people in the village had been sick after drinking the water.",
+      "translation": "莉莉是一个住在山边小村子里的女孩。流经她家的那条老河常常很脏。村里很多人喝了这水以后都病倒了。"
+    },
+    {
+      "text": "Lily's grandmother was one of the people who had been sick. She had felt weak and tired for many weeks that winter. Lily wanted to help her, so she began to read books about water. In one book she found a simple tool that could clean dirty water.",
+      "translation": "莉莉的奶奶就是生病的人之一。那年冬天，她已经虚弱疲惫了好几个星期。莉莉想帮她，于是开始读关于水的书。在一本书里，她发现了一个能净化脏水的简易工具。"
+    },
+    {
+      "text": "The tool was cheap and easy to make. Lily used a plastic bottle, some sand, small stones and a piece of cloth. She cut a hole in the bottle and put everything inside it. Then she put the dirty water in and waited for a long time.",
+      "translation": "这个工具便宜又好做。莉莉用了一个塑料瓶、一些沙子、小石子和一块布。她在瓶子上剪了个洞，把这些东西都放了进去。然后她把脏水倒进去，等了很久。"
+    },
+    {
+      "text": "Her first try did not work well. The water was still dirty. She had tried and failed six times before she got it right. Her science teacher, who helped her after school, told her to keep trying.",
+      "translation": "她的第一次尝试不太成功，水还是脏的。她试了六次、失败了六次，才终于做对。她的科学老师放学后帮她，告诉她要继续努力。"
+    },
+    {
+      "text": "Two months later, the water came out clear and safe to drink. Lily gave the first tool to her grandmother and some other families. By the end of that year, she had made thirty tools for the village.",
+      "translation": "两个月后，流出来的水变得清澈，可以安全饮用。莉莉把第一个工具送给了奶奶和另外几户人家。到那年年底，她已经为村里做了三十个这样的工具。"
+    },
+    {
+      "text": "Lily won a prize at her school science show last spring. Now she teaches younger students how to make the same tool. She often tells people that anyone who tries can make a small change.",
+      "translation": "去年春天，莉莉在学校的科学展上获了奖。现在她教更小的学生做同样的工具。她常常告诉大家，只要肯尝试，任何人都能带来一点小小的改变。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which of these did Lily put inside the bottle?",
+      "audioText": "Which of these did Lily put inside the bottle?",
+      "options": [
+        {
+          "emoji": "🪨",
+          "value": "sand",
+          "text": "Sand and small stones"
+        },
+        {
+          "emoji": "🍬",
+          "value": "sweets",
+          "text": "Some sweets"
+        },
+        {
+          "emoji": "🌸",
+          "value": "flowers",
+          "text": "Some flowers"
+        }
+      ],
+      "answer": "sand"
+    },
+    {
+      "type": "word_builder",
+      "word": "village",
+      "audioText": "village"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "tool",
+        "was",
+        "cheap",
+        "and",
+        "easy",
+        "to",
+        "make"
+      ],
+      "audioText": "The tool was cheap and easy to make."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Her",
+        "first",
+        "try",
+        "did",
+        "not",
+        "work",
+        "well"
+      ],
+      "audioText": "Her first try did not work well."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Lily is a girl ___ lives in a small village near the mountains.",
+      "choices": [
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer": "who",
+      "audioText": "Lily is a girl who lives in a small village near the mountains."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "By the end of that year, she ___ made thirty tools for the village.",
+      "choices": [
+        "had",
+        "has",
+        "have"
+      ],
+      "answer": "had",
+      "audioText": "By the end of that year, she had made thirty tools for the village."
+    }
+  ],
+  "_unknownWords": [
+    "lily's",
+    "winter",
+    "later"
+  ]
+}

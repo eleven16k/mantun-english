@@ -1,0 +1,128 @@
+{
+  "id": "gk-r2-s06",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 6,
+  "title": "Who Taught the Machine to Judge?",
+  "titleCn": "谁教会了机器去评判？",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "Every day, quiet decisions are being made about us by software that few people ever see. These programs are said to decide which students get a place, who receives a loan, and who gets a job interview. It is easy to believe that a machine is fairer than a tired human, because numbers seem neutral. But is that really true? What a computer learns depends completely on the information that people have chosen to feed it.",
+      "translation": "每天，都有一些悄无声息的判断由我们几乎看不见的软件替我们做出，而这些判断关乎每一个人。据说这些程序会决定哪些学生能获得录取名额、谁能拿到贷款、谁能得到面试机会。人们很容易相信，机器比疲惫的人更公正，因为数字看起来是中立的。但事实真的如此吗？计算机学到什么，完全取决于人们选择喂给它的信息。"
+    },
+    {
+      "text": "If the past is unfair, the machine will copy that unfairness and repeat it at a much greater speed. A famous example has been discussed in many technology reports over the last few years. A large company built a tool to read job applications and pick the best ones. It had been trained on ten years of the company's own hiring records. Because most of those earlier workers were men, the system quietly learned to prefer male candidates. The tool may have been designed with good intentions, but nobody asked what it was really learning.",
+      "translation": "如果过去是不公平的，机器就会复制这种不公平，并以快得多的速度把它重复下去。过去几年里，许多科技报道都讨论过一个著名的例子：一家大公司开发了一款工具，用来阅读求职申请并挑出最好的那些。它是用该公司自己十年的招聘记录训练出来的。由于早年的员工大多是男性，这套系统悄悄学会了偏爱男性应聘者。这款工具的设计初衷或许是好的，但没有人追问它究竟在学什么。"
+    },
+    {
+      "text": "This is not a story about one bad company, and it is not really about computers at all. Whether a system is fair depends on the data it has been given and the goals it has been set. It is often said that technology is neutral, yet every choice made by designers is a value judgment. Someone decides what counts as a good worker, a good student, or a safe customer. Those decisions are then hidden inside code that ordinary people can never read.",
+      "translation": "这并不是一个关于某家坏公司的故事，也根本不只是关于计算机。一个系统是否公平，取决于它被给予的数据和它被设定的目标。人们常说技术是中立的，然而设计者做出的每一个选择都是一种价值判断。总得有人来定义什么算好员工、好学生或安全客户。而这些判断随后就被藏进了普通人根本读不到的代码里。"
+    },
+    {
+      "text": "What can be done about this problem is now being discussed in parliaments, schools, and living rooms. It is important that human beings stay in the loop and check the answers a machine gives. New rules are being written to demand explanations for choices that affect people's lives. Some companies have already promised to publish how their systems were built and tested. Whether such promises will be kept is a question we should keep asking.",
+      "translation": "如何应对这一问题，如今正在议会、学校和客厅里被讨论着。重要的是，人必须留在流程之中，去核查机器给出的答案。新的规则正在被制定，要求对影响人们生活的判断作出解释。一些公司已经承诺公开其系统是如何被构建和测试的。这些承诺能否被遵守，是我们应当持续追问的问题。"
+    },
+    {
+      "text": "None of this means that we should fear every new tool or refuse to use it. It means that we should ask better questions before we hand over our decisions. A machine can only repeat what it has been taught, so the real question is about us. What kind of world do we want our clever new helpers to copy?",
+      "translation": "这一切并不意味着我们应当害怕每一件新工具，或者拒绝使用它。它意味着，在把自己的决定交出去之前，我们应当提出更好的问题。机器只能重复它被教过的东西，所以真正的问题其实关乎我们自己：我们希望这些聪明的新帮手去复制一个怎样的世界呢？"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In the text, what did the company's hiring tool quietly learn to prefer?",
+      "audioText": "In the text, what did the company's hiring tool quietly learn to prefer?",
+      "options": [
+        {
+          "emoji": "👨",
+          "value": "men",
+          "text": "Male candidates"
+        },
+        {
+          "emoji": "👩",
+          "value": "women",
+          "text": "Female candidates"
+        },
+        {
+          "emoji": "🎓",
+          "value": "students",
+          "text": "Young students"
+        }
+      ],
+      "answer": "men"
+    },
+    {
+      "type": "word_builder",
+      "word": "neutral",
+      "audioText": "neutral"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Nobody",
+        "asked",
+        "what",
+        "it",
+        "was",
+        "really",
+        "learning"
+      ],
+      "audioText": "Nobody asked what it was really learning."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Those",
+        "decisions",
+        "are",
+        "then",
+        "hidden",
+        "inside",
+        "code"
+      ],
+      "audioText": "Those decisions are then hidden inside code."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "New rules are being ___ to demand explanations for choices that affect people's lives.",
+      "choices": [
+        "written",
+        "writing",
+        "wrote"
+      ],
+      "answer": "written",
+      "audioText": "New rules are being written to demand explanations for choices that affect people's lives."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Whether such promises will be ___ is a question we should keep asking.",
+      "choices": [
+        "kept",
+        "keeping",
+        "keeps"
+      ],
+      "answer": "kept",
+      "audioText": "Whether such promises will be kept is a question we should keep asking."
+    }
+  ],
+  "_unknownWords": [
+    "loan",
+    "neutral",
+    "chosen",
+    "unfairness",
+    "company's",
+    "earlier",
+    "men",
+    "given",
+    "designers",
+    "judgment",
+    "hidden",
+    "done",
+    "parliaments",
+    "loop",
+    "written",
+    "people's",
+    "helpers"
+  ]
+}

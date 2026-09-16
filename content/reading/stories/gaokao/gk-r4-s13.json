@@ -1,0 +1,120 @@
+{
+  "type": "json_object",
+  "id": "gk-r4-s13",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 13,
+  "title": "Your Inner Clock Runs Your Mood",
+  "titleCn": "你的生物钟掌控你的情绪",
+  "coverEmoji": "🕰️",
+  "paragraphs": [
+    {
+      "text": "Most students believe that sleeping well depends only on going to bed early enough. Your body, however, keeps an inner clock that works all day and night. This clock decides when you feel hungry, when your muscles work best, and even when sadness may appear. Light is its strongest signal. Learning to read this clock carefully can slowly change the way you manage your mood.",
+      "translation": "大多数学生认为，睡得好只取决于早早上床。然而，你的身体里有一座日夜运转的生物钟。这座钟决定你何时感到饥饿、肌肉何时状态最好，甚至决定悲伤何时出现。光是它最强的信号。学会认真读懂这座钟，能慢慢改变你管理情绪的方式。"
+    },
+    {
+      "text": "Your inner clock uses light to decide when to produce the chemicals that help you sleep. If you keep staring at a bright screen at midnight, your brain still thinks the day is continuing. That is exactly why you should have turned off your phone an hour before bed. Waking up at the same time every day trains the clock faster than going to bed early does.",
+      "translation": "你体内的生物钟借助光线来决定何时分泌帮助你入睡的化学物质。如果你半夜一直盯着明亮的屏幕，你的大脑仍以为白天还在继续。这正是你本该在睡前一小时关掉手机的原因。每天在同一时间起床，比早早上床更能快速地训练这座钟。"
+    },
+    {
+      "text": "Moving your body is one of the fastest ways to lift a low mood. Scientists have found that exercising in the morning fits our inner clock better than exercising late at night. Your muscles are usually strongest in the afternoon. Planning a match then may improve your performance a lot. Trying to run hard at midnight is simply asking your tired body for trouble.",
+      "translation": "活动身体是提升低落情绪最快的方法之一。科学家发现，早上锻炼比深夜锻炼更符合我们的生物钟。你的肌肉通常在下午最为强壮。把比赛安排在那个时候，也许能大幅提升你的表现。想在半夜拼命奔跑，简直就是跟你疲惫的身体过不去。"
+    },
+    {
+      "text": "When you eat matters almost as much as what you eat. Skipping breakfast tells your body that food is rare, which can make you anxious and unfocused. Eating a light, regular dinner two or three hours before sleep helps the clock stay steady. To keep your mood stable, try to avoid heavy meals late at night.",
+      "translation": "什么时候吃，几乎和吃什么一样重要。不吃早餐会让身体以为食物稀缺，这可能让你焦虑、难以专注。睡前两三小时吃一顿清淡而规律的晚餐，有助于生物钟保持稳定。为了保持情绪平稳，尽量避免深夜吃大餐。"
+    },
+    {
+      "text": "Your mood is not a strange mystery that sits completely apart from your body. Sleeping, moving and eating at regular times is a skill that anyone can build. Many students who feel low for weeks should have talked to someone much earlier. Asking a trusted adult for help is a sign of strength rather than weakness.",
+      "translation": "情绪并不是与你身体完全隔绝的奇怪谜团。按时睡觉、运动和进食，是一项人人都能培养的技能。许多连续几周情绪低落的学生，本该更早找人聊聊。向信任的成年人求助，是坚强的表现，而不是软弱。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, what does your inner clock use to decide when to produce sleep chemicals?",
+      "audioText": "According to the passage, what does your inner clock use to decide when to produce sleep chemicals?",
+      "options": [
+        {
+          "emoji": "☀️",
+          "value": "light",
+          "text": "Light"
+        },
+        {
+          "emoji": "🍎",
+          "value": "food",
+          "text": "Food"
+        },
+        {
+          "emoji": "🎵",
+          "value": "music",
+          "text": "Music"
+        }
+      ],
+      "answer": "light"
+    },
+    {
+      "type": "word_builder",
+      "word": "muscles",
+      "audioText": "muscles"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Light",
+        "is",
+        "its",
+        "strongest",
+        "signal."
+      ],
+      "audioText": "Light is its strongest signal."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "That is exactly why you should have ___ off your phone an hour before bed.",
+      "choices": [
+        "turned",
+        "turning",
+        "turn"
+      ],
+      "answer": "turned",
+      "audioText": "That is exactly why you should have turned off your phone an hour before bed."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Your",
+        "muscles",
+        "are",
+        "usually",
+        "strongest",
+        "in",
+        "the",
+        "afternoon."
+      ],
+      "audioText": "Your muscles are usually strongest in the afternoon."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ breakfast tells your body that food is rare, which can make you anxious and unfocused.",
+      "choices": [
+        "Skipping",
+        "Skip",
+        "Skipped"
+      ],
+      "answer": "Skipping",
+      "audioText": "Skipping breakfast tells your body that food is rare, which can make you anxious and unfocused."
+    }
+  ],
+  "_unknownWords": [
+    "muscles",
+    "mood",
+    "simply",
+    "skipping",
+    "unfocused",
+    "steady",
+    "stable",
+    "mystery",
+    "earlier"
+  ]
+}

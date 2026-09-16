@@ -1,0 +1,116 @@
+{
+  "id": "gk-r6-s01",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 1,
+  "title": "Small Shop, Big Lessons",
+  "titleCn": "小店大学问",
+  "coverEmoji": "🕯️",
+  "paragraphs": [
+    {
+      "text": "When Maya and her brother opened a tiny candle shop on Bridge Street, they had no money for television advertising. Although their candles smelled wonderful, few people walked through the door during the first month. While larger brands spent millions on posters and online videos, the two teenagers could only afford a hand-written sign and a few free samples.",
+      "translation": "玛雅和哥哥在桥街开了一家小小的蜡烛店时，他们根本没钱做电视广告。虽然他们的蜡烛香气迷人，可第一个月里几乎没什么人进店。当大品牌把数百万资金砸在海报和网络视频上时，这两个少年只买得起一块手写招牌和几份免费试用装。"
+    },
+    {
+      "text": "Then Maya remembered a lesson from her economics class: how a product is presented often matters more than what it actually contains. She put three candles on one shelf, priced at eight, twenty and thirty-eight yuan. The middle candle, as most shoppers later explained, simply felt like the safest choice, and it soon became their best seller.",
+      "translation": "后来玛雅想起经济学课上的一条道理：商品怎么摆放，往往比它本身是什么更重要。她把三支蜡烛摆在同一层货架上，分别标价八元、二十元和三十八元。正如后来大多数顾客解释的那样，中间那支蜡烛让人感觉最稳妥，很快它就成了店里的畅销款。"
+    },
+    {
+      "text": "Encouraged by this success, the pair tried another trick that advertisers use everywhere. They wrote 'only ten left today' on a small board beside the window. Although the total number of candles never changed, customers began to buy more quickly, afraid of missing something valuable. Free samples of a new winter scent, placed near the door, worked just as well.",
+      "translation": "这次成功让他们受到鼓舞，两人又试了广告商到处都在用的一个花招。他们在橱窗边的小黑板上写下“今日仅剩十支”。虽然蜡烛的总数其实一支没变，顾客却开始买得更快，生怕错过什么好东西。摆在门边的新款冬日香型试用装，也同样奏效。"
+    },
+    {
+      "text": "Yet Maya soon began to feel uncomfortable about these tricks. While they clearly increased sales, some buyers seemed to regret their choices afterwards, which worried her a lot. She decided to keep only the honest ones: real samples, clear prices and friendly advice. Surprisingly, sales stayed high, because people returned and brought their friends along.",
+      "translation": "可没过多久，玛雅对这些花招开始感到不安。虽然它们的的确确提高了销量，但有些买家事后似乎后悔了自己的选择，这让她很担心。她决定只留下那些诚实的做法：真实的试用装、清楚的价格和友善的建议。令人意外的是，销量依然很高，因为人们会回来，还会带上朋友。"
+    },
+    {
+      "text": "Today the little shop earns enough to support both families. Despite its success, Maya still refuses to print false messages on the window. 'A clever sign can bring someone in once,' she says, 'but only trust brings them back.'",
+      "translation": "如今这家小店赚的钱足以养活两家人。尽管生意做得不错，玛雅仍然拒绝在橱窗上写任何虚假的字句。她说：“一个聪明的招牌能让人进来一次，但只有信任才能让人再来。”"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Although",
+        "the",
+        "total",
+        "number",
+        "of",
+        "candles",
+        "never",
+        "changed"
+      ],
+      "audioText": "Although the total number of candles never changed, customers began to buy more quickly."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "decided",
+        "to",
+        "keep",
+        "only",
+        "the",
+        "honest",
+        "ones"
+      ],
+      "audioText": "She decided to keep only the honest ones: real samples, clear prices and friendly advice."
+    },
+    {
+      "type": "word_builder",
+      "word": "customers",
+      "audioText": "customers"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ their candles smelled wonderful, few people walked through the door during the first month.",
+      "choices": [
+        "Although",
+        "Because",
+        "Unless"
+      ],
+      "answer": "Although",
+      "audioText": "Although their candles smelled wonderful, few people walked through the door during the first month."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The middle candle, ___ most shoppers later explained, simply felt like the safest choice.",
+      "choices": [
+        "as",
+        "that",
+        "who"
+      ],
+      "answer": "as",
+      "audioText": "The middle candle, as most shoppers later explained, simply felt like the safest choice."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Despite its ___, Maya still refuses to print false messages on the window.",
+      "choices": [
+        "success",
+        "succeed",
+        "successful"
+      ],
+      "answer": "success",
+      "audioText": "Despite its success, Maya still refuses to print false messages on the window."
+    }
+  ],
+  "_unknownWords": [
+    "maya",
+    "advertising",
+    "larger",
+    "brands",
+    "online",
+    "written",
+    "samples",
+    "shoppers",
+    "simply",
+    "safest",
+    "advertisers",
+    "scent",
+    "buyers",
+    "surprisingly",
+    "despite"
+  ]
+}

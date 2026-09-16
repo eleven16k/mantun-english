@@ -1,0 +1,124 @@
+{
+  "id": "xsc-r6-s02",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r6",
+  "order": 2,
+  "title": "A Garden in Space",
+  "titleCn": "太空里的小菜园",
+  "coverEmoji": "🌱",
+  "paragraphs": [
+    {
+      "text": "Look up at the sky tonight. You will see a bright light moving. That is our new space station! It goes around the Earth very fast.",
+      "translation": "今晚抬头看看天空。你会看见一道明亮的光在移动。那就是我们新的太空站！它绕着地球飞快地转。"
+    },
+    {
+      "text": "Life here is very different from home. We must keep everything clean and safe. We should drink water from special bags. We could not open a window here!",
+      "translation": "这里的生活和家里很不一样。我们必须让一切都干净又安全。我们要用特制的水袋喝水。在这儿可不能打开窗户！"
+    },
+    {
+      "text": "This week we will start a small garden. Little green plants will grow in space. We must give them light and water. My friend Ben will check them every morning.",
+      "translation": "这周我们要种一个小菜园。绿色的小植物会在太空里长大。我们必须给它们光和水分。我的朋友本每天早上都会照看它们。"
+    },
+    {
+      "text": "Ben is a young scientist from our school. He should write down how tall they are. He will send the numbers to Earth. Our teacher will read them and smile.",
+      "translation": "本是我们学校的小科学家。他应该记下它们长多高了。他会把这些数字发回地球。老师读到这些数字时会笑起来。"
+    },
+    {
+      "text": "In the future we will eat fresh salad. Maybe we could grow more food up here. Space food will be better and better. One day you will visit us too!",
+      "translation": "将来我们会在太空里吃到新鲜的沙拉。也许我们还能在这里种出更多食物。太空食品会越来越好。有一天你也会来看我们！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What will you see moving in the sky tonight?",
+      "audioText": "What will you see moving in the sky tonight?",
+      "options": [
+        {
+          "emoji": "💡",
+          "value": "light",
+          "text": "A bright light"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A big fish"
+        },
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "A tall tree"
+        }
+      ],
+      "answer": "light"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where will the little green plants grow?",
+      "audioText": "Where will the little green plants grow?",
+      "options": [
+        {
+          "emoji": "🚀",
+          "value": "space",
+          "text": "In space"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "In a school"
+        },
+        {
+          "emoji": "🛒",
+          "value": "shop",
+          "text": "In a shop"
+        }
+      ],
+      "answer": "space"
+    },
+    {
+      "type": "word_builder",
+      "word": "garden",
+      "audioText": "garden"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "You",
+        "will",
+        "see",
+        "a",
+        "bright",
+        "light",
+        "moving."
+      ],
+      "audioText": "You will see a bright light moving."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Little",
+        "green",
+        "plants",
+        "will",
+        "grow",
+        "in",
+        "space."
+      ],
+      "audioText": "Little green plants will grow in space."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "In the future we will eat fresh ___ up here.",
+      "choices": [
+        "salad",
+        "bags",
+        "light"
+      ],
+      "answer": "salad",
+      "audioText": "In the future we will eat fresh salad up here."
+    }
+  ],
+  "_unknownWords": [
+    "ben"
+  ]
+}

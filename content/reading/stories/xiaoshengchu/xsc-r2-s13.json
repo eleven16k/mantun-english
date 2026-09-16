@@ -1,0 +1,123 @@
+{
+  "id": "xsc-r2-s13",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 13,
+  "title": "Frog's Happy Song",
+  "titleCn": "小青蛙的歌",
+  "coverEmoji": "🐸",
+  "paragraphs": [
+    {
+      "text": "It is a warm Sunday morning. All the animals are busy. They are cleaning the big tree square. A music show is coming soon.",
+      "translation": "这是一个温暖的星期天早晨。动物们都很忙。他们正在打扫大树广场。一场音乐会很快就要开始了。"
+    },
+    {
+      "text": "Little Frog is sitting on a green leaf. He is holding a small red drum. He wants to sing a song. His hands are cold and shaking.",
+      "translation": "小青蛙坐在一片绿叶上。他手里拿着一个小红鼓。他想唱一首歌。他的双手又冷又抖。"
+    },
+    {
+      "text": "Rabbit is climbing up the big tree. \"You can sing well, Frog,\" says Rabbit. \"I like your sweet, happy voice. We are all your friends.\"",
+      "translation": "兔子正爬上那棵大树。“青蛙，你能唱得很好，”兔子说。“我喜欢你那甜甜的、快乐的声音。我们都是你的朋友。”"
+    },
+    {
+      "text": "Duck is bringing a little bell. Bear is putting chairs in long rows. They are working and singing together. Everyone is happy to help.",
+      "translation": "鸭子带来了一只小铃铛。熊把椅子排成长长的一排排。他们一边干活一边唱歌。大家都很乐意帮忙。"
+    },
+    {
+      "text": "Now Frog is standing on the stage. His friends are smiling at him. He is singing a happy song. All the animals are clapping.",
+      "translation": "现在青蛙站在了舞台上。他的朋友们都冲着他微笑。他正在唱一首快乐的歌。所有的动物都在鼓掌。"
+    },
+    {
+      "text": "Frog is not afraid now. He likes singing with his friends. \"Thank you, my good friends!\" he says. \"We can sing together next time!\"",
+      "translation": "青蛙现在不害怕了。他喜欢和朋友们一起唱歌。“谢谢你们，我的好朋友们！”他说。“下次我们可以一起唱！”"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is Frog holding?",
+      "audioText": "What is Frog holding?",
+      "options": [
+        {
+          "emoji": "🥁",
+          "value": "drum",
+          "text": "A drum"
+        },
+        {
+          "emoji": "🔔",
+          "value": "bell",
+          "text": "A bell"
+        },
+        {
+          "emoji": "🪑",
+          "value": "chair",
+          "text": "A chair"
+        }
+      ],
+      "answer": "drum"
+    },
+    {
+      "type": "image_choice",
+      "question": "What are the animals doing in the morning?",
+      "audioText": "What are the animals doing in the morning?",
+      "options": [
+        {
+          "emoji": "🧹",
+          "value": "cleaning",
+          "text": "Cleaning"
+        },
+        {
+          "emoji": "🍳",
+          "value": "cooking",
+          "text": "Cooking"
+        },
+        {
+          "emoji": "😴",
+          "value": "sleeping",
+          "text": "Sleeping"
+        }
+      ],
+      "answer": "cleaning"
+    },
+    {
+      "type": "word_builder",
+      "word": "singing",
+      "audioText": "singing"
+    },
+    {
+      "type": "word_builder",
+      "word": "rabbit",
+      "audioText": "rabbit"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "He",
+        "is",
+        "holding",
+        "a",
+        "small",
+        "red",
+        "drum."
+      ],
+      "audioText": "He is holding a small red drum."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Rabbit is ___ up the big tree.",
+      "choices": [
+        "climbing",
+        "clapping",
+        "cleaning"
+      ],
+      "answer": "climbing",
+      "audioText": "Rabbit is climbing up the big tree."
+    }
+  ],
+  "_unknownWords": [
+    "busy",
+    "sitting",
+    "putting",
+    "stage"
+  ]
+}

@@ -44,8 +44,8 @@ const config: Config = {
         inter: ["'Noto Sans SC'", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        card: "16px",
-        herocard: "24px",
+        card: "1.5rem",
+        herocard: "2rem",
         pill: "9999px",
       },
       animation: {

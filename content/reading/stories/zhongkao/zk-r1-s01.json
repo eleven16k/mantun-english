@@ -1,0 +1,130 @@
+{
+  "id": "zk-r1-s01",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 1,
+  "title": "The New Reading Club",
+  "titleCn": "新的阅读俱乐部",
+  "coverEmoji": "📚",
+  "paragraphs": [
+    {
+      "text": "My name is Li Hua. I am a Grade Nine student in Nanjing. Every morning I get to school at half past seven. I usually have four classes before lunch.",
+      "translation": "我叫李华，是南京的一名初三学生。每天早上我七点半到校。午饭前我通常上四节课。"
+    },
+    {
+      "text": "Last Monday, our English teacher Miss Chen gave us some news. She said that our school had a new reading club. She told us that we could join it for free. I thought that it was a wonderful idea. My best friend Wang Ming said that he wanted to go with me.",
+      "translation": "上周一，我们的英语老师陈老师带来一个消息。她说学校新成立了一个阅读俱乐部，还告诉我们大家可以免费加入。我觉得这主意太棒了。我最好的朋友王明说他想和我一起去。"
+    },
+    {
+      "text": "On Wednesday afternoon, we went to the school library. About twenty students were there. Miss Chen showed us a big box of English storybooks. We each chose one book and started to read. The library was quiet, and the sun came in through the window.",
+      "translation": "周三下午，我们去了学校图书馆。大约有二十名同学在场。陈老师给我们看了一大箱英文故事书。我们每人挑了一本，开始读起来。图书馆里很安静，阳光从窗户照了进来。"
+    },
+    {
+      "text": "I chose a book about a boy and his dog. The English was easy for me, so I read ten pages quickly. Wang Ming chose a book about football. He sometimes laughed, and I knew that he enjoyed it.",
+      "translation": "我选了一本讲男孩和他的狗的书。书里的英文对我来说不难，所以我很快读了十页。王明选了一本关于足球的书。他时不时笑出声来，我知道他读得很开心。"
+    },
+    {
+      "text": "Two weeks later, we had an English test. I was a little worried before the test. But I remembered the new words from my reading book. I got a good score, and Miss Chen smiled at me.",
+      "translation": "两周后，我们进行了一次英语测验。考试前我有点担心，但我想起了阅读书里学的新单词。我考了个好成绩，陈老师对我笑了。"
+    },
+    {
+      "text": "Now I go to the reading club every Friday. I think that reading is a good way to learn English. I also know that a good habit takes time. I will keep reading, and I will keep growing.",
+      "translation": "现在，我每周五都去阅读俱乐部。我认为阅读是学英语的好方法。我也明白，好习惯需要时间养成。我会坚持读书，也会不断成长。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where did the students go on Wednesday afternoon?",
+      "audioText": "Where did the students go on Wednesday afternoon?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "library",
+          "text": "The library"
+        },
+        {
+          "emoji": "⚽",
+          "value": "playground",
+          "text": "The playground"
+        },
+        {
+          "emoji": "🍜",
+          "value": "dining hall",
+          "text": "The dining hall"
+        }
+      ],
+      "answer": "library"
+    },
+    {
+      "type": "image_choice",
+      "question": "What was Wang Ming's book about?",
+      "audioText": "What was Wang Ming's book about?",
+      "options": [
+        {
+          "emoji": "🐶",
+          "value": "dog",
+          "text": "A dog"
+        },
+        {
+          "emoji": "⚽",
+          "value": "football",
+          "text": "Football"
+        },
+        {
+          "emoji": "🎵",
+          "value": "music",
+          "text": "Music"
+        }
+      ],
+      "answer": "football"
+    },
+    {
+      "type": "word_builder",
+      "word": "library",
+      "audioText": "library"
+    },
+    {
+      "type": "word_builder",
+      "word": "quiet",
+      "audioText": "quiet"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "usually",
+        "have",
+        "four",
+        "classes",
+        "before",
+        "lunch."
+      ],
+      "audioText": "I usually have four classes before lunch."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Now I go to the reading club every ___.",
+      "choices": [
+        "Friday",
+        "Monday",
+        "Sunday"
+      ],
+      "answer": "Friday",
+      "audioText": "Now I go to the reading club every Friday."
+    }
+  ],
+  "_unknownWords": [
+    "li",
+    "hua",
+    "nanjing",
+    "english",
+    "chen",
+    "join",
+    "wang",
+    "big",
+    "storybooks",
+    "chose",
+    "later"
+  ]
+}

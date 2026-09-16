@@ -1,0 +1,131 @@
+{
+  "id": "xsc-r5-s06",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 6,
+  "title": "The Fastest Runner in Dino Valley",
+  "titleCn": "恐龙谷里跑得最快的恐龙",
+  "coverEmoji": "🦕",
+  "paragraphs": [
+    {
+      "text": "Last summer, Mia and Ben visited Dino Valley. It was the largest park in their country. Many dinosaurs lived there long, long ago.",
+      "translation": "去年夏天，米娅和本去了恐龙谷。那是他们国家里最大的公园。很久很久以前，许多恐龙就住在这里。"
+    },
+    {
+      "text": "A small dinosaur ran out of the trees. It was the fastest dinosaur in the valley. Its name was Zip. Zip loved to run every morning.",
+      "translation": "一只小恐龙从树林里跑了出来。它是山谷里跑得最快的恐龙。它的名字叫 Zip。Zip 每天早晨都喜欢奔跑。"
+    },
+    {
+      "text": "Mia and Ben followed Zip to the lake. The lake was the most beautiful place there. Three big dinosaurs drank water near them. They walked slowly because they were very heavy.",
+      "translation": "米娅和本跟着 Zip 来到湖边。这个湖是那儿最美的地方。三只大恐龙在附近喝水。它们走得很慢，因为它们非常重。"
+    },
+    {
+      "text": "Zip wanted to race the big dinosaurs. Mia said, \"You are fast, but they are strong.\" Zip ran around the lake three times. The big dinosaurs did not move at all.",
+      "translation": "Zip 想和那几只大恐龙赛跑。米娅说：“你跑得快，但它们很强壮。” Zip 绕着湖跑了三圈。大恐龙们却一动也不动。"
+    },
+    {
+      "text": "Then Zip climbed a small green hill. From the top, the whole valley looked wonderful. \"This is the best day ever!\" Ben said. Mia laughed because it was true.",
+      "translation": "然后 Zip 爬上了一座绿色的小山。从山顶望去，整个山谷美极了。“这是最棒的一天！”本说。米娅笑了，因为他说得没错。"
+    },
+    {
+      "text": "The sun went down and the sky turned orange. The children said goodbye to their small friend. \"You are the fastest runner in Dino Valley,\" Mia said. Zip smiled and ran home happily. It was the happiest day of their trip.",
+      "translation": "太阳落下去了，天空变成了橘红色。孩子们向他们的小朋友道别。“你是恐龙谷里跑得最快的小家伙。”米娅说。Zip 笑了，开心地跑回了家。那是他们这次旅行中最快乐的一天。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Zip love to do every morning?",
+      "audioText": "What did Zip love to do every morning?",
+      "options": [
+        {
+          "emoji": "🏃",
+          "value": "run",
+          "text": "Run"
+        },
+        {
+          "emoji": "😴",
+          "value": "sleep",
+          "text": "Sleep"
+        },
+        {
+          "emoji": "🍽️",
+          "value": "eat",
+          "text": "Eat"
+        }
+      ],
+      "answer": "run"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the three big dinosaurs do at the lake?",
+      "audioText": "What did the three big dinosaurs do at the lake?",
+      "options": [
+        {
+          "emoji": "💧",
+          "value": "drink",
+          "text": "Drink water"
+        },
+        {
+          "emoji": "🎤",
+          "value": "sing",
+          "text": "Sing songs"
+        },
+        {
+          "emoji": "🏊",
+          "value": "swim",
+          "text": "Swim in the lake"
+        }
+      ],
+      "answer": "drink"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "the",
+        "fastest",
+        "dinosaur",
+        "in",
+        "the",
+        "valley."
+      ],
+      "audioText": "It was the fastest dinosaur in the valley."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "They walked slowly ___ they were very heavy.",
+      "choices": [
+        "because",
+        "but",
+        "so"
+      ],
+      "answer": "because",
+      "audioText": "They walked slowly because they were very heavy."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The lake was the most ___ place there.",
+      "choices": [
+        "beautiful",
+        "fast",
+        "heavy"
+      ],
+      "answer": "beautiful",
+      "audioText": "The lake was the most beautiful place there."
+    },
+    {
+      "type": "word_builder",
+      "word": "fastest",
+      "audioText": "fastest"
+    }
+  ],
+  "_unknownWords": [
+    "largest",
+    "zip",
+    "runner",
+    "happily",
+    "happiest"
+  ]
+}

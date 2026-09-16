@@ -1,0 +1,123 @@
+{
+  "id": "zk-r4-s09",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 9,
+  "title": "Less Plastic, More Life",
+  "titleCn": "塑料少一点，生命多一点",
+  "coverEmoji": "🐢",
+  "paragraphs": [
+    {
+      "text": "Last week our science teacher showed us a short video about sea animals. In the video, a turtle could not swim away from a plastic bag. We felt sad and wanted to do something useful.",
+      "translation": "上周，我们的科学老师给我们看了一段关于海洋动物的短视频。视频里，一只海龟被塑料袋缠住，怎么也游不开。我们心里很难过，想做一些有用的事。"
+    },
+    {
+      "text": "If we use fewer plastic bags, fewer animals will get hurt. You should take a cloth bag when you go shopping. Remember to say no to plastic forks and cups at the restaurant.",
+      "translation": "如果我们少用一些塑料袋，受伤的动物就会更少。去购物时，你应该带一个布袋子。在餐馆里，记得对塑料叉子和塑料杯说“不”。"
+    },
+    {
+      "text": "At school, we started a green group to sort our rubbish. Put paper and bottles in the blue bin. If you are not sure, ask the group leader for help.",
+      "translation": "在学校，我们成立了一个环保小组来给垃圾分类。把纸张和瓶子放进蓝色垃圾桶。如果你不确定，就问小组长。"
+    },
+    {
+      "text": "Being green is also about living a healthy life. Ride a bike or walk to school if your home is not far. You should carry your own bottle instead of buying drinks.",
+      "translation": "环保也意味着过健康的生活。如果家离得不远，就骑车或走路去上学。你应该带上自己的水杯，而不是去买饮料喝。"
+    },
+    {
+      "text": "We also built a small garden behind our classroom. Bees and birds visit it every morning. If we plant more flowers, more small animals will find a home. Never throw rubbish into the garden.",
+      "translation": "我们还在教室后面建了一个小花园。每天早晨，蜜蜂和小鸟都会来拜访。如果我们种下更多的花，就会有更多小动物找到家。千万不要往花园里扔垃圾。"
+    },
+    {
+      "text": "Small choices can make a big difference, so start today. If everyone does one green thing, our world will be better. Join us and build a cleaner, greener future together.",
+      "translation": "小小的选择也能带来大大的改变，所以从今天就开始吧。如果每个人都做一件环保的事，我们的世界会变得更好。加入我们，一起建设一个更干净、更绿色的未来。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which thing hurt the sea turtle in the video?",
+      "audioText": "Which thing hurt the sea turtle in the video?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "plastic",
+          "text": "A plastic bag"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A fish"
+        },
+        {
+          "emoji": "🌊",
+          "value": "water",
+          "text": "Sea water"
+        }
+      ],
+      "answer": "plastic"
+    },
+    {
+      "type": "word_builder",
+      "word": "rubbish",
+      "audioText": "rubbish"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Put",
+        "paper",
+        "and",
+        "bottles",
+        "in",
+        "the",
+        "blue",
+        "bin."
+      ],
+      "audioText": "Put paper and bottles in the blue bin."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Bees",
+        "and",
+        "birds",
+        "visit",
+        "it",
+        "every",
+        "morning."
+      ],
+      "audioText": "Bees and birds visit it every morning."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "You ___ take a cloth bag when you go shopping.",
+      "choices": [
+        "should",
+        "shouldn't",
+        "can't"
+      ],
+      "answer": "should",
+      "audioText": "You should take a cloth bag when you go shopping."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If we plant more flowers, more small animals will find a ___.",
+      "choices": [
+        "home",
+        "school",
+        "game"
+      ],
+      "answer": "home",
+      "audioText": "If we plant more flowers, more small animals will find a home."
+    }
+  ],
+  "_unknownWords": [
+    "hurt",
+    "forks",
+    "bin",
+    "ask",
+    "big",
+    "world",
+    "join"
+  ]
+}

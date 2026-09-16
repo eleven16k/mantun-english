@@ -1,0 +1,128 @@
+{
+  "id": "xsc-r5-s02",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 2,
+  "title": "Rex and the Loudest Roar",
+  "titleCn": "雷克斯和最响亮的吼声",
+  "coverEmoji": "🦖",
+  "paragraphs": [
+    {
+      "text": "Rex was a small dinosaur in Dino Valley. He lived near a quiet blue river. Many big dinosaurs lived in the valley too.",
+      "translation": "雷克斯是恐龙谷里的一只小恐龙。他住在一条安静的蓝色小河旁。山谷里还住着许多大恐龙。"
+    },
+    {
+      "text": "One sunny morning, Rex heard a big sound. It came from the tallest hill. His father said, \"That is the loudest roar here.\" Rex wanted a roar like that.",
+      "translation": "一个晴朗的早晨，雷克斯听到了一声巨响。声音是从最高的那座山丘上传来的。爸爸说：“那是这里最响亮的吼声。”雷克斯也想拥有那样的吼声。"
+    },
+    {
+      "text": "Rex opened his mouth and tried to roar. Only a small sound came out. \"Why is my roar so quiet?\" he asked. \"Because you are still little,\" said his mother.",
+      "translation": "雷克斯张开嘴，试着吼叫。可是只发出了一点点小小的声音。“为什么我的吼声这么轻呢？”他问。“因为你还是个小不点呀。”妈妈说。"
+    },
+    {
+      "text": "Rex walked down to the river. He met an old dinosaur there. \"I am the oldest dinosaur here,\" she said. \"My roar was small too, long ago.\"",
+      "translation": "雷克斯走到河边。他在那儿遇到了一只年老的恐龙。“我是这里最老的恐龙，”她说，“很久很久以前，我的吼声也很小。”"
+    },
+    {
+      "text": "Rex took a deep breath and roared. His little roar was the bravest roar. All the small birds flew up. Everyone smiled because Rex tried his best.",
+      "translation": "雷克斯深深吸了一口气，吼了出来。他小小的吼声是最勇敢的吼声。所有的小鸟都飞了起来。大家都笑了，因为雷克斯尽了全力。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where did Rex live?",
+      "audioText": "Where did Rex live?",
+      "options": [
+        {
+          "emoji": "🏞️",
+          "value": "valley",
+          "text": "In a green valley"
+        },
+        {
+          "emoji": "🌊",
+          "value": "sea",
+          "text": "In the blue sea"
+        },
+        {
+          "emoji": "🏔️",
+          "value": "mountain",
+          "text": "On a high mountain"
+        }
+      ],
+      "answer": "valley"
+    },
+    {
+      "type": "word_builder",
+      "word": "oldest",
+      "audioText": "oldest"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where did the big sound come from?",
+      "audioText": "Where did the big sound come from?",
+      "options": [
+        {
+          "emoji": "⛰️",
+          "value": "hill",
+          "text": "The tallest hill"
+        },
+        {
+          "emoji": "🌊",
+          "value": "river",
+          "text": "The blue river"
+        },
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "The tall tree"
+        }
+      ],
+      "answer": "hill"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "His little roar was the ___ roar.",
+      "choices": [
+        "bravest",
+        "brave",
+        "braver"
+      ],
+      "answer": "bravest",
+      "audioText": "His little roar was the bravest roar."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Rex",
+        "opened",
+        "his",
+        "mouth",
+        "and",
+        "tried",
+        "to",
+        "roar."
+      ],
+      "audioText": "Rex opened his mouth and tried to roar."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Everyone smiled ___ Rex tried his best.",
+      "choices": [
+        "because",
+        "but",
+        "or"
+      ],
+      "answer": "because",
+      "audioText": "Everyone smiled because Rex tried his best."
+    }
+  ],
+  "_unknownWords": [
+    "rex",
+    "roar",
+    "mouth",
+    "asked",
+    "roared",
+    "bravest"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "zk-r5-s11",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 11,
+  "title": "The Boy Who Started a Phone Class",
+  "titleCn": "开手机课堂的男孩",
+  "coverEmoji": "📱",
+  "paragraphs": [
+    {
+      "text": "Leo was a fourteen-year-old boy who loved new technology. When he was twelve, he had already learned to fix small problems on a phone. His grandpa often watched him with a smile. \"How do you talk to people on that small screen?\" Grandpa asked one evening.",
+      "translation": "利奥是一个热爱新科技的十四岁男孩。十二岁时，他就已经学会了修理手机上的小毛病。他的爷爷常常微笑着看他摆弄手机。“你是怎么在那块小屏幕上跟人说话的？”一天晚上，爷爷问道。"
+    },
+    {
+      "text": "Leo tried to teach his grandpa, but the old man forgot the steps again and again. After three days, Grandpa had written every step in a small notebook. Still, he could not send a photo to his friends. Leo felt sad when he saw his grandpa put the phone down.",
+      "translation": "利奥试着教爷爷，可老人一次又一次地忘了步骤。三天后，爷爷已经把每一个步骤都写进了一个小本子里。可他还是没法给朋友们发照片。看到爷爷把手机放下，利奥心里很难过。"
+    },
+    {
+      "text": "One morning, Leo had an idea. Many old people had the same problem. They wanted to see their children who lived in other cities. So Leo decided to open a free phone class in the community room.",
+      "translation": "一天早上，利奥有了一个主意。附近很多老人都有同样的难题。他们想看看住在别的城市的儿女。于是利奥决定在社区活动室开一个免费的手机课堂。"
+    },
+    {
+      "text": "At first, only two people came. Leo wrote a small book which used big letters and clear pictures. In the second week, eight grandparents sat in a circle with their phones. Leo moved from one to another and answered every question with patience.",
+      "translation": "起初只来了两个人。利奥写了一本小册子，里面用大大的字和清楚的图片。到了第二周，八位爷爷奶奶围成一圈，手里都拿着手机。利奥从一个人走到另一个人，耐心地回答每一个问题。"
+    },
+    {
+      "text": "Slowly, the class grew, and the room was full of laughter. One grandma who had not seen her son for two years made a video call. Tears ran down her face, and Leo smiled too. That night he told his mother it was the best day of his life.",
+      "translation": "慢慢地，来上课的人多了起来，屋子里满是笑声。一位两年没见过儿子的奶奶终于打了一个视频电话。泪水顺着她的脸流下来，利奥也笑了。那天晚上他告诉妈妈，这是他一生中最棒的一天。"
+    },
+    {
+      "text": "Leo is now fifteen, and he still teaches the class every Saturday. He says that technology should bring people together. The little notebook which his grandpa once used now sits on the teacher's desk.",
+      "translation": "利奥现在十五岁了，他仍然每周六给这个班上课。他说，科技应该把人聚在一起。爷爷当年用过的那本小本子，如今就放在讲台上。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does Leo teach the old people to use?",
+      "audioText": "What does Leo teach the old people to use?",
+      "options": [
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "A phone"
+        },
+        {
+          "emoji": "📷",
+          "value": "camera",
+          "text": "A camera"
+        },
+        {
+          "emoji": "⌚",
+          "value": "watch",
+          "text": "A watch"
+        }
+      ],
+      "answer": "phone"
+    },
+    {
+      "type": "word_builder",
+      "word": "notebook",
+      "audioText": "notebook"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "His",
+        "grandpa",
+        "often",
+        "watched",
+        "him",
+        "with",
+        "a",
+        "smile."
+      ],
+      "audioText": "His grandpa often watched him with a smile."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Many",
+        "old",
+        "people",
+        "had",
+        "the",
+        "same",
+        "problem."
+      ],
+      "audioText": "Many old people had the same problem."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Grandpa had ___ every step in a small notebook.",
+      "choices": [
+        "written",
+        "wrote",
+        "writing"
+      ],
+      "answer": "written",
+      "audioText": "Grandpa had written every step in a small notebook."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "He says that technology should bring people ___.",
+      "choices": [
+        "together",
+        "away",
+        "alone"
+      ],
+      "answer": "together",
+      "audioText": "He says that technology should bring people together."
+    }
+  ],
+  "_unknownWords": [
+    "talk",
+    "asked",
+    "written",
+    "community",
+    "room",
+    "big",
+    "patience",
+    "laughter",
+    "seen",
+    "tears",
+    "teacher's"
+  ]
+}

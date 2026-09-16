@@ -10,9 +10,10 @@ import { apiBase, unauthorizedHandler } from "./config";
 
 const TOKEN_KEY = "lexi-token";
 
-/** 统一登录入口：营销站的 /login（可用 NEXT_PUBLIC_LOGIN_URL 覆盖）。 */
+/** 统一登录入口：营销站的 /login（可用 NEXT_PUBLIC_LOGIN_URL 覆盖）。
+ *  营销站 = juyou-clone（:3000），其 /login 登录成功后携 token 跳回本端 /chat。 */
 export const LOGIN_URL =
-  process.env.NEXT_PUBLIC_LOGIN_URL || "http://localhost:49463/login";
+  process.env.NEXT_PUBLIC_LOGIN_URL || "http://localhost:3000/login";
 
 function getToken(): string | null {
   return kv.getItem(TOKEN_KEY) as string | null;
@@ -33,7 +34,7 @@ function headers(): HeadersInit {
   return h;
 }
 
-async function fetchApi<T>(url: string, options?: RequestInit): Promise<T> {
+export async function fetchApi<T>(url: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`${apiBase()}${url}`, { ...options, headers: headers() });
   if (res.status === 401) {
     clearToken();
@@ -102,6 +103,8 @@ export interface AnswerResult {
   coinsEarned: number;
   spEarned: number;
   streak: number;
+  weekSP: number;
+  league: string;
   enteredWeakness: boolean;
   conqueredWeakness: boolean;
   isNewWord: boolean;
@@ -109,6 +112,13 @@ export interface AnswerResult {
 
 export async function getEconomy(): Promise<Record<string, number | string | null>> {
   return fetchApi("/api/economy");
+}
+
+export async function shopPurchase(itemId: string) {
+  return fetchApi<{ ok: boolean; itemId: string; price: number; economy: Record<string, number | string | null> }>(
+    "/api/shop/purchase",
+    { method: "POST", body: JSON.stringify({ itemId }) },
+  );
 }
 
 export async function submitAnswer(wordId: string, isCorrect: boolean, prompt: string): Promise<AnswerResult> {
@@ -171,6 +181,7 @@ export interface ClassInfo {
   code: string;
   name: string;
   id: number;
+  track?: string | null;
   member_count?: number;
   teacher_name?: string;
 }
@@ -180,7 +191,7 @@ export async function getClasses() {
 }
 
 export async function joinClass(code: string) {
-  return fetchApi("/api/classes", {
+  return fetchApi<{ ok: boolean; track?: string | null }>("/api/classes", {
     method: "POST",
     body: JSON.stringify({ action: "join", code }),
   });
@@ -206,6 +217,8 @@ export interface AssignmentRow {
   className: string;
   targetWords: number;
   wordCount: number;
+  sourceType?: string;
+  phonicsUnitId?: string | null;
   dueAt: number;
   progress: number;
   status: string;
@@ -396,6 +409,10 @@ export async function scenarioTTS(text: string): Promise<{ audio: string; sample
   return fetchApi("/api/scenarios/tts", { method: "POST", body: JSON.stringify({ text }) });
 }
 
+export async function translateScenarioText(text: string): Promise<{ translation: string }> {
+  return fetchApi("/api/scenarios/translate", { method: "POST", body: JSON.stringify({ text }) });
+}
+
 export async function bankScenarioReward(payload: {
   scenarioId: string;
   mode: "chat" | "call";
@@ -418,6 +435,20 @@ export interface WordQuestQuestion {
 
 export async function generateWordQuest(level: string): Promise<{ questions: WordQuestQuestion[]; generated: boolean }> {
   return fetchApi("/api/wordquest", { method: "POST", body: JSON.stringify({ level }) });
+}
+
+// ─── Sentence Hall (AI bonus round) ───
+export interface GeneratedSentence {
+  en: string;
+  cn: string;
+}
+
+/** AI 加练出句；AI 不可用时返回 generated:false（客户端回退内置句库） */
+export async function generateSentences(
+  level: "starter" | "school" | "business",
+  count = 8,
+): Promise<{ sentences: GeneratedSentence[]; generated: boolean }> {
+  return fetchApi("/api/sentences", { method: "POST", body: JSON.stringify({ level, count }) });
 }
 
 // ─── SMS OTP ───

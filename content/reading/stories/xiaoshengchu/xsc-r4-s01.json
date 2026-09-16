@@ -1,0 +1,128 @@
+{
+  "id": "xsc-r4-s01",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 1,
+  "title": "A Day at Ocean Park",
+  "titleCn": "海洋公园的一天",
+  "coverEmoji": "🐬",
+  "paragraphs": [
+    {
+      "text": "Last Saturday, we went to Ocean Park. The sky was blue and bright. I was very happy that morning.",
+      "translation": "上周六，我们去了海洋公园。天空又蓝又亮。那天早上我特别开心。"
+    },
+    {
+      "text": "First, we saw two big dolphins. They swam faster than the little fish. Then they jumped high into the air. Everyone cheered and clapped for them.",
+      "translation": "一开始，我们看到了两只大个子海豚。它们游得比小鱼还快。接着它们高高地跃出水面。大家都为它们欢呼拍手。"
+    },
+    {
+      "text": "Next, we walked into a long tunnel. The water was darker under the sea. Fish swam over our heads. A big fish was bigger than my bag.",
+      "translation": "后来，我们走进了一条长长的海底隧道。海底的水颜色更深。鱼儿从我们头顶游过。有一条大鱼比我的书包还大。"
+    },
+    {
+      "text": "Near the rocks, we saw an old turtle. It ate a plastic bag in the water. The turtle looked slow and tired. Plastic is bad for sea animals.",
+      "translation": "在岩石旁边，我们看到一只老海龟。它吃下了水里的一个塑料袋。那只海龟看起来又慢又累。塑料对海洋动物有害。"
+    },
+    {
+      "text": "We picked up some rubbish on the beach. My sister said we must keep it clean. Clean water is more important than toys.",
+      "translation": "我们在沙滩上捡了一些垃圾。姐姐说，我们必须让大海保持干净。干净的水比玩具更重要。"
+    },
+    {
+      "text": "Ocean Park was more fun than I thought. We were tired but very happy. I want to see the dolphins again.",
+      "translation": "海洋公园比我想象的更有趣。我们很累，但非常开心。我还想再去看那些海豚。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the family see first?",
+      "audioText": "What did the family see first?",
+      "options": [
+        {
+          "emoji": "🐬",
+          "value": "dolphin",
+          "text": "Dolphins"
+        },
+        {
+          "emoji": "🐢",
+          "value": "turtle",
+          "text": "A turtle"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        }
+      ],
+      "answer": "dolphin"
+    },
+    {
+      "type": "word_builder",
+      "word": "plastic",
+      "audioText": "plastic"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "swam",
+        "faster",
+        "than",
+        "the",
+        "little",
+        "fish."
+      ],
+      "audioText": "They swam faster than the little fish."
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the old turtle eat in the water?",
+      "audioText": "What did the old turtle eat in the water?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "plasticbag",
+          "text": "A plastic bag"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        },
+        {
+          "emoji": "🥬",
+          "value": "seaweed",
+          "text": "Seaweed"
+        }
+      ],
+      "answer": "plasticbag"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "A big fish was ___ than my bag.",
+      "choices": [
+        "big",
+        "bigger",
+        "biggest"
+      ],
+      "answer": "bigger",
+      "audioText": "A big fish was bigger than my bag."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Clean water is ___ important than toys.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "answer": "more",
+      "audioText": "Clean water is more important than toys."
+    }
+  ],
+  "_unknownWords": [
+    "cheered",
+    "tunnel",
+    "bigger"
+  ]
+}

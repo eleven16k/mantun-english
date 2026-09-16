@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useGameStore } from '@/lib/store';
+import { BASE_PATH } from '@/lib/config';
 import { getMe, addFriendByPhone } from '@/lib/api';
 import { useI18n } from '@/lib/i18n';
 import { FlameIcon } from './SvgIcons';
@@ -105,12 +106,12 @@ export default function ProfileScreen() {
   ] as const;
 
   return (
-    <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
+    <div className="page-shell">
       {/* Name — Booster 26px (measured at (486,76)) */}
       <div className="flex items-center gap-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/sites/assets/dolphin.png"
+          src={`${BASE_PATH}/sites/assets/dolphin.png`}
           alt=""
           className="game-chunky h-16 w-16 rounded-2xl object-cover"
         />
@@ -132,7 +133,7 @@ export default function ProfileScreen() {
 
       <button
         onClick={() => router.push('/quiz')}
-        className="mt-4 rounded-pill bg-action px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-actionhover"
+        className="mt-4 rounded-pill bg-action px-5 py-2.5 text-sm font-bold text-white transition hover:bg-actionhover"
       >
         {t('profile.startStudying')}
       </button>
@@ -153,7 +154,7 @@ export default function ProfileScreen() {
       {/* Weakness book entry */}
       <Link
         href="/weakness"
-        className="mt-5 g-card flex items-center justify-between p-4 shadow-sm transition hover:border-brandborder"
+        className="mt-5 g-card flex items-center justify-between p-4 transition hover:border-brandborder"
       >
         <div className="flex items-center gap-3">
           <span className="grid h-10 w-10 place-items-center rounded-full bg-critical/10">
@@ -174,7 +175,7 @@ export default function ProfileScreen() {
       {/* Stats grid (768px r16 cards) */}
       <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
         {stats.map(s => (
-          <div key={s.labelKey} className="g-card p-4 shadow-sm">
+          <div key={s.labelKey} className="g-card p-4">
             <p className="font-booster text-3xl font-extrabold" style={{ color: s.color }}>
               {s.value}
             </p>
@@ -186,21 +187,21 @@ export default function ProfileScreen() {
       {/* Tab content */}
       {tab === 'feed' && (
         <div className="mt-5 flex flex-col gap-3">
-          <div className="g-card p-5 shadow-sm flex items-center gap-3">
+          <div className="g-card p-5 flex items-center gap-3">
             <span className="grid h-10 w-10 place-items-center rounded-full bg-brand-subtle text-brand-text text-lg"><FlameIcon size={20} className="text-streak" /></span>
             <div>
               <p className="text-sm font-bold text-primary">{t('profile.feedStreak')}</p>
               <p className="text-xs text-tertiary">{t('profile.daysAgo')}</p>
             </div>
           </div>
-          <div className="g-card p-5 shadow-sm">
+          <div className="g-card p-5">
             <p className="font-booster text-base font-extrabold text-primary mb-2">{t('profile.profileFriends')}</p>
             <p className="text-sm text-tertiary">
               {t('profile.noFriends')}
               <button onClick={() => setShowAddFriend(true)} className="text-brand-text font-bold">{t('profile.findFriends')}</button>
             </p>
           </div>
-          <div className="g-card p-5 shadow-sm">
+          <div className="g-card p-5">
             <p className="font-booster text-base font-extrabold text-primary mb-1">{t('profile.studyGroups')}</p>
             <p className="text-sm text-tertiary mb-3">{t('profile.learn')}</p>
             <button
@@ -216,7 +217,7 @@ export default function ProfileScreen() {
       {tab === 'stats' && (
         <div className="mt-5 flex flex-col gap-3">
           {/* Estimated score trend */}
-          <div className="g-card p-5 shadow-sm">
+          <div className="g-card p-5">
             <div className="mb-3 flex items-center justify-between">
               <p className="font-booster text-sm font-extrabold text-primary">{t('profile.scoreTrend')}</p>
               <div className="flex gap-2 text-xs">
@@ -227,7 +228,7 @@ export default function ProfileScreen() {
             <ScoreTrendChart data={scoreHistory} />
           </div>
           {/* Weekly activity */}
-          <div className="g-card p-5 shadow-sm">
+          <div className="g-card p-5">
             <p className="font-booster text-sm font-extrabold text-primary mb-3">{t('profile.thisWeek')}</p>
             <div className="flex items-end gap-2 h-24">
               {[12, 8, 15, 0, 20, 6, 9].map((n, i) => (
@@ -245,7 +246,7 @@ export default function ProfileScreen() {
       )}
 
       {tab === 'decks' && (
-        <div className="mt-5 g-card p-5 shadow-sm">
+        <div className="mt-5 g-card p-5">
           <p className="text-sm text-tertiary">
             {t('profile.noDecks')}<button onClick={() => router.push('/chat')} className="text-brand-text font-bold">{t('profile.createOne')}</button>
           </p>
@@ -253,15 +254,15 @@ export default function ProfileScreen() {
       )}
 
       {tab === 'school' && (
-        <div className="mt-5 g-card p-5 shadow-sm">
+        <div className="mt-5 g-card p-5">
           <p className="text-sm text-tertiary">{t('profile.joinSchool')}</p>
         </div>
       )}
 
       {/* Add friend dialog — by phone number */}
       {showAddFriend && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-6" onClick={() => setShowAddFriend(false)}>
-          <div className="w-full max-w-sm rounded-3xl bg-surface p-5 shadow-xl" onClick={(e) => e.stopPropagation()}>
+        <div className="game-overlay fixed inset-0 z-50 flex items-center justify-center p-6" onClick={() => setShowAddFriend(false)}>
+          <div className="game-modal w-full max-w-sm p-5" onClick={(e) => e.stopPropagation()}>
             <h2 className="font-booster text-lg font-extrabold text-primary">{t('profile.addFriendTitle')}</h2>
             <input
               autoFocus
@@ -283,7 +284,7 @@ export default function ProfileScreen() {
               <button
                 onClick={addFriend}
                 disabled={!/^1[3-9]\d{9}$/.test(friendPhone)}
-                className="flex-1 rounded-pill bg-brand py-2.5 text-sm font-bold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
+                className="flex-1 rounded-pill bg-brand py-2.5 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-40"
               >
                 {t('profile.addFriendBtn')}
               </button>

@@ -1,0 +1,128 @@
+{
+  "id": "zk-r6-s05",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 5,
+  "title": "Scissors and Smiles",
+  "titleCn": "剪刀与微笑",
+  "coverEmoji": "✂️",
+  "paragraphs": [
+    {
+      "text": "Last spring, our school held a culture week that brought many interesting activities. That afternoon, an exchange student from Canada named Anna joined our paper-cutting class. She said that she had never seen such beautiful paper art before.",
+      "translation": "去年春天，我们学校举办了文化周，带来了许多有趣的活动。那天下午，一位来自加拿大、名叫安娜的交换生加入了我们的剪纸课。她说，她以前从未见过这么美的纸艺作品。"
+    },
+    {
+      "text": "Our teacher, Ms. Li, showed us a paper flower which she had made herself. The flower was so lovely that everyone in the room kept quiet for a moment. Then we tried to cut our own shapes with red paper and small scissors.",
+      "translation": "我们的老师李老师给我们看了一朵她自己剪的纸花。这朵花太可爱了，屋里每个人都安静了一会儿。然后我们试着用红纸和小剪刀剪出自己想要的形状。"
+    },
+    {
+      "text": "Anna's first flower looked like a strange star. She laughed and said that paper-cutting was much harder than it looked. I told her that my grandmother, who lives in the countryside, could cut a fish in two minutes.",
+      "translation": "安娜剪的第一朵花看起来像一颗奇怪的星星。她笑着说，剪纸比看起来难多了。我告诉她，我奶奶住在乡下，两分钟就能剪出一条鱼。"
+    },
+    {
+      "text": "After class, Anna asked me whether she could visit my home. She wanted to meet my grandmother and learn the old skill. My grandmother was happy, and she gave Anna a small red fish. It was such a wonderful afternoon that nobody wanted to go home.",
+      "translation": "下课后，安娜问我能不能去我家玩。她想见见我奶奶，学一学这门老手艺。奶奶很高兴，送给安娜一条小红鱼。那个下午太美好了，谁都不想回家。"
+    },
+    {
+      "text": "Anna put the paper fish on her desk at school. Her classmates asked her where it came from. She told them that it was a gift which carried a thousand years of Chinese stories.",
+      "translation": "安娜把纸鱼放在学校她的桌子上。同学们问她这是从哪儿来的。她告诉大家，这是一件礼物，里面装着中国上千年的故事。"
+    },
+    {
+      "text": "Now I understand that culture is something we can share with our hands. A pair of scissors and a piece of red paper can bring people together. That is what our culture week taught me.",
+      "translation": "现在我明白了，文化是可以用双手分享的东西。一把剪刀、一张红纸，就能把人们聚在一起。这就是文化周教会我的道理。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Anna get from the grandmother?",
+      "audioText": "What did Anna get from the grandmother?",
+      "options": [
+        {
+          "emoji": "🌸",
+          "value": "flower",
+          "text": "A paper flower"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A paper fish"
+        },
+        {
+          "emoji": "⭐",
+          "value": "star",
+          "text": "A paper star"
+        }
+      ],
+      "answer": "fish"
+    },
+    {
+      "type": "word_builder",
+      "word": "scissors",
+      "audioText": "scissors"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Anna's",
+        "first",
+        "flower",
+        "looked",
+        "like",
+        "a",
+        "strange",
+        "star."
+      ],
+      "audioText": "Anna's first flower looked like a strange star."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She said that she had never seen ___ beautiful paper art before.",
+      "choices": [
+        "such",
+        "so",
+        "very"
+      ],
+      "answer": "such",
+      "audioText": "She said that she had never seen such beautiful paper art before."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Her",
+        "classmates",
+        "asked",
+        "her",
+        "where",
+        "it",
+        "came",
+        "from."
+      ],
+      "audioText": "Her classmates asked her where it came from."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She told them that it was a gift ___ carried a thousand years of Chinese stories.",
+      "choices": [
+        "which",
+        "who",
+        "where"
+      ],
+      "answer": "which",
+      "audioText": "She told them that it was a gift which carried a thousand years of Chinese stories."
+    }
+  ],
+  "_unknownWords": [
+    "exchange",
+    "canada",
+    "joined",
+    "cutting",
+    "seen",
+    "li",
+    "room",
+    "scissors",
+    "anna's",
+    "asked",
+    "chinese"
+  ]
+}

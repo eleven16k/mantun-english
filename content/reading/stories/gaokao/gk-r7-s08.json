@@ -1,0 +1,123 @@
+{
+  "id": "gk-r7-s08",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 8,
+  "title": "A Promise to the Next Century",
+  "titleCn": "写给下一个百年的承诺",
+  "coverEmoji": "⏳",
+  "paragraphs": [
+    {
+      "text": "Ask most people what the world will look like in fifty years, and you will probably receive either a shining dream or a quiet sigh. Neither response is wrong, for the future has always been a mirror in which we see our own hopes and fears. What matters, however, is not the picture we imagine but the habits we allow to shape it. Were we to treat tomorrow as something already decided, we would slowly stop trying to improve today.",
+      "translation": "问问大多数人，五十年后的世界会是什么样子，你很可能会得到一个灿烂的梦想，或者一声轻轻的叹息。两种反应都没错，因为未来一直是一面镜子，我们在其中照见自己的希望与恐惧。然而真正重要的，并不是我们想象出的那幅图景，而是我们任由其塑造未来的种种习惯。倘若我们把明天当作早已注定的事，我们便会慢慢不再努力改善今天。"
+    },
+    {
+      "text": "Space exploration is a striking reminder that imagination and responsibility must always travel together, like two wheels of one cart. Not only do rockets carry cameras and experiments beyond our atmosphere, but they also carry the curiosity of everyone who watches them rise. Some argue that we should leave Earth alone and stop dreaming of other planets, since money spent among the stars seems wasted on the ground. Yet those old dreams repaid us well.",
+      "translation": "太空探索是一个醒目的提醒：想象力与责任心必须始终同行，就像同一辆车的两只轮子。火箭不仅把相机和实验设备送出了大气层，也把每一个仰望它们升空的人的好奇心一同带了上去。有人主张，我们应当放过地球、不再梦想别的星球，因为花在星辰之间的钱似乎都浪费在了地面上。然而，那些旧日的梦想早已给了我们丰厚的回报。"
+    },
+    {
+      "text": "If we ever build cities on the moon, we will need the same technology that keeps our own cities alive, clean and quiet. Only when clean energy becomes ordinary rather than remarkable can a permanent settlement beyond Earth be called honest. Should we ignore the rivers and forests at home, we would simply export our mistakes to another world, and to our children. The choice belongs to us all.",
+      "translation": "如果我们真要在月球上建起城市，我们将需要那套让地球上的城市得以存活、洁净而安宁的技术。只有当清洁能源变得平常而非稀奇时，地球之外的永久定居点才称得上诚实。倘若我们无视家乡的河流与森林，我们不过是在把自己的错误输出到另一个世界，也留给自己的孩子。这个选择属于我们每一个人。"
+    },
+    {
+      "text": "Climate change, resource shortages and unequal access to clean water will not wait politely for us to agree on a plan. Had nations cooperated earlier, some of the damage we now measure might never have happened at all. Still, regret is a poor teacher unless it changes what we do next, and it rarely does. What the next century requires is not a single hero but millions of ordinary people making ordinary choices well.",
+      "translation": "气候变化、资源短缺以及清洁用水的不平等，不会礼貌地等着我们就某项计划达成一致。如果各国早些合作，我们今天所测量到的一些损失，也许根本不会发生。不过，后悔是个很差劲的老师，除非它能改变我们接下来所做的事——而它很少做到。下个世纪需要的不是一个英雄，而是千千万万普通人把平凡的选择做好。"
+    },
+    {
+      "text": "So when I am asked about the year 2075, I no longer search for a perfect answer. I describe the small decisions I intend to make: taking the train, planting trees, and protecting what cannot speak for itself. No one can promise that these choices will be enough, and no honest writer should pretend otherwise. Time will not wait for us. But a promise made to the next century is worth keeping, even when nobody is watching us keep it.",
+      "translation": "所以，当有人问起 2075 年时，我不再寻找一个完美的答案。我描述自己打算做出的那些小决定：坐火车、种树，以及保护那些无法为自己发声的事物。谁也无法保证这些选择就够了，而诚实的写作者也不该假装它们足够。时间不会等我们。但向下一世纪许下的承诺值得坚守，哪怕没有人在看着我们坚守。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In the last paragraph, which small decision does the writer mention?",
+      "audioText": "In the last paragraph, which small decision does the writer mention?",
+      "options": [
+        {
+          "emoji": "🚂",
+          "value": "train",
+          "text": "Taking the train"
+        },
+        {
+          "emoji": "✈️",
+          "value": "plane",
+          "text": "Flying by plane"
+        },
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "Driving a car"
+        }
+      ],
+      "answer": "train"
+    },
+    {
+      "type": "word_builder",
+      "word": "curiosity",
+      "audioText": "curiosity"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "choice",
+        "belongs",
+        "to",
+        "us",
+        "all."
+      ],
+      "audioText": "The choice belongs to us all."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Were we to treat tomorrow as something already decided, we would slowly stop trying to ___ today.",
+      "choices": [
+        "improve",
+        "invent",
+        "ignore"
+      ],
+      "answer": "improve",
+      "audioText": "Were we to treat tomorrow as something already decided, we would slowly stop trying to improve today."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Yet",
+        "those",
+        "old",
+        "dreams",
+        "repaid",
+        "us",
+        "well."
+      ],
+      "audioText": "Yet those old dreams repaid us well."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Had nations cooperated earlier, some of the damage we now ___ might never have happened at all.",
+      "choices": [
+        "measure",
+        "mention",
+        "manage"
+      ],
+      "answer": "measure",
+      "audioText": "Had nations cooperated earlier, some of the damage we now measure might never have happened at all."
+    }
+  ],
+  "_unknownWords": [
+    "response",
+    "exploration",
+    "imagination",
+    "curiosity",
+    "repaid",
+    "remarkable",
+    "simply",
+    "resource",
+    "shortages",
+    "unequal",
+    "cooperated",
+    "earlier",
+    "cannot"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "gk-r1-s09",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 9,
+  "title": "The Ice That Keeps Ancient Air",
+  "titleCn": "冰层里封存的远古空气",
+  "coverEmoji": "🧊",
+  "paragraphs": [
+    {
+      "text": "Far from any city, the ice sheets of Antarctica grow slowly, layer by layer, as snow falls and never melts. Each year adds a thin new sheet, which presses the older snow beneath it into solid ice. Buried in that ice are countless tiny bubbles, and inside them lies a sample of the ancient atmosphere. Each bubble holds a breath of ancient air. Together, they form a natural record of the planet's past.",
+      "translation": "远离城市的南极冰盖，在积雪落下却永不融化的过程中，一层层缓慢增厚。每年都会多出一层薄薄的新雪，它把下面更古老的雪压成坚硬的冰。埋在那冰层中的，是无数微小的气泡，气泡里封存着一份远古大气的样本。每个气泡都含着一口远古的空气。它们共同构成了地球过去的天然记录。"
+    },
+    {
+      "text": "To read this record, scientists drill deep into the ice and pull out long cylinders called cores. Working in temperatures far below zero, they cut each core into sections and send the pieces to laboratories. There the trapped air is released and measured, which gives researchers a direct view of gases from hundreds of thousands of years ago. The evidence that carbon dioxide and temperature rise and fall together has become one of the clearest results in climate science.",
+      "translation": "为了读懂这份记录，科学家向冰层深处钻孔，取出被称为冰芯的长柱状样本。他们在远低于零度的环境里工作，把每根冰芯切成小段，再把这些样品送进实验室。在那里，被封住的气体被释放并测量，这为研究者打开了一扇直接观察数十万年前气体的窗口。二氧化碳与气温同升同降，这一证据已成为气候科学中最清晰的结论之一。"
+    },
+    {
+      "text": "One core from East Antarctica, which reaches back more than 800,000 years, has changed how we understand the climate. During that long period, the Earth passed through eight ice ages and eight warm periods, none of which our species experienced. Surprisingly, the level of carbon dioxide stayed within a narrow range, rarely rising above about 300 parts per million. In other words, the air above us today is not the same as the air our ancestors knew.",
+      "translation": "一根来自南极东部的冰芯可回溯到八十多万年前，它改变了我们对气候的认识。在那段漫长岁月里，地球经历了八次冰期和八个温暖期，而其中任何一个时期，我们人类都未曾经历。令人意外的是，二氧化碳的含量始终停留在很窄的范围内，极少超过百万分之三百左右。换句话说，今天在我们头顶的空气，已不同于我们祖先熟悉的那种空气。"
+    },
+    {
+      "text": "Since the industrial age began, that figure has climbed past 420 parts per million, and it is still rising. Compared with the natural shifts recorded in the ice, the change is happening far too fast. Plants and animals now have very little time to adapt. Coastal communities, which depend on fishing and farming, are already noticing warmer seas and stranger weather.",
+      "translation": "自工业时代开始以来，这个数字已攀升到百万分之四百二十以上，而且仍在上升。与冰芯中记录的自然变化相比，这次变化发生得实在太快了。动植物如今几乎没有时间适应。依赖捕鱼和耕作的沿海社区，已经开始察觉到更温暖的海洋和更反常的天气。"
+    },
+    {
+      "text": "Knowing what happened in the past, researchers can make better predictions about the future. The ice does not tell us what we should do, but it shows clearly what happens when the air changes quickly. Silent and frozen, it keeps a story that we have only begun to read.",
+      "translation": "了解了过去发生过什么，研究者就能对未来作出更准确的预测。冰层不会告诉我们该做什么，但它清楚地显示出：当空气迅速变化时会发生什么。它沉默而冰冷，保存着一个我们才刚刚开始阅读的故事。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what do scientists pull out of the ice?",
+      "audioText": "According to the text, what do scientists pull out of the ice?",
+      "options": [
+        {
+          "emoji": "🧊",
+          "value": "cylinder",
+          "text": "A long cylinder of ice"
+        },
+        {
+          "emoji": "💧",
+          "value": "water",
+          "text": "A bottle of water"
+        },
+        {
+          "emoji": "🪨",
+          "value": "rock",
+          "text": "A piece of rock"
+        }
+      ],
+      "answer": "cylinder"
+    },
+    {
+      "type": "word_builder",
+      "word": "atmosphere",
+      "audioText": "atmosphere"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Each",
+        "bubble",
+        "holds",
+        "a",
+        "breath",
+        "of",
+        "ancient",
+        "air"
+      ],
+      "audioText": "Each bubble holds a breath of ancient air."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "change",
+        "is",
+        "happening",
+        "far",
+        "too",
+        "fast"
+      ],
+      "audioText": "The change is happening far too fast."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ in that ice are countless tiny bubbles.",
+      "choices": [
+        "Buried",
+        "Burying",
+        "To bury"
+      ],
+      "answer": "Buried",
+      "audioText": "Buried in that ice are countless tiny bubbles."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "To read this record, scientists drill deep into the ice and pull out long ___ called cores.",
+      "choices": [
+        "cylinders",
+        "bubbles",
+        "layers"
+      ],
+      "answer": "cylinders",
+      "audioText": "To read this record, scientists drill deep into the ice and pull out long cylinders called cores."
+    }
+  ],
+  "_unknownWords": [
+    "melts",
+    "beneath",
+    "countless",
+    "bubbles",
+    "sample",
+    "bubble",
+    "planet's",
+    "cylinders",
+    "cores",
+    "core",
+    "researchers",
+    "carbon",
+    "dioxide",
+    "species",
+    "surprisingly",
+    "industrial",
+    "shifts",
+    "adapt",
+    "coastal",
+    "communities",
+    "predictions",
+    "frozen",
+    "begun"
+  ]
+}

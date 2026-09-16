@@ -1,0 +1,101 @@
+{
+  "id": "gk-r5-s12",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 12,
+  "title": "The Homework I Set for Myself",
+  "titleCn": "我给自己布置的作业",
+  "coverEmoji": "📓",
+  "paragraphs": [
+    {
+      "text": "I was fourteen when our English teacher, a quiet woman, told us something we had never expected to hear. Instead of wishing us a happy holiday, she asked a question that stayed with me for years. She asked what we would choose to learn if no one were ever going to test us again. The room went quiet, the clock on the wall suddenly the loudest thing in it.",
+      "translation": "我十四岁那年，我们那位安静的英语老师说了句我们从没想过会听到的话。她没有祝我们假期愉快，而是问了一个多年后仍留在我心里的问题。她问的是：如果以后再没有人考我们，我们会选择去学什么？教室里安静下来，墙上的钟突然成了屋里最响的东西。"
+    },
+    {
+      "text": "That summer, to my own surprise, I wrote a list of homework for myself, none of which anyone would mark. One task was to learn to swim, another to read a book in English without stopping for every new word. For the first time, the work belonged to me, and nobody, not even my parents, could take the credit or the blame.",
+      "translation": "那个夏天，连我自己都意外，我给自己写了一份作业清单，而那些作业没有一个人会批改。一项任务是学会游泳，另一项是读一本英文书时不再为每个生词停下来。那是第一次，这份功课属于我自己，而没有人——甚至我的父母——能替我领这份功劳或背这个锅。"
+    },
+    {
+      "text": "Years passed, and the lists changed with me, though the habit of making them never did. At seventeen, the homework was an exam I had set for myself, the result of which mattered more than any school report. In my first year at university, I added a task that frightened me: speaking up in a class of two hundred. Later, working full-time, I learned to cook properly, a skill my mother, who had fed us for twenty years, found amusing.",
+      "translation": "几年过去，清单随我一同改变，尽管列清单的习惯从未变过。十七岁时，那份作业成了一场我为自己设的考试，而它的结果比任何学校的成绩单都更重要。上大学第一年，我加了一项让我害怕的任务：在两百人的课上开口发言。再后来，一边全职工作，我学会了正经做饭——这项本领让我母亲觉得好笑，她可是给我们做了二十年饭的人。"
+    },
+    {
+      "text": "Some people say learning belongs to childhood, to classrooms, to the years when someone else decides what you need. That view, I have come to believe, misses something essential about education, the thing our teacher was hinting at. School gives us a start, but the long race, in which nobody forces us forward, is run alone.",
+      "translation": "有人说，学习属于童年，属于教室，属于那些由别人决定你需要什么的年月。在我看来，这种看法忽略了教育中最要紧的东西，也就是我们那位老师当年暗示的那一点。学校给了我们一个起点，但那条漫长的、没有人逼你向前的赛道，是要独自跑完的。"
+    },
+    {
+      "text": "Now, whenever September arrives, I still write a short list of things I want to learn, and I sign it with my own name. The teacher retired long ago, and she will never know what her question started, which is perhaps the best kind of homework there is. Learning, after all, is not a task that ends; it is a habit that keeps us curious as long as we live.",
+      "translation": "如今每到九月，我仍会写下一张想学什么的短清单，并签上自己的名字。那位老师早已退休，她永远不会知道她那个问题开启了多少东西——而这大概就是最好的那种作业了。毕竟，学习不是一件会结束的任务，而是一种让我们终生保持好奇的习惯。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "word_builder",
+      "word": "curious",
+      "audioText": "curious"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Some",
+        "people",
+        "say",
+        "learning",
+        "belongs",
+        "to",
+        "childhood"
+      ],
+      "audioText": "Some people say learning belongs to childhood."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "added",
+        "a",
+        "task",
+        "that",
+        "frightened",
+        "me"
+      ],
+      "audioText": "I added a task that frightened me."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Instead of wishing us a happy holiday, she asked a ___ that stayed with me for years.",
+      "choices": [
+        "question",
+        "ticket",
+        "promise"
+      ],
+      "answer": "question",
+      "audioText": "Instead of wishing us a happy holiday, she asked a question that stayed with me for years."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "School gives us a start, but the long race, in ___ nobody forces us forward, is run alone.",
+      "choices": [
+        "that",
+        "which",
+        "whom"
+      ],
+      "answer": "which",
+      "audioText": "School gives us a start, but the long race, in which nobody forces us forward, is run alone."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Learning is not a task that ends; it is a habit that keeps us ___ as long as we live.",
+      "choices": [
+        "curious",
+        "silent",
+        "careful"
+      ],
+      "answer": "curious",
+      "audioText": "Learning is not a task that ends; it is a habit that keeps us curious as long as we live."
+    }
+  ],
+  "_unknownWords": [
+    "childhood",
+    "hinting"
+  ]
+}

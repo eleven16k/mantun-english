@@ -1,0 +1,141 @@
+{
+  "id": "xsc-r1-s12",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 12,
+  "title": "The Squirrel and the Red Apple",
+  "titleCn": "松鼠和大红苹果",
+  "coverEmoji": "🐿️",
+  "paragraphs": [
+    {
+      "text": "Today is a sunny day. My family is at the apple orchard. The apples are red and green. They look very nice.",
+      "translation": "今天是个晴朗的日子。我们一家人在苹果园里。苹果有红的，也有绿的。它们看起来真好看。"
+    },
+    {
+      "text": "Grandpa has a big basket. My little sister has a small bag. I have a red bucket. We can pick many apples.",
+      "translation": "爷爷有一个大篮子。妹妹有一个小袋子。我有一个红色的桶。我们能摘很多苹果。"
+    },
+    {
+      "text": "A squirrel is in the tree. It has a big tail. It likes sweet apples. Then it comes down to us.",
+      "translation": "一只松鼠在树上。它有一条大尾巴。它喜欢甜甜的苹果。然后它下来找我们了。"
+    },
+    {
+      "text": "The squirrel takes a small apple. It cannot carry the big one. My sister says hello to it. The squirrel is not afraid.",
+      "translation": "松鼠叼起一个小苹果。那个大的它搬不动。妹妹向它问好。松鼠一点也不怕。"
+    },
+    {
+      "text": "Grandpa gives it a red apple. It takes the apple happily. Then it runs up the tree. We laugh and clap our hands.",
+      "translation": "爷爷给了它一个红苹果。它开心地接过苹果。然后它跑上了树。我们笑着拍起手来。"
+    },
+    {
+      "text": "My bucket is full of apples. It is time to go home. We say goodbye to the squirrel. It waves its big tail. What a nice day!",
+      "translation": "我的桶里装满了苹果。该回家了。我们跟松鼠说再见。它摇着大尾巴。真是美好的一天！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What animal is in the apple tree?",
+      "audioText": "What animal is in the apple tree?",
+      "options": [
+        {
+          "emoji": "🐿️",
+          "value": "squirrel",
+          "text": "Squirrel"
+        },
+        {
+          "emoji": "🐶",
+          "value": "dog",
+          "text": "Dog"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "Bird"
+        }
+      ],
+      "answer": "squirrel"
+    },
+    {
+      "type": "image_choice",
+      "question": "What color is my bucket?",
+      "audioText": "What color is my bucket?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Grandpa give the squirrel?",
+      "audioText": "What does Grandpa give the squirrel?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        },
+        {
+          "emoji": "🍌",
+          "value": "banana",
+          "text": "A banana"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        }
+      ],
+      "answer": "apple"
+    },
+    {
+      "type": "word_builder",
+      "word": "squirrel",
+      "audioText": "squirrel"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "squirrel",
+        "is",
+        "not",
+        "afraid."
+      ],
+      "audioText": "The squirrel is not afraid."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "My bucket is full of ___.",
+      "choices": [
+        "apples",
+        "books",
+        "toys"
+      ],
+      "answer": "apples",
+      "audioText": "My bucket is full of apples."
+    }
+  ],
+  "_unknownWords": [
+    "orchard",
+    "bucket",
+    "squirrel",
+    "cannot",
+    "happily",
+    "waves"
+  ]
+}

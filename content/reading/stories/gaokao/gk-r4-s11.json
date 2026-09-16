@@ -1,0 +1,120 @@
+{
+  "id": "gk-r4-s11",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 11,
+  "title": "Nature: The Quiet Healer",
+  "titleCn": "大自然：安静的疗愈者",
+  "coverEmoji": "🌿",
+  "paragraphs": [
+    {
+      "text": "Spending time in green places is one of the simplest ways to protect your mental health. Many students believe that feeling stressed is normal, but they rarely realize how much the environment around them matters. Trees, grass, and open sky are not just pretty scenery; they quietly change the way our brains work.",
+      "translation": "在绿色环境中度过时光，是保护心理健康最简单的方式之一。许多学生认为感到压力是正常的，却很少意识到周围环境对他们有多重要。树木、草地和开阔的天空不只是好看的风景，它们还会悄悄改变我们大脑的运作方式。"
+    },
+    {
+      "text": "Scientists have found that walking in a park for twenty minutes can lower stress and slow a racing heart. Fresh air alone does not explain this effect, because the colors and sounds of nature also help. Blood pressure drops and breathing becomes deeper. Worried thoughts, meanwhile, seem to lose their power. Doctors now suggest treating nature as a cheap and safe form of medicine.",
+      "translation": "科学家发现，在公园里散步二十分钟能够减轻压力，让急促的心跳慢下来。仅仅有新鲜空气并不能解释这种效果，因为大自然的色彩与声音也在起作用。血压下降，呼吸变得更深。与此同时，那些忧虑的念头似乎也失去了力量。如今医生建议把大自然当作一种廉价又安全的良药。"
+    },
+    {
+      "text": "Nature also helps us to concentrate. After hours of staring at a screen, our attention becomes weak and our patience runs out. Researchers advise students to take short breaks outside instead of checking their phones again. Even a view of trees from a window can restore the ability to focus.",
+      "translation": "大自然还能帮助我们集中注意力。盯着屏幕数小时之后，我们的注意力会变弱，耐心也会耗尽。研究人员建议学生到户外短暂休息，而不是再一次拿起手机。即便只是从窗口看到树木，也能恢复专注的能力。"
+    },
+    {
+      "text": "Sadly, many city residents spend almost all their time indoors, and they should have noticed the cost much earlier. Walking to school, eating lunch in a garden, or keeping a plant beside your desk are easy starting points. You do not need to climb a mountain to benefit; regular, gentle contact works best.",
+      "translation": "遗憾的是，许多城市居民几乎所有时间都在室内度过，他们本该更早注意到这样做的代价。步行上学、在小花园里吃午饭，或者在桌边养一株植物，都是很容易上手的起点。你并不需要去爬山才能受益，规律而温和的接触效果最好。"
+    },
+    {
+      "text": "To get the most from nature, try to make it a habit rather than a rare treat. Going outside at the same time each day, and leaving your earphones at home, will help your mind to rest. The goal is not to escape your life but to return to it with a calmer, clearer head.",
+      "translation": "要想从大自然中收获最多好处，就要设法把它变成习惯，而不是偶尔的享受。每天在同一时间外出，把耳机留在家里，会帮助你放松大脑。目标不是逃离生活，而是带着更平静、更清醒的头脑回到生活之中。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what can lower stress and slow a racing heart?",
+      "audioText": "According to the text, what can lower stress and slow a racing heart?",
+      "options": [
+        {
+          "emoji": "🌳",
+          "value": "park",
+          "text": "Walking in a park for twenty minutes"
+        },
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "Checking your phone for twenty minutes"
+        },
+        {
+          "emoji": "🛏️",
+          "value": "sleep",
+          "text": "Staying in bed for twenty minutes"
+        }
+      ],
+      "answer": "park"
+    },
+    {
+      "type": "word_builder",
+      "word": "patience",
+      "audioText": "patience"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Nature",
+        "also",
+        "helps",
+        "us",
+        "to",
+        "concentrate."
+      ],
+      "audioText": "Nature also helps us to concentrate."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Blood",
+        "pressure",
+        "drops",
+        "and",
+        "breathing",
+        "becomes",
+        "deeper."
+      ],
+      "audioText": "Blood pressure drops and breathing becomes deeper."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Scientists have found that ___ in a park for twenty minutes can lower stress and slow a racing heart.",
+      "choices": [
+        "walking",
+        "walked",
+        "to walk"
+      ],
+      "answer": "walking",
+      "audioText": "Scientists have found that walking in a park for twenty minutes can lower stress and slow a racing heart."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Sadly, many city residents spend almost all their time indoors, and they ___ the cost much earlier.",
+      "choices": [
+        "should have noticed",
+        "should notice",
+        "have noticed"
+      ],
+      "answer": "should have noticed",
+      "audioText": "Sadly, many city residents spend almost all their time indoors, and they should have noticed the cost much earlier."
+    }
+  ],
+  "_unknownWords": [
+    "simplest",
+    "mental",
+    "meanwhile",
+    "researchers",
+    "restore",
+    "residents",
+    "indoors",
+    "earlier",
+    "contact",
+    "earphones"
+  ]
+}

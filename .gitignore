@@ -9,3 +9,6 @@ playwright/report/
 .DS_Store
 .env.local
 .dev.log
+
+# TTS 音频资产体积过大（~413MB），经 rsync 直推服务器，不入 git
+public/audio/

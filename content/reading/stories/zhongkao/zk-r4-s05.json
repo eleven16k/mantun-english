@@ -1,0 +1,119 @@
+{
+  "id": "zk-r4-s05",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 5,
+  "title": "Waste Less, Live Better",
+  "titleCn": "少一点浪费，生活更美好",
+  "coverEmoji": "♻️",
+  "paragraphs": [
+    {
+      "text": "Every day, our school throws away a lot of rubbish. Do you know where it all goes? Most of it goes to a big place outside the city.",
+      "translation": "每天，我们学校都会扔掉很多垃圾。你知道它们最后都去哪儿了吗？大部分都运到了城外一个很大的地方。"
+    },
+    {
+      "text": "If we sort our rubbish, we can help the Earth. Put paper and boxes in the blue bin. Glass bottles should go in the green bin. Old food and fruit skins go in the brown bin.",
+      "translation": "如果我们把垃圾分好类，就能帮助地球。把纸张和纸盒放进蓝色垃圾桶。玻璃瓶应该放进绿色垃圾桶。剩饭和果皮放进棕色垃圾桶。"
+    },
+    {
+      "text": "Why should we do this? If we mix all the rubbish together, it is hard to use again. If we sort it well, it can become new things. Old paper can turn into new books and boxes.",
+      "translation": "我们为什么要这样做呢？如果把所有垃圾混在一起，就很难再被利用。如果分得好，垃圾可以变成新东西。旧纸张能变成新书和新纸盒。"
+    },
+    {
+      "text": "Rubbish also hurts animals in the sea. Some sea animals think plastic bags are food and eat them. If we use less plastic, fewer animals will get hurt. Never drop plastic bags on the beach.",
+      "translation": "垃圾也会伤害海里的动物。有些海洋动物以为塑料袋是食物，就把它们吃掉。如果我们少用塑料，受伤的动物就会更少。千万不要把塑料袋扔在海滩上。"
+    },
+    {
+      "text": "There is more we can do at home and at school. Walk or ride a bike to school. Bring your own water bottle and lunch box. If everyone does these things, our city will be a better place.",
+      "translation": "在家里和学校，我们还能做更多的事。走路或骑自行车去上学。带上自己的水杯和饭盒。如果每个人都这样做，我们的城市会变得更美好。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which bin should glass bottles go in?",
+      "audioText": "Which bin should glass bottles go in?",
+      "options": [
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue bin"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green bin"
+        },
+        {
+          "emoji": "🟤",
+          "value": "brown",
+          "text": "Brown bin"
+        }
+      ],
+      "answer": "green"
+    },
+    {
+      "type": "word_builder",
+      "word": "rubbish",
+      "audioText": "rubbish"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Put",
+        "paper",
+        "and",
+        "boxes",
+        "in",
+        "the",
+        "blue",
+        "bin."
+      ],
+      "audioText": "Put paper and boxes in the blue bin."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Walk",
+        "or",
+        "ride",
+        "a",
+        "bike",
+        "to",
+        "school."
+      ],
+      "audioText": "Walk or ride a bike to school."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If we ___ our rubbish, we can help the Earth.",
+      "choices": [
+        "sort",
+        "sorts",
+        "sorting"
+      ],
+      "answer": "sort",
+      "audioText": "If we sort our rubbish, we can help the Earth."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Never ___ plastic bags on the beach.",
+      "choices": [
+        "drop",
+        "drops",
+        "dropping"
+      ],
+      "answer": "drop",
+      "audioText": "Never drop plastic bags on the beach."
+    }
+  ],
+  "_unknownWords": [
+    "big",
+    "bin",
+    "skins",
+    "mix",
+    "hurts",
+    "less",
+    "hurt"
+  ]
+}

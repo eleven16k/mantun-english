@@ -1,0 +1,119 @@
+{
+  "id": "gk-r2-s11",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 11,
+  "title": "When Convenience Asks for Permission",
+  "titleCn": "当便利来向你索取许可",
+  "coverEmoji": "🔐",
+  "paragraphs": [
+    {
+      "text": "The permission you gave was never really a choice, because the button had already been pressed for you. Every time an app is opened, a small request is being sent from your pocket to a distant server. What most people never notice is how much of that information is stored, copied and quietly passed on.",
+      "translation": "你给出的那份“许可”其实从来算不上选择，因为那个按钮早已经替你按下了。每当一个应用被打开，一个小请求就会从你的口袋发往远方的服务器。而大多数人从不会注意的是：这些信息究竟有多少被存储、复制，又被悄悄转手。"
+    },
+    {
+      "text": "It is easy to forget that permission, once given, is rarely taken back by the person who agreed to it. Quiet profiles are being built while we sleep, and by the time the warning is read, our habits may have been sold several times over. The record that follows us keeps growing, and it is passed among companies whose names we have never heard.",
+      "translation": "人们很容易忘记：许可一旦给出，当初答应的人就很难再把它收回。我们睡觉的时候，一份份安静的档案正在被建立；等到我们终于读到那句提醒时，我们的习惯或许已经被转卖了好几轮。跟着我们的那份记录还在不断变大，它在一些我们从未听过名字的公司之间被传来传去。"
+    },
+    {
+      "text": "Designers now argue that users should be told, in plain language, what will be done with the information they hand over. It seems fair to ask a company how long a file will be kept, and who will eventually be allowed to open it. What people want is not a longer document that nobody reads, but a clearer promise that can be checked.",
+      "translation": "如今设计者们主张，应当用平实的语言告诉用户：他们交出去的信息会被怎样使用。去问一家公司一份文件会保存多久、最终谁会被允许查看它，看来是很合理的要求。人们想要的并不是一份没人会读的更长的文件，而是一个可以被核对的、更清楚的承诺。"
+    },
+    {
+      "text": "What makes the situation harder is that convenience is being offered as a reward for silence. A map that already knows your route is far more useful than one that does not, so the trade feels gentle and almost kind. By the time anyone asks whether the deal was fair, the deal has been accepted.",
+      "translation": "让局面更难处理的是：便利正被当作沉默的奖赏送到你面前。一张已经认得你路线的地图，比一张不认路的地图有用得多，于是这笔交易显得温和，甚至近乎体贴。等到有人去问这桩买卖是否公平时，买卖早已成交。"
+    },
+    {
+      "text": "None of this means that we should live without our phones or refuse every new service. It means that the question of permission should come before the click, rather than long after it. When the asking is honest and the answer is understood, technology can be trusted a little more.",
+      "translation": "这一切并不意味着我们要离开手机生活，或者拒绝每一项新服务。它的意思是：关于许可的那个问题，应该在点击之前被提出，而不是在很久之后才被想起。当询问是诚实的、答案也被真正理解时，技术就能多赢得一点信任。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what is sent from your pocket every time an app is opened?",
+      "audioText": "According to the text, what is sent from your pocket every time an app is opened?",
+      "options": [
+        {
+          "emoji": "📨",
+          "value": "request",
+          "text": "A small request"
+        },
+        {
+          "emoji": "📸",
+          "value": "photo",
+          "text": "A photo"
+        },
+        {
+          "emoji": "🎵",
+          "value": "song",
+          "text": "A song"
+        }
+      ],
+      "answer": "request"
+    },
+    {
+      "type": "word_builder",
+      "word": "permission",
+      "audioText": "permission"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "record",
+        "that",
+        "follows",
+        "us",
+        "keeps",
+        "growing"
+      ],
+      "audioText": "The record that follows us keeps growing."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "the",
+        "trade",
+        "feels",
+        "gentle",
+        "and",
+        "almost",
+        "kind"
+      ],
+      "audioText": "The trade feels gentle and almost kind."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ people want is not a longer document that nobody reads, but a clearer promise that can be checked.",
+      "choices": [
+        "What",
+        "That",
+        "Which"
+      ],
+      "answer": "What",
+      "audioText": "What people want is not a longer document that nobody reads, but a clearer promise that can be checked."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Every time an app is opened, a small request is being ___ from your pocket to a distant server.",
+      "choices": [
+        "sent",
+        "sending",
+        "sends"
+      ],
+      "answer": "sent",
+      "audioText": "Every time an app is opened, a small request is being sent from your pocket to a distant server."
+    }
+  ],
+  "_unknownWords": [
+    "app",
+    "server",
+    "given",
+    "taken",
+    "profiles",
+    "designers",
+    "done",
+    "route"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "gk-r5-s08",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 8,
+  "title": "The Teacher Who Became a Student",
+  "titleCn": "成为学生的老师",
+  "coverEmoji": "📚",
+  "paragraphs": [
+    {
+      "text": "My father had taught mathematics for thirty years when, to everyone's surprise, he signed up for an evening course in computer programming. His colleagues at school, most of whom were at least twenty years younger, could not understand his decision at all. \"Why start again at your age?\" asked a neighbour, for whom retirement seemed the only sensible plan.",
+      "translation": "我父亲教了三十年数学，后来出乎所有人意料，他报名参加了一门夜间计算机编程课。他学校里的同事大多至少比他小二十岁，完全不理解他的决定。“你都这个年纪了，为什么还要重新开始？”一位邻居问道——在他看来，退休才是唯一明智的安排。"
+    },
+    {
+      "text": "On the first evening, my father came home late, his notebook filled with unfamiliar symbols and his glasses pushed up on his forehead. He admitted that the teacher, from whom he learned more in three hours than in a whole month, spoke far too fast.",
+      "translation": "第一天晚上，父亲很晚才回家，笔记本上写满了陌生的符号，眼镜推在额头上。他承认，那位老师讲得太快了——三小时里他从对方身上学到的东西，比他自己啃一个月的书还多。"
+    },
+    {
+      "text": "He never missed a single class. What impressed me most was not the code he eventually mastered but the patience with which he faced every error. \"Behind each mistake,\" he told me one Sunday, \"there is a rule that I simply have not met yet.\"",
+      "translation": "他一节课都没有缺过。最让我印象深刻的，不是他最终掌握的代码，而是他面对每一个错误时的那份耐心。“每一个错误背后，”他在一个星期天对我说，“都有一条我还没遇到的规则。”"
+    },
+    {
+      "text": "By spring, my father had built a small website for his students, through which they could practise at their own speed. Learning, he believed, never ends. Watching him explain a difficult idea to a teenager, I realised that a teacher never really stops being a student.",
+      "translation": "到了春天，父亲为他的学生做了一个小网站，他们可以通过它按自己的节奏练习。他相信，学习永无止境。看着他向一个少年解释一道难题，我意识到，老师其实从未真正停止做学生。"
+    },
+    {
+      "text": "Today, whenever I am tempted to say that I am too old to learn something new, I remember that evening course. I see again the tired man at the kitchen table, his pen moving slowly across a page of code. Education, as he proved, is not a stage of life; it is a habit that lasts as long as curiosity does.",
+      "translation": "如今，每当我想说自己太老了、学不了新东西时，我就会想起那门夜间课程。我仿佛又看到餐桌旁那个疲惫的人，笔在满是代码的纸页上缓缓移动。正如他所证明的，教育不是人生的某个阶段，而是一种只要好奇心还在就会延续下去的习惯。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which picture best matches what the father brought home from his first evening class?",
+      "audioText": "Which picture best matches what the father brought home from his first evening class?",
+      "options": [
+        {
+          "emoji": "📝",
+          "value": "notebook",
+          "text": "A notebook full of unfamiliar symbols"
+        },
+        {
+          "emoji": "🏅",
+          "value": "medal",
+          "text": "A medal for the best student"
+        },
+        {
+          "emoji": "🛌",
+          "value": "rest",
+          "text": "Advice to stop and rest"
+        }
+      ],
+      "answer": "notebook"
+    },
+    {
+      "type": "word_builder",
+      "word": "patience",
+      "audioText": "patience"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "He",
+        "never",
+        "missed",
+        "a",
+        "single",
+        "class."
+      ],
+      "audioText": "He never missed a single class."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Learning,",
+        "he",
+        "believed,",
+        "never",
+        "ends."
+      ],
+      "audioText": "Learning, he believed, never ends."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "He admitted that the teacher, from ___ he learned more in three hours than in a whole month, spoke far too fast.",
+      "choices": [
+        "whom",
+        "which",
+        "who"
+      ],
+      "answer": "whom",
+      "audioText": "He admitted that the teacher, from whom he learned more in three hours than in a whole month, spoke far too fast."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Behind each mistake, he told me one Sunday, there is a ___ that I simply have not met yet.",
+      "choices": [
+        "rule",
+        "prize",
+        "trick"
+      ],
+      "answer": "rule",
+      "audioText": "Behind each mistake, he told me one Sunday, there is a rule that I simply have not met yet."
+    }
+  ],
+  "_unknownWords": [
+    "everyone's",
+    "colleagues",
+    "neighbour",
+    "retirement",
+    "sensible",
+    "unfamiliar",
+    "admitted",
+    "simply",
+    "tempted",
+    "curiosity"
+  ]
+}

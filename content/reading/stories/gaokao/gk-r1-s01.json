@@ -1,0 +1,122 @@
+{
+  "id": "gk-r1-s01",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 1,
+  "title": "The Ocean's Invisible Forest",
+  "titleCn": "海洋里看不见的森林",
+  "coverEmoji": "🌊",
+  "paragraphs": [
+    {
+      "text": "Standing on a beach, you may think that the ocean is simply a vast sheet of blue water. In fact, it is filled with billions of tiny plants, which drift near the surface and are far too small to see. Few people ever notice them.",
+      "translation": "站在海滩上，你也许会觉得海洋不过是一大片蓝色的水。事实上，它里面充满了数以十亿计的微小植物，它们漂浮在海面附近，小得根本看不见。很少有人会注意到它们。"
+    },
+    {
+      "text": "Scientists call these microscopic plants phytoplankton. Like trees on land, they use sunlight to make their own food, taking carbon dioxide from the water and releasing oxygen. Drifting with currents, they travel thousands of kilometres, forming what researchers describe as an invisible forest.",
+      "translation": "科学家把这些微小的植物称为浮游植物。就像陆地上的树木一样，它们利用阳光制造自己的食物，从水中吸收二氧化碳并释放出氧气。它们随洋流漂移，能行进数千公里，形成了研究者所说的“看不见的森林”。"
+    },
+    {
+      "text": "Although each cell is tiny, the total mass of phytoplankton is enormous. The fact that they produce about half of the oxygen on Earth surprises many people. Every second breath you take, scientists say, comes from the sea rather than from a forest.",
+      "translation": "尽管每一个细胞都很小，浮游植物的总质量却极为庞大。它们制造出地球上大约一半的氧气，这一事实让许多人感到惊讶。科学家说，你每吸两口气，就有一口来自海洋，而不是来自森林。"
+    },
+    {
+      "text": "These plants also play a key role in the climate, which is why scientists watch them closely. Absorbing carbon dioxide from the atmosphere, they help to keep our planet cooler. When they die, some of them sink to the deep ocean, carrying carbon away from the air for centuries.",
+      "translation": "这些植物在气候中也起着关键作用，正因如此，科学家密切地关注着它们。它们吸收大气中的二氧化碳，帮助我们的星球保持凉爽。当它们死亡时，其中一些会沉入深海，把碳从空气中带走，长达数百年之久。"
+    },
+    {
+      "text": "Warming water, however, may weaken this system, because hotter oceans hold fewer of the nutrients that phytoplankton need. Protecting these invisible forests is therefore not just about saving the sea; it is about protecting the air we all breathe.",
+      "translation": "然而，变暖的海水可能会削弱这一系统，因为更热的海水所含的、浮游植物所需的养分更少。因此，保护这些看不见的森林不仅仅是在拯救海洋，更是在保护我们大家所呼吸的空气。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, where does about half of the oxygen on Earth come from?",
+      "audioText": "According to the passage, where does about half of the oxygen on Earth come from?",
+      "options": [
+        {
+          "emoji": "🌲",
+          "value": "forest",
+          "text": "Forests on land"
+        },
+        {
+          "emoji": "🌊",
+          "value": "sea",
+          "text": "Tiny plants in the sea"
+        },
+        {
+          "emoji": "🏔️",
+          "value": "mountain",
+          "text": "High mountains"
+        }
+      ],
+      "answer": "sea"
+    },
+    {
+      "type": "word_builder",
+      "word": "oxygen",
+      "audioText": "oxygen"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Scientists",
+        "call",
+        "these",
+        "microscopic",
+        "plants",
+        "phytoplankton"
+      ],
+      "audioText": "Scientists call these microscopic plants phytoplankton."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Few",
+        "people",
+        "ever",
+        "notice",
+        "them"
+      ],
+      "audioText": "Few people ever notice them."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Drifting with ___, they travel thousands of kilometres, forming what researchers describe as an invisible forest.",
+      "choices": [
+        "currents",
+        "clouds",
+        "ships"
+      ],
+      "answer": "currents",
+      "audioText": "Drifting with currents, they travel thousands of kilometres, forming what researchers describe as an invisible forest."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Warming water, however, may weaken this system, because hotter oceans hold fewer of the ___ that phytoplankton need.",
+      "choices": [
+        "nutrients",
+        "colours",
+        "sounds"
+      ],
+      "answer": "nutrients",
+      "audioText": "Warming water, however, may weaken this system, because hotter oceans hold fewer of the nutrients that phytoplankton need."
+    }
+  ],
+  "_unknownWords": [
+    "simply",
+    "drift",
+    "microscopic",
+    "phytoplankton",
+    "sunlight",
+    "carbon",
+    "dioxide",
+    "drifting",
+    "currents",
+    "researchers",
+    "invisible",
+    "weaken",
+    "hotter",
+    "nutrients"
+  ]
+}

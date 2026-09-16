@@ -1,0 +1,120 @@
+{
+  "id": "zk-r5-s01",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 1,
+  "title": "The Girl Who Fixes Bikes",
+  "titleCn": "修自行车的女孩",
+  "coverEmoji": "🚲",
+  "paragraphs": [
+    {
+      "text": "Amy is a fourteen-year-old girl who lives in a small town in Yunnan. She loves riding her bike to school along the river every morning. On her way, she often sees some broken bikes lying beside the road. She feels sad because a few children in her town have no bikes at all.",
+      "translation": "Amy 是一个住在云南小镇上的十四岁女孩。她喜欢每天早上沿着河边骑自行车去上学。在路上，她常常看到一些坏掉的自行车躺在路边。她心里很难过，因为她镇上有些孩子根本没有自行车。"
+    },
+    {
+      "text": "One day, she asked her father, who worked in a bike shop, for help. He taught her how to repair a wheel and a broken chain carefully. After that, Amy began to collect old bikes from her neighbors. She cleaned them and repaired them. Then she gave the bikes to the children who really needed them.",
+      "translation": "一天，她向在自行车店工作的爸爸求助。爸爸耐心地教她怎样修车轮和断掉的链条。从那以后，Amy 开始从邻居那里收集旧自行车。她把车子擦干净，再修好。然后她把自行车送给真正需要它们的孩子们。"
+    },
+    {
+      "text": "By the end of last year, she had fixed more than fifty old bikes. Some of them were so old that they looked like rubbish. But after Amy's careful work, they shone like new ones again. The children who got the bikes smiled happily and rode away.",
+      "translation": "到去年年底，她已经修好了五十多辆旧自行车。其中一些太旧了，看起来就像一堆垃圾。但在 Amy 的细心修理之后，它们又变得像新的一样闪闪发亮。得到自行车的孩子们开心地笑着骑走了。"
+    },
+    {
+      "text": "Amy's wonderful story spread quickly through the small town last spring. A local newspaper wrote a long article which called her 'the bike angel'. More and more people joined her. They brought old bikes, tools and even some money to help her.",
+      "translation": "去年春天，Amy 的暖心故事很快传遍了整个小镇。当地一家报纸写了一篇长文，称她为“自行车天使”。越来越多的人加入了她。他们带来旧自行车、工具，甚至一些钱来帮助她。"
+    },
+    {
+      "text": "Amy says that she is not a hero at all. She just wants every child in her town to have a bike. 'When I see them riding to school, I feel really happy,' she says. Her small but warm action has changed many lives in her town.",
+      "translation": "Amy 说，她根本算不上什么英雄。她只是想让镇上的每个孩子都有一辆自行车。“当我看到他们骑车去上学时，我真的很快乐，”她说。她这个小小却温暖的举动，改变了她镇上许多人的生活。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does Amy give to the children in her town?",
+      "audioText": "What does Amy give to the children in her town?",
+      "options": [
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "Bikes"
+        },
+        {
+          "emoji": "📚",
+          "value": "books",
+          "text": "Books"
+        },
+        {
+          "emoji": "⚽",
+          "value": "balls",
+          "text": "Balls"
+        }
+      ],
+      "answer": "bike"
+    },
+    {
+      "type": "word_builder",
+      "word": "repair",
+      "audioText": "repair"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "By the end of last year, she ___ more than fifty old bikes.",
+      "choices": [
+        "had fixed",
+        "was fixing",
+        "has fixed"
+      ],
+      "answer": "had fixed",
+      "audioText": "By the end of last year, she had fixed more than fifty old bikes."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "One day, she asked her father, ___ worked in a bike shop, for help.",
+      "choices": [
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer": "who",
+      "audioText": "One day, she asked her father, who worked in a bike shop, for help."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "cleaned",
+        "them",
+        "and",
+        "repaired",
+        "them."
+      ],
+      "audioText": "She cleaned them and repaired them."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "More",
+        "and",
+        "more",
+        "people",
+        "joined",
+        "her."
+      ],
+      "audioText": "More and more people joined her."
+    }
+  ],
+  "_unknownWords": [
+    "yunnan",
+    "broken",
+    "lying",
+    "asked",
+    "chain",
+    "amy's",
+    "shone",
+    "happily",
+    "local",
+    "angel",
+    "joined"
+  ]
+}

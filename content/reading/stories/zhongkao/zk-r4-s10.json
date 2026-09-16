@@ -1,0 +1,121 @@
+{
+  "id": "zk-r4-s10",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 10,
+  "title": "Our Green Weekend",
+  "titleCn": "我们的绿色周末",
+  "coverEmoji": "🌱",
+  "paragraphs": [
+    {
+      "text": "Our school Green Club has a big plan for this Saturday. We put the plan on the classroom board on Friday. If you want to join us, come to the school gate at eight.",
+      "translation": "我们学校的绿色俱乐部这周六有个大计划。我们周五把计划写在了教室的黑板上。如果你想加入我们，八点到学校门口来。"
+    },
+    {
+      "text": "At nine, we will start work in the small park. Please wear old clothes and bring a pair of gloves. If we pick up the rubbish together, the park will look much better.",
+      "translation": "九点钟，我们会在小公园里开始劳动。请穿上旧衣服，再带上一副手套。如果我们一起把垃圾捡起来，公园会漂亮很多。"
+    },
+    {
+      "text": "Then we should put paper, glass and plastic into different bags. If you are not sure where to put something, just ask. Never mix food waste with bottles or cans. They go to different bins.",
+      "translation": "然后，我们应该把纸、玻璃和塑料装进不同的袋子里。如果你不确定某样东西该放哪儿，问一下就好。千万不要把厨余垃圾和瓶瓶罐罐混在一起，它们要去不同的垃圾桶。"
+    },
+    {
+      "text": "At noon, we will sit on the grass and eat a simple lunch. Please bring your own bottle and a box for your food. If everyone brings a bottle, we will not need any paper cups.",
+      "translation": "中午，我们会坐在草地上吃一顿简单的午餐。请带上自己的水杯和装食物的小盒子。如果每个人都自带水杯，我们就用不着纸杯了。"
+    },
+    {
+      "text": "In the afternoon, we will plant ten young trees by the lake. Birds can build their homes in those trees next spring. If you give the trees enough water, they will grow tall and strong.",
+      "translation": "下午，我们会在湖边种十棵小树。明年春天，鸟儿可以在这些树上安家。如果你给树浇足够的水，它们会长得又高又壮。"
+    },
+    {
+      "text": "Come by bike or on foot. Leave the car at home. If we walk more, the air will be cleaner and we will be healthier. A green weekend is good for the Earth and for us.",
+      "translation": "骑自行车或步行来吧，把车留在家里。如果我们多走路，空气会更干净，我们也会更健康。一个绿色的周末，对地球好，对我们也好。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What should students bring to the park?",
+      "audioText": "What should students bring to the park?",
+      "options": [
+        {
+          "emoji": "🧤",
+          "value": "gloves",
+          "text": "Gloves"
+        },
+        {
+          "emoji": "🎒",
+          "value": "bag",
+          "text": "A school bag"
+        },
+        {
+          "emoji": "🍔",
+          "value": "burger",
+          "text": "A hamburger"
+        }
+      ],
+      "answer": "gloves"
+    },
+    {
+      "type": "word_builder",
+      "word": "rubbish",
+      "audioText": "rubbish"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Never",
+        "mix",
+        "food",
+        "waste",
+        "with",
+        "bottles",
+        "or",
+        "cans."
+      ],
+      "audioText": "Never mix food waste with bottles or cans."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Come",
+        "by",
+        "bike",
+        "or",
+        "on",
+        "foot."
+      ],
+      "audioText": "Come by bike or on foot."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If we pick up the rubbish together, the park ___ look much better.",
+      "choices": [
+        "will",
+        "was",
+        "did"
+      ],
+      "answer": "will",
+      "audioText": "If we pick up the rubbish together, the park will look much better."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "A green weekend is good for the Earth and for ___.",
+      "choices": [
+        "us",
+        "we",
+        "our"
+      ],
+      "answer": "us",
+      "audioText": "A green weekend is good for the Earth and for us."
+    }
+  ],
+  "_unknownWords": [
+    "big",
+    "join",
+    "ask",
+    "mix",
+    "bins",
+    "healthier"
+  ]
+}

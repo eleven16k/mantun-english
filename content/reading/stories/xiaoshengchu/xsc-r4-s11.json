@@ -1,0 +1,133 @@
+{
+  "id": "xsc-r4-s11",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 11,
+  "title": "Bigger Than a School Bus",
+  "titleCn": "比校车还大",
+  "coverEmoji": "🐋",
+  "paragraphs": [
+    {
+      "text": "Last Saturday, my class went to Ocean Park. We saw a big blue pool. A whale shark lived in it. It was longer than our school bus.",
+      "translation": "上周六，我们班去了海洋乐园。我们看见一个蓝色的大水池。一条鲸鲨住在里面。它比我们的校车还长。"
+    },
+    {
+      "text": "The whale shark swam very slowly. It was slower than the small fish. But it was much bigger than the other fish. Its mouth was wider than a door.",
+      "translation": "那条鲸鲨游得很慢。它比小鱼游得慢。但它比别的鱼大得多。它的嘴比一扇门还宽。"
+    },
+    {
+      "text": "A teacher told us about the whale shark. \"Whale sharks are gentle,\" she said. \"They eat small fish and eggs.\" We were surprised and happy.",
+      "translation": "一位老师给我们讲了鲸鲨的事。“鲸鲨很温顺，”她说。“它们吃小鱼和鱼卵。”我们又惊讶又开心。"
+    },
+    {
+      "text": "Later, we walked to a corner of the park. The water there looked dirty. We picked up plastic bags and old cups. Then the water looked cleaner.",
+      "translation": "后来，我们走到乐园的一个角落。那里的水看起来很脏。我们捡起了塑料袋和旧杯子。之后，水看起来干净了一些。"
+    },
+    {
+      "text": "My friend Ana said, \"The sea is sadder with plastic. Let's use fewer plastic bags.\" We all promised to help.",
+      "translation": "我的朋友安娜说：“有了塑料，大海更悲伤了。我们少用一些塑料袋吧。”我们都答应要帮忙。"
+    },
+    {
+      "text": "On the bus home, I thought about the whale shark. It was bigger than our bus. But clean water is more important. I will bring a cloth bag next time.",
+      "translation": "回家的校车上，我想着那条鲸鲨。它比我们的校车还大。但干净的水更重要。下次我要带一个布袋。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which animal did the class see at Ocean Park?",
+      "audioText": "Which animal did the class see at Ocean Park?",
+      "options": [
+        {
+          "emoji": "🐋",
+          "value": "whale shark",
+          "text": "A whale shark"
+        },
+        {
+          "emoji": "🐘",
+          "value": "elephant",
+          "text": "An elephant"
+        },
+        {
+          "emoji": "🦁",
+          "value": "lion",
+          "text": "A lion"
+        }
+      ],
+      "answer": "whale shark"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the children pick up from the water?",
+      "audioText": "What did the children pick up from the water?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "plastic bags",
+          "text": "Plastic bags"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apples",
+          "text": "Apples"
+        },
+        {
+          "emoji": "👟",
+          "value": "shoes",
+          "text": "Shoes"
+        }
+      ],
+      "answer": "plastic bags"
+    },
+    {
+      "type": "word_builder",
+      "word": "cleaner",
+      "audioText": "cleaner"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "longer",
+        "than",
+        "our",
+        "school",
+        "bus."
+      ],
+      "audioText": "It was longer than our school bus."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The whale shark was ___ than the small fish.",
+      "choices": [
+        "slower",
+        "slow",
+        "slowest"
+      ],
+      "answer": "slower",
+      "audioText": "The whale shark was slower than the small fish."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "But clean water is ___ important.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "answer": "more",
+      "audioText": "But clean water is more important."
+    }
+  ],
+  "_unknownWords": [
+    "bigger",
+    "mouth",
+    "wider",
+    "gentle",
+    "later",
+    "ana",
+    "sadder",
+    "let's"
+  ]
+}

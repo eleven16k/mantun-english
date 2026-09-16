@@ -1,0 +1,126 @@
+{
+  "id": "zk-r4-s03",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 3,
+  "title": "Put It in the Right Bin",
+  "titleCn": "把它放进正确的垃圾桶",
+  "coverEmoji": "♻️",
+  "paragraphs": [
+    {
+      "text": "Last Monday, our teacher put three new bins in our classroom. They were blue, green and grey. She told us that each bin has a different job. At first, we did not know where to put our rubbish. We just threw everything into the same bin.",
+      "translation": "上周一，老师在教室里放了三个新垃圾桶。它们是蓝色、绿色和灰色的。她告诉我们，每个桶都有不同的工作。一开始，我们不知道该把垃圾放到哪里。我们只是把所有东西都扔进同一个桶里。"
+    },
+    {
+      "text": "Then our teacher showed us a short video about waste. If you put paper in the blue bin, it can become new paper. If you put a plastic bottle in the green bin, it can be used again. Glass and metal go into the grey bin, and they can be reused too. If we mix everything together, none of it can be used again. That was the first time I understood why sorting matters.",
+      "translation": "然后老师给我们看了一段关于垃圾的短片。如果你把纸放进蓝色桶，它可以变成新纸。如果你把塑料瓶放进绿色桶，它可以被再次利用。玻璃和金属放进灰色桶，它们也能被回收再利用。如果我们把所有东西混在一起，就一样也用不上了。那是我第一次明白为什么要分类。"
+    },
+    {
+      "text": "Food waste is another big problem in our dining hall. Every day, students throw away a lot of rice and vegetables. Take only what you can eat. If you take too much food, you will leave some on your plate. A clean plate is a small green action.",
+      "translation": "食物浪费是我们食堂里的另一个大问题。每天，同学们都会扔掉很多米饭和蔬菜。只拿你能吃完的量。如果你拿太多食物，你就会在盘子里剩下一些。吃干净的餐盘也是一种小小的环保行动。"
+    },
+    {
+      "text": "Plastic bags are the worst, because they can hurt sea animals. Turtles and fish sometimes eat plastic and get very sick. You should carry your own bag when you go shopping. If we use a cloth bag, we can keep the sea cleaner. Never throw plastic into rivers or lakes.",
+      "translation": "塑料袋最糟糕，因为它们会伤害海洋动物。海龟和鱼有时会吃到塑料，然后生病。购物时你应该带上自己的袋子。如果我们使用布袋，就能让海洋更干净。绝不要把塑料扔进河里或湖里。"
+    },
+    {
+      "text": "Small habits at home can make a real difference too. Turn off the lights when you leave. Save water when you wash your hands. We must remember that the Earth is our only home. If everyone does a little, we can make a big change.",
+      "translation": "家里的小习惯也能带来真正的改变。离开时关掉灯。洗手时节约用水。我们必须记住，地球是我们唯一的家。如果每个人都做一点点，我们就能带来大改变。"
+    },
+    {
+      "text": "Now our classroom has three bins and no mixed rubbish. My classmates and I check the bins every afternoon. If you want to join us, start with one small action today. Let us keep our planet clean together.",
+      "translation": "现在我们的教室有三个垃圾桶，没有混合垃圾了。我和同学们每天下午都会检查这些桶。如果你想加入我们，今天就从一个小行动开始吧。让我们一起保持地球清洁。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which bin should a plastic bottle go in?",
+      "audioText": "Which bin should a plastic bottle go in?",
+      "options": [
+        {
+          "emoji": "🟩",
+          "value": "green",
+          "text": "Green bin"
+        },
+        {
+          "emoji": "🟦",
+          "value": "blue",
+          "text": "Blue bin"
+        },
+        {
+          "emoji": "⬜",
+          "value": "grey",
+          "text": "Grey bin"
+        }
+      ],
+      "answer": "green"
+    },
+    {
+      "type": "word_builder",
+      "word": "plastic",
+      "audioText": "plastic"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Take",
+        "only",
+        "what",
+        "you",
+        "can",
+        "eat."
+      ],
+      "audioText": "Take only what you can eat."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Turn",
+        "off",
+        "the",
+        "lights",
+        "when",
+        "you",
+        "leave."
+      ],
+      "audioText": "Turn off the lights when you leave."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you put paper in the blue bin, it can become new ___.",
+      "choices": [
+        "paper",
+        "plastic",
+        "glass"
+      ],
+      "answer": "paper",
+      "audioText": "If you put paper in the blue bin, it can become new paper."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "You should carry your own ___ when you go shopping.",
+      "choices": [
+        "bag",
+        "bottle",
+        "book"
+      ],
+      "answer": "bag",
+      "audioText": "You should carry your own bag when you go shopping."
+    }
+  ],
+  "_unknownWords": [
+    "bins",
+    "grey",
+    "bin",
+    "reused",
+    "mix",
+    "big",
+    "dining",
+    "rice",
+    "worst",
+    "hurt",
+    "mixed",
+    "join"
+  ]
+}

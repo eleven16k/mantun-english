@@ -1,0 +1,120 @@
+{
+  "id": "zk-r4-s11",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 11,
+  "title": "Join Our Green Week",
+  "titleCn": "加入我们的绿色周",
+  "coverEmoji": "🌱",
+  "paragraphs": [
+    {
+      "text": "Next Monday, our school will start a Green Week for everyone. If you want to help the Earth, please join us. We have five simple activities, and each one is easy to try. You do not need money or special tools to take part.",
+      "translation": "下周一，我们学校将启动面向所有人的“绿色周”。如果你想为地球出一份力，请加入我们。我们有五项简单的活动，每一项都很容易尝试。你不需要花钱，也不需要特别的工具就能参与。"
+    },
+    {
+      "text": "On Monday, we will walk or ride a bike to school. If your home is not far, please leave the car at home. Cars make our air dirty, and the smoke is bad for us. When we walk, we also get some good exercise.",
+      "translation": "周一，我们将步行或骑自行车上学。如果你家离得不远，请把汽车留在家里。汽车让我们的空气变脏，尾气对我们也有害。走路的时候，我们还能顺便锻炼一下身体。"
+    },
+    {
+      "text": "On Tuesday, we will save water in the school kitchen. Turn off the tap when you are not using it. If you see a tap running, please close it at once. Every drop of water is useful, so do not waste it.",
+      "translation": "周二，我们将在学校厨房里节约用水。不用水的时候，请关掉水龙头。如果你看到水龙头一直流着水，请马上关掉它。每一滴水都很有用，所以不要浪费它。"
+    },
+    {
+      "text": "On Wednesday, we will plant small trees near the school gate. Trees give us clean air and cool shade in summer. If we plant them now, they will grow strong in a few years. Later, birds will build their homes in the green leaves.",
+      "translation": "周三，我们将在校门附近种下小树。树木给我们带来干净的空气和夏日里的阴凉。如果我们现在种下它们，几年后它们会长得又高又壮。以后，鸟儿会在绿叶间筑巢。"
+    },
+    {
+      "text": "On Thursday, we should eat more vegetables and less meat at lunch. Try some fresh food that grows near your home. If we buy food from nearby farms, we save energy on the road. It is good for your body and for the planet.",
+      "translation": "周四，我们午餐应该多吃蔬菜、少吃肉。尝一尝你家附近出产的新鲜食物吧。如果我们购买附近农场的食物，就能在路上节省能源。这对你的身体和地球都有好处。"
+    },
+    {
+      "text": "On Friday, we will clean the small park and watch the birds. Please pick up the rubbish. Put it in the right bin. If everyone does one small thing, the world will be much better. We should start today, not tomorrow.",
+      "translation": "周五，我们将打扫小公园，并观察鸟儿。请把垃圾捡起来。把它放进正确的垃圾桶。如果每个人都做一件小事，世界就会好得多。我们应该从今天开始，而不是明天。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What will students do on Monday?",
+      "audioText": "What will students do on Monday?",
+      "options": [
+        {
+          "emoji": "🚶",
+          "value": "walk",
+          "text": "Walk or ride a bike"
+        },
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "Go to school by car"
+        },
+        {
+          "emoji": "✈️",
+          "value": "plane",
+          "text": "Fly to school"
+        }
+      ],
+      "answer": "walk"
+    },
+    {
+      "type": "word_builder",
+      "word": "rubbish",
+      "audioText": "rubbish"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Please",
+        "pick",
+        "up",
+        "the",
+        "rubbish."
+      ],
+      "audioText": "Please pick up the rubbish."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you ___ a tap running, please close it at once.",
+      "choices": [
+        "see",
+        "seeing",
+        "saw"
+      ],
+      "answer": "see",
+      "audioText": "If you see a tap running, please close it at once."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "should",
+        "start",
+        "today,",
+        "not",
+        "tomorrow."
+      ],
+      "audioText": "We should start today, not tomorrow."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "When we walk, we also get some good ___.",
+      "choices": [
+        "exercise",
+        "food",
+        "sleep"
+      ],
+      "answer": "exercise",
+      "audioText": "When we walk, we also get some good exercise."
+    }
+  ],
+  "_unknownWords": [
+    "join",
+    "tap",
+    "shade",
+    "later",
+    "less",
+    "meat",
+    "bin",
+    "world"
+  ]
+}

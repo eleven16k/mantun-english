@@ -1,0 +1,128 @@
+{
+  "id": "xsc-r4-s03",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 3,
+  "title": "The Turtle and the Plastic Bag",
+  "titleCn": "海龟和塑料袋",
+  "coverEmoji": "🐢",
+  "paragraphs": [
+    {
+      "text": "Last Sunday, my family went to Ocean Park. We walked into a long blue tunnel. It was longer than a school bus.",
+      "translation": "上个星期天，我们全家去了海洋乐园。我们走进一条长长的蓝色隧道。它比一辆校车还要长。"
+    },
+    {
+      "text": "A dolphin swam over our heads. She was faster than a small boat. My sister laughed and waved her hand.",
+      "translation": "一只海豚从我们头顶游过。她比一艘小船还快。妹妹笑着挥了挥手。"
+    },
+    {
+      "text": "Then a big sea turtle came near us. It was slower than the dolphin. A plastic bag was on its leg.",
+      "translation": "这时，一只大海龟慢慢靠近我们。它比海豚慢多了。它的腿上挂着一个塑料袋。"
+    },
+    {
+      "text": "A young worker helped the turtle at once. He took the plastic bag away. The turtle looked happier than before.",
+      "translation": "一位年轻的工人马上过来帮助海龟。他把塑料袋取了下来。海龟看起来比以前开心多了。"
+    },
+    {
+      "text": "We learned a good lesson that day. We must keep our ocean clean. We can do more than we think.",
+      "translation": "那天我们学到了很好的一课。我们必须让大海保持干净。我们能做的，比自己想象的更多。"
+    },
+    {
+      "text": "Now I bring my bag to the beach. I want to help the sea too.",
+      "translation": "现在我去海边都会自己带袋子。我也想要帮助大海。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which animal was faster than a small boat?",
+      "audioText": "Which animal was faster than a small boat?",
+      "options": [
+        {
+          "emoji": "🐬",
+          "value": "dolphin",
+          "text": "Dolphin"
+        },
+        {
+          "emoji": "🐢",
+          "value": "turtle",
+          "text": "Turtle"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        }
+      ],
+      "answer": "dolphin"
+    },
+    {
+      "type": "word_builder",
+      "word": "dolphin",
+      "audioText": "dolphin"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The turtle looked ___ than before.",
+      "choices": [
+        "happier",
+        "happy",
+        "happiest"
+      ],
+      "answer": "happier",
+      "audioText": "The turtle looked happier than before."
+    },
+    {
+      "type": "image_choice",
+      "question": "What was on the sea turtle's leg?",
+      "audioText": "What was on the sea turtle's leg?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "plastic bag",
+          "text": "A plastic bag"
+        },
+        {
+          "emoji": "🧢",
+          "value": "cap",
+          "text": "A cap"
+        },
+        {
+          "emoji": "🥾",
+          "value": "boot",
+          "text": "A boot"
+        }
+      ],
+      "answer": "plastic bag"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "longer",
+        "than",
+        "a",
+        "school",
+        "bus."
+      ],
+      "audioText": "It was longer than a school bus."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "We must keep our ocean ___.",
+      "choices": [
+        "clean",
+        "cleaner",
+        "cleanest"
+      ],
+      "answer": "clean",
+      "audioText": "We must keep our ocean clean."
+    }
+  ],
+  "_unknownWords": [
+    "tunnel",
+    "waved",
+    "happier"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "zk-r6-s10",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 10,
+  "title": "Two Cups of Tea",
+  "titleCn": "两杯茶，一样暖",
+  "coverEmoji": "🍵",
+  "paragraphs": [
+    {
+      "text": "For thousands of years, Chinese people have been drinking tea every day. My aunt often says that a cup of tea is a way of life. She told me that the first cup should always go to a guest. In her kitchen, there are always several kinds of tea on the shelf.",
+      "translation": "几千年来，中国人每天都喝茶。我的姑姑常说，一杯茶就是一种生活方式。她告诉过我，第一杯茶应该先给客人。在她家的厨房里，架子上总是放着好几种茶。"
+    },
+    {
+      "text": "Last month, an exchange student from London came to stay with us. Her name is Emma, who had never tasted real Chinese tea before. My aunt welcomed her with a small purple teapot that she kept for special visitors.",
+      "translation": "上个月，一位来自伦敦的交换生来我们家住。她叫艾玛，以前从没喝过真正的中国茶。姑姑用一只紫色的小茶壶招待她，那是她专门留给特别客人的。"
+    },
+    {
+      "text": "First, my aunt showed Emma how to make tea in the Chinese way. She put a few green leaves into the small teapot. Then she poured hot water over them. The water was so hot that the lovely smell filled the whole room. Emma watched everything carefully and wrote it down in her notebook.",
+      "translation": "首先，姑姑教艾玛怎样按中国人的方式泡茶。她把几片绿叶放进小茶壶里，然后往上面倒热水。水那么烫，好闻的茶香一下子充满了整个房间。艾玛认真地观察着一切，并把它记在了笔记本上。"
+    },
+    {
+      "text": "Then Emma told us something that surprised everyone at the table. In Britain, she said, people usually drink tea with milk and sugar. Her grandmother makes such a strong black tea that it can wake you up at once. In her country, tea is often served with small cakes at four o'clock.",
+      "translation": "接着，艾玛讲了一件让在座所有人都感到意外的事。她说，在英国，人们通常在茶里加牛奶和糖。她的奶奶泡的红茶特别浓，喝一口就能让你立刻清醒。在她的国家，下午四点人们常常一边喝茶一边吃小蛋糕。"
+    },
+    {
+      "text": "My aunt asked whether Emma liked the green tea. Emma smiled and nodded happily. She said that the green tea tasted like spring itself. The two drinks are different, but the warm feeling is the same.",
+      "translation": "姑姑问艾玛喜不喜欢这杯绿茶。艾玛开心地笑着点了点头。她说这绿茶尝起来就像春天一样。两种茶味道不同，但那份温暖的感觉是一样的。"
+    },
+    {
+      "text": "Before Emma went back to London, my aunt gave her a small box of tea. She had kept it for months and wanted Emma to take it home. Emma promised that she would make a cup of it for her family. Now she sends us photos of her afternoon tea, which always makes my aunt laugh.",
+      "translation": "艾玛回伦敦之前，姑姑送给她一小盒茶叶。那是姑姑留了好几个月的，她想让艾玛把它带回家。艾玛答应会给家人泡上一杯。现在她常常给我们发她下午茶的照片，每次都能把姑姑逗笑。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In Britain, what do people usually put into their tea?",
+      "audioText": "In Britain, what do people usually put into their tea?",
+      "options": [
+        {
+          "emoji": "🥛",
+          "value": "milk",
+          "text": "Milk"
+        },
+        {
+          "emoji": "🍋",
+          "value": "lemon",
+          "text": "Lemon"
+        },
+        {
+          "emoji": "🧂",
+          "value": "salt",
+          "text": "Salt"
+        }
+      ],
+      "answer": "milk"
+    },
+    {
+      "type": "word_builder",
+      "word": "teapot",
+      "audioText": "teapot"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Then",
+        "she",
+        "poured",
+        "hot",
+        "water",
+        "over",
+        "them."
+      ],
+      "audioText": "Then she poured hot water over them."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Emma",
+        "smiled",
+        "and",
+        "nodded",
+        "happily."
+      ],
+      "audioText": "Emma smiled and nodded happily."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The water was ___ hot that the lovely smell filled the whole room.",
+      "choices": [
+        "so",
+        "such",
+        "much"
+      ],
+      "answer": "so",
+      "audioText": "The water was so hot that the lovely smell filled the whole room."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Her name is Emma, ___ had never tasted real Chinese tea before.",
+      "choices": [
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer": "who",
+      "audioText": "Her name is Emma, who had never tasted real Chinese tea before."
+    }
+  ],
+  "_unknownWords": [
+    "chinese",
+    "exchange",
+    "london",
+    "purple",
+    "teapot",
+    "poured",
+    "room",
+    "britain",
+    "o'clock",
+    "asked",
+    "nodded",
+    "happily"
+  ]
+}

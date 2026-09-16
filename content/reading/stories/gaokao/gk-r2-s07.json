@@ -1,0 +1,124 @@
+{
+  "id": "gk-r2-s07",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 7,
+  "title": "Teaching Machines to Be Fair",
+  "titleCn": "教机器学会公平",
+  "coverEmoji": "⚖️",
+  "paragraphs": [
+    {
+      "text": "Every day, quiet decisions are being made about us by software that we will never see. A bank may refuse a loan, or a company may reject a job applicant, because an algorithm has been trained on old records. Few people are ever told how these systems reach their conclusions. It seems that machines now judge us, yet almost nobody checks whether their judgments are fair.",
+      "translation": "每天，一些悄无声息的决定正由我们永远看不到的软件替我们做出。银行可能拒绝一笔贷款，公司可能拒绝一位求职者，只因为某个算法是用旧记录训练出来的。很少有人被告知这些系统是如何得出结论的。看起来机器如今在评判我们，却几乎没有人去核查这些评判是否公平。"
+    },
+    {
+      "text": "The problem is not that computers are evil. It is that they copy what they are shown. If past hiring was unfair to women, that unfairness will be learned and repeated by the new system. What the machine calls normal is simply what it has seen most often in the data.",
+      "translation": "问题并不在于计算机本身邪恶，而在于它们会照抄自己被输入的东西。如果过去的招聘对女性不公平，这种不公平就会被新系统学会并重复。机器口中的“正常”，不过是它在数据里见得最多的东西。"
+    },
+    {
+      "text": "Some companies are now trying to fix this, and new rules are being written in several countries. Data scientists are asked to test their models for bias before the software is released to the public. It is important that such checks should be repeated, because the society the system serves keeps changing.",
+      "translation": "一些公司正在设法解决这个问题，若干国家也在制定新的规则。数据科学家被要求在软件向公众发布之前，先检测自己的模型是否存在偏见。重要的是，这样的检查应当反复进行，因为系统所服务的社会本身一直在变化。"
+    },
+    {
+      "text": "But can fairness really be programmed? Whether a decision is fair depends on values that no data can contain. Someone has to decide, for example, how much weight should be given to past experience and how much to equal treatment. Those choices are human ones, and they should never be hidden deep inside code.",
+      "translation": "可是公平真的能被编程实现吗？一个决定是否公平，取决于任何数据都无法包含的价值观。比如，必须由人来决定：过去的经验该占多大权重，平等对待又该占多大权重。这些选择属于人，它们绝不该被深藏在代码里。"
+    },
+    {
+      "text": "Whether we like it or not, these systems will shape more of our lives every year. It is therefore up to us to ask uncomfortable questions and to demand clear answers. If machines are going to be taught to be fair, we should be the ones who say what fair means.",
+      "translation": "无论我们愿不愿意，这些系统每年都会塑造我们生活中更多的部分。因此，提出让人不舒服的问题、要求清楚的答案，就成了我们自己的事。如果要教机器做到公平，那么说清楚“公平”是什么意思的人，应该是我们。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what is the real problem with computers that make decisions?",
+      "audioText": "According to the text, what is the real problem with computers that make decisions?",
+      "options": [
+        {
+          "emoji": "📋",
+          "value": "copy",
+          "text": "They copy unfair patterns from old records"
+        },
+        {
+          "emoji": "⚡",
+          "value": "speed",
+          "text": "They make decisions far too quickly"
+        },
+        {
+          "emoji": "💰",
+          "value": "cost",
+          "text": "They cost too much money to build"
+        }
+      ],
+      "answer": "copy"
+    },
+    {
+      "type": "word_builder",
+      "word": "fairness",
+      "audioText": "fairness"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "problem",
+        "is",
+        "not",
+        "that",
+        "computers",
+        "are",
+        "evil."
+      ],
+      "audioText": "The problem is not that computers are evil."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "But",
+        "can",
+        "fairness",
+        "really",
+        "be",
+        "programmed?"
+      ],
+      "audioText": "But can fairness really be programmed?"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "New rules are being ___ in several countries.",
+      "choices": [
+        "written",
+        "wrote",
+        "writing"
+      ],
+      "answer": "written",
+      "audioText": "New rules are being written in several countries."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Whether a decision is fair depends on ___ that no data can contain.",
+      "choices": [
+        "values",
+        "voices",
+        "versions"
+      ],
+      "answer": "values",
+      "audioText": "Whether a decision is fair depends on values that no data can contain."
+    }
+  ],
+  "_unknownWords": [
+    "loan",
+    "algorithm",
+    "judgments",
+    "evil",
+    "shown",
+    "unfairness",
+    "simply",
+    "seen",
+    "written",
+    "bias",
+    "fairness",
+    "given",
+    "hidden"
+  ]
+}

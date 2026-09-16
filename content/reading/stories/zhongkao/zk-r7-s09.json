@@ -1,0 +1,118 @@
+{
+  "id": "zk-r7-s09",
+  "track": "zhongkao",
+  "regionId": "zk-r7",
+  "order": 9,
+  "title": "Why We Give Our Time",
+  "titleCn": "为什么我们要付出时间",
+  "coverEmoji": "🤝",
+  "paragraphs": [
+    {
+      "text": "Every Saturday morning, some students in our town meet at the old library. They clean the shelves, sort out the books and read stories to younger children. To give one hour a week seems small, but it is not.",
+      "translation": "每周六早上，我们镇上的一些学生都会在老图书馆集合。他们擦书架、整理图书，还给更小的孩子读故事。每周拿出一小时看起来微不足道，其实并非如此。"
+    },
+    {
+      "text": "Many people say that they are too busy to help others. They wish they had more free time. But we all have some, if we look for it.",
+      "translation": "很多人说自己太忙，没空帮助别人。他们希望自己有更多空闲时间。可只要愿意去找，时间其实人人都有。"
+    },
+    {
+      "text": "Volunteering is not only about giving; it is also about learning. When you help others, you learn how the world really works. You also learn that a warm smile can open a closed door.",
+      "translation": "志愿服务不只是付出，也是一种学习。当你帮助别人时，你会明白这个世界究竟是怎样运转的。你还会发现，一个温暖的微笑能打开一扇紧闭的门。"
+    },
+    {
+      "text": "Rules matter too, both online and in the real world. If everyone followed the traffic rules, our streets would be safer. I wish more people understood that rules are there to help. In short, rules protect us all.",
+      "translation": "规则同样重要，无论是在网络上还是在现实世界里。如果每个人都遵守交通规则，我们的街道就会安全得多。我真希望更多人明白，规则是为了帮助我们而存在的。简而言之，规则保护着我们每一个人。"
+    },
+    {
+      "text": "The internet gives us a new place to be kind. To write a kind comment online matters as much as giving a seat. Everyone can play a part.",
+      "translation": "互联网给了我们一个行善的新场所。在网上写一条友善的评论，其意义不亚于给他人让座。每个人都能出一份力。"
+    },
+    {
+      "text": "So if you want to make a difference, begin with one small step. You do not need money or special skills; you only need to begin. If I were you, I would start this weekend.",
+      "translation": "所以，如果你想带来改变，就从一小步开始吧。你不需要钱，也不需要特别的技能；你只需要迈出第一步。如果我是你，这周末我就会行动起来。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What do the students do at the old library?",
+      "audioText": "What do the students do at the old library?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "read",
+          "text": "They read stories to children."
+        },
+        {
+          "emoji": "🍳",
+          "value": "cook",
+          "text": "They cook dinner for families."
+        },
+        {
+          "emoji": "🏀",
+          "value": "play",
+          "text": "They play basketball outside."
+        }
+      ],
+      "answer": "read"
+    },
+    {
+      "type": "word_builder",
+      "word": "library",
+      "audioText": "library"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "wish",
+        "they",
+        "had",
+        "more",
+        "free",
+        "time."
+      ],
+      "audioText": "They wish they had more free time."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Everyone",
+        "can",
+        "play",
+        "a",
+        "part."
+      ],
+      "audioText": "Everyone can play a part."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If everyone ___ the traffic rules, our streets would be safer.",
+      "choices": [
+        "followed",
+        "follows",
+        "following"
+      ],
+      "answer": "followed",
+      "audioText": "If everyone followed the traffic rules, our streets would be safer."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "To write a kind comment online ___ as much as giving a seat.",
+      "choices": [
+        "matters",
+        "matter",
+        "mattered"
+      ],
+      "answer": "matters",
+      "audioText": "To write a kind comment online matters as much as giving a seat."
+    }
+  ],
+  "_unknownWords": [
+    "busy",
+    "world",
+    "online",
+    "safer",
+    "comment"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "id": "gk-r5-s06",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 6,
+  "title": "The Bus Driver's Exam",
+  "titleCn": "公交车司机的考试",
+  "coverEmoji": "📚",
+  "paragraphs": [
+    {
+      "text": "Whenever I tell people about my father, who spent thirty years driving a bus through our crowded city, they assume that his life was simple. They are wrong. He was forty-eight, an age at which most people begin to slow down, when he signed up for a professional exam. The subjects he had to master included basic law and accounting, neither of which he had ever studied.",
+      "translation": "每当我和别人谈起父亲——他在我们拥挤的城市里开了三十年公交车——他们总觉得他的人生很简单。他们错了。四十八岁那年，也就是大多数人开始放慢脚步的年纪，他报名参加了一项职业考试。他要掌握的内容包括基础法律和会计，而这两门他以前从未学过。"
+    },
+    {
+      "text": "During the day he drove his bus, and in the evening, after a quick dinner, he sat at the kitchen table with an old dictionary and a pile of notes. My mother, who had expected the idea to fade within a week, was quietly surprised by his patience. Sometimes he fell asleep over his books, his glasses still on his nose, which soon became a family joke. What impressed me most was not his memory but his method, for which he had worked out his own simple rules.",
+      "translation": "白天他开公交车，晚上匆匆吃完晚饭，他就坐在厨房餐桌旁，身边是一本旧词典和一沓笔记。母亲原以为这个念头撑不过一周，却被他的耐心悄悄打动了。有时他会趴在书上睡着，眼镜还架在鼻梁上，这很快成了家里的一个笑话。最让我印象深刻的不是他的记忆力，而是他的方法——他为此总结出了自己的一套简单规则。"
+    },
+    {
+      "text": "For a long time I kept my distance, judging his efforts to be a waste of energy. One rainy evening, however, I found myself sitting beside him, helping him with English words with which he struggled. To my surprise, the questions he asked were sharper than many I heard in my own classroom. We began to study together, he with his law notes and I with my history textbook, and the kitchen table slowly turned into a small library.",
+      "translation": "很长一段时间里我对他敬而远之，认为他的努力不过是白费力气。然而在一个雨夜，我发现自己坐在他身边，帮他查那些他读不顺的英语单词。令我意外的是，他提出的问题比我教室里听到的许多问题都要尖锐。我们开始一起学习，他带着他的法律笔记，我带着我的历史课本，厨房餐桌慢慢变成了一座小图书馆。"
+    },
+    {
+      "text": "Six months later my father passed his exam, a result that surprised everyone except himself. When I asked him why he had bothered, he said, almost casually, that learning was the only thing nobody could take away from him. That sentence, which I copied into my diary that night, has stayed with me ever since.",
+      "translation": "六个月后，父亲通过了考试，这个结果让所有人都感到意外，只有他自己不意外。我问他何必这么折腾，他几乎是随口地说：学问是唯一谁也拿不走的东西。那天夜里我把这句话抄进了日记，从那以后它一直留在我心里。"
+    },
+    {
+      "text": "Some people believe that education ends the day you leave school, a belief that my father's example quietly destroys. Nobody is ever too old to learn, and no certificate, however impressive, marks the end of the road. The habit of asking questions, which he has never lost, matters far more than any grade on a report card. Whenever I feel lazy, I remember the kitchen table, the old dictionary and a tired man who refused to stop growing.",
+      "translation": "有些人认为，教育在你离开学校那天就结束了，而父亲的例子悄悄推翻了这种看法。没有人会老到不能学习，任何证书，无论多么耀眼，都不是路的尽头。他一生都没有丢掉爱提问的习惯，这远比成绩单上的任何分数重要。每当我犯懒的时候，我就会想起那张厨房餐桌、那本旧词典，还有一个不肯停止成长的疲惫男人。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where did my father sit to study every evening?",
+      "audioText": "Where did my father sit to study every evening?",
+      "options": [
+        {
+          "emoji": "🚌",
+          "value": "bus",
+          "text": "On his bus"
+        },
+        {
+          "emoji": "🍽️",
+          "value": "kitchen",
+          "text": "At the kitchen table"
+        },
+        {
+          "emoji": "🏫",
+          "value": "classroom",
+          "text": "In a classroom"
+        }
+      ],
+      "answer": "kitchen"
+    },
+    {
+      "type": "word_builder",
+      "word": "dictionary",
+      "audioText": "dictionary"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "He",
+        "signed",
+        "up",
+        "for",
+        "a",
+        "professional",
+        "exam"
+      ],
+      "audioText": "He signed up for a professional exam."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Nobody",
+        "is",
+        "ever",
+        "too",
+        "old",
+        "to",
+        "learn"
+      ],
+      "audioText": "Nobody is ever too old to learn."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "My mother, who had expected the idea to fade within a week, was quietly ___ by his patience.",
+      "choices": [
+        "surprised",
+        "surprising",
+        "surprise"
+      ],
+      "answer": "surprised",
+      "audioText": "My mother, who had expected the idea to fade within a week, was quietly surprised by his patience."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The subjects he had to master included basic law and accounting, neither of ___ he had ever studied.",
+      "choices": [
+        "which",
+        "whom",
+        "that"
+      ],
+      "answer": "which",
+      "audioText": "The subjects he had to master included basic law and accounting, neither of which he had ever studied."
+    }
+  ],
+  "_unknownWords": [
+    "professional",
+    "sitting",
+    "textbook",
+    "bothered",
+    "father's",
+    "impressive"
+  ]
+}

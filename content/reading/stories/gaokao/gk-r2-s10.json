@@ -1,0 +1,117 @@
+{
+  "id": "gk-r2-s10",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 10,
+  "title": "Should AI Explain Itself?",
+  "titleCn": "AI 该不该解释自己？",
+  "coverEmoji": "🔍",
+  "paragraphs": [
+    {
+      "text": "Every day, decisions that used to be made by people are now being handed to machines. A program decides whether you get a loan, a job interview, or a place at a university. Most of us never learn why.",
+      "translation": "每一天，那些过去由人做出的决定，如今正被交到机器手中。一个程序决定你能否拿到贷款、能否获得面试机会、能否被大学录取。而我们大多数人从来不知道原因。"
+    },
+    {
+      "text": "What makes these systems so powerful is that they are trained on huge amounts of data. The trouble is that the rules they discover are often hidden inside millions of numbers. It is almost impossible for an engineer to point at one line and say, 'Here is the reason.' This is the famous black box problem.",
+      "translation": "这些系统之所以如此强大，是因为它们在海量数据上接受训练。问题在于，它们所发现的规则往往隐藏在数百万个数字之中。工程师几乎不可能指着某一行说：“原因就在这里。”这就是著名的“黑箱”难题。"
+    },
+    {
+      "text": "Consider a worker who is rejected by an automated system and never told what went wrong. Without an explanation, she cannot show that a mistake has been made. It seems unfair that a decision about her future should be locked in a machine that nobody can question. Silence is not a fair answer.",
+      "translation": "设想一位求职者被自动系统筛掉，却从未被告知哪里出了问题。没有解释，她就无法证明其中出了错。她的未来竟然被锁在一台无人能质疑的机器里，这似乎很不公平。沉默不是公正的答案。"
+    },
+    {
+      "text": "Some governments have already passed laws that require such decisions to be explained in plain language. Companies, in turn, are being pushed to design tools that show how a result was reached. Whether these rules will work in practice is still being debated.",
+      "translation": "一些国家的政府已经通过法律，要求这类决定必须用通俗易懂的语言加以解释。相应地，企业也正被推动去设计能展示结果如何得出的工具。这些规定在实践中是否有效，目前仍在争论之中。"
+    },
+    {
+      "text": "Accuracy and openness often pull in opposite directions, and neither can be ignored. What matters most, perhaps, is that a human being remains responsible for the final choice. A machine may be allowed to advise, but it should never be allowed to hide behind its own complexity.",
+      "translation": "准确性与公开性常常朝着相反的方向拉扯，而二者都不能被忽视。也许最重要的是，最终的选择仍要由人来负责。机器可以被允许提供建议，但绝不应被允许躲在自己的复杂性背后。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, what is often hidden inside millions of numbers?",
+      "audioText": "According to the passage, what is often hidden inside millions of numbers?",
+      "options": [
+        {
+          "emoji": "📜",
+          "value": "rules",
+          "text": "The rules a system discovers"
+        },
+        {
+          "emoji": "💰",
+          "value": "money",
+          "text": "The money a company spends"
+        },
+        {
+          "emoji": "🔑",
+          "value": "passwords",
+          "text": "The passwords of users"
+        }
+      ],
+      "answer": "rules"
+    },
+    {
+      "type": "word_builder",
+      "word": "explained",
+      "audioText": "explained"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Most",
+        "of",
+        "us",
+        "never",
+        "learn",
+        "why."
+      ],
+      "audioText": "Most of us never learn why."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "This",
+        "is",
+        "the",
+        "famous",
+        "black",
+        "box",
+        "problem."
+      ],
+      "audioText": "This is the famous black box problem."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Companies, in turn, are being ___ to design tools that show how a result was reached.",
+      "choices": [
+        "pushed",
+        "pulled",
+        "praised"
+      ],
+      "answer": "pushed",
+      "audioText": "Companies, in turn, are being pushed to design tools that show how a result was reached."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It seems unfair that a decision about her future should be ___ in a machine that nobody can question.",
+      "choices": [
+        "locked",
+        "counted",
+        "drawn"
+      ],
+      "answer": "locked",
+      "audioText": "It seems unfair that a decision about her future should be locked in a machine that nobody can question."
+    }
+  ],
+  "_unknownWords": [
+    "loan",
+    "powerful",
+    "hidden",
+    "automated",
+    "cannot",
+    "openness",
+    "complexity"
+  ]
+}

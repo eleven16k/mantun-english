@@ -1,0 +1,121 @@
+{
+  "id": "xsc-r4-s05",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 5,
+  "title": "The Turtle's Secret Cave",
+  "titleCn": "海龟的秘密洞穴",
+  "coverEmoji": "🐢",
+  "paragraphs": [
+    {
+      "text": "Last Sunday, I went to Ocean Park. My dad came with me too. We saw a big blue pool. Many sea animals lived in it.",
+      "translation": "上周日，我去了海洋乐园。爸爸也和我一起去了。我们看见一个很大的蓝色水池，里面住着许多海洋动物。"
+    },
+    {
+      "text": "First, we watched two dolphins swim. Dolly was smaller than her friend Ben. But Ben could jump higher than Dolly. They were both clever and funny.",
+      "translation": "我们先看了两只海豚游泳。多莉比她的朋友本个头小一些，不过本跳得比多莉更高。他们俩都又聪明又好玩。"
+    },
+    {
+      "text": "Then we met a little green turtle. He was slower than the small fish. But he was older than all of them. \"Come with me,\" said the turtle.",
+      "translation": "后来我们遇到了一只绿色的小海龟。他游得比小鱼慢，却比他们谁都年长。海龟说：“跟我来。”"
+    },
+    {
+      "text": "We followed him into a dark cave. Inside, we saw many plastic bags. The water was not clean or bright. The fish looked sad and swam away.",
+      "translation": "我们跟着他游进一个黑黑的洞穴。洞里面，我们看到很多塑料袋。那里的水既不干净也不明亮，鱼儿看起来很伤心，都游走了。"
+    },
+    {
+      "text": "We picked up the bags together. Then the water looked cleaner and more beautiful. The little fish came back to play.",
+      "translation": "我们一起把袋子捡了起来。然后那里的水看起来更干净、更漂亮了，小鱼们又回来玩耍了。"
+    },
+    {
+      "text": "I was tired but very happy. The sea is our home too. Let's keep it clean and blue.",
+      "translation": "我很累，但非常开心。大海也是我们的家。让我们把它保持得干净又湛蓝吧。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which animal did they watch first?",
+      "audioText": "Which animal did they watch first?",
+      "options": [
+        {
+          "emoji": "🐬",
+          "value": "dolphin",
+          "text": "Dolphin"
+        },
+        {
+          "emoji": "🐢",
+          "value": "turtle",
+          "text": "Turtle"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        }
+      ],
+      "answer": "dolphin"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where did the green turtle take them?",
+      "audioText": "Where did the green turtle take them?",
+      "options": [
+        {
+          "emoji": "🕳️",
+          "value": "cave",
+          "text": "A cave"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "A school"
+        },
+        {
+          "emoji": "🌳",
+          "value": "forest",
+          "text": "A forest"
+        }
+      ],
+      "answer": "cave"
+    },
+    {
+      "type": "word_builder",
+      "word": "dolphin",
+      "audioText": "dolphin"
+    },
+    {
+      "type": "word_builder",
+      "word": "plastic",
+      "audioText": "plastic"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "He",
+        "was",
+        "slower",
+        "than",
+        "the",
+        "small",
+        "fish."
+      ],
+      "audioText": "He was slower than the small fish."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Dolly was ___ than her friend Ben.",
+      "choices": [
+        "smaller",
+        "faster",
+        "older"
+      ],
+      "answer": "smaller",
+      "audioText": "Dolly was smaller than her friend Ben."
+    }
+  ],
+  "_unknownWords": [
+    "dolly",
+    "let's"
+  ]
+}

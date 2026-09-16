@@ -1,0 +1,123 @@
+{
+  "id": "zk-r6-s11",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 11,
+  "title": "The Kite That Crossed the Sea",
+  "titleCn": "飞过大海的风筝",
+  "coverEmoji": "🪁",
+  "paragraphs": [
+    {
+      "text": "Every spring, the sky over Weifang in Shandong becomes a colourful sea of kites. People say that Weifang is the city where kites were born in China. My grandpa is a kite maker who has worked with bamboo for over forty years. He often tells me that a kite is art, not just a toy.",
+      "translation": "每年春天，山东潍坊的天空就变成一片五颜六色的风筝海洋。人们说，潍坊是中国风筝诞生的城市。我的爷爷是一位风筝匠人，他和竹子打了四十多年交道。他常对我说，风筝是艺术，而不只是玩具。"
+    },
+    {
+      "text": "This year, a student from Canada named Emma came to our school. She was so interested in Chinese culture that she asked me to teach her something traditional. I decided to show her my grandpa's kites. When she saw the thin bamboo sticks, she said that they looked like small wings.",
+      "translation": "今年，一位来自加拿大的学生艾玛来到了我们学校。她对中国文化如此感兴趣，以至于请我教她一些传统的东西。我决定带她去看我爷爷做的风筝。看到那些细细的竹条时，她说它们看起来像小翅膀。"
+    },
+    {
+      "text": "Grandpa taught us that the first step is to cut the bamboo into thin pieces. Emma learned quickly, and the kite which we made together had a red fish on it. Grandpa explained that in China a fish stands for having more than enough. Emma smiled and said that she had never seen such a beautiful fish.",
+      "translation": "爷爷教我们，第一步是把竹子削成细细的竹条。艾玛学得很快，我们一起做的那只风筝上画着一条红鱼。爷爷解释说，在中国，鱼代表着年年有余。艾玛笑着说，她从没见过这么漂亮的鱼。"
+    },
+    {
+      "text": "We took our kite to the park on a windy afternoon. Emma ran so fast that her hat flew off her head. The little fish rose into the sky. Everyone around us began to cheer, and Emma shouted that it was the most wonderful thing that she had ever done.",
+      "translation": "一个刮风的下午，我们把风筝带到了公园。艾玛跑得太快，帽子都从头上飞掉了。那条小鱼升上了天空。我们周围的人都欢呼起来，艾玛喊道，这是她做过的最棒的事。"
+    },
+    {
+      "text": "Before Emma went back to Canada, she wrote a letter to my grandpa. In the letter, she said that she would build a kite club in her own school. She also sent us a photo which showed her first kite flying over a lake near her home. Grandpa smiled and told me that culture is like the wind. We cannot see it, but it can carry us far away.",
+      "translation": "艾玛回加拿大之前，给我爷爷写了一封信。信中她说，她要在自己的学校办一个风筝社团。她还给我们寄来一张照片，照片上她的第一只风筝正飞在她家附近的湖面上空。爷爷笑着告诉我，文化就像风。我们看不见它，但它能带我们去很远的地方。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In the story, what was on the kite that Emma and the writer made together?",
+      "audioText": "In the story, what was on the kite that Emma and the writer made together?",
+      "options": [
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A red fish"
+        },
+        {
+          "emoji": "🐉",
+          "value": "dragon",
+          "text": "A dragon"
+        },
+        {
+          "emoji": "🦋",
+          "value": "butterfly",
+          "text": "A butterfly"
+        }
+      ],
+      "answer": "fish"
+    },
+    {
+      "type": "word_builder",
+      "word": "culture",
+      "audioText": "culture"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "little",
+        "fish",
+        "rose",
+        "into",
+        "the",
+        "sky."
+      ],
+      "audioText": "The little fish rose into the sky."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Culture",
+        "is",
+        "like",
+        "the",
+        "wind."
+      ],
+      "audioText": "Culture is like the wind."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She was so interested in Chinese culture ___ she asked me to teach her something traditional.",
+      "choices": [
+        "that",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "audioText": "She was so interested in Chinese culture that she asked me to teach her something traditional."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The kite ___ we made together had a red fish on it.",
+      "choices": [
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer": "which",
+      "audioText": "The kite which we made together had a red fish on it."
+    }
+  ],
+  "_unknownWords": [
+    "weifang",
+    "shandong",
+    "colourful",
+    "china",
+    "maker",
+    "canada",
+    "chinese",
+    "asked",
+    "traditional",
+    "grandpa's",
+    "seen",
+    "cheer",
+    "done",
+    "cannot"
+  ]
+}

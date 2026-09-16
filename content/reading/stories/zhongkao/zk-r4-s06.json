@@ -1,0 +1,124 @@
+{
+  "id": "zk-r4-s06",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 6,
+  "title": "Our Plastic-Free Lunch Day",
+  "titleCn": "我们的无塑料午餐日",
+  "coverEmoji": "🍱",
+  "paragraphs": [
+    {
+      "text": "Last Friday, our school had a special day called Plastic-Free Lunch Day. All the students and teachers joined it with great interest. We wanted to use less plastic for one whole day.",
+      "translation": "上周五，我们学校举办了一个特别的活动，叫“无塑料午餐日”。全校师生都兴致勃勃地参加了。我们想整整一天都少用塑料。"
+    },
+    {
+      "text": "A few days before, our teacher told us what to bring. She said, \"If you bring your own box, you will make less rubbish.\" \"Please bring a cloth bag and a glass bottle to school.\" If everyone does this, our school will be much cleaner.",
+      "translation": "活动前几天，老师告诉我们要带些什么。她说：“如果你自己带饭盒，产生的垃圾就会更少。”“请带一个布袋和一个玻璃瓶来学校。”如果每个人都这样做，我们的学校会干净得多。"
+    },
+    {
+      "text": "On Friday morning, I put rice and vegetables in my lunch box. My classmate Li Ming brought a glass bottle of water. We did not use any plastic bags or paper cups that day.",
+      "translation": "星期五早上，我把米饭和蔬菜装进了自己的饭盒。我的同学李明带了一个玻璃水瓶。那天我们没有用任何塑料袋或纸杯。"
+    },
+    {
+      "text": "At lunch time, we saw how much rubbish we made in one day. Usually, our school produces three big bags of plastic every day. But that Friday, we had only one small bag of rubbish. If we keep trying, we can reduce a lot of waste.",
+      "translation": "午饭时，我们看到了自己一天产生了多少垃圾。平时，我们学校每天都会产生三大袋塑料垃圾。但那个星期五，我们只有一小袋垃圾。如果我们继续努力，就能减少很多浪费。"
+    },
+    {
+      "text": "Our teacher said we should keep this habit every day. We can also save water and turn off the lights. If you care about the Earth, start with small habits. Do not wait for other people to begin.",
+      "translation": "老师说，我们应该每天保持这个习惯。我们还可以节约用水、随手关灯。如果你关心地球，就从小的习惯开始。不要等着别人先行动。"
+    },
+    {
+      "text": "Now my family takes cloth bags when we go shopping. We also use fewer plastic bottles at home. If we all work together, our world will be green and clean.",
+      "translation": "现在，我家人去买东西时会带上布袋。我们在家也少用塑料瓶了。如果我们一起努力，我们的世界将会绿色又干净。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the students use to carry their lunch on that day?",
+      "audioText": "What did the students use to carry their lunch on that day?",
+      "options": [
+        {
+          "emoji": "🍱",
+          "value": "box",
+          "text": "A lunch box"
+        },
+        {
+          "emoji": "🛍️",
+          "value": "bag",
+          "text": "A plastic bag"
+        },
+        {
+          "emoji": "🥤",
+          "value": "cup",
+          "text": "A paper cup"
+        }
+      ],
+      "answer": "box"
+    },
+    {
+      "type": "word_builder",
+      "word": "rubbish",
+      "audioText": "rubbish"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Do",
+        "not",
+        "wait",
+        "for",
+        "other",
+        "people",
+        "to",
+        "begin"
+      ],
+      "audioText": "Do not wait for other people to begin."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "also",
+        "use",
+        "fewer",
+        "plastic",
+        "bottles",
+        "at",
+        "home"
+      ],
+      "audioText": "We also use fewer plastic bottles at home."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you bring your own box, you ___ make less rubbish.",
+      "choices": [
+        "will",
+        "are",
+        "do"
+      ],
+      "answer": "will",
+      "audioText": "If you bring your own box, you will make less rubbish."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "We can also save water and ___ off the lights.",
+      "choices": [
+        "turn",
+        "turns",
+        "turning"
+      ],
+      "answer": "turn",
+      "audioText": "We can also save water and turn off the lights."
+    }
+  ],
+  "_unknownWords": [
+    "joined",
+    "less",
+    "rice",
+    "li",
+    "big",
+    "reduce",
+    "world"
+  ]
+}

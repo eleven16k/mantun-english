@@ -1,0 +1,124 @@
+{
+  "id": "zk-r5-s12",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 12,
+  "title": "The Girl Who Kept a Weather Diary",
+  "titleCn": "记录天气日记的女孩",
+  "coverEmoji": "🌦️",
+  "paragraphs": [
+    {
+      "text": "Mei was a quiet girl who lived in a small village near the mountains. Every morning, she stood in the yard and wrote down the weather. Her father was a farmer who worked hard in the fields. \"Will it rain today?\" he often asked before he left the house.",
+      "translation": "梅是一个安静的女孩，住在山脚下的一个小村子里。每天早晨，她都站在院子里记下天气。她的父亲是个在田里辛苦干活的农民。他出门前常问她：“今天会下雨吗？”"
+    },
+    {
+      "text": "Mei did not guess; she watched and recorded. Wind, temperature and cloud colour all went into her little book. By the time she finished primary school, she had filled twenty notebooks. Her teacher was surprised that a young girl could be so patient.",
+      "translation": "梅不是靠猜，而是靠看和记录。风、气温和云的颜色，她都写进那个小本子里。等她小学毕业时，她已经写满了二十本笔记。老师很惊讶，一个小女孩竟能这么有耐心。"
+    },
+    {
+      "text": "One spring, the village had very little rain for many weeks. The farmers were worried about their young plants. Mei looked at her notes and found a pattern which repeated every few years. She told the farmers that heavy rain was coming in three days. At first, nobody believed the girl who wrote in a notebook.",
+      "translation": "有一年春天，村里好几个星期几乎没下过雨。农民们为地里的幼苗发愁。梅翻看笔记，发现了一个每隔几年就会重复出现的规律。她告诉农民们，三天后会下大雨。起初，没有人相信这个爱记笔记的女孩。"
+    },
+    {
+      "text": "Three days later, the rain arrived and saved the crops. After that, the farmers came to her with many questions. They called her \"the little weather girl\". Mei smiled and said that anyone could do it. \"You only need to watch carefully and write it down,\" she said.",
+      "translation": "三天后，雨真的来了，救了庄稼。从那以后，农民们带着许多问题来找她。他们叫她“天气小博士”。梅笑着说，谁都能做到。“你只需要仔细观察，然后把它写下来。”她说。"
+    },
+    {
+      "text": "Mei kept her diary for many years after that spring. When she went to high school, she joined a science club which studied the weather. Last year, she won a prize for a report she had written. The judges said her work was simple but useful.",
+      "translation": "那个春天之后，梅坚持写了很多年日记。上高中时，她加入了一个研究天气的科学社团。去年，她因为一篇自己写的报告得了奖。评委说，她的研究简单却很有用。"
+    },
+    {
+      "text": "Today Mei still writes in her notebook every morning. She wants to become a scientist who helps farmers grow more food. Her old teacher often tells this story to younger students. \"Big things start with small habits,\" she says. And a girl who watched clouds became the pride of her village.",
+      "translation": "如今，梅每天早晨仍然在本子上记录。她想成为一名帮助农民种出更多粮食的科学家。她的老师常把这个故事讲给更小的学生听。“大事都从小习惯开始。”老师说。而一个看云的小女孩，成了全村人的骄傲。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Mei was a quiet girl ___ lived in a small village near the mountains.",
+      "choices": [
+        "who",
+        "which",
+        "what"
+      ],
+      "answer": "who",
+      "audioText": "Mei was a quiet girl who lived in a small village near the mountains."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Mei",
+        "kept",
+        "her",
+        "diary",
+        "for",
+        "many",
+        "years."
+      ],
+      "audioText": "Mei kept her diary for many years.",
+      "question": "Put the words in the right order."
+    },
+    {
+      "type": "word_builder",
+      "word": "notebook",
+      "audioText": "notebook"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "By the time she finished primary school, she ___ filled twenty notebooks.",
+      "choices": [
+        "had",
+        "has",
+        "was"
+      ],
+      "answer": "had",
+      "audioText": "By the time she finished primary school, she had filled twenty notebooks."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Big",
+        "things",
+        "start",
+        "with",
+        "small",
+        "habits."
+      ],
+      "audioText": "Big things start with small habits.",
+      "question": "Put the words in the right order."
+    },
+    {
+      "type": "image_choice",
+      "question": "What arrived three days later and saved the crops?",
+      "audioText": "What arrived three days later and saved the crops?",
+      "options": [
+        {
+          "emoji": "🌧️",
+          "value": "rain",
+          "text": "Rain"
+        },
+        {
+          "emoji": "☀️",
+          "value": "sun",
+          "text": "Sun"
+        },
+        {
+          "emoji": "🌬️",
+          "value": "wind",
+          "text": "Wind"
+        }
+      ],
+      "answer": "rain"
+    }
+  ],
+  "_unknownWords": [
+    "asked",
+    "pattern",
+    "later",
+    "crops",
+    "joined",
+    "written",
+    "judges",
+    "big"
+  ]
+}

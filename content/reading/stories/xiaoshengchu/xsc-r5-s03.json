@@ -1,0 +1,125 @@
+{
+  "id": "xsc-r5-s03",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 3,
+  "title": "The Biggest Footprint",
+  "titleCn": "最大的脚印",
+  "coverEmoji": "🦕",
+  "paragraphs": [
+    {
+      "text": "Last Saturday, Mia and Tom visited Dino Valley. They walked along a small river together. The sun was warm and the sky was blue. Suddenly, Tom stopped and looked down.",
+      "translation": "上周六，米娅和汤姆来到了恐龙谷。他们一起沿着一条小河散步。阳光暖暖的，天空蓝蓝的。突然，汤姆停下脚步，低头看了看。"
+    },
+    {
+      "text": "\"Look! A big footprint!\" Tom said. It was the biggest footprint in the valley. Mia put her small shoe inside the footprint. Her shoe looked very small next to it.",
+      "translation": "\"看！一个大脚印！\"汤姆说。这是山谷里最大的脚印。米娅把她的小鞋子放进脚印里。和脚印一比，她的鞋子显得特别小。"
+    },
+    {
+      "text": "They followed the footprints because they felt brave. The footprints went over a small hill. Then they went into a green forest. The two friends walked quietly and slowly.",
+      "translation": "他们觉得自己很勇敢，就跟着脚印走了起来。脚印翻过一座小山坡，接着伸进了一片绿色的森林。两个小伙伴悄悄地、慢慢地走着。"
+    },
+    {
+      "text": "In the forest, they saw a tall dinosaur. It had the longest neck in Dino Valley. It ate leaves from the tallest tree. Mia and Tom hid behind a big rock.",
+      "translation": "在森林里，他们看见一只高大的恐龙。它有着恐龙谷里最长的脖子。它吃着最高那棵树上的叶子。米娅和汤姆躲在一块大石头后面。"
+    },
+    {
+      "text": "The dinosaur was the most gentle animal there. It looked at them and blinked slowly. Then it walked away because it was tired. Mia and Tom smiled at each other.",
+      "translation": "这只恐龙是那里最温和的动物。它看了看他们，慢慢地眨了眨眼。后来它累了，就走开了。米娅和汤姆互相笑了笑。"
+    },
+    {
+      "text": "Mia and Tom walked home before dinner. \"That was the best day!\" Tom said. \"Let's come back next week!\" said Mia. They ran home and told everyone about it.",
+      "translation": "晚饭前，米娅和汤姆走回了家。\"这是最棒的一天！\"汤姆说。\"我们下周再来吧！\"米娅说。他们跑回家，把这件事讲给了每个人听。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Mia and Tom find in Dino Valley?",
+      "audioText": "What did Mia and Tom find in Dino Valley?",
+      "options": [
+        {
+          "emoji": "👣",
+          "value": "footprint",
+          "text": "A footprint"
+        },
+        {
+          "emoji": "🪨",
+          "value": "rock",
+          "text": "A rock"
+        },
+        {
+          "emoji": "🍃",
+          "value": "leaf",
+          "text": "A leaf"
+        }
+      ],
+      "answer": "footprint"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the tall dinosaur eat?",
+      "audioText": "What did the tall dinosaur eat?",
+      "options": [
+        {
+          "emoji": "🍃",
+          "value": "leaves",
+          "text": "Leaves"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        },
+        {
+          "emoji": "🥚",
+          "value": "eggs",
+          "text": "Eggs"
+        }
+      ],
+      "answer": "leaves"
+    },
+    {
+      "type": "word_builder",
+      "word": "dinosaur",
+      "audioText": "dinosaur"
+    },
+    {
+      "type": "word_builder",
+      "word": "footprint",
+      "audioText": "footprint"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "had",
+        "the",
+        "longest",
+        "neck",
+        "in",
+        "Dino",
+        "Valley."
+      ],
+      "audioText": "It had the longest neck in Dino Valley."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "They followed the footprints ___ they felt brave.",
+      "choices": [
+        "because",
+        "but",
+        "so"
+      ],
+      "answer": "because",
+      "audioText": "They followed the footprints because they felt brave."
+    }
+  ],
+  "_unknownWords": [
+    "biggest",
+    "hid",
+    "gentle",
+    "blinked",
+    "let's"
+  ]
+}

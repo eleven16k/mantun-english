@@ -1,0 +1,134 @@
+{
+  "id": "zk-r1-s07",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 7,
+  "title": "The Class Relay Race",
+  "titleCn": "班级接力赛",
+  "coverEmoji": "🏃",
+  "paragraphs": [
+    {
+      "text": "Our school sports day comes every October. Everyone in my class feels excited about it. Our teacher says that we should try our best.",
+      "translation": "我们学校的运动会每年十月举行。班上每个人都很期待。老师说我们应该尽自己最大的努力。"
+    },
+    {
+      "text": "I usually run fast, so my class chose me. I felt happy but also a little nervous. I thought that I could not run well.",
+      "translation": "我平时跑得挺快，所以班里选了我。我既高兴又有点紧张。我觉得自己肯定跑不好。"
+    },
+    {
+      "text": "Every afternoon we practiced on the playground. My friend Li Ming always cheered for me. He said that I ran the fastest.",
+      "translation": "每天下午我们都在操场上练习。我的朋友李明总是为我加油。他说我跑得最快。"
+    },
+    {
+      "text": "On sports day, the playground was full of students. My heart beat fast before the race. Our team stood in a line and waited.",
+      "translation": "运动会那天，操场上站满了同学。比赛前我的心跳得很快。我们队排成一排，静静地等着。"
+    },
+    {
+      "text": "The race started, and I ran as fast as I could. Then I passed the stick to the next runner. Our class got the second place at last.",
+      "translation": "比赛开始了，我拼命地往前跑。然后我把接力棒传给了下一位同学。我们班最后得了第二名。"
+    },
+    {
+      "text": "I know that winning is not everything. Trying my best with my friends is the best prize. Now I never feel afraid of a big race.",
+      "translation": "我知道赢并不是一切。和朋友们一起努力，才是最好的奖励。现在我再也不怕大赛了。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which race did the writer join on sports day?",
+      "audioText": "Which race did the writer join on sports day?",
+      "options": [
+        {
+          "emoji": "🏃",
+          "value": "relay",
+          "text": "A relay race"
+        },
+        {
+          "emoji": "⚽",
+          "value": "football",
+          "text": "A football match"
+        },
+        {
+          "emoji": "🏊",
+          "value": "swimming",
+          "text": "A swimming race"
+        }
+      ],
+      "answer": "relay"
+    },
+    {
+      "type": "word_builder",
+      "word": "nervous",
+      "audioText": "nervous"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Everyone in my class feels ___ about it.",
+      "choices": [
+        "excited",
+        "exciting",
+        "excite"
+      ],
+      "answer": "excited",
+      "audioText": "Everyone in my class feels excited about it."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "thought",
+        "that",
+        "I",
+        "could",
+        "not",
+        "run",
+        "well."
+      ],
+      "audioText": "I thought that I could not run well."
+    },
+    {
+      "type": "image_choice",
+      "question": "What place did the writer's class get at last?",
+      "audioText": "What place did the writer's class get at last?",
+      "options": [
+        {
+          "emoji": "🥈",
+          "value": "second",
+          "text": "Second place"
+        },
+        {
+          "emoji": "🥇",
+          "value": "first",
+          "text": "First place"
+        },
+        {
+          "emoji": "🥉",
+          "value": "third",
+          "text": "Third place"
+        }
+      ],
+      "answer": "second"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Our",
+        "class",
+        "got",
+        "the",
+        "second",
+        "place",
+        "at",
+        "last."
+      ],
+      "audioText": "Our class got the second place at last."
+    }
+  ],
+  "_unknownWords": [
+    "chose",
+    "li",
+    "cheered",
+    "runner",
+    "big"
+  ]
+}

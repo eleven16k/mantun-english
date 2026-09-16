@@ -1,0 +1,120 @@
+{
+  "id": "gk-r4-s01",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 1,
+  "title": "Small Habits, Big Health",
+  "titleCn": "小习惯，大健康",
+  "coverEmoji": "🫀",
+  "paragraphs": [
+    {
+      "text": "Sleep is not a luxury, and treating it like one always costs you later. Getting enough sleep is one of the simplest ways to protect your health. Yet many students treat sleep as something they can always cut short when a screen is waiting. If you often feel tired in class, you should have gone to bed earlier instead of watching one more video.",
+      "translation": "睡眠不是奢侈品，而把它当成奢侈品，早晚会让你付出代价。睡够觉是保护健康最简单的方法之一。然而很多学生把睡眠当成随时可以压缩的事，只要还有一块屏幕在等着他们。如果你上课常常觉得累，那你早就该去睡觉，而不是再多看一个视频。"
+    },
+    {
+      "text": "Moving your body for just twenty minutes a day can change how your brain works. Exercise releases chemicals that lift your mood and help you think more clearly. Trying to study all evening without a break usually makes you slower, not faster.",
+      "translation": "每天只需活动身体二十分钟，就能改变大脑的运作方式。运动会释放某些化学物质，让你心情变好、思路更清晰。想整个晚上一直学习而不休息，通常只会让你更迟钝，而不是更快。"
+    },
+    {
+      "text": "Eating well does not mean giving up every snack that you enjoy. What matters is balance, not perfection: fruit, vegetables and whole grains most of the time, with sweets saved for special moments. Skipping breakfast to save ten minutes is a habit you should have dropped long ago.",
+      "translation": "吃得好并不意味着要放弃所有你喜欢的零食。重要的是平衡，而不是完美：大部分时候吃水果、蔬菜和全谷物，把甜食留给特别的时刻。为了省十分钟而不吃早餐，是你早该改掉的习惯。"
+    },
+    {
+      "text": "Looking after your mind matters just as much as looking after your body. When stress builds up, talking to a friend or a teacher can make a real difference. Nobody was ever meant to carry every worry alone, so asking for help is a sign of strength.",
+      "translation": "照顾心理和照顾身体同样重要。当压力不断累积时，和朋友或老师聊一聊真的会带来改变。没有人天生就该独自承担所有的烦恼，所以主动求助是坚强的表现。"
+    },
+    {
+      "text": "None of these changes has to happen overnight. Choosing one small habit and keeping it for a month is far better than planning a perfect routine you never begin. Small habits beat perfect plans. Your future self will thank you for the choice you make today.",
+      "translation": "这些改变都不必一夜之间完成。选一个小习惯并坚持一个月，远比制定一个完美却从未开始的计划要好得多。小习惯胜过完美计划。未来的你，会感谢你今天做出的选择。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, which activity can lift your mood and help you think more clearly?",
+      "audioText": "According to the passage, which activity can lift your mood and help you think more clearly?",
+      "options": [
+        {
+          "emoji": "🏃",
+          "value": "exercise",
+          "text": "Exercise"
+        },
+        {
+          "emoji": "🍬",
+          "value": "sweets",
+          "text": "Sweets"
+        },
+        {
+          "emoji": "📱",
+          "value": "screens",
+          "text": "Screens"
+        }
+      ],
+      "answer": "exercise"
+    },
+    {
+      "type": "word_builder",
+      "word": "balance",
+      "audioText": "balance"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Small",
+        "habits",
+        "beat",
+        "perfect",
+        "plans"
+      ],
+      "audioText": "Small habits beat perfect plans."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "None",
+        "of",
+        "these",
+        "changes",
+        "has",
+        "to",
+        "happen",
+        "overnight."
+      ],
+      "audioText": "None of these changes has to happen overnight."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you often feel tired in class, you should have ___ to bed earlier instead of watching one more video.",
+      "choices": [
+        "gone",
+        "went",
+        "going"
+      ],
+      "answer": "gone",
+      "audioText": "If you often feel tired in class, you should have gone to bed earlier instead of watching one more video."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ breakfast to save ten minutes is a habit you should have dropped long ago.",
+      "choices": [
+        "Skipping",
+        "Skip",
+        "Skipped"
+      ],
+      "answer": "Skipping",
+      "audioText": "Skipping breakfast to save ten minutes is a habit you should have dropped long ago."
+    }
+  ],
+  "_unknownWords": [
+    "luxury",
+    "getting",
+    "simplest",
+    "gone",
+    "earlier",
+    "mood",
+    "snack",
+    "perfection",
+    "skipping",
+    "overnight"
+  ]
+}

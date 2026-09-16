@@ -1,0 +1,123 @@
+{
+  "id": "zk-r4-s12",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 12,
+  "title": "Give Old Clothes a Second Life",
+  "titleCn": "给旧衣服第二次生命",
+  "coverEmoji": "👕",
+  "paragraphs": [
+    {
+      "text": "Look at your clothes before you go shopping. Many of us keep clothes we never wear. If you find a shirt that is too small, do not throw it away. Someone else may need it, and it can still be useful.",
+      "translation": "买东西之前，先看看自己已有的衣服。我们很多人留着从来不穿的衣服。如果你发现一件衬衫太小了，不要把它扔掉。别人可能正需要它，它仍然有用。"
+    },
+    {
+      "text": "Every year, people throw away millions of tons of clothes. These clothes sit in rubbish dumps and take many years to break down. If we throw away less, we save land and water. Making new clothes also uses a lot of energy.",
+      "translation": "每年，人们扔掉成百上千万吨的衣服。这些衣服堆在垃圾场里，要很多年才能分解。如果我们少扔一些，就能省下土地和水。制作新衣服也要消耗大量能源。"
+    },
+    {
+      "text": "So what can you do? First, sort your clothes into three groups: keep, give away and repair. If a button falls off, you can fix it yourself. Take your old clothes to a clothes bank near your home. You can also give them to a younger cousin or a friend.",
+      "translation": "那你能做些什么呢？首先，把衣服分成三类：留下、送人和修补。如果纽扣掉了，你可以自己把它修好。把旧衣服送到离家不远的旧衣回收点。你也可以把它们送给表弟表妹或朋友。"
+    },
+    {
+      "text": "Some shops collect old clothes and give you a small gift. Ask your parents before you take anything there. If you are not sure where to go, ask your teacher or search online. Remember to wash the clothes before you give them away.",
+      "translation": "有些商店会回收旧衣服，还会送你一份小礼物。去之前先问问父母。如果你不确定该去哪儿，可以问问老师，或者上网查一查。记得把衣服洗干净再送出去。"
+    },
+    {
+      "text": "Old clothes can also become something new. You can cut an old T-shirt into a bag for shopping. If you use it every week, you will need fewer plastic bags. Small actions like these keep our city clean and green.",
+      "translation": "旧衣服也能变成新东西。你可以把旧T恤剪成购物袋。如果你每周都用它，就能少用一些塑料袋。像这样的小行动能让我们的城市干净又环保。"
+    },
+    {
+      "text": "Start today. Choose five things you no longer wear. Then find a new home for them. If everyone does this, we will waste less and help the Earth. Let us give our old clothes a second life!",
+      "translation": "从今天开始吧。挑出五件你不再穿的衣服。然后给它们找个新家。如果每个人都这样做，我们就能少浪费，也能帮助地球。让我们给旧衣服第二次生命！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What can you make from an old T-shirt, according to the text?",
+      "audioText": "What can you make from an old T-shirt, according to the text?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "bag",
+          "text": "A shopping bag"
+        },
+        {
+          "emoji": "🧦",
+          "value": "socks",
+          "text": "A pair of socks"
+        },
+        {
+          "emoji": "🧢",
+          "value": "hat",
+          "text": "A winter hat"
+        }
+      ],
+      "answer": "bag"
+    },
+    {
+      "type": "word_builder",
+      "word": "repair",
+      "audioText": "repair"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Then",
+        "find",
+        "a",
+        "new",
+        "home",
+        "for",
+        "them"
+      ],
+      "audioText": "Then find a new home for them."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Old",
+        "clothes",
+        "can",
+        "also",
+        "become",
+        "something",
+        "new"
+      ],
+      "audioText": "Old clothes can also become something new."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If we throw away ___, we save land and water.",
+      "choices": [
+        "less",
+        "more",
+        "many"
+      ],
+      "answer": "less",
+      "audioText": "If we throw away less, we save land and water."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If everyone ___ this, we will waste less and help the Earth.",
+      "choices": [
+        "do",
+        "does",
+        "doing"
+      ],
+      "answer": "does",
+      "audioText": "If everyone does this, we will waste less and help the Earth."
+    }
+  ],
+  "_unknownWords": [
+    "millions",
+    "tons",
+    "dumps",
+    "less",
+    "button",
+    "ask",
+    "online",
+    "choose"
+  ]
+}

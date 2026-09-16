@@ -1,0 +1,122 @@
+{
+  "id": "zk-r7-s07",
+  "track": "zhongkao",
+  "regionId": "zk-r7",
+  "order": 7,
+  "title": "Kindness Is a Choice",
+  "titleCn": "善意是一种选择",
+  "coverEmoji": "🤝",
+  "paragraphs": [
+    {
+      "text": "We live in two worlds every day, and both of them feel real to us. One is the busy street outside our window, and the other is the internet inside our phone. Neither world works well without people who care about others.",
+      "translation": "我们每天都生活在两个世界里，而且这两个世界对我们来说都很真实。一个是窗外繁忙的街道，另一个是手机里的网络。如果没有关心他人的人，这两个世界都无法好好运转。"
+    },
+    {
+      "text": "Behind a screen, some people seem to forget that real people are reading their words. They type angry words that they would never say face to face. If I were that person, I would stop and think before I sent anything. Kind words are never wasted.",
+      "translation": "躲在屏幕后面，有些人似乎忘了，读他们文字的是一群真实的人。他们敲下一些当面绝不会说的气话。如果我是那个人，我会先停下来想一想，再决定要不要发出去。善意的话永远不会白说。"
+    },
+    {
+      "text": "I wish more of us remembered how much a kind message can help. A short thank-you message online may make someone's whole day much brighter. To be polite to others costs us almost nothing at all.",
+      "translation": "我真希望我们更多人能记得，一条善意的留言能帮上多大的忙。网上一条简短的“谢谢”，也许就能让某人的一整天明亮许多。对别人客气有礼，几乎不费我们什么力气。"
+    },
+    {
+      "text": "Volunteering is another way to show that we are part of a community. Last month our class spent three hours cleaning a small park near the school. What surprised me most was how quickly a few pairs of hands changed things. Small teams can move big things.",
+      "translation": "做志愿服务，是另一种表明自己是社区一员的方式。上个月，我们班花了三个小时打扫学校附近的一个小公园。让我最惊讶的是，几双手很快就让那里变了样。小的团队也能推动大的改变。"
+    },
+    {
+      "text": "Rules matter as well, because they protect everyone who shares the same space. When we wait in line, we show respect for the people around us. If nobody followed any rules, a busy city would soon become a mess.",
+      "translation": "规则同样重要，因为它们保护着共享同一片空间的每一个人。排队等候时，我们表现出对周围人的尊重。如果没有人遵守任何规则，繁忙的城市很快就会乱成一团。"
+    },
+    {
+      "text": "So what kind of world do we really want to live in? I wish we could all see that our small choices add up. If we were kinder online and more helpful in person, our city would be a warmer place.",
+      "translation": "那么，我们究竟想生活在什么样的世界里呢？我真希望我们都能看见，自己那些小小的选择会一点点累积。如果我们上网时更友善、在现实中更乐于助人，我们的城市会变成一个更温暖的地方。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Besides the busy street outside our window, what is the other world we live in?",
+      "audioText": "Besides the busy street outside our window, what is the other world we live in?",
+      "options": [
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "The internet in our phone"
+        },
+        {
+          "emoji": "🌳",
+          "value": "park",
+          "text": "A park near the school"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "A classroom at school"
+        }
+      ],
+      "answer": "phone"
+    },
+    {
+      "type": "word_builder",
+      "word": "community",
+      "audioText": "community"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Kind",
+        "words",
+        "are",
+        "never",
+        "wasted."
+      ],
+      "audioText": "Kind words are never wasted."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Small",
+        "teams",
+        "can",
+        "move",
+        "big",
+        "things."
+      ],
+      "audioText": "Small teams can move big things."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "To be polite to others ___ us almost nothing at all.",
+      "choices": [
+        "costs",
+        "cost",
+        "costing"
+      ],
+      "answer": "costs",
+      "audioText": "To be polite to others costs us almost nothing at all."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "I wish more of us ___ how much a kind message can help.",
+      "choices": [
+        "remembered",
+        "remember",
+        "remembering"
+      ],
+      "answer": "remembered",
+      "audioText": "I wish more of us remembered how much a kind message can help."
+    }
+  ],
+  "_unknownWords": [
+    "worlds",
+    "busy",
+    "world",
+    "type",
+    "online",
+    "someone's",
+    "community",
+    "big",
+    "mess",
+    "add"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "gk-r7-s05",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 5,
+  "title": "Should We Live Beyond Earth?",
+  "titleCn": "我们该到地球之外生活吗？",
+  "coverEmoji": "🌍",
+  "paragraphs": [
+    {
+      "text": "For as long as humans have looked up at the night sky, we have wondered whether we are alone and whether we could ever live somewhere else. That old question has now become a practical one, because rockets, satellites and space stations have turned imagination into engineering. Yet the closer we get to leaving Earth, the more seriously we must ask a simple question: should we?",
+      "translation": "自人类仰望夜空以来，我们就一直想知道自己是否孤单，也想知道能否在别的地方生活。这个古老的问题如今已经变成了现实问题，因为火箭、卫星和空间站已经把想象变成了工程。然而，我们离离开地球越近，就越应当认真地提出一个简单的问题：我们应该走吗？"
+    },
+    {
+      "text": "Supporters of space settlement offer several powerful arguments. They point out that Earth's resources are limited, while the solar system holds metals, water and energy we have barely begun to imagine. Were we to establish a permanent base on the Moon, we could learn to live on other worlds before a disaster forces us to. Besides, the technology developed for space often returns to Earth, improving medicines, materials and the ways we grow food.",
+      "translation": "支持太空定居的人提出了几个很有力的理由。他们指出，地球的资源是有限的，而太阳系里蕴藏着我们几乎还难以想象的金属、水和能源。倘若我们在月球上建立一个永久基地，我们就能在灾难迫使我们离开之前，学会在别的星球上生活。此外，为太空研发的技术常常回到地球，改进医药、材料以及我们种植食物的方式。"
+    },
+    {
+      "text": "Critics, however, are not convinced. What worries them most is that the huge sums spent on rockets, however inspiring the pictures may be, might be better used to clean rivers and feed children who go hungry tonight. If the same money had been invested in renewable energy thirty years ago, we would already be living in a safer world. Why, they ask, should we run from problems we created here instead of solving them?",
+      "translation": "然而，批评者并不认同。最令他们担忧的是：花在火箭上的巨额资金——无论那些画面多么鼓舞人心——也许用来清理河流、让今晚还在挨饿的孩子吃上饭会更好。如果同样的钱在三十年前就投入到可再生能源上，我们如今早已生活在一个更安全的世界里了。他们问道：我们为什么要逃避自己在这里造成的问题，而不是去解决它们呢？"
+    },
+    {
+      "text": "Perhaps the choice is not as sharp as it appears. Space research and environmental protection need not compete. Satellites now watch forests, track storms and measure the ice that is melting at the poles. Only when we treat our own planet with care can we honestly say that we are ready to leave it. And if we never leave, the knowledge we gained will still have made life here richer.",
+      "translation": "也许这个选择并不像看上去那样非此即彼。太空研究和环境保护不必相互竞争。卫星如今在监测森林、追踪风暴，并测量两极正在融化的冰。只有当我们善待自己的星球时，我们才能坦然地说自己已经准备好离开它。而即使我们永远不离开，我们获得的知识也仍会让这里的生活更加丰富。"
+    },
+    {
+      "text": "So the real question is not whether humanity will reach the stars, but how we choose to get there. Whether we stay or go, the future will be shaped by decisions we make today, in classrooms, laboratories and ordinary homes. What we do now, not what we dream, will decide which future finally becomes ours.",
+      "translation": "所以，真正的问题不是人类能否抵达群星，而是我们选择以何种方式抵达。无论我们留下还是离开，未来都将由我们今天在教室、实验室和普通家庭中做出的决定所塑造。最终决定哪个未来属于我们的，是我们现在所做的，而不是我们所梦想的。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, what do satellites now help us do?",
+      "audioText": "According to the passage, what do satellites now help us do?",
+      "options": [
+        {
+          "emoji": "🌲",
+          "value": "forests",
+          "text": "Watch forests and track storms"
+        },
+        {
+          "emoji": "🏭",
+          "value": "factories",
+          "text": "Build more factories"
+        },
+        {
+          "emoji": "🛏️",
+          "value": "sleep",
+          "text": "Help people sleep better"
+        }
+      ],
+      "answer": "forests"
+    },
+    {
+      "type": "word_builder",
+      "word": "settlement",
+      "audioText": "settlement"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Space",
+        "research",
+        "and",
+        "environmental",
+        "protection",
+        "need",
+        "not",
+        "compete."
+      ],
+      "audioText": "Space research and environmental protection need not compete."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Critics,",
+        "however,",
+        "are",
+        "not",
+        "convinced."
+      ],
+      "audioText": "Critics, however, are not convinced."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Only when we treat our own planet with care ___ we honestly say that we are ready to leave it.",
+      "choices": [
+        "can",
+        "do",
+        "are"
+      ],
+      "answer": "can",
+      "audioText": "Only when we treat our own planet with care can we honestly say that we are ready to leave it."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If the same money ___ been invested in renewable energy thirty years ago, we would already be living in a safer world.",
+      "choices": [
+        "had",
+        "has",
+        "was"
+      ],
+      "answer": "had",
+      "audioText": "If the same money had been invested in renewable energy thirty years ago, we would already be living in a safer world."
+    }
+  ],
+  "_unknownWords": [
+    "imagination",
+    "closer",
+    "supporters",
+    "powerful",
+    "earth's",
+    "resources",
+    "solar",
+    "begun",
+    "sums",
+    "renewable",
+    "safer",
+    "solving",
+    "environmental",
+    "melting",
+    "humanity"
+  ]
+}

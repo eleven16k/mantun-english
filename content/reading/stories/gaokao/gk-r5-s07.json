@@ -1,0 +1,105 @@
+{
+  "id": "gk-r5-s07",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 7,
+  "title": "Learning After the Last Bell",
+  "titleCn": "下课铃之后的学习",
+  "coverEmoji": "📚",
+  "paragraphs": [
+    {
+      "text": "On the last morning of senior year, our English teacher, Mrs. Lin, handed each of us a thin notebook. Inside it she had written a single question, whose answer she wanted us to find for ourselves: \"What will you learn next?\" Most of us laughed, for we had just finished the examination for which we had waited three whole years. I did not answer the question then.",
+      "translation": "高中最后一年的最后一个上午，我们的英语老师林太太给我们每人发了一本薄薄的笔记本。她在里面写了一个问题，答案她希望我们自己去寻找：\"你接下来要学什么？\"我们大多数人都笑了，因为我们刚刚结束了那场等了整整三年的考试。那时我并没有回答这个问题。"
+    },
+    {
+      "text": "I put the notebook in a drawer and forgot about it, because I had already decided to take a gap year. My plan was simple: I would work in a small bookshop, save some money and travel a little. My parents, however, were worried that a year away from books would make me lazy.",
+      "translation": "我把笔记本塞进抽屉，很快就把它忘了，因为我已经决定要度过一个间隔年。我的计划很简单：去一家小书店打工，攒点钱，再小小地旅行一次。然而，我的父母担心，一年不碰书本会让我变得懒散。"
+    },
+    {
+      "text": "The bookshop stood on a quiet corner. Its owner, a retired teacher of seventy, to whom every customer turned for advice, was the most curious man I had ever met. He read every new book that came in, and each evening he wrote one fresh idea in a notebook of his own.",
+      "translation": "那家书店坐落在一个安静的街角。店主是一位七十岁的退休教师，每位顾客都来找他讨教，他是我见过的最有好奇心的人。每来一本新书他都读，而且每天晚上他都会在自己的本子里写下一点新的想法。"
+    },
+    {
+      "text": "One rainy afternoon, the shop empty and the windows wet, I asked him why he still studied so hard. \"Learning,\" he said quietly, \"is not a race that ends the moment a certificate is handed to you.\" Then he added something that I have never forgotten: \"Curiosity has no final bell.\"",
+      "translation": "一个下雨的午后，店里空无一人，窗户湿漉漉的，我问他为什么还这么用功地学习。\"学习，\"他轻声说，\"不是一场在你拿到证书时就结束的比赛。\"接着他又说了一句我永远不会忘记的话：\"好奇心没有下课铃。\""
+    },
+    {
+      "text": "That night I took Mrs. Lin's notebook out of the drawer and wrote my first answer. A gap year, I realised, is not a hole in your education but a door through which you may walk in any direction. That question stayed with me all summer.",
+      "translation": "那天晚上，我从抽屉里拿出林太太的笔记本，写下了我的第一个答案。我意识到，间隔年并不是你教育中的一个空洞，而是一扇门，你可以穿过它走向任何方向。那个问题，整个夏天都伴随着我。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "bookshop",
+        "stood",
+        "on",
+        "a",
+        "quiet",
+        "corner."
+      ],
+      "audioText": "The bookshop stood on a quiet corner."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Its owner, a retired teacher of seventy, to ___ every customer turned for advice, was the most curious man I had ever met.",
+      "choices": [
+        "who",
+        "whom",
+        "which"
+      ],
+      "answer": "whom",
+      "audioText": "Its owner, a retired teacher of seventy, to whom every customer turned for advice, was the most curious man I had ever met."
+    },
+    {
+      "type": "word_builder",
+      "word": "curiosity",
+      "audioText": "curiosity"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "One rainy afternoon, the shop ___ and the windows wet, I asked him why he still studied so hard.",
+      "choices": [
+        "empty",
+        "empties",
+        "emptied"
+      ],
+      "answer": "empty",
+      "audioText": "One rainy afternoon, the shop empty and the windows wet, I asked him why he still studied so hard."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "That",
+        "question",
+        "stayed",
+        "with",
+        "me",
+        "all",
+        "summer."
+      ],
+      "audioText": "That question stayed with me all summer."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "A gap year is not a hole in your education but a door through ___ you may walk in any direction.",
+      "choices": [
+        "that",
+        "which",
+        "what"
+      ],
+      "answer": "which",
+      "audioText": "A gap year is not a hole in your education but a door through which you may walk in any direction."
+    }
+  ],
+  "_unknownWords": [
+    "written",
+    "gap",
+    "bookshop",
+    "forgotten",
+    "curiosity",
+    "lin's"
+  ]
+}

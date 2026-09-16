@@ -1,0 +1,121 @@
+{
+  "id": "zk-r4-s04",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 4,
+  "title": "Sort It Right, Save the Earth",
+  "titleCn": "分好垃圾，守护地球",
+  "coverEmoji": "♻️",
+  "paragraphs": [
+    {
+      "text": "Every day, our family throws away a lot of rubbish at home. Do you know where all of it goes? If we put everything in one bin, it becomes a big problem.",
+      "translation": "每天，我们家都会扔掉很多垃圾。你知道它们最后都去了哪里吗？如果我们把所有东西都丢进同一个桶里，它就会变成一个大问题。"
+    },
+    {
+      "text": "In many cities, people now sort their rubbish into different bins. Paper, plastic, glass and old batteries each have their own home. It only takes a few seconds, but it helps a lot.",
+      "translation": "在许多城市，人们现在会把垃圾分进不同的桶里。纸张、塑料、玻璃和旧电池都有自己的“家”。这只需要几秒钟，却能帮上大忙。"
+    },
+    {
+      "text": "If you sort your rubbish well, factories can reuse the useful parts. For example, old paper can become new books again. Please rinse the bottles and boxes first.",
+      "translation": "如果你把垃圾分好，工厂就能重新利用其中有用的部分。比如，旧纸可以再一次变成新书。请先把瓶子和盒子冲洗一下。"
+    },
+    {
+      "text": "Try to carry a cloth bag when you go shopping. Say no to plastic bags. Use fewer plastic bottles too. Remember that the best rubbish is the rubbish we never make.",
+      "translation": "去购物时尽量带一个布袋。对塑料袋说不。也少用一些塑料瓶。记住：最好的垃圾，就是我们从未制造出来的垃圾。"
+    },
+    {
+      "text": "Saving the Earth is also good for animals and plants. If we keep rivers and parks clean, birds and fish can live safely. Don't leave your litter in the park after your picnic.",
+      "translation": "保护地球对动物和植物也有好处。如果我们让河流和公园保持干净，鸟儿和鱼儿就能安全地生活。野餐之后，不要把垃圾留在公园里。"
+    },
+    {
+      "text": "You can also live a healthier life and help the planet. Walk or ride a bike to school if your home is near. Start today, and our city will be cleaner and greener tomorrow.",
+      "translation": "你还可以在过上更健康生活的同时帮助地球。如果家离得近，就走路或骑车去上学。从今天开始，我们的城市明天会更干净、更绿。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what can become new books again?",
+      "audioText": "According to the text, what can become new books again?",
+      "options": [
+        {
+          "emoji": "📄",
+          "value": "paper",
+          "text": "Paper"
+        },
+        {
+          "emoji": "🔋",
+          "value": "batteries",
+          "text": "Old batteries"
+        },
+        {
+          "emoji": "🥛",
+          "value": "glass",
+          "text": "Glass"
+        }
+      ],
+      "answer": "paper"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If we ___ everything in one bin, it becomes a big problem.",
+      "choices": [
+        "put",
+        "puts",
+        "putting"
+      ],
+      "answer": "put",
+      "audioText": "If we put everything in one bin, it becomes a big problem."
+    },
+    {
+      "type": "word_builder",
+      "word": "reuse",
+      "audioText": "reuse"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Say",
+        "no",
+        "to",
+        "plastic",
+        "bags."
+      ],
+      "audioText": "Say no to plastic bags."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "You can also live a healthier life and ___ the planet.",
+      "choices": [
+        "help",
+        "helps",
+        "helping"
+      ],
+      "answer": "help",
+      "audioText": "You can also live a healthier life and help the planet."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Please",
+        "rinse",
+        "the",
+        "bottles",
+        "and",
+        "boxes",
+        "first."
+      ],
+      "audioText": "Please rinse the bottles and boxes first."
+    }
+  ],
+  "_unknownWords": [
+    "bin",
+    "big",
+    "bins",
+    "batteries",
+    "reuse",
+    "rinse",
+    "don't",
+    "healthier"
+  ]
+}

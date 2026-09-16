@@ -1,0 +1,135 @@
+{
+  "id": "zk-r1-s09",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 9,
+  "title": "My Turn to Speak",
+  "titleCn": "轮到我发言",
+  "coverEmoji": "🎤",
+  "paragraphs": [
+    {
+      "text": "I used to be the quietest student in my class. I always sat in the back row. I never put up my hand. When the teacher asked a question, I usually looked down. I thought that speaking in front of people was hard.",
+      "translation": "我曾经是班里最安静的学生。我总是坐在最后一排，从来不举手。老师提问的时候，我通常低头看着桌子。我觉得在人前讲话太难了。"
+    },
+    {
+      "text": "Last month Miss Lin told us about a class speech day. She is our English teacher. She said that every student should give a short talk. My heart went cold when I heard the news. I told her that I could not do it.",
+      "translation": "上个月，林老师跟我们说起了班级演讲日。她是我们的英语老师。她说每个同学都要做一个简短的发言。听到这个消息，我的心一下子凉了。我告诉她我做不到。"
+    },
+    {
+      "text": "Miss Lin did not push me. She only said that I could choose any topic. I thought about it for two days. Then I decided to talk about my little dog, Lucky. I knew that topic well, so I felt safer.",
+      "translation": "林老师没有逼我。她只是说我可以选任何自己喜欢的话题。我想了两天。然后我决定讲讲我的小狗 Lucky。这个话题我很熟，所以觉得安心了一些。"
+    },
+    {
+      "text": "I practised at home every evening. I spoke to the mirror, to my sister, and even to Lucky. My sister often said that my voice was too low. So I tried to speak more slowly and more loudly. Slowly, I began to feel better.",
+      "translation": "每天傍晚我都在家练习。我对着镜子说，对着妹妹说，甚至对着 Lucky 说。妹妹常常说我的声音太小。于是我试着说得更慢、更响亮。慢慢地，我感觉好多了。"
+    },
+    {
+      "text": "On Friday afternoon, it was my turn. My legs felt like jelly. But I walked to the front of the class. I told them how Lucky waits for me at the door. The classroom was very quiet. Then Tom laughed, and I laughed too.",
+      "translation": "星期五下午，轮到我了。我的腿软得像果冻。但我还是走到了全班同学前面。我给大家讲了 Lucky 怎样在门口等我。教室里非常安静。然后 Tom 笑了，我也笑了。"
+    },
+    {
+      "text": "When I finished, everyone clapped. Miss Lin smiled and said that I had done a good job. Now I sometimes still sit in the back row. But I always put up my hand when I know the answer. I know that I can speak when I am ready.",
+      "translation": "我讲完后，大家都鼓起掌来。林老师笑着说，我做得很好。现在，我有时还是坐在后排。但当我知道答案时，我总是举手。我知道，准备好的时候我就能开口了。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where did the writer always sit in class?",
+      "audioText": "Where did the writer always sit in class?",
+      "options": [
+        {
+          "emoji": "🪑",
+          "value": "back",
+          "text": "In the back row"
+        },
+        {
+          "emoji": "🪟",
+          "value": "window",
+          "text": "By the window"
+        },
+        {
+          "emoji": "🚪",
+          "value": "door",
+          "text": "Near the door"
+        }
+      ],
+      "answer": "back"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the writer talk about in the speech?",
+      "audioText": "What did the writer talk about in the speech?",
+      "options": [
+        {
+          "emoji": "🐶",
+          "value": "dog",
+          "text": "My little dog"
+        },
+        {
+          "emoji": "⚽",
+          "value": "football",
+          "text": "A football match"
+        },
+        {
+          "emoji": "🎹",
+          "value": "music",
+          "text": "A music lesson"
+        }
+      ],
+      "answer": "dog"
+    },
+    {
+      "type": "word_builder",
+      "word": "mirror",
+      "audioText": "mirror"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "practised",
+        "at",
+        "home",
+        "every",
+        "evening"
+      ],
+      "audioText": "I practised at home every evening."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Then",
+        "Tom",
+        "laughed",
+        "and",
+        "I",
+        "laughed",
+        "too"
+      ],
+      "audioText": "Then Tom laughed, and I laughed too."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Miss Lin smiled and said ___ I had done a good job.",
+      "choices": [
+        "that",
+        "what",
+        "which"
+      ],
+      "answer": "that",
+      "audioText": "Miss Lin smiled and said that I had done a good job."
+    }
+  ],
+  "_unknownWords": [
+    "asked",
+    "speech",
+    "english",
+    "talk",
+    "choose",
+    "topic",
+    "safer",
+    "jelly",
+    "done"
+  ]
+}

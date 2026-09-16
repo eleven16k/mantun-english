@@ -1,0 +1,122 @@
+{
+  "id": "xsc-r4-s04",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 4,
+  "title": "A Cleaner Ocean",
+  "titleCn": "更干净的大海",
+  "coverEmoji": "🐢",
+  "paragraphs": [
+    {
+      "text": "Last Sunday, Lily and Tom went to Ocean Park. They walked to the big blue tank. A green sea turtle swam near them.",
+      "translation": "上周日，莉莉和汤姆去了海洋公园。他们走到那个蓝色的大水槽前。一只绿海龟游到他们身边。"
+    },
+    {
+      "text": "The turtle was slower than the fish. But it was much bigger and older. It looked at Lily with kind eyes.",
+      "translation": "这只海龟比鱼游得慢。但它大得多，也老得多。它用温和的眼神看着莉莉。"
+    },
+    {
+      "text": "Then they saw something sad. A plastic bag floated near the turtle. The turtle thought it was food. Lily felt worried and a little angry.",
+      "translation": "接着他们看到了一件让人难过的事。一个塑料袋漂到海龟旁边。海龟以为那是吃的。莉莉又担心又有点生气。"
+    },
+    {
+      "text": "A kind worker came to help. She took the bag out quickly. The water looked cleaner than before. The turtle swam away, happy and free.",
+      "translation": "一位好心的工作人员过来帮忙。她很快把袋子捞了出去。海水看起来比以前干净了。海龟游走了，又快活又自在。"
+    },
+    {
+      "text": "Lily and Tom learned a big lesson. We must keep the sea clean. Small hands can make a big difference.",
+      "translation": "莉莉和汤姆学到了重要的一课。我们一定要让大海保持干净。小小的双手也能带来大大的改变。"
+    },
+    {
+      "text": "Now they carry cloth bags to the beach. They pick up rubbish every weekend. The ocean is happier than last year.",
+      "translation": "现在他们去海边会带上布袋。每个周末他们都去捡垃圾。大海比去年更快乐了。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which animal swam near Lily and Tom?",
+      "audioText": "Which animal swam near Lily and Tom?",
+      "options": [
+        {
+          "emoji": "🐢",
+          "value": "turtle",
+          "text": "A sea turtle"
+        },
+        {
+          "emoji": "🐬",
+          "value": "dolphin",
+          "text": "A dolphin"
+        },
+        {
+          "emoji": "🦈",
+          "value": "shark",
+          "text": "A shark"
+        }
+      ],
+      "answer": "turtle"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the worker take out of the water?",
+      "audioText": "What did the worker take out of the water?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "bag",
+          "text": "A plastic bag"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A fish"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        }
+      ],
+      "answer": "bag"
+    },
+    {
+      "type": "word_builder",
+      "word": "turtle",
+      "audioText": "turtle"
+    },
+    {
+      "type": "word_builder",
+      "word": "plastic",
+      "audioText": "plastic"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "water",
+        "looked",
+        "cleaner",
+        "than",
+        "before."
+      ],
+      "audioText": "The water looked cleaner than before."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The turtle was ___ than the fish.",
+      "choices": [
+        "slower",
+        "slowest",
+        "slow"
+      ],
+      "answer": "slower",
+      "audioText": "The turtle was slower than the fish."
+    }
+  ],
+  "_unknownWords": [
+    "tank",
+    "bigger",
+    "floated",
+    "happier"
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "xsc-r4-s02",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 2,
+  "title": "A Day in the Deep Blue",
+  "titleCn": "深蓝里的一天",
+  "coverEmoji": "🐬",
+  "paragraphs": [
+    {
+      "text": "Last Sunday, my class went to Ocean Park. The bus ride was longer than we thought. But we sang songs all the way. Soon, we saw the big blue gate.",
+      "translation": "上周日，我们班去了海洋乐园。车程比我们想的要长。不过我们一路都在唱歌。很快，我们就看到了那扇蓝色的大门。"
+    },
+    {
+      "text": "Our guide was a woman named Ms. Li. She was taller than our teacher. She gave us a small map. \"The sea is a big family,\" she said.",
+      "translation": "我们的向导是一位叫李女士的阿姨。她比我们老师还高。她给了我们一张小地图。\"海洋是一个大家庭，\"她说。"
+    },
+    {
+      "text": "First, we visited the dolphin pool. The dolphins were faster than the fish. One dolphin jumped and splashed us. We laughed and clapped our hands.",
+      "translation": "我们先去了海豚池。海豚比鱼游得快多了。一只海豚跳起来，把水花溅到我们身上。我们笑着拍起了手。"
+    },
+    {
+      "text": "Then we walked into a glass tunnel. Fish of many colors swam above us. A turtle moved slower than the others. It looked old and very kind.",
+      "translation": "然后我们走进了一条玻璃隧道。五颜六色的鱼在我们头顶游来游去。一只海龟比别的动物游得慢。它看上去又老又和善。"
+    },
+    {
+      "text": "After lunch, we saw lots of plastic bags. They floated in the water like jellyfish. Ms. Li said, \"This is bad for fish.\" We picked up every bag we found.",
+      "translation": "午饭过后，我们看到了很多塑料袋。它们像水母一样漂在水里。李女士说：\"这对鱼可不好。\"我们把找到的每个袋子都捡了起来。"
+    },
+    {
+      "text": "On the way home, we felt proud. The ocean was cleaner than before. I told Mom I wanted to help. She smiled and said, \"You already did.\"",
+      "translation": "回家的路上，我们感到很自豪。海洋比以前干净了。我告诉妈妈我想帮忙。她笑着说：\"你已经做到了。\""
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the class visit first?",
+      "audioText": "What did the class visit first?",
+      "options": [
+        {
+          "emoji": "🐬",
+          "value": "dolphins",
+          "text": "The dolphin pool"
+        },
+        {
+          "emoji": "🐠",
+          "value": "tunnel",
+          "text": "The glass tunnel"
+        },
+        {
+          "emoji": "🛍️",
+          "value": "plastic",
+          "text": "The plastic bags"
+        }
+      ],
+      "answer": "dolphins"
+    },
+    {
+      "type": "image_choice",
+      "question": "What floated in the water like jellyfish?",
+      "audioText": "What floated in the water like jellyfish?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "plastic bags",
+          "text": "Plastic bags"
+        },
+        {
+          "emoji": "🐢",
+          "value": "turtles",
+          "text": "Turtles"
+        },
+        {
+          "emoji": "🐬",
+          "value": "dolphins",
+          "text": "Dolphins"
+        }
+      ],
+      "answer": "plastic bags"
+    },
+    {
+      "type": "word_builder",
+      "word": "dolphin",
+      "audioText": "dolphin"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "dolphins",
+        "were",
+        "faster",
+        "than",
+        "the",
+        "fish."
+      ],
+      "audioText": "The dolphins were faster than the fish."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The bus ride was ___ than we thought.",
+      "choices": [
+        "long",
+        "longer",
+        "longest"
+      ],
+      "answer": "longer",
+      "audioText": "The bus ride was longer than we thought."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "One dolphin ___ and splashed us.",
+      "choices": [
+        "jump",
+        "jumped",
+        "jumps"
+      ],
+      "answer": "jumped",
+      "audioText": "One dolphin jumped and splashed us."
+    }
+  ],
+  "_unknownWords": [
+    "guide",
+    "li",
+    "splashed",
+    "tunnel",
+    "floated"
+  ]
+}

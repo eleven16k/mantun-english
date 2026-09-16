@@ -1,0 +1,117 @@
+{
+  "id": "zk-r3-s05",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 5,
+  "title": "Small Robots, Big Help",
+  "titleCn": "小机器人，大帮手",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "Robots are used in many places today. Some of them work in factories, and others help people at home. They may look like simple machines, but they can do clever things. Many people believe that robots will change our lives.",
+      "translation": "如今，机器人在许多地方被使用。有些在工厂里工作，还有些在家里帮助人们。它们看起来可能像简单的机器，却能做很聪明的事情。许多人相信机器人会改变我们的生活。"
+    },
+    {
+      "text": "In big factories, heavy boxes are moved by robots every day. Cars are made by machines that work all night. These robots are checked by workers every morning. They never feel tired, so the work is done much faster.",
+      "translation": "在大工厂里，沉重的箱子每天由机器人搬运。汽车是由整夜工作的机器制造的。这些机器人每天早上都由工人检查。它们从不觉得累，所以工作完成得快得多。"
+    },
+    {
+      "text": "At home, small robots can clean the floor for us. The floor is swept while we watch TV or read. Some of them might be a little noisy, but they save us time. My mother says our robot must be a great helper.",
+      "translation": "在家里，小机器人能为我们打扫地板。我们看电视或看书的时候，地板就被扫干净了。其中有些可能有点吵，但它们为我们节省了时间。我妈妈说我们的机器人一定是个好帮手。"
+    },
+    {
+      "text": "AI is also used in the phone apps we use every day. When we take a photo, the picture may be made better by AI. Doctors can be helped by computers when they study body pictures. The right answer can be found in a few seconds.",
+      "translation": "人工智能也被用在我们每天使用的手机应用里。我们拍照时，照片可能会被人工智能变得更漂亮。医生研究身体图片时，可以借助计算机的帮助。正确的答案几秒钟内就能找到。"
+    },
+    {
+      "text": "New buses and cars can drive themselves on some roads. Their speed is controlled by computers inside the car. A driver might not be needed in the future. But these cars must be tested again and again before they are safe.",
+      "translation": "新型公交车和汽车能在一些道路上自己行驶。它们的速度由车内的电脑控制。将来可能不再需要司机。但这些车在上路安全之前，必须一次又一次地接受测试。"
+    },
+    {
+      "text": "Robots and AI are changing the world we live in. They cannot do everything, and people are still needed. But they can help us work better and live more easily. Maybe one day, a robot will be your best helper.",
+      "translation": "机器人和人工智能正在改变我们生活的世界。它们不能做所有事情，人依然是必需的。但它们能帮我们工作得更好，生活得更轻松。也许有一天，机器人会成为你最好的帮手。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What can small robots do at home?",
+      "audioText": "What can small robots do at home?",
+      "options": [
+        {
+          "emoji": "🧹",
+          "value": "clean",
+          "text": "Clean the floor"
+        },
+        {
+          "emoji": "🍳",
+          "value": "cook",
+          "text": "Cook dinner"
+        },
+        {
+          "emoji": "📚",
+          "value": "read",
+          "text": "Read books"
+        }
+      ],
+      "answer": "clean"
+    },
+    {
+      "type": "word_builder",
+      "word": "factory",
+      "audioText": "factory"
+    },
+    {
+      "type": "word_builder",
+      "word": "computer",
+      "audioText": "computer"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Robots",
+        "are",
+        "used",
+        "in",
+        "many",
+        "places",
+        "today."
+      ],
+      "audioText": "Robots are used in many places today."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Cars ___ made by machines that work all night.",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "answer": "are",
+      "audioText": "Cars are made by machines that work all night."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Their speed ___ by computers inside the car.",
+      "choices": [
+        "controls",
+        "is controlled",
+        "control"
+      ],
+      "answer": "is controlled",
+      "audioText": "Their speed is controlled by computers inside the car."
+    }
+  ],
+  "_unknownWords": [
+    "big",
+    "done",
+    "swept",
+    "noisy",
+    "ai",
+    "apps",
+    "controlled",
+    "world",
+    "cannot",
+    "easily"
+  ]
+}

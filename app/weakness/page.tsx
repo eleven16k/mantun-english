@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { getWeaknesses, deleteWeakness } from "@/lib/api";
@@ -60,14 +61,12 @@ export default function WeaknessPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">
-          {t("weak.title")}
-        </h1>
+      <div className="page-shell">
+        <PageHeader badge="📖 WEAKNESS BOOK" title={t("weak.title")} />
 
         {total === 0 ? (
           /* Empty state */
-          <div className="g-card-hero p-8 text-center shadow-sm">
+          <div className="g-card-hero p-8 text-center">
             <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-positive/10">
               <CheckIcon size={32} className="text-positive" />
             </span>
@@ -77,7 +76,7 @@ export default function WeaknessPage() {
             </p>
             <button
               onClick={() => router.push("/quiz")}
-              className="mt-4 rounded-pill bg-action px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-actionhover"
+              className="mt-4 rounded-pill bg-action px-5 py-2.5 text-sm font-bold text-white transition hover:bg-actionhover"
             >
               {t("weak.startPractice")}
             </button>
@@ -85,7 +84,7 @@ export default function WeaknessPage() {
         ) : (
           <>
             {/* Summary card */}
-            <div className="g-card mb-4 flex items-center justify-between p-5 shadow-sm">
+            <div className="g-card mb-4 flex items-center justify-between p-5">
               <div>
                 <p className="font-booster text-2xl font-extrabold text-primary">{total}</p>
                 <p className="text-xs text-tertiary">{t("weak.toConquer")}</p>
@@ -95,7 +94,7 @@ export default function WeaknessPage() {
                 <div className="flex gap-2">
                   <button
                     onClick={runReport}
-                    className="rounded-pill border border-subtle px-4 py-2.5 text-sm font-bold text-brand-text shadow-sm transition hover:border-brandborder"
+                    className="rounded-pill border border-subtle px-4 py-2.5 text-sm font-bold text-brand-text transition hover:border-brandborder"
                   >
                     {t("weak.aiReport")}
                   </button>
@@ -117,7 +116,7 @@ export default function WeaknessPage() {
                     sessionStorage.setItem("lexi-import-quiz", JSON.stringify({ deckTitle: t("weak.drillTitle"), questions: qs }));
                     router.push("/quiz?src=import");
                   }}
-                  className="rounded-pill bg-brand px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
+                  className="rounded-pill bg-brand px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90"
                 >
                   {t("weak.drillPrefix")}{Math.min(10, total)}{t("weak.drillSuffix")}
                 </button>
@@ -149,7 +148,7 @@ export default function WeaknessPage() {
 
             {/* AI mastery report (streamed) */}
             {reportOpen && (
-              <div className="g-card mt-4 p-5 shadow-sm">
+              <div className="g-card mt-4 p-5">
                 <div className="mb-2 flex items-center justify-between">
                   <p className="text-xs font-bold uppercase tracking-wide text-tertiary">{t("weak.reportTitle")}</p>
                   <button onClick={() => setReportOpen(false)} className="text-xs font-bold text-tertiary transition hover:text-secondary">
@@ -168,7 +167,7 @@ export default function WeaknessPage() {
             {/* List */}
             <div className="flex flex-col gap-2">
               {list.map((w) => (
-                <div key={w.word_id} className="g-card flex items-center gap-3 p-4 shadow-sm">
+                <div key={w.word_id} className="g-card flex items-center gap-3 p-4">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-critical/10">
                     <AlertIcon size={20} className="text-critical" />
                   </span>

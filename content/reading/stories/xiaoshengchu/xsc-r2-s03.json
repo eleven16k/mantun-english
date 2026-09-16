@@ -1,0 +1,122 @@
+{
+  "id": "xsc-r2-s03",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 3,
+  "title": "Friends Help Friends",
+  "titleCn": "朋友帮朋友",
+  "coverEmoji": "🐻",
+  "paragraphs": [
+    {
+      "text": "It is a sunny morning. Many animals are busy in Animal Village. Rabbit Lily is watering her garden. Bear Ben is carrying a big box.",
+      "translation": "这是一个晴朗的早晨。动物村里许多动物都在忙碌着。兔子莉莉正在给她的花园浇水。熊本正搬着一个大箱子。"
+    },
+    {
+      "text": "\"Can you help me, Lily?\" says Ben. \"This box is very heavy.\" Lily puts down her watering can. \"Yes, I can help you,\" she says.",
+      "translation": "“莉莉，你能帮我一下吗？”本说。“这个箱子太重了。”莉莉放下浇水壶。“好的，我来帮你。”她说。"
+    },
+    {
+      "text": "They are walking to the apple shop. A bird is singing in the tree. \"I like your song,\" says Lily. \"I like singing,\" says the bird.",
+      "translation": "他们正朝苹果店走去。一只小鸟在树上唱歌。“我喜欢你的歌。”莉莉说。“我喜欢唱歌。”小鸟说。"
+    },
+    {
+      "text": "Now they are at the shop. Doctor Duck is waiting for the apples. \"Thank you!\" she says. \"I am making apple pie. Do you like apple pie?\"",
+      "translation": "现在他们到了店里。鸭子医生正在等这些苹果。“谢谢你们！”她说。“我正在做苹果派。你们喜欢苹果派吗？”"
+    },
+    {
+      "text": "\"Yes, we do!\" say Ben and Lily. They are eating warm pie together. The sun is shining. Everyone is happy.",
+      "translation": "“喜欢！”本和莉莉说。他们一起吃着热乎乎的派。太阳暖暖地照着。大家都很快乐。"
+    },
+    {
+      "text": "\"Friends help friends,\" says Ben. \"And friends eat pie together!\" laughs Lily.",
+      "translation": "“朋友帮朋友。”本说。“朋友还一起吃派呢！”莉莉笑着说。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is Lily doing?",
+      "audioText": "What is Lily doing?",
+      "options": [
+        {
+          "emoji": "💧",
+          "value": "watering",
+          "text": "Watering the garden"
+        },
+        {
+          "emoji": "🥧",
+          "value": "making_pie",
+          "text": "Making a pie"
+        },
+        {
+          "emoji": "🎤",
+          "value": "singing",
+          "text": "Singing a song"
+        }
+      ],
+      "answer": "watering"
+    },
+    {
+      "type": "word_builder",
+      "word": "carrying",
+      "audioText": "carrying"
+    },
+    {
+      "type": "image_choice",
+      "question": "What is Doctor Duck making?",
+      "audioText": "What is Doctor Duck making?",
+      "options": [
+        {
+          "emoji": "🥧",
+          "value": "pie",
+          "text": "An apple pie"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Some bread"
+        },
+        {
+          "emoji": "🥗",
+          "value": "salad",
+          "text": "A salad"
+        }
+      ],
+      "answer": "pie"
+    },
+    {
+      "type": "word_builder",
+      "word": "garden",
+      "audioText": "garden"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "are",
+        "eating",
+        "warm",
+        "pie",
+        "together."
+      ],
+      "audioText": "They are eating warm pie together."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "They are ___ to the apple shop.",
+      "choices": [
+        "walking",
+        "walks",
+        "walked"
+      ],
+      "answer": "walking",
+      "audioText": "They are walking to the apple shop."
+    }
+  ],
+  "_unknownWords": [
+    "busy",
+    "lily",
+    "ben",
+    "pie"
+  ]
+}

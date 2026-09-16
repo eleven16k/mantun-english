@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
 import { useI18n } from "@/lib/i18n";
 
@@ -30,9 +31,8 @@ export default function PublicDecksPage() {
   const { t } = useI18n();
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-2">{t("deck.publicTitle")}</h1>
-        <p className="mb-5 text-sm text-tertiary">{t("deck.publicHint")}</p>
+      <div className="page-shell">
+        <PageHeader badge="🌍 PUBLIC DECKS" title={t("deck.publicTitle")} sub={t("deck.publicHint")} />
 
         {SUBJECTS.map((group) => (
           <section key={group.categoryKey} className="mb-6">
@@ -42,8 +42,8 @@ export default function PublicDecksPage() {
                 <button
                   key={subject}
                   onClick={() => router.push(`/import?topic=${encodeURIComponent(subject)}`)}
-                  className="g-card flex items-center justify-center shadow-sm transition hover:border-brandborder"
-                  style={{ minHeight: 74, borderRadius: 24, padding: "24px 32px" }}
+                  className="g-card flex items-center justify-center transition hover:border-brandborder"
+                  style={{ minHeight: 74, padding: "24px 32px" }}
                 >
                   <span className="text-[16px] font-bold text-primary">{subject}</span>
                 </button>

@@ -1,0 +1,125 @@
+{
+  "id": "xsc-r3-s01",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 1,
+  "title": "My First Day in Candy Town",
+  "titleCn": "我在糖果镇的第一天",
+  "coverEmoji": "🍭",
+  "paragraphs": [
+    {
+      "text": "Last Saturday, I went to Candy Town. It was a small and sweet town. Every house was pink, yellow or white.",
+      "translation": "上周六，我去了糖果镇。那是一个又小又甜的小镇。那里的房子都是粉色、黄色或者白色的。"
+    },
+    {
+      "text": "In the morning, we walked down Candy Street. We saw a big candy tree there. It had many red and blue sweets.",
+      "translation": "早上，我们沿着糖果街散步。在那里我们看到了一棵大大的糖果树。树上挂满了红色和蓝色的糖果。"
+    },
+    {
+      "text": "At noon, we ate lunch in a shop. I ate a sweet sandwich and a cake. My brother had two big cups of tea.",
+      "translation": "中午，我们在一家小店里吃午饭。我吃了一个甜甜的三明治和一块蛋糕。我弟弟喝了两大杯茶。"
+    },
+    {
+      "text": "In the afternoon, we played games in the park. I got a red candy star. My sister got a yellow one. We were very happy.",
+      "translation": "下午，我们在公园里玩游戏。我得到了一颗红色的糖果星星。我妹妹得到了一颗黄色的。我们非常开心。"
+    },
+    {
+      "text": "In the evening, there was a candy festival. People danced and sang on the street. We watched a big sweet parade.",
+      "translation": "傍晚，镇上办了一场糖果节。人们在街上又唱又跳。我们观看了一场盛大的糖果游行。"
+    },
+    {
+      "text": "I loved Candy Town very much. I want to visit it again next year.",
+      "translation": "我非常喜欢糖果镇。明年我还想再去一次。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What colour were the houses in Candy Town?",
+      "audioText": "What colour were the houses in Candy Town?",
+      "options": [
+        {
+          "emoji": "🎀",
+          "value": "pink",
+          "text": "Pink"
+        },
+        {
+          "emoji": "🍀",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "⬛",
+          "value": "black",
+          "text": "Black"
+        }
+      ],
+      "answer": "pink"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where did we play games in the afternoon?",
+      "audioText": "Where did we play games in the afternoon?",
+      "options": [
+        {
+          "emoji": "🏞️",
+          "value": "park",
+          "text": "Park"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "School"
+        },
+        {
+          "emoji": "🏪",
+          "value": "shop",
+          "text": "Shop"
+        }
+      ],
+      "answer": "park"
+    },
+    {
+      "type": "word_builder",
+      "word": "festival",
+      "audioText": "festival"
+    },
+    {
+      "type": "word_builder",
+      "word": "walked",
+      "audioText": "walked"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "saw",
+        "a",
+        "big",
+        "candy",
+        "tree",
+        "there."
+      ],
+      "audioText": "We saw a big candy tree there."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "In the evening, there ___ a candy festival.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": "was",
+      "audioText": "In the evening, there was a candy festival."
+    }
+  ],
+  "_unknownWords": [
+    "went",
+    "saw",
+    "ate",
+    "got",
+    "sang",
+    "parade"
+  ]
+}

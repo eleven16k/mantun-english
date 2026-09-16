@@ -1,0 +1,135 @@
+{
+  "id": "xsc-r1-s11",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 11,
+  "title": "A Little Rabbit in the Orchard",
+  "titleCn": "果园里的小兔子",
+  "coverEmoji": "🐰",
+  "paragraphs": [
+    {
+      "text": "Look at the apple orchard. It is big and green. There are many apple trees. The apples are red and green.",
+      "translation": "看这个苹果园。它又大又绿。那里有很多苹果树。苹果有红的，也有绿的。"
+    },
+    {
+      "text": "A little rabbit lives here. It has two long ears. It likes red apples. It can jump very high.",
+      "translation": "一只小兔子住在这里。它有两只长长的耳朵。它喜欢红苹果。它能跳得很高。"
+    },
+    {
+      "text": "My brother and I come. We have a big basket. The rabbit is not shy. It sits near our basket.",
+      "translation": "我和哥哥来了。我们有一个大篮子。这只兔子不怕生。它坐在我们的篮子旁边。"
+    },
+    {
+      "text": "My brother picks a red apple. The apple is big and sweet. He puts it in the basket. The rabbit looks at us.",
+      "translation": "哥哥摘了一个红苹果。这个苹果又大又甜。他把它放进篮子里。兔子看着我们。"
+    },
+    {
+      "text": "I give it a small apple. It eats the apple fast. Then it runs away. We say goodbye to it.",
+      "translation": "我给了它一个小苹果。它很快就把苹果吃掉了。然后它跑开了。我们跟它说再见。"
+    },
+    {
+      "text": "We go home with apples. Mom makes apple juice. We are all happy today.",
+      "translation": "我们带着苹果回家了。妈妈做了苹果汁。我们今天都很开心。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does the little rabbit like?",
+      "audioText": "What does the little rabbit like?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "Apple"
+        },
+        {
+          "emoji": "🥕",
+          "value": "carrot",
+          "text": "Carrot"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        }
+      ],
+      "answer": "apple"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Mom make?",
+      "audioText": "What does Mom make?",
+      "options": [
+        {
+          "emoji": "🧃",
+          "value": "juice",
+          "text": "Apple juice"
+        },
+        {
+          "emoji": "🥧",
+          "value": "pie",
+          "text": "Apple pie"
+        },
+        {
+          "emoji": "🍚",
+          "value": "rice",
+          "text": "Rice"
+        }
+      ],
+      "answer": "juice"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where does the rabbit sit?",
+      "audioText": "Where does the rabbit sit?",
+      "options": [
+        {
+          "emoji": "🧺",
+          "value": "basket",
+          "text": "Near the basket"
+        },
+        {
+          "emoji": "🏠",
+          "value": "house",
+          "text": "In a house"
+        },
+        {
+          "emoji": "🚌",
+          "value": "bus",
+          "text": "On a bus"
+        }
+      ],
+      "answer": "basket"
+    },
+    {
+      "type": "word_builder",
+      "word": "rabbit",
+      "audioText": "rabbit"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "likes",
+        "red",
+        "apples."
+      ],
+      "audioText": "It likes red apples."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The apples are ___ and green.",
+      "choices": [
+        "red",
+        "blue",
+        "black"
+      ],
+      "answer": "red",
+      "audioText": "The apples are red and green."
+    }
+  ],
+  "_unknownWords": [
+    "orchard"
+  ]
+}

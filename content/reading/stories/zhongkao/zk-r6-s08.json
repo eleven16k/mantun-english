@@ -1,0 +1,126 @@
+{
+  "id": "zk-r6-s08",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 8,
+  "title": "Sweet Art on a Stick",
+  "titleCn": "甜蜜的糖画艺术",
+  "coverEmoji": "🍬",
+  "paragraphs": [
+    {
+      "text": "Last spring, I visited a beautiful park in Chengdu with my cousin. Near the old gate, we saw a man who was making art with hot sugar. A crowd of children stood around him, and nobody wanted to leave. I had never seen anything like it before that afternoon.",
+      "translation": "去年春天，我和表哥去了成都一个美丽的公园。在古老的公园门口附近，我们看到一个人正在用热糖作画。一群孩子围在他身边，没有人愿意离开。在那天下午之前，我从未见过这样的场景。"
+    },
+    {
+      "text": "The man held a small spoon which was full of hot, golden sugar. He moved his hand quickly over a smooth white board. In less than a minute, a beautiful dragon appeared on it. The sugar was so hot that it looked like shining gold in the sun. Then he pressed a thin stick onto the dragon, and it could stand up.",
+      "translation": "那个人拿着一把小勺子，里面装满了滚烫的金黄色糖稀。他的手在一块光滑的白板上飞快地移动。不到一分钟，一条美丽的龙就出现在上面。糖太烫了，在阳光下看起来像闪闪发光的金子。然后他把一根细木棍按在龙上，糖龙就能立起来了。"
+    },
+    {
+      "text": "Making sugar paintings is not easy. The artist must work fast, because the sugar becomes hard when it cools. If he moves too slowly, the picture will break into small pieces. He told me that he started to learn this skill when he was ten. For him, every painting is a gift that he gives to others.",
+      "translation": "做糖画并不容易。糖画艺人必须动作很快，因为糖一凉就会变硬。如果他动作太慢，画就会碎成小块。他告诉我，他十岁就开始学习这门手艺了。对他来说，每一幅画都是送给别人的礼物。"
+    },
+    {
+      "text": "I asked him what the dragon meant in Chinese culture. He smiled and said that it stood for good luck and power. He also explained that many people love sugar paintings because they are sweet and beautiful. I understood what he wanted to tell me.",
+      "translation": "我问他龙在中国文化里意味着什么。他笑着说，龙代表着好运和力量。他还解释说，很多人喜欢糖画，因为它们又甜又美。我明白了他想告诉我的意思。"
+    },
+    {
+      "text": "A young woman from Canada was standing next to me. She said that she had never seen such a clever artist before. She took many photos and asked the man to draw a panda for her. It was such a lovely picture that everyone around clapped their hands.",
+      "translation": "一位来自加拿大的年轻女子站在我旁边。她说她以前从未见过这么聪明的艺人。她拍了很多照片，还请那个人给她画了一只熊猫。那幅画太可爱了，周围的人都鼓起了掌。"
+    },
+    {
+      "text": "Before I left, I bought a small sugar bird for myself. It looked so lovely that I did not want to eat it. Now I often think about the man whose hands can turn sugar into art. Traditions like this are the reason why I love Chinese culture.",
+      "translation": "离开之前，我给自己买了一只小糖鸟。它看起来太可爱了，我都舍不得吃。现在，我常常想起那个能用糖变成艺术的人。像这样的传统，正是我热爱中国文化的原因。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the man draw on the white board in less than a minute?",
+      "audioText": "What did the man draw on the white board in less than a minute?",
+      "options": [
+        {
+          "emoji": "🐉",
+          "value": "dragon",
+          "text": "A dragon"
+        },
+        {
+          "emoji": "🐼",
+          "value": "panda",
+          "text": "A panda"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A bird"
+        }
+      ],
+      "answer": "dragon"
+    },
+    {
+      "type": "word_builder",
+      "word": "artist",
+      "audioText": "artist"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "understood",
+        "what",
+        "he",
+        "wanted",
+        "to",
+        "tell",
+        "me."
+      ],
+      "audioText": "I understood what he wanted to tell me."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Making",
+        "sugar",
+        "paintings",
+        "is",
+        "not",
+        "easy."
+      ],
+      "audioText": "Making sugar paintings is not easy."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The sugar was so hot ___ it looked like shining gold in the sun.",
+      "choices": [
+        "that",
+        "which",
+        "because"
+      ],
+      "answer": "that",
+      "audioText": "The sugar was so hot that it looked like shining gold in the sun."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Now I often think about the man ___ hands can turn sugar into art.",
+      "choices": [
+        "who",
+        "whose",
+        "which"
+      ],
+      "answer": "whose",
+      "audioText": "Now I often think about the man whose hands can turn sugar into art."
+    }
+  ],
+  "_unknownWords": [
+    "chengdu",
+    "crowd",
+    "seen",
+    "less",
+    "pressed",
+    "paintings",
+    "asked",
+    "chinese",
+    "power",
+    "canada",
+    "traditions"
+  ]
+}

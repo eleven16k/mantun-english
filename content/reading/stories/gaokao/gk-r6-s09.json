@@ -1,0 +1,124 @@
+{
+  "id": "gk-r6-s09",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 9,
+  "title": "Why Free Samples Make You Spend",
+  "titleCn": "免费样品为何让你掏钱",
+  "coverEmoji": "🧀",
+  "paragraphs": [
+    {
+      "text": "A small stand outside a supermarket offers you a free piece of cheese, and although you planned to buy nothing, you take it with a smile. While the woman behind the stand never asks for money, she does ask whether you enjoy the taste, as a friendly neighbour might. You never meant to spend a penny. Two minutes later, you walk out with a packet that costs three times as much as the cheese you usually buy.",
+      "translation": "超市门外的一个小摊位递给你一小块免费奶酪。虽然你原本打算什么也不买，你还是笑着接了过来。摊主并不向你要钱，只是像友善的邻居那样问一句：味道还不错吧？你从没想过要花一分钱。可两分钟后，你走出商店时，手里却多了一包价格是你平时所买奶酪三倍的奶酪。"
+    },
+    {
+      "text": "Marketers call this the sample effect, and it works because of a simple human habit. When someone gives us something for free, we feel a sense of debt, as though we owe that person a favour. We want to pay it back. Although the sample costs the company only a few cents, the feeling it creates can be worth far more.",
+      "translation": "营销人员把这称为“样品效应”，它之所以奏效，源于一种简单的人性习惯。当别人白送我们东西时，我们心里会产生一种亏欠感，仿佛欠了对方一个人情。我们想要还回去。虽然一份样品只让公司花掉几美分，但它带来的那种感觉可能值钱得多。"
+    },
+    {
+      "text": "Companies have studied this effect carefully for many years. In one well-known study, shoppers who tasted a free sample were far more likely to buy than those who only saw it on a shelf. While customers who were given nothing simply walked past, the tasters stopped and talked. Despite the tiny cost of each sample, the extra sales often cover the whole campaign, as the numbers clearly show.",
+      "translation": "多年来，企业一直在仔细研究这种效应。在一项著名的研究中，尝过免费样品的人购买产品的比例，远高于只在货架上看到产品的人。什么都没拿到的顾客径直走过，而试吃的人却停下脚步、和店员攀谈起来。尽管每份样品成本极低，由此带来的额外销量却往往足以覆盖整场推广活动——数字清楚地说明了这一点。"
+    },
+    {
+      "text": "For small businesses, this lesson matters even more than for huge brands. A young baker who hands out warm bread may sell nothing that morning, yet the people she meets will remember her name. Small gifts change big decisions. The same is true of a shop that gives its first customers a free taste, as every loyal customer can explain.",
+      "translation": "对小微企业来说，这一课比大品牌还要重要。一位在集市上免费分发温热面包的年轻面包师，那天早上也许一笔生意都没做成，但她遇到的人会记住她的名字。小小的赠品，会改变重大的决定。第一家让顾客免费尝鲜的小店也是如此，每位忠实顾客都能讲出其中的道理。"
+    },
+    {
+      "text": "None of this means that every free offer is honest or useful. While a genuine sample introduces a product you might truly enjoy, a clever company can also use free gifts to hide a bad deal. Consumer reports have warned about such tricks for years, as shoppers slowly learn to tell the difference. The next time a stranger offers you something for nothing, ask yourself one question: do I want this product, or do I only want to pay back the gift?",
+      "translation": "这并不意味着每一次免费赠送都诚实、都值得。真正的样品会介绍一款你可能真心喜欢的产品，而精明的公司也能用免费礼品掩盖一笔不划算的交易。多年来，消费者报告一直在提醒人们提防这类伎俩，购物者也在慢慢学会分辨。下次有人白送你东西时，不妨问自己一个问题：我是真的想要这个产品，还是只想着还那份人情？"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does the woman at the stand outside the supermarket give the shopper to taste?",
+      "audioText": "What does the woman at the stand outside the supermarket give the shopper to taste?",
+      "options": [
+        {
+          "emoji": "🧀",
+          "value": "cheese",
+          "text": "Cheese"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        },
+        {
+          "emoji": "🥤",
+          "value": "drink",
+          "text": "A drink"
+        }
+      ],
+      "answer": "cheese"
+    },
+    {
+      "type": "word_builder",
+      "word": "sample",
+      "audioText": "sample"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "You",
+        "never",
+        "meant",
+        "to",
+        "spend",
+        "a",
+        "penny"
+      ],
+      "audioText": "You never meant to spend a penny."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Small",
+        "gifts",
+        "change",
+        "big",
+        "decisions"
+      ],
+      "audioText": "Small gifts change big decisions."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Although the sample costs the company only a few ___, the feeling it creates can be worth far more.",
+      "choices": [
+        "cents",
+        "dollars",
+        "euros"
+      ],
+      "answer": "cents",
+      "audioText": "Although the sample costs the company only a few cents, the feeling it creates can be worth far more."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "When someone gives us something for free, we feel a sense of ___, as though we owe that person a favour.",
+      "choices": [
+        "debt",
+        "humour",
+        "danger"
+      ],
+      "answer": "debt",
+      "audioText": "When someone gives us something for free, we feel a sense of debt, as though we owe that person a favour."
+    }
+  ],
+  "_unknownWords": [
+    "neighbour",
+    "marketers",
+    "sample",
+    "owe",
+    "known",
+    "shoppers",
+    "given",
+    "simply",
+    "tasters",
+    "despite",
+    "brands",
+    "baker",
+    "loyal",
+    "genuine",
+    "truly"
+  ]
+}

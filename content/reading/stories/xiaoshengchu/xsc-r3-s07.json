@@ -1,0 +1,129 @@
+{
+  "id": "xsc-r3-s07",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 7,
+  "title": "A Rainy Day in Candy Town",
+  "titleCn": "糖果镇的雨天",
+  "coverEmoji": "🌧️",
+  "paragraphs": [
+    {
+      "text": "Last Saturday was a rainy day in Candy Town. The sky was grey and the streets were wet. Mia and Ben were at home. They were sad at first.",
+      "translation": "上周六，糖果镇下了一整天的雨。天空灰蒙蒙的，街道湿漉漉的。米娅和本待在家里。一开始他们有点难过。"
+    },
+    {
+      "text": "\"We can't play outside,\" said Mia. \"Let's bake something sweet,\" said Ben. They washed their hands and found some flour. Mum helped them in the big kitchen.",
+      "translation": "“我们不能去外面玩了，”米娅说。“我们烤点甜的东西吧，”本说。他们洗了手，找来了面粉。妈妈在大厨房里帮他们。"
+    },
+    {
+      "text": "They mixed eggs, milk and sugar. Ben dropped an egg on the floor. Mia laughed and cleaned it up. Then they made twelve star cookies.",
+      "translation": "他们把鸡蛋、牛奶和糖搅拌在一起。本把一颗鸡蛋掉在了地板上。米娅笑着把它清理干净。然后他们做了十二块星星饼干。"
+    },
+    {
+      "text": "The oven was hot and the kitchen smelled sweet. They waited and watched the little window. Soon the cookies were warm and gold. Everyone ate two cookies with tea.",
+      "translation": "烤箱热热的，厨房里飘着甜甜的香味。他们等着，看着那扇小窗户。很快，饼干变得暖乎乎、金灿灿的。大家一边喝茶，一边吃了两块饼干。"
+    },
+    {
+      "text": "After that, they played games in the living room. Dad had an old box of cards. They played cards and told funny stories. The rain stopped at five o'clock.",
+      "translation": "之后，他们在客厅里玩游戏。爸爸有一盒旧卡片。他们玩了卡片，还讲了有趣的故事。五点的时候，雨停了。"
+    },
+    {
+      "text": "Mia looked out of the window. \"The rain was fun too,\" she said. Ben smiled and nodded his head. Next Saturday they wanted the sun again.",
+      "translation": "米娅向窗外望去。“下雨天也很好玩呀，”她说。本笑着点了点头。下一个星期六，他们希望太阳出来。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Mia and Ben make in the kitchen?",
+      "audioText": "What did Mia and Ben make in the kitchen?",
+      "options": [
+        {
+          "emoji": "🍪",
+          "value": "cookies",
+          "text": "Cookies"
+        },
+        {
+          "emoji": "🎂",
+          "value": "cake",
+          "text": "Cake"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        }
+      ],
+      "answer": "cookies"
+    },
+    {
+      "type": "image_choice",
+      "question": "How was the weather last Saturday?",
+      "audioText": "How was the weather last Saturday?",
+      "options": [
+        {
+          "emoji": "🌧️",
+          "value": "rain",
+          "text": "Rain"
+        },
+        {
+          "emoji": "☀️",
+          "value": "sun",
+          "text": "Sun"
+        },
+        {
+          "emoji": "❄️",
+          "value": "snow",
+          "text": "Snow"
+        }
+      ],
+      "answer": "rain"
+    },
+    {
+      "type": "word_builder",
+      "word": "cookies",
+      "audioText": "cookies"
+    },
+    {
+      "type": "word_builder",
+      "word": "kitchen",
+      "audioText": "kitchen"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "played",
+        "cards",
+        "and",
+        "told",
+        "funny",
+        "stories."
+      ],
+      "audioText": "They played cards and told funny stories."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The sky ___ grey and the streets were wet.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": "was",
+      "audioText": "The sky was grey and the streets were wet."
+    }
+  ],
+  "_unknownWords": [
+    "grey",
+    "can't",
+    "let's",
+    "bake",
+    "flour",
+    "mixed",
+    "cookies",
+    "oven",
+    "o'clock",
+    "nodded"
+  ]
+}

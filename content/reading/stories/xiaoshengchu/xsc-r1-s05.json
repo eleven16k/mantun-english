@@ -1,0 +1,137 @@
+{
+  "id": "xsc-r1-s05",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 5,
+  "title": "The Bird in the Apple Tree",
+  "titleCn": "苹果树上的小鸟",
+  "coverEmoji": "🐦",
+  "paragraphs": [
+    {
+      "text": "This is our apple orchard. It is big and green. There are many apple trees here.",
+      "translation": "这是我们的苹果园。它又大又绿。这里有很多苹果树。"
+    },
+    {
+      "text": "Look at the red apples. They are on the trees. The apples are big and sweet.",
+      "translation": "看那些红苹果。它们挂在树上。苹果又大又甜。"
+    },
+    {
+      "text": "A bird sits in the tree. It likes the red apples. It can sing a nice song.",
+      "translation": "一只小鸟坐在树上。它喜欢那些红苹果。它会唱好听的歌。"
+    },
+    {
+      "text": "My dog runs to the tree. He can see the bird. They are good friends.",
+      "translation": "我的狗跑到树边。它能看见那只小鸟。它们是好朋友。"
+    },
+    {
+      "text": "My sister comes with a basket. She puts apples in it. The basket is full now.",
+      "translation": "我妹妹拿着一个篮子走过来。她把苹果放进去。篮子现在装满了。"
+    },
+    {
+      "text": "We eat apples under the tree. My mother makes apple juice. We are all happy.",
+      "translation": "我们在树下吃苹果。妈妈做苹果汁。我们都很开心。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What color are the apples?",
+      "audioText": "What color are the apples?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "🟡",
+          "value": "yellow",
+          "text": "Yellow"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "What sits in the tree?",
+      "audioText": "What sits in the tree?",
+      "options": [
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A bird"
+        },
+        {
+          "emoji": "🐶",
+          "value": "dog",
+          "text": "A dog"
+        },
+        {
+          "emoji": "🐱",
+          "value": "cat",
+          "text": "A cat"
+        }
+      ],
+      "answer": "bird"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Mother make?",
+      "audioText": "What does Mother make?",
+      "options": [
+        {
+          "emoji": "🧃",
+          "value": "juice",
+          "text": "Apple juice"
+        },
+        {
+          "emoji": "🍰",
+          "value": "cake",
+          "text": "A cake"
+        },
+        {
+          "emoji": "🥛",
+          "value": "milk",
+          "text": "Milk"
+        }
+      ],
+      "answer": "juice"
+    },
+    {
+      "type": "word_builder",
+      "word": "apple",
+      "audioText": "apple"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "apples",
+        "are",
+        "big",
+        "and",
+        "sweet."
+      ],
+      "audioText": "The apples are big and sweet."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The basket is ___ now.",
+      "choices": [
+        "full",
+        "red",
+        "small"
+      ],
+      "answer": "full",
+      "audioText": "The basket is full now."
+    }
+  ],
+  "_unknownWords": [
+    "orchard"
+  ]
+}

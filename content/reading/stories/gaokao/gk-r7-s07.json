@@ -1,0 +1,110 @@
+{
+  "id": "gk-r7-s07",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 7,
+  "title": "What Tomorrow Will Ask of Us",
+  "titleCn": "明天会向我们索求什么",
+  "coverEmoji": "🌍",
+  "paragraphs": [
+    {
+      "text": "Not until we began to measure the damage did we realise how quickly our planet had been changing. Were we to keep consuming resources as carelessly as we do today, the world our children inherit would be far poorer than the one we were born into. The story, however, is not finished.",
+      "translation": "直到我们开始测量这些破坏，才意识到我们的星球变化得有多快。假如我们继续像今天这样漫不经心地消耗资源，我们的孩子所继承的世界将远比我们出生的那个世界贫瘠。然而，这个故事还没有结束。"
+    },
+    {
+      "text": "Some argue that the money spent on reaching Mars should be used to repair the Earth, and their argument deserves a serious answer. Only when we look back at our small blue planet from a distance do we understand how fragile it is. Space is not an escape, but a mirror.",
+      "translation": "有人主张，花在登陆火星上的钱应当用来修复地球，这一观点值得认真回应。只有当我们从远处回望这颗小小的蓝色星球时，才会明白它是多么脆弱。太空不是逃避，而是一面镜子。"
+    },
+    {
+      "text": "What makes the coming decades unusual is that no single nation, however rich or powerful, can solve the climate crisis alone. Should governments continue to compete instead of cooperating, the technologies that might save us will arrive too late. The question is not whether we can afford to act, but whether we can afford to wait.",
+      "translation": "未来几十年之所以不同寻常，在于没有任何一个国家——无论多么富有或强大——能够独自解决气候危机。如果各国政府继续相互竞争而不是合作，那些可能拯救我们的技术就会来得太迟。问题不是我们是否有能力行动，而是我们是否负担得起等待。"
+    },
+    {
+      "text": "Many young people today ask what they, as individuals, can possibly do. The answer, though it may sound modest, is that habits spread faster than laws do. If a student chooses to cycle rather than to be driven, and if a family decides to waste a little less, the effect, multiplied by millions, becomes a force that no government can ignore.",
+      "translation": "今天许多年轻人问，作为个人，他们究竟能做什么。答案听起来也许并不宏大：习惯的传播比法律更快。如果一个学生选择骑车而不是被车接送，如果一个家庭决定少浪费一点，那么这种效果乘以数百万倍，就会变成任何政府都无法忽视的力量。"
+    },
+    {
+      "text": "The future, in short, will not be decided by machines or by rockets, but by the choices we make while no one is watching. Whether we live on this planet or on another, we will carry our habits with us. What tomorrow will ask of us is simply this: the courage to begin today.",
+      "translation": "总之，未来不会由机器或火箭决定，而由我们在无人注视时所做的选择决定。无论我们生活在这颗星球还是另一颗星球，我们都会把自己的习惯带在身边。明天对我们的要求其实很简单：今天就开始的勇气。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Not until we began to measure the damage ___ we realise how quickly our planet had been changing.",
+      "choices": [
+        "did",
+        "do",
+        "had"
+      ],
+      "answer": "did",
+      "audioText": "Not until we began to measure the damage did we realise how quickly our planet had been changing."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "story,",
+        "however,",
+        "is",
+        "not",
+        "finished."
+      ],
+      "audioText": "The story, however, is not finished."
+    },
+    {
+      "type": "word_builder",
+      "word": "fragile",
+      "audioText": "fragile"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ we to keep consuming resources as carelessly as we do today, the world our children inherit would be far poorer than the one we were born into.",
+      "choices": [
+        "Were",
+        "Should",
+        "Had"
+      ],
+      "answer": "Were",
+      "audioText": "Were we to keep consuming resources as carelessly as we do today, the world our children inherit would be far poorer than the one we were born into."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Space",
+        "is",
+        "not",
+        "an",
+        "escape,",
+        "but",
+        "a",
+        "mirror."
+      ],
+      "audioText": "Space is not an escape, but a mirror."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Should governments continue to compete instead of cooperating, the technologies that might save us ___ arrive too late.",
+      "choices": [
+        "will",
+        "would",
+        "would have"
+      ],
+      "answer": "will",
+      "audioText": "Should governments continue to compete instead of cooperating, the technologies that might save us will arrive too late."
+    }
+  ],
+  "_unknownWords": [
+    "resources",
+    "inherit",
+    "fragile",
+    "powerful",
+    "solve",
+    "crisis",
+    "cooperating",
+    "individuals",
+    "possibly",
+    "driven",
+    "simply"
+  ]
+}

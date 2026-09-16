@@ -1,0 +1,138 @@
+{
+  "id": "xsc-r1-s06",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 6,
+  "title": "A Bird in My Apple Tree",
+  "titleCn": "苹果树上的小鸟",
+  "coverEmoji": "🐦",
+  "paragraphs": [
+    {
+      "text": "I have a big apple tree. It is in my garden. The apples are red and sweet.",
+      "translation": "我有一棵大苹果树。它在我家的花园里。树上的苹果又红又甜。"
+    },
+    {
+      "text": "A bird lives in the tree. The bird is blue and small. It can sing a nice song. My sister likes the song.",
+      "translation": "一只小鸟住在树上。这只鸟是蓝色的，个头小小的。它会唱好听的歌。我妹妹很喜欢这首歌。"
+    },
+    {
+      "text": "My dog looks at the bird. He can run and jump. But he cannot fly.",
+      "translation": "我的狗看着这只小鸟。它能跑也能跳，可它就是不会飞。"
+    },
+    {
+      "text": "My father picks red apples. He puts them in a box. We eat apples every day.",
+      "translation": "爸爸摘红苹果。他把苹果放进一个箱子里。我们每天都吃苹果。"
+    },
+    {
+      "text": "The bird has a small nest. It is near my window. The nest has three eggs. They are white and round.",
+      "translation": "小鸟有一个小小的窝。它就在我的窗户旁边。窝里有三个蛋，又白又圆。"
+    },
+    {
+      "text": "I love my apple tree. I love the little bird too. We are good friends.",
+      "translation": "我爱我的苹果树，也爱这只小鸟。我们是好朋友。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What color are the apples in the tree?",
+      "audioText": "What color are the apples in the tree?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "🟡",
+          "value": "yellow",
+          "text": "Yellow"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "What color is the bird?",
+      "audioText": "What color is the bird?",
+      "options": [
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue"
+        },
+        {
+          "emoji": "⚫",
+          "value": "black",
+          "text": "Black"
+        },
+        {
+          "emoji": "⚪",
+          "value": "white",
+          "text": "White"
+        }
+      ],
+      "answer": "blue"
+    },
+    {
+      "type": "image_choice",
+      "question": "How many eggs are in the nest?",
+      "audioText": "How many eggs are in the nest?",
+      "options": [
+        {
+          "emoji": "1️⃣",
+          "value": "one",
+          "text": "One"
+        },
+        {
+          "emoji": "2️⃣",
+          "value": "two",
+          "text": "Two"
+        },
+        {
+          "emoji": "3️⃣",
+          "value": "three",
+          "text": "Three"
+        }
+      ],
+      "answer": "three"
+    },
+    {
+      "type": "word_builder",
+      "word": "garden",
+      "audioText": "garden"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "bird",
+        "is",
+        "blue",
+        "and",
+        "small."
+      ],
+      "audioText": "The bird is blue and small."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "My father picks red ___.",
+      "choices": [
+        "apples",
+        "eggs",
+        "songs"
+      ],
+      "answer": "apples",
+      "audioText": "My father picks red apples."
+    }
+  ],
+  "_unknownWords": [
+    "cannot",
+    "nest"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "xsc-r6-s10",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r6",
+  "order": 10,
+  "title": "A Trip to the Red Planet",
+  "titleCn": "红色星球之旅",
+  "coverEmoji": "🪐",
+  "paragraphs": [
+    {
+      "text": "Our class will visit the space station soon. We must get ready for the trip. We should read books about space first.",
+      "translation": "我们班很快就要去参观太空站了。我们必须为这次旅行做好准备。我们应该先读一些关于太空的书。"
+    },
+    {
+      "text": "The station is a big home in space. Six people live and work inside it. Everything will fly when they let it go. We must hold the wall to move around.",
+      "translation": "太空站是太空里的一个大房子。有六个人在里面生活和工作。东西一松手就会飘起来。我们得抓着墙才能移动。"
+    },
+    {
+      "text": "We will do a small science test there. We could put a seed in wet paper. The little plant will grow in one week. We must write down what we see.",
+      "translation": "我们会在那里做一个小科学实验。我们可以把一粒种子放进湿纸里。小植物一周后就会长出来。我们必须把看到的东西记下来。"
+    },
+    {
+      "text": "Future rockets will be much faster than now. We could travel to Mars in two weeks. Astronauts must be strong, healthy and careful. They should eat good food and do exercise.",
+      "translation": "未来的火箭会比现在快得多。我们两周就能飞到火星。宇航员必须强壮、健康，还要非常小心。他们应该吃有营养的食物，还要坚持锻炼。"
+    },
+    {
+      "text": "One day, I will build a small rocket. My friends and I could fly to Mars. We will send a message back to Earth. Earth will look like a blue ball.",
+      "translation": "将来有一天，我要造一枚小火箭。我和朋友们可以一起飞向火星。我们会给地球发一条消息。从那里看，地球就像一个蓝色的球。"
+    },
+    {
+      "text": "The station will help us learn a lot. One day you could be a space scientist. So, what will you build in the future?",
+      "translation": "太空站会帮助我们学到很多东西。有一天，你也可能成为一名太空科学家。那么，将来你会造出什么呢？"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where will our class go soon?",
+      "audioText": "Where will our class go soon?",
+      "options": [
+        {
+          "emoji": "🛰️",
+          "value": "space_station",
+          "text": "A space station"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "A school"
+        },
+        {
+          "emoji": "🌊",
+          "value": "sea",
+          "text": "The sea"
+        }
+      ],
+      "answer": "space_station"
+    },
+    {
+      "type": "word_builder",
+      "word": "rocket",
+      "audioText": "rocket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "must",
+        "get",
+        "ready",
+        "for",
+        "the",
+        "trip."
+      ],
+      "audioText": "We must get ready for the trip."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "We will send a ___ back to Earth.",
+      "choices": [
+        "message",
+        "rocket",
+        "plant"
+      ],
+      "answer": "message",
+      "audioText": "We will send a message back to Earth."
+    },
+    {
+      "type": "image_choice",
+      "question": "What will Earth look like from space?",
+      "audioText": "What will Earth look like from space?",
+      "options": [
+        {
+          "emoji": "🔵",
+          "value": "blue_ball",
+          "text": "A blue ball"
+        },
+        {
+          "emoji": "🔴",
+          "value": "red_ball",
+          "text": "A red ball"
+        },
+        {
+          "emoji": "⚫",
+          "value": "black_ball",
+          "text": "A black ball"
+        }
+      ],
+      "answer": "blue_ball"
+    },
+    {
+      "type": "word_builder",
+      "word": "station",
+      "audioText": "station"
+    }
+  ],
+  "_unknownWords": []
+}

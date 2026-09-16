@@ -1,0 +1,124 @@
+{
+  "id": "xsc-r3-s02",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 2,
+  "title": "The New Candy Shop",
+  "titleCn": "糖果镇的新糖果店",
+  "coverEmoji": "🍬",
+  "paragraphs": [
+    {
+      "text": "A new shop opened last week. It was on Sugar Street. The shop was small and pink.",
+      "translation": "上周，糖果镇新开了一家店。它开在糖果街上。这家小店是粉色的。"
+    },
+    {
+      "text": "On Saturday, Lily and her mum walked there. They saw many jars on the wall. The jars were full of sweet candy.",
+      "translation": "星期六，莉莉和妈妈走到了那里。她们看到墙上挂着许多罐子。罐子里装满了甜甜的糖果。"
+    },
+    {
+      "text": "A tall man was behind the desk. His name was Mr. Sweet. He smiled and said hello to Lily.",
+      "translation": "一位高个子男士站在柜台后面。他叫斯威特先生。他微笑着跟莉莉打招呼。"
+    },
+    {
+      "text": "Lily looked at all the candy. She wanted a big red lollipop. She had a red lollipop. She ate it on the way home.",
+      "translation": "莉莉把所有的糖果都看了一遍。她想要一支大大的红色棒棒糖。她买了一支红色的棒棒糖，回家的路上把它吃掉了。"
+    },
+    {
+      "text": "Her mum had some lemon candy too. The lemon candy was sour but nice. They thanked Mr. Sweet and went home.",
+      "translation": "她妈妈也买了一些柠檬糖。柠檬糖酸酸的，但很好吃。她们谢过斯威特先生就回家了。"
+    },
+    {
+      "text": "The new shop was busy all day. Lily wanted to come back soon.",
+      "translation": "这家新店一整天都很热闹。莉莉想早点再来。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Lily have at the candy shop?",
+      "audioText": "What did Lily have at the candy shop?",
+      "options": [
+        {
+          "emoji": "🍭",
+          "value": "lollipop",
+          "text": "A red lollipop"
+        },
+        {
+          "emoji": "🍰",
+          "value": "cake",
+          "text": "A big cake"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Some bread"
+        }
+      ],
+      "answer": "lollipop"
+    },
+    {
+      "type": "image_choice",
+      "question": "What was the new place in Candy Town?",
+      "audioText": "What was the new place in Candy Town?",
+      "options": [
+        {
+          "emoji": "🍬",
+          "value": "shop",
+          "text": "A candy shop"
+        },
+        {
+          "emoji": "📚",
+          "value": "library",
+          "text": "A library"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "A school"
+        }
+      ],
+      "answer": "shop"
+    },
+    {
+      "type": "word_builder",
+      "word": "lollipop",
+      "audioText": "lollipop"
+    },
+    {
+      "type": "word_builder",
+      "word": "smiled",
+      "audioText": "smiled"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "saw",
+        "many",
+        "jars",
+        "on",
+        "the",
+        "wall."
+      ],
+      "audioText": "They saw many jars on the wall."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "His name ___ Mr. Sweet.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": "was",
+      "audioText": "His name was Mr. Sweet."
+    }
+  ],
+  "_unknownWords": [
+    "jars",
+    "lollipop",
+    "lemon",
+    "sour",
+    "busy"
+  ]
+}

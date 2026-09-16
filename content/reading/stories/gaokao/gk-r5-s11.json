@@ -1,0 +1,117 @@
+{
+  "id": "gk-r5-s11",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 11,
+  "title": "The Grandfather Who Learned to Code",
+  "titleCn": "学会编程的爷爷",
+  "coverEmoji": "💻",
+  "paragraphs": [
+    {
+      "text": "My grandfather turned sixty-eight last spring, and instead of buying a new fishing rod, he signed up for an online course in computer programming. The course, which cost him less than a pair of shoes, promised to teach beginners how to write simple code within three months. Nobody in our family, my father included, believed that a man of his age would ever finish it.",
+      "translation": "去年春天，爷爷满六十八岁。他没有买一根新鱼竿，而是报名参加了一门在线编程课。这门课的花费还不到一双鞋的价钱，却承诺在三个月内教会初学者写出简单的代码。我们家里没有人——包括我爸在内——相信他这样年纪的人真的能学完。"
+    },
+    {
+      "text": "The first week was a small disaster, for which he blamed nobody but his own shaky fingers. He could not find the button that saved his work, and twice he deleted everything by accident. His notebook open beside the keyboard, he copied every instruction by hand, slowly and carefully, until his fingers ached. \"Computers,\" he told me, \"do not laugh at old men; they simply wait until you are ready.\"",
+      "translation": "第一周算是场小灾难，对此他不怪别人，只怪自己那双发抖的手。他找不到保存文件的按钮，还两次不小心把做好的东西全删了。笔记本摊开在键盘旁，他把每一条指令都用手抄下来，又慢又仔细，直到手指发酸。“计算机，”他对我说，“不会嘲笑老人；它们只是等着你准备好。”"
+    },
+    {
+      "text": "His classmates, most of whom were younger than my sister, met online every Tuesday evening to share their problems. The young woman who taught the class, a student of twenty-four, soon noticed that the oldest member asked the sharpest questions. She began to answer his questions first, which surprised everyone else in the group at the beginning. By the end of the term, he was helping others with the tasks that he himself had once failed.",
+      "translation": "他的同学大多比我妹妹还年轻，他们每周二晚上在网上相聚，交流各自的难题。教这门课的年轻女老师是个二十四岁的学生，她很快注意到，班里年纪最大的学员提的问题最犀利。她开始先回答他的问题，一开始这让群里其他人很惊讶。到了学期末，他已经在帮别人解决那些他自己曾经做失败过的任务了。"
+    },
+    {
+      "text": "Last month he showed us what he had built: a tiny program that reminds his neighbors to take their medicine on time. It runs on an old laptop, on which he spent weeks fixing small mistakes that nobody else could see. My father, who had laughed loudest in spring, now asks him for help with his own computer.",
+      "translation": "上个月，他给我们看了自己做出来的东西：一个小程序，提醒邻居们按时吃药。它在一台旧笔记本电脑上运行，为了修好那些别人根本看不见的小错误，他在这台电脑上花了好几周。而春天笑得最大声的爸爸，如今反过来请他帮忙弄自己的电脑。"
+    },
+    {
+      "text": "Grandpa has never used the word \"lifelong learning\", yet he practices it every single morning before breakfast. Education, he says, is not a building you leave at eighteen but a road that keeps going. Watching him type, I understand at last that the classroom has no walls and no final exam.",
+      "translation": "爷爷从没用过“终身学习”这个词，可他在每个清晨、早饭之前都在这样做。他说，教育不是一栋你十八岁就走出去的大楼，而是一条一直延伸的路。看着他打字，我终于明白：教室没有墙，也没有期末考试。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Grandpa choose to do instead of buying a new fishing rod?",
+      "audioText": "What did Grandpa choose to do instead of buying a new fishing rod?",
+      "options": [
+        {
+          "emoji": "💻",
+          "value": "coding_course",
+          "text": "Take an online coding course"
+        },
+        {
+          "emoji": "🎣",
+          "value": "fishing_rod",
+          "text": "Buy a better fishing rod"
+        },
+        {
+          "emoji": "📺",
+          "value": "watch_tv",
+          "text": "Watch more television at home"
+        }
+      ],
+      "answer": "coding_course"
+    },
+    {
+      "type": "word_builder",
+      "word": "keyboard",
+      "audioText": "keyboard"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "runs",
+        "on",
+        "an",
+        "old",
+        "laptop"
+      ],
+      "audioText": "It runs on an old laptop."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "began",
+        "to",
+        "answer",
+        "his",
+        "questions",
+        "first"
+      ],
+      "audioText": "She began to answer his questions first."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "His classmates, most of ___ were younger than my sister, met online every Tuesday evening.",
+      "choices": [
+        "whom",
+        "which",
+        "who"
+      ],
+      "answer": "whom",
+      "audioText": "His classmates, most of whom were younger than my sister, met online every Tuesday evening."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The course, ___ cost him less than a pair of shoes, promised to teach beginners how to write simple code.",
+      "choices": [
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer": "which",
+      "audioText": "The course, which cost him less than a pair of shoes, promised to teach beginners how to write simple code."
+    }
+  ],
+  "_unknownWords": [
+    "rod",
+    "online",
+    "beginners",
+    "shaky",
+    "men",
+    "simply",
+    "lifelong"
+  ]
+}

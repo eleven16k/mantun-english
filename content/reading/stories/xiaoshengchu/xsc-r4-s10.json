@@ -1,0 +1,128 @@
+{
+  "id": "xsc-r4-s10",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 10,
+  "title": "Sam and the Plastic Bag",
+  "titleCn": "萨姆和那只塑料袋",
+  "coverEmoji": "🐬",
+  "paragraphs": [
+    {
+      "text": "Last Saturday, Sam went to Ocean Park. He took his little sister, Amy, with him. The park was bigger than their school. They saw many bright fish swimming by.",
+      "translation": "上周六，萨姆去了海洋乐园。他带上了小妹妹艾米。这个乐园比他们的学校还大。他们看见许多鲜艳的鱼游来游去。"
+    },
+    {
+      "text": "First, they watched a dolphin show. The dolphins jumped higher than the birds. One dolphin swam close and smiled at Sam. Then it splashed water on his shoes.",
+      "translation": "首先，他们看了一场海豚表演。海豚跳得比小鸟还高。有一只海豚游到近处，冲萨姆笑了笑。接着它把水溅到了他的鞋子上。"
+    },
+    {
+      "text": "Next, they walked into a long glass tunnel. Small fish swam above their heads. A big turtle moved slower than the fish. Its shell was darker than the tunnel walls.",
+      "translation": "接着，他们走进一条长长的玻璃隧道。小鱼在他们头顶上游动。一只大乌龟游得比鱼还慢。它的龟壳比隧道的墙壁还要深暗。"
+    },
+    {
+      "text": "Then Sam saw a plastic bag. It floated in the blue water. A small fish swam close and got scared.",
+      "translation": "就在这时，萨姆看见了一只塑料袋。它在蓝色的水里漂着。一条小鱼游近它，被吓到了。"
+    },
+    {
+      "text": "Sam told a park worker about the bag. The worker smiled and took it out. The water looked cleaner and much safer. Sam felt happier than ever before.",
+      "translation": "萨姆把塑料袋的事告诉了乐园的工作人员。工作人员笑着把它捞了出来。水看起来更干净、安全多了。萨姆觉得比以往任何时候都开心。"
+    },
+    {
+      "text": "On the way home, Amy asked a question. \"Is the ocean clean like this?\" Sam thought about it for a moment. \"Not yet, but we can help,\" he said. They decided to use fewer plastic bags.",
+      "translation": "回家的路上，艾米问了一个问题：“大海也这么干净吗？”萨姆想了一会儿。“还没有，不过我们可以出一份力。”他说。他们决定以后少用塑料袋。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the dolphins do at the show?",
+      "audioText": "What did the dolphins do at the show?",
+      "options": [
+        {
+          "emoji": "💦",
+          "value": "jump",
+          "text": "They jumped high."
+        },
+        {
+          "emoji": "😴",
+          "value": "sleep",
+          "text": "They slept all day."
+        },
+        {
+          "emoji": "🥕",
+          "value": "eat",
+          "text": "They ate carrots."
+        }
+      ],
+      "answer": "jump"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Sam see in the blue water?",
+      "audioText": "What did Sam see in the blue water?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "bag",
+          "text": "A plastic bag"
+        },
+        {
+          "emoji": "🪨",
+          "value": "rock",
+          "text": "A big rock"
+        },
+        {
+          "emoji": "👟",
+          "value": "shoe",
+          "text": "An old shoe"
+        }
+      ],
+      "answer": "bag"
+    },
+    {
+      "type": "word_builder",
+      "word": "plastic",
+      "audioText": "plastic"
+    },
+    {
+      "type": "word_builder",
+      "word": "dolphin",
+      "audioText": "dolphin"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "park",
+        "was",
+        "bigger",
+        "than",
+        "their",
+        "school."
+      ],
+      "audioText": "The park was bigger than their school."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The water looked ___ and much safer.",
+      "choices": [
+        "cleaner",
+        "clean",
+        "cleanest"
+      ],
+      "answer": "cleaner",
+      "audioText": "The water looked cleaner and much safer."
+    }
+  ],
+  "_unknownWords": [
+    "bigger",
+    "splashed",
+    "tunnel",
+    "shell",
+    "floated",
+    "scared",
+    "safer",
+    "happier",
+    "asked"
+  ]
+}

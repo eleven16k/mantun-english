@@ -1,0 +1,131 @@
+{
+  "id": "zk-r7-s02",
+  "track": "zhongkao",
+  "regionId": "zk-r7",
+  "order": 2,
+  "title": "Why Rules Matter",
+  "titleCn": "规则为什么重要",
+  "coverEmoji": "🚦",
+  "paragraphs": [
+    {
+      "text": "We follow small rules every day, from waiting in line to keeping quiet in a library. Some students believe that rules only limit what they can do. In fact, good rules make daily life easier and safer for everyone.",
+      "translation": "每天我们都要遵守一些小规则，从排队等候到在图书馆里保持安静。有些学生认为规则只会限制他们能做的事。其实，好的规则让大家的日子更轻松、也更安全。"
+    },
+    {
+      "text": "Think about a busy crossing where the traffic lights suddenly stop working. If there were no rules, everyone would rush and nobody could move. To wait for your turn is not weakness. It is a quiet, simple way of showing respect for other people.",
+      "translation": "想一想一个繁忙的十字路口，那里的红绿灯突然坏了。如果没有任何规则，大家都会往前挤，谁也走不了。轮流等候并不是软弱，它只是一种安静而简单的方式，表达对他人的尊重。"
+    },
+    {
+      "text": "The same idea is true when we spend time on the Internet. Some people say online words cost nothing, so they can write anything they like. But words can hurt people, even when we cannot see their faces. I wish every one of us would think twice before sending a quick message.",
+      "translation": "我们在上网时，道理也是一样的。有人说网上的话不花钱，所以想写什么就写什么。但话语会伤人，即使我们看不见对方的脸。我希望我们每个人在发出快捷信息之前，都能多想一遍。"
+    },
+    {
+      "text": "Rules also teach us how to solve problems together instead of shouting at each other. When we disagree about something, we can talk and listen to different ideas. That is why our class makes its own rules for the reading corner.",
+      "translation": "规则还教我们如何一起解决问题，而不是互相吵嚷。当我们对某件事意见不同时，我们可以交谈，听听不同的想法。正因为如此，我们班自己为阅读角制定了规则。"
+    },
+    {
+      "text": "Following rules is not always easy, especially when we are in a hurry. But small choices add up and slowly change the place we live in. If I were a team leader, I would thank the person who waits quietly.",
+      "translation": "遵守规则并不总是容易，尤其是在我们赶时间的时候。但小小的选择会累积起来，慢慢改变我们生活的地方。如果我是队长，我会感谢那个安静等候的人。"
+    },
+    {
+      "text": "So next time you notice a rule, stop and ask yourself what it protects. Rules are not walls that keep people apart. They are roads that help us walk together.",
+      "translation": "所以下次你注意到某条规则时，停下来问问自己：它在保护什么？规则不是把人隔开的墙。它们是帮助我们同行的一条条路。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What stops working at the busy crossing in the text?",
+      "audioText": "What stops working at the busy crossing in the text?",
+      "options": [
+        {
+          "emoji": "🚦",
+          "value": "lights",
+          "text": "Traffic lights"
+        },
+        {
+          "emoji": "📚",
+          "value": "books",
+          "text": "Books"
+        },
+        {
+          "emoji": "☂️",
+          "value": "umbrellas",
+          "text": "Umbrellas"
+        }
+      ],
+      "answer": "lights"
+    },
+    {
+      "type": "word_builder",
+      "word": "respect",
+      "audioText": "respect"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "To",
+        "wait",
+        "for",
+        "your",
+        "turn",
+        "is",
+        "not",
+        "weakness"
+      ],
+      "audioText": "To wait for your turn is not weakness."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "are",
+        "roads",
+        "that",
+        "help",
+        "us",
+        "walk",
+        "together"
+      ],
+      "audioText": "They are roads that help us walk together."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If there ___ no rules, everyone would rush and nobody could move.",
+      "choices": [
+        "were",
+        "are",
+        "is"
+      ],
+      "answer": "were",
+      "audioText": "If there were no rules, everyone would rush and nobody could move."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "I wish every one of us ___ think twice before sending a quick message.",
+      "choices": [
+        "would",
+        "will",
+        "can"
+      ],
+      "answer": "would",
+      "audioText": "I wish every one of us would think twice before sending a quick message."
+    }
+  ],
+  "_unknownWords": [
+    "limit",
+    "easier",
+    "safer",
+    "busy",
+    "weakness",
+    "online",
+    "hurt",
+    "cannot",
+    "solve",
+    "disagree",
+    "talk",
+    "add",
+    "ask",
+    "apart"
+  ]
+}

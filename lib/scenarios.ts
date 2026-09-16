@@ -7,6 +7,13 @@
  * Scenario copy is bilingual ({en, zh}) and resolved with the app locale.
  */
 import { VOCAB_LISTS } from "./vocab-lists";
+import { BASE_PATH } from "./config";
+
+/** picsum.photos 国内不可达 → 场景图统一改写为本地自托管副本（按 seed 映射）。 */
+export function scenarioImg(src: string): string {
+  const m = src && src.match(/picsum\.photos\/seed\/([^/"?]+)/);
+  return m ? `${BASE_PATH}/sites/assets/scenarios/${m[1]}.jpg` : src;
+}
 
 export type VocabLevel = "Primary" | "JuniorHigh" | "SeniorHigh" | "Custom";
 export type Difficulty = "Beginner" | "Intermediate" | "Advanced";

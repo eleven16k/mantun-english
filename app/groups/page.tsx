@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import {
@@ -85,22 +86,22 @@ export default function GroupsPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t("group.title")}</h1>
+      <div className="page-shell">
+        <PageHeader badge="👥 GROUPS" title={t("group.title")} />
         <p className="mb-5 text-sm text-tertiary">{t("group.intro")}</p>
 
         {error && <p className="mb-4 text-center text-xs font-bold text-critical">{error}</p>}
 
         {/* My groups */}
         {groups === null ? (
-          <div className="g-card p-8 text-center shadow-sm">
+          <div className="g-card p-8 text-center">
             <svg viewBox="0 0 24 24" className="mx-auto h-6 w-6 animate-spin text-brand-text" fill="none">
               <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2.5" opacity="0.25" />
               <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
             </svg>
           </div>
         ) : groups.length === 0 ? (
-          <div className="g-card p-8 text-center shadow-sm">
+          <div className="g-card p-8 text-center">
             <p className="text-sm text-tertiary">{t("group.empty")}</p>
           </div>
         ) : (
@@ -115,7 +116,7 @@ export default function GroupsPage() {
         <div className="mt-6 flex flex-col gap-2.5">
           <button
             onClick={() => setShowCreate(true)}
-            className="rounded-pill bg-brand py-3.5 font-booster text-base font-extrabold text-white shadow-sm transition hover:opacity-90 active:scale-[0.98]"
+            className="rounded-pill bg-brand py-3.5 font-booster text-base font-extrabold text-white transition hover:opacity-90 active:scale-[0.98]"
           >
             {t("group.createBtn")}
           </button>
@@ -130,7 +131,7 @@ export default function GroupsPage() {
             <button
               onClick={join}
               disabled={joinCode.length !== 6}
-              className="rounded-pill border border-subtle bg-surface px-5 py-2.5 text-sm font-bold text-secondary shadow-sm transition hover:border-brandborder disabled:opacity-40"
+              className="rounded-pill border border-subtle bg-surface px-5 py-2.5 text-sm font-bold text-secondary transition hover:border-brandborder disabled:opacity-40"
             >
               {t("group.joinBtn")}
             </button>
@@ -141,8 +142,8 @@ export default function GroupsPage() {
 
       {/* Create dialog */}
       {showCreate && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-6" onClick={() => setShowCreate(false)}>
-          <div className="w-full max-w-sm rounded-3xl bg-surface p-5 shadow-xl" onClick={(e) => e.stopPropagation()}>
+        <div className="game-overlay fixed inset-0 z-50 flex items-center justify-center p-6" onClick={() => setShowCreate(false)}>
+          <div className="game-modal w-full max-w-sm p-5" onClick={(e) => e.stopPropagation()}>
             <h2 className="font-booster text-lg font-extrabold text-primary">{t("group.createTitle")}</h2>
             <input
               autoFocus
@@ -162,7 +163,7 @@ export default function GroupsPage() {
               <button
                 onClick={create}
                 disabled={!name.trim()}
-                className="flex-1 rounded-pill bg-brand py-2.5 text-sm font-bold text-white shadow-sm transition hover:opacity-90 disabled:opacity-40"
+                className="flex-1 rounded-pill bg-brand py-2.5 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-40"
               >
                 {t("group.createConfirm")}
               </button>
@@ -195,7 +196,7 @@ function GroupCard({
   }, [group.code]);
 
   return (
-    <div className="g-card p-5 shadow-sm">
+    <div className="g-card p-5">
       <div className="flex items-center gap-3">
         <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-subtle text-brand-text">
           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -251,7 +252,7 @@ function GroupCard({
 
       <button
         onClick={onPk}
-        className="mt-3 w-full rounded-pill bg-action py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-actionhover active:scale-[0.98]"
+        className="mt-3 w-full rounded-pill bg-action py-2.5 text-sm font-bold text-white transition hover:bg-actionhover active:scale-[0.98]"
       >
         {t("group.startPk")}
       </button>

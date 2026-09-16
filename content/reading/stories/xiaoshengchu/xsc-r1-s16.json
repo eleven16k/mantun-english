@@ -1,0 +1,135 @@
+{
+  "id": "xsc-r1-s16",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 16,
+  "title": "A Picnic in the Apple Orchard",
+  "titleCn": "苹果园里的野餐",
+  "coverEmoji": "🧺",
+  "paragraphs": [
+    {
+      "text": "Today is a sunny day. My family has a picnic. We go to the apple orchard. The apples are red and green.",
+      "translation": "今天是个大晴天。我们一家人去野餐。我们来到苹果园。苹果有红的，也有绿的。"
+    },
+    {
+      "text": "There are many apple trees here. Big apples are on the trees. I can see red apples. I can see green apples too.",
+      "translation": "这里有很多苹果树。大苹果挂在树上。我能看见红苹果，也能看见绿苹果。"
+    },
+    {
+      "text": "Mom puts a mat down. My teddy bear sits with me. He has a small red hat. He looks at the big apples.",
+      "translation": "妈妈铺好垫子。我的玩具熊和我坐在一起。他戴着一顶小红帽，看着那些大苹果。"
+    },
+    {
+      "text": "Dad gives me a big apple. It is very sweet. I eat it with my family. We are all happy.",
+      "translation": "爸爸给我一个大苹果。它特别甜。我和家人一起吃着苹果。我们都很开心。"
+    },
+    {
+      "text": "My little sister likes green apples. She plays with my teddy bear. She can count the red apples. She counts ten red apples.",
+      "translation": "我的小妹妹喜欢绿苹果。她拿着我的玩具熊玩。她会数红苹果，一口气数出了十个。"
+    },
+    {
+      "text": "The sun goes down now. We go home with apples. I love the apple orchard.",
+      "translation": "太阳现在落山了。我们带着苹果回家。我真喜欢这片苹果园。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is on the trees?",
+      "audioText": "What is on the trees?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "apples",
+          "text": "Apples"
+        },
+        {
+          "emoji": "🐦",
+          "value": "a bird",
+          "text": "A bird"
+        },
+        {
+          "emoji": "🐱",
+          "value": "a cat",
+          "text": "A cat"
+        }
+      ],
+      "answer": "apples"
+    },
+    {
+      "type": "image_choice",
+      "question": "Who sits with me?",
+      "audioText": "Who sits with me?",
+      "options": [
+        {
+          "emoji": "🐶",
+          "value": "a dog",
+          "text": "A dog"
+        },
+        {
+          "emoji": "🧸",
+          "value": "my teddy bear",
+          "text": "My teddy bear"
+        },
+        {
+          "emoji": "🐱",
+          "value": "a cat",
+          "text": "A cat"
+        }
+      ],
+      "answer": "my teddy bear"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Dad give me?",
+      "audioText": "What does Dad give me?",
+      "options": [
+        {
+          "emoji": "🍌",
+          "value": "a banana",
+          "text": "A banana"
+        },
+        {
+          "emoji": "🍇",
+          "value": "grapes",
+          "text": "Grapes"
+        },
+        {
+          "emoji": "🍎",
+          "value": "a big apple",
+          "text": "A big apple"
+        }
+      ],
+      "answer": "a big apple"
+    },
+    {
+      "type": "word_builder",
+      "word": "picnic",
+      "audioText": "picnic"
+    },
+    {
+      "type": "word_builder",
+      "word": "teddy",
+      "audioText": "teddy"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "My",
+        "little",
+        "sister",
+        "likes",
+        "green",
+        "apples."
+      ],
+      "audioText": "My little sister likes green apples."
+    }
+  ],
+  "_unknownWords": [
+    "orchard",
+    "mat",
+    "teddy",
+    "count",
+    "counts"
+  ]
+}

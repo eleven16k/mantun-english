@@ -1,0 +1,134 @@
+{
+  "id": "xsc-r1-s18",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 18,
+  "title": "Apples for My Teddy Bear",
+  "titleCn": "给我的泰迪熊的苹果",
+  "coverEmoji": "🍎",
+  "paragraphs": [
+    {
+      "text": "This is our family apple farm. We have many apple trees. The apples are big and red. My teddy sits on the grass.",
+      "translation": "这是我们家的苹果园。我们有很多苹果树。苹果又大又红。我的泰迪熊坐在草地上。"
+    },
+    {
+      "text": "My name is Lily. I am six years old. I like apples very much. Teddy likes apples too.",
+      "translation": "我叫莉莉。我六岁了。我非常喜欢苹果。泰迪也喜欢苹果。"
+    },
+    {
+      "text": "Today is a sunny day. My dad picks big red apples. My mom puts them in a basket. My little brother eats one apple.",
+      "translation": "今天是个大晴天。爸爸摘又大又红的苹果。妈妈把它们放进篮子里。我的小弟弟吃了一个苹果。"
+    },
+    {
+      "text": "Teddy has a small red hat. He cannot pick apples. He can only look at them. He wants one sweet apple.",
+      "translation": "泰迪有一顶红色的小帽子。他不会摘苹果。他只能看着苹果。他想要一个甜甜的苹果。"
+    },
+    {
+      "text": "I give Teddy a green apple. He holds it in his arms. He is very happy now. We sit under the apple tree.",
+      "translation": "我给了泰迪一个青苹果。他把苹果抱在怀里。他现在非常开心。我们坐在苹果树下。"
+    },
+    {
+      "text": "One apple is on the ground. A little bird comes to eat. It likes the sweet apple too. We are happy in our orchard.",
+      "translation": "有一个苹果掉在地上。一只小鸟飞过来吃它。它也很喜欢这个甜甜的苹果。我们在果园里很开心。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What color are the big apples on the trees?",
+      "audioText": "What color are the big apples on the trees?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Teddy have?",
+      "audioText": "What does Teddy have?",
+      "options": [
+        {
+          "emoji": "🎩",
+          "value": "hat",
+          "text": "A hat"
+        },
+        {
+          "emoji": "🧦",
+          "value": "socks",
+          "text": "Socks"
+        },
+        {
+          "emoji": "👟",
+          "value": "shoes",
+          "text": "Shoes"
+        }
+      ],
+      "answer": "hat"
+    },
+    {
+      "type": "image_choice",
+      "question": "Who comes to eat the apple on the ground?",
+      "audioText": "Who comes to eat the apple on the ground?",
+      "options": [
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A bird"
+        },
+        {
+          "emoji": "🐶",
+          "value": "dog",
+          "text": "A dog"
+        },
+        {
+          "emoji": "🐱",
+          "value": "cat",
+          "text": "A cat"
+        }
+      ],
+      "answer": "bird"
+    },
+    {
+      "type": "word_builder",
+      "word": "apple",
+      "audioText": "apple"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "My",
+        "dad",
+        "picks",
+        "big",
+        "red",
+        "apples"
+      ],
+      "audioText": "My dad picks big red apples."
+    }
+  ],
+  "_unknownWords": [
+    "teddy",
+    "lily",
+    "cannot",
+    "orchard"
+  ]
+}

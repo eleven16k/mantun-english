@@ -1,0 +1,131 @@
+{
+  "id": "xsc-r5-s07",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 7,
+  "title": "The Longest Walk in Dino Valley",
+  "titleCn": "恐龙谷最漫长的一次远行",
+  "coverEmoji": "🦕",
+  "paragraphs": [
+    {
+      "text": "Pip was the smallest dinosaur in Dino Valley. He had short legs and a long tail. Every morning he ran to the river with his big friends. He was always the last one there. His legs were short, so he was slow.",
+      "translation": "皮普是恐龙谷里最小的恐龙。他的腿很短，尾巴很长。每天早晨，他都跟着大块头的朋友们跑到河边。他总是最后一个到那儿。他的腿短，所以跑得慢。"
+    },
+    {
+      "text": "One hot morning, the river dried up. The big dinosaurs looked at the sky. They were worried because there was no water. \"We must find some,\" said Pip quietly.",
+      "translation": "一个炎热的早晨，河水干涸了。大恐龙们抬头望着天空。它们很担心，因为没有水了。“我们得去找水。”皮普轻轻地说。"
+    },
+    {
+      "text": "Pip started the longest walk of his life. He went past the tallest trees and biggest rocks. His short legs hurt, but he did not stop. He sang a little song to feel brave.",
+      "translation": "皮普开始了这辈子最长的一次远行。他走过最高的树，绕过最大的石头。他的小腿很疼，但他没有停下。他唱起一首小歌，让自己变得勇敢。"
+    },
+    {
+      "text": "On the way, he met an old turtle. She was the slowest animal in the valley. \"You are small,\" she said, \"but your heart is the strongest.\" Pip smiled and walked on.",
+      "translation": "路上，他遇到了一只年老的乌龟。她是谷里最慢的动物。“你个头很小，”她说，“可你的心最坚强。”皮普笑了笑，继续往前走。"
+    },
+    {
+      "text": "At last, Pip found a small lake behind the hills. The water was the sweetest he ever tasted. He ran home as fast as he could. All the dinosaurs drank and thanked him.",
+      "translation": "终于，皮普在山丘后面发现了一个小湖。那是他喝过的最甜的水。他用最快的速度跑回家。所有的恐龙都喝到了水，向他道谢。"
+    },
+    {
+      "text": "That night, everyone said Pip was the bravest in the valley. He was still the smallest, but also the happiest. \"Size is not important,\" he said, \"because a small friend can do big things.\"",
+      "translation": "那天晚上，大家都说皮普是谷里最勇敢的恐龙。他依然是最小的，也是最快乐的。“个头大小并不重要，”他说，“因为小小的朋友也能做成大事。”"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Who did Pip meet on the way?",
+      "audioText": "Who did Pip meet on the way?",
+      "options": [
+        {
+          "emoji": "🐢",
+          "value": "turtle",
+          "text": "An old turtle"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A little bird"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A big fish"
+        }
+      ],
+      "answer": "turtle"
+    },
+    {
+      "type": "word_builder",
+      "word": "smallest",
+      "audioText": "smallest"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "water",
+        "was",
+        "the",
+        "sweetest",
+        "he",
+        "ever",
+        "tasted."
+      ],
+      "audioText": "The water was the sweetest he ever tasted."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "They were worried ___ there was no water.",
+      "choices": [
+        "because",
+        "but",
+        "so"
+      ],
+      "answer": "because",
+      "audioText": "They were worried because there was no water."
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Pip find behind the hills?",
+      "audioText": "What did Pip find behind the hills?",
+      "options": [
+        {
+          "emoji": "💧",
+          "value": "lake",
+          "text": "A small lake"
+        },
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "A tall tree"
+        },
+        {
+          "emoji": "🪨",
+          "value": "rock",
+          "text": "A big rock"
+        }
+      ],
+      "answer": "lake"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Pip ___ the longest walk of his life.",
+      "choices": [
+        "started",
+        "starts",
+        "starting"
+      ],
+      "answer": "started",
+      "audioText": "Pip started the longest walk of his life."
+    }
+  ],
+  "_unknownWords": [
+    "pip",
+    "biggest",
+    "hurt",
+    "bravest",
+    "happiest"
+  ]
+}

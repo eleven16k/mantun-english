@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { VOCAB } from "@/lib/vocab";
 import { updateProfile } from "@/lib/api";
@@ -20,7 +20,10 @@ type Step = (typeof STEPS)[number];
 const TRACKS = [
   { id: "zhongkao", labelKey: "onb.trackZhongkao", descKey: "onb.trackZhongkaoDesc" },
   { id: "xiaoshengchu", labelKey: "onb.trackXiaoshengchu", descKey: "onb.trackXiaoshengchuDesc" },
+  { id: "gaokao", labelKey: "onb.trackGaokao", descKey: "onb.trackGaokaoDesc" },
 ] as const;
+
+const VALID_TRACKS = ["zhongkao", "xiaoshengchu", "gaokao"];
 
 /** Generate an adaptive question at a difficulty level (1-5) from the vocab pool. */
 function makeQ(level: number, idx: number): Question {
@@ -52,6 +55,21 @@ export default function OnboardingPage() {
   const [track, setTrack] = useState<string>("");
   const [targetScore, setTargetScore] = useState(100);
   const [examDate, setExamDate] = useState("");
+  // 深链入口（升学/设置页换学段）：/onboarding?step=goal|test&track=X&next=/reading
+  // 支持跳过选轨直接定级；next 决定定级完成后的落地页。
+  const [nextPath, setNextPath] = useState("/chat");
+
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const qTrack = sp.get("track");
+    const qStep = sp.get("step");
+    const qNext = sp.get("next");
+    if (qTrack && VALID_TRACKS.includes(qTrack)) {
+      setTrack(qTrack);
+      if (qStep === "goal" || qStep === "test") setStep(qStep);
+    }
+    if (qNext && qNext.startsWith("/")) setNextPath(qNext);
+  }, []);
 
   // Adaptive test state
   const [qIdx, setQIdx] = useState(0);
@@ -130,7 +148,7 @@ export default function OnboardingPage() {
                 <button
                   key={tr.id}
                   onClick={() => { setTrack(tr.id); setStep("goal"); }}
-                  className={`g-card flex flex-col gap-1 p-5 text-left shadow-sm transition hover:border-brandborder ${track === tr.id ? "border-brandborder bg-brand-subtle" : ""}`}
+                  className={`g-card flex flex-col gap-1 p-5 text-left ${track === tr.id ? "!border-[var(--ink)] bg-brand-subtle" : ""}`}
                 >
                   <p className="font-booster text-lg font-extrabold text-primary">{t(tr.labelKey)}</p>
                   <p className="text-sm text-tertiary">{t(tr.descKey)}</p>
@@ -160,7 +178,7 @@ export default function OnboardingPage() {
               <button
                 onClick={startTest}
                 disabled={!examDate}
-                className="rounded-pill bg-action py-3.5 font-booster text-base font-extrabold text-white shadow-sm transition hover:bg-actionhover disabled:opacity-40"
+                className="rounded-pill bg-action py-3.5 font-booster text-base font-extrabold text-white transition hover:bg-actionhover disabled:opacity-40"
               >
                 {t('onb.startTest')}
               </button>
@@ -175,7 +193,7 @@ export default function OnboardingPage() {
                 <p className="text-xs text-tertiary">{t('onb.level')} {difficulty}</p>
               </div>
 
-              <div className="g-card-hero p-6 text-center shadow-sm">
+              <div className="g-card-hero p-6 text-center">
                 <p className="text-xs font-bold uppercase text-tertiary mb-2">{q.promptSub ?? t('onb.vocabulary')}</p>
                 <p className="font-booster text-3xl font-extrabold text-primary">{q.prompt}</p>
               </div>
@@ -184,10 +202,9 @@ export default function OnboardingPage() {
                 {q.choices.map((c, i) => {
                   const isSel = selected === i;
                   const isCorrect = i === q.correctIndex;
-                  let cls = "flex w-full items-center gap-3 rounded-2xl border-2 border-subtle bg-surface px-4 py-3 text-left text-[15px] font-semibold transition";
-                  if (answered && isCorrect) cls += " border-[var(--bg-positive-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-positive-emphasis-default)_10%,transparent)]";
-                  else if (answered && isSel) cls += " border-[var(--bg-critical-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-critical-emphasis-default)_10%,transparent)]";
-                  else cls += " hover:border-brandborder hover:bg-canvas";
+                  let cls = "game-chip flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
+                  if (answered && isCorrect) cls = "game-chip game-chip--right pointer-events-none flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
+                  else if (answered && isSel) cls = "game-chip game-chip--wrong pointer-events-none flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
                   return (
                     <button key={i} disabled={answered} onClick={() => answer(i)} className={cls}>
                       <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-canvas text-sm font-extrabold text-tertiary">
@@ -209,7 +226,7 @@ export default function OnboardingPage() {
               <p className="text-sm text-secondary">
                 {t('onb.target')}: {targetScore} · {t('onb.gap')}: {Math.max(0, targetScore - estimatedScore)} {t('onb.points')}
               </p>
-              <div className="g-card w-full p-4 text-left shadow-sm">
+              <div className="g-card w-full p-4 text-left">
                 <p className="text-xs font-bold uppercase text-tertiary mb-2">{t('onb.recommendations')}</p>
                 <ul className="space-y-1 text-sm text-secondary">
                   <li>{correctCount < 5 ? t('onb.recStartBasic') : t('onb.recStartInt')}</li>
@@ -218,8 +235,8 @@ export default function OnboardingPage() {
                 </ul>
               </div>
               <button
-                onClick={() => router.push("/chat")}
-                className="w-full rounded-pill bg-brand py-3.5 font-booster text-base font-extrabold text-white shadow-sm transition hover:opacity-90"
+                onClick={() => router.push(nextPath)}
+                className="w-full rounded-pill bg-brand py-3.5 font-booster text-base font-extrabold text-white transition hover:opacity-90"
               >
                 {t('onb.startLearning')}
               </button>

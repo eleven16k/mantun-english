@@ -1,0 +1,130 @@
+{
+  "id": "xsc-r6-s01",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r6",
+  "order": 1,
+  "title": "My Home in Space",
+  "titleCn": "我在太空的家",
+  "coverEmoji": "🚀",
+  "paragraphs": [
+    {
+      "text": "My name is Lily. I am ten years old. I want to be a young scientist. One day, I will live on a space station.",
+      "translation": "我叫莉莉。我十岁了。我想成为一名小科学家。总有一天，我会住进太空站。"
+    },
+    {
+      "text": "The space station is a big home in space. It goes around the Earth very fast. Astronauts live and work inside it. They must keep it clean and safe.",
+      "translation": "太空站是太空里的一个大大的家。它绕着地球飞快地转。宇航员在里面生活和工作。他们必须让它保持干净、安全。"
+    },
+    {
+      "text": "Everything floats up here. Water floats like a small ball. You should drink it with a straw. Your food could fly away too!",
+      "translation": "在这里，什么东西都会飘起来。水会飘成一个小球。你应该用吸管把它喝掉。你的食物也可能会飞走哦！"
+    },
+    {
+      "text": "We will grow plants in a small lab. We will watch the stars from the window. A robot will help us every day. It will clean the floor and cook.",
+      "translation": "我们要在一个小实验室里种植物。我们要从窗户看星星。一个机器人每天都会帮我们。它会擦地板，还会做饭。"
+    },
+    {
+      "text": "At night, we sleep in a small bag. We must tie it to the wall. Then we will not float away. Outside, the stars look big and near.",
+      "translation": "晚上，我们睡在一个小睡袋里。我们必须把它固定在墙上。这样我们就不会飘走了。外面，星星看上去又大又近。"
+    },
+    {
+      "text": "In the future, more people will visit space. Maybe you will come with me. We should take care of the Earth. It is our first and best home.",
+      "translation": "未来，会有更多人来太空做客。也许你会和我一起来。我们应该爱护地球。它是我们最初也是最好的家园。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which one goes around the Earth very fast?",
+      "audioText": "Which one goes around the Earth very fast?",
+      "options": [
+        {
+          "emoji": "🛰️",
+          "value": "station",
+          "text": "The space station"
+        },
+        {
+          "emoji": "🌙",
+          "value": "moon",
+          "text": "The moon"
+        },
+        {
+          "emoji": "☀️",
+          "value": "sun",
+          "text": "The sun"
+        }
+      ],
+      "answer": "station"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where do they sleep at night?",
+      "audioText": "Where do they sleep at night?",
+      "options": [
+        {
+          "emoji": "🎒",
+          "value": "bag",
+          "text": "In a small bag"
+        },
+        {
+          "emoji": "🛏️",
+          "value": "bed",
+          "text": "In a big bed"
+        },
+        {
+          "emoji": "🪑",
+          "value": "chair",
+          "text": "On a chair"
+        }
+      ],
+      "answer": "bag"
+    },
+    {
+      "type": "word_builder",
+      "word": "station",
+      "audioText": "station"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "must",
+        "keep",
+        "it",
+        "clean",
+        "and",
+        "safe."
+      ],
+      "audioText": "They must keep it clean and safe."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "One day, I will ___ on a space station.",
+      "choices": [
+        "live",
+        "lives",
+        "living"
+      ],
+      "answer": "live",
+      "audioText": "One day, I will live on a space station."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "A robot ___ help us every day.",
+      "choices": [
+        "will",
+        "is",
+        "are"
+      ],
+      "answer": "will",
+      "audioText": "A robot will help us every day."
+    }
+  ],
+  "_unknownWords": [
+    "lily",
+    "astronauts",
+    "floats",
+    "straw",
+    "float"
+  ]
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
 import { getMyOrgRanking, type OrgRanking } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
@@ -52,16 +53,17 @@ export default function OrgRankingPage() {
   const tracks: { id: string; label: string }[] = [
     { id: "xiaoshengchu", label: t("org.trackXsc") },
     { id: "zhongkao", label: t("org.trackZk") },
+    { id: "gaokao", label: t("org.trackGk") },
   ];
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-1">{t("org.leaderboard")}</h1>
+      <div className="page-shell">
+        <PageHeader badge="🏢 ORGANIZATION" title={t("org.leaderboard")} />
         {data?.org && <p className="mb-4 text-sm text-tertiary">{data.org.name}</p>}
 
         {loaded && !data?.org && (
-          <div className="g-card p-6 text-center shadow-sm">
+          <div className="g-card p-6 text-center">
             <p className="text-sm text-secondary">{t("org.none")}</p>
           </div>
         )}
@@ -69,13 +71,13 @@ export default function OrgRankingPage() {
         {data?.org && (
           <>
             {/* track tabs */}
-            <div className="mb-4 flex gap-1 rounded-pill border border-subtle bg-surface p-1">
+            <div className="mb-4 flex gap-1 rounded-pill border-2 border-[var(--ink)] bg-surface p-1 shadow-[0_3px_0_0_rgba(0,0,0,0.1)]">
               {tracks.map((tr) => (
                 <button
                   key={tr.id}
                   onClick={() => switchTrack(tr.id)}
                   className={`flex-1 rounded-pill py-2 text-sm font-bold transition ${
-                    track === tr.id ? "bg-brand text-white" : "text-tertiary"
+                    track === tr.id ? "bg-gold text-primary shadow-[0_2px_0_0_rgba(0,0,0,0.12)]" : "text-tertiary"
                   }`}
                 >
                   {tr.label}
@@ -105,7 +107,7 @@ export default function OrgRankingPage() {
             )}
 
             {/* my bucket */}
-            <div className="g-card-hero mb-4 p-5 text-center shadow-sm">
+            <div className="g-card-hero mb-4 p-5 text-center">
               {data.me ? (
                 <p className="font-booster text-lg font-extrabold text-primary">
                   {isThisWeek ? t("org.youAre") : t("org.youWere")}
@@ -121,7 +123,7 @@ export default function OrgRankingPage() {
             </div>
 
             {/* top10 */}
-            <div className="g-card p-5 shadow-sm">
+            <div className="g-card p-5">
               <h2 className="mb-3 text-sm font-bold text-primary">{t("org.top10")}</h2>
               {data.top10.length === 0 ? (
                 <p className="py-3 text-center text-xs text-tertiary">{t("org.empty")}</p>

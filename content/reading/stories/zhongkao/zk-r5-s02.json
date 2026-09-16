@@ -1,0 +1,119 @@
+{
+  "id": "zk-r5-s02",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 2,
+  "title": "The Boy Who Shared His Books",
+  "titleCn": "分享图书的男孩",
+  "coverEmoji": "📚",
+  "paragraphs": [
+    {
+      "text": "Lin Hao was a middle school student who lived in a small mountain village. He loved reading and had read almost every book in his school. But the village had no library. Most children there had nothing to read at home.",
+      "translation": "林浩是一个住在小山村里的中学生。他非常爱读书，几乎读遍了学校里的每一本书。可是村里没有图书馆，那里的大多数孩子在家里没有书可读。"
+    },
+    {
+      "text": "One summer, he found a box of old books which his cousin had left behind. He began to think about how he could help the children around him. \"If I share these books, more kids can enjoy them,\" he said to himself.",
+      "translation": "有一年夏天，他找到一箱旧书，那是他表哥留下的。他开始琢磨怎样才能帮到身边的孩子们。“如果我把这些书分享出去，就会有更多孩子读到它们，”他自言自语道。"
+    },
+    {
+      "text": "He put the books in a wooden box that he had made with his father. Every Saturday, he carried the box to the square near the village gate. Children who passed by could take one book home for a week.",
+      "translation": "他把书装进一个木箱，那箱子是他和爸爸一起做的。每个星期六，他都把箱子搬到村口附近的小广场上。路过的孩子可以把一本书带回家看一个星期。"
+    },
+    {
+      "text": "At first, only three children came to his small library. But Lin Hao did not give up. He told his story to his teachers, who loved his idea and gave him more books for free. Soon the box was full again.",
+      "translation": "起初，只有三个孩子来到他的小图书馆。但林浩没有放弃。他把自己的故事讲给老师听，老师们很喜欢他的想法，免费送给他更多的书。很快，箱子里又装满了。"
+    },
+    {
+      "text": "Two years later, more than five hundred books had been collected in the box. Over one hundred children had joined the little library. Lin Hao said the happiest thing was to see a child smile.",
+      "translation": "两年后，箱子里已经收集了五百多本书。一百多个孩子加入了这个小小的图书馆。林浩说，最开心的事就是看到一个孩子露出笑容。"
+    },
+    {
+      "text": "Today Lin Hao is in high school, but his little library is still open. \"A book that you share with others will never be lost,\" he often says. Now other students in the village have started their own small libraries too.",
+      "translation": "如今林浩已经上高中了，但他的小图书馆仍然开着。“一本你与他人分享的书永远不会丢失，”他常这样说。现在村里其他学生也办起了自己的小图书馆。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Lin Hao was a middle school student ___ lived in a small mountain village.",
+      "choices": [
+        "who",
+        "which",
+        "where"
+      ],
+      "answer": "who",
+      "audioText": "Lin Hao was a middle school student who lived in a small mountain village."
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Lin Hao carry to the square every Saturday?",
+      "audioText": "What did Lin Hao carry to the square every Saturday?",
+      "options": [
+        {
+          "emoji": "📚",
+          "value": "books",
+          "text": "A box of books"
+        },
+        {
+          "emoji": "⚽",
+          "value": "ball",
+          "text": "A football"
+        },
+        {
+          "emoji": "🎸",
+          "value": "guitar",
+          "text": "A guitar"
+        }
+      ],
+      "answer": "books"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Soon",
+        "the",
+        "box",
+        "was",
+        "full",
+        "again."
+      ],
+      "audioText": "Soon the box was full again."
+    },
+    {
+      "type": "word_builder",
+      "word": "library",
+      "audioText": "library"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "One summer, he found a box of old books which his cousin had ___ behind.",
+      "choices": [
+        "left",
+        "leave",
+        "leaving"
+      ],
+      "answer": "left",
+      "audioText": "One summer, he found a box of old books which his cousin had left behind."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "But",
+        "Lin",
+        "Hao",
+        "did",
+        "not",
+        "give",
+        "up."
+      ],
+      "audioText": "But Lin Hao did not give up."
+    }
+  ],
+  "_unknownWords": [
+    "hao",
+    "wooden",
+    "later",
+    "joined",
+    "happiest"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "gk-r3-s06",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 6,
+  "title": "The Scroll That Remembers a City",
+  "titleCn": "记得一座城的画卷",
+  "coverEmoji": "📜",
+  "paragraphs": [
+    {
+      "text": "In China's long history, only a few paintings have managed to carry a whole city on their shoulders. The one that does this best is a long silk scroll called Along the River During the Qingming Festival, painted by Zhang Zeduan. It was in Bianjing, today's Kaifeng, that the artist found his subject, and he spent years watching the streets of the Northern Song capital.",
+      "translation": "在中国漫长的历史中，只有少数几幅画能够把整座城市扛在自己的肩上。其中最出色的一幅，是一卷名为《清明上河图》的长绢画，作者是张择端。正是在汴京，也就是今天的开封，这位画家找到了他的题材，他花了多年时间观察这座北宋都城的街市。"
+    },
+    {
+      "text": "If you were to unroll the scroll slowly, you would meet more than eight hundred people. Not only does it show rich merchants in fine clothes, but it also shows porters, cooks, doctors and children at play. A wooden bridge crosses the river in the middle of the scene, where a boat is about to hit the bank and the crew are shouting for help. No sooner has the reader noticed this small drama than the eye moves on to shops, tea houses and busy streets.",
+      "translation": "如果你慢慢展开这卷画，你会遇见八百多个人物。它不仅画出衣着讲究的富商，也画出了脚夫、厨子、医生和玩耍的孩子。画面中央有一座木桥横跨河面，那里有一条船就要撞上河岸，船员们正大声呼救。读者刚注意到这个小插曲，目光便又移向店铺、茶馆和熙熙攘攘的街道。"
+    },
+    {
+      "text": "Zhang Zeduan could not have known how soon that busy world would end. If the Northern Song had not lost its capital in the war of 1127, later copies of his scroll might never have been made with such care. Had the original been destroyed in the fighting, artists in the south would have had nothing to copy. The court moved to Hangzhou, and painters there tried to rebuild Bianjing on silk, using Zhang's quiet record as their guide.",
+      "translation": "张择端不可能知道，那个热闹的世界会结束得如此之快。如果北宋没有在1127年的战争中失去都城，他这卷画的后世摹本或许永远不会被如此用心地绘制。假如原作在战火中被毁，南方的画家就无物可临摹了。朝廷迁往杭州，那里的画家们试图在绢上重建汴京，而张择端这份安静的记录就成了他们的向导。"
+    },
+    {
+      "text": "The scroll itself is about five metres long, and it is now kept in the Palace Museum in Beijing. It has been copied many times, and every copy tells us something about the period that produced it. Historians value the painting not because it shows emperors or battles, but because it shows ordinary work, trade and daily life. No sooner do they study one corner than they discover a new detail, such as a child reaching for a toy.",
+      "translation": "这卷画本身长约五米，如今收藏在北京的故宫博物院。它被临摹过许多次，每一份摹本都能告诉我们一些关于绘制它的那个时代的事情。历史学家看重这幅画，不是因为它画了皇帝或战争，而是因为它画出了普通人的劳作、交易与日常生活。他们刚研究完一个角落，就会发现一个新的细节，比如一个孩子伸手去够玩具。"
+    },
+    {
+      "text": "In the end, it is the small, ordinary moments that a nation remembers longest. If we had only official histories, we would know the names of kings but not the sound of a market. A painting like this reminds us that heritage is not only about monuments, but also about how people once lived, worked and laughed together.",
+      "translation": "说到底，一个民族记得最久的，往往是那些细小的、普通的瞬间。假如我们只有官方史书，我们会知道国王的名字，却听不到集市的声音。像这样的画作提醒我们：文化遗产不只关乎纪念碑，也关乎人们曾经怎样一起生活、劳作和欢笑。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what stands in the middle of the scene?",
+      "audioText": "According to the text, what stands in the middle of the scene?",
+      "options": [
+        {
+          "emoji": "🌉",
+          "value": "bridge",
+          "text": "A wooden bridge"
+        },
+        {
+          "emoji": "👑",
+          "value": "palace",
+          "text": "A royal palace"
+        },
+        {
+          "emoji": "⛰️",
+          "value": "mountain",
+          "text": "A mountain village"
+        }
+      ],
+      "answer": "bridge"
+    },
+    {
+      "type": "word_builder",
+      "word": "heritage",
+      "audioText": "heritage"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Had",
+        "the",
+        "original",
+        "been",
+        "destroyed",
+        "in",
+        "the",
+        "fighting"
+      ],
+      "audioText": "Had the original been destroyed in the fighting, artists in the south would have had nothing to copy."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "No",
+        "sooner",
+        "do",
+        "they",
+        "study",
+        "one",
+        "corner"
+      ],
+      "audioText": "No sooner do they study one corner than they discover a new detail, such as a child reaching for a toy."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If we ___ only official histories, we would know the names of kings but not the sound of a market.",
+      "choices": [
+        "had",
+        "have",
+        "has"
+      ],
+      "answer": "had",
+      "audioText": "If we had only official histories, we would know the names of kings but not the sound of a market."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It ___ in Bianjing, today's Kaifeng, that the artist found his subject.",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": "was",
+      "audioText": "It was in Bianjing, today's Kaifeng, that the artist found his subject."
+    }
+  ],
+  "_unknownWords": [
+    "china's",
+    "scroll",
+    "qingming",
+    "zhang",
+    "zeduan",
+    "bianjing",
+    "today's",
+    "kaifeng",
+    "unroll",
+    "wooden",
+    "drama",
+    "known",
+    "hangzhou",
+    "rebuild",
+    "zhang's",
+    "beijing",
+    "historians",
+    "detail",
+    "heritage"
+  ]
+}

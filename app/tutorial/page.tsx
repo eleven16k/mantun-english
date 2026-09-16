@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { useGameStore } from "@/lib/store";
@@ -74,12 +75,12 @@ export default function TutorialPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t('tut.title')}</h1>
+      <div className="page-shell">
+        <PageHeader badge="🎓 TUTORIAL" title={t("tut.title")} />
 
         {level === "done" ? (
           /* Completion screen */
-          <div className="g-card-hero p-8 text-center shadow-sm">
+          <div className="g-card-hero p-8 text-center">
             <span className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-positive/10">
               <CheckIcon size={36} className="text-positive" />
             </span>
@@ -88,7 +89,7 @@ export default function TutorialPage() {
             <div className="mt-4 flex flex-col gap-2">
               <button
                 onClick={() => router.push("/onboarding")}
-                className="rounded-pill bg-brand py-3 font-booster font-extrabold text-white shadow-sm transition hover:opacity-90"
+                className="rounded-pill bg-brand py-3 font-booster font-extrabold text-white transition hover:opacity-90"
               >
                 {t('tut.takeTest')}
               </button>
@@ -115,7 +116,7 @@ export default function TutorialPage() {
 
             {/* Level 1: Hearts tutorial */}
             {level === 1 && (
-              <div className="g-card p-4 shadow-sm">
+              <div className="g-card p-4">
                 <div className="flex items-center gap-2 rounded-pill bg-canvas px-4 py-2">
                   <HeartFilledIcon size={16} className="text-hearts" />
                   <span className="text-sm font-bold text-primary">{t('tut.hearts')}: 5</span>
@@ -137,7 +138,7 @@ export default function TutorialPage() {
 
             {/* Level 2: Coins & SP tutorial */}
             {level === 2 && (
-              <div className="g-card p-4 shadow-sm">
+              <div className="g-card p-4">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-1.5 rounded-pill bg-canvas px-3 py-1.5">
                     <CoinIcon size={16} className="text-gold" />
@@ -160,7 +161,7 @@ export default function TutorialPage() {
 
             {/* Level 3: Streak tutorial */}
             {level === 3 && (
-              <div className="g-card p-4 shadow-sm">
+              <div className="g-card p-4">
                 <div className="flex items-center gap-2">
                   <FlameIcon size={20} className="text-streak" />
                   <div className="flex gap-1.5">
@@ -177,7 +178,7 @@ export default function TutorialPage() {
             )}
 
             {/* Question card */}
-            <div className="g-card-hero p-6 text-center shadow-sm">
+            <div className="g-card-hero p-6 text-center">
               <p className="text-xs font-bold uppercase text-tertiary mb-2">
                 {level === 1 ? t('tut.tryWrong') : level === 2 ? t('tut.answerCorrect') : t('tut.complete3')}
               </p>
@@ -189,10 +190,9 @@ export default function TutorialPage() {
               {q.choices.map((c, i) => {
                 const isSel = selected === i;
                 const isCor = i === q.correct;
-                let cls = "flex w-full items-center gap-3 rounded-2xl border-2 border-subtle bg-surface px-4 py-3 text-left text-[15px] font-semibold transition";
-                if (answered && isCor) cls += " border-[var(--bg-positive-emphasis-default)]";
-                else if (answered && isSel) cls += " border-[var(--bg-critical-emphasis-default)]";
-                else cls += " hover:border-brandborder hover:bg-canvas";
+                let cls = "game-chip flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
+                if (answered && isCor) cls = "game-chip game-chip--right pointer-events-none flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
+                else if (answered && isSel) cls = "game-chip game-chip--wrong pointer-events-none flex w-full items-center gap-3 px-4 py-3 text-left text-[15px] font-semibold";
                 return (
                   <button key={i} disabled={answered} onClick={() => answer(i)} className={cls}>
                     <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-canvas text-sm font-extrabold text-tertiary">{"ABCD"[i]}</span>

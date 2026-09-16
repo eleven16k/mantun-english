@@ -1,0 +1,130 @@
+{
+  "id": "zk-r6-s04",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 4,
+  "title": "Mooncakes and Maple Syrup",
+  "titleCn": "月饼与枫糖浆",
+  "coverEmoji": "🥮",
+  "paragraphs": [
+    {
+      "text": "Emma is a Canadian exchange student who came to China last month. She lives with a friendly Chinese family in the old city of Nanjing. She loves trying new food, so she was excited about the coming festival. When she learned that the Mid-Autumn Festival was near, she smiled.",
+      "translation": "艾玛是一名加拿大的交换生，上个月来到中国。她现在住在南京老城区一个友善的中国家庭里。她喜欢尝试新食物，所以对即将到来的节日充满期待。当她得知中秋节快到了，她开心地笑了。"
+    },
+    {
+      "text": "On the morning of the festival, Grandma Wang asked Emma to help make mooncakes. Emma did not know that mooncakes are made by hand in many Chinese homes. The old lady showed her how to press sweet bean paste into a small round shape. The mooncakes were so beautiful that Emma took photos with her phone. Grandma said that the round shape stands for family and good luck.",
+      "translation": "节日那天早上，王奶奶叫艾玛一起做月饼。艾玛并不知道，在中国许多家庭里月饼都是手工做的。这位老奶奶教她怎样把甜甜的豆沙压成一个小小的圆形。月饼做得太漂亮了，艾玛忍不住用手机拍了好几张照片。奶奶说，圆圆的形状代表着团圆和好运。"
+    },
+    {
+      "text": "In the evening, the whole family sat in the yard to enjoy the full moon. The moon was round and bright. Emma learned that people eat mooncakes while they watch the moon together. Grandma told a story which Emma had never heard before. Emma listened carefully and wrote some notes in her little notebook.",
+      "translation": "傍晚，全家人坐在院子里赏月。那天的月亮又圆又亮。艾玛了解到，人们会一边吃月饼，一边一起赏月。奶奶讲了一个故事，艾玛以前从没听过。她听得很认真，还在小本子上记了些笔记。"
+    },
+    {
+      "text": "Then Emma wanted to share something from her own country. She took out a small bottle of maple syrup which her mother had sent her. She explained that Canadians put it on pancakes and bread in the morning. The family loved the sweet taste. Emma felt so happy that she almost forgot she was far from home.",
+      "translation": "然后，艾玛想分享一些自己国家的东西。她拿出一小瓶妈妈寄来的枫糖浆。她解释说，加拿大人早上会把它涂在薄煎饼和面包上。全家人都很喜欢这种甜甜的味道。艾玛高兴得几乎忘了自己离家很远。"
+    },
+    {
+      "text": "Different countries have different festivals, food and traditional skills. However, people everywhere enjoy sharing food with the ones they love. Emma realised that a small taste of home can build a bridge between cultures. She decided that she would learn more about Chinese traditions.",
+      "translation": "不同的国家有不同的节日、食物和传统技艺。不过，世界各地的人们都喜欢和所爱的人分享食物。艾玛意识到，一点点家乡的味道就能在不同文化之间搭起一座桥。她决定要更多地了解中国的传统。"
+    },
+    {
+      "text": "Before she went to bed, Emma wrote a short message to her parents. She told them that she had made mooncakes with her Chinese family. She also said that she would cook Chinese food for them one day.",
+      "translation": "睡觉前，艾玛给父母写了一条短短的留言。她告诉他们，她和中国家人一起做了月饼。她还说，有一天她要给他们做中国菜。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which food did Emma help to make with Grandma Wang?",
+      "audioText": "Which food did Emma help to make with Grandma Wang?",
+      "options": [
+        {
+          "emoji": "🥮",
+          "value": "mooncake",
+          "text": "Mooncakes"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        },
+        {
+          "emoji": "🍜",
+          "value": "noodles",
+          "text": "Noodles"
+        }
+      ],
+      "answer": "mooncake"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She took out a small bottle of maple syrup ___ her mother had sent her.",
+      "choices": [
+        "which",
+        "who",
+        "what"
+      ],
+      "answer": "which",
+      "audioText": "She took out a small bottle of maple syrup which her mother had sent her."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "moon",
+        "was",
+        "round",
+        "and",
+        "bright."
+      ],
+      "audioText": "The moon was round and bright."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The mooncakes were so beautiful ___ Emma took photos with her phone.",
+      "choices": [
+        "that",
+        "which",
+        "because"
+      ],
+      "answer": "that",
+      "audioText": "The mooncakes were so beautiful that Emma took photos with her phone."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Emma",
+        "took",
+        "photos",
+        "with",
+        "her",
+        "phone."
+      ],
+      "audioText": "Emma took photos with her phone."
+    },
+    {
+      "type": "word_builder",
+      "word": "mooncake",
+      "audioText": "mooncake"
+    }
+  ],
+  "_unknownWords": [
+    "canadian",
+    "exchange",
+    "china",
+    "chinese",
+    "nanjing",
+    "mid",
+    "wang",
+    "asked",
+    "mooncakes",
+    "press",
+    "bean",
+    "paste",
+    "maple",
+    "syrup",
+    "canadians",
+    "traditional",
+    "traditions"
+  ]
+}

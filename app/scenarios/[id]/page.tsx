@@ -11,25 +11,39 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { ScenarioCallOverlay, type CallTranscriptRow } from "@/components/scenarios/ScenarioCallOverlay";
-import { scenarioById, buildCallInstructions, type Scenario, type VocabLevel } from "@/lib/scenarios";
+import { scenarioById, scenarioImg, buildCallInstructions, type Scenario, type VocabLevel } from "@/lib/scenarios";
 import { fetchCustomScenarios } from "@/lib/api";
 import { kv } from "@/lib/kv";
 import { useI18n } from "@/lib/i18n";
-import { chatWithNpc, generateScenarioVocab, scenarioTTS, bankScenarioReward } from "@/lib/api";
+import { chatWithNpc, generateScenarioVocab, scenarioTTS, bankScenarioReward, translateScenarioText } from "@/lib/api";
 import { useGameStore } from "@/lib/store";
 
 const LEVEL_KEY = "lexi-scenario-level";
 const CUSTOM_VOCAB_KEY = "lexi-scenario-custom-vocab";
 
 interface Message {
+  id: string;
   role: "user" | "model";
   text: string;
   timestamp: number;
   suggestion?: string;
 }
 
-/** Play base64 PCM16 audio through a fresh AudioContext. */
-async function playPcm(base64: string, sampleRate: number): Promise<void> {
+// Unique per-message key — timestamps collide when call-transcript rows are
+// appended in one batch, so playback/translation state keys on this instead.
+let msgSeq = 0;
+const mkMsgId = () => `m${Date.now().toString(36)}-${msgSeq++}`;
+
+/**
+ * Play base64 PCM16 audio through a fresh AudioContext. Resolves when the
+ * clip finishes or the returned cancel handle is invoked (another bubble
+ * interrupting playback).
+ */
+async function playPcm(
+  base64: string,
+  sampleRate: number,
+  registerCancel?: (cancel: () => void) => void
+): Promise<void> {
   const bin = atob(base64);
   const bytes = new Uint8Array(bin.length);
   for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
@@ -38,15 +52,30 @@ async function playPcm(base64: string, sampleRate: number): Promise<void> {
   const buffer = ctx.createBuffer(1, pcm.length, sampleRate);
   const channel = buffer.getChannelData(0);
   for (let i = 0; i < pcm.length; i++) channel[i] = pcm[i] / 32768;
+  let closed = false;
+  const closeCtx = () => {
+    if (closed) return;
+    closed = true;
+    void ctx.close().catch(() => {});
+  };
   return new Promise((resolve) => {
     const src = ctx.createBufferSource();
     src.buffer = buffer;
     src.onended = () => {
-      void ctx.close();
+      closeCtx();
       resolve();
     };
     src.connect(ctx.destination);
     src.start();
+    registerCancel?.(() => {
+      try {
+        src.stop();
+      } catch {
+        // already stopped — nothing to do
+      }
+      closeCtx();
+      resolve();
+    });
   });
 }
 
@@ -78,7 +107,10 @@ export default function ScenarioSessionPage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [speakingId, setSpeakingId] = useState<number | null>(null);
+  const [speakingId, setSpeakingId] = useState<string | null>(null);
+  const [transShown, setTransShown] = useState<Record<string, boolean>>({});
+  const [translations, setTranslations] = useState<Record<string, string>>({});
+  const [translatingId, setTranslatingId] = useState<string | null>(null);
   const [listening, setListening] = useState(false);
   const [micError, setMicError] = useState<string | null>(null);
   const [inCall, setInCall] = useState(false);
@@ -87,6 +119,11 @@ export default function ScenarioSessionPage() {
   const masteredRef = useRef<Set<string>>(new Set());
   const recognitionRef = useRef<{ start: () => void; stop: () => void } | null>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  // Playback handles — the cancel hook of the in-flight clip plus a
+  // generation token so a superseded replay can never start playing.
+  const speakingRef = useRef<string | null>(null);
+  const stopAudioRef = useRef<(() => void) | null>(null);
+  const replayTokenRef = useRef(0);
 
   const customVocab = useMemo(
     () => (customInput ? customInput.split(/[,\n\s]+/).map((w) => w.trim()).filter(Boolean) : []),
@@ -200,12 +237,12 @@ export default function ScenarioSessionPage() {
     const greeting = `Hello! I'm ${scenario.npc}, the ${scenario.npcRole.en}. Welcome to ${scenario.location.en}. How can I help you today?`;
     const translation = `你好！我是 ${scenario.npc}，${scenario.npcRole.zh}。欢迎来到 ${scenario.location.zh}。今天我能帮你什么吗？`;
     const tip = locale === "zh" ? "[Tip: 用英语向 NPC 打个招呼，告诉他们你需要什么。]" : "[Tip: Greet the NPC and tell them what you need.]";
-    setMessages([{ role: "model", text: `${greeting} \n--- \n ${translation} \n--- \n ${tip}`, timestamp: Date.now() }]);
+    setMessages([{ id: mkMsgId(), role: "model", text: `${greeting} \n--- \n ${translation} \n--- \n ${tip}`, timestamp: Date.now() }]);
   };
 
   const sendMessage = async () => {
     if (!input.trim() || !scenario || isLoading) return;
-    const userMessage: Message = { role: "user", text: input, timestamp: Date.now() };
+    const userMessage: Message = { id: mkMsgId(), role: "user", text: input, timestamp: Date.now() };
     const mastered = collectMastered(input);
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
@@ -227,28 +264,112 @@ export default function ScenarioSessionPage() {
         if (lastUser >= 0 && reply.userSuggestion) {
           next[lastUser] = { ...next[lastUser], suggestion: reply.userSuggestion };
         }
-        return [...next, { role: "model", text: reply.npcResponse, timestamp: Date.now() }];
+        return [...next, { id: mkMsgId(), role: "model", text: reply.npcResponse, timestamp: Date.now() }];
       });
       void bankReward("chat", 1, 10, 2, mastered);
     } catch {
       const msg = locale === "zh" ? "AI 服务暂时不可用，请稍后再试。" : "AI is unavailable right now — try again shortly.";
-      setMessages((prev) => [...prev, { role: "model", text: msg, timestamp: Date.now() }]);
+      setMessages((prev) => [...prev, { id: mkMsgId(), role: "model", text: msg, timestamp: Date.now() }]);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const replay = async (msg: Message) => {
-    if (speakingId !== null) return;
-    setSpeakingId(msg.timestamp);
+  /** Stop any in-flight playback (server PCM or browser TTS) and reset state. */
+  const stopSpeaking = useCallback(() => {
+    replayTokenRef.current += 1; // invalidate any replay still awaiting TTS
+    stopAudioRef.current?.();
+    stopAudioRef.current = null;
     try {
-      const { audio, sampleRate } = await scenarioTTS(msg.text);
-      if (audio) await playPcm(audio, sampleRate);
+      window.speechSynthesis?.cancel();
     } catch {
-      // TTS unavailable — stay silent
-    } finally {
-      setSpeakingId(null);
+      // speechSynthesis unavailable — nothing to cancel
     }
+    speakingRef.current = null;
+    setSpeakingId(null);
+  }, []);
+
+  // Leave the page → no dangling audio.
+  useEffect(() => () => stopSpeaking(), [stopSpeaking]);
+
+  // TTS 播放：服务端神经 TTS 优先（ZENMUX/Gemini），失败降级浏览器
+  // speechSynthesis（en-US）——保证喇叭按钮任何情况下都有声音。
+  // 每个气泡的播放按钮相互独立：再点同一气泡停止，点其他气泡打断
+  // 当前播放并切换；播完自动复位，不会卡住其他按钮。
+  const replay = async (msg: Message) => {
+    if (speakingRef.current === msg.id) {
+      stopSpeaking();
+      return;
+    }
+    stopSpeaking();
+    const token = ++replayTokenRef.current;
+    speakingRef.current = msg.id;
+    setSpeakingId(msg.id);
+    // 只朗读英文部分（--- 之后的翻译/提示不读）
+    const english = msg.text.split("---")[0].trim();
+    try {
+      const { audio, sampleRate } = await scenarioTTS(english);
+      if (token !== replayTokenRef.current) return; // 已被更新的操作取代
+      if (audio) {
+        await playPcm(audio, sampleRate, (cancel) => {
+          stopAudioRef.current = cancel;
+        });
+        if (speakingRef.current === msg.id) {
+          speakingRef.current = null;
+          setSpeakingId(null);
+        }
+        return;
+      }
+    } catch {
+      // fall through to browser TTS
+    }
+    if (token !== replayTokenRef.current) return;
+    try {
+      window.speechSynthesis?.cancel();
+      const u = new SpeechSynthesisUtterance(english);
+      u.lang = "en-US";
+      u.rate = 0.9;
+      const voices = window.speechSynthesis.getVoices();
+      const preferred = voices.find((v) => /en[-_]US/i.test(v.voiceURI) || /en[-_]US/i.test(v.lang)) ?? voices.find((v) => v.lang.startsWith("en"));
+      if (preferred) u.voice = preferred;
+      u.onend = () => {
+        if (speakingRef.current === msg.id) stopSpeaking();
+      };
+      stopAudioRef.current = () => window.speechSynthesis?.cancel();
+      window.speechSynthesis.speak(u);
+    } catch {
+      if (speakingRef.current === msg.id) stopSpeaking();
+    }
+  };
+
+  /** Toggle the translation card under a bubble. NPC replies carry a Chinese
+   *  translation after '---'; everything else (user messages, call
+   *  transcript rows) is translated on demand and cached per message. */
+  const toggleTranslation = async (msg: Message) => {
+    const embedded = msg.text.split("---")[1]?.trim();
+    if (!embedded && translations[msg.id] === undefined && translatingId !== msg.id) {
+      setTranslatingId(msg.id);
+      try {
+        const res = await translateScenarioText(msg.text.trim());
+        setTranslations((prev) => ({ ...prev, [msg.id]: res.translation }));
+      } catch {
+        setTranslations((prev) => ({
+          ...prev,
+          [msg.id]: locale === "zh" ? "（翻译暂时不可用，请稍后再试）" : "(Translation unavailable — try again shortly)",
+        }));
+      } finally {
+        setTranslatingId(null);
+      }
+    }
+    setTransShown((prev) => {
+      const next = { ...prev };
+      if (next[msg.id]) {
+        delete next[msg.id];
+      } else {
+        next[msg.id] = true;
+      }
+      return next;
+    });
   };
 
   const toggleListening = () => {
@@ -269,6 +390,7 @@ export default function ScenarioSessionPage() {
       setMessages((prev) => [
         ...prev,
         ...transcript.map((r) => ({
+          id: mkMsgId(),
           role: r.role === "user" ? ("user" as const) : ("model" as const),
           text: r.text,
           timestamp: Date.now(),
@@ -313,8 +435,19 @@ export default function ScenarioSessionPage() {
       )
     );
 
-  /** Split NPC reply into EN / translation / tip segments. */
-  const renderNpcMessage = (msg: Message) => {
+  /** Translation card — same style as the briefing greeting's example. */
+  const renderTranslationCard = (text: string) => (
+    <div className="rounded-xl border border-subtle bg-canvas p-2.5 text-xs leading-relaxed text-tertiary">
+      <p className="mb-1 text-[8px] font-black uppercase tracking-[0.2em] text-brand-text/50">
+        {t("scn.translation")}
+      </p>
+      {text}
+    </div>
+  );
+
+  /** Split NPC reply into EN / translation / tip segments. The translation
+   *  only renders when the learner toggles it via the bubble's button. */
+  const renderNpcMessage = (msg: Message, showTranslation: boolean) => {
     const segments = msg.text.split("---").map((s) => s.trim());
     const en = segments[0] ?? msg.text;
     const translation = segments[1];
@@ -322,14 +455,7 @@ export default function ScenarioSessionPage() {
     return (
       <div className="space-y-2.5">
         <p className="text-sm font-medium leading-relaxed">{renderHighlighted(en)}</p>
-        {translation && (
-          <div className="rounded-xl border border-subtle bg-canvas p-2.5 text-xs leading-relaxed text-tertiary">
-            <p className="mb-1 text-[8px] font-black uppercase tracking-[0.2em] text-brand-text/50">
-              {t("scn.translation")}
-            </p>
-            {translation}
-          </div>
-        )}
+        {showTranslation && translation && renderTranslationCard(translation)}
         {tip && (
           <div className="flex items-start gap-2 rounded-xl border border-brandborder/30 bg-brand-subtle/60 p-2.5 text-[11px] font-medium leading-relaxed text-brand-text">
             <span aria-hidden>✨</span>
@@ -366,12 +492,12 @@ export default function ScenarioSessionPage() {
 
         {briefing ? (
           /* ── Mission briefing ── */
-          <div className="mx-auto w-full max-w-3xl space-y-5 rounded-herocard border border-subtle bg-surface p-5 shadow-sm md:p-8">
+          <div className="g-card mx-auto w-full max-w-3xl space-y-5 p-5 md:p-8">
             <div className="grid gap-5 md:grid-cols-2">
               <div className="space-y-3">
                 <div className="aspect-video overflow-hidden rounded-2xl border border-subtle bg-canvas">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={scenario.image} alt={scenario.title[locale]} className="h-full w-full object-cover" referrerPolicy="no-referrer" />
+                  <img src={scenarioImg(scenario.image)} alt={scenario.title[locale]} className="h-full w-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div>
                   <h2 className="font-booster text-lg font-extrabold">{scenario.title[locale]}</h2>
@@ -439,7 +565,7 @@ export default function ScenarioSessionPage() {
               onClick={startBriefing}
               disabled={isGeneratingVocab}
               className={`w-full rounded-2xl py-4 font-booster text-base font-extrabold transition ${
-                isGeneratingVocab ? "cursor-not-allowed bg-canvas text-tertiary" : "bg-brand text-white shadow-lg shadow-brand/20 hover:brightness-105"
+                isGeneratingVocab ? "cursor-not-allowed bg-canvas text-tertiary" : "game-btn bg-brand text-white"
               }`}
             >
               {isGeneratingVocab ? t("scn.preparing") : t("scn.startSimulation")}
@@ -447,47 +573,74 @@ export default function ScenarioSessionPage() {
           </div>
         ) : (
           /* ── Chat + call ── */
-          <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-herocard border border-subtle bg-surface shadow-sm">
+          <div className="g-card flex min-h-0 flex-1 flex-col overflow-hidden">
             {/* Chat scroll area */}
             <div className="flex-1 space-y-4 overflow-y-auto p-4 md:p-6">
-              {messages.map((msg, i) => (
-                <div key={i} className={`flex flex-col ${msg.role === "user" ? "items-end" : "items-start"}`}>
-                  <div
-                    className={`max-w-[85%] rounded-2xl p-3.5 text-sm leading-relaxed shadow-sm md:max-w-[75%] ${
-                      msg.role === "user"
-                        ? "rounded-tr-sm bg-brand text-white"
-                        : "rounded-tl-sm border border-subtle bg-canvas"
-                    }`}
-                  >
-                    {msg.role === "model" ? (
-                      renderNpcMessage(msg)
-                    ) : (
-                      <p className="font-medium">
-                        {msg.text}
-                        {msg.suggestion && (
-                          <span className="mt-2 block rounded-lg bg-black/10 p-2 text-[11px] italic leading-relaxed text-white/85">
-                            ✨ <span className="text-[9px] font-bold uppercase tracking-widest text-white/60">
-                              {t("scn.suggestion")}:
-                            </span>{" "}
-                            {msg.suggestion}
-                          </span>
-                        )}
-                      </p>
-                    )}
-                  </div>
-                  {msg.role === "model" && (
-                    <button
-                      onClick={() => replay(msg)}
-                      className="mt-1 flex items-center gap-1 rounded-full px-2 py-1 text-[10px] font-semibold text-tertiary transition hover:bg-canvas hover:text-primary"
+              {messages.map((msg) => {
+                const embedded = msg.text.split("---")[1]?.trim();
+                const translationText = embedded ?? translations[msg.id];
+                const showTrans = !!transShown[msg.id];
+                return (
+                  <div key={msg.id} className={`flex flex-col ${msg.role === "user" ? "items-end" : "items-start"}`}>
+                    <div
+                      className={`max-w-[85%] rounded-2xl p-3.5 text-sm leading-relaxed md:max-w-[75%] ${
+                        msg.role === "user"
+                          ? "rounded-tr-sm bg-brand text-white"
+                          : "rounded-tl-sm border border-subtle bg-canvas"
+                      }`}
                     >
-                      <svg viewBox="0 0 24 24" className={`h-3.5 w-3.5 ${speakingId === msg.timestamp ? "animate-pulse text-brand-text" : ""}`} fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M11 5 6 9H2v6h4l5 4zM15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14" />
-                      </svg>
-                      {speakingId === msg.timestamp ? t("scn.speaking") : ""}
-                    </button>
-                  )}
-                </div>
-              ))}
+                      {msg.role === "model" ? (
+                        renderNpcMessage(msg, showTrans)
+                      ) : (
+                        <>
+                          <p className="font-medium">{msg.text}</p>
+                          {msg.suggestion && (
+                            <span className="mt-2 block rounded-lg bg-[rgba(15,23,42,0.45)] p-2 text-[11px] italic leading-relaxed text-white">
+                              ✨ <span className="text-[9px] font-bold uppercase tracking-widest text-white/60">
+                                {t("scn.suggestion")}:
+                              </span>{" "}
+                              {msg.suggestion}
+                            </span>
+                          )}
+                          {showTrans && translationText !== undefined && (
+                            <div className="mt-2">{renderTranslationCard(translationText)}</div>
+                          )}
+                        </>
+                      )}
+                    </div>
+                    {/* Per-bubble actions — each button only reflects its own bubble */}
+                    <div className="mt-1 flex items-center gap-1">
+                      {msg.role === "model" && (
+                        <button
+                          onClick={() => replay(msg)}
+                          className="flex items-center gap-1 rounded-full px-2 py-1 text-[10px] font-semibold text-tertiary transition hover:bg-canvas hover:text-primary"
+                        >
+                          <svg viewBox="0 0 24 24" className={`h-3.5 w-3.5 ${speakingId === msg.id ? "animate-pulse text-brand-text" : ""}`} fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M11 5 6 9H2v6h4l5 4zM15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14" />
+                          </svg>
+                          {speakingId === msg.id ? t("scn.speaking") : ""}
+                        </button>
+                      )}
+                      <button
+                        onClick={() => void toggleTranslation(msg)}
+                        className={`flex items-center gap-1 rounded-full px-2 py-1 text-[10px] font-semibold transition hover:bg-canvas ${
+                          showTrans ? "text-brand-text" : "text-tertiary hover:text-primary"
+                        }`}
+                      >
+                        <svg viewBox="0 0 24 24" className={`h-3.5 w-3.5 ${translatingId === msg.id ? "animate-pulse" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="m5 8 6 6" />
+                          <path d="m4 14 6-6 2-3" />
+                          <path d="M2 5h12" />
+                          <path d="M7 2h1" />
+                          <path d="m22 22-5-10-5 10" />
+                          <path d="M14 18h6" />
+                        </svg>
+                        {translatingId === msg.id ? t("scn.translating") : t("scn.translate")}
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
               {isLoading && (
                 <p className="flex items-center gap-2 text-xs text-tertiary">
                   <span className="h-3 w-3 animate-spin rounded-full border-2 border-brand border-t-transparent" />
@@ -502,7 +655,7 @@ export default function ScenarioSessionPage() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setInCall(true)}
-                  className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand text-white shadow-lg shadow-brand/25 transition hover:scale-105 active:scale-95"
+                  className="grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 border-b-4 border-[var(--ink)] bg-brand text-white shadow-[0_2px_0_0_rgba(0,0,0,0.1)] transition active:translate-y-0.5"
                   aria-label={t("scn.startLive")}
                   title={t("scn.startLive")}
                 >
@@ -533,7 +686,7 @@ export default function ScenarioSessionPage() {
                 <button
                   onClick={sendMessage}
                   disabled={isLoading || !input.trim()}
-                  className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand text-white shadow-lg shadow-brand/20 transition hover:brightness-105 disabled:opacity-40"
+                  className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border-2 border-b-4 border-[var(--ink)] bg-brand text-white shadow-[0_2px_0_0_rgba(0,0,0,0.1)] transition active:translate-y-0.5 disabled:opacity-40"
                   aria-label={t("scn.send")}
                 >
                   <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -554,7 +707,7 @@ export default function ScenarioSessionPage() {
         <ScenarioCallOverlay
           npcName={scenario.npc}
           npcRole={scenario.npcRole[locale]}
-          image={scenario.image}
+          image={scenarioImg(scenario.image)}
           emoji={scenario.emoji}
           instructions={buildCallInstructions(scenario, level, customVocab)}
           onEnd={endCall}
@@ -563,7 +716,7 @@ export default function ScenarioSessionPage() {
 
       {/* Call-ended toast */}
       {callToast && (
-        <div className="fixed bottom-28 left-1/2 z-[150] -translate-x-1/2 rounded-full bg-primary px-5 py-3 text-xs font-bold text-app shadow-2xl lg:bottom-10">
+        <div className="fixed bottom-28 left-1/2 z-[150] -translate-x-1/2 rounded-full border-2 border-[var(--ink)] bg-primary px-5 py-3 text-xs font-bold text-app shadow-[0_3px_0_0_rgba(0,0,0,0.15)] lg:bottom-10">
           📞 {t("scn.callEnded")} · {callToast}
         </div>
       )}

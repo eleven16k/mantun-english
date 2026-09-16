@@ -1,0 +1,122 @@
+{
+  "id": "gk-r6-s06",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 6,
+  "title": "Why Slow Music Sells More",
+  "titleCn": "为什么慢音乐能卖出更多",
+  "coverEmoji": "🎶",
+  "paragraphs": [
+    {
+      "text": "Step into almost any large supermarket and you may notice something unusual: the music playing quietly in the background is usually slower than the songs on the radio. Although most shoppers never pay attention to it, this choice is made on purpose. Store managers believe that gentle, slow music can change the way people walk, look and spend.",
+      "translation": "走进几乎任何一家大型超市，你也许都会注意到一件不太寻常的事：背景里轻轻播放的音乐，通常比电台里的歌要慢。虽然大多数顾客从不留意它，但这个选择是故意做出的。商店经理相信，轻柔缓慢的音乐能改变人们走路、观看和花钱的方式。"
+    },
+    {
+      "text": "For many years, researchers have studied how background music affects customers in shops. In one well-known experiment, a supermarket played fast music on some days and slow music on others. While the total number of shoppers stayed almost the same, those who heard slow music walked more slowly and spent far more money. The scientists concluded that slower music creates a relaxed mood, and relaxed people tend to browse for longer.",
+      "translation": "多年来，研究人员一直在研究背景音乐如何影响商店里的顾客。在一项著名的实验中，一家超市在某些日子播放快节奏音乐，在另一些日子播放慢节奏音乐。虽然顾客的总数几乎保持不变，但听到慢音乐的人走得更慢，花的钱却多得多。科学家们得出结论：较慢的音乐会营造出放松的情绪，而放松的人往往逛得更久。"
+    },
+    {
+      "text": "Lighting works in a similar way, as shop designers have long understood. Although bright lights are useful for showing products clearly, warmer and softer light often makes a space feel more comfortable. Despite the extra cost, many stores now invest in carefully designed lighting and pleasant smells. As is common in large shopping centres, every detail is planned to keep you inside for longer.",
+      "translation": "灯光的作用也类似，这一点商店设计师们早就明白。虽然明亮的灯光有助于清楚地展示商品，但更温暖、更柔和的光线往往会让空间感觉更舒适。尽管成本更高，如今许多商店仍会花钱布置精心设计的灯光和宜人的气味。正如大型购物中心里常见的那样，每一个细节都是为了让顾客待得更久。"
+    },
+    {
+      "text": "However, these methods do not work on everyone, and some customers find them annoying rather than helpful. While slow music may encourage a few extra purchases, it cannot hide high prices or poor service. With smartphones in hand, shoppers can now compare prices instantly, as many young people do before buying anything.",
+      "translation": "然而，这些方法并非对每个人都有效，有些顾客觉得它们令人厌烦，而不是有帮助。虽然慢音乐或许能促成一两笔额外的购买，但它无法掩盖高昂的价格或糟糕的服务。手里拿着智能手机，顾客现在可以立刻比较价格，许多年轻人在买任何东西之前都会这么做。"
+    },
+    {
+      "text": "Once you understand how a store is designed, you can decide for yourself what to buy and what to leave on the shelf. After all, the best shoppers are not those who spend the most, but those who know why they are spending.",
+      "translation": "一旦你明白了商店是如何被设计出来的，你就能自己决定要买什么、把什么留在货架上。毕竟，最好的顾客不是花钱最多的人，而是知道自己究竟为什么花钱的人。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, what happens when slow music is played in a supermarket?",
+      "audioText": "According to the passage, what happens when slow music is played in a supermarket?",
+      "options": [
+        {
+          "emoji": "🐢",
+          "value": "slow_walk",
+          "text": "Shoppers walk more slowly and spend more."
+        },
+        {
+          "emoji": "🏃",
+          "value": "hurry_out",
+          "text": "Shoppers hurry out of the store at once."
+        },
+        {
+          "emoji": "🔇",
+          "value": "hear_nothing",
+          "text": "Shoppers can no longer hear any music."
+        }
+      ],
+      "answer": "slow_walk"
+    },
+    {
+      "type": "word_builder",
+      "word": "browse",
+      "audioText": "browse"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "this",
+        "choice",
+        "is",
+        "made",
+        "on",
+        "purpose"
+      ],
+      "audioText": "This choice is made on purpose."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "these",
+        "methods",
+        "do",
+        "not",
+        "work",
+        "on",
+        "everyone"
+      ],
+      "audioText": "These methods do not work on everyone."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Although bright lights are useful for showing products clearly, warmer and softer light often makes a space feel more ___.",
+      "choices": [
+        "comfortable",
+        "expensive",
+        "crowded"
+      ],
+      "answer": "comfortable",
+      "audioText": "Although bright lights are useful for showing products clearly, warmer and softer light often makes a space feel more comfortable."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ the extra cost, many stores now invest in carefully designed lighting and pleasant smells.",
+      "choices": [
+        "Despite",
+        "Because of",
+        "Instead of"
+      ],
+      "answer": "Despite",
+      "audioText": "Despite the extra cost, many stores now invest in carefully designed lighting and pleasant smells."
+    }
+  ],
+  "_unknownWords": [
+    "shoppers",
+    "researchers",
+    "known",
+    "mood",
+    "browse",
+    "designers",
+    "despite",
+    "detail",
+    "purchases",
+    "cannot",
+    "smartphones",
+    "instantly"
+  ]
+}

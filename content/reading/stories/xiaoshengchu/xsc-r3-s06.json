@@ -1,0 +1,127 @@
+{
+  "id": "xsc-r3-s06",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 6,
+  "title": "The Candy Town Picnic",
+  "titleCn": "糖果镇野餐日",
+  "coverEmoji": "🧺",
+  "paragraphs": [
+    {
+      "text": "Last Sunday was sunny in Candy Town. All the children were very happy. We had a big picnic on the hill. My family went there at nine.",
+      "translation": "上周日糖果镇阳光很好。所有的孩子都非常开心。我们在小山上办了一次盛大的野餐。我们一家人九点钟到了那里。"
+    },
+    {
+      "text": "My mother made sweet candy sandwiches. I took some red apple juice. My little brother carried a big cake. It looked like a candy house.",
+      "translation": "妈妈做了甜甜的糖果三明治。我带了一些红苹果汁。我的小弟弟抱了一个大蛋糕。它看起来就像一座糖果屋。"
+    },
+    {
+      "text": "We walked up the green hill together. Two friends played games with us. We ran and jumped in the grass. Everyone laughed a lot.",
+      "translation": "我们一起走上绿色的小山。两个朋友和我们一起玩游戏。我们在草地上又跑又跳。每个人都笑个不停。"
+    },
+    {
+      "text": "At noon we ate lunch on the grass. The sandwiches were sweet and very nice. I drank my apple juice slowly. My brother ate three pieces of cake.",
+      "translation": "中午我们在草地上吃午饭。三明治又甜又好吃。我慢慢地喝着苹果汁。弟弟吃了三块蛋糕。"
+    },
+    {
+      "text": "After lunch, we played a candy game. We looked for candy under the trees. I saw a yellow candy near a rock. My friend found two pink candies.",
+      "translation": "午饭后，我们玩了一个糖果游戏。我们在树下找糖果。我在一块石头旁边看到了一颗黄色的糖果。我的朋友找到了两颗粉色的糖果。"
+    },
+    {
+      "text": "The sun went down in the afternoon. We cleaned the hill and went home. I was tired but very happy. It was a wonderful picnic day.",
+      "translation": "下午太阳落下去了。我们把小山打扫干净，然后就回家了。我很累，但是非常开心。那真是美妙的野餐日。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did my little brother carry to the picnic?",
+      "audioText": "What did my little brother carry to the picnic?",
+      "options": [
+        {
+          "emoji": "🍰",
+          "value": "cake",
+          "text": "Cake"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        },
+        {
+          "emoji": "🍦",
+          "value": "ice cream",
+          "text": "Ice cream"
+        }
+      ],
+      "answer": "cake"
+    },
+    {
+      "type": "word_builder",
+      "word": "picnic",
+      "audioText": "picnic"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The sandwiches ___ sweet and very nice.",
+      "choices": [
+        "was",
+        "were",
+        "are"
+      ],
+      "answer": "were",
+      "audioText": "The sandwiches were sweet and very nice."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "ran",
+        "and",
+        "jumped",
+        "in",
+        "the",
+        "grass."
+      ],
+      "audioText": "We ran and jumped in the grass."
+    },
+    {
+      "type": "image_choice",
+      "question": "What color was the candy near the rock?",
+      "audioText": "What color was the candy near the rock?",
+      "options": [
+        {
+          "emoji": "🟡",
+          "value": "yellow",
+          "text": "Yellow"
+        },
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue"
+        }
+      ],
+      "answer": "yellow"
+    },
+    {
+      "type": "word_builder",
+      "word": "yellow",
+      "audioText": "yellow"
+    }
+  ],
+  "_unknownWords": [
+    "went",
+    "made",
+    "took",
+    "ran",
+    "ate",
+    "drank",
+    "saw",
+    "found"
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "zk-r1-s14",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 14,
+  "title": "Our Class Science Show",
+  "titleCn": "我们班的科学展",
+  "coverEmoji": "🎈",
+  "paragraphs": [
+    {
+      "text": "Our class had a science show last Friday. Each group had to make something. Then we explained it to the class. I always feel a little nervous before a show.",
+      "translation": "上周五，我们班办了一场科学展。每个小组都要做一个作品，然后向全班讲解。每逢展示之前，我总是有点紧张。"
+    },
+    {
+      "text": "My group had four students in it. We made a small car with a red balloon. Li Ming thought that the car would never move. But we tested it again and again after school. Sometimes it moved a little, and sometimes it stopped.",
+      "translation": "我们组有四名同学。我们用一只红气球做了一辆小车。李明觉得这辆车根本动不起来。可放学后我们一遍又一遍地测试它。有时它动一点点，有时又干脆停住。"
+    },
+    {
+      "text": "On Friday morning, twenty small cars stood on the long table. Our teacher said that we had five minutes for each group. When our turn came, my hands felt cold. I took a deep breath and let the balloon go.",
+      "translation": "周五早上，二十辆小车摆在那张长桌上。老师说每个小组有五分钟。轮到我们时，我的手都凉了。我深吸一口气，松开了气球。"
+    },
+    {
+      "text": "At first, our car did not move. Then the air came out of the balloon and pushed it forward. The little car went slowly, and then it went fast. Our classmates clapped and laughed happily.",
+      "translation": "一开始，我们的小车一动不动。接着，空气从气球里跑出来，把它向前推。小车先慢慢走，然后就快了起来。同学们拍着手，开心地笑了起来。"
+    },
+    {
+      "text": "Another group made a big paper plane. Their plane flew across the room and landed near the door. Everyone wanted to see it again.",
+      "translation": "另一个小组做了一架大纸飞机。他们的飞机飞过教室，落在门边。大家都想再看一次。"
+    },
+    {
+      "text": "After the show, our teacher said that every group did well. I learned that a small idea can still be great. I know that working with friends is the best part. Now I always feel excited before a show.",
+      "translation": "展示结束后，老师说每个小组都做得很好。我明白了一个小小的点子也可以很了不起。我知道，和朋友一起动手才是最棒的部分。现在，每逢展示之前我总是很兴奋。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the writer's group make for the science show?",
+      "audioText": "What did the writer's group make for the science show?",
+      "options": [
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "A small car"
+        },
+        {
+          "emoji": "✈️",
+          "value": "plane",
+          "text": "A paper plane"
+        },
+        {
+          "emoji": "⛵",
+          "value": "boat",
+          "text": "A paper boat"
+        }
+      ],
+      "answer": "car"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the air from the balloon do to the little car?",
+      "audioText": "What did the air from the balloon do to the little car?",
+      "options": [
+        {
+          "emoji": "➡️",
+          "value": "forward",
+          "text": "It pushed it forward"
+        },
+        {
+          "emoji": "⬆️",
+          "value": "up",
+          "text": "It lifted it up"
+        },
+        {
+          "emoji": "🛑",
+          "value": "stop",
+          "text": "It stopped it"
+        }
+      ],
+      "answer": "forward"
+    },
+    {
+      "type": "word_builder",
+      "word": "balloon",
+      "audioText": "balloon"
+    },
+    {
+      "type": "word_builder",
+      "word": "nervous",
+      "audioText": "nervous"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Our",
+        "classmates",
+        "clapped",
+        "and",
+        "laughed",
+        "happily."
+      ],
+      "audioText": "Our classmates clapped and laughed happily."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Our teacher said that we ___ five minutes for each group.",
+      "choices": [
+        "had",
+        "have",
+        "has"
+      ],
+      "answer": "had",
+      "audioText": "Our teacher said that we had five minutes for each group."
+    }
+  ],
+  "_unknownWords": [
+    "li",
+    "happily",
+    "big",
+    "plane",
+    "room"
+  ]
+}

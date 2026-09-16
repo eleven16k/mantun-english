@@ -3,11 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useGameStore } from "@/lib/store";
+import { BASE_PATH } from "@/lib/config";
 import { generateDailyPlan, getExamPhase, getProfile, questionsFromPlan } from "@/lib/plan";
 import { TargetIcon, RepeatIcon, SparklesIcon } from "./icons";
 import { useI18n } from "@/lib/i18n";
 
-const ASSETS = "/sites/assets";
+const ASSETS = `${BASE_PATH}/sites/assets`;
 const STUDY_OFFSETS = [0, -2, -4, -5, -5, -6];
 
 /** English-practice action buttons (lucide 26px + Inter-Bold 16px) */
@@ -18,6 +19,7 @@ const ACTIONS = [
   // { label: "dash.youtube", href: "/import?mode=youtube", d: "M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.92 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27z" },
   { label: "dash.more", href: "/import", d: "M12 5v14M5 12l7 7 7-7" },
   { label: "dash.pk", href: "/pk", d: "M14.5 17.5 3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M19 21l3-3M14.5 6.5 18 3h3v3l-3.5 4M5 14l4 4M7 17l-3 3M3 19l2 2" },
+  { label: "dash.reading", href: "/reading", d: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" },
   { label: "dash.solve", href: "/solve", d: "M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" },
 ] as const;
 
@@ -59,9 +61,8 @@ export function Dashboard() {
   };
 
   return (
-    <div className="mx-auto flex w-full max-w-[768px] flex-1 flex-col px-6 pt-[84px]">
-      <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary">{t("dash.title")}</h1>
-
+    <div className="page-shell flex flex-1 flex-col">
+      {/* 首页标题已移除——首屏直接进内容（倒计时/今日计划），顶部留白由 pt-[84px] 承担 */}
       {/* D2: Countdown banner */}
       {exam && exam.daysLeft > 0 && (
         <div className={`mt-3 flex items-center justify-between rounded-pill px-4 py-2 ${
@@ -78,13 +79,13 @@ export function Dashboard() {
         </div>
       )}
 
-      {/* hero: mascot + English-practice headline */}
-      <div className="flex flex-col items-center gap-2 pt-6">
+      {/* hero: mascot + headline — 紧凑横排，保证首屏内露出今日计划卡 */}
+      <div className="flex items-center justify-center gap-4 pt-3">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`${ASSETS}/dolphin.png`} alt={t("dash.mascotAlt")} className="h-[280px] w-[280px] object-contain" />
-        <h2 className="flex flex-wrap items-baseline justify-center gap-x-1">
+        <img src={`${ASSETS}/dolphin.png`} alt={t("dash.mascotAlt")} className="h-[104px] w-[104px] object-contain lg:h-[132px] lg:w-[132px]" />
+        <h2 className="flex flex-wrap items-baseline gap-x-1">
           <span className="text-[16px] font-bold leading-[24px] text-secondary">{t("dash.readyTo")}</span>
-          <span className="inline-flex font-booster text-[34px] font-extrabold leading-[40px] text-secondary">
+          <span className="inline-flex font-booster text-[30px] font-extrabold leading-[36px] text-secondary">
             {t("dash.studyBig").split("").map((ch, i) => (
               <span key={i} style={{ transform: `translateY(${STUDY_OFFSETS[i] ?? 0}px)` }}>
                 {ch}
@@ -95,7 +96,11 @@ export function Dashboard() {
       </div>
 
       {/* D1: Daily plan card — white r30 with paper border */}
-      <div className="mt-8 rounded-[30px] border-2 border-subtle bg-surface p-5">
+      <div className="relative mt-5 rounded-[30px] border-4 bg-surface p-5" style={{ borderColor: "var(--bg-canvas)" }}>
+        {/* juyou 贴纸签名：右上角旋转标签（Lexi 业务词） */}
+        <span className="game-badge absolute -top-3 right-6 z-10 text-xs text-[#0f172a]">
+          🎯 {t("dash.todayPlan")}
+        </span>
         <div className="flex items-center gap-3 rounded-pill bg-canvas px-4 py-3">
           <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-tertiary" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 14l-4-4 4-4" />
@@ -165,7 +170,7 @@ export function Dashboard() {
       <div className="flex justify-center pb-8">
         <button
           onClick={() => router.push("/quiz")}
-          className="flex h-[40px] items-center gap-1.5 rounded-pill bg-surface px-5 text-[16px] text-primary shadow-sm transition hover:bg-canvas"
+          className="flex h-[40px] items-center gap-1.5 rounded-pill bg-surface px-5 text-[16px] text-primary transition hover:bg-canvas"
         >
           <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] text-tertiary" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="10" />

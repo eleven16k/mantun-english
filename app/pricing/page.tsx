@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
 import { subscribe } from "@/lib/api";
 import { shippedMembershipFeatures } from "@/lib/membership";
@@ -93,13 +94,12 @@ export default function PricingPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-2">{t("pricing.title")}</h1>
-        <p className="mb-5 text-sm text-secondary">{t("pricing.subtitle")}</p>
+      <div className="page-shell">
+        <PageHeader badge="👑 MEMBERSHIP" title={t("pricing.title")} sub={t("pricing.subtitle")} />
 
         {/* Subscription success */}
         {subscribed && (
-          <div className="mb-5 rounded-2xl border border-[var(--bg-positive-emphasis-default)] bg-[color-mix(in_srgb,var(--bg-positive-emphasis-default)_10%,transparent)] p-4 text-center">
+          <div className="mb-5 rounded-2xl border-2 border-b-4 border-[#22C55E] bg-[#F0FDF4] p-4 text-center">
             <p className="font-booster text-base font-extrabold text-positive">✓ {t("pricing.subOk")}</p>
             <p className="mt-1 text-xs text-secondary">
               {t("pricing.subUntil")} {new Date(subscribed.expiresAt * 1000).toLocaleDateString()}
@@ -109,7 +109,7 @@ export default function PricingPage() {
         {error && <p className="mb-4 text-center text-xs font-bold text-critical">{error}</p>}
 
         {/* Free vs member comparison */}
-        <div className="mb-6 g-card overflow-hidden shadow-sm">
+        <div className="mb-6 g-card overflow-hidden">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-subtle bg-canvas">
@@ -138,12 +138,12 @@ export default function PricingPage() {
               onClick={() => setSelected(plan.id)}
               className={`relative flex flex-col rounded-3xl border-2 p-5 text-left transition ${
                 selected === plan.id
-                  ? "border-brandborder bg-brand-subtle shadow-lg"
-                  : "border-subtle bg-surface shadow-sm hover:border-brandborder"
+                  ? "border-brandborder bg-brand-subtle"
+                  : "border-subtle bg-surface hover:border-brandborder"
               }`}
             >
               {plan.highlight && (
-                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3 py-0.5 text-[10px] font-bold uppercase text-white shadow-sm">
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3 py-0.5 text-[10px] font-bold uppercase text-white">
                   {t("pricing.bestValue")}
                 </span>
               )}
@@ -174,7 +174,7 @@ export default function PricingPage() {
         <button
           onClick={confirm}
           disabled={subscribing || !!subscribed}
-          className="mt-6 w-full rounded-pill bg-action py-4 font-booster text-base font-extrabold text-white shadow-sm transition hover:bg-actionhover active:scale-[0.98] disabled:opacity-50"
+          className="mt-6 w-full rounded-pill bg-action py-4 font-booster text-base font-extrabold text-white transition hover:bg-actionhover active:scale-[0.98] disabled:opacity-50"
         >
           {subscribed ? t("pricing.subOk") : subscribing ? t("pricing.subscribing") : t("pricing.subscribe")}
         </button>

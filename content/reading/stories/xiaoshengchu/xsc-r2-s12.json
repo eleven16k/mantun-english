@@ -1,0 +1,122 @@
+{
+  "id": "xsc-r2-s12",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 12,
+  "title": "Squirrel's Lost Nuts",
+  "titleCn": "松鼠的坚果不见了",
+  "coverEmoji": "🐿️",
+  "paragraphs": [
+    {
+      "text": "Squirrel is walking home. She has a big bag of nuts. She likes finding nuts in autumn.",
+      "translation": "松鼠正往家走。她背着一大袋坚果。她喜欢在秋天找坚果。"
+    },
+    {
+      "text": "Oh no! The bag has a small hole. The nuts are falling on the road.",
+      "translation": "哎呀！袋子破了一个小洞。坚果正一颗颗掉在路上。"
+    },
+    {
+      "text": "Rabbit is playing nearby. She sees the nuts on the road. \"Squirrel! Your nuts are falling!\" she says.",
+      "translation": "兔子正在附近玩。她看到路上的坚果。\"松鼠！你的坚果在往下掉呢！\"她说。"
+    },
+    {
+      "text": "Squirrel looks at the empty bag. She is very sad. \"Oh no, my nuts are gone!\" she says.",
+      "translation": "松鼠看着空空的袋子。她非常难过。\"哎呀，我的坚果都不见了！\"她说。"
+    },
+    {
+      "text": "Rabbit calls her friends. Duck and Bear are coming. They are helping Squirrel find the nuts. Bear is carrying a big basket.",
+      "translation": "兔子叫来了朋友们。鸭子和熊正赶过来。他们正帮松鼠找坚果。熊还提着一个大篮子。"
+    },
+    {
+      "text": "Now the nuts are in the big basket. Squirrel is smiling again. \"Thank you, my good friends!\" she says.",
+      "translation": "现在坚果都在大篮子里了。松鼠又笑了起来。\"谢谢你们，我的好朋友！\"她说。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is Squirrel carrying home?",
+      "audioText": "What is Squirrel carrying home?",
+      "options": [
+        {
+          "emoji": "👜",
+          "value": "bag",
+          "text": "Bag"
+        },
+        {
+          "emoji": "🧺",
+          "value": "basket",
+          "text": "Basket"
+        },
+        {
+          "emoji": "🎈",
+          "value": "balloon",
+          "text": "Balloon"
+        }
+      ],
+      "answer": "bag"
+    },
+    {
+      "type": "image_choice",
+      "question": "What is falling on the road?",
+      "audioText": "What is falling on the road?",
+      "options": [
+        {
+          "emoji": "🌰",
+          "value": "nuts",
+          "text": "Nuts"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apples",
+          "text": "Apples"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        }
+      ],
+      "answer": "nuts"
+    },
+    {
+      "type": "word_builder",
+      "word": "nuts",
+      "audioText": "nuts"
+    },
+    {
+      "type": "word_builder",
+      "word": "friends",
+      "audioText": "friends"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "are",
+        "helping",
+        "Squirrel",
+        "find",
+        "the",
+        "nuts"
+      ],
+      "audioText": "They are helping Squirrel find the nuts."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Squirrel ___ carrying a big bag of nuts.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "is",
+      "audioText": "Squirrel is carrying a big bag of nuts."
+    }
+  ],
+  "_unknownWords": [
+    "squirrel",
+    "nuts",
+    "gone"
+  ]
+}

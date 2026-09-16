@@ -1,0 +1,133 @@
+{
+  "id": "gk-r7-s06",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 6,
+  "title": "A Planet Worth Passing On",
+  "titleCn": "值得传递的星球",
+  "coverEmoji": "🌍",
+  "paragraphs": [
+    {
+      "text": "Imagine standing in a city of 2050, breathing clean air and drinking water that once ran grey with waste. What would you say to the people of today, whose choices decided whether that scene came true? Had our generation ignored the warnings, the sky above us might now be a silent brown ceiling. The warning signs were never hidden. They were simply easier to postpone than to solve, and postponing is what we do best when the cost arrives later than the comfort.",
+      "translation": "想象你站在2050年的一座城市里，呼吸着干净的空气，喝着曾经被废物染成灰色的水。你会对今天的人们说些什么——正是他们的选择决定了那一幕能否成真？倘若我们这一代人当年无视那些警告，此刻头顶的天空也许只是一片沉寂的褐色穹顶。警示从未被隐藏。它们只是比解决更容易被推迟，而当代价总比安逸来得更晚时，推迟正是我们最擅长的事。"
+    },
+    {
+      "text": "If the world had invested in clean power thirty years earlier, the air in many cities would be clearer than it is today. That is not a reason to give up, but a reason to begin, and to begin faster than we have ever begun before. Solar panels now cost a fraction of what they did, and wind farms are no longer strange shapes on the horizon. What once sounded impossible has become ordinary. That, in fact, is how most progress arrives—quietly, and later than expected.",
+      "translation": "如果世界在三十年前就投资清洁能源，如今许多城市的空气会比现在清澈得多。但这并不是放弃的理由，而是开始行动的理由——而且要比以往任何时候开始得更快。太阳能板如今的价格只是过去的零头，风力发电场也不再是地平线上陌生的形状。曾经听起来不可能的事，已经变得平常。事实上，大多数进步正是这样到来的——悄无声息，且比预期更晚。"
+    },
+    {
+      "text": "Space exploration is not an escape plan, though some people read it that way. Satellites watch our forests, measure our oceans, and warn us hours before a storm strikes the coast. Were we to abandon such tools, we would lose sight of the very planet we claim to protect. Looking outward, therefore, teaches us to look back with greater care, not less.",
+      "translation": "太空探索并不是一条逃生之路，尽管有些人这样解读它。卫星注视着我们的森林，测量着我们的海洋，在风暴袭击海岸的数小时前就发出警告。若我们放弃这些工具，便会看不见我们声称要保护的那颗星球。因此，向外眺望，教会我们更加用心地回望，而非更少。"
+    },
+    {
+      "text": "No single country can repair the climate alone, and no single generation can finish the work. Only when neighbours share both the cost and the benefit will long-term plans survive the pressure of the moment. Cooperation is slower, but it lasts longer, and lasting is exactly what our planet needs most.",
+      "translation": "没有任何一个国家能独自修复气候，也没有任何一代人能完成这项工作。只有当邻国共同分担成本、共享收益时，长期计划才能在当下的压力中存活下来。合作比命令更慢，却更持久，而持久恰恰是我们的星球最需要的。"
+    },
+    {
+      "text": "The future, after all, is not a distant country that we will one day reach. It is a house we are building with every decision we make today. Small steps, taken by many hands, move further than great speeches delivered by few. So let us choose, deliberately and together, to pass on a planet worth living on.",
+      "translation": "毕竟，未来并不是一个我们终将抵达的遥远国度。它是一座我们正用今天的每一个决定建造起来的房子。许多双手迈出的小步，比少数人发表的宏论走得更远。所以，让我们谨慎而携手地选择，把一颗值得生活其上的星球传递下去。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, which of these do satellites help us do?",
+      "audioText": "According to the text, which of these do satellites help us do?",
+      "options": [
+        {
+          "emoji": "🌊",
+          "value": "ocean",
+          "text": "Measure our oceans"
+        },
+        {
+          "emoji": "🚀",
+          "value": "escape",
+          "text": "Leave Earth forever"
+        },
+        {
+          "emoji": "🏙️",
+          "value": "city",
+          "text": "Build new cities"
+        }
+      ],
+      "answer": "ocean"
+    },
+    {
+      "type": "word_builder",
+      "word": "survive",
+      "audioText": "survive"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Cooperation",
+        "is",
+        "slower,",
+        "but",
+        "it",
+        "lasts",
+        "longer."
+      ],
+      "audioText": "Cooperation is slower, but it lasts longer."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "What",
+        "once",
+        "sounded",
+        "impossible",
+        "has",
+        "become",
+        "ordinary."
+      ],
+      "audioText": "What once sounded impossible has become ordinary."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Only when neighbours share both the cost and the benefit ___ long-term plans survive the pressure of the moment.",
+      "choices": [
+        "will",
+        "would",
+        "do"
+      ],
+      "answer": "will",
+      "audioText": "Only when neighbours share both the cost and the benefit will long-term plans survive the pressure of the moment."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Had our generation ___ the warnings, the sky above us might now be a silent brown ceiling.",
+      "choices": [
+        "ignored",
+        "ignore",
+        "ignoring"
+      ],
+      "answer": "ignored",
+      "audioText": "Had our generation ignored the warnings, the sky above us might now be a silent brown ceiling."
+    }
+  ],
+  "_unknownWords": [
+    "grey",
+    "generation",
+    "warnings",
+    "hidden",
+    "simply",
+    "easier",
+    "postpone",
+    "solve",
+    "postponing",
+    "earlier",
+    "begun",
+    "solar",
+    "panels",
+    "fraction",
+    "horizon",
+    "exploration",
+    "claim",
+    "outward",
+    "neighbours",
+    "cooperation",
+    "taken",
+    "deliberately"
+  ]
+}

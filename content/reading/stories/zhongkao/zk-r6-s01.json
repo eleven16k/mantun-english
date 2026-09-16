@@ -1,0 +1,124 @@
+{
+  "id": "zk-r6-s01",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 1,
+  "title": "Lanterns and New Friends",
+  "titleCn": "灯笼与新朋友",
+  "coverEmoji": "🏮",
+  "paragraphs": [
+    {
+      "text": "The Lantern Festival is one of the most important festivals in China. It comes on the fifteenth day of the first month in the Chinese calendar. This year, my Australian friend Emma came to my city to see it with me.",
+      "translation": "元宵节是中国最重要的节日之一。它在农历正月十五到来。今年，我的澳大利亚朋友埃玛来到我所在的城市，和我一起看灯。"
+    },
+    {
+      "text": "Emma told me that she had never seen so many red lanterns before. The streets were so bright that they looked like a river of light. We walked slowly under the big trees.",
+      "translation": "埃玛告诉我，她以前从没见过这么多红灯笼。街道亮得像一条光的河。我们在大树下面慢慢地走着。"
+    },
+    {
+      "text": "My mother made tangyuan, which is a sweet rice ball with sugar inside. Emma said that it was the best food she had ever tasted. It was such a lovely food that she asked for a second bowl.",
+      "translation": "妈妈做了汤圆，那是一种里面包着糖的甜米团。埃玛说，这是她吃过的最好吃的东西。它太可口了，她又吃了一碗。"
+    },
+    {
+      "text": "An old man taught us how to make a small lantern with bamboo and red paper. He said that people have made lanterns like these for more than a thousand years. We finished it together.",
+      "translation": "一位老人教我们用竹子和红纸做小灯笼。他说，人们做这样的灯笼已经有一千多年了。我们一起把它做好了。"
+    },
+    {
+      "text": "Emma showed me photos of the Christmas lights in her home town. She said that people in her country also love bright lights at night. Although our festivals are different, they carry the same warm wish.",
+      "translation": "埃玛给我看了她家乡圣诞灯的照片。她说，在她的国家，人们也喜欢夜晚明亮的灯。虽然我们的节日不同，但它们带着同样温暖的祝愿。"
+    },
+    {
+      "text": "On that night I understood that culture is a bridge which connects different people. I hope Emma will come back next year, when we can enjoy the festival again.",
+      "translation": "那一晚我明白了，文化是一座连接不同人的桥。我希望埃玛明年再来，那时我们可以一起再过这个节日。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What sweet food did Emma taste at the festival?",
+      "audioText": "What sweet food did Emma taste at the festival?",
+      "options": [
+        {
+          "emoji": "🍡",
+          "value": "tangyuan",
+          "text": "Sweet rice balls"
+        },
+        {
+          "emoji": "🍕",
+          "value": "pizza",
+          "text": "Pizza"
+        },
+        {
+          "emoji": "🍜",
+          "value": "noodles",
+          "text": "Noodles"
+        }
+      ],
+      "answer": "tangyuan"
+    },
+    {
+      "type": "word_builder",
+      "word": "lantern",
+      "audioText": "lantern"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "walked",
+        "slowly",
+        "under",
+        "the",
+        "big",
+        "trees."
+      ],
+      "audioText": "We walked slowly under the big trees."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "finished",
+        "it",
+        "together."
+      ],
+      "audioText": "We finished it together."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "My mother made tangyuan, ___ is a sweet rice ball with sugar inside.",
+      "choices": [
+        "which",
+        "who",
+        "what"
+      ],
+      "answer": "which",
+      "audioText": "My mother made tangyuan, which is a sweet rice ball with sugar inside."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The streets were so ___ that they looked like a river of light.",
+      "choices": [
+        "bright",
+        "quiet",
+        "cold"
+      ],
+      "answer": "bright",
+      "audioText": "The streets were so bright that they looked like a river of light."
+    }
+  ],
+  "_unknownWords": [
+    "lantern",
+    "china",
+    "fifteenth",
+    "chinese",
+    "calendar",
+    "australian",
+    "seen",
+    "lanterns",
+    "big",
+    "tangyuan",
+    "rice",
+    "asked"
+  ]
+}

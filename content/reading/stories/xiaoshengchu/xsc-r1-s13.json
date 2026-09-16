@@ -1,0 +1,132 @@
+{
+  "id": "xsc-r1-s13",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 13,
+  "title": "My Dog and the Red Apples",
+  "titleCn": "我的小狗和红苹果",
+  "coverEmoji": "🐶",
+  "paragraphs": [
+    {
+      "text": "I have a little dog. His name is Coco. He is small and white. He likes the apple orchard.",
+      "translation": "我有一只小狗。他叫可可。他又小又白。他很喜欢苹果园。"
+    },
+    {
+      "text": "My family has a big orchard. There are many apple trees. The trees are tall and green. Red apples grow on the trees.",
+      "translation": "我们家有一个大果园。那里有很多苹果树。树又高又绿。红苹果就长在树上。"
+    },
+    {
+      "text": "Coco runs in the orchard. He can run very fast. He has a red ball. He plays with the ball.",
+      "translation": "可可在果园里跑来跑去。他跑得可快了。他有一个红球。他和球一起玩。"
+    },
+    {
+      "text": "My dad picks big apples. My mom puts them in a basket. I eat a sweet red apple. It is very nice.",
+      "translation": "爸爸摘大苹果。妈妈把苹果放进篮子里。我吃一个又红又甜的苹果。味道真不错。"
+    },
+    {
+      "text": "Coco sees a green apple. It falls from the tree. He wants to play with it. The apple rolls away.",
+      "translation": "可可看见一个绿苹果。它从树上掉下来。他想和它玩。可苹果滚走了。"
+    },
+    {
+      "text": "We go home in the evening. Coco is tired and happy. He sleeps with his ball. I love my little dog.",
+      "translation": "傍晚我们回家去。可可又累又开心。他抱着自己的球睡着了。我爱我的小狗。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What color is Coco?",
+      "audioText": "What color is Coco?",
+      "options": [
+        {
+          "emoji": "⚪",
+          "value": "white",
+          "text": "White"
+        },
+        {
+          "emoji": "⚫",
+          "value": "black",
+          "text": "Black"
+        },
+        {
+          "emoji": "🟤",
+          "value": "brown",
+          "text": "Brown"
+        }
+      ],
+      "answer": "white"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Coco have?",
+      "audioText": "What does Coco have?",
+      "options": [
+        {
+          "emoji": "⚽",
+          "value": "ball",
+          "text": "A ball"
+        },
+        {
+          "emoji": "🧸",
+          "value": "toy",
+          "text": "A toy"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        }
+      ],
+      "answer": "ball"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where does Coco run?",
+      "audioText": "Where does Coco run?",
+      "options": [
+        {
+          "emoji": "🌳",
+          "value": "orchard",
+          "text": "In the orchard"
+        },
+        {
+          "emoji": "🏠",
+          "value": "house",
+          "text": "In the house"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "At school"
+        }
+      ],
+      "answer": "orchard"
+    },
+    {
+      "type": "word_builder",
+      "word": "orchard",
+      "audioText": "orchard"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "He",
+        "plays",
+        "with",
+        "the",
+        "ball."
+      ],
+      "audioText": "He plays with the ball."
+    }
+  ],
+  "_unknownWords": [
+    "coco",
+    "orchard",
+    "rolls"
+  ]
+}

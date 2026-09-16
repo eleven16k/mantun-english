@@ -1,0 +1,120 @@
+{
+  "id": "gk-r4-s07",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 7,
+  "title": "Good Food, Better Mood",
+  "titleCn": "好食物，好心情",
+  "coverEmoji": "🥗",
+  "paragraphs": [
+    {
+      "text": "Most people choose their food by taste alone, but scientists have found a strong link between diet and mood. Choosing the right meals can help you think more clearly and feel calmer during a busy week. To eat well is not just to feed your body; it is also to support your mind.",
+      "translation": "大多数人只凭口味挑食物，但科学家发现饮食与情绪之间有着密切的联系。选择合适的三餐能帮你思路更清晰，在忙碌的一周里心情更平静。吃得好不只是喂饱身体，也是在支持你的大脑。"
+    },
+    {
+      "text": "Starting the day with a proper breakfast is one of the simplest habits to build. When you skip it, your blood sugar drops, and you may find it hard to concentrate in class. Many students should have eaten something before the first lesson, but they chose an extra ten minutes in bed instead. A bowl of porridge with fruit, or an egg and some wholemeal bread, will keep you going until lunch.",
+      "translation": "用一顿像样的早餐开启一天，是最容易养成的习惯之一。不吃早餐，血糖就会下降，你可能会发现上课很难集中注意力。很多学生本应在第一节课前吃点东西，却选择在床上多赖十分钟。一碗加水果的燕麦粥，或者一个鸡蛋加全麦面包，能让你撑到午饭。"
+    },
+    {
+      "text": "Mood and food are linked. Doctors now suggest eating more colourful vegetables, fruit, nuts and fish, which protect the brain and steady our emotions. These foods contain vitamins and healthy fats that help the body produce chemicals connected with a good mood. Avoiding too much sugar is equally important, because sweet drinks give a quick high followed by a long low. Snacking on an apple instead of a chocolate bar is a small change with a real effect.",
+      "translation": "情绪和食物是有关联的。医生如今建议多吃各种颜色的蔬菜、水果、坚果和鱼，它们能保护大脑、稳定情绪。这些食物含有的维生素和健康脂肪，能帮助身体生成与好心情相关的化学物质。少吃糖同样重要，因为甜饮料带来的兴奋来得快，低落也持续得久。把巧克力换成苹果当零食，是小小的改变，却真的有效。"
+    },
+    {
+      "text": "Water is easy to forget. Drinking enough water matters more than most of us realise; even mild thirst can make us tired and irritable. Eating at regular times, and sharing meals with friends or family, also lifts the spirit. Talking and laughing over dinner slows us down and helps us notice when we are full.",
+      "translation": "水很容易被忽略。喝够水比我们大多数人意识到的更重要；哪怕只是轻微口渴，也会让人疲倦、烦躁。按时吃饭，和朋友或家人一起用餐，也能提升情绪。晚餐时聊天说笑让我们慢下来，也帮我们察觉自己已经吃饱。"
+    },
+    {
+      "text": "Good eating, then, is not a strict rule but a friendly habit. Enjoying your food, choosing it with care, and giving your body regular fuel will reward you with better moods and sharper thinking.",
+      "translation": "所以，好好吃饭不是一条严格的规矩，而是一个友善的习惯。享受食物、用心选择，并给身体规律的能量，你收获的将是更好的心情和更敏锐的思维。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which snack does the passage suggest instead of a chocolate bar?",
+      "audioText": "Which snack does the passage suggest instead of a chocolate bar?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        },
+        {
+          "emoji": "🍫",
+          "value": "chocolate",
+          "text": "A chocolate bar"
+        },
+        {
+          "emoji": "🥤",
+          "value": "sweet_drink",
+          "text": "A sweet drink"
+        }
+      ],
+      "answer": "apple"
+    },
+    {
+      "type": "word_builder",
+      "word": "breakfast",
+      "audioText": "breakfast"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Mood",
+        "and",
+        "food",
+        "are",
+        "linked."
+      ],
+      "audioText": "Mood and food are linked."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Water",
+        "is",
+        "easy",
+        "to",
+        "forget."
+      ],
+      "audioText": "Water is easy to forget."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Many students ___ something before the first lesson, but they chose an extra ten minutes in bed instead.",
+      "choices": [
+        "should have eaten",
+        "should eat",
+        "would eat"
+      ],
+      "answer": "should have eaten",
+      "audioText": "Many students should have eaten something before the first lesson, but they chose an extra ten minutes in bed instead."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ well is not just to feed your body.",
+      "choices": [
+        "To eat",
+        "Eat",
+        "Eating to"
+      ],
+      "answer": "To eat",
+      "audioText": "To eat well is not just to feed your body."
+    }
+  ],
+  "_unknownWords": [
+    "mood",
+    "simplest",
+    "skip",
+    "eaten",
+    "wholemeal",
+    "colourful",
+    "nuts",
+    "steady",
+    "vitamins",
+    "snacking",
+    "thirst",
+    "irritable",
+    "moods"
+  ]
+}

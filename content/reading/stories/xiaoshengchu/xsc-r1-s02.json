@@ -1,0 +1,138 @@
+{
+  "id": "xsc-r1-s02",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 2,
+  "title": "Apples for My Family",
+  "titleCn": "给家人的苹果",
+  "coverEmoji": "🍎",
+  "paragraphs": [
+    {
+      "text": "It is a sunny day. My family is at the apple orchard. The sky is blue.",
+      "translation": "今天是个大晴天。我们一家人来到苹果园。天空蓝蓝的。"
+    },
+    {
+      "text": "There are many apple trees. The apples are red and green. They look like small balls.",
+      "translation": "园子里有许多苹果树。苹果有红的，也有绿的。它们看起来像一个个小球。"
+    },
+    {
+      "text": "My father gets the high apples. My mother has a big basket. I pick the low apples.",
+      "translation": "爸爸摘高处的苹果。妈妈拿着一个大篮子。我摘低处的苹果。"
+    },
+    {
+      "text": "My little sister has a toy dog. The dog is brown and white. It runs under the trees.",
+      "translation": "我的小妹妹有一只玩具狗。小狗是棕白相间的。它在树下跑来跑去。"
+    },
+    {
+      "text": "A bird sits on a branch. It is small and yellow. It sings a happy song.",
+      "translation": "一只小鸟停在树枝上。它又小又黄。它唱着欢快的歌。"
+    },
+    {
+      "text": "We have ten red apples. Mom makes apple juice. I love our apple day!",
+      "translation": "我们摘了十个红苹果。妈妈做苹果汁。我爱我们的苹果日！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What color is the sky?",
+      "audioText": "What color is the sky?",
+      "options": [
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue"
+        },
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        }
+      ],
+      "answer": "blue"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does my little sister have?",
+      "audioText": "What does my little sister have?",
+      "options": [
+        {
+          "emoji": "🐶",
+          "value": "toy dog",
+          "text": "A toy dog"
+        },
+        {
+          "emoji": "🐱",
+          "value": "toy cat",
+          "text": "A toy cat"
+        },
+        {
+          "emoji": "🐟",
+          "value": "toy fish",
+          "text": "A toy fish"
+        }
+      ],
+      "answer": "toy dog"
+    },
+    {
+      "type": "image_choice",
+      "question": "What color is the bird?",
+      "audioText": "What color is the bird?",
+      "options": [
+        {
+          "emoji": "🟡",
+          "value": "yellow",
+          "text": "Yellow"
+        },
+        {
+          "emoji": "⚫",
+          "value": "black",
+          "text": "Black"
+        },
+        {
+          "emoji": "🟤",
+          "value": "brown",
+          "text": "Brown"
+        }
+      ],
+      "answer": "yellow"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "apples",
+        "are",
+        "red",
+        "and",
+        "green"
+      ],
+      "audioText": "The apples are red and green."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The sky ___ blue.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "is",
+      "audioText": "The sky is blue."
+    }
+  ],
+  "_unknownWords": [
+    "orchard",
+    "branch"
+  ]
+}

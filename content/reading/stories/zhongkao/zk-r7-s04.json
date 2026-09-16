@@ -1,0 +1,125 @@
+{
+  "id": "zk-r7-s04",
+  "track": "zhongkao",
+  "regionId": "zk-r7",
+  "order": 4,
+  "title": "Good Rules, Warm Hearts",
+  "titleCn": "好的规则，温暖的心",
+  "coverEmoji": "🌐",
+  "paragraphs": [
+    {
+      "text": "More and more students in our school use the internet every day now. We chat with friends, watch short videos and look for answers online. The internet makes our lives easier and much more interesting than before. However, it also brings some new problems that we cannot ignore.",
+      "translation": "现在，我们学校越来越多的学生每天都在上网。我们在网上和朋友聊天、看短视频、查资料。互联网让我们的生活比以前更方便、更有趣。但是，它也带来了一些我们无法忽视的新问题。"
+    },
+    {
+      "text": "Some people say unkind words online because they think nobody knows who they are. When they hide behind a screen, they forget that real people are reading. If I were one of them, I would think twice before writing anything. I wish everyone could remember this simple truth.",
+      "translation": "有些人在网上说难听的话，因为他们觉得没人知道他们是谁。当他们躲在屏幕后面时，就忘了读这些话的都是真实的人。如果我是他们中的一员，我会在写下任何东西之前再三考虑。我希望每个人都能记住这个简单的道理。"
+    },
+    {
+      "text": "To follow the rules of a website is not always easy, but it is necessary. Rules protect us instead of limiting us. Although some young people feel that rules are boring, most of us understand their value. When everyone follows the same rules, we can all enjoy the internet safely.",
+      "translation": "遵守一个网站的规则并不总是容易，但这是必要的。规则是在保护我们，而不是限制我们。虽然有些年轻人觉得规则很无聊，但我们大多数人明白它们的价值。当每个人都遵守同样的规则时，我们才能一起安全地享受互联网。"
+    },
+    {
+      "text": "Last month our class started a small group to help older people use their phones. We visit a community centre every Saturday and answer their questions patiently. To teach an old person how to send a photo takes time and care. When they say thank you with a big smile, we feel that our work is meaningful.",
+      "translation": "上个月，我们班成立了一个小组，帮助老年人使用手机。我们每周六去社区中心，耐心地回答他们的问题。教一位老人怎样发送照片，需要时间和耐心。当他们带着大大的笑容对我们说谢谢时，我们觉得自己的付出很有意义。"
+    },
+    {
+      "text": "If everyone followed the rules and treated others with respect, our online world would be warmer. To be kind online is not difficult. Kindness costs us nothing, but it means a lot to others. I wish more people would stop and think before they type. Good rules and warm hearts can change our online life for the better.",
+      "translation": "如果每个人都遵守规则、以尊重之心对待他人，我们的网络世界会变得更温暖。在网上友善并不难。善良不花费我们什么，但对别人意义重大。我希望更多的人能在打字之前停下来想一想。好的规则和温暖的心，能让我们的网络生活变得更好。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What do the students in the writer's class do every Saturday?",
+      "audioText": "What do the students in the writer's class do every Saturday?",
+      "options": [
+        {
+          "emoji": "📱",
+          "value": "phones",
+          "text": "Help older people use phones"
+        },
+        {
+          "emoji": "⚽",
+          "value": "sports",
+          "text": "Play ball games in the park"
+        },
+        {
+          "emoji": "🎬",
+          "value": "films",
+          "text": "Watch films at the cinema"
+        }
+      ],
+      "answer": "phones"
+    },
+    {
+      "type": "word_builder",
+      "word": "respect",
+      "audioText": "respect"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Rules",
+        "protect",
+        "us",
+        "instead",
+        "of",
+        "limiting",
+        "us"
+      ],
+      "audioText": "Rules protect us instead of limiting us."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "To",
+        "be",
+        "kind",
+        "online",
+        "is",
+        "not",
+        "difficult"
+      ],
+      "audioText": "To be kind online is not difficult."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ follow the rules of a website is not always easy, but it is necessary.",
+      "choices": [
+        "To",
+        "For",
+        "With"
+      ],
+      "answer": "To",
+      "audioText": "To follow the rules of a website is not always easy, but it is necessary."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If I ___ one of them, I would think twice before writing anything.",
+      "choices": [
+        "were",
+        "am",
+        "will be"
+      ],
+      "answer": "were",
+      "audioText": "If I were one of them, I would think twice before writing anything."
+    }
+  ],
+  "_unknownWords": [
+    "chat",
+    "online",
+    "easier",
+    "cannot",
+    "ignore",
+    "unkind",
+    "hide",
+    "limiting",
+    "community",
+    "big",
+    "meaningful",
+    "world",
+    "kindness",
+    "type"
+  ]
+}

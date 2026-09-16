@@ -1,0 +1,132 @@
+{
+  "id": "gk-r6-s08",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 8,
+  "title": "Why We Trust Strangers' Reviews",
+  "titleCn": "我们为何相信陌生人的评价",
+  "coverEmoji": "⭐",
+  "paragraphs": [
+    {
+      "text": "When you decide to buy a pair of headphones online, you probably spend more time reading strangers' comments than studying the product itself. Although the photos look attractive and the price seems fair, a quiet doubt remains until you see a four-star rating with hundreds of reviews. Shoppers rarely admit it, but a single sentence from an unknown customer can decide whether a purchase happens at all.",
+      "translation": "当你在网上决定买一副耳机时，你花在阅读陌生人评论上的时间，很可能比研究产品本身还多。尽管图片看起来诱人、价格也算公道，但在看到有几百条评价的四星评分之前，你心里总会留着一丝疑虑。购物者很少承认这一点，但来自一位陌生顾客的一句话，就能决定这笔交易到底发不发生。"
+    },
+    {
+      "text": "Economists used to believe that buyers were cold calculators who compared quality and price in a logical way. While that idea still explains some choices, it fails badly when information is limited and risk feels personal. Because we cannot touch the goods or test them in advance, we borrow the experience of people who bought them before. Strangers, as a result, become our most trusted advisers, even though they have no reason to help us.",
+      "translation": "经济学家过去认为，买家是冷静的计算者，会用合乎逻辑的方式比较质量和价格。虽然这个观点仍能解释一部分选择，但当信息有限、风险又显得切身时，它就彻底失灵了。因为我们无法触摸商品，也无法事先试用，只好借用那些先前买过的人的体验。于是，陌生人成了我们最信赖的顾问，尽管他们没有任何理由帮助我们。"
+    },
+    {
+      "text": "Companies understand this habit very well, and many of them turn it into a business strategy. A new brand, as is common in crowded markets, may send free samples to early buyers and ask them to post honest reviews. Despite the fact that these reviews cost almost nothing to write, they can lift sales far more than an expensive advertisement. Trust, in other words, travels faster between customers than between a company and a customer.",
+      "translation": "企业非常了解这种习惯，许多公司还把它变成了一种经营策略。一个新品牌——这在拥挤的市场中很常见——可能会向早期买家寄送免费样品，并请他们发布诚实的评价。尽管写这些评价几乎不花什么成本，它们带来的销量却可能远远超过一则昂贵的广告。换句话说，信任在顾客之间传播得比在公司与顾客之间更快。"
+    },
+    {
+      "text": "This system is not perfect, of course, because some sellers pay for fake praise and some angry customers exaggerate small problems. A review platform, as every honest manager admits, can never remove every lie. However, the wisdom of a crowd is usually stronger than the tricks of a few, which is why ratings survive scandal after scandal.",
+      "translation": "当然，这套体系并不完美，因为有些卖家会花钱买假好评，也有些愤怒的顾客会把小问题夸大。正如每一位诚实的经理都承认的，评价平台永远无法删除每一句谎言。然而，群体的智慧通常还是胜过少数人的把戏，这也是为什么评分能在一个又一个丑闻之后依然存在。"
+    },
+    {
+      "text": "So what should a sensible shopper do with so much noisy advice from so many strangers? Read the middle, not the extremes, and notice whether complaints repeat the same detail. Although one terrible review may say more about the writer than the product, twenty similar complaints usually point to a real weakness. In the end, we trust strangers because we have no better choice, but we can still choose which strangers to trust.",
+      "translation": "那么，面对这么多来自众多陌生人的嘈杂建议，明智的购物者该怎么办呢？看中间段，别只看极端评价，并且留意抱怨是否重复着同一个细节。尽管一条糟糕的评价可能更多说明的是写它的人，而不是产品，但二十条类似的抱怨通常指向一个真实的弱点。说到底，我们相信陌生人是因为别无更好的选择，但我们仍然可以选择相信哪些陌生人。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which sign suggests that a product may really have a weakness?",
+      "audioText": "Which sign suggests that a product may really have a weakness?",
+      "options": [
+        {
+          "emoji": "⭐",
+          "value": "stars",
+          "text": "A page full of five-star ratings"
+        },
+        {
+          "emoji": "🔁",
+          "value": "repeat",
+          "text": "Twenty complaints about the same problem"
+        },
+        {
+          "emoji": "💸",
+          "value": "price",
+          "text": "A surprisingly low price"
+        }
+      ],
+      "answer": "repeat"
+    },
+    {
+      "type": "word_builder",
+      "word": "strategy",
+      "audioText": "strategy"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Strangers",
+        "become",
+        "our",
+        "most",
+        "trusted",
+        "advisers"
+      ],
+      "audioText": "Strangers become our most trusted advisers."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "we",
+        "can",
+        "still",
+        "choose",
+        "which",
+        "strangers",
+        "to",
+        "trust"
+      ],
+      "audioText": "We can still choose which strangers to trust."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ the fact that these reviews cost almost nothing to write, they can lift sales far more than an expensive advertisement.",
+      "choices": [
+        "Despite",
+        "Although",
+        "Because"
+      ],
+      "answer": "Despite",
+      "audioText": "Despite the fact that these reviews cost almost nothing to write, they can lift sales far more than an expensive advertisement."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "A new brand, ___ is common in crowded markets, may send free samples to early buyers.",
+      "choices": [
+        "as",
+        "like",
+        "so"
+      ],
+      "answer": "as",
+      "audioText": "A new brand, as is common in crowded markets, may send free samples to early buyers."
+    }
+  ],
+  "_unknownWords": [
+    "online",
+    "shoppers",
+    "purchase",
+    "economists",
+    "buyers",
+    "calculators",
+    "logical",
+    "cannot",
+    "advisers",
+    "brand",
+    "samples",
+    "despite",
+    "fake",
+    "exaggerate",
+    "ratings",
+    "scandal",
+    "sensible",
+    "shopper",
+    "extremes",
+    "complaints",
+    "detail"
+  ]
+}

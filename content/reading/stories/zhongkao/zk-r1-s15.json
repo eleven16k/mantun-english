@@ -1,0 +1,137 @@
+{
+  "id": "zk-r1-s15",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 15,
+  "title": "Our Class Time Capsule",
+  "titleCn": "我们的班级时光胶囊",
+  "coverEmoji": "⏳",
+  "paragraphs": [
+    {
+      "text": "Last Friday, our class started a new project. Ms. Lin told us that we would make a time capsule. Everyone in Class Three thought that it was a great idea. We often talk about our dreams in the classroom.",
+      "translation": "上周五，我们班开始了一个新项目。林老师告诉我们，我们要做一个时光胶囊。三班的每个人都觉得这是个好主意。我们常常在教室里聊起各自的梦想。"
+    },
+    {
+      "text": "On Monday, we brought small boxes to school. I put my favourite photo and a new coin inside. Wang Lei wrote a letter to his future self. He said that he wanted to be a doctor. Lily always draws pictures of our beautiful school.",
+      "translation": "周一，我们把小盒子带到了学校。我把自己最喜欢的照片和一枚新硬币放了进去。王磊给他未来的自己写了一封信。他说他想当一名医生。莉莉总是把我们美丽的校园画成画。"
+    },
+    {
+      "text": "Our teacher smiled and gave us some advice. She said that we should keep our letters short. \"Write down one thing you do every day,\" she told us. \"Then you will remember this year clearly.\"",
+      "translation": "老师微笑着给了我们一些建议。她说我们的信应该写得短一点。“写下你每天都做的一件事，”她对我们说，“这样你就能清楚地记住这一年。”"
+    },
+    {
+      "text": "I thought about my answer for a long time. Every morning, I run around the playground with my friends. I also help my mother cook dinner on weekends. Those small things make me happy and strong.",
+      "translation": "我想了很久，不知道该怎么写。每天早上，我都和朋友们在操场上跑步。周末我还会帮妈妈做晚饭。这些小事让我快乐又坚强。"
+    },
+    {
+      "text": "On Friday afternoon, we put our boxes into one big box. The whole class carried it to the garden behind our building. Ms. Lin said that we would open it in three years. Suddenly, everyone became quiet and thoughtful.",
+      "translation": "周五下午，我们把各自的盒子放进一个大箱子里。全班同学一起把它抬到教学楼后面的花园里。林老师说，我们三年后再打开它。忽然，大家都安静下来，陷入了沉思。"
+    },
+    {
+      "text": "Now the box sits quietly under a young tree. When I walk past it, I always think about my letter. I know that my small habits will build my future. Class Three will meet again, and we will remember this day.",
+      "translation": "现在，那个箱子静静地放在一棵小树下。每当我从它旁边走过，我总会想起我的那封信。我知道，我的这些小习惯会造就我的未来。三班会再相聚，而我们都会记住这一天。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Wang Lei put in his box?",
+      "audioText": "What did Wang Lei put in his box?",
+      "options": [
+        {
+          "emoji": "✉️",
+          "value": "letter",
+          "text": "A letter"
+        },
+        {
+          "emoji": "📷",
+          "value": "photo",
+          "text": "A photo"
+        },
+        {
+          "emoji": "🪙",
+          "value": "coin",
+          "text": "A coin"
+        }
+      ],
+      "answer": "letter"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where did the whole class carry the big box?",
+      "audioText": "Where did the whole class carry the big box?",
+      "options": [
+        {
+          "emoji": "🌳",
+          "value": "garden",
+          "text": "The garden"
+        },
+        {
+          "emoji": "🏫",
+          "value": "classroom",
+          "text": "The classroom"
+        },
+        {
+          "emoji": "🏃",
+          "value": "playground",
+          "text": "The playground"
+        }
+      ],
+      "answer": "garden"
+    },
+    {
+      "type": "word_builder",
+      "word": "capsule",
+      "audioText": "capsule"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Lily",
+        "always",
+        "draws",
+        "pictures",
+        "of",
+        "our",
+        "beautiful",
+        "school"
+      ],
+      "audioText": "Lily always draws pictures of our beautiful school."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Then",
+        "you",
+        "will",
+        "remember",
+        "this",
+        "year",
+        "clearly"
+      ],
+      "audioText": "Then you will remember this year clearly."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Ms. Lin told us that we ___ make a time capsule.",
+      "choices": [
+        "would",
+        "will",
+        "are"
+      ],
+      "answer": "would",
+      "audioText": "Ms. Lin told us that we would make a time capsule."
+    }
+  ],
+  "_unknownWords": [
+    "project",
+    "capsule",
+    "talk",
+    "favourite",
+    "wang",
+    "lei",
+    "self",
+    "big",
+    "thoughtful"
+  ]
+}

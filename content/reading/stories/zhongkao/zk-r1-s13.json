@@ -1,0 +1,134 @@
+{
+  "id": "zk-r1-s13",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 13,
+  "title": "Our Class Dream Box",
+  "titleCn": "我们的班级梦想盒",
+  "coverEmoji": "📦",
+  "paragraphs": [
+    {
+      "text": "Last week, our class had a wonderful new idea. Ms. Lin said that we would make a class dream box. We often talk about our dreams and our future.",
+      "translation": "上周，我们班有了一个新奇的好主意。林老师说，我们要做一个班级梦想盒。我们常常谈论自己的梦想和未来。"
+    },
+    {
+      "text": "Every student wrote a short letter to the future. I thought that my letter was too short at first. I usually write short letters, so I added more words.",
+      "translation": "每个同学都写了一封给未来的短信。起初我觉得自己的信太短了。我平时写的信都很短，所以我又多写了一些话。"
+    },
+    {
+      "text": "Li Ming brought a small toy car and a team photo. He said that his father gave him the car years ago. We put all the things into a big box.",
+      "translation": "李明带来了一辆小玩具车和一张球队合影。他说这辆车是爸爸几年前送给他的。我们把所有东西都放进了一个大盒子里。"
+    },
+    {
+      "text": "Ms. Lin said that we should open the box in ten years. We knew that some of us would leave this school. But we all promised to come back that day.",
+      "translation": "林老师说，我们应该在十年后打开这个盒子。我们知道，我们当中有些人会离开这所学校。但我们都答应那天会回来。"
+    },
+    {
+      "text": "On Friday, we put the box under the big tree outside. Everyone clapped happily and took a photo together. I never felt so happy in a class.",
+      "translation": "星期五，我们把盒子放在外面那棵大树下。大家开心地鼓掌，还一起拍了张照片。在一节课上，我从来没有这么开心过。"
+    },
+    {
+      "text": "Now I always remember that wonderful afternoon near the tree. I think that a small box can hold a big dream. Our class will meet again in ten years.",
+      "translation": "现在，我总会想起大树旁那个美好的下午。我认为，一个小盒子也能装下一个大大的梦想。十年后，我们班会再次相聚。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Li Ming bring to school?",
+      "audioText": "What did Li Ming bring to school?",
+      "options": [
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "A toy car"
+        },
+        {
+          "emoji": "⚽",
+          "value": "ball",
+          "text": "A ball"
+        },
+        {
+          "emoji": "📚",
+          "value": "book",
+          "text": "A book"
+        }
+      ],
+      "answer": "car"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where did the class put the dream box?",
+      "audioText": "Where did the class put the dream box?",
+      "options": [
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "Under a big tree"
+        },
+        {
+          "emoji": "🏫",
+          "value": "classroom",
+          "text": "In the classroom"
+        },
+        {
+          "emoji": "🚌",
+          "value": "bus",
+          "text": "On the school bus"
+        }
+      ],
+      "answer": "tree"
+    },
+    {
+      "type": "word_builder",
+      "word": "dream",
+      "audioText": "dream"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "never",
+        "felt",
+        "so",
+        "happy",
+        "in",
+        "a",
+        "class."
+      ],
+      "audioText": "I never felt so happy in a class."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Our",
+        "class",
+        "will",
+        "meet",
+        "again",
+        "in",
+        "ten",
+        "years."
+      ],
+      "audioText": "Our class will meet again in ten years."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "He said that his father ___ him the car years ago.",
+      "choices": [
+        "gave",
+        "gives",
+        "give"
+      ],
+      "answer": "gave",
+      "audioText": "He said that his father gave him the car years ago."
+    }
+  ],
+  "_unknownWords": [
+    "talk",
+    "added",
+    "li",
+    "big",
+    "happily"
+  ]
+}

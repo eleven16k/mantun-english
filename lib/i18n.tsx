@@ -12,6 +12,9 @@ import { socialDict } from "./i18n/dicts/social";
 import { shopDict } from "./i18n/dicts/shop";
 import { quizDict } from "./i18n/dicts/quiz";
 import { scenariosDict } from "./i18n/dicts/scenarios";
+import { phonicsDict } from "./i18n/dicts/phonics";
+import { sentenceDict } from "./i18n/dicts/sentence";
+import { readingDict } from "./i18n/dicts/reading";
 import { kv } from "./kv";
 
 export type Locale = "en" | "zh";
@@ -53,6 +56,9 @@ const coreEn = {
   "settings.statScore": "Score",
   "settings.statCoins": "Coins",
   "settings.study": "Study",
+  "settings.track": "Learning stage",
+  "settings.trackLocked": "Set by your class",
+  "settings.trackNote": "Progress is kept per stage; your buddy comes along",
   "settings.dailyGoal": "Daily goal",
   "settings.dailyGoalValue": "20 questions",
   "settings.difficulty": "Difficulty",
@@ -80,7 +86,6 @@ const coreEn = {
   "nav.sectionDecks": "Decks",
   "nav.sectionPlay": "Play",
   "nav.sectionMore": "More",
-  "nav.addCard": "New card",
   "nav.weakness": "Weakness book",
   "nav.settings": "Settings",
   "nav.searchPh": "Search features…",
@@ -88,7 +93,7 @@ const coreEn = {
   "nav.share": "Share",
   "nav.profile": "Profile",
   "nav.study": "Study",
-  "nav.import": "Import",
+  "nav.import": "Upload courseware",
   "nav.streak": "Streak",
   "nav.decks": "Decks",
   "nav.league": "League",
@@ -130,6 +135,9 @@ const coreZh: Record<keyof typeof coreEn, string> = {
   "settings.statScore": "提分",
   "settings.statCoins": "金币",
   "settings.study": "学习",
+  "settings.track": "学段",
+  "settings.trackLocked": "由班级设定",
+  "settings.trackNote": "各学段进度独立保留，小伙伴一直跟着你",
   "settings.dailyGoal": "每日目标",
   "settings.dailyGoalValue": "20 题",
   "settings.difficulty": "难度",
@@ -157,7 +165,6 @@ const coreZh: Record<keyof typeof coreEn, string> = {
   "nav.sectionDecks": "卡组",
   "nav.sectionPlay": "竞技",
   "nav.sectionMore": "更多",
-  "nav.addCard": "新建卡片",
   "nav.weakness": "薄弱点",
   "nav.settings": "设置",
   "nav.searchPh": "搜索功能…",
@@ -165,7 +172,7 @@ const coreZh: Record<keyof typeof coreEn, string> = {
   "nav.share": "分享",
   "nav.profile": "我的",
   "nav.study": "学习",
-  "nav.import": "导入",
+  "nav.import": "上传课件",
   "nav.streak": "连胜",
   "nav.decks": "卡组",
   "nav.league": "排行",
@@ -181,6 +188,9 @@ const en = {
   ...shopDict.en,
   ...quizDict.en,
   ...scenariosDict.en,
+  ...phonicsDict.en,
+  ...sentenceDict.en,
+  ...readingDict.en,
 };
 
 export type MessageKey = keyof typeof en;
@@ -193,6 +203,9 @@ const zh: Record<MessageKey, string> = {
   ...shopDict.zh,
   ...quizDict.zh,
   ...scenariosDict.zh,
+  ...phonicsDict.zh,
+  ...sentenceDict.zh,
+  ...readingDict.zh,
 };
 
 const DICTS: Record<Locale, Record<MessageKey, string>> = { en, zh };

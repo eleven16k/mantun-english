@@ -1,0 +1,138 @@
+{
+  "type": "json_object",
+  "id": "xsc-r1-s14",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 14,
+  "title": "A Cart Full of Apples",
+  "titleCn": "一车苹果",
+  "coverEmoji": "🍎",
+  "paragraphs": [
+    {
+      "text": "This is my little cart. It is red and old. I like it a lot.",
+      "translation": "这是我的小推车。它红红的，有点旧。我特别喜欢它。"
+    },
+    {
+      "text": "The apple trees are very big. There are many apples on them. Some apples are red. Some apples are green.",
+      "translation": "苹果树又高又大。树上结满了苹果。有些苹果是红的，有些苹果是绿的。"
+    },
+    {
+      "text": "My sister has a basket. She puts apples in it. She can pick ten apples. She is very happy.",
+      "translation": "妹妹有一个篮子。她把苹果放进篮子里。她能摘十个苹果。她开心极了。"
+    },
+    {
+      "text": "My dog sits by the cart. He smells the sweet apples. He can smell them well. But he does not eat them.",
+      "translation": "我的小狗坐在推车旁边。它闻着甜甜的苹果。它的鼻子可灵了。可它不吃苹果。"
+    },
+    {
+      "text": "We put the basket in the cart. The cart is full of apples. It is very heavy now.",
+      "translation": "我们把篮子放进推车里。推车装满了苹果。现在它变得很重。"
+    },
+    {
+      "text": "Dad pulls the cart home. Mom makes apple juice. We drink it together. What a nice day!",
+      "translation": "爸爸把推车拉回家。妈妈榨了苹果汁。我们一起喝果汁。今天真开心！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What color is the little cart?",
+      "audioText": "What color is the little cart?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "How many apples can my sister pick?",
+      "audioText": "How many apples can my sister pick?",
+      "options": [
+        {
+          "emoji": "🔟",
+          "value": "ten",
+          "text": "Ten"
+        },
+        {
+          "emoji": "3️⃣",
+          "value": "three",
+          "text": "Three"
+        },
+        {
+          "emoji": "5️⃣",
+          "value": "five",
+          "text": "Five"
+        }
+      ],
+      "answer": "ten"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Mom make?",
+      "audioText": "What does Mom make?",
+      "options": [
+        {
+          "emoji": "🧃",
+          "value": "juice",
+          "text": "Apple juice"
+        },
+        {
+          "emoji": "🥧",
+          "value": "pie",
+          "text": "Apple pie"
+        },
+        {
+          "emoji": "🎂",
+          "value": "cake",
+          "text": "A cake"
+        }
+      ],
+      "answer": "juice"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "cart",
+        "is",
+        "full",
+        "of",
+        "apples"
+      ],
+      "audioText": "The cart is full of apples."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Dad ___ the cart home.",
+      "choices": [
+        "pull",
+        "pulls",
+        "picks"
+      ],
+      "answer": "pulls",
+      "audioText": "Dad pulls the cart home."
+    }
+  ],
+  "_unknownWords": [
+    "cart"
+  ]
+}

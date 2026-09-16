@@ -1,0 +1,138 @@
+{
+  "id": "xsc-r1-s04",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 4,
+  "title": "Apples in My Basket",
+  "titleCn": "我篮子里的苹果",
+  "coverEmoji": "🍎",
+  "paragraphs": [
+    {
+      "text": "My name is Lily. I am six years old. My family has an apple orchard.",
+      "translation": "我叫莉莉，今年六岁。我家有一个苹果园。"
+    },
+    {
+      "text": "The apple trees are very tall. There are many red apples. They look like small red balls.",
+      "translation": "苹果树长得很高。树上结满了红苹果，就像一个个小红球。"
+    },
+    {
+      "text": "My dog Lucky runs fast. He can jump and run. He likes the apple smell.",
+      "translation": "我的小狗Lucky跑得很快。它会跳，也会跑。它很喜欢苹果的香味。"
+    },
+    {
+      "text": "My mom picks big apples. My dad holds the basket. I put apples in it.",
+      "translation": "妈妈摘大苹果。爸爸提着篮子。我把苹果放进篮子里。"
+    },
+    {
+      "text": "Grandma makes apple pie for us. The pie is warm and sweet. We eat it with smiles.",
+      "translation": "奶奶给我们做苹果派。派热乎乎的，甜甜的。我们笑着把它吃光。"
+    },
+    {
+      "text": "I love my family. I love the apple orchard too. It is a happy day.",
+      "translation": "我爱我的家人，也爱这个苹果园。今天真是快乐的一天。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What color are the apples?",
+      "audioText": "What color are the apples?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "🟡",
+          "value": "yellow",
+          "text": "Yellow"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "What animal is Lucky?",
+      "audioText": "What animal is Lucky?",
+      "options": [
+        {
+          "emoji": "🐶",
+          "value": "dog",
+          "text": "A dog"
+        },
+        {
+          "emoji": "🐱",
+          "value": "cat",
+          "text": "A cat"
+        },
+        {
+          "emoji": "🦆",
+          "value": "duck",
+          "text": "A duck"
+        }
+      ],
+      "answer": "dog"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Grandma make?",
+      "audioText": "What does Grandma make?",
+      "options": [
+        {
+          "emoji": "🥧",
+          "value": "pie",
+          "text": "A pie"
+        },
+        {
+          "emoji": "🎂",
+          "value": "cake",
+          "text": "A cake"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        }
+      ],
+      "answer": "pie"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "My",
+        "mom",
+        "picks",
+        "big",
+        "apples."
+      ],
+      "audioText": "My mom picks big apples."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The apple trees are very ___.",
+      "choices": [
+        "tall",
+        "short",
+        "small"
+      ],
+      "answer": "tall",
+      "audioText": "The apple trees are very tall."
+    }
+  ],
+  "_unknownWords": [
+    "lily",
+    "orchard",
+    "pie"
+  ]
+}

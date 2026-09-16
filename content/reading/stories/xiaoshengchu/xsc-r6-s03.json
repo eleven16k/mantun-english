@@ -1,0 +1,122 @@
+{
+  "id": "xsc-r6-s03",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r6",
+  "order": 3,
+  "title": "The Space Train",
+  "titleCn": "太空列车",
+  "coverEmoji": "🚄",
+  "paragraphs": [
+    {
+      "text": "Sam is a young scientist. He lives on a big space station. The station goes around the Earth.",
+      "translation": "萨姆是一位小科学家。他住在一个很大的太空站上。太空站绕着地球飞行。"
+    },
+    {
+      "text": "Every morning Sam looks out of the window. He can see the blue Earth and many stars. Next week he will visit the Moon.",
+      "translation": "每天早上，萨姆都会望向窗外。他能看见蓝色的地球和许多星星。下周他要去月球。"
+    },
+    {
+      "text": "How will he go there? A space train will take him. It is very fast and very clean.",
+      "translation": "他怎么去那儿呢？一列太空列车会送他去。它非常快，也非常干净。"
+    },
+    {
+      "text": "The space train is fun. But you must follow some rules. You must wear a seat belt. You should keep your bag under the seat. You should not run in the train.",
+      "translation": "太空列车很好玩。但你必须遵守一些规则。你必须系好安全带。你应该把包放在座位下面。你不该在列车里跑来跑去。"
+    },
+    {
+      "text": "Sam will do a science test on the Moon. He must take his small robot with him. The robot will help him find rocks. Maybe they could find water there. That could be a big surprise!",
+      "translation": "萨姆要在月球上做一次科学测试。他必须带上他的小机器人。机器人会帮他找石头。也许他们能在那里找到水。那可真是个大大的惊喜！"
+    },
+    {
+      "text": "Sam is excited about his trip. He will be a great scientist one day. What will you do in space?",
+      "translation": "萨姆对这次旅行特别兴奋。总有一天他会成为一位了不起的科学家。那你会在太空里做什么呢？"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Where does Sam live?",
+      "audioText": "Where does Sam live?",
+      "options": [
+        {
+          "emoji": "🛰️",
+          "value": "station",
+          "text": "On a space station"
+        },
+        {
+          "emoji": "🏠",
+          "value": "house",
+          "text": "In a house"
+        },
+        {
+          "emoji": "🏫",
+          "value": "school",
+          "text": "In a school"
+        }
+      ],
+      "answer": "station"
+    },
+    {
+      "type": "image_choice",
+      "question": "What will Sam visit next week?",
+      "audioText": "What will Sam visit next week?",
+      "options": [
+        {
+          "emoji": "🌕",
+          "value": "moon",
+          "text": "The Moon"
+        },
+        {
+          "emoji": "☀️",
+          "value": "sun",
+          "text": "The Sun"
+        },
+        {
+          "emoji": "🪐",
+          "value": "planet",
+          "text": "A far planet"
+        }
+      ],
+      "answer": "moon"
+    },
+    {
+      "type": "word_builder",
+      "word": "scientist",
+      "audioText": "scientist"
+    },
+    {
+      "type": "word_builder",
+      "word": "train",
+      "audioText": "train"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "He",
+        "must",
+        "take",
+        "his",
+        "small",
+        "robot",
+        "with",
+        "him."
+      ],
+      "audioText": "He must take his small robot with him."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "You ___ wear a seat belt.",
+      "choices": [
+        "must",
+        "will",
+        "are"
+      ],
+      "answer": "must",
+      "audioText": "You must wear a seat belt."
+    }
+  ],
+  "_unknownWords": [
+    "sam",
+    "belt"
+  ]
+}

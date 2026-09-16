@@ -1,0 +1,123 @@
+{
+  "id": "xsc-r2-s07",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 7,
+  "title": "Duck's Warm Bread",
+  "titleCn": "小鸭的热面包",
+  "coverEmoji": "🦆",
+  "paragraphs": [
+    {
+      "text": "Duck is making bread in her little kitchen. She is mixing flour and water. The bread smells very good.",
+      "translation": "鸭子正在她的小厨房里做面包。她正在搅拌面粉和水。面包闻起来香极了。"
+    },
+    {
+      "text": "Rabbit comes to the door. \"Can I help you?\" she asks. Duck is very happy. Rabbit is cutting sweet apples.",
+      "translation": "兔子来到门口。“我来帮你，好吗？”她问。鸭子特别开心。兔子正在切甜甜的苹果。"
+    },
+    {
+      "text": "Bear is carrying a big basket. He is picking more apples from the tree. \"I like eating warm bread,\" he says.",
+      "translation": "熊提着一个大篮子。他正在从树上摘更多的苹果。“我喜欢吃热乎乎的面包。”他说。"
+    },
+    {
+      "text": "Now the three friends are working together. Duck is putting the bread in the oven. Bear is washing the plates.",
+      "translation": "现在三个朋友一起忙活。鸭子把面包放进烤箱。熊在洗盘子。"
+    },
+    {
+      "text": "Soon the bread is ready. It is warm and sweet. They are eating and singing together.",
+      "translation": "很快面包就做好了。它又热又甜。他们一起吃着、唱着。"
+    },
+    {
+      "text": "\"Good friends make good bread,\" says Duck. Everyone is smiling. The little kitchen is full of love.",
+      "translation": "“好朋友才能做出好面包。”鸭子说。每个人都笑着。小小的厨房里满满都是爱。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is Duck making?",
+      "audioText": "What is Duck making?",
+      "options": [
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        },
+        {
+          "emoji": "🍲",
+          "value": "soup",
+          "text": "Soup"
+        },
+        {
+          "emoji": "🥗",
+          "value": "salad",
+          "text": "Salad"
+        }
+      ],
+      "answer": "bread"
+    },
+    {
+      "type": "word_builder",
+      "word": "kitchen",
+      "audioText": "kitchen"
+    },
+    {
+      "type": "image_choice",
+      "question": "What is Bear carrying?",
+      "audioText": "What is Bear carrying?",
+      "options": [
+        {
+          "emoji": "🧺",
+          "value": "basket",
+          "text": "A basket"
+        },
+        {
+          "emoji": "🎈",
+          "value": "balloon",
+          "text": "A balloon"
+        },
+        {
+          "emoji": "📦",
+          "value": "box",
+          "text": "A box"
+        }
+      ],
+      "answer": "basket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Rabbit",
+        "is",
+        "cutting",
+        "sweet",
+        "apples"
+      ],
+      "audioText": "Rabbit is cutting sweet apples."
+    },
+    {
+      "type": "word_builder",
+      "word": "bread",
+      "audioText": "bread"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Duck ___ making bread in her little kitchen.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "is",
+      "audioText": "Duck is making bread in her little kitchen."
+    }
+  ],
+  "_unknownWords": [
+    "mixing",
+    "flour",
+    "asks",
+    "cutting",
+    "putting",
+    "oven"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "zk-r1-s05",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 5,
+  "title": "Our Paper Bridge",
+  "titleCn": "我们的纸桥",
+  "coverEmoji": "🌉",
+  "paragraphs": [
+    {
+      "text": "Our science teacher told us that we would have a fair. Everyone in our class was very excited about it. We usually meet after school on Friday afternoons. My group had four students and we were good friends.",
+      "translation": "科学老师告诉我们，我们班要办一场展览。班上每个人都很兴奋。我们通常在周五放学后碰面。我们小组有四个人，大家都是好朋友。"
+    },
+    {
+      "text": "I said that we should build a paper bridge together. My friend Li Ming thought that a model car was better. We talked about it for two days after class. In the end, we chose the paper bridge. Our teacher knew that we could do it well.",
+      "translation": "我说我们应该一起做一座纸桥。我的朋友李明觉得做一辆模型车更好。我们课后讨论了两天。最后，我们选了纸桥。老师知道我们一定能做好。"
+    },
+    {
+      "text": "Every afternoon we worked on our bridge in the lab. We often stayed there until five o'clock. Sometimes the paper broke and we had to start again. But we never gave up or felt unhappy.",
+      "translation": "每天下午我们都在实验室里做桥。我们常常待到五点。有时纸会断，我们只好重新开始。但我们从不放弃，也不觉得难过。"
+    },
+    {
+      "text": "On the fair day, many students came to see our bridge. They said that our bridge looked strong and beautiful. I felt proud because we made it with our own hands. Our teacher smiled and took a photo for us.",
+      "translation": "展览那天，很多同学来看我们的桥。他们说我们的桥看起来又结实又漂亮。我很自豪，因为这是我们亲手做的。老师笑着给我们拍了张照片。"
+    },
+    {
+      "text": "After the fair, I know that teamwork is very important. I think that a good team never stops trying. Now I always listen to my friends before I speak. Our small bridge taught me a big lesson.",
+      "translation": "展览之后，我明白了团队合作非常重要。我觉得好的团队从不停下尝试的脚步。现在说话前，我总是先听听朋友们的想法。这座小小的桥给我上了重要的一课。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the group build for the fair?",
+      "audioText": "What did the group build for the fair?",
+      "options": [
+        {
+          "emoji": "🌉",
+          "value": "bridge",
+          "text": "A bridge"
+        },
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "A car"
+        },
+        {
+          "emoji": "🚀",
+          "value": "rocket",
+          "text": "A rocket"
+        }
+      ],
+      "answer": "bridge"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the teacher do at the end of the fair day?",
+      "audioText": "What did the teacher do at the end of the fair day?",
+      "options": [
+        {
+          "emoji": "📷",
+          "value": "photo",
+          "text": "Took a photo"
+        },
+        {
+          "emoji": "🎵",
+          "value": "song",
+          "text": "Sang a song"
+        },
+        {
+          "emoji": "🏀",
+          "value": "ball",
+          "text": "Played basketball"
+        }
+      ],
+      "answer": "photo"
+    },
+    {
+      "type": "word_builder",
+      "word": "bridge",
+      "audioText": "bridge"
+    },
+    {
+      "type": "word_builder",
+      "word": "teacher",
+      "audioText": "teacher"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "In",
+        "the",
+        "end,",
+        "we",
+        "chose",
+        "the",
+        "paper",
+        "bridge."
+      ],
+      "audioText": "In the end, we chose the paper bridge."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Our science teacher told us that we ___ have a fair.",
+      "choices": [
+        "would",
+        "will",
+        "are"
+      ],
+      "answer": "would",
+      "audioText": "Our science teacher told us that we would have a fair."
+    }
+  ],
+  "_unknownWords": [
+    "li",
+    "model",
+    "talked",
+    "chose",
+    "o'clock",
+    "unhappy",
+    "teamwork",
+    "big"
+  ]
+}

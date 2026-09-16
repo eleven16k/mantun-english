@@ -1,0 +1,123 @@
+{
+  "id": "gk-r6-s03",
+  "track": "gaokao",
+  "regionId": "gk-r6",
+  "order": 3,
+  "title": "Why Milk Sits at the Back of the Store",
+  "titleCn": "为什么牛奶放在超市最里面",
+  "coverEmoji": "🛒",
+  "paragraphs": [
+    {
+      "text": "Have you ever noticed that fresh milk is almost never sold near the front entrance of a supermarket? Although the dairy section seems to hide in the farthest corner, that position is no accident at all. Store designers deliberately place everyday basics at the back, as anyone who has walked past long rows of snacks knows well.",
+      "translation": "你有没有注意到，新鲜牛奶几乎从不摆在超市靠近正门入口的地方？虽然奶制品区似乎藏在最远的角落里，但这个位置绝非偶然。商店设计师故意把日常必需品放在最里面，凡是走过一长排零食货架的人都很清楚这一点。"
+    },
+    {
+      "text": "When shoppers walk to the back for a bottle of milk, they pass hundreds of other products on the way. While they are looking for just one simple item, their eyes catch bright packets, special offers and new flavours. Many of them eventually leave the store with far more than they had originally planned to buy.",
+      "translation": "当顾客走到最里面去买一瓶牛奶时，一路上会经过数百种其他商品。虽然他们只是在找一件简单的东西，眼睛却会被鲜艳的包装、特价优惠和新口味吸引。最终，他们中的许多人离开商店时，买的东西远多于原本的计划。"
+    },
+    {
+      "text": "Essentials are often spread far apart on purpose, so customers must cross the whole shop to finish a short list. Despite the extra walking, most people do not seem to mind, and few of them ever complain about it. In fact, the longer customers stay inside the building, the more likely they are to spend extra money.",
+      "translation": "必需品常常被故意分散摆放，所以顾客为了完成一张短短的购物清单，必须穿越整家店。尽管多走了不少路，大多数人似乎并不在意，也很少有人抱怨。事实上，顾客在店里待得越久，就越可能多花钱。"
+    },
+    {
+      "text": "Small corner shops, however, cannot play the same game, simply because their space is too limited. As every shop owner knows, the trick only works when the shopping trip still feels easy and pleasant. Customers who feel tired or cheated may simply decide to take their money and shop somewhere else.",
+      "translation": "然而，小街角店玩不了同样的把戏，因为它们的空间实在有限。正如每位店主都知道的，只有当购物过程仍然让人感到轻松愉快时，这种窍门才奏效。感到疲惫或觉得受骗的顾客，很可能干脆带着钱去别处购物。"
+    },
+    {
+      "text": "The next time you walk into a large supermarket, pay close attention to the path you follow. Although you may believe that you are choosing freely, every step has probably been planned in advance. Understanding this does not mean you must stop shopping; it simply helps you spend your money more wisely.",
+      "translation": "下次走进大型超市时，请留意你走的路线。虽然你可能认为自己在自由选择，但每一步大概都是事先设计好的。明白这一点并不意味着你必须停止购物，它只是帮助你更明智地花钱。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, where do shoppers usually find the dairy section?",
+      "audioText": "According to the passage, where do shoppers usually find the dairy section?",
+      "options": [
+        {
+          "emoji": "🚪",
+          "value": "front",
+          "text": "Near the front door"
+        },
+        {
+          "emoji": "🧀",
+          "value": "corner",
+          "text": "In the farthest corner"
+        },
+        {
+          "emoji": "💳",
+          "value": "checkout",
+          "text": "Beside the checkout"
+        }
+      ],
+      "answer": "corner"
+    },
+    {
+      "type": "word_builder",
+      "word": "essentials",
+      "audioText": "essentials"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "every",
+        "step",
+        "has",
+        "probably",
+        "been",
+        "planned",
+        "in",
+        "advance"
+      ],
+      "audioText": "Every step has probably been planned in advance."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "few",
+        "of",
+        "them",
+        "ever",
+        "complain",
+        "about",
+        "it"
+      ],
+      "audioText": "Few of them ever complain about it."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ the extra walking, most people do not seem to mind.",
+      "choices": [
+        "Despite",
+        "Although",
+        "Because"
+      ],
+      "answer": "Despite",
+      "audioText": "Despite the extra walking, most people do not seem to mind."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Store designers ___ place everyday basics at the back.",
+      "choices": [
+        "deliberately",
+        "luckily",
+        "rarely"
+      ],
+      "answer": "deliberately",
+      "audioText": "Store designers deliberately place everyday basics at the back."
+    }
+  ],
+  "_unknownWords": [
+    "dairy",
+    "farthest",
+    "designers",
+    "deliberately",
+    "snacks",
+    "shoppers",
+    "item",
+    "flavours",
+    "despite",
+    "cannot",
+    "simply"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "xsc-r4-s12",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 12,
+  "title": "The Octopus and the Old Net",
+  "titleCn": "章鱼和旧渔网",
+  "coverEmoji": "🐙",
+  "paragraphs": [
+    {
+      "text": "Last Sunday, Mia and Ben visited Ocean Park. They put on their blue diving suits. The sea was colder than the park pool. Mia took a big breath and jumped in.",
+      "translation": "上周日，米娅和本去了海洋乐园。他们穿上蓝色的潜水服。海水比乐园里的泳池冷。米娅深吸一口气，跳进了水里。"
+    },
+    {
+      "text": "They swam down to the grey rocks. The rocks were darker than the sand. Small fish moved quickly around them. Then Ben saw a little octopus under a stone.",
+      "translation": "他们向下游到灰色的礁石旁。礁石比沙子更暗。小鱼在他们身边飞快地游来游去。这时，本看到石头底下有一只小章鱼。"
+    },
+    {
+      "text": "The octopus had big, round eyes. It was smaller than Mia's hand. A long old net lay near it. The net was bigger than a small boat.",
+      "translation": "那只章鱼有一双又大又圆的眼睛。它比米娅的手还小。旁边躺着一张长长的旧渔网。那张网比一条小船还大。"
+    },
+    {
+      "text": "One little fish was caught inside. Its tail was in the net. Ben took out his small knife. He cut the net more carefully than before. Soon the fish was free again.",
+      "translation": "一条小鱼被困在里面。它的尾巴卡在网里。本拿出他的小刀。他比之前更小心地割着渔网。很快，小鱼又自由了。"
+    },
+    {
+      "text": "The octopus came out slowly. It waved one arm at them. Then it swam away into the deep. Mia and Ben smiled at each other.",
+      "translation": "章鱼慢慢地爬了出来。它朝他们挥动了一只触手。然后它游向了深水里。米娅和本互相笑了笑。"
+    },
+    {
+      "text": "On the boat, they were quiet and tired. A clean sea is better than a pretty sea. They picked up the old net. Small hands can make the sea cleaner.",
+      "translation": "坐在船上，他们又安静又累。干净的大海比漂亮的大海更好。他们把那张旧渔网捡了起来。小小的双手也能让大海变得更干净。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Ben see under the stone?",
+      "audioText": "What did Ben see under the stone?",
+      "options": [
+        {
+          "emoji": "🐙",
+          "value": "octopus",
+          "text": "An octopus"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "A fish"
+        },
+        {
+          "emoji": "🦀",
+          "value": "crab",
+          "text": "A crab"
+        }
+      ],
+      "answer": "octopus"
+    },
+    {
+      "type": "word_builder",
+      "word": "octopus",
+      "audioText": "octopus"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The sea was ___ than the park pool.",
+      "choices": [
+        "colder",
+        "coldest",
+        "cold"
+      ],
+      "answer": "colder",
+      "audioText": "The sea was colder than the park pool."
+    },
+    {
+      "type": "image_choice",
+      "question": "What did Ben take out?",
+      "audioText": "What did Ben take out?",
+      "options": [
+        {
+          "emoji": "🔪",
+          "value": "knife",
+          "text": "A knife"
+        },
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "A phone"
+        },
+        {
+          "emoji": "🥛",
+          "value": "cup",
+          "text": "A cup"
+        }
+      ],
+      "answer": "knife"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "smaller",
+        "than",
+        "Mia's",
+        "hand."
+      ],
+      "audioText": "It was smaller than Mia's hand."
+    },
+    {
+      "type": "word_builder",
+      "word": "colder",
+      "audioText": "colder"
+    }
+  ],
+  "_unknownWords": [
+    "diving",
+    "suits",
+    "grey",
+    "mia's",
+    "net",
+    "bigger",
+    "waved"
+  ]
+}

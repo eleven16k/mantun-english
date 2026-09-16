@@ -1,0 +1,138 @@
+{
+  "id": "xsc-r1-s09",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 9,
+  "title": "My Dog Likes Apples",
+  "titleCn": "我的小狗爱吃苹果",
+  "coverEmoji": "🍎",
+  "paragraphs": [
+    {
+      "text": "I have a small dog. His name is Lucky. Lucky is white and brown. He is very cute.",
+      "translation": "我有一只小狗。它的名字叫 Lucky。Lucky 是白棕相间的。它非常可爱。"
+    },
+    {
+      "text": "We go to the apple orchard. The orchard is near my home. There are many apple trees. The apples are red and green.",
+      "translation": "我们去苹果园。果园就在我家附近。那里有很多苹果树。苹果有红的，也有绿的。"
+    },
+    {
+      "text": "Lucky runs under the trees. He can jump and run. He looks up at the apples. He wants one apple.",
+      "translation": "Lucky 在树下跑来跑去。它会跳也会跑。它抬头看着树上的苹果。它想要一个苹果。"
+    },
+    {
+      "text": "My father gives him an apple. Lucky likes the apple. He eats it very fast. His tail moves and moves.",
+      "translation": "爸爸给了它一个苹果。Lucky 很喜欢这个苹果。它吃得非常快。它的尾巴摇个不停。"
+    },
+    {
+      "text": "I pick a big red apple. My mother picks three green apples. We put them in a bag. The bag is full now.",
+      "translation": "我摘了一个又大又红的苹果。妈妈摘了三个青苹果。我们把苹果放进袋子里。袋子现在装满了。"
+    },
+    {
+      "text": "At home, we eat the apples. Lucky eats his apple too. We are all happy. I love my little dog.",
+      "translation": "回到家，我们一起吃苹果。Lucky 也吃它的苹果。我们都很开心。我爱我的小狗。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What fruit do they pick?",
+      "audioText": "What fruit do they pick?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "Apple"
+        },
+        {
+          "emoji": "🍌",
+          "value": "banana",
+          "text": "Banana"
+        },
+        {
+          "emoji": "🍇",
+          "value": "grape",
+          "text": "Grape"
+        }
+      ],
+      "answer": "apple"
+    },
+    {
+      "type": "image_choice",
+      "question": "What color is the big apple?",
+      "audioText": "What color is the big apple?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "🟡",
+          "value": "yellow",
+          "text": "Yellow"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "Where does Lucky run?",
+      "audioText": "Where does Lucky run?",
+      "options": [
+        {
+          "emoji": "🌳",
+          "value": "under the trees",
+          "text": "Under the trees"
+        },
+        {
+          "emoji": "🏠",
+          "value": "in the house",
+          "text": "In the house"
+        },
+        {
+          "emoji": "🚗",
+          "value": "in the car",
+          "text": "In the car"
+        }
+      ],
+      "answer": "under the trees"
+    },
+    {
+      "type": "word_builder",
+      "word": "apple",
+      "audioText": "apple"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "apples",
+        "are",
+        "red",
+        "and",
+        "green"
+      ],
+      "audioText": "The apples are red and green."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Lucky ___ the apple.",
+      "choices": [
+        "likes",
+        "like",
+        "liking"
+      ],
+      "answer": "likes",
+      "audioText": "Lucky likes the apple."
+    }
+  ],
+  "_unknownWords": [
+    "cute",
+    "orchard"
+  ]
+}

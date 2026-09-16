@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
+import { PageHeader } from "@/components/PageHeader";
 import { getImports, deleteImport, timeLabel, type ImportItem } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
 
@@ -50,9 +51,9 @@ export default function HistoryPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
+      <div className="page-shell">
         <div className="mb-5 flex items-center justify-between">
-          <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary">{t("hist.title")}</h1>
+          <PageHeader className="" badge="🕘 AI HISTORY" title={t("hist.title")} />
           {mounted && records.length > 0 && (
             <button
               onClick={() => { deleteImport().then(() => setRecords([])); }}
@@ -64,13 +65,13 @@ export default function HistoryPage() {
         </div>
 
         {mounted && records.length === 0 ? (
-          <div className="g-card-hero p-8 text-center shadow-sm">
+          <div className="g-card-hero p-8 text-center">
             <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-canvas text-3xl">📋</span>
             <p className="mt-4 font-booster text-lg font-extrabold text-primary">{t("hist.emptyTitle")}</p>
             <p className="mt-1 text-sm text-tertiary">{t("hist.emptyHint")}</p>
             <button
               onClick={() => router.push("/import")}
-              className="mt-4 rounded-pill bg-brand px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
+              className="mt-4 rounded-pill bg-brand px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90"
             >
               {t("hist.uploadNow")}
             </button>
@@ -78,7 +79,7 @@ export default function HistoryPage() {
         ) : (
           <div className="flex flex-col gap-2">
             {records.map(r => (
-              <div key={r.id} className="g-card flex items-center gap-3 p-4 shadow-sm">
+              <div key={r.id} className="g-card flex items-center gap-3 p-4">
                 <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-brand-subtle text-brand-text">
                   <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" /></svg>
                 </span>

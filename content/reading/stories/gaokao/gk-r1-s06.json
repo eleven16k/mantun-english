@@ -1,0 +1,119 @@
+{
+  "id": "gk-r1-s06",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 6,
+  "title": "Why Desert Nights Turn Cold",
+  "titleCn": "沙漠之夜为何寒冷",
+  "coverEmoji": "🏜️",
+  "paragraphs": [
+    {
+      "text": "Most people picture a desert as a place of burning sand and endless afternoon heat. Yet the same landscape, once the sun goes down, may become surprisingly cold within hours. Travellers, having packed only thin shirts, often spend the night shivering beside their small tents. This dramatic change, which happens in almost every dry region on Earth, has a simple scientific explanation.",
+      "translation": "大多数人把沙漠想象成一片烈日炙烤、热浪不断的沙地。然而同一片土地，一旦太阳落下，几小时内就可能变得出奇地寒冷。只带了薄衬衫的旅行者，常常整夜缩在小小的帐篷旁瑟瑟发抖。这种几乎发生在地球上每一片干旱地区的剧烈变化，其实有着简单的科学解释。"
+    },
+    {
+      "text": "Deserts contain very little water, and water is what controls temperature in most places on Earth. During the day, the dry ground absorbs a huge amount of energy from the sunlight. When evening comes, that energy should be released back into the air, warming the land slowly. Dry air, however, holds almost no water vapour, the gas that usually traps heat near the surface. Without this natural blanket, the warmth simply escapes into space very quickly.",
+      "translation": "沙漠中几乎没有水，而在地球上大多数地方，正是水在调节气温。白天，干燥的地面从阳光中吸收巨大的能量。到了傍晚，这些能量本应重新释放到空气中，使地面慢慢变暖。然而干燥的空气几乎不含水蒸气——这种通常把热量留在地表附近的气体。少了这层天然的“毯子”，热量很快就直接散逸到太空中去了。"
+    },
+    {
+      "text": "The sky above a desert is usually cloudless, which makes the loss of heat even faster. Clouds act like a roof. They reflect some warmth back to the ground below, keeping the night air slightly warmer. Knowing this, scientists can explain why a cloudy night in the desert feels less cold than a clear one. Sand and rock, having little water inside them, also cool down faster than wet soil. As a result, the temperature may fall by twenty degrees or more within a few hours.",
+      "translation": "沙漠上空的天空通常没有云，这让热量的散失更加迅速。云层就像屋顶。它们会把一部分热量反射回下方的地面，使夜里的空气稍微暖和一些。明白了这一点，科学家就能解释为什么沙漠里多云的夜晚没有晴朗的夜晚那么冷。沙子和岩石内部含水极少，因此也比潮湿的土壤降温更快。结果，气温可能在几个小时内下降二十度甚至更多。"
+    },
+    {
+      "text": "This daily cycle, a fact that local animals have long understood, shapes life in the desert. Many small creatures, avoiding the midday heat, sleep deep underground during the day. Others come out only after sunset. By then, the air is cool and comfortable. The idea that deserts are simply hot places is therefore far from the whole truth. Understanding this, we can see deserts as places of extreme change, not endless heat.",
+      "translation": "这种昼夜循环——当地动物早已了解的事实——塑造着沙漠中的生命。许多小动物为了避开正午的酷热，白天在深深的地下睡觉。另一些则只在日落后才出来活动。那时空气凉爽舒适。因此，“沙漠只是炎热之地”这种想法远非全部真相。理解了这一点，我们就能把沙漠看作极端变化之地，而不只是无尽的炎热。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, which kind of sky helps a desert lose heat faster?",
+      "audioText": "According to the text, which kind of sky helps a desert lose heat faster?",
+      "options": [
+        {
+          "emoji": "🌙",
+          "value": "clear",
+          "text": "A clear, cloudless sky"
+        },
+        {
+          "emoji": "☁️",
+          "value": "cloudy",
+          "text": "A sky full of clouds"
+        },
+        {
+          "emoji": "🌧️",
+          "value": "rainy",
+          "text": "A rainy, stormy sky"
+        }
+      ],
+      "answer": "clear"
+    },
+    {
+      "type": "word_builder",
+      "word": "blanket",
+      "audioText": "blanket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Clouds",
+        "act",
+        "like",
+        "a",
+        "roof"
+      ],
+      "audioText": "Clouds act like a roof."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Others",
+        "come",
+        "out",
+        "only",
+        "after",
+        "sunset"
+      ],
+      "audioText": "Others come out only after sunset."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Dry air, however, holds almost no water ___, the gas that usually traps heat near the surface.",
+      "choices": [
+        "vapour",
+        "oxygen",
+        "dust"
+      ],
+      "answer": "vapour",
+      "audioText": "Dry air, however, holds almost no water vapour, the gas that usually traps heat near the surface."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The idea ___ deserts are simply hot places is far from the whole truth.",
+      "choices": [
+        "that",
+        "which",
+        "whose"
+      ],
+      "answer": "that",
+      "audioText": "The idea that deserts are simply hot places is far from the whole truth."
+    }
+  ],
+  "_unknownWords": [
+    "endless",
+    "landscape",
+    "surprisingly",
+    "travellers",
+    "shivering",
+    "dramatic",
+    "region",
+    "sunlight",
+    "vapour",
+    "warmth",
+    "simply",
+    "cloudless",
+    "loss",
+    "midday",
+    "extreme"
+  ]
+}

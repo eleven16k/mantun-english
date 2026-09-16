@@ -1,0 +1,115 @@
+{
+  "id": "gk-r3-s08",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 8,
+  "title": "The Stone That Learned to Speak",
+  "titleCn": "重新开口的石头",
+  "coverEmoji": "🪨",
+  "paragraphs": [
+    {
+      "text": "In 1799, French soldiers repairing a wall in an Egyptian town found a large stone covered with three different kinds of writing. The same message appeared three times: in picture signs, in everyday writing and in Greek. Scholars who could read Greek understood the meaning at once, but nobody could read the picture signs. If the stone had never been found, would we still be unable to hear ancient Egypt speak?",
+      "translation": "1799 年，法国士兵在埃及一座小镇修缮一堵墙时，发现了一块刻有三种不同文字的大石头。同一段话出现了三次：图画符号、日常文字和希腊文。能读懂希腊文的学者立刻明白了它的意思，却没有人能读懂那些图画符号。假如这块石头从未被发现，我们是否至今仍无法听见古埃及开口说话？"
+    },
+    {
+      "text": "For more than twenty years, the puzzle defeated every expert who tried to solve it. Some argued that the picture signs simply stood for ideas, and that each sign had one fixed meaning. A young French teacher named Jean-François Champollion refused to accept this simple explanation. He had taught himself several ancient languages, and he believed that the signs might also record sounds.",
+      "translation": "二十多年里，这道谜题难倒了每一位试图破解它的专家。有人认为图画符号只表示意思，而且每个符号都有一个固定的含义。一位名叫让-弗朗索瓦·商博良的年轻法语教师拒绝接受这种过于简单的解释。他自学了好几种古代语言，并相信这些符号也可能记录声音。"
+    },
+    {
+      "text": "Not only did Champollion learn how to read old Egyptian documents, but he also compared the names of rulers with the Greek text on the stone. It was the repeated pattern of one particular name that finally gave him the key. If he had trusted the experts instead of his own careful reading, the breakthrough would never have come. In 1822, after years of patient work, he announced that the picture signs could be read at last.",
+      "translation": "商博良不仅学会了阅读古埃及文献，还把统治者的名字同石头上的希腊文作了对比。正是一个特殊名字反复出现的规律，最终给了他打开大门的钥匙。倘若他当时相信专家而不是自己细致的阅读，这一突破就永远不会到来。1822 年，经过多年耐心的工作，他宣布这些图画符号终于可以被读出来了。"
+    },
+    {
+      "text": "No sooner had the news spread than students and travelers hurried to Egypt to copy every wall they could reach. Thanks to one quiet young man, a civilization silent for more than a thousand years began to tell its story again. Not only do we now know the names of forgotten kings, but we can also read their letters and songs. It is ordinary human curiosity, not wealth or power, that keeps the past alive.",
+      "translation": "消息一传开，学生和旅行者就纷纷赶往埃及，抄写他们能够接触到的每一面墙。多亏了这位沉默的年轻人，一个沉寂了一千多年的文明重新开始讲述自己的故事。如今我们不仅知道了那些被遗忘的国王的名字，还能读到他们的书信和歌谣。让过去活下来的，正是普通人那种好奇心，而不是财富或权力。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did French soldiers find in an Egyptian town in 1799?",
+      "audioText": "What did French soldiers find in an Egyptian town in 1799?",
+      "options": [
+        {
+          "emoji": "🪨",
+          "value": "stone",
+          "text": "A large stone covered with writing"
+        },
+        {
+          "emoji": "👑",
+          "value": "crown",
+          "text": "A golden crown"
+        },
+        {
+          "emoji": "🗺️",
+          "value": "map",
+          "text": "An old map"
+        }
+      ],
+      "answer": "stone"
+    },
+    {
+      "type": "word_builder",
+      "word": "puzzle",
+      "audioText": "puzzle"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "the",
+        "puzzle",
+        "defeated",
+        "every",
+        "expert"
+      ],
+      "audioText": "For more than twenty years, the puzzle defeated every expert who tried to solve it."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "the",
+        "picture",
+        "signs",
+        "could",
+        "be",
+        "read",
+        "at",
+        "last"
+      ],
+      "audioText": "In 1822, after years of patient work, he announced that the picture signs could be read at last."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If he ___ trusted the experts instead of his own careful reading, the breakthrough would never have come.",
+      "choices": [
+        "had",
+        "has",
+        "have"
+      ],
+      "answer": "had",
+      "audioText": "If he had trusted the experts instead of his own careful reading, the breakthrough would never have come."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Not only ___ Champollion learn how to read old Egyptian documents, but he also compared the names of rulers with the Greek text on the stone.",
+      "choices": [
+        "did",
+        "does",
+        "had"
+      ],
+      "answer": "did",
+      "audioText": "Not only did Champollion learn how to read old Egyptian documents, but he also compared the names of rulers with the Greek text on the stone."
+    }
+  ],
+  "_unknownWords": [
+    "puzzle",
+    "solve",
+    "simply",
+    "jean",
+    "fran",
+    "ois",
+    "champollion",
+    "forgotten",
+    "curiosity"
+  ]
+}

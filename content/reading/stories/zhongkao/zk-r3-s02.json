@@ -1,0 +1,118 @@
+{
+  "id": "zk-r3-s02",
+  "track": "zhongkao",
+  "regionId": "zk-r3",
+  "order": 2,
+  "title": "Smart Machines in Our Life",
+  "titleCn": "我们生活中的智能机器",
+  "coverEmoji": "🤖",
+  "paragraphs": [
+    {
+      "text": "Today, AI is used in many places around the world. It may be in your phone, your car, or even your schoolbag. This smart technology helps people in quiet and useful ways.",
+      "translation": "如今，人工智能被用在世界上许多地方。它也许就在你的手机里、汽车里，甚至书包里。这项聪明的技术正以安静而实用的方式帮助着人们。"
+    },
+    {
+      "text": "In factories, heavy boxes are moved by robots every day. These machines never get tired, so they can work all night. In some hospitals, medicine is carried to nurses by small robots. Doctors say these helpers make their work easier and safer.",
+      "translation": "在工厂里，沉重的箱子每天都被机器人搬运。这些机器从不疲倦，所以它们能整夜工作。在一些医院里，药品由小机器人送往护士手中。医生说，这些帮手让他们的工作更轻松、更安全。"
+    },
+    {
+      "text": "AI is also used in the apps on our phones. When you take a photo, the picture can be made clearer by AI. When you meet a new word, its meaning may be shown at once. Some apps can even turn your voice into text.",
+      "translation": "人工智能也被用在手机的应用程序里。你拍照时，照片可以由人工智能变得更清晰。当你遇到一个新单词时，它的意思也许马上就会显示出来。有些应用甚至能把你的声音变成文字。"
+    },
+    {
+      "text": "Transport is changing fast in our cities. Electric cars are charged at home. Some buses can be driven by computers. Every new model must be tested again and again.",
+      "translation": "交通工具也在我们的城市里快速变化着。电动汽车在家里充电。一些公交车可以由电脑驾驶。每一个新车型都必须一次又一次地接受测试。"
+    },
+    {
+      "text": "Nobody knows what will come next or what will happen tomorrow. More smart machines may be built in the coming years. They might help farmers grow food or clean up rivers. However, AI is only a tool, and it cannot feel or dream.",
+      "translation": "没有人知道接下来会出现什么，也不知道明天会发生什么。未来几年里，可能会有更多智能机器被制造出来。它们也许能帮助农民种粮食，或者清理河流。不过，人工智能只是一种工具，它不能感受，也不会做梦。"
+    },
+    {
+      "text": "So we should not be afraid of smart machines. They are made by people, and they work for people. The best ideas still come from the human mind.",
+      "translation": "所以我们不必害怕智能机器。它们由人制造，也为人们工作。最好的想法仍然来自人脑。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In the passage, which machine moves heavy boxes in factories?",
+      "audioText": "In the passage, which machine moves heavy boxes in factories?",
+      "options": [
+        {
+          "emoji": "🤖",
+          "value": "robot",
+          "text": "Robot"
+        },
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "Car"
+        },
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "Phone"
+        }
+      ],
+      "answer": "robot"
+    },
+    {
+      "type": "word_builder",
+      "word": "medicine",
+      "audioText": "medicine"
+    },
+    {
+      "type": "word_builder",
+      "word": "electric",
+      "audioText": "electric"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Electric",
+        "cars",
+        "are",
+        "charged",
+        "at",
+        "home"
+      ],
+      "audioText": "Electric cars are charged at home."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Today, AI ___ used in many places around the world.",
+      "choices": [
+        "is",
+        "are",
+        "were"
+      ],
+      "answer": "is",
+      "audioText": "Today, AI is used in many places around the world."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "These machines never get tired, so they ___ work all night.",
+      "choices": [
+        "can",
+        "cannot",
+        "must not"
+      ],
+      "answer": "can",
+      "audioText": "These machines never get tired, so they can work all night."
+    }
+  ],
+  "_unknownWords": [
+    "ai",
+    "world",
+    "helpers",
+    "easier",
+    "safer",
+    "apps",
+    "shown",
+    "transport",
+    "charged",
+    "driven",
+    "model",
+    "cannot"
+  ]
+}

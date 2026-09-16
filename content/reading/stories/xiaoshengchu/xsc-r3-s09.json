@@ -1,0 +1,128 @@
+{
+  "id": "xsc-r3-s09",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 9,
+  "title": "The Candy Town Treasure Hunt",
+  "titleCn": "糖果镇的寻宝游戏",
+  "coverEmoji": "🗺️",
+  "paragraphs": [
+    {
+      "text": "Last Saturday was a sunny day. My friends and I met at Sugar Park. We had a map in my hand. The map showed a big candy box.",
+      "translation": "上周六是个晴天。我和朋友们在糖果公园碰面。我手里拿着一张地图。地图上画着一个大大的糖果盒。"
+    },
+    {
+      "text": "We looked at the map together. The map said, \"Go to the pink bridge.\" We walked along the sweet river. We saw three white ducks there. A small note was under a tree.",
+      "translation": "我们一起看地图。地图上写着：“去粉色小桥。”我们沿着甜甜的小河往前走。我们在那里看见了三只白鸭子。一棵树下有一张小纸条。"
+    },
+    {
+      "text": "The note said we were close. We ran to the Candy Shop. Mrs. Sweet smiled at us warmly. She showed me a little key. Then she pointed at a box.",
+      "translation": "纸条上写着我们快到了。我们跑向糖果店。斯威特太太热情地冲我们微笑。她给我看了一把小钥匙。然后她指了指一个盒子。"
+    },
+    {
+      "text": "The key opened the big candy box. Inside, we saw ten candy stars. We each ate two candy stars. They were sweet and a little sour. We laughed and jumped all around.",
+      "translation": "钥匙打开了那个大糖果盒。里面，我们看见了十颗糖果星星。我们每人吃了两颗糖果星星。它们甜甜的，还有一点点酸。我们又笑又跳。"
+    },
+    {
+      "text": "After that, we had sweet lemon tea. Mrs. Sweet shared a funny story. We listened and ate more candy. The sun went down very slowly. Then we cleaned the little shop.",
+      "translation": "之后，我们喝了甜甜的柠檬茶。斯威特太太讲了一个好玩的故事。我们一边听一边吃了更多糖果。太阳慢慢落下去了。然后我们把小店打扫干净。"
+    },
+    {
+      "text": "At six o'clock, we went home. We were tired but very happy. Our parents smiled and listened to us. It was a great day in Candy Town. I want to play that game again.",
+      "translation": "六点钟，我们回家了。我们很累，但非常开心。爸爸妈妈笑着听我们讲。那是糖果镇里很棒的一天。我还想再玩一次那个游戏。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the children see near the river?",
+      "audioText": "What did the children see near the river?",
+      "options": [
+        {
+          "emoji": "🦆",
+          "value": "ducks",
+          "text": "Ducks"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        },
+        {
+          "emoji": "🐱",
+          "value": "cats",
+          "text": "Cats"
+        }
+      ],
+      "answer": "ducks"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the children drink in the Candy Shop?",
+      "audioText": "What did the children drink in the Candy Shop?",
+      "options": [
+        {
+          "emoji": "🍵",
+          "value": "tea",
+          "text": "Lemon tea"
+        },
+        {
+          "emoji": "🥛",
+          "value": "milk",
+          "text": "Milk"
+        },
+        {
+          "emoji": "🧃",
+          "value": "juice",
+          "text": "Juice"
+        }
+      ],
+      "answer": "tea"
+    },
+    {
+      "type": "word_builder",
+      "word": "opened",
+      "audioText": "opened"
+    },
+    {
+      "type": "word_builder",
+      "word": "listened",
+      "audioText": "listened"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "We",
+        "saw",
+        "three",
+        "white",
+        "ducks",
+        "there",
+        "."
+      ],
+      "audioText": "We saw three white ducks there."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The sun ___ down very slowly.",
+      "choices": [
+        "went",
+        "goes",
+        "going"
+      ],
+      "answer": "went",
+      "audioText": "The sun went down very slowly."
+    }
+  ],
+  "_unknownWords": [
+    "met",
+    "said",
+    "saw",
+    "ran",
+    "ate",
+    "sour",
+    "lemon",
+    "went",
+    "o'clock"
+  ]
+}

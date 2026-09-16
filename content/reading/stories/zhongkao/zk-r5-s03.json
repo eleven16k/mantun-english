@@ -1,0 +1,123 @@
+{
+  "id": "zk-r5-s03",
+  "track": "zhongkao",
+  "regionId": "zk-r5",
+  "order": 3,
+  "title": "The Boy Who Fixed Bikes",
+  "titleCn": "修旧自行车的男孩",
+  "coverEmoji": "🚲",
+  "paragraphs": [
+    {
+      "text": "Li Wei is a fifteen-year-old boy who lives in a small town in Yunnan. Three years ago, he found an old bike in his grandfather's yard. The bike was broken, and nobody wanted it.",
+      "translation": "李伟是一个十五岁的男孩，住在云南的一个小镇上。三年前，他在爷爷的院子里发现了一辆旧自行车。这辆车坏了，没有人想要它。"
+    },
+    {
+      "text": "Li Wei decided to fix it by himself. He watched many videos and learned how to clean the parts. He had never repaired anything before, but he did not give up.",
+      "translation": "李伟决定自己把它修好。他看了很多视频，学会了怎样清理零件。他以前从没修过任何东西，但他没有放弃。"
+    },
+    {
+      "text": "After two months, the old bike could run again. A classmate who lived far away needed a bike. Li Wei gave it to him for free, and the boy smiled all the way home.",
+      "translation": "两个月后，这辆旧车又能骑了。一位家住得很远的同学需要一辆自行车。李伟免费把它送给了他，那个男孩一路笑着回家。"
+    },
+    {
+      "text": "From then on, Li Wei began to look for broken bikes in his town. Some neighbours gave him bikes that they no longer used. By last year, he had fixed more than forty bikes.",
+      "translation": "从那以后，李伟开始在小镇上寻找坏掉的自行车。一些邻居把不再骑的车送给了他。到去年为止，他已经修好了四十多辆自行车。"
+    },
+    {
+      "text": "Most of the bikes go to students who walk a long way to school. Li Wei also teaches them how to take care of the bikes. \"A bike that is loved can last for many years,\" he says.",
+      "translation": "这些车大多送给要走很远路上学的学生。李伟还教他们怎样保养自行车。“一辆被爱惜的车能骑很多年，”他说。"
+    },
+    {
+      "text": "Li Wei is not rich, and he does not want money. He only hopes that more children can get to school quickly and safely. His small shop has become the warmest place in the town.",
+      "translation": "李伟并不富裕，他也不想要钱。他只希望更多的孩子能又快又安全地到学校。他的小铺子成了镇上最温暖的地方。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Li Wei find in his grandfather's yard?",
+      "audioText": "What did Li Wei find in his grandfather's yard?",
+      "options": [
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "A bike"
+        },
+        {
+          "emoji": "📱",
+          "value": "phone",
+          "text": "A phone"
+        },
+        {
+          "emoji": "⚽",
+          "value": "ball",
+          "text": "A ball"
+        }
+      ],
+      "answer": "bike"
+    },
+    {
+      "type": "word_builder",
+      "word": "broken",
+      "audioText": "broken"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Li",
+        "Wei",
+        "decided",
+        "to",
+        "fix",
+        "it",
+        "by",
+        "himself."
+      ],
+      "audioText": "Li Wei decided to fix it by himself."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "bike",
+        "was",
+        "broken,",
+        "and",
+        "nobody",
+        "wanted",
+        "it."
+      ],
+      "audioText": "The bike was broken, and nobody wanted it."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "By last year, he ___ fixed more than forty bikes.",
+      "choices": [
+        "had",
+        "has",
+        "have"
+      ],
+      "answer": "had",
+      "audioText": "By last year, he had fixed more than forty bikes."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Li Wei is a fifteen-year-old boy ___ lives in a small town in Yunnan.",
+      "choices": [
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer": "who",
+      "audioText": "Li Wei is a fifteen-year-old boy who lives in a small town in Yunnan."
+    }
+  ],
+  "_unknownWords": [
+    "li",
+    "wei",
+    "yunnan",
+    "grandfather's",
+    "broken",
+    "neighbours"
+  ]
+}

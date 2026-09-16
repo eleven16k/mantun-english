@@ -1,0 +1,123 @@
+{
+  "id": "xsc-r5-s04",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r5",
+  "order": 4,
+  "title": "A Big Egg in Dino Valley",
+  "titleCn": "恐龙谷里的大蛋",
+  "coverEmoji": "🥚",
+  "paragraphs": [
+    {
+      "text": "Last week, Tim and Amy visited Dino Valley. They walked along the river and looked around. The sun was hot. The sky was blue. Then they saw footprints in the wet mud.",
+      "translation": "上周，蒂姆和艾米去了恐龙谷。他们沿着河边走，四处张望。太阳很热，天空很蓝。后来，他们在湿泥里看到了脚印。"
+    },
+    {
+      "text": "\"These are the biggest footprints here,\" said Tim. Amy looked down and found a big egg. The egg was as big as a ball. It was warm because the sun was hot.",
+      "translation": "“这是这儿最大的脚印，”蒂姆说。艾米低头一看，发现了一个大蛋。这个蛋有一个球那么大。它很暖和，因为太阳很热。"
+    },
+    {
+      "text": "Amy said, \"We must be very quiet.\" They sat down and waited for the mother. The egg moved a little. Then it moved more.",
+      "translation": "艾米说：“我们必须非常安静。”他们坐下来，等着恐龙妈妈。蛋动了一下，接着又动得更厉害了。"
+    },
+    {
+      "text": "Boom! Boom! A big dinosaur walked out. She was the biggest animal in the valley. The mother looked at the egg. Then she looked at Tim and Amy.",
+      "translation": "砰！砰！一只大恐龙走了出来。她是山谷里最大的动物。恐龙妈妈看了看那个蛋，然后又看了看蒂姆和艾米。"
+    },
+    {
+      "text": "\"We did not touch your egg,\" said Tim. The big dinosaur made a soft, happy sound. She pushed the egg with her long nose. \"She is the best mother here,\" said Amy.",
+      "translation": "“我们没有碰你的蛋，”蒂姆说。大恐龙发出了温柔又开心的声音。她用长长的鼻子推了推那个蛋。“她是这儿最好的妈妈，”艾米说。"
+    },
+    {
+      "text": "Then Tim and Amy walked back home. They were tired but very happy. \"This was the most wonderful day!\" said Amy. \"Dino Valley is a wonderful place,\" said Tim.",
+      "translation": "然后蒂姆和艾米走回了家。他们很累，但非常开心。“这是最美好的一天！”艾米说。“恐龙谷是个美妙的地方，”蒂姆说。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Tim and Amy see in the wet mud?",
+      "audioText": "What did Tim and Amy see in the wet mud?",
+      "options": [
+        {
+          "emoji": "🦶",
+          "value": "footprints",
+          "text": "Footprints"
+        },
+        {
+          "emoji": "🌸",
+          "value": "flower",
+          "text": "A flower"
+        },
+        {
+          "emoji": "🪨",
+          "value": "rock",
+          "text": "A rock"
+        }
+      ],
+      "answer": "footprints"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the mother dinosaur push with her nose?",
+      "audioText": "What did the mother dinosaur push with her nose?",
+      "options": [
+        {
+          "emoji": "🥚",
+          "value": "egg",
+          "text": "The egg"
+        },
+        {
+          "emoji": "🌳",
+          "value": "tree",
+          "text": "A tree"
+        },
+        {
+          "emoji": "🥤",
+          "value": "cup",
+          "text": "A cup"
+        }
+      ],
+      "answer": "egg"
+    },
+    {
+      "type": "word_builder",
+      "word": "biggest",
+      "audioText": "biggest"
+    },
+    {
+      "type": "word_builder",
+      "word": "dinosaur",
+      "audioText": "dinosaur"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "egg",
+        "was",
+        "as",
+        "big",
+        "as",
+        "a",
+        "ball."
+      ],
+      "audioText": "The egg was as big as a ball."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was warm ___ the sun was hot.",
+      "choices": [
+        "because",
+        "but",
+        "so"
+      ],
+      "answer": "because",
+      "audioText": "It was warm because the sun was hot."
+    }
+  ],
+  "_unknownWords": [
+    "mud",
+    "biggest",
+    "boom"
+  ]
+}

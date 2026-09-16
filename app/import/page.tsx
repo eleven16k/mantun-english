@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { LightbulbIcon, RocketIcon } from "@/components/SvgIcons";
@@ -296,10 +297,8 @@ export default function ImportPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-8">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">
-          {t("imp.title")}
-        </h1>
+      <div className="page-shell">
+        <PageHeader badge="📥 UPLOAD COURSEWARE" title={t("imp.title")} />
 
         {/* Mode tabs — upload / paste */}
         <div className="mb-4 flex gap-1 rounded-pill bg-canvas p-1">
@@ -310,7 +309,7 @@ export default function ImportPage() {
               disabled={busy}
               onClick={() => setMode(m)}
               className={`flex-1 rounded-pill py-2 text-sm font-bold transition ${
-                mode === m ? "bg-surface text-primary shadow-sm" : "text-tertiary hover:text-secondary"
+                mode === m ? "bg-gold text-primary shadow-[0_2px_0_0_rgba(0,0,0,0.12)]" : "text-tertiary hover:text-secondary"
               }`}
             >
               {t(m === "upload" ? "imp.tabUpload" : "imp.tabPaste")}
@@ -320,7 +319,7 @@ export default function ImportPage() {
 
         {mode === "upload" ? (
         /* Hero — upload prompt */
-        <section className="g-card-hero relative overflow-hidden p-6 pt-2 text-center shadow-sm">
+        <section className="g-card-hero relative overflow-hidden p-6 pt-2 text-center">
           <div>
             <RocketIcon size={32} className="mx-auto text-brand-text" />
           </div>
@@ -353,7 +352,7 @@ export default function ImportPage() {
         </section>
         ) : (
         /* Paste — text input for vocabulary lists / articles */
-        <section className="g-card-hero overflow-hidden p-6 pt-4 shadow-sm">
+        <section className="g-card-hero overflow-hidden p-6 pt-4">
           <div className="flex items-center gap-2">
             <svg viewBox="0 0 24 24" className="h-5 w-5 text-brand-text" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M9 2h6v4H9zM9 12h6M9 16h4" />
@@ -387,7 +386,7 @@ export default function ImportPage() {
 
         {/* Pipeline status */}
         {phase !== "idle" && phase !== "error" && (
-          <div className="mt-4 g-card p-4 shadow-sm">
+          <div className="mt-4 g-card p-4">
             {busy ? (
               <div className="flex items-center gap-3">
                 <Spinner className="h-5 w-5 shrink-0 text-brand-text" />
@@ -425,7 +424,7 @@ export default function ImportPage() {
 
         {/* Configure: topic / type / count / difficulty */}
         {phase === "configure" && (
-          <section className="mt-4 g-card flex flex-col gap-4 p-4 shadow-sm">
+          <section className="mt-4 g-card flex flex-col gap-4 p-4">
             <label className="flex flex-col gap-1.5">
               <span className="text-xs font-bold uppercase tracking-wide text-tertiary">{t("imp.topic")}</span>
               <input
@@ -494,7 +493,7 @@ export default function ImportPage() {
 
         {/* Reusable knowledge bases — skip re-upload & re-indexing */}
         {phase === "idle" && existingKbs.length > 0 && (
-          <div className="mt-4 g-card p-4 shadow-sm">
+          <div className="mt-4 g-card p-4">
             <p className="mb-2 text-xs font-bold uppercase tracking-wide text-tertiary">{t("imp.recentKbs")}</p>
             <div className="flex flex-col gap-1.5">
               {existingKbs.map((kb) => (
@@ -519,7 +518,7 @@ export default function ImportPage() {
 
         {/* Tips */}
         {phase === "idle" && (
-          <div className="mt-6 g-card p-4 shadow-sm">
+          <div className="mt-6 g-card p-4">
             <div className="flex items-center gap-2 mb-2">
               <LightbulbIcon size={18} className="text-gold" />
               <span className="text-sm font-bold text-primary">{t("imp.tipsTitle")}</span>

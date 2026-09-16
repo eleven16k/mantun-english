@@ -1,0 +1,124 @@
+{
+  "id": "zk-r2-s10",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 10,
+  "title": "Three Days in Chengdu",
+  "titleCn": "成都三日",
+  "coverEmoji": "🐼",
+  "paragraphs": [
+    {
+      "text": "Last summer, my family took a trip to Chengdu. We arrived in the city on a warm Friday afternoon. Before we left the airport, I bought a map of the city. The streets were busier than the streets in my home town.",
+      "translation": "去年夏天，我们一家人去成都旅行。我们在一个温暖的周五下午到达这座城市。离开机场前，我买了一张城市地图。这里的街道比我家乡的街道更热闹。"
+    },
+    {
+      "text": "On Saturday morning, we visited the famous Panda Base. It is one of the most popular places in Chengdu. When we got there, two young pandas were climbing a tree. They looked lazier than the older pandas nearby. After we watched them for an hour, we took many photos.",
+      "translation": "周六上午，我们参观了有名的大熊猫基地。它是成都最受欢迎的地方之一。我们到那里时，两只小熊猫正在爬树。它们看起来比旁边年长的熊猫更懒散。我们看了一个小时后，拍了很多照片。"
+    },
+    {
+      "text": "In the afternoon, we walked along an old street called Jinli. It was the oldest street we saw in the city. While we were walking, a light rain began to fall. We sat down in a small restaurant and tried hot pot. It was hotter than anything I had tried at home. My sister drank three cups of cold water.",
+      "translation": "下午，我们沿着一条叫锦里的老街散步。那是我们在城里见到的最古老的街道。我们正走着，下起了小雨。我们在一家小餐馆坐下，尝了火锅。它比我以前在家吃过的任何东西都辣。我妹妹喝了三杯凉水。"
+    },
+    {
+      "text": "On Sunday morning, we went to a tea house in the park. Old men were playing cards while we drank jasmine tea. A friendly woman showed us how to pour the tea. After we finished our tea, we thanked her and left.",
+      "translation": "周日早上，我们去了公园里的一家茶馆。我们喝着茉莉花茶时，几位老人在打牌。一位和气的女士教我们怎么倒茶。喝完茶后，我们谢过她就离开了。"
+    },
+    {
+      "text": "Our last stop was a green mountain. It was quieter than the busy streets below. When we reached the top, we could see soft clouds. It was the best trip of my whole year. I hope I can go back to Chengdu one day.",
+      "translation": "我们最后一站是一座青山。它比山下热闹的街道安静。当我们到达山顶时，能看见轻柔的云。这是我这一年里最棒的一次旅行。我希望有一天能再回成都。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the family try in the small restaurant?",
+      "audioText": "What did the family try in the small restaurant?",
+      "options": [
+        {
+          "emoji": "🍲",
+          "value": "hotpot",
+          "text": "Hot pot"
+        },
+        {
+          "emoji": "🍜",
+          "value": "noodles",
+          "text": "Noodles"
+        },
+        {
+          "emoji": "🍰",
+          "value": "cake",
+          "text": "Cake"
+        }
+      ],
+      "answer": "hotpot"
+    },
+    {
+      "type": "word_builder",
+      "word": "pandas",
+      "audioText": "pandas"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The streets were ___ than the streets in my home town.",
+      "choices": [
+        "busier",
+        "busy",
+        "busiest"
+      ],
+      "answer": "busier",
+      "audioText": "The streets were busier than the streets in my home town."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "My",
+        "sister",
+        "drank",
+        "three",
+        "cups",
+        "of",
+        "cold",
+        "water."
+      ],
+      "audioText": "My sister drank three cups of cold water."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "When we got there, two young pandas ___ climbing a tree.",
+      "choices": [
+        "were",
+        "was",
+        "are"
+      ],
+      "answer": "were",
+      "audioText": "When we got there, two young pandas were climbing a tree."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "quieter",
+        "than",
+        "the",
+        "busy",
+        "streets",
+        "below."
+      ],
+      "audioText": "It was quieter than the busy streets below."
+    }
+  ],
+  "_unknownWords": [
+    "chengdu",
+    "busier",
+    "base",
+    "lazier",
+    "jinli",
+    "pot",
+    "hotter",
+    "men",
+    "jasmine",
+    "pour",
+    "busy"
+  ]
+}

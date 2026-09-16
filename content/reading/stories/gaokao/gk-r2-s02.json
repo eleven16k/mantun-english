@@ -1,0 +1,118 @@
+{
+  "id": "gk-r2-s02",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 2,
+  "title": "The Hidden Price of Free Apps",
+  "titleCn": "免费应用的隐藏代价",
+  "coverEmoji": "📱",
+  "paragraphs": [
+    {
+      "text": "Almost every app on your phone is offered for free, and it is often assumed that this service costs nothing at all. However, a question that is being asked more frequently by researchers is whether free really means what we think it does. The user is the product. It is now widely accepted that personal information has become the currency which users pay with.",
+      "translation": "你手机上的几乎每个应用都是免费提供给你的，人们也常常认为这项服务根本不花一分钱。然而，研究者们越来越频繁地提出的一个问题是：“免费”是否真的意味着我们所想的那样。用户就是产品。如今人们普遍接受，个人信息已经成了用户用来支付的货币。"
+    },
+    {
+      "text": "Every time you open an app, small amounts of data are being collected in the background without any obvious signal. Where you are, what you search for, and how long you pause on a picture may all be recorded and later sold. It is not surprising that many users feel uneasy when they discover how detailed these records have become.",
+      "translation": "每次你打开一个应用，都会有少量数据在后台被悄悄收集，没有任何明显的提示。你在哪里、你搜索什么、你在一张图片上停留多久，这些都可能被记录下来，并在之后被出售。许多用户发现这些记录竟如此详细时感到不安，这并不奇怪。"
+    },
+    {
+      "text": "Companies usually explain that this information is needed to improve their products, and part of that claim is certainly true. Yet whether such collection should be allowed to continue unchecked is a matter that governments are now being forced to discuss. In several countries, new rules have been introduced so that users can see what is stored about them.",
+      "translation": "公司通常解释说，这些信息是改进产品所必需的，而这种说法有一部分确实没错。然而，这种收集是否应该被允许不受约束地继续下去，是各国政府如今被迫要讨论的问题。在一些国家，新的规则已经被引入，以便用户能看到关于自己的哪些信息被储存了下来。"
+    },
+    {
+      "text": "What matters most, perhaps, is that ordinary people start asking better questions about the tools they use every day. Being informed does not mean that you must abandon technology, but it means your choices should be made with clear eyes. When you understand what is really happening behind the screen, you are in a much stronger position.",
+      "translation": "也许最重要的是，普通人开始就自己每天使用的工具提出更好的问题。知情并不意味着你必须放弃科技，但它意味着你的选择应该是在清醒的眼光下做出的。当你明白屏幕背后真正在发生什么时，你就处于一个更有力的位置。"
+    },
+    {
+      "text": "None of this means that technology itself is the enemy, or that every company is acting in bad faith. It is simply being pointed out that convenience and privacy must be balanced, and that this balance is shaped by ordinary choices. Once lost, trust is hard to rebuild.",
+      "translation": "这一切都不意味着科技本身就是敌人，也不意味着每家公司都在弄虚作假。我们只是想指出，便利与隐私必须取得平衡，而这种平衡是由一个个普通的选择塑造的。一旦失去，信任就很难重建。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, what has become the currency that users pay with?",
+      "audioText": "According to the passage, what has become the currency that users pay with?",
+      "options": [
+        {
+          "emoji": "💰",
+          "value": "money",
+          "text": "Money"
+        },
+        {
+          "emoji": "📊",
+          "value": "info",
+          "text": "Personal information"
+        },
+        {
+          "emoji": "⏰",
+          "value": "time",
+          "text": "Time"
+        }
+      ],
+      "answer": "info"
+    },
+    {
+      "type": "word_builder",
+      "word": "privacy",
+      "audioText": "privacy"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "user",
+        "is",
+        "the",
+        "product"
+      ],
+      "audioText": "The user is the product."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Once",
+        "lost",
+        "trust",
+        "is",
+        "hard",
+        "to",
+        "rebuild"
+      ],
+      "audioText": "Once lost, trust is hard to rebuild."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Small amounts of data are ___ collected in the background without any obvious signal.",
+      "choices": [
+        "being",
+        "been",
+        "be"
+      ],
+      "answer": "being",
+      "audioText": "Small amounts of data are being collected in the background without any obvious signal."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Yet ___ such collection should be allowed to continue unchecked is a matter that governments are being forced to discuss.",
+      "choices": [
+        "Whether",
+        "What",
+        "Which"
+      ],
+      "answer": "Whether",
+      "audioText": "Yet whether such collection should be allowed to continue unchecked is a matter that governments are being forced to discuss."
+    }
+  ],
+  "_unknownWords": [
+    "app",
+    "researchers",
+    "uneasy",
+    "detailed",
+    "claim",
+    "unchecked",
+    "simply",
+    "privacy",
+    "rebuild"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "zk-r2-s03",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 3,
+  "title": "A Trip to Hangzhou",
+  "titleCn": "杭州之旅",
+  "coverEmoji": "🛶",
+  "paragraphs": [
+    {
+      "text": "Last spring, my family took a trip to Hangzhou. We left home before the sun came up. The train was faster than the bus, so we took it. When we arrived, the air felt soft and warm.",
+      "translation": "去年春天，我们一家人去杭州旅行。天还没亮，我们就从家里出发了。火车比汽车快，所以我们选择了坐火车。到达杭州时，空气又柔和又温暖。"
+    },
+    {
+      "text": "Our hotel stood near West Lake, only ten minutes away. After we put down our bags, we walked to the lake. The water was quieter than I imagined it would be. Small boats were moving slowly across the lake.",
+      "translation": "我们的旅馆就在西湖附近，走过去只要十分钟。放下行李后，我们步行来到湖边。湖水比我原先想象的还要安静。小船在湖面上缓缓地划过。"
+    },
+    {
+      "text": "On the first morning, we took a boat to the island. While we were rowing, a light wind touched our faces. The old bridge there is the most famous one in the city. Before we left, we took a lot of photos.",
+      "translation": "第一天早上，我们坐船去了湖心岛。我们划船的时候，一阵微风拂过我们的脸。岛上的那座古桥是全市最有名的。离开之前，我们拍了很多照片。"
+    },
+    {
+      "text": "In the afternoon, we climbed a hill behind the lake. When we reached the top, we could see the whole city. The view was better than any picture in my book. After we came down, we ate hot noodles by the road.",
+      "translation": "下午，我们爬上了湖边的一座小山。到达山顶时，我们能看到整座城市。那景色比我书里的任何一幅图片都好看。下山之后，我们在路边吃了热腾腾的面条。"
+    },
+    {
+      "text": "On the last day, we visited a small tea village. People there say their tea is the best in the country. While we were drinking tea, an old man told us stories. The trip was short, but it was my happiest weekend. Now, when I look at those photos, I still smile.",
+      "translation": "最后一天，我们去了一个小茶村。那里的人说，他们的茶是全国最好的。我们喝茶的时候，一位老人给我们讲了故事。这次旅行很短，却是我最快乐的一个周末。现在，每当我看那些照片，我仍然会微笑。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What was moving slowly across the lake?",
+      "audioText": "What was moving slowly across the lake?",
+      "options": [
+        {
+          "emoji": "🛶",
+          "value": "boats",
+          "text": "Boats"
+        },
+        {
+          "emoji": "🐦",
+          "value": "birds",
+          "text": "Birds"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        }
+      ],
+      "answer": "boats"
+    },
+    {
+      "type": "word_builder",
+      "word": "island",
+      "audioText": "island"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The train was ___ than the bus, so we took it.",
+      "choices": [
+        "faster",
+        "fastest",
+        "fast"
+      ],
+      "answer": "faster",
+      "audioText": "The train was faster than the bus, so we took it."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Small",
+        "boats",
+        "were",
+        "moving",
+        "slowly",
+        "across",
+        "the",
+        "lake."
+      ],
+      "audioText": "Small boats were moving slowly across the lake."
+    },
+    {
+      "type": "word_builder",
+      "word": "village",
+      "audioText": "village"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "People there say their tea is the ___ in the country.",
+      "choices": [
+        "best",
+        "better",
+        "good"
+      ],
+      "answer": "best",
+      "audioText": "People there say their tea is the best in the country."
+    }
+  ],
+  "_unknownWords": [
+    "hangzhou",
+    "view",
+    "happiest"
+  ]
+}

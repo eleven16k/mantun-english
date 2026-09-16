@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
 import { useGameStore } from "@/lib/store";
 import { FlameIcon } from "@/components/SvgIcons";
@@ -68,8 +69,8 @@ export default function ProgressPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-[768px] px-6 pt-[84px] pb-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t("prog.title")}</h1>
+      <div className="page-shell">
+        <PageHeader badge="📈 PROGRESS" title={t("prog.title")} />
 
         {/* D2: Exam countdown */}
         {exam && exam.daysLeft > 0 && (
@@ -82,7 +83,7 @@ export default function ProgressPage() {
         )}
 
         {/* Hero card — 768×507 r24 */}
-        <section className="g-card-hero relative mb-5 p-6 shadow-sm">
+        <section className="g-card-hero relative mb-5 p-6">
           <div className="flex flex-col items-center text-center">
             <div className="grid h-24 w-24 place-items-center rounded-full bg-canvas text-streak">
               <FlameIcon size={44} />
@@ -122,7 +123,7 @@ export default function ProgressPage() {
                     <div key={sl.level} className="flex flex-1 flex-col items-center gap-1">
                       <div
                         className={`grid h-8 w-8 place-items-center rounded-full text-sm ${
-                          isCurrent ? "bg-brand text-white shadow-md" : active ? "bg-brand-subtle" : "bg-canvas opacity-50"
+                          isCurrent ? "bg-brand text-white" : active ? "bg-brand-subtle" : "bg-canvas opacity-50"
                         }`}
                         title={t(STREAK_LEVEL_KEYS[i])}
                       >
@@ -182,7 +183,7 @@ export default function ProgressPage() {
         </section>
 
         {/* Friends leaderboard */}
-        <section className="g-card p-5 shadow-sm">
+        <section className="g-card p-5">
           <div className="flex gap-2 mb-4">
             {(["day", "week", "month", "all"] as const).map((tabKey) => (
               <button

@@ -1,0 +1,119 @@
+{
+  "id": "gk-r3-s07",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 7,
+  "title": "The River That United an Empire",
+  "titleCn": "连接帝国的大河",
+  "coverEmoji": "🛶",
+  "paragraphs": [
+    {
+      "text": "Imagine a river that runs not from the mountains to the sea, but from the north of China to the south. If the ancient engineers had never built such a waterway, grain from the south might never have reached the northern capital. It was the canal that united the country.",
+      "translation": "想象一条河，它不是从山间流向大海，而是从中国北方流向南方。倘若古代的工匠从未修建这样一条水道，南方的粮食也许永远无法运抵北方的都城。正是这条运河把整个国家连在了一起。"
+    },
+    {
+      "text": "The oldest sections of the canal appeared more than two thousand years ago, but they were separate and short. In the early seventh century, workers joined these pieces into one long route across the country. Not only did they dig new channels, but they also repaired old ones so that boats could travel for many days.",
+      "translation": "运河最古老的部分出现在两千多年前，但它们彼此分隔，而且很短。七世纪初，工匠们把这些片段连接成一条横贯全国的长长水道。他们不仅开凿了新的河道，还修整了旧河道，让船只能够连续航行许多天。"
+    },
+    {
+      "text": "No sooner had the harvest been gathered in the south than boats loaded with rice set off for the north. The canal soon became the empire's busiest road. Along this route, goods, ideas and even music moved from one end of the country to the other. Had it not been for this waterway, the capital would have depended on slow carts and muddy roads. Workers, meanwhile, had to keep the water deep enough for the largest ships of the age.",
+      "translation": "南方的庄稼一收割完毕，装满大米的船只便向北出发。这条运河很快成了帝国最繁忙的道路。沿着这条路线，货物、思想甚至音乐从国家的一端流向另一端。若不是有这样一条水道，都城就只能依靠缓慢的车马和泥泞的道路。而与此同时，工匠们还必须让水足够深，以承载当时最大的船只。"
+    },
+    {
+      "text": "Today, more than a thousand years later, the canal still carries water and ships through several provinces of eastern China. If you walked along its banks at night, you would hear the low sound of water that travellers heard long ago. It is this quiet connection with the past, perhaps, that makes the canal a living museum.",
+      "translation": "一千多年后的今天，这条运河依然流经中国东部的几个省份，运送着水和船只。假如你在夜里沿着河岸散步，你会听到很久以前的旅人所听到的那低低的水声。也许正是这种与过去的静静相连，使这条运河成为一座活的博物馆。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the boats carry from the south to the north?",
+      "audioText": "What did the boats carry from the south to the north?",
+      "options": [
+        {
+          "emoji": "🌾",
+          "value": "rice",
+          "text": "Rice"
+        },
+        {
+          "emoji": "🧱",
+          "value": "bricks",
+          "text": "Bricks"
+        },
+        {
+          "emoji": "🐟",
+          "value": "fish",
+          "text": "Fish"
+        }
+      ],
+      "answer": "rice"
+    },
+    {
+      "type": "word_builder",
+      "word": "canal",
+      "audioText": "canal"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "the",
+        "canal",
+        "that",
+        "united",
+        "the",
+        "country."
+      ],
+      "audioText": "It was the canal that united the country."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "canal",
+        "soon",
+        "became",
+        "the",
+        "empire's",
+        "busiest",
+        "road."
+      ],
+      "audioText": "The canal soon became the empire's busiest road."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "No sooner had the harvest been gathered in the south ___ boats loaded with rice set off for the north.",
+      "choices": [
+        "than",
+        "then",
+        "when"
+      ],
+      "answer": "than",
+      "audioText": "No sooner had the harvest been gathered in the south than boats loaded with rice set off for the north."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Had it not ___ for this waterway, the capital would have depended on slow carts and muddy roads.",
+      "choices": [
+        "been",
+        "be",
+        "being"
+      ],
+      "answer": "been",
+      "audioText": "Had it not been for this waterway, the capital would have depended on slow carts and muddy roads."
+    }
+  ],
+  "_unknownWords": [
+    "waterway",
+    "canal",
+    "seventh",
+    "route",
+    "empire's",
+    "busiest",
+    "muddy",
+    "meanwhile",
+    "largest",
+    "travellers"
+  ]
+}

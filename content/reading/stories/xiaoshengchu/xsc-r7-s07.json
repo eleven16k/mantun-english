@@ -1,0 +1,115 @@
+{
+  "id": "xsc-r7-s07",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r7",
+  "order": 7,
+  "title": "The Bell in the Blue Tower",
+  "titleCn": "蓝塔上的钟声",
+  "coverEmoji": "🔔",
+  "paragraphs": [
+    {
+      "text": "Nora lived in a small village near a tall hill. Every night, she heard a bell. The sound came from an old castle on the hill. Nobody else in the village could hear it.",
+      "translation": "诺拉住在一座高山附近的小村庄里。每天夜里，她都能听到一阵钟声。那声音来自山上一座古老的城堡。村里其他人都听不见。"
+    },
+    {
+      "text": "One evening, Nora climbed the hill alone. The castle door was open. Inside, the rooms were darker and colder than her own house. She walked up and up. At the top, she found a blue tower. There was no bell in it.",
+      "translation": "一天傍晚，诺拉独自爬上了那座山。城堡的门开着。里面比她自己家更暗、更冷。她走啊走，一直往上走。在最高处，她发现了一座蓝色的塔。可塔里没有钟。"
+    },
+    {
+      "text": "Then she saw a small glass bell under a chair. It was the smallest bell in the world. When she touched it, the castle spoke to her. \"Only a brave heart can ring this bell,\" it said. \"While the bell is quiet, the castle sleeps.\"",
+      "translation": "这时，她看见椅子下面有一个小小的玻璃钟。它是世界上最小的钟。当她碰它的时候，城堡开口对她说话了。“只有勇敢的心才能敲响这只钟，”它说，“钟声沉默的时候，城堡就在沉睡。”"
+    },
+    {
+      "text": "Nora felt afraid. She could run home, or she could ring the bell. She thought about her grandmother's warm and kind smile. She took a deep breath and rang it.",
+      "translation": "诺拉感到害怕。她可以跑回家，也可以敲响那只钟。她想起了奶奶温暖而善良的笑容。她深吸一口气，敲响了它。"
+    },
+    {
+      "text": "The sound was brighter and happier than any song. Windows lit up and doors opened. The whole castle woke up. The stars above the tower began to dance. A soft voice said, \"Thank you, Nora. You are braver than you know.\"",
+      "translation": "那声音比任何歌声都更明亮、更欢快。窗户亮了，门开了。整座城堡都醒了过来。塔上方的星星开始跳舞。一个温柔的声音说：“谢谢你，诺拉。你比自己以为的更勇敢。”"
+    },
+    {
+      "text": "Nora ran home before the sun came up. Her grandmother smiled at her. \"You can hear the bell because you are brave,\" she said. Nora looked back at the hill. The castle was dark again, but she knew it was happy. Every night, the bell sang her to sleep.",
+      "translation": "太阳升起前，诺拉跑回了家。奶奶朝她微笑着。“你能听见钟声，因为你很勇敢，”她说。诺拉回头望向那座山。城堡又暗了下来，但她知道它很开心。每天夜里，钟声都会伴她入睡。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Nora hear every night?",
+      "audioText": "What did Nora hear every night?",
+      "options": [
+        {
+          "emoji": "🔔",
+          "value": "bell",
+          "text": "Bell"
+        },
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "Bird"
+        },
+        {
+          "emoji": "🌊",
+          "value": "river",
+          "text": "River"
+        }
+      ],
+      "answer": "bell"
+    },
+    {
+      "type": "word_builder",
+      "word": "castle",
+      "audioText": "castle"
+    },
+    {
+      "type": "word_builder",
+      "word": "tower",
+      "audioText": "tower"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "took",
+        "a",
+        "deep",
+        "breath",
+        "and",
+        "rang",
+        "it."
+      ],
+      "audioText": "She took a deep breath and rang it."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The sound was ___ and happier than any song.",
+      "choices": [
+        "bright",
+        "brighter",
+        "brightest"
+      ],
+      "answer": "brighter",
+      "audioText": "The sound was brighter and happier than any song."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Only a ___ heart can ring this bell.",
+      "choices": [
+        "brave",
+        "braver",
+        "bravest"
+      ],
+      "answer": "brave",
+      "audioText": "Only a brave heart can ring this bell."
+    }
+  ],
+  "_unknownWords": [
+    "nora",
+    "tower",
+    "world",
+    "grandmother's",
+    "happier",
+    "woke",
+    "braver"
+  ]
+}

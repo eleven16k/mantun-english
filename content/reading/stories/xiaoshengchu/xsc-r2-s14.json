@@ -1,0 +1,116 @@
+{
+  "id": "xsc-r2-s14",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 14,
+  "title": "The Village Music Show",
+  "titleCn": "村里的音乐会",
+  "coverEmoji": "🎵",
+  "paragraphs": [
+    {
+      "text": "Today is a big day here. The animals are having a music show. Everyone in the village is excited.",
+      "translation": "今天是动物村的大日子。动物们正在举办一场音乐会。村里每个动物都很兴奋。"
+    },
+    {
+      "text": "Rabbit is playing the drum. Duck is singing a happy song. Bear and Fox are dancing together. They like playing music together.",
+      "translation": "兔子在敲鼓。鸭子唱着欢快的歌。熊和狐狸在一起跳舞。它们喜欢一起玩音乐。"
+    },
+    {
+      "text": "Little Mouse wants to join the show. But she is very shy. Duck says, \"You can sing with us!\" Mouse is happy and says yes.",
+      "translation": "小老鼠也想参加演出。可是她很害羞。鸭子说：“你可以和我们一起唱！”老鼠很开心，答应了。"
+    },
+    {
+      "text": "Now Mouse is singing a quiet song. All the animals are listening. Her song is like a little river. Nobody moves or speaks.",
+      "translation": "现在老鼠正在唱一首轻柔的歌。所有动物都在听。她的歌就像一条小溪。没有人动，也没有人出声。"
+    },
+    {
+      "text": "The music show is over now. The sun is going down. But everyone is still smiling. It is a wonderful day for all.",
+      "translation": "音乐会结束了。太阳正在落山。但大家都还在微笑。对每个人来说，这都是美好的一天。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is Rabbit doing?",
+      "audioText": "What is Rabbit doing?",
+      "options": [
+        {
+          "emoji": "🥁",
+          "value": "drum",
+          "text": "Playing the drum"
+        },
+        {
+          "emoji": "🎤",
+          "value": "sing",
+          "text": "Singing a song"
+        },
+        {
+          "emoji": "💃",
+          "value": "dance",
+          "text": "Dancing with Fox"
+        }
+      ],
+      "answer": "drum"
+    },
+    {
+      "type": "image_choice",
+      "question": "What is Mouse doing in the show?",
+      "audioText": "What is Mouse doing in the show?",
+      "options": [
+        {
+          "emoji": "🎵",
+          "value": "sing",
+          "text": "Singing a quiet song"
+        },
+        {
+          "emoji": "🥁",
+          "value": "drum",
+          "text": "Playing the drum"
+        },
+        {
+          "emoji": "🍰",
+          "value": "eat",
+          "text": "Eating a big cake"
+        }
+      ],
+      "answer": "sing"
+    },
+    {
+      "type": "word_builder",
+      "word": "singing",
+      "audioText": "singing"
+    },
+    {
+      "type": "word_builder",
+      "word": "dancing",
+      "audioText": "dancing"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "animals",
+        "are",
+        "having",
+        "a",
+        "music",
+        "show"
+      ],
+      "audioText": "The animals are having a music show."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Duck ___ singing a happy song.",
+      "choices": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "is",
+      "audioText": "Duck is singing a happy song."
+    }
+  ],
+  "_unknownWords": [
+    "join"
+  ]
+}

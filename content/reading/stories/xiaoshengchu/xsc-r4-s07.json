@@ -1,0 +1,125 @@
+{
+  "id": "xsc-r4-s07",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r4",
+  "order": 7,
+  "title": "My Dive with a Sea Turtle",
+  "titleCn": "我和海龟的潜水之旅",
+  "coverEmoji": "🐢",
+  "paragraphs": [
+    {
+      "text": "Last Sunday, my dad took me to the sea. We went out in a small white boat. The water was blue and very clear. I felt excited and a little afraid.",
+      "translation": "上周日，爸爸带我去看海。我们坐一条白色小船出海。海水湛蓝，非常清澈。我既兴奋，又有点害怕。"
+    },
+    {
+      "text": "Then we put on our masks and went down. The sea was deeper than our swimming pool. I saw many fish around me. Some were small and some were big.",
+      "translation": "接着我们戴上潜水面罩，潜了下去。大海比我们的游泳池深多了。我看到身边有很多鱼。有的很小，有的很大。"
+    },
+    {
+      "text": "A green sea turtle swam slowly near me. She was much bigger than my dad! Her eyes were bright and kind. She looked at me and did not swim away.",
+      "translation": "一只绿海龟慢慢地游到我身边。它比我爸爸还要大得多！它的眼睛又亮又温柔。它看着我，没有游走。"
+    },
+    {
+      "text": "She showed me her home in the coral. It was more colourful than a garden. We saw a small orange fish and a starfish. They played in the soft green plants.",
+      "translation": "它带我看了它在珊瑚里的家。那里比花园还要五彩缤纷。我们看到一条橙色小鱼和一只海星。它们在软软的绿色植物间玩耍。"
+    },
+    {
+      "text": "But then I saw a plastic bag in the water. It looked like a big white jellyfish. A little fish almost ate it. I felt sad and picked it up.",
+      "translation": "可后来我在水里看见一个塑料袋。它看起来像一只白色的大水母。一条小鱼差点把它吃掉。我很难过，就把它捡了起来。"
+    },
+    {
+      "text": "Before we went home, I took the bag out. The sea looked cleaner and happier. I want to dive again next year. And I will keep the sea clean.",
+      "translation": "回家前，我把袋子带出了水面。大海看上去更干净、更快乐了。明年我还想再来潜水。我也要让大海一直干干净净。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which animal did the writer meet in the sea?",
+      "audioText": "Which animal did the writer meet in the sea?",
+      "options": [
+        {
+          "emoji": "🐢",
+          "value": "turtle",
+          "text": "A sea turtle"
+        },
+        {
+          "emoji": "🐬",
+          "value": "dolphin",
+          "text": "A dolphin"
+        },
+        {
+          "emoji": "🦈",
+          "value": "shark",
+          "text": "A shark"
+        }
+      ],
+      "answer": "turtle"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the writer pick up from the water?",
+      "audioText": "What did the writer pick up from the water?",
+      "options": [
+        {
+          "emoji": "🛍️",
+          "value": "bag",
+          "text": "A plastic bag"
+        },
+        {
+          "emoji": "🥤",
+          "value": "cup",
+          "text": "A cup"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        }
+      ],
+      "answer": "bag"
+    },
+    {
+      "type": "word_builder",
+      "word": "turtle",
+      "audioText": "turtle"
+    },
+    {
+      "type": "word_builder",
+      "word": "plastic",
+      "audioText": "plastic"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "sea",
+        "was",
+        "deeper",
+        "than",
+        "the",
+        "pool."
+      ],
+      "audioText": "The sea was deeper than the pool."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The sea looked ___ and happier.",
+      "choices": [
+        "clean",
+        "cleaner",
+        "cleanest"
+      ],
+      "answer": "cleaner",
+      "audioText": "The sea looked cleaner and happier."
+    }
+  ],
+  "_unknownWords": [
+    "masks",
+    "bigger",
+    "colourful",
+    "starfish",
+    "happier",
+    "dive"
+  ]
+}

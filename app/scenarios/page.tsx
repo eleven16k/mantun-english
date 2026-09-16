@@ -9,8 +9,9 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
-import { getScenarios, type Scenario, type VocabLevel } from "@/lib/scenarios";
+import { getScenarios, scenarioImg, type Scenario, type VocabLevel } from "@/lib/scenarios";
 import { VOCAB_LISTS } from "@/lib/vocab-lists";
 import { generateScenario, fetchCustomScenarios, deleteCustomScenario, extractCoursewareText } from "@/lib/api";
 import { kv } from "@/lib/kv";
@@ -122,7 +123,7 @@ export default function ScenariosPage() {
     <Link
       key={s.id}
       href={`/scenarios/${s.id}`}
-      className="group relative overflow-hidden rounded-card border border-subtle bg-surface shadow-sm transition-all hover:-translate-y-1 hover:border-brandborder hover:shadow-md"
+      className="g-card group relative overflow-hidden"
     >
       {mine && (
         <button
@@ -131,7 +132,7 @@ export default function ScenariosPage() {
             void removeMine(s.id);
           }}
           aria-label="delete"
-          className="absolute right-2 top-2 z-10 grid h-7 w-7 place-items-center rounded-full bg-black/50 text-white/70 backdrop-blur transition hover:bg-red-500 hover:text-white"
+          className="absolute right-2 top-2 z-10 grid h-7 w-7 place-items-center rounded-full border-2 border-[var(--ink)] bg-surface text-critical shadow-[0_2px_0_0_rgba(0,0,0,0.1)] transition hover:text-white hover:bg-critical"
         >
           <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
             <path d="M18 6 6 18M6 6l12 12" />
@@ -141,13 +142,13 @@ export default function ScenariosPage() {
       <div className="relative h-36 overflow-hidden bg-canvas">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={s.image}
+          src={scenarioImg(s.image)}
           alt={s.title[locale]}
           className="h-full w-full object-cover opacity-80 transition group-hover:opacity-100"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        <span className="absolute left-3 top-3 rounded-full bg-black/50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur">
+        <span className="absolute left-3 top-3 rounded-full bg-[rgba(15,23,42,0.6)] px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white">
           {t(DIFF_KEY[s.difficulty])}
         </span>
         <span className="absolute -bottom-1 right-3 text-5xl drop-shadow">{s.emoji}</span>
@@ -171,18 +172,13 @@ export default function ScenariosPage() {
 
   return (
     <AppShell>
-      <div className="mx-auto max-w-6xl px-4 pb-24 pt-20 lg:px-8 lg:pt-24">
+      <div className="page-shell">
         {/* Header + courseware entry */}
         <header className="mb-8 flex items-start justify-between gap-4">
-          <div>
-            <h1 className="font-booster text-3xl font-extrabold tracking-tight lg:text-4xl">
-              {t("scn.title")}
-            </h1>
-            <p className="mt-1 text-sm text-tertiary">{t("scn.subtitle")}</p>
-          </div>
+          <PageHeader className="" badge="🎧 SCENARIOS" title={t("scn.title")} sub={t("scn.subtitle")} />
           <button
             onClick={() => setShowCreate(true)}
-            className="flex shrink-0 items-center gap-1.5 rounded-pill bg-brand px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:opacity-90"
+            className="flex shrink-0 items-center gap-1.5 rounded-pill bg-brand px-4 py-2.5 text-xs font-bold text-white transition hover:opacity-90"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
               <path d="M12 5v14M5 12h14" />
@@ -192,7 +188,7 @@ export default function ScenariosPage() {
         </header>
 
         {/* Vocabulary level selector */}
-        <section className="mb-8 rounded-card border border-subtle bg-surface p-5">
+        <section className="g-card mb-8 p-5">
           <p className="mb-3 text-xs font-bold uppercase tracking-widest text-brand-text">
             {t("scn.vocabLevel")}
           </p>
@@ -231,7 +227,7 @@ export default function ScenariosPage() {
                 value={vocabInput}
                 onChange={(e) => setVocabInput(e.target.value)}
                 placeholder={t("scn.customVocabPh")}
-                className="min-h-[72px] w-full resize-none rounded-xl border border-subtle bg-canvas px-3.5 py-2.5 text-sm outline-none focus:border-brandborder"
+                className="min-h-[72px] w-full resize-none rounded-xl border-2 border-b-4 border-[#cbd5e1] bg-surface px-3.5 py-2.5 text-sm font-semibold outline-none transition focus:border-brand"
               />
               <div className="flex items-center gap-3">
                 <button
@@ -270,9 +266,9 @@ export default function ScenariosPage() {
 
       {/* Courseware → scenario dialog */}
       {showCreate && (
-        <div className="fixed inset-0 z-[220] flex items-end justify-center bg-black/50 backdrop-blur-sm sm:items-center" onClick={() => !creating && setShowCreate(false)}>
+        <div className="game-overlay fixed inset-0 z-[220] flex items-end justify-center sm:items-center" onClick={() => !creating && setShowCreate(false)}>
           <div
-            className="w-full max-w-lg rounded-t-3xl border border-subtle bg-surface p-6 shadow-2xl sm:rounded-3xl"
+            className="game-modal w-full max-w-lg p-6 sm:rounded-t-3xl"
             onClick={(e) => e.stopPropagation()}
           >
             <h3 className="font-booster text-xl font-extrabold">{t("scn.createTitle")}</h3>
@@ -282,12 +278,12 @@ export default function ScenariosPage() {
               value={createText}
               onChange={(e) => setCreateText(e.target.value)}
               placeholder={t("scn.createTextPh")}
-              className="mt-4 min-h-[140px] w-full resize-none rounded-xl border border-subtle bg-canvas px-3.5 py-2.5 text-sm outline-none focus:border-brandborder"
+              className="mt-4 min-h-[140px] w-full resize-none rounded-xl border-2 border-b-4 border-[#cbd5e1] bg-surface px-3.5 py-2.5 text-sm font-semibold outline-none transition focus:border-brand"
             />
 
             <div className="mt-3 flex items-center justify-between gap-3">
               <div className="flex items-center gap-2">
-                <label className="cursor-pointer rounded-pill border border-subtle bg-canvas px-4 py-2 text-xs font-bold text-secondary transition hover:text-primary">
+                <label className="game-chip cursor-pointer rounded-pill px-4 py-2 text-xs">
                   {extracting ? t("scn.extracting") : t("scn.importFile")}
                   <input
                     type="file"
@@ -319,7 +315,7 @@ export default function ScenariosPage() {
             <button
               onClick={runCreate}
               disabled={creating || createText.trim().length < 50}
-              className="mt-4 w-full rounded-xl bg-brand py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90 disabled:opacity-50"
+              className="game-btn mt-4 w-full bg-brand py-3 text-sm disabled:opacity-50"
             >
               {creating ? t("scn.generatingScenario") : t("scn.createGenerate")}
             </button>

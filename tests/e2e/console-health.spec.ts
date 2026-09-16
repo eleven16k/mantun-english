@@ -8,7 +8,6 @@ const ROUTES = [
   "/chat",
   "/decks",
   "/vocab",
-  "/add",
   "/import",
   "/solve",
   "/weakness",

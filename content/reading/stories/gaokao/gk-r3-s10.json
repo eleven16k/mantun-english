@@ -1,0 +1,130 @@
+{
+  "id": "gk-r3-s10",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 10,
+  "title": "The Dictionary That Took Nine Years",
+  "titleCn": "九年写成的词典",
+  "coverEmoji": "📖",
+  "paragraphs": [
+    {
+      "text": "In the middle of the eighteenth century, English still had no dictionary that ordinary readers could trust. Nobody could agree on what its words really meant, and every writer spelled them in his own personal way. Across the Channel, forty French scholars had spent forty years building a similar work. Everyone therefore assumed that an English dictionary would need exactly the same small army of helpers. Had anyone asked a London publisher in 1746 whether one writer could finish such a task, the answer would have been a firm no.",
+      "translation": "十八世纪中叶，英语还没有一部普通读者能够信赖的词典。没人能就词义达成一致，每位作家都按自己的一套拼写单词。在海峡对岸，四十位法国学者已经花了四十年打造一部类似的巨著。于是人人都认定，一部英语词典同样需要那样一支小小的助手队伍。假如在1746年有人问一位伦敦出版商，一位作家能否独自完成这样的工作，得到的回答一定会是一个干脆的“不”。"
+    },
+    {
+      "text": "Samuel Johnson, a struggling poet and essayist with almost no money, accepted the job anyway and promised to finish it in three years. Not only did he rent a large house in Gough Square, but he also hired six assistants to copy quotations onto paper slips. Together they read through thousands of books, marking every sentence that showed how a word was truly used. If Johnson had relied on his own memory alone, the book would never have grown so rich.",
+      "translation": "塞缪尔·约翰逊是一位几乎身无分文的落魄诗人和随笔作家，却接下了这份工作，并承诺三年内完成。他不仅在高尔广场租了一栋大房子，还雇了六名助手，把引文抄到纸片上。他们一起读遍成千上万本书，凡是能说明一个词真正用法的句子都标记下来。假如约翰逊只依赖自己的记忆，这部书绝不会如此丰富。"
+    },
+    {
+      "text": "The work took far longer than promised. About forty thousand words went in, each one explained with examples carefully drawn from real books and letters. It was in this crowded, noisy room that the first truly modern English dictionary slowly took shape. No sooner had the last pages gone to the printer than Johnson noticed how much he had left out.",
+      "translation": "这项工作花的时间远远超出了他的承诺。约四万个词被收录进来，每个词都用取自真实书籍和信件的例句仔细解释。正是在这间拥挤嘈杂的屋子里，第一部真正现代意义上的英语词典慢慢成形。最后几页刚送进印刷厂，约翰逊就发现他漏掉了多少内容。"
+    },
+    {
+      "text": "The finished dictionary appeared in 1755, nine long years after Johnson had begun the work. It was not a perfect book. Its writer knew that better than anyone. What he offered readers was not only a list of words, but a new way of thinking about language. Had he waited for perfection, he would have published nothing at all. The volume stayed in use for more than a century, and some of its definitions are still quoted today.",
+      "translation": "1755年，这部词典终于问世，距约翰逊动笔已过去整整九年。它并非完美的书，它的作者比谁都清楚这一点。他交给读者的不只是一份词表，更是一种思考语言的新方式。倘若他非要等到完美才出版，那他什么也出版不了。这部词典沿用了百余年，其中一些释义至今仍被引用。"
+    },
+    {
+      "text": "Johnson's house in Gough Square is a small museum now, and visitors still climb its narrow wooden stairs. A single writer, working slowly in his own house, had done what an army of scholars was expected to do.",
+      "translation": "约翰逊在高尔广场的故居如今是一座小小的博物馆，游客依然会攀登那狭窄的木楼梯。一位独自伏案的写作者，缓慢地做成了人们本以为需要一支学者大军才能完成的事。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Johnson's assistants copy onto paper slips?",
+      "audioText": "What did Johnson's assistants copy onto paper slips?",
+      "options": [
+        {
+          "emoji": "📜",
+          "value": "quotations",
+          "text": "Quotations from books"
+        },
+        {
+          "emoji": "✏️",
+          "value": "opinions",
+          "text": "Their own opinions"
+        },
+        {
+          "emoji": "🗺️",
+          "value": "maps",
+          "text": "Maps of London"
+        }
+      ],
+      "answer": "quotations"
+    },
+    {
+      "type": "word_builder",
+      "word": "dictionary",
+      "audioText": "dictionary"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "work",
+        "took",
+        "far",
+        "longer",
+        "than",
+        "promised."
+      ],
+      "audioText": "The work took far longer than promised."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "not",
+        "a",
+        "perfect",
+        "book."
+      ],
+      "audioText": "It was not a perfect book."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was in this crowded, noisy room ___ the first truly modern English dictionary slowly took shape.",
+      "choices": [
+        "that",
+        "where",
+        "which"
+      ],
+      "answer": "that",
+      "audioText": "It was in this crowded, noisy room that the first truly modern English dictionary slowly took shape."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Not only ___ he rent a large house in Gough Square, but he also hired six assistants to copy quotations onto paper slips.",
+      "choices": [
+        "did",
+        "does",
+        "had"
+      ],
+      "answer": "did",
+      "audioText": "Not only did he rent a large house in Gough Square, but he also hired six assistants to copy quotations onto paper slips."
+    }
+  ],
+  "_unknownWords": [
+    "eighteenth",
+    "readers",
+    "helpers",
+    "samuel",
+    "johnson",
+    "essayist",
+    "gough",
+    "quotations",
+    "truly",
+    "grown",
+    "drawn",
+    "gone",
+    "begun",
+    "perfection",
+    "volume",
+    "definitions",
+    "quoted",
+    "johnson's",
+    "wooden",
+    "done"
+  ]
+}

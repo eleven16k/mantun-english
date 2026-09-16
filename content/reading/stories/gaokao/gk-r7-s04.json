@@ -1,0 +1,122 @@
+{
+  "id": "gk-r7-s04",
+  "track": "gaokao",
+  "regionId": "gk-r7",
+  "order": 4,
+  "title": "Rockets, Rivers and Tomorrow",
+  "titleCn": "火箭、河流与明天",
+  "coverEmoji": "🚀",
+  "paragraphs": [
+    {
+      "text": "Close your eyes for a moment and imagine the world of 2050, where the air in our cities is cleaner than it has been for a century. Was it fate, or was it our own choices, that shaped such a world? Not only would cleaner energy reduce the damage we have done, but it would also give millions of people work they can be proud of. Tomorrow begins with what we choose today.",
+      "translation": "闭上眼睛片刻，想象一下2050年的世界——那时我们城市里的空气比过去一个世纪都要干净。塑造出这样一个世界的，究竟是命运，还是我们自己的选择？清洁能源不仅能减少我们已经造成的破坏，还能让数百万人拥有引以为豪的工作。明天，始于我们今天的选择。"
+    },
+    {
+      "text": "If governments had invested in renewable power thirty years earlier, the skies above many industrial towns would look very different today. Progress, however slow, is real. Solar panels now cover roofs that once held nothing but dust, and electric buses glide through streets that used to be full of noise. What matters is not whether we can afford to change, but whether we can afford to wait.",
+      "translation": "如果各国政府早在三十年前就投资可再生能源，如今许多工业城镇上空的景象会大不相同。进步，无论多么缓慢，都是真实的。太阳能板如今覆盖着曾经只积满灰尘的屋顶，电动公交车滑过曾经喧闹嘈杂的街道。关键不在于我们是否负担得起改变，而在于我们是否负担得起等待。"
+    },
+    {
+      "text": "Space exploration, which some people dismiss as an expensive dream, may in fact teach us how to care for the only planet we have. When astronauts look back at Earth from orbit, they often describe a thin blue line of atmosphere that protects everything they love. Should we ever need to leave, we would carry the same lesson with us: no second home can excuse the ruin of the first.",
+      "translation": "太空探索被一些人斥为昂贵的梦想，但它实际上也许能教会我们如何呵护我们唯一的星球。当宇航员从轨道上回望地球时，他们常常描述一道薄薄的蓝色大气层，守护着他们所珍爱的一切。倘若有一天我们真的需要离开，我们会带上同样的教训：没有第二个家园能为毁掉第一个开脱。"
+    },
+    {
+      "text": "What we call human destiny is not a single road but a great many roads that meet, divide and meet again. Some will lead to laboratories where engineers design crops that survive long dry seasons; others will lead to classrooms where children ask questions no one has answered yet. Unless we share what we discover, however brilliant our technology becomes, the future will belong to a few rather than to all. No one builds the future alone.",
+      "translation": "我们所说的人类命运不是一条路，而是许多条相遇、分开、又再相遇的路。有些路通向实验室，工程师在那里设计能熬过长旱季的作物；有些路通向教室，孩子们在那里提出尚无人回答的问题。除非我们分享彼此的发现，否则无论我们的技术多么高明，未来都将只属于少数人，而不是所有人。没有人能独自建造未来。"
+    },
+    {
+      "text": "So the world of 2050 is not waiting for us somewhere in the distance; it is being built, quietly and daily, by ordinary people who choose to act. Not until we accept that responsibility will we deserve the future we dream of. Imagine it, then build it. Remember that the builders, in the end, are you.",
+      "translation": "所以，2050年的世界并不是在远方某处等着我们；它正被那些选择行动的普通人，安静地、日复一日地建造出来。只有当我们承担起那份责任，我们才配得上自己梦想中的未来。去想象它，然后建造它。记住，最终的建造者，就是你们。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "When astronauts look back at Earth from orbit, what do they often describe?",
+      "audioText": "When astronauts look back at Earth from orbit, what do they often describe?",
+      "options": [
+        {
+          "emoji": "🌍",
+          "value": "earth",
+          "text": "A thin blue line of air that protects what they love"
+        },
+        {
+          "emoji": "🚀",
+          "value": "rocket",
+          "text": "A fast rocket flying far into deep space"
+        },
+        {
+          "emoji": "🏙️",
+          "value": "city",
+          "text": "A huge city covered in bright lights"
+        }
+      ],
+      "answer": "earth"
+    },
+    {
+      "type": "word_builder",
+      "word": "destiny",
+      "audioText": "destiny"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Tomorrow",
+        "begins",
+        "with",
+        "what",
+        "we",
+        "choose",
+        "today."
+      ],
+      "audioText": "Tomorrow begins with what we choose today."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "No",
+        "one",
+        "builds",
+        "the",
+        "future",
+        "alone."
+      ],
+      "audioText": "No one builds the future alone."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Solar panels now cover roofs that once held ___ but dust.",
+      "choices": [
+        "nothing",
+        "something",
+        "anything"
+      ],
+      "answer": "nothing",
+      "audioText": "Solar panels now cover roofs that once held nothing but dust."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If governments ___ invested in renewable power thirty years earlier, the skies above many industrial towns would look very different today.",
+      "choices": [
+        "had",
+        "have",
+        "would"
+      ],
+      "answer": "had",
+      "audioText": "If governments had invested in renewable power thirty years earlier, the skies above many industrial towns would look very different today."
+    }
+  ],
+  "_unknownWords": [
+    "fate",
+    "done",
+    "renewable",
+    "earlier",
+    "industrial",
+    "solar",
+    "panels",
+    "glide",
+    "exploration",
+    "ruin",
+    "destiny",
+    "builders"
+  ]
+}

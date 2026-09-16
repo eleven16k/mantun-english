@@ -1,0 +1,127 @@
+{
+  "id": "gk-r2-s12",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 12,
+  "title": "Keeping a Human in the Loop",
+  "titleCn": "把人类留在决策环路中",
+  "coverEmoji": "🧑⚖️",
+  "paragraphs": [
+    {
+      "text": "Banks, hospitals and schools now rely on software to sort, rank and recommend. A loan application can be scored in seconds, and a patient's scan may be flagged before a doctor sees it. A shortlist of job candidates is often produced before any human being has read a single file. Companies usually describe this arrangement as simple efficiency, and in many cases it really is.",
+      "translation": "银行、医院和学校如今都依赖软件来分类、排序和推荐。一份贷款申请几秒钟就能被打分，一张病人的扫描片可能在医生看到之前就已被标记。一份求职者名单往往在任何人读过一份文件之前就已生成。公司通常把这种安排称为简单的效率，而在许多情况下，它确实如此。"
+    },
+    {
+      "text": "What worries many researchers is not the software itself but the comfortable promise that follows it. We are told that a person reviews every decision, so the machine is merely helping. Whether that person truly reviews anything is a question that few companies have been asked to answer. In some workplaces, it is considered normal to approve dozens of recommendations in an hour. Real checking takes time.",
+      "translation": "让许多研究者担心的并不是软件本身，而是随之而来的那句令人安心的承诺。我们被告知，每一项决定都有人审核，所以机器只是在帮忙。而那个人是否真的审核了什么，这个问题很少有公司被要求回答。在一些工作场所，一小时内批准几十条推荐被视为正常。真正的核查是需要时间的。"
+    },
+    {
+      "text": "When a worker approves hundreds of results a day, the review can become an empty ritual. It is easy to click accept when the system is usually right and the queue is always long. Psychologists have a name for this habit: automation bias, the tendency to trust a machine more than our own judgment. Trust, however, is not the same as truth. Once such trust has been established, mistakes may be passed along without being noticed at all.",
+      "translation": "当一名员工一天要批准数百个结果时，所谓的审核就可能变成一种空洞的仪式。当系统通常是对的、待办队列又永远排得很长时，点一下“接受”实在太容易了。心理学家给这种习惯起了个名字：自动化偏差，即倾向于相信机器胜过相信自己的判断。然而，信任并不等于真相。一旦这样的信任被建立起来，错误就可能在无人察觉的情况下被一路传递下去。"
+    },
+    {
+      "text": "Some governments are now trying to make the human role something more than a signature. New rules require that important decisions can be explained, and that people are told when a machine has judged them. Under these laws, an applicant must be offered a way to ask for a real person's opinion. It is not yet clear, however, whether such rights will be respected in everyday practice.",
+      "translation": "一些国家的政府正试图让人所扮演的角色不只是签个名。新的规定要求重要决定必须能被解释，而且当机器对人作出评判时，当事人应当被告知。根据这些法律，申请人必须有机会要求听取真人的意见。不过，这些权利在日常实践中是否会被尊重，目前还不清楚。"
+    },
+    {
+      "text": "The aim is not to remove machines from decision-making, which would be neither possible nor wise. What really matters, according to critics, is that responsibility can still be located somewhere. If nobody can be blamed for a wrong result, then nobody has any reason to correct the system. A human in the loop, then, should work as a genuine safeguard rather than as a decoration. That, in the end, is the real test.",
+      "translation": "目标并不是把机器从决策中赶出去，那既不可能也不明智。在批评者看来，真正重要的是责任依然能落到某个具体的地方。如果错误的结果谁都怪不上，那么谁也没有理由去修正系统。因此，处于决策环路中的人，应当是真正的保障，而不是一种装饰。归根结底，这才是真正的考验。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the writer, what should a human in the loop really be?",
+      "audioText": "According to the writer, what should a human in the loop really be?",
+      "options": [
+        {
+          "emoji": "🧐",
+          "value": "checker",
+          "text": "Someone who genuinely checks decisions"
+        },
+        {
+          "emoji": "✍️",
+          "value": "signature",
+          "text": "Someone who simply signs results"
+        },
+        {
+          "emoji": "🤖",
+          "value": "machine",
+          "text": "A machine that corrects itself"
+        }
+      ],
+      "answer": "checker"
+    },
+    {
+      "type": "word_builder",
+      "word": "bias",
+      "audioText": "bias"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Real",
+        "checking",
+        "takes",
+        "time."
+      ],
+      "audioText": "Real checking takes time."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Trust,",
+        "however,",
+        "is",
+        "not",
+        "the",
+        "same",
+        "as",
+        "truth."
+      ],
+      "audioText": "Trust, however, is not the same as truth."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "___ worries many researchers is not the software itself but the comfortable promise that follows it.",
+      "choices": [
+        "What",
+        "That",
+        "Which"
+      ],
+      "answer": "What",
+      "audioText": "What worries many researchers is not the software itself but the comfortable promise that follows it."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Under these laws, an applicant must ___ offered a way to ask for a real person's opinion.",
+      "choices": [
+        "be",
+        "been",
+        "being"
+      ],
+      "answer": "be",
+      "audioText": "Under these laws, an applicant must be offered a way to ask for a real person's opinion."
+    }
+  ],
+  "_unknownWords": [
+    "loan",
+    "patient's",
+    "shortlist",
+    "efficiency",
+    "researchers",
+    "truly",
+    "recommendations",
+    "ritual",
+    "psychologists",
+    "automation",
+    "bias",
+    "judgment",
+    "person's",
+    "according",
+    "located",
+    "loop",
+    "genuine",
+    "safeguard"
+  ]
+}

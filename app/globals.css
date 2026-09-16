@@ -48,7 +48,7 @@
   --bg-warning-emphasis-default: #d97706;
   --bg-critical-emphasis-default: #dc2626;
   --bg-info-emphasis-default: #2563eb;
-  --bg-gold-emphasis-default: #f4c430;
+  --bg-gold-emphasis-default: #ffd93d; /* juyou 贴纸黄（sticker signature） */
   --bg-streak-emphasis-default: #ea580c;
 
   /* ---- text ---- */
@@ -76,49 +76,8 @@
   --shadow-lift-hover: 0 6px 0 0 rgba(0, 0, 0, 0.1);
 }
 
-.dark {
-  --bg-app: #131316;
-  --bg-surface: #202023;
-  --bg-surface-elevated: #27272a;
-  --bg-canvas: #333338;
-  --bg-inverse: #fafafa;
-
-  --bg-action-emphasis-default: #fafafa;
-  --bg-action-emphasis-hover: #ffffff;
-  --bg-action-subtle-default: #27272a;
-  --bg-action-subtle-hover: #202023;
-
-  --bg-brand-emphasis-default: #4d96ff;
-  --bg-brand-emphasis-hover: #6aa9ff;
-  --bg-brand-subtle-default: #1e3a8a;
-  --bg-brand-subtle-hover: #1e40af;
-
-  --bg-positive-emphasis-default: #22c55e;
-  --bg-warning-emphasis-default: #f59e0b;
-  --bg-critical-emphasis-default: #ef4444;
-  --bg-info-emphasis-default: #3b82f6;
-  --bg-gold-emphasis-default: #facc15;
-  --bg-streak-emphasis-default: #f97316;
-
-  --text-primary: #ffffff;
-  --text-secondary: #e4e4e7;
-  --text-tertiary: #a1a1aa;
-  --text-inverse: #0f172a;
-  --text-brand-default: #6aa9ff;
-  --text-hearts-default: #f87171;
-  --text-gold-default: #facc15;
-  --text-streak-default: #fb923c;
-  --text-positive-default: #4ade80;
-  --text-critical-default: #f87171;
-  --text-info-default: #60a5fa;
-
-  --border-subtle: #333338;
-  --border-emphasis: #e4e4e7;
-  --border-focus: #4d96ff;
-  --border-brand-default: #4d96ff;
-
-  --ink: #fafafa;
-}
+/* 暗色模式已下线（2026-09 产品决策：低龄向产品固定奶油亮色，Playful Prep 全局签名
+   依赖 #FFFBEB 纸面）。原 .dark token 翻转块已删——遗留的 dark: 工具类是死类。 */
 
 /* ————— Gizmo global chrome (measured) ————— */
 
@@ -136,21 +95,41 @@ html, body {
 * { -webkit-tap-highlight-color: transparent; }
 button { user-select: none; }
 
+/* juyou 全局校准：次级按钮的细边统一 2px（原版 ghost 按钮语言），属性选择器
+   特异性高于 tailwind 单类，可覆盖 .border 的 1px */
+button[class*="border-subtle"],
+a[class*="border-subtle"] {
+  border-width: 2px;
+}
+
 /* Display face for titles/numbers — Noto black keeps the chunky look in CJK */
 .font-booster {
   font-family: "Noto Sans SC", var(--font-booster), var(--font-inter), sans-serif;
 }
 
-/* ————— Card system ————— */
-.g-card {          /* standard card: r16 + subtle paper border */
+/* ————— Card system —————
+   juyou 卡片语言（原版测量）：4px 厚边（浅灰日常 / 墨黑强调）+ 2rem 大圆角
+   + hover 抬起变黑边，transition all .15s linear。 */
+
+.g-card {          /* standard card: 4px paper border + r2rem + hover lift */
   background: var(--bg-surface);
-  border: 2px solid var(--border-subtle);
-  border-radius: 16px;
+  border: 4px solid var(--bg-canvas);
+  border-radius: 2rem;
+  transition: all 0.15s linear;
 }
-.g-card-hero {     /* hero card: r24 + subtle paper border */
+.g-card:hover {
+  transform: translateY(-0.25rem);
+  border-color: var(--ink);
+}
+.g-card--static:hover { /* 静默容器（设置分组等）：不参与 hover 抬起 */
+  transform: none;
+  border-color: var(--bg-canvas);
+}
+.g-card-hero {     /* hero card: r2rem chunky ink emphasis */
   background: var(--bg-surface);
-  border: 2px solid var(--border-subtle);
-  border-radius: 24px;
+  border: 4px solid var(--ink);
+  border-radius: 2rem;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.1), var(--shadow-lift);
 }
 .g-pill {          /* pill: full radius, the button shape */
   border-radius: 9999px;
@@ -161,15 +140,15 @@ button { user-select: none; }
    component can opt in. transition matches the source site: all .15s linear. */
 
 .game-chunky {
-  border: 2px solid var(--ink);
+  border: 3px solid var(--ink);
   box-shadow: var(--shadow-lift);
   transition: all 0.15s linear;
 }
 
 .game-btn {
-  border: 2px solid var(--ink);
+  border: 3px solid var(--ink);
   border-bottom-width: 4px;
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   box-shadow: var(--shadow-lift);
   font-weight: 900;
   cursor: pointer;
@@ -197,11 +176,13 @@ button { user-select: none; }
 
 .game-badge {
   display: inline-block;
+  padding: 0.375rem 1rem;
   background: var(--bg-gold-emphasis-default);
   border: 2px solid var(--ink);
   border-radius: 9999px;
-  box-shadow: var(--shadow-lift);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
   font-weight: 900;
+  letter-spacing: 0.1em;
   transform: rotate(-2deg);
   transition: all 0.15s linear;
 }
@@ -225,6 +206,118 @@ button { user-select: none; }
   transform: translateY(-2px);
   color: var(--text-brand-default);
   border-color: var(--border-brand-default);
+}
+
+/* ————— 页面标题三件套（全站右侧视图统一头部，对齐拼读馆参考稿）—————
+   黄贴纸 badge（歪头 -2°）+ 900 黑体大标题 + 灰色副标 */
+.page-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  background: var(--bg-gold-emphasis-default);
+  border: 2px solid var(--ink);
+  border-radius: 9999px;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  transition: all 0.15s linear;
+}
+.page-badge:hover {
+  transform: rotate(0deg);
+}
+
+.page-h1 {
+  margin-top: 1.25rem;
+  font-family: "Noto Sans SC", var(--font-inter), system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.page-sub {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 480px) {
+  .page-h1 { font-size: 1.6rem; }
+}
+
+/* 内容容器统一（跟随拼读馆 .ph-page/.ph-wrap 数值）：
+   max-w 56rem 居中 · 顶距 5.5rem（lg 6.5rem，给 AppShell 顶栏留位）· 横距 1.25rem · 底距 3rem */
+.page-shell {
+  max-width: 56rem;
+  margin-inline: auto;
+  padding: 5.5rem 1.25rem 3rem;
+}
+@media (min-width: 1024px) {
+  .page-shell {
+    padding-top: 6.5rem;
+  }
+}
+
+/* quiz 对/错反馈态（设计指南 §3.4：保持 border-b-4 厚底，色随语义翻转） */
+.game-chip--right {
+  color: #15803d;
+  background: #f0fdf4;
+  border-color: #22c55e;
+}
+.game-chip--wrong {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+/* 统一弹窗卡：墨边硬阴影（替代各页 rounded-3xl shadow-xl 玻璃拟态） */
+.game-modal {
+  background: var(--bg-surface);
+  border: 4px solid var(--ink);
+  border-radius: 2rem;
+  box-shadow: var(--shadow-lift), 0 8px 24px rgba(149, 157, 165, 0.1);
+}
+
+/* 统一遮罩：纯色压暗，不用 backdrop-blur（模糊阴影/模糊玻璃均违背硬边语言） */
+.game-overlay {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+/* 统一分段 tab（句法馆 sn-tab 已验证形态，提升为全局）：白底细边，选中黄底墨边 */
+.game-tab {
+  padding: 0.45rem 1.1rem;
+  font-weight: 900;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  background: var(--bg-surface);
+  border: 2px solid #cbd5e1;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.game-tab:hover {
+  border-color: var(--ink);
+}
+.game-tab--on {
+  color: var(--ink);
+  background: var(--bg-gold-emphasis-default);
+  border-color: var(--ink);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+/* 答错抖动（自 phonics.css ph-shake 提升；命名不冲突） */
+@keyframes shake {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-7px); }
+  40%, 60% { transform: translateX(7px); }
+}
+.shake {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 /* ————— Feedback animations (from clone calibration) ————— */

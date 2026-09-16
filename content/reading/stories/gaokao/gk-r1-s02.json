@@ -1,0 +1,121 @@
+{
+  "id": "gk-r1-s02",
+  "track": "gaokao",
+  "regionId": "gk-r1",
+  "order": 2,
+  "title": "The Hidden Network Under the Forest",
+  "titleCn": "森林地下的隐秘网络",
+  "coverEmoji": "🌳",
+  "paragraphs": [
+    {
+      "text": "Beneath the soil of almost every forest lies a hidden network that few people ever notice. It is built from tiny threads of fungus, which wrap themselves around the roots of the trees. Joined together in this way, trees can share food and information with their distant neighbours. Scientists, who have studied these threads for many years, now call the whole system the 'wood wide web'.",
+      "translation": "几乎每一片森林的土壤之下，都藏着一张很少有人会注意到的隐秘网络。它由极细的真菌丝构成，这些菌丝缠绕在树根上。以这种方式彼此相连之后，树木就能与远方的邻居分享养分和信息。多年来一直在研究这些菌丝的科学家，如今把整个系统称为“林中互联网”。"
+    },
+    {
+      "text": "Fungi are neither plants nor animals, and they grow in the dark soil as long, thin threads. Searching for water and minerals, these long threads spread through the ground in every direction. When a thread finally meets a tree root, the two may form a close and useful partnership. The fungus receives sugar, which the tree makes in its leaves, and gives back water and minerals. The partnership clearly works in both directions.",
+      "translation": "真菌既不是植物也不是动物，它们以细长丝状在黑暗的土壤里生长。为了寻找水分和矿物质，这些长丝向四面八方在土中蔓延。当一条菌丝最终遇到树根时，二者可能结成紧密而有益的伙伴关系。真菌获得糖分——那是树叶制造的——并回馈水分和矿物质。这种合作显然对双方都有好处。"
+    },
+    {
+      "text": "Using this ancient partnership, trees can send each other several different kinds of useful help. A tree growing in deep shade may receive sugar from a taller and much stronger neighbour. When insects attack its leaves, a damaged tree can release chemicals that warn the others. Receiving the warning, nearby trees start to produce their own chemical defences in good time.",
+      "translation": "借助这种古老的伙伴关系，树木之间可以传递好几种有用的帮助。生长在浓荫下的树，可能从更高更壮的邻居那里得到糖分。当昆虫啃食树叶时，受伤的树会释放化学物质，向其他树发出警告。收到警告后，附近的树会及时开始制造自己的化学防御。"
+    },
+    {
+      "text": "The idea that forests act as one single living community has excited many people around the world. Some scientists, however, doubt the whole story, arguing that the evidence is still far too thin. The fact that trees share sugar in a laboratory does not prove they do so in the wild. More careful research, these experts say, is needed before we can accept the complete picture. The debate is far from settled.",
+      "translation": "“森林是一个活的共同体”这一想法让世界各地许多人感到兴奋。不过，也有科学家对整个说法表示怀疑，认为证据仍然太薄弱。树木在实验室里分享糖分这一事实，并不能证明它们在野外也会这么做。这些专家表示，在我们可以接受完整结论之前，还需要更严谨的研究。这场争论远未定论。"
+    },
+    {
+      "text": "Whatever the final answer may be, the hidden network reminds us of something truly important. Forests are not simply collections of separate trees, standing side by side in complete silence. Protecting just one tree, therefore, may mean protecting the whole system that lies beneath it. Understanding this web could change the way we care for the natural world around us.",
+      "translation": "无论最终的答案是什么，这个隐秘的网络都提醒我们一件真正重要的事。森林并不只是一棵棵彼此分离、默默并排站立的树。因此，保护一棵树，也许就意味着保护它下方的一整套系统。理解这张网，可能会改变我们对待身边自然界的方式。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "Which picture shows what connects the trees underground?",
+      "audioText": "Which picture shows what connects the trees underground?",
+      "options": [
+        {
+          "emoji": "🧵",
+          "value": "threads",
+          "text": "Thin threads"
+        },
+        {
+          "emoji": "🌰",
+          "value": "seeds",
+          "text": "Seeds"
+        },
+        {
+          "emoji": "🍃",
+          "value": "leaves",
+          "text": "Leaves"
+        }
+      ],
+      "answer": "threads"
+    },
+    {
+      "type": "word_builder",
+      "word": "network",
+      "audioText": "network"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "partnership",
+        "clearly",
+        "works",
+        "in",
+        "both",
+        "directions."
+      ],
+      "audioText": "The partnership clearly works in both directions."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "debate",
+        "is",
+        "far",
+        "from",
+        "settled."
+      ],
+      "audioText": "The debate is far from settled."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Joined together in this way, trees can share food and ___ with their distant neighbours.",
+      "choices": [
+        "information",
+        "direction",
+        "pollution"
+      ],
+      "answer": "information",
+      "audioText": "Joined together in this way, trees can share food and information with their distant neighbours."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The fungus receives ___, which the tree makes in its leaves, and gives back water and minerals.",
+      "choices": [
+        "sugar",
+        "salt",
+        "sand"
+      ],
+      "answer": "sugar",
+      "audioText": "The fungus receives sugar, which the tree makes in its leaves, and gives back water and minerals."
+    }
+  ],
+  "_unknownWords": [
+    "beneath",
+    "hidden",
+    "fungus",
+    "wrap",
+    "neighbours",
+    "fungi",
+    "partnership",
+    "neighbour",
+    "community",
+    "truly",
+    "simply"
+  ]
+}

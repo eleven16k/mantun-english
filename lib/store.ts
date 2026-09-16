@@ -15,15 +15,16 @@ const HEART_REGEN_MS = 30 * 60 * 1000; // 30 min per heart
 const DAILY_FREE_QUESTIONS = 30;
 
 // ---- League tiers ----
+// P1-2 均衡校准：阈值与服务端 LEAGUE_TIERS ×2 对齐（0/400/1000/1800/2800/4000/5600/8000）
 export const LEAGUE_TIERS = [
   { name: '青铜', icon: '🥉', color: '#A16207', minSP: 0 },
-  { name: '白银', icon: '🥈', color: '#94A3B8', minSP: 500 },
-  { name: '黄金', icon: '🥇', color: '#F59E0B', minSP: 1500 },
-  { name: '铂金', icon: '💎', color: '#06B6D4', minSP: 3000 },
-  { name: '翡翠', icon: '💚', color: '#10B981', minSP: 5000 },
-  { name: '钻石', icon: '🔷', color: '#3B82F6', minSP: 8000 },
-  { name: '大师', icon: '👑', color: '#8B5CF6', minSP: 12000 },
-  { name: '王者', icon: '🏆', color: '#EC4899', minSP: 18000 },
+  { name: '白银', icon: '🥈', color: '#94A3B8', minSP: 400 },
+  { name: '黄金', icon: '🥇', color: '#F59E0B', minSP: 1000 },
+  { name: '铂金', icon: '💎', color: '#06B6D4', minSP: 1800 },
+  { name: '翡翠', icon: '💚', color: '#10B981', minSP: 2800 },
+  { name: '钻石', icon: '🔷', color: '#3B82F6', minSP: 4000 },
+  { name: '大师', icon: '👑', color: '#8B5CF6', minSP: 5600 },
+  { name: '王者', icon: '🏆', color: '#EC4899', minSP: 8000 },
 ];
 
 export const POWERUPS = [
@@ -83,6 +84,7 @@ interface GameState {
   maxHearts: number;
   coins: number;
   scorePoints: number;       // 提分值 (parent-facing) / XP (student-facing)
+  weekSP: number;            // 本周提分值（服务端 league 段位的唯一口径）
   streak: number;
   lastStudyDate: string;     // YYYY-MM-DD
   heartsDepletedAt: number | null; // when hearts hit 0, for regen timer
@@ -163,7 +165,6 @@ interface GameState {
   addUserDeck: (title: string, questions: Question[], icon?: string, color?: string) => void;
   removeUserDeck: (id: string) => void;
   removeBuiltinDeck: (key: string) => void;
-  addCardToDeck: (deckTitle: string, question: Question) => void;
   loadImportedQuiz: (questions: Question[], kbName?: string, boss?: { wordId: string; word: string; hp: number; maxHp: number } | null) => void;
   answerQuestion: (choiceIndex: number, speedOpts?: { lightningLeftSec?: number }) => void;
   nextQuestion: () => void;
@@ -189,6 +190,7 @@ export const useGameStore = create<GameState>()(
       maxHearts: 5,
       coins: 120,
       scorePoints: 0,
+      weekSP: 0,
       streak: 0,
       lastStudyDate: '',
       heartsDepletedAt: null,
@@ -255,18 +257,6 @@ export const useGameStore = create<GameState>()(
       },
 
       // Append a single card to a titled deck, creating the deck if missing
-      addCardToDeck: (deckTitle, question) => {
-        const decks = get().userDecks;
-        const idx = decks.findIndex((d) => d.title === deckTitle);
-        if (idx === -1) {
-          get().addUserDeck(deckTitle, [question], 'pencil', '#f59e0b');
-          return;
-        }
-        const next = [...decks];
-        next[idx] = { ...next[idx], questions: [...next[idx].questions, question] };
-        set({ userDecks: next });
-      },
-
       startQuiz: (count = 10, type, opts) => {
         const { dailyDate, dailyQuestionsAnswered } = get();
         const td = todayStr();
@@ -645,6 +635,10 @@ export const useGameStore = create<GameState>()(
     {
       name: 'lexi-game-state',
       storage: createJSONStorage(() => kv),
+      // 水合安全：persist 默认在模块加载时同步回水，首帧客户端读到的持久化值
+      // （如 streak=3）与服务端默认值（streak=0）不一致，触发 hydration 错误。
+      // 改为首帧用默认值，挂载后由 useAppSync 手动 rehydrate()。
+      skipHydration: true,
       partialize: (state) => ({
         hearts: state.hearts,
         maxHearts: state.maxHearts,

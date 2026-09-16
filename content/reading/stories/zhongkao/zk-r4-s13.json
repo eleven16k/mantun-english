@@ -1,0 +1,121 @@
+{
+  "id": "zk-r4-s13",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 13,
+  "title": "Save Energy, Save Tomorrow",
+  "titleCn": "省下能源，点亮明天",
+  "coverEmoji": "🌱",
+  "paragraphs": [
+    {
+      "text": "Last month our school Green Club started a new plan. We want to save energy at home and at school. It is not hard, and everyone can join us.",
+      "translation": "上个月，我们学校的绿色社团开始了一项新计划。我们想在家里和学校节约能源。这件事并不难，每个人都能加入我们。"
+    },
+    {
+      "text": "First, look around your room. If you leave a room, turn off the lights and the fan. If the sun is bright, you can read near the window. Good habits can save a lot of energy.",
+      "translation": "首先，看看你的房间。如果你离开房间，就关掉电灯和风扇。如果阳光很亮，你可以靠窗看书。好习惯能省下很多能源。"
+    },
+    {
+      "text": "Second, think about how you go to school. If your school is near, walk or ride a bike. You will get fresh air and good exercise every day. If you take a bus, you help keep the air clean.",
+      "translation": "其次，想一想你怎样去上学。如果学校很近，就步行或者骑自行车。这样你每天都能呼吸新鲜空气，还能得到很好的锻炼。如果你坐公交车，你也帮助保持了空气的清洁。"
+    },
+    {
+      "text": "Third, do not forget the animals around us. If you find a bird's nest in a tree, never touch it. Keep your cat inside at night. Every small animal needs a safe and quiet home.",
+      "translation": "第三，别忘了我们身边的动物。如果你在树上发现鸟巢，千万不要碰它。晚上把猫留在家里。每一只小动物都需要一个安全又安静的家。"
+    },
+    {
+      "text": "Some students say, \"I am only one person. What can I do?\" You can do a lot. You should tell your family about your ideas. You can turn off the computer when you finish your homework.",
+      "translation": "有些同学说：“我只是一个人。我能做什么呢？”你能做的可多了。你应该把自己的想法告诉家人。做完作业以后，你可以把电脑关掉。"
+    },
+    {
+      "text": "If we all do these things, our city will be cleaner and greener. Let's start today. Small steps today can build a better tomorrow.",
+      "translation": "如果我们都这样做，我们的城市会变得更干净、更绿。让我们从今天开始吧。今天的小小一步，可以建设一个更好的明天。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "If you leave a room, what should you do?",
+      "audioText": "If you leave a room, what should you do?",
+      "options": [
+        {
+          "emoji": "💡",
+          "value": "lights_off",
+          "text": "Turn off the lights"
+        },
+        {
+          "emoji": "🪟",
+          "value": "open_window",
+          "text": "Open the window"
+        },
+        {
+          "emoji": "📺",
+          "value": "tv_on",
+          "text": "Turn on the TV"
+        }
+      ],
+      "answer": "lights_off"
+    },
+    {
+      "type": "word_builder",
+      "word": "energy",
+      "audioText": "energy"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Turn",
+        "off",
+        "the",
+        "lights",
+        "and",
+        "the",
+        "fan."
+      ],
+      "audioText": "Turn off the lights and the fan."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "You",
+        "should",
+        "tell",
+        "your",
+        "family",
+        "about",
+        "your",
+        "ideas."
+      ],
+      "audioText": "You should tell your family about your ideas."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If we all do these things, our city will be cleaner and ___.",
+      "choices": [
+        "greener",
+        "green",
+        "greenest"
+      ],
+      "answer": "greener",
+      "audioText": "If we all do these things, our city will be cleaner and greener."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If your school is near, ___ or ride a bike.",
+      "choices": [
+        "walk",
+        "walking",
+        "walks"
+      ],
+      "answer": "walk",
+      "audioText": "If your school is near, walk or ride a bike."
+    }
+  ],
+  "_unknownWords": [
+    "join",
+    "room",
+    "bird's",
+    "nest",
+    "let's"
+  ]
+}

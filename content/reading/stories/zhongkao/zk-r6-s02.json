@@ -1,0 +1,134 @@
+{
+  "id": "zk-r6-s02",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 2,
+  "title": "Red Lanterns and Dumplings",
+  "titleCn": "红灯笼与饺子",
+  "coverEmoji": "🏮",
+  "paragraphs": [
+    {
+      "text": "My name is Li Hua, and I live in a city in northern China. Last winter, my Canadian friend Emma came to visit my family. She arrived in my city a few days before the Spring Festival started. The Spring Festival is a holiday that almost every Chinese family celebrates.",
+      "translation": "我叫李华，住在中国北方的一座城市。去年冬天，我的加拿大朋友艾玛来我家做客。她在春节开始前几天就到了我所在的城市。春节是几乎每个中国家庭都会庆祝的节日。"
+    },
+    {
+      "text": "On the first evening, my mother showed us how to make dumplings. Emma said that she had never made dumplings with her family before. My mother told her that dumplings are shaped like old gold money. People believe that eating them brings good luck for the new year. Emma's first dumpling was so ugly that we all laughed.",
+      "translation": "第一天晚上，妈妈教我们怎么包饺子。艾玛说，她以前从没和家人一起包过饺子。妈妈告诉她，饺子的形状像古代的金币。人们相信，吃饺子能给新的一年带来好运。艾玛包的第一个饺子太丑了，我们都笑了。"
+    },
+    {
+      "text": "The next morning, my grandmother taught us paper cutting, which is a traditional art. She gave Emma a small pair of red scissors and some thin red paper. Emma cut a flower that looked almost real. My grandmother was so pleased that she put it on the window.",
+      "translation": "第二天早上，奶奶教我们剪纸，剪纸是一门传统艺术。她给了艾玛一把红色的小剪刀和一些薄薄的红纸。艾玛剪出了一朵看起来几乎跟真的一样的花。奶奶高兴极了，把它贴在了窗户上。"
+    },
+    {
+      "text": "In the afternoon, Emma showed us photos of her own family festival. She explained that Canadians celebrate Thanksgiving in autumn with a big dinner. Her family always eats turkey, which her father cooks for hours. My parents listened carefully and asked her many questions about Canada.",
+      "translation": "下午，艾玛给我们看了她自己家过节的照片。她解释说，加拿大人在秋天庆祝感恩节，会吃一顿大餐。她家总会吃火鸡，那是她爸爸花好几个小时烤的。我父母听得很认真，还问了她很多关于加拿大的问题。"
+    },
+    {
+      "text": "In the evening, we walked through the streets to see the lanterns. Thousands of red lanterns were hanging above us. The whole street looked like a river of light. Emma said that she finally understood why Chinese people love this festival. It was such a beautiful night that nobody wanted to go home.",
+      "translation": "晚上，我们走上街头去看花灯。成千上万的红灯笼挂在我们头顶。整条街看起来就像一条光的河流。艾玛说她终于明白中国人为什么这么喜欢这个节日了。那个夜晚太美了，谁都不想回家。"
+    },
+    {
+      "text": "Before she left, Emma wrote a short letter to my family. She said that she would teach her friends how to make dumplings. I learned that culture is not a wall between people. It is more like a bridge that everyone can cross.",
+      "translation": "离开前，艾玛给我家写了一封短信。她说她会教她的朋友们怎么包饺子。我明白了，文化不是人与人之间的一堵墙。它更像一座每个人都能走过的桥。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does Emma's family eat at Thanksgiving?",
+      "audioText": "What does Emma's family eat at Thanksgiving?",
+      "options": [
+        {
+          "emoji": "🦃",
+          "value": "turkey",
+          "text": "Turkey"
+        },
+        {
+          "emoji": "🍕",
+          "value": "pizza",
+          "text": "Pizza"
+        },
+        {
+          "emoji": "🍜",
+          "value": "noodles",
+          "text": "Noodles"
+        }
+      ],
+      "answer": "turkey"
+    },
+    {
+      "type": "word_builder",
+      "word": "dumpling",
+      "audioText": "dumpling"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "My",
+        "mother",
+        "showed",
+        "us",
+        "how",
+        "to",
+        "make",
+        "dumplings"
+      ],
+      "audioText": "My mother showed us how to make dumplings."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It was such a beautiful night ___ nobody wanted to go home.",
+      "choices": [
+        "that",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "audioText": "It was such a beautiful night that nobody wanted to go home."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Emma",
+        "cut",
+        "a",
+        "flower",
+        "that",
+        "looked",
+        "almost",
+        "real"
+      ],
+      "audioText": "Emma cut a flower that looked almost real."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "My grandmother taught us paper cutting, ___ is a traditional art.",
+      "choices": [
+        "which",
+        "who",
+        "what"
+      ],
+      "answer": "which",
+      "audioText": "My grandmother taught us paper cutting, which is a traditional art."
+    }
+  ],
+  "_unknownWords": [
+    "li",
+    "hua",
+    "china",
+    "winter",
+    "canadian",
+    "chinese",
+    "emma's",
+    "cutting",
+    "traditional",
+    "scissors",
+    "canadians",
+    "thanksgiving",
+    "big",
+    "turkey",
+    "asked",
+    "canada",
+    "lanterns"
+  ]
+}

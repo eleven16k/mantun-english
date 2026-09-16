@@ -1,0 +1,125 @@
+{
+  "id": "xsc-r3-s10",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r3",
+  "order": 10,
+  "title": "The Candy Town Ice Cream Day",
+  "titleCn": "糖果镇的冰淇淋日",
+  "coverEmoji": "🍦",
+  "paragraphs": [
+    {
+      "text": "Last Sunday was a big day in Candy Town. All the shops made ice cream for everyone. The weather was warm and sunny. The whole town smelled very sweet.",
+      "translation": "上周日是糖果镇的大日子。所有店铺都为大家做了冰淇淋。天气温暖又晴朗。整个镇子都飘着甜甜的香味。"
+    },
+    {
+      "text": "My friends and I went to Sugar Street. We saw a long line at the ice cream shop. We waited and talked about our favorite flavors.",
+      "translation": "我和朋友们去了糖街。我们看到冰淇淋店门口排着长长的队。我们一边等，一边聊着各自最喜欢的口味。"
+    },
+    {
+      "text": "Anna had a pink ice cream with candy on top. Ben ate a green one with lemon. I chose a big cup with chocolate and nuts. It was cold, sweet, and delicious.",
+      "translation": "安娜吃了一个上面放糖果的粉色冰淇淋。本吃了一个柠檬味的绿色冰淇淋。我选了一大杯巧克力和坚果的。它又凉又甜，特别好吃。"
+    },
+    {
+      "text": "Then we played a fun game in the park. We had to find small ice cream toys. Anna found three, and Ben found four. I only found one, but I was happy.",
+      "translation": "接着我们在公园里玩了一个好玩的游戏。我们要找到小小的冰淇淋玩具。安娜找到了三个，本找到了四个。我只找到一个，不过我很开心。"
+    },
+    {
+      "text": "In the afternoon, there was a parade. People wore bright hats and sang songs. A big ice cream truck went down the street.",
+      "translation": "下午有一场游行。人们戴着鲜艳的帽子唱歌。一辆大大的冰淇淋车沿着街道开了过去。"
+    },
+    {
+      "text": "At night, we sat on a bench. We watched the stars and ate the last ice cream. It was the best day of the summer.",
+      "translation": "到了晚上，我们坐在长椅上。我们看着星星，吃掉了最后一点冰淇淋。那是整个夏天最棒的一天。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Anna have at the ice cream shop?",
+      "audioText": "What did Anna have at the ice cream shop?",
+      "options": [
+        {
+          "emoji": "🍦",
+          "value": "pink_ice_cream",
+          "text": "A pink ice cream"
+        },
+        {
+          "emoji": "🍋",
+          "value": "lemon",
+          "text": "A lemon"
+        },
+        {
+          "emoji": "🍫",
+          "value": "chocolate_bar",
+          "text": "A chocolate bar"
+        }
+      ],
+      "answer": "pink_ice_cream"
+    },
+    {
+      "type": "word_builder",
+      "word": "chocolate",
+      "audioText": "chocolate"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It ___ cold, sweet, and delicious.",
+      "choices": [
+        "was",
+        "were",
+        "are"
+      ],
+      "answer": "was",
+      "audioText": "It was cold, sweet, and delicious."
+    },
+    {
+      "type": "image_choice",
+      "question": "What did people wear in the parade?",
+      "audioText": "What did people wear in the parade?",
+      "options": [
+        {
+          "emoji": "🎩",
+          "value": "bright_hats",
+          "text": "Bright hats"
+        },
+        {
+          "emoji": "🍬",
+          "value": "candy_bags",
+          "text": "Candy bags"
+        },
+        {
+          "emoji": "🧢",
+          "value": "blue_caps",
+          "text": "Blue caps"
+        }
+      ],
+      "answer": "bright_hats"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "weather",
+        "was",
+        "warm",
+        "and",
+        "sunny."
+      ],
+      "audioText": "The weather was warm and sunny."
+    },
+    {
+      "type": "word_builder",
+      "word": "parade",
+      "audioText": "parade"
+    }
+  ],
+  "_unknownWords": [
+    "talked",
+    "flavors",
+    "lemon",
+    "chose",
+    "nuts",
+    "parade",
+    "bench"
+  ]
+}

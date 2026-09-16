@@ -1,0 +1,132 @@
+{
+  "id": "gk-r2-s08",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 8,
+  "title": "When Your Face Becomes a Password",
+  "titleCn": "当你的脸变成密码",
+  "coverEmoji": "📸",
+  "paragraphs": [
+    {
+      "text": "Last September, a large secondary school in the south of England replaced its library cards with a facial recognition system. Students simply look at a small camera, and the machine recognises their faces in about half a second. Nobody has to queue, and nobody has to remember a password that might easily be forgotten. The head teacher called the system a small change that saves everyone a little time every single day.",
+      "translation": "去年九月，英格兰南部一所大型中学用面部识别系统取代了图书馆借书卡。学生只要看一眼前面那个小小的摄像头，机器就会在半秒左右认出他们的脸。没有人需要排队，也没有人需要去记一个很容易被忘掉的密码。校长把这一系统称为「一个每天为每个人省下一点时间的小改动」。"
+    },
+    {
+      "text": "But behind that quick blink of a camera, something much larger is being built. Every face is turned into a long string of numbers, and those numbers are stored on a server somewhere. What is collected is not only the shape of a nose or the distance between two eyes. Details such as how often a student enters the building are also being recorded, and these records can be kept for years.",
+      "translation": "但在摄像头那轻轻一闪的背后，某个庞大得多的东西正在被搭建起来。每一张脸都被转换成一长串数字，而这些数字被存放在某个服务器上。被收集的不只是鼻子的形状或两眼之间的距离。像一名学生多久进出一次教学楼这样的细节也会被记录下来，而这些记录可能被保存很多年。"
+    },
+    {
+      "text": "Whether parents were properly asked for permission remains an open question. In many schools, students are simply told that the new system will be used from Monday, and no letter is sent home. What worries critics most is the silence that follows: once a face has been stored, it can never be taken back. Consent is rarely as clear as it sounds.",
+      "translation": "家长是否被正式征求过同意，至今仍是一个悬而未决的问题。在许多学校里，学生只是被告知新系统从周一开始使用，而家里根本收不到任何通知信。最让批评者担忧的是随之而来的沉默：一张脸一旦被存下来，就再也无法收回。所谓「同意」，很少像听起来那么明确。"
+    },
+    {
+      "text": "It is now widely accepted that personal data deserves legal protection, yet the rules differ from country to country. Some governments require that clear consent be given before any face is scanned. Others allow schools and shops to collect such information as long as a notice is placed near the door. This gap between countries is what makes the technology so difficult to control.",
+      "translation": "如今人们普遍认同，个人数据理应受到法律保护，但各国的规则并不相同。有些政府要求在扫描任何一张脸之前必须先获得明确的同意；另一些则允许学校和商店收集这类信息，只要在门口贴一张告示即可。正是国家之间的这种差距，让这项技术如此难以管控。"
+    },
+    {
+      "text": "None of this means that facial recognition should be thrown away completely. It can help a blind student find a seat, or let a busy hospital track who comes and goes. What matters is whether the people being watched know about it, and whether they can say no. A face is not a password. It cannot simply be reset.",
+      "translation": "这一切并不意味着面部识别就该被彻底抛弃。它能帮一位盲人学生找到座位，也能让一家繁忙的医院掌握人员进出情况。真正重要的是：被拍摄的人是否知道这件事，以及他们能不能说不。脸不是密码。它没法被简单重置。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the text, what is every face turned into before it is stored?",
+      "audioText": "According to the text, what is every face turned into before it is stored?",
+      "options": [
+        {
+          "emoji": "🔢",
+          "value": "numbers",
+          "text": "Numbers"
+        },
+        {
+          "emoji": "🖼️",
+          "value": "pictures",
+          "text": "Pictures"
+        },
+        {
+          "emoji": "🏷️",
+          "value": "names",
+          "text": "Names"
+        }
+      ],
+      "answer": "numbers"
+    },
+    {
+      "type": "word_builder",
+      "word": "consent",
+      "audioText": "consent"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Consent",
+        "is",
+        "rarely",
+        "as",
+        "clear",
+        "as",
+        "it",
+        "sounds."
+      ],
+      "audioText": "Consent is rarely as clear as it sounds."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "A",
+        "face",
+        "is",
+        "not",
+        "a",
+        "password."
+      ],
+      "audioText": "A face is not a password."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "What worries critics most is the ___ that follows.",
+      "choices": [
+        "silence",
+        "system",
+        "camera"
+      ],
+      "answer": "silence",
+      "audioText": "What worries critics most is the silence that follows."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "It ___ now widely accepted that personal data deserves legal protection.",
+      "choices": [
+        "is",
+        "are",
+        "be"
+      ],
+      "answer": "is",
+      "audioText": "It is now widely accepted that personal data deserves legal protection."
+    }
+  ],
+  "_unknownWords": [
+    "secondary",
+    "replaced",
+    "facial",
+    "recognition",
+    "simply",
+    "recognises",
+    "password",
+    "easily",
+    "forgotten",
+    "blink",
+    "larger",
+    "server",
+    "details",
+    "taken",
+    "consent",
+    "legal",
+    "given",
+    "gap",
+    "thrown",
+    "cannot",
+    "reset"
+  ]
+}

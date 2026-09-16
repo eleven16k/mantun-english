@@ -1,0 +1,126 @@
+{
+  "id": "gk-r3-s04",
+  "track": "gaokao",
+  "regionId": "gk-r3",
+  "order": 4,
+  "title": "A Library Hidden in the Desert",
+  "titleCn": "藏在沙漠里的图书馆",
+  "coverEmoji": "📜",
+  "paragraphs": [
+    {
+      "text": "About twenty-five kilometres southeast of Dunhuang, a line of caves runs along a dry river valley. For more than a thousand years, travellers, traders and monks stopped here before crossing the desert. They cut rooms into the soft rock and filled the walls with colourful paintings and statues. Today we call the place the Mogao Caves, and it is one of the greatest art sites in Asia.",
+      "translation": "在敦煌东南约二十五公里处，一列洞窟沿着干涸的河谷延伸。一千多年间，旅人、商人和僧侣在穿越沙漠之前都会在此停留。他们把松软的岩石凿成一个个房间，用色彩斑斓的壁画和塑像填满四壁。今天，我们称这里为莫高窟，它是亚洲最伟大的艺术遗址之一。"
+    },
+    {
+      "text": "If the desert air had been wet, those paintings would have disappeared many centuries ago. Not only did the dry climate protect the colours, but it also kept every piece of paper safe. For centuries, monks, artists and passing travellers worked on the site, generation after generation. No sooner had one dynasty fallen than the next added its own rooms and pictures.",
+      "translation": "如果沙漠的空气是潮湿的，那些壁画早在几百年前就会消失得无影无踪。干燥的气候不仅保护了色彩，也让每一张纸都安然无恙。几个世纪里，僧侣、画工和路过的旅人一代又一代地在这里劳作。一个王朝刚刚覆灭，下一个王朝又添上自己的洞窟和画作。"
+    },
+    {
+      "text": "In 1900, a caretaker who was cleaning one of the caves noticed a hidden doorway behind the wall. Behind it lay a small room, packed from floor to ceiling with ancient documents. It was this one small room that held tens of thousands of papers, waiting quietly in the dark. Some were written in Chinese, while others used languages that no one could read any more.",
+      "translation": "1900年，一位正在打扫其中一座洞窟的看护人发现墙后有一道隐蔽的门。门后是一间小屋，从地面到天花板堆满了古代文书。正是这间小屋，收藏着数以万计的文件，静静地在黑暗中等待。有些用中文写成，另一些则使用已经无人能读懂的语言。"
+    },
+    {
+      "text": "Scholars say the papers record daily life, trade and belief along the old Silk Road. If that little door had never been opened, much of this history would still be unknown to us. Had the room been found later, the documents might have been lost forever. Today, teams of young workers are making digital copies so that anyone can study them online.",
+      "translation": "学者们说，这些文书记录了古丝绸之路上的日常生活、贸易与信仰。如果那扇小门从未被打开，这段历史的很大一部分至今仍不为我们所知。倘若这间屋子更晚才被发现，这些文书也许早已永远失散。如今，一支支年轻的工作团队正在制作数字副本，让任何人都能在网上研究它们。"
+    },
+    {
+      "text": "Visiting the caves, you may feel that the past is not so far away after all. It is ordinary people, not kings, who keep a culture alive through patient, quiet work.",
+      "translation": "走进这些洞窟，你也许会感到过去其实并不遥远。让一种文化延续下去的，正是那些耐心而默默劳作的普通人，而不是帝王。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What kept the wall paintings bright for so long?",
+      "audioText": "What kept the wall paintings bright for so long?",
+      "options": [
+        {
+          "emoji": "🏜️",
+          "value": "dry",
+          "text": "Dry desert air"
+        },
+        {
+          "emoji": "🌧️",
+          "value": "rain",
+          "text": "Heavy summer rain"
+        },
+        {
+          "emoji": "🔥",
+          "value": "fire",
+          "text": "Fires in the caves"
+        }
+      ],
+      "answer": "dry"
+    },
+    {
+      "type": "word_builder",
+      "word": "dynasty",
+      "audioText": "dynasty"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Today",
+        "we",
+        "call",
+        "the",
+        "place",
+        "the",
+        "Mogao",
+        "Caves"
+      ],
+      "audioText": "Today we call the place the Mogao Caves."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Behind",
+        "it",
+        "lay",
+        "a",
+        "small",
+        "room"
+      ],
+      "audioText": "Behind it lay a small room."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Not only ___ the dry climate protect the colours, but it also kept every piece of paper safe.",
+      "choices": [
+        "did",
+        "does",
+        "had"
+      ],
+      "answer": "did",
+      "audioText": "Not only did the dry climate protect the colours, but it also kept every piece of paper safe."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If that little door had never been opened, much of this history ___ still be unknown to us.",
+      "choices": [
+        "would",
+        "will",
+        "is"
+      ],
+      "answer": "would",
+      "audioText": "If that little door had never been opened, much of this history would still be unknown to us."
+    }
+  ],
+  "_unknownWords": [
+    "dunhuang",
+    "travellers",
+    "traders",
+    "monks",
+    "colourful",
+    "mogao",
+    "generation",
+    "fallen",
+    "caretaker",
+    "hidden",
+    "doorway",
+    "written",
+    "forever",
+    "digital",
+    "online"
+  ]
+}

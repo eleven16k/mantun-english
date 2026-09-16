@@ -1,0 +1,112 @@
+{
+  "id": "zk-r2-s01",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 1,
+  "title": "Two Days in Suzhou",
+  "titleCn": "苏州两日",
+  "coverEmoji": "🏞️",
+  "paragraphs": [
+    {
+      "text": "Last spring, my parents took me to Suzhou for a short holiday. We left home early on Saturday morning and arrived before noon. The weather was warmer than in our city, and the air felt soft. I could not wait to see the famous gardens.",
+      "translation": "去年春天，爸爸妈妈带我去苏州度了个短假。我们周六一大早就出发了，中午之前就到了。那里比我们城市暖和，空气也软软的。我迫不及待地想去看那些有名的园林。"
+    },
+    {
+      "text": "After lunch, we walked to the oldest garden in the city. It was built more than five hundred years ago. While we were walking along the small paths, my mother took many photos. The trees there were taller and greener than the ones in our school.",
+      "translation": "午饭后，我们步行去了城里最古老的园林。它建于五百多年前。当我们沿着小径散步时，妈妈拍了很多照片。那里的树比我们学校的更高、更绿。"
+    },
+    {
+      "text": "In the afternoon, we took a small boat on the river. The boat moved slowly under an old stone bridge. I saw small houses on both sides of the river. While we were on the boat, an old man told us funny stories. He spoke faster than my teacher, but I understood most of his words.",
+      "translation": "下午，我们在河上坐了一条小船。小船慢慢地从一座古老的石桥下驶过。我看见河两岸的小房子。我们在船上时，一位老人给我们讲了有趣的故事。他说得比我们老师还快，但他讲的绝大部分我都听懂了。"
+    },
+    {
+      "text": "Before the sun went down, we stopped at a small food street. Suzhou food is sweeter than the food in my hometown. After we finished dinner, we walked along the river again. The lights on the water were the most beautiful thing that day.",
+      "translation": "太阳落山前，我们在一条小吃街停了下来。苏州菜比我们家乡菜更甜。吃完饭以后，我们又沿着河边散步。水上的灯光是那天最美的东西。"
+    },
+    {
+      "text": "On Sunday morning, we visited a quiet museum near the lake. When I looked at the old paintings, I felt warm and calm. After lunch, we bought some silk. It was a gift for my grandmother. Then we took the train home in the evening.",
+      "translation": "星期天上午，我们参观了湖边一座安静的博物馆。当我看着那些古画时，心里又温暖又平静。午饭后，我们买了些丝绸，那是给奶奶的礼物。傍晚我们就坐火车回家了。"
+    },
+    {
+      "text": "Now, when I look at the photos, I still remember the green gardens. For me, Suzhou is the most interesting place in China. I hope I can go there again before I finish middle school.",
+      "translation": "现在，每当我翻看这些照片，我仍然记得那些碧绿的园林。对我来说，苏州是中国最有趣的地方。我希望初中毕业前还能再去一次。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did they take on the river in the afternoon?",
+      "audioText": "What did they take on the river in the afternoon?",
+      "options": [
+        {
+          "emoji": "🚤",
+          "value": "boat",
+          "text": "Boat"
+        },
+        {
+          "emoji": "🚆",
+          "value": "train",
+          "text": "Train"
+        },
+        {
+          "emoji": "🚲",
+          "value": "bike",
+          "text": "Bike"
+        }
+      ],
+      "answer": "boat"
+    },
+    {
+      "type": "word_builder",
+      "word": "garden",
+      "audioText": "garden"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "After",
+        "lunch",
+        "we",
+        "bought",
+        "some",
+        "silk"
+      ],
+      "audioText": "After lunch, we bought some silk."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The weather was ___ than in our city, and the air felt soft.",
+      "choices": [
+        "warmer",
+        "warmest",
+        "warm"
+      ],
+      "answer": "warmer",
+      "audioText": "The weather was warmer than in our city, and the air felt soft."
+    },
+    {
+      "type": "word_builder",
+      "word": "bridge",
+      "audioText": "bridge"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "For me, Suzhou is the most ___ place in China.",
+      "choices": [
+        "interesting",
+        "interested",
+        "interest"
+      ],
+      "answer": "interesting",
+      "audioText": "For me, Suzhou is the most interesting place in China."
+    }
+  ],
+  "_unknownWords": [
+    "suzhou",
+    "paths",
+    "paintings",
+    "calm",
+    "silk",
+    "china"
+  ]
+}

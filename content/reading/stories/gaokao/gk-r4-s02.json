@@ -1,0 +1,114 @@
+{
+  "id": "gk-r4-s02",
+  "track": "gaokao",
+  "regionId": "gk-r4",
+  "order": 2,
+  "title": "Small Habits, Strong Mind",
+  "titleCn": "小习惯，强心智",
+  "coverEmoji": "🧠",
+  "paragraphs": [
+    {
+      "text": "Getting enough sleep each night is one of the simplest ways to protect your mental health. Many students believe that staying up late gives them more time to study for exams. However, research shows that losing even one hour of sleep can affect your mood and memory. To feel calm and focused during the day, teenagers need about eight hours of rest.",
+      "translation": "每晚睡够觉，是保护心理健康最简单的方法之一。很多学生认为，熬夜能让他们有更多时间备考。然而研究表明，哪怕只是少睡一小时，也会影响你的情绪和记忆力。想在白天保持平静和专注，青少年需要大约八小时的休息。"
+    },
+    {
+      "text": "Exercise matters for the mind as much as for the body. Walking, swimming or cycling for thirty minutes a day helps your brain release chemicals that improve your mood. Doctors suggest choosing an activity you actually enjoy, because you are more likely to keep doing it. A short walk after dinner can reduce stress.",
+      "translation": "运动对心智的重要性，不亚于对身体。每天散步、游泳或骑车三十分钟，能帮助大脑释放改善情绪的化学物质。医生建议选择一项你真正喜欢的活动，因为这样你更有可能坚持下去。晚饭后散一小会儿步就能减轻压力。"
+    },
+    {
+      "text": "What you eat also plays an important part in how you feel. Skipping breakfast may seem like a quick way to save time. Yet starting the day without food often makes it harder to concentrate in class. Nutrition experts recommend eating fruits, vegetables and whole grains. Drinking water is a better choice than sugary drinks.",
+      "translation": "你吃什么，也在很大程度上影响你的感受。不吃早餐看起来像是省时间的快捷办法。可是空着肚子开始一天，往往让你在课堂上更难集中注意力。营养专家建议多吃水果、蔬菜和全谷物。喝水比喝含糖饮料更好。"
+    },
+    {
+      "text": "Building healthy habits takes patience. Nobody gets everything right at once. If you stayed up too late last week, you should have gone to bed earlier. Blaming yourself for small mistakes, however, will only make you feel worse. Instead, try to change one habit at a time. Remember that looking after your mind is just as important as looking after your body.",
+      "translation": "养成健康习惯需要耐心。没有人能一次就把一切都做对。如果上周你熬得太晚，你本应该早点上床睡觉。不过，为小失误责怪自己，只会让你感觉更糟。不如一次只改掉一个习惯。记住，照顾好自己的心理，和照顾好自己的身体同样重要。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "About how many hours of rest do teenagers need each night?",
+      "audioText": "About how many hours of rest do teenagers need each night?",
+      "options": [
+        {
+          "emoji": "🕗",
+          "value": "eight",
+          "text": "Eight hours"
+        },
+        {
+          "emoji": "🕔",
+          "value": "five",
+          "text": "Five hours"
+        },
+        {
+          "emoji": "🕛",
+          "value": "twelve",
+          "text": "Twelve hours"
+        }
+      ],
+      "answer": "eight"
+    },
+    {
+      "type": "word_builder",
+      "word": "breakfast",
+      "audioText": "breakfast"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Doctors suggest ___ an activity you actually enjoy.",
+      "choices": [
+        "choosing",
+        "choose",
+        "chose"
+      ],
+      "answer": "choosing",
+      "audioText": "Doctors suggest choosing an activity you actually enjoy."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "A",
+        "short",
+        "walk",
+        "after",
+        "dinner",
+        "can",
+        "reduce",
+        "stress."
+      ],
+      "audioText": "A short walk after dinner can reduce stress."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If you stayed up too late last week, you should have ___ to bed earlier.",
+      "choices": [
+        "gone",
+        "go",
+        "went"
+      ],
+      "answer": "gone",
+      "audioText": "If you stayed up too late last week, you should have gone to bed earlier."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Building",
+        "healthy",
+        "habits",
+        "takes",
+        "patience."
+      ],
+      "audioText": "Building healthy habits takes patience."
+    }
+  ],
+  "_unknownWords": [
+    "getting",
+    "simplest",
+    "mental",
+    "mood",
+    "skipping",
+    "sugary",
+    "gone",
+    "earlier"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "id": "zk-r2-s04",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 4,
+  "title": "A Weekend in Suzhou",
+  "titleCn": "苏州周末之旅",
+  "coverEmoji": "🏯",
+  "paragraphs": [
+    {
+      "text": "Last October, my family took a fast train to Suzhou in the east of China. The trip from our city took only about thirty minutes. When we walked out of the station, the sun was shining brightly. The streets looked quieter and greener than the streets back home.",
+      "translation": "去年十月，我们一家人坐高铁去了中国东部的苏州。从我们城市出发，这段旅程只花了大约三十分钟。当我们走出车站时，阳光正明亮地照着。这里的街道看起来比家乡的街道更安静、更绿意盎然。"
+    },
+    {
+      "text": "Our first stop was the old town near the river. While we walked along the water, we saw many small stone bridges. Some of them are more than five hundred years old. Before the sun went down, we took a lot of photos there.",
+      "translation": "我们的第一站是河边的那座老城。我们沿着水边散步时，看见了许许多多小小的石桥。其中一些已经有五百多年的历史了。太阳落山前，我们在那里拍了很多照片。"
+    },
+    {
+      "text": "On the second day, we visited the biggest garden in the city. It was larger than a football field. The garden was also full of tall old trees. After we walked through the front gate, we found a quiet lake. The trees around the lake were the oldest ones in the garden.",
+      "translation": "第二天，我们参观了城里最大的园林。它比一个足球场还大。园子里还满是高大的古树。穿过前门之后，我们发现了一个安静的湖。湖边的那些树是园子里最古老的树。"
+    },
+    {
+      "text": "In the afternoon, we tried some local food near the garden. The noodles there were cheaper and tastier than the ones at home. While we were eating, an old man told us stories about his city. He said Suzhou has the most beautiful gardens.",
+      "translation": "下午，我们在园林附近尝了些当地美食。那里的面条比家里的更便宜，也更好吃。我们吃饭的时候，一位老人给我们讲了他这座城市的故事。他说苏州有着最美丽的园林。"
+    },
+    {
+      "text": "On our last morning, we visited a small museum about silk. Before we left, I bought a paper fan for my best friend. When the train started to move, I looked out of the window. I hoped that I could come back to Suzhou one day.",
+      "translation": "最后一天早上，我们参观了一个关于丝绸的小博物馆。离开之前，我给最好的朋友买了一把纸扇。火车开动时，我望向窗外。我希望有一天能再回到苏州。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the writer see along the water in the old town?",
+      "audioText": "What did the writer see along the water in the old town?",
+      "options": [
+        {
+          "emoji": "🌉",
+          "value": "bridges",
+          "text": "Stone bridges"
+        },
+        {
+          "emoji": "🏫",
+          "value": "schools",
+          "text": "Schools"
+        },
+        {
+          "emoji": "🏭",
+          "value": "factories",
+          "text": "Factories"
+        }
+      ],
+      "answer": "bridges"
+    },
+    {
+      "type": "word_builder",
+      "word": "garden",
+      "audioText": "garden"
+    },
+    {
+      "type": "word_builder",
+      "word": "bridge",
+      "audioText": "bridge"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "was",
+        "larger",
+        "than",
+        "a",
+        "football",
+        "field."
+      ],
+      "audioText": "It was larger than a football field."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "When we ___ out of the station, the sun was shining brightly.",
+      "choices": [
+        "walked",
+        "walk",
+        "walking"
+      ],
+      "answer": "walked",
+      "audioText": "When we walked out of the station, the sun was shining brightly."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The noodles there were cheaper and ___ than the ones at home.",
+      "choices": [
+        "tasty",
+        "tastier",
+        "tastiest"
+      ],
+      "answer": "tastier",
+      "audioText": "The noodles there were cheaper and tastier than the ones at home."
+    }
+  ],
+  "_unknownWords": [
+    "suzhou",
+    "china",
+    "biggest",
+    "larger",
+    "local",
+    "tastier",
+    "silk"
+  ]
+}

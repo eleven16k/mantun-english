@@ -1,0 +1,107 @@
+{
+  "id": "gk-r5-s04",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 4,
+  "title": "Things I Could Not Do Yet",
+  "titleCn": "我还不会做的事",
+  "coverEmoji": "📓",
+  "paragraphs": [
+    {
+      "text": "When I finished my final exam, most of my classmates were busy choosing universities, but I decided to take a gap year — a choice about which my parents had serious doubts. For twelve months, I worked in a small bicycle shop owned by a man whom everyone in the neighbourhood simply called Uncle Chen. He had never been to college, yet he could repair almost anything on two wheels.",
+      "translation": "我考完最后一场考试时，大多数同学都在忙着挑大学，而我却决定休学一年——一个我父母颇有疑虑的选择。在那十二个月里，我在一家小小的自行车店打工，店主人街坊邻里都叫他陈叔。他从没上过大学，却几乎能修好任何带两个轮子的东西。"
+    },
+    {
+      "text": "My first task was to sort a box of screws, which took me three whole hours. Uncle Chen watched me patiently; his hands, covered in oil, never once touched the box. \"Sorting is not the job,\" he said. \"It is how you learn what a job is.\" At that moment I realised that the lessons I remembered best were rarely the ones taught from a textbook.",
+      "translation": "我的第一项任务是把一盒螺丝分类，这花了我整整三个小时。陈叔耐心地看着我；他沾满油污的双手始终没有碰那个盒子。“分类不是工作，”他说，“它是你学会什么叫工作的方式。”那一刻我意识到，我记得最牢的那些课，往往不是课本上教的。"
+    },
+    {
+      "text": "Weeks passed, and I slowly moved from sorting screws to changing tyres, then to adjusting brakes, at which I became surprisingly quick. Every mistake I made was explained rather than punished, and every question I asked received an answer longer than I had expected. Uncle Chen, who had taught himself English by reading repair manuals, kept a notebook in which he wrote down things he still could not do.",
+      "translation": "几周过去了，我慢慢从分类螺丝做到换轮胎，再到调刹车——这方面我快得连自己都吃惊。我犯的每个错误都会被解释，而不是被责罚；我问的每个问题，得到的回答都比我预想的长。陈叔靠读维修手册自学了英语，他有一本笔记本，里面记着他还不会做的事。"
+    },
+    {
+      "text": "That notebook changed my idea of learning. I had always assumed that education was a ladder we climbed for eighteen years and then left behind. Uncle Chen, however, treated it as a garden he watered every single day, and the plants in it, he insisted, never stopped growing. A person who stops learning, he told me, does not stay still; he quietly moves backwards.",
+      "translation": "那本笔记本改变了我对学习的看法。我一直以为教育是一架我们爬了十八年就丢在身后的梯子。可陈叔却把它当成一座每天都要浇水的花园，而且他坚持说，园里的植物从不会停止生长。他告诉我，一个停止学习的人并不是原地不动，而是在悄悄倒退。"
+    },
+    {
+      "text": "When my gap year ended, I went to university with a new habit: whenever I meet something I cannot do, I write it in my own notebook. Some pages are still full of things I have not mastered, and I have learned to be comfortable with them. After all, the ability to say \"not yet\" may be the most useful skill that school never formally taught me.",
+      "translation": "间隔年结束时，我带着一个新习惯走进了大学：每当遇到自己不会做的事，我就把它写进自己的笔记本。有些页面至今仍写满我没掌握的东西，而我已经学会坦然面对它们。毕竟，能够说出“还不会”，也许是学校从未正式教过我的、最有用的一项技能。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "word_builder",
+      "word": "notebook",
+      "audioText": "notebook"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "He had never been to college, yet he could repair almost anything on two ___.",
+      "choices": [
+        "wheels",
+        "wings",
+        "roads"
+      ],
+      "answer": "wheels",
+      "audioText": "He had never been to college, yet he could repair almost anything on two wheels."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Sorting",
+        "is",
+        "not",
+        "the",
+        "job"
+      ],
+      "audioText": "Sorting is not the job."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Uncle Chen kept a notebook in which he wrote down things he still could not ___.",
+      "choices": [
+        "do",
+        "make",
+        "take"
+      ],
+      "answer": "do",
+      "audioText": "Uncle Chen kept a notebook in which he wrote down things he still could not do."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "That",
+        "notebook",
+        "changed",
+        "my",
+        "idea",
+        "of",
+        "learning"
+      ],
+      "audioText": "That notebook changed my idea of learning."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "A person who stops learning does not stay still; he quietly moves ___.",
+      "choices": [
+        "backwards",
+        "forward",
+        "upwards"
+      ],
+      "answer": "backwards",
+      "audioText": "A person who stops learning does not stay still; he quietly moves backwards."
+    }
+  ],
+  "_unknownWords": [
+    "gap",
+    "neighbourhood",
+    "simply",
+    "chen",
+    "screws",
+    "textbook",
+    "surprisingly",
+    "manuals",
+    "cannot",
+    "formally"
+  ]
+}

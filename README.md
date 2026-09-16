@@ -34,14 +34,19 @@ The app connects automatically; for phone/LAN access set
 Protocol details live in `lib/realtime.ts`; audio runs through two
 AudioWorklets in `public/worklets/`.
 
-To run the engine's LLM on the same gateway model as the rest of Lexi:
+To run the engine's LLM brain on **DeepSeek's fastest voice config**
+(deepseek-v4-flash + reasoning off — measured content-first-packet ≈0.86 s,
+vs 1.69 s + heavy reasoning on v4-pro):
 
 ```bash
+scripts/launch-s2s-deepseek.sh   # ws://localhost:8766/v1/realtime
+# 等价手敲：
 speech-to-speech serve \
   --llm_backend chat-completions \
-  --responses_api_base_url https://zm.oxsm.gz.cn/api/v1 \
-  --responses_api_api_key <LLM_API_KEY> \
-  --model_name z-ai/glm-5.3-flash
+  --responses_api_base_url https://api.deepseek.com \
+  --responses_api_api_key <DEEPSEEK_API_KEY> \
+  --model_name deepseek-v4-flash \
+  --responses_api_reasoning_effort none
 ```
 
 A protocol-compatible mock engine for development is included:

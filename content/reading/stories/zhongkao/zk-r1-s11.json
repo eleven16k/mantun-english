@@ -1,0 +1,132 @@
+{
+  "id": "zk-r1-s11",
+  "track": "zhongkao",
+  "regionId": "zk-r1",
+  "order": 11,
+  "title": "The Bridge We Built",
+  "titleCn": "我们亲手搭起的那座桥",
+  "coverEmoji": "🌉",
+  "paragraphs": [
+    {
+      "text": "Our school holds a science fair every spring. This year our class decided to join it. We wanted to make something new and useful. Our teacher, Mr. Lin, said that we could work in groups.",
+      "translation": "我们学校每年春天都会举办科学展。今年，我们班决定参加。我们想做一件又新又有用的东西。我们的老师林老师说，我们可以分组来做。"
+    },
+    {
+      "text": "I joined a group with Li Mei and Wang Tao. We often stayed after class to talk about ideas. Li Mei thought that a small robot would be cool. Wang Tao knew that robots cost too much money. I said that we should build a model bridge. In the end, everyone agreed with my idea.",
+      "translation": "我和李梅、王涛分在了一组。我们常常在课后留下来聊想法。李梅觉得做个小机器人会很酷。王涛知道机器人要花太多钱。我说我们该搭一座桥梁模型。最后，大家都同意了我的想法。"
+    },
+    {
+      "text": "We spent two weeks on our bridge. Every day after school, we met in the classroom. Li Mei drew the picture and Wang Tao cut the wood. I usually glued the small pieces together. Sometimes the bridge fell down, and we had to start again.",
+      "translation": "我们在这座桥上花了两个星期。每天放学后，我们都在教室里碰头。李梅画图，王涛切木条。我通常负责把小木片粘在一起。有时候桥会塌下来，我们只好重新开始。"
+    },
+    {
+      "text": "On the fair day, our bridge stood on the table. Many students came to look at it. A boy asked how strong it was. I told him that it could hold ten books. He looked surprised and said that we were clever. Our teacher smiled and took a photo.",
+      "translation": "展览那天，我们的桥立在桌子上。很多同学过来看。一个男孩问它有多结实。我告诉他，它能托住十本书。他看起来很惊讶，说我们真聪明。老师笑了，还拍了张照片。"
+    },
+    {
+      "text": "We did not win the first prize that day. But I learned something more important. I know that a good team needs many ideas. I also know that we should never give up. Now I always listen to my friends before I decide.",
+      "translation": "那天我们没有拿到一等奖。但我学到了更重要的东西。我知道，一个好的团队需要很多想法。我也知道，我们永远不该放弃。现在，我做决定之前总会先听听朋友们的意见。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did the writer's group finally decide to build?",
+      "audioText": "What did the writer's group finally decide to build?",
+      "options": [
+        {
+          "emoji": "🌉",
+          "value": "bridge",
+          "text": "A bridge"
+        },
+        {
+          "emoji": "🤖",
+          "value": "robot",
+          "text": "A robot"
+        },
+        {
+          "emoji": "🚗",
+          "value": "car",
+          "text": "A toy car"
+        }
+      ],
+      "answer": "bridge"
+    },
+    {
+      "type": "image_choice",
+      "question": "What did the teacher take at the science fair?",
+      "audioText": "What did the teacher take at the science fair?",
+      "options": [
+        {
+          "emoji": "📷",
+          "value": "photo",
+          "text": "A photo"
+        },
+        {
+          "emoji": "🍎",
+          "value": "apple",
+          "text": "An apple"
+        },
+        {
+          "emoji": "✏️",
+          "value": "pencil",
+          "text": "A pencil"
+        }
+      ],
+      "answer": "photo"
+    },
+    {
+      "type": "word_builder",
+      "word": "bridge",
+      "audioText": "bridge"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Our",
+        "teacher",
+        "smiled",
+        "and",
+        "took",
+        "a",
+        "photo."
+      ],
+      "audioText": "Our teacher smiled and took a photo."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "I",
+        "usually",
+        "glued",
+        "the",
+        "small",
+        "pieces",
+        "together."
+      ],
+      "audioText": "I usually glued the small pieces together."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Li Mei thought ___ a small robot would be cool.",
+      "choices": [
+        "that",
+        "what",
+        "if"
+      ],
+      "answer": "that",
+      "audioText": "Li Mei thought that a small robot would be cool."
+    }
+  ],
+  "_unknownWords": [
+    "join",
+    "joined",
+    "li",
+    "wang",
+    "tao",
+    "talk",
+    "model",
+    "glued",
+    "asked"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "zk-r6-s03",
+  "track": "zhongkao",
+  "regionId": "zk-r6",
+  "order": 3,
+  "title": "The Night We Made Dumplings",
+  "titleCn": "包饺子的那个夜晚",
+  "coverEmoji": "🥟",
+  "paragraphs": [
+    {
+      "text": "Last winter, my Australian friend Emma came to my home for the Spring Festival. She is an exchange student who studies in our city. Before that night, she had never seen how Chinese families welcome the new year. She kept asking me what this festival really meant to us.",
+      "translation": "去年冬天，我澳大利亚的朋友艾玛来我家过春节。她是一位在我们这座城市学习的交换生。在那一晚之前，她从未见过中国家庭是怎样迎接新年的。她不停地问我，这个节日对我们究竟意味着什么。"
+    },
+    {
+      "text": "My grandmother said that dumplings were the most important food of the evening. Emma watched her old hands very carefully. She showed us how she rolled the thin wrappers with a small wooden stick. The kitchen was so warm that we all took off our heavy coats.",
+      "translation": "奶奶说，饺子是那天晚上最重要的食物。艾玛非常仔细地看着奶奶那双苍老的手。她给我们演示怎样用小木棍把薄薄的饺子皮擀出来。厨房里太暖和了，我们都脱下了厚外套。"
+    },
+    {
+      "text": "Emma's first dumpling looked like a small stone that nobody wanted to eat. My little brother laughed so loudly that my mother told him to be quiet. Emma laughed too and tried again. Her second one stood on the plate like a real white moon.",
+      "translation": "艾玛包的第一个饺子看起来像一块谁都不想吃的石头。我弟弟笑得那么大声，妈妈让他安静点。艾玛也笑了，又重新试了一次。她包的第二个稳稳地立在盘子里，像一轮真正的白月亮。"
+    },
+    {
+      "text": "While we were eating, Emma told us that Christmas in Australia happens in hot summer. People swim at the beach and have a picnic which lasts all afternoon. I was surprised to hear that her family eats cold fruit instead of hot soup. A festival can look completely different in another part of the world.",
+      "translation": "我们吃饭的时候，艾玛告诉我们，澳大利亚的圣诞节是在炎热的夏天。人们去海边游泳，还会来一场持续整个下午的野餐。我惊讶地听说，她家里吃的是冰凉的水果，而不是热汤。在世界的另一个地方，同一个节日可以看起来完全不一样。"
+    },
+    {
+      "text": "The dumplings were so delicious that Emma ate twenty of them in ten minutes. She said it was such a wonderful night that she would never forget it. Before she left, she asked my grandmother to teach her the recipe. My grandmother smiled and promised to send it to her by email.",
+      "translation": "饺子太好吃了，艾玛十分钟里就吃了二十个。她说这是一个如此美妙的夜晚，她永远都不会忘记。临走前，她请奶奶教她这道食谱。奶奶笑着答应，说会用电子邮件把食谱发给她。"
+    },
+    {
+      "text": "Now Emma and I often talk about the festivals which we celebrate in our own countries. I have learned that a tradition is a language which everyone can understand. It does not matter where you come from or what you eat on that day. What matters is the warm feeling that we share with other people.",
+      "translation": "现在我和艾玛常常聊起各自国家庆祝的节日。我明白了，传统是一种人人都能理解的语言。你来自哪里、那天吃些什么，都不重要。重要的是我们与别人一起分享的那份温暖的感觉。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Emma learn to make with her friend's family?",
+      "audioText": "What did Emma learn to make with her friend's family?",
+      "options": [
+        {
+          "emoji": "🥟",
+          "value": "dumplings",
+          "text": "Dumplings"
+        },
+        {
+          "emoji": "🍰",
+          "value": "cake",
+          "text": "Cake"
+        },
+        {
+          "emoji": "🍜",
+          "value": "noodles",
+          "text": "Noodles"
+        }
+      ],
+      "answer": "dumplings"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "My grandmother said ___ dumplings were the most important food of the evening.",
+      "choices": [
+        "that",
+        "what",
+        "which"
+      ],
+      "answer": "that",
+      "audioText": "My grandmother said that dumplings were the most important food of the evening."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Emma",
+        "watched",
+        "her",
+        "old",
+        "hands",
+        "very",
+        "carefully."
+      ],
+      "audioText": "Emma watched her old hands very carefully."
+    },
+    {
+      "type": "word_builder",
+      "word": "festival",
+      "audioText": "festival"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She is an exchange student ___ studies in our city.",
+      "choices": [
+        "who",
+        "which",
+        "what"
+      ],
+      "answer": "who",
+      "audioText": "She is an exchange student who studies in our city."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Emma",
+        "laughed",
+        "too",
+        "and",
+        "tried",
+        "again."
+      ],
+      "audioText": "Emma laughed too and tried again."
+    }
+  ],
+  "_unknownWords": [
+    "winter",
+    "australian",
+    "exchange",
+    "seen",
+    "chinese",
+    "asking",
+    "rolled",
+    "wrappers",
+    "wooden",
+    "emma's",
+    "australia",
+    "soup",
+    "world",
+    "asked",
+    "recipe",
+    "talk",
+    "tradition"
+  ]
+}

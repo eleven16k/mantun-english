@@ -1,0 +1,136 @@
+{
+  "id": "xsc-r1-s17",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 17,
+  "title": "Picking Apples with Grandpa",
+  "titleCn": "和爷爷一起摘苹果",
+  "coverEmoji": "🍎",
+  "paragraphs": [
+    {
+      "text": "Grandpa has a small apple farm. There are many apple trees. The trees are tall and green.",
+      "translation": "爷爷有一个小小的苹果园。园子里有很多苹果树。树又高又绿。"
+    },
+    {
+      "text": "I visit Grandpa on Sunday. We walk to the apple trees. Grandpa carries a big basket. I carry a small basket.",
+      "translation": "星期天我去看爷爷。我们一起走向苹果树。爷爷拎着一个大篮子，我提着一个小的。"
+    },
+    {
+      "text": "The apples are red and green. Some apples are on the trees. Some apples are on the grass. A little dog runs to us. His name is Lucky.",
+      "translation": "苹果有红的，也有绿的。有的苹果长在树上，有的落到了草地上。一只小狗朝我们跑过来，它叫 Lucky。"
+    },
+    {
+      "text": "Grandpa can pick the high apples. I can pick the low apples. Lucky can catch a red apple. He likes apples very much.",
+      "translation": "爷爷能摘到高处的苹果，我能摘到低处的苹果。Lucky 还能接住掉下来的红苹果呢。它特别喜欢吃苹果。"
+    },
+    {
+      "text": "We put apples in the baskets. Mom likes red apples. Dad likes green apples. My sister likes apple juice.",
+      "translation": "我们把苹果装进篮子里。妈妈喜欢红苹果，爸爸喜欢绿苹果，我妹妹喜欢苹果汁。"
+    },
+    {
+      "text": "Grandpa makes apple pie for us. We eat pie and drink juice. I love apple day. Grandpa smiles at me.",
+      "translation": "爷爷给我们做苹果派。我们一边吃派，一边喝果汁。我太喜欢这个苹果日了。爷爷笑着看着我。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What does Grandpa make for us?",
+      "audioText": "What does Grandpa make for us?",
+      "options": [
+        {
+          "emoji": "🥧",
+          "value": "pie",
+          "text": "Pie"
+        },
+        {
+          "emoji": "🍞",
+          "value": "bread",
+          "text": "Bread"
+        },
+        {
+          "emoji": "🍚",
+          "value": "rice",
+          "text": "Rice"
+        }
+      ],
+      "answer": "pie"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Lucky like?",
+      "audioText": "What does Lucky like?",
+      "options": [
+        {
+          "emoji": "🍎",
+          "value": "apples",
+          "text": "Apples"
+        },
+        {
+          "emoji": "🥕",
+          "value": "carrots",
+          "text": "Carrots"
+        },
+        {
+          "emoji": "🍌",
+          "value": "bananas",
+          "text": "Bananas"
+        }
+      ],
+      "answer": "apples"
+    },
+    {
+      "type": "image_choice",
+      "question": "Who carries a small basket?",
+      "audioText": "Who carries a small basket?",
+      "options": [
+        {
+          "emoji": "🧒",
+          "value": "me",
+          "text": "Me"
+        },
+        {
+          "emoji": "👴",
+          "value": "grandpa",
+          "text": "Grandpa"
+        },
+        {
+          "emoji": "🐕",
+          "value": "lucky",
+          "text": "Lucky"
+        }
+      ],
+      "answer": "me"
+    },
+    {
+      "type": "word_builder",
+      "word": "basket",
+      "audioText": "basket"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Grandpa",
+        "carries",
+        "a",
+        "big",
+        "basket."
+      ],
+      "audioText": "Grandpa carries a big basket."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "He ___ apples very much.",
+      "choices": [
+        "like",
+        "likes",
+        "liking"
+      ],
+      "answer": "likes",
+      "audioText": "He likes apples very much."
+    }
+  ],
+  "_unknownWords": [
+    "pie"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "zk-r4-s02",
+  "track": "zhongkao",
+  "regionId": "zk-r4",
+  "order": 2,
+  "title": "Recycling Starts at Home",
+  "titleCn": "垃圾分类，从家做起",
+  "coverEmoji": "♻️",
+  "paragraphs": [
+    {
+      "text": "Last week our teacher showed us a short video about rubbish. Every day our city throws away a lot of paper and plastic. If we do nothing, these piles will only grow bigger. So my classmates and I decided to start a green team.",
+      "translation": "上周，老师给我们看了一段关于垃圾的短片。每天，我们的城市都会扔掉大量的纸和塑料。如果我们什么都不做，这些垃圾堆只会越来越大。于是，我和同学们决定成立一个环保小组。"
+    },
+    {
+      "text": "Sorting waste is the first easy step. We now have three boxes in our classroom. Blue is for paper, green is for food, and red is for other waste. If you put paper in the right box, it can become something new.",
+      "translation": "垃圾分类是第一步，也是最简单的一步。现在我们的教室里放了三个箱子。蓝色装纸，绿色装食物，红色装其他垃圾。如果你把纸放进正确的箱子，它就能变成新东西。"
+    },
+    {
+      "text": "At home I do the same thing with my family. My little brother used to throw everything into one bin. Now he checks the colour before he drops his rubbish in. Please give your old clothes and books to others instead of throwing them away.",
+      "translation": "在家里，我也和家人一起这样做。我弟弟以前把什么东西都扔进同一个垃圾桶里。现在他扔垃圾前会先看看颜色。请把你的旧衣服和旧书送给别人，而不要直接扔掉。"
+    },
+    {
+      "text": "Rubbish does not only stay on land. Plastic bags often end up in rivers and then in the sea. If a turtle eats a plastic bag, it will get very sick. We should use cloth bags when we go shopping. Never drop litter on the beach.",
+      "translation": "垃圾并不只留在陆地上。塑料袋常常流进河里，最后进入大海。如果一只海龟吃下塑料袋，它会病得很重。购物时我们应当使用布袋子。绝不要在海滩上乱扔垃圾。"
+    },
+    {
+      "text": "Green action is also about how we move and eat. If your school is not far away, you can walk or ride a bike. Try to eat more vegetables and less meat. Remember to turn off the lights when you leave a room.",
+      "translation": "环保行动还和我们怎样出行、怎样吃饭有关。如果学校离家不远，你可以走路或骑自行车去。试着多吃蔬菜、少吃肉。离开房间时，记得关灯。"
+    },
+    {
+      "text": "Small habits can make a big difference over time. If each of us does one green thing every day, our city will be cleaner. Let's start today, right now!",
+      "translation": "小小的习惯日积月累，就能带来很大的不同。如果我们每人每天都做一件环保小事，我们的城市会更干净。让我们从今天就开始，就从现在开始！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In their classroom, which box should paper go in?",
+      "audioText": "In their classroom, which box should paper go in?",
+      "options": [
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue box"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green box"
+        },
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red box"
+        }
+      ],
+      "answer": "blue"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "If a turtle eats a plastic bag, it will get very ___.",
+      "choices": [
+        "sick",
+        "happy",
+        "hungry"
+      ],
+      "answer": "sick",
+      "audioText": "If a turtle eats a plastic bag, it will get very sick."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Sorting",
+        "waste",
+        "is",
+        "the",
+        "first",
+        "easy",
+        "step."
+      ],
+      "audioText": "Sorting waste is the first easy step."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Remember to ___ off the lights when you leave a room.",
+      "choices": [
+        "turn",
+        "take",
+        "put"
+      ],
+      "answer": "turn",
+      "audioText": "Remember to turn off the lights when you leave a room."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Never",
+        "drop",
+        "litter",
+        "on",
+        "the",
+        "beach."
+      ],
+      "audioText": "Never drop litter on the beach."
+    },
+    {
+      "type": "word_builder",
+      "word": "rubbish",
+      "audioText": "rubbish"
+    }
+  ],
+  "_unknownWords": [
+    "piles",
+    "bigger",
+    "bin",
+    "less",
+    "meat",
+    "room",
+    "big",
+    "let's"
+  ]
+}

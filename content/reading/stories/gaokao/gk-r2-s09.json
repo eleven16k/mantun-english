@@ -1,0 +1,123 @@
+{
+  "id": "gk-r2-s09",
+  "track": "gaokao",
+  "regionId": "gk-r2",
+  "order": 9,
+  "title": "The Right to Be Forgotten",
+  "titleCn": "被遗忘的权利",
+  "coverEmoji": "🗑️",
+  "paragraphs": [
+    {
+      "text": "Every time you search for a restaurant or watch a video, a small piece of information about you is being recorded. Over the years, these details have been collected by countless companies, often without you noticing. It is hard to imagine how much of your daily life now exists as data on someone else's computer.",
+      "translation": "每次你搜索一家餐厅或观看一个视频，关于你的一条小信息正被记录下来。多年来，这些细节一直被无数公司收集，而你常常毫无察觉。很难想象，你的日常生活有多少如今已作为数据存在于别人的电脑里。"
+    },
+    {
+      "text": "This is why the idea of “the right to be forgotten” has been discussed so widely. In simple terms, it means that people should be able to ask a company to remove personal information about them. Whether such a request should be granted, however, is not always clear. A hospital may need your records to protect your health, while a news website may argue that the public has a right to know. The law is still being written.",
+      "translation": "这就是“被遗忘权”这一理念被如此广泛讨论的原因。简单来说，它意味着人们应该能够要求公司删除关于自己的个人信息。然而，这样的请求是否应该被批准，并不总是清楚的。医院可能需要你的记录来保护你的健康，而新闻网站则可能主张公众有权知情。这条法律仍在书写之中。"
+    },
+    {
+      "text": "Supporters say the right protects people from being judged forever by a single mistake. A photo posted at seventeen, they argue, should not decide what a person can do at thirty. When old information is searched by employers or strangers, it may cause harm that was never intended. It is unfair that a careless moment can follow someone for a lifetime.",
+      "translation": "支持者说，这项权利保护人们不会因一次错误而被永远评判。他们主张，十七岁时发布的一张照片，不应该决定一个人三十岁能做什么。当旧信息被雇主或陌生人搜索到时，它可能造成本无意造成的伤害。一个粗心的瞬间能跟随一个人一辈子，这是不公平的。"
+    },
+    {
+      "text": "Critics, however, warn that the right could be used to hide serious facts. If records are quietly removed, journalists may find it harder to report the truth, and the public may lose what it needs to hold power accountable. Besides, once information has been copied and shared, it is almost impossible to pull it back.",
+      "translation": "然而，批评者警告说，这项权利可能被用来隐藏严重的事实。如果记录被悄悄删除，记者可能会发现更难报道真相，公众也可能失去监督权力所需的东西。此外，一旦信息被复制和分享，几乎不可能把它收回来。"
+    },
+    {
+      "text": "Perhaps the real question is not whether we can delete data, but who should decide. A balanced rule is being tested in several countries: personal details may be removed unless there is a strong public reason to keep them. What matters most is that ordinary users are given a voice in a system that was built, in many ways, without them.",
+      "translation": "也许真正的问题不是我们能否删除数据，而是谁应该来决定。一种平衡的规则正在几个国家被试行：个人细节可以被删除，除非有强烈的公共理由保留它们。最重要的是，普通用户在一个很大程度上并非由他们参与建立的系统中被赋予了发言权。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "According to the passage, which symbol best stands for the right being discussed?",
+      "audioText": "According to the passage, which symbol best stands for the right being discussed?",
+      "options": [
+        {
+          "emoji": "🗑️",
+          "value": "delete",
+          "text": "Delete"
+        },
+        {
+          "emoji": "🔒",
+          "value": "lock",
+          "text": "Lock"
+        },
+        {
+          "emoji": "📢",
+          "value": "announce",
+          "text": "Announce"
+        }
+      ],
+      "answer": "delete"
+    },
+    {
+      "type": "word_builder",
+      "word": "records",
+      "audioText": "records"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "law",
+        "is",
+        "still",
+        "being",
+        "written."
+      ],
+      "audioText": "The law is still being written."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "is",
+        "almost",
+        "impossible",
+        "to",
+        "pull",
+        "it",
+        "back."
+      ],
+      "audioText": "It is almost impossible to pull it back."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Over the years, these details have been ___ by countless companies, often without you noticing.",
+      "choices": [
+        "collected",
+        "removed",
+        "judged"
+      ],
+      "answer": "collected",
+      "audioText": "Over the years, these details have been collected by countless companies, often without you noticing."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Personal details may be ___ unless there is a strong public reason to keep them.",
+      "choices": [
+        "removed",
+        "copied",
+        "searched"
+      ],
+      "answer": "removed",
+      "audioText": "Personal details may be removed unless there is a strong public reason to keep them."
+    }
+  ],
+  "_unknownWords": [
+    "details",
+    "countless",
+    "else's",
+    "forgotten",
+    "granted",
+    "written",
+    "supporters",
+    "forever",
+    "employers",
+    "harm",
+    "accountable",
+    "given"
+  ]
+}

@@ -287,7 +287,7 @@ describe("⚡ 闪电快答 speed multiplier", () => {
     // 强制按"复习词"计分（基础 10 分）→ ≥7.5s ×3 = 30
     const day = Date.now();
     useGameStore.setState({
-      cardStates: { [q.wordId]: { id: q.wordId, intervalIndex: 2, consecutiveWrong: 0, consecutiveCorrect: 0, mastered: false, nextReviewAt: day, lastReviewedAt: day } },
+      cardStates: { [q.wordId]: { wordId: q.wordId, intervalIndex: 2, consecutiveWrong: 0, consecutiveCorrect: 0, mastered: false, nextReviewAt: day, lastReviewedAt: day } },
     });
     useGameStore.getState().answerQuestion(q.correctIndex, { lightningLeftSec: 9 });
     const s1 = useGameStore.getState();
@@ -301,7 +301,7 @@ describe("⚡ 闪电快答 speed multiplier", () => {
     // 强制按"复习词"计分（基础 10 分），消除新词难度差异
     const day = Date.now();
     useGameStore.setState({
-      cardStates: { [q.wordId]: { id: q.wordId, intervalIndex: 2, consecutiveWrong: 0, consecutiveCorrect: 0, mastered: false, nextReviewAt: day, lastReviewedAt: day } },
+      cardStates: { [q.wordId]: { wordId: q.wordId, intervalIndex: 2, consecutiveWrong: 0, consecutiveCorrect: 0, mastered: false, nextReviewAt: day, lastReviewedAt: day } },
     });
     useGameStore.getState().answerQuestion(q.correctIndex, { lightningLeftSec: 1 });
     const s1 = useGameStore.getState();
@@ -411,5 +411,63 @@ describe("👹 弱点 Boss 战", () => {
     useGameStore.getState().answerQuestion(q.correctIndex);
     // 基础金币 5-10，无掉落随机加成 —— 不出错即视为确定性
     expect(useGameStore.getState().lastDrop).toBe(0);
+  });
+});
+
+describe("🚀 提分加速（boost ×2 语义）", () => {
+  it("boost 生效期间答对：SP ×2（新词 30 → 60）", () => {
+    startWithVocab();
+    useGameStore.setState({ scoreBoostsOwned: 1, scoreBoostActive: true, scoreBoostCount: 0 });
+    const before = useGameStore.getState().scorePoints;
+    const q = useGameStore.getState().questions[0];
+    useGameStore.getState().answerQuestion(q.correctIndex);
+    const s = useGameStore.getState();
+    // 新词基础 30，boost ×2 → 60；sessionSPEarned 同步 ×2
+    expect(s.scorePoints - before).toBe(60);
+  });
+
+  it("boost 10 题后自动失效（恢复基础 SP）", () => {
+    startWithVocab();
+    const total = useGameStore.getState().questions.length;
+    useGameStore.setState({ scoreBoostsOwned: 1, scoreBoostActive: true, scoreBoostCount: 7 });
+    const q = useGameStore.getState().questions;
+    // 连答到跨过 10 题边界
+    const idx = 0;
+    while (useGameStore.getState().scoreBoostActive && idx + useGameStore.getState().currentQIndex < total) {
+      const cur = useGameStore.getState().questions[useGameStore.getState().currentQIndex];
+      useGameStore.getState().answerQuestion(cur.correctIndex);
+      useGameStore.getState().nextQuestion();
+      if (useGameStore.getState().currentQIndex >= useGameStore.getState().questions.length) break;
+    }
+    expect(useGameStore.getState().scoreBoostActive).toBe(false);
+  });
+});
+
+describe("❄️ 连胜冻结（自动消耗语义）", () => {
+  it("隔天未学：有冻结 → streak 续上并消耗一个冻结", () => {
+    useGameStore.setState({
+      streak: 5,
+      lastStudyDate: new Date(Date.now() - 2 * 86400000).toISOString().slice(0, 10), // 前天（断签）
+      streakFreezesOwned: 2,
+    });
+    startWithVocab();
+    const q = useGameStore.getState().questions[0];
+    useGameStore.getState().answerQuestion(q.correctIndex);
+    const s = useGameStore.getState();
+    expect(s.streak).toBe(6); // 冻结续上
+    expect(s.streakFreezesOwned).toBe(1); // 消耗一个
+  });
+
+  it("隔天未学：无冻结 → streak 归 1 重新开始", () => {
+    useGameStore.setState({
+      streak: 5,
+      lastStudyDate: new Date(Date.now() - 2 * 86400000).toISOString().slice(0, 10),
+      streakFreezesOwned: 0,
+    });
+    startWithVocab();
+    const q = useGameStore.getState().questions[0];
+    useGameStore.getState().answerQuestion(q.correctIndex);
+    expect(useGameStore.getState().streak).toBe(1);
+    expect(useGameStore.getState().streakFreezesOwned).toBe(0);
   });
 });

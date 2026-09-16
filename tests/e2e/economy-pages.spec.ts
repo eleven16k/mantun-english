@@ -25,16 +25,6 @@ test.describe("/vocab", () => {
   });
 });
 
-test.describe("/add", () => {
-  test("saves a card into My cards", async ({ page }) => {
-    await page.goto("/add");
-    await page.getByPlaceholder(/front|正面/i).fill("serendipity");
-    await page.getByPlaceholder(/back|背面/i).fill("意外发现的乐趣");
-    await page.getByRole("button", { name: /save|保存/i }).click();
-    await expect(page).toHaveURL(/decks/, { timeout: 8000 });
-  });
-});
-
 test.describe("/shop", () => {
   test("shows coin balance and powerup grid", async ({ page }) => {
     await page.goto("/shop");

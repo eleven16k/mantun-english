@@ -1,0 +1,120 @@
+{
+  "id": "xsc-r2-s05",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 5,
+  "title": "Rabbit's New Kite",
+  "titleCn": "兔子的新风筝",
+  "coverEmoji": "🪁",
+  "paragraphs": [
+    {
+      "text": "It is a sunny day in Animal Village. The wind is blowing. Little Rabbit is flying a new kite.",
+      "translation": "动物村里阳光明媚。风轻轻地吹着。小兔子正在放一只新风筝。"
+    },
+    {
+      "text": "Look! The kite is going up. It is flying over the trees. Rabbit is running and laughing.",
+      "translation": "看！风筝正往上升。它飞过了一棵棵树。兔子一边跑一边笑。"
+    },
+    {
+      "text": "Oh no! The kite is stuck in a big tree. Rabbit is sad. She cannot get it down.",
+      "translation": "哎呀！风筝卡在一棵大树上。兔子很难过。她自己拿不下来。"
+    },
+    {
+      "text": "\"I can help you,\" says Monkey. He likes climbing trees. He is climbing up now.",
+      "translation": "“我来帮你吧，”猴子说。他喜欢爬树。现在他正往上爬呢。"
+    },
+    {
+      "text": "Monkey gets the kite. He gives it to Rabbit. \"Thank you, Monkey!\" says Rabbit.",
+      "translation": "猴子拿到了风筝。他把风筝递给兔子。“谢谢你，猴子！”兔子说。"
+    },
+    {
+      "text": "Now they are playing together. The kite is flying high again. Friends help friends.",
+      "translation": "现在他们一起玩了起来。风筝又飞得高高的了。朋友就是要互相帮助。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is Little Rabbit flying?",
+      "audioText": "What is Little Rabbit flying?",
+      "options": [
+        {
+          "emoji": "🪁",
+          "value": "kite",
+          "text": "A kite"
+        },
+        {
+          "emoji": "⚽",
+          "value": "ball",
+          "text": "A ball"
+        },
+        {
+          "emoji": "🎈",
+          "value": "balloon",
+          "text": "A balloon"
+        }
+      ],
+      "answer": "kite"
+    },
+    {
+      "type": "image_choice",
+      "question": "Who helps Rabbit get the kite?",
+      "audioText": "Who helps Rabbit get the kite?",
+      "options": [
+        {
+          "emoji": "🐵",
+          "value": "monkey",
+          "text": "Monkey"
+        },
+        {
+          "emoji": "🐻",
+          "value": "bear",
+          "text": "Bear"
+        },
+        {
+          "emoji": "🐶",
+          "value": "dog",
+          "text": "Dog"
+        }
+      ],
+      "answer": "monkey"
+    },
+    {
+      "type": "word_builder",
+      "word": "climbing",
+      "audioText": "climbing"
+    },
+    {
+      "type": "word_builder",
+      "word": "kite",
+      "audioText": "kite"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "is",
+        "flying",
+        "over",
+        "the",
+        "trees."
+      ],
+      "audioText": "It is flying over the trees."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Rabbit is ___ and laughing.",
+      "choices": [
+        "running",
+        "sleeping",
+        "singing"
+      ],
+      "answer": "running",
+      "audioText": "Rabbit is running and laughing."
+    }
+  ],
+  "_unknownWords": [
+    "stuck",
+    "cannot"
+  ]
+}

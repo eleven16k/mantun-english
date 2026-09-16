@@ -1,0 +1,130 @@
+{
+  "id": "xsc-r1-s08",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 8,
+  "title": "A Bird in Our Apple Tree",
+  "titleCn": "苹果树上的小鸟",
+  "coverEmoji": "🐦",
+  "paragraphs": [
+    {
+      "text": "Look at our apple tree. It is big and green. There are many red apples.",
+      "translation": "看看我们的苹果树吧。它又大又绿，上面结了许多红苹果。"
+    },
+    {
+      "text": "A little bird comes here. It sits in the tree. It likes the red apples.",
+      "translation": "一只小鸟飞来了。它停在树上。它很喜欢这些红苹果。"
+    },
+    {
+      "text": "My sister Amy sees the bird. She has a toy bird too. It is blue and small.",
+      "translation": "我的妹妹艾米看见了这只小鸟。她也有一个玩具小鸟。它是蓝色的，小小的。"
+    },
+    {
+      "text": "The bird sings in the tree. Amy sings with the bird. They are happy.",
+      "translation": "小鸟在树上唱歌。艾米跟着小鸟一起唱。她们都很开心。"
+    },
+    {
+      "text": "My father picks three apples. He gives one to Amy. He gives one to me. The apples are sweet and red.",
+      "translation": "爸爸摘了三个苹果。他给艾米一个，给我一个。苹果又甜又红。"
+    },
+    {
+      "text": "The bird can fly home now. We say goodbye to it. Come again, little bird!",
+      "translation": "小鸟现在可以飞回家啦。我们跟它说再见。再来呀，小鸟！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What colour are the apples on the tree?",
+      "audioText": "What colour are the apples on the tree?",
+      "options": [
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "🟢",
+          "value": "green",
+          "text": "Green"
+        },
+        {
+          "emoji": "🟡",
+          "value": "yellow",
+          "text": "Yellow"
+        }
+      ],
+      "answer": "red"
+    },
+    {
+      "type": "image_choice",
+      "question": "How many apples does Father pick?",
+      "audioText": "How many apples does Father pick?",
+      "options": [
+        {
+          "emoji": "1️⃣",
+          "value": "one",
+          "text": "One"
+        },
+        {
+          "emoji": "2️⃣",
+          "value": "two",
+          "text": "Two"
+        },
+        {
+          "emoji": "3️⃣",
+          "value": "three",
+          "text": "Three"
+        }
+      ],
+      "answer": "three"
+    },
+    {
+      "type": "image_choice",
+      "question": "What colour is Amy's toy bird?",
+      "audioText": "What colour is Amy's toy bird?",
+      "options": [
+        {
+          "emoji": "🔵",
+          "value": "blue",
+          "text": "Blue"
+        },
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        },
+        {
+          "emoji": "⚫",
+          "value": "black",
+          "text": "Black"
+        }
+      ],
+      "answer": "blue"
+    },
+    {
+      "type": "word_builder",
+      "word": "apples",
+      "audioText": "apples"
+    },
+    {
+      "type": "word_builder",
+      "word": "green",
+      "audioText": "green"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Amy",
+        "sings",
+        "with",
+        "the",
+        "bird"
+      ],
+      "audioText": "Amy sings with the bird."
+    }
+  ],
+  "_unknownWords": [
+    "amy"
+  ]
+}

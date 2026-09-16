@@ -1,0 +1,114 @@
+{
+  "id": "gk-r5-s09",
+  "track": "gaokao",
+  "regionId": "gk-r5",
+  "order": 9,
+  "title": "My Grandmother's Second Graduation",
+  "titleCn": "祖母的第二次毕业典礼",
+  "coverEmoji": "🎓",
+  "paragraphs": [
+    {
+      "text": "My grandmother retired from her job as a librarian when she was sixty-two years old. Everyone in our family expected her to spend her days gardening, an assumption which she politely but firmly refused to accept. Instead, she announced that she had applied to a university course in history, the subject to which she had devoted forty years of quiet reading. None of us knew how to respond, my mother staring at the admission letter in complete disbelief.",
+      "translation": "我祖母六十二岁那年从图书馆管理员的工作岗位上退休了。家里人都以为她会种花、看电视来打发日子，而这个设想被她礼貌却坚决地拒绝了。相反，她宣布自己已经申请了一门大学历史课程，那是她默默读了四十年书的领域。我们谁也不知道该如何回应，母亲盯着那封录取通知书，满脸难以置信。"
+    },
+    {
+      "text": "The first term turned out to be harder than she had imagined, partly because her classmates were young enough to be her grandchildren. She sat in the front row of a lecture hall in which two hundred teenagers tapped at their laptops. What surprised her most, however, was not the technology but the speed at which ideas were presented. Having spent years reading slowly and deeply, she found it difficult to follow lectures that moved like fast trains. She therefore recorded every class and listened to the recordings twice before each seminar.",
+      "translation": "第一个学期比她想象的艰难，部分原因是同学们的年纪小到可以当她的孙辈。她坐在阶梯教室的第一排，那里有两百名青少年敲着笔记本电脑。不过，最让她吃惊的并不是技术，而是观点被抛出的速度。由于多年来读书又慢又深，她发现很难跟上像快车一样飞驰的课堂节奏。于是她把每一堂课都录下来，每次研讨课前都要把录音听上两遍。"
+    },
+    {
+      "text": "By the end of the first year, something had shifted in the way her younger classmates saw her. They began asking her about the wars and the writers whom she had studied for decades. One student, whose own grandmother had dreamed of going to university, thanked her for proving that curiosity has no expiry date. She had become a bridge between two generations.",
+      "translation": "第一学年结束时，年轻的同学们看待她的方式已经悄悄改变了。他们开始向她请教战争和作家的问题——那些人她研究了几十年。一名学生说，自己的祖母也曾梦想上大学，感谢她证明了好奇心没有保质期。她已经成了一座连接两代人的桥。"
+    },
+    {
+      "text": "When I visited her during the summer holiday, I found her writing an essay about lifelong learning. Her desk was covered with books, several of them borrowed from the library where she had once worked. \"Learning,\" she told me, \"is not a stage of life but a habit which you can carry into old age.\" I realized then that education had never been about certificates for her; it was about staying awake to the world.",
+      "translation": "暑假我去看她时，发现她正在写一篇关于终身学习的文章。桌上堆满了书，其中好几本是从她曾经工作过的图书馆借来的。“学习，”她对我说，“不是人生的某个阶段，而是一种可以一直带到老年的习惯。”我那时才明白，对她来说，教育从来不是为了证书，而是为了对世界始终保持清醒与热忱。"
+    },
+    {
+      "text": "She graduated three years later, at sixty-five, with a degree in history and a smile that filled the whole hall. My mother, who had once doubted the whole idea, cried louder than anyone else in the audience. Since then, whenever I feel too old to learn something new, I remember the woman to whom I owe my love of reading. Her second graduation taught me a lesson that no classroom had ever taught me: it is never too late to begin.",
+      "translation": "三年后，她六十五岁毕业，拿到了历史学位，笑容照亮了整个礼堂。曾经怀疑这个想法的母亲，哭声比台下任何人都大。从那以后，每当我觉得自己太老、学不动新东西时，我就会想起那位让我爱上阅读的女性。她的第二次毕业给我上了一堂任何课堂都没能教给我的课：开始，永远不嫌晚。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "She sat in the front row of a lecture hall in ___ two hundred teenagers tapped at their laptops.",
+      "choices": [
+        "which",
+        "that",
+        "where"
+      ],
+      "answer": "which",
+      "audioText": "She sat in the front row of a lecture hall in which two hundred teenagers tapped at their laptops."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Whenever I feel too old to learn something new, I remember the woman to ___ I owe my love of reading.",
+      "choices": [
+        "whom",
+        "who",
+        "which"
+      ],
+      "answer": "whom",
+      "audioText": "Whenever I feel too old to learn something new, I remember the woman to whom I owe my love of reading."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "What surprised her most was not the technology but the ___ at which ideas were presented.",
+      "choices": [
+        "speed",
+        "silence",
+        "size"
+      ],
+      "answer": "speed",
+      "audioText": "What surprised her most was not the technology but the speed at which ideas were presented."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "She",
+        "had",
+        "become",
+        "a",
+        "bridge",
+        "between",
+        "two",
+        "generations."
+      ],
+      "audioText": "She had become a bridge between two generations."
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "It",
+        "is",
+        "never",
+        "too",
+        "late",
+        "to",
+        "begin."
+      ],
+      "audioText": "It is never too late to begin."
+    },
+    {
+      "type": "word_builder",
+      "word": "curiosity",
+      "audioText": "curiosity"
+    }
+  ],
+  "_unknownWords": [
+    "applied",
+    "respond",
+    "disbelief",
+    "grandchildren",
+    "tapped",
+    "recordings",
+    "seminar",
+    "shifted",
+    "curiosity",
+    "expiry",
+    "generations",
+    "lifelong",
+    "owe",
+    "graduation"
+  ]
+}

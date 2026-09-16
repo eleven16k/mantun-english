@@ -1,0 +1,119 @@
+{
+  "id": "zk-r2-s14",
+  "track": "zhongkao",
+  "regionId": "zk-r2",
+  "order": 14,
+  "title": "Two Days on Gulangyu Island",
+  "titleCn": "鼓浪屿的两天",
+  "coverEmoji": "🏝️",
+  "paragraphs": [
+    {
+      "text": "Last summer, my family took a short trip to Xiamen. Before we left home, my father told me about a small island called Gulangyu. He said it was quieter and prettier than the busy city centre. I could not wait to see it.",
+      "translation": "去年夏天，我们全家去厦门做了一次短途旅行。出发前，爸爸跟我讲了一个叫鼓浪屿的小岛。他说那里比热闹的市中心更安静、更漂亮。我迫不及待地想去看看。"
+    },
+    {
+      "text": "We took a ferry from the main island early in the morning. While the boat moved, I watched the tall buildings become smaller and smaller. After about ten minutes, we arrived at the island. There were no cars or buses, only small electric carts and people walking.",
+      "translation": "一大早，我们从本岛坐渡轮出发。船开动的时候，我看着那些高楼一点点变小。大约十分钟后，我们到了岛上。岛上没有汽车，也没有公交车，只有小小的电瓶车和步行的游人。"
+    },
+    {
+      "text": "Our hotel was an old white house near the sea. When we opened the window, we could hear the waves. The streets were narrow and clean, and the air smelled of flowers. My mother said it was the loveliest place in the city.",
+      "translation": "我们住的旅馆是海边一栋白色的老房子。打开窗，就能听见海浪的声音。街道又窄又干净，空气里还飘着花香。妈妈说，这是全城最美的地方。"
+    },
+    {
+      "text": "After lunch, we climbed a small hill in the middle of the island. From the top, the sea looked bluer than the sky. We also visited an old piano museum near the beach. Gulangyu is famous for music, and many musicians were born there. While we walked through the quiet rooms, soft piano music played.",
+      "translation": "午饭后，我们爬上岛中央的一座小山。从山顶望去，大海比天空还要蓝。我们还去了海滩边一座古老的钢琴博物馆。鼓浪屿以音乐闻名，许多音乐家都出生在这里。我们走过安静的房间时，轻柔的钢琴声一直在响。"
+    },
+    {
+      "text": "In the evening, we sat by the sea and ate fresh seafood. The sun went down slowly, and the city lights began to shine. Before we went back, I bought a small shell for my best friend.",
+      "translation": "傍晚，我们坐在海边吃新鲜的海鲜。太阳慢慢落下，城市的灯火渐渐亮起来。回去之前，我给最好的朋友买了一个小贝壳。"
+    },
+    {
+      "text": "The next morning, we left the island on the first ferry. When I looked back, Gulangyu seemed even smaller and greener. It was only two days, but it was the best weekend of my summer.",
+      "translation": "第二天早上，我们坐第一班渡轮离开了小岛。回头望去，鼓浪屿显得更小、更绿了。虽然只有两天，但这是我这个夏天最棒的周末。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "In the story, what could the writer hear when the window was open?",
+      "audioText": "In the story, what could the writer hear when the window was open?",
+      "options": [
+        {
+          "emoji": "🌊",
+          "value": "waves",
+          "text": "The waves"
+        },
+        {
+          "emoji": "🚗",
+          "value": "cars",
+          "text": "Cars"
+        },
+        {
+          "emoji": "🔔",
+          "value": "bells",
+          "text": "Bells"
+        }
+      ],
+      "answer": "waves"
+    },
+    {
+      "type": "word_builder",
+      "word": "ferry",
+      "audioText": "ferry"
+    },
+    {
+      "type": "word_builder",
+      "word": "island",
+      "audioText": "island"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "sea",
+        "looked",
+        "bluer",
+        "than",
+        "the",
+        "sky."
+      ],
+      "audioText": "The sea looked bluer than the sky."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "There were no ___ or buses, only small electric carts and people walking.",
+      "choices": [
+        "cars",
+        "boats",
+        "trains"
+      ],
+      "answer": "cars",
+      "audioText": "There were no cars or buses, only small electric carts and people walking."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "While the boat moved, I watched the tall buildings become smaller and ___.",
+      "choices": [
+        "smaller",
+        "bigger",
+        "taller"
+      ],
+      "answer": "smaller",
+      "audioText": "While the boat moved, I watched the tall buildings become smaller and smaller."
+    }
+  ],
+  "_unknownWords": [
+    "xiamen",
+    "gulangyu",
+    "prettier",
+    "busy",
+    "waves",
+    "narrow",
+    "loveliest",
+    "bluer",
+    "musicians",
+    "rooms",
+    "seafood",
+    "shell"
+  ]
+}

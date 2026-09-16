@@ -1,0 +1,122 @@
+{
+  "id": "xsc-r2-s09",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r2",
+  "order": 9,
+  "title": "Our New Bridge",
+  "titleCn": "我们的新桥",
+  "coverEmoji": "🌉",
+  "paragraphs": [
+    {
+      "text": "It is raining hard in Animal Village. The river is running very fast. The old bridge is falling down.",
+      "translation": "动物村里正下着大雨。河水飞快地流淌着。那座老桥正在塌下来。"
+    },
+    {
+      "text": "Rabbit is standing by the water. \"We cannot cross the river now,\" she says. Duck is swimming and laughing. \"I can swim over to you!\"",
+      "translation": "兔子站在水边。“我们现在过不了河了，”她说。鸭子一边游一边笑。“我可以游过去到你那边！”"
+    },
+    {
+      "text": "Bear is carrying big stones. Fox is bringing a long, strong board. Rabbit is looking for some ropes. They are building a new bridge together.",
+      "translation": "熊在搬大石头。狐狸带来了一块又长又结实的木板。兔子在找一些绳子。他们正在一起造一座新桥。"
+    },
+    {
+      "text": "Everyone is working and singing. Rabbit is holding the board. Duck is putting stones in the water. Bear is pushing a heavy log.",
+      "translation": "大家都在一边干活一边唱歌。兔子扶着木板。鸭子把石头放进水里。熊推着一根很重的木头。"
+    },
+    {
+      "text": "In the afternoon, the new bridge is ready. All the animals are standing on it. \"Thank you, my good friends!\" says Rabbit. \"We like helping each other.\"",
+      "translation": "到了下午，新桥造好了。所有的动物都站在桥上。“谢谢你们，我的好朋友们！”兔子说。“我们喜欢互相帮助。”"
+    },
+    {
+      "text": "Now they can cross the river again. They are dancing and eating cakes. What a happy day for everyone!",
+      "translation": "现在他们又能过河了。他们一边跳舞一边吃蛋糕。对大家来说，这是多么快乐的一天啊！"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What is the weather like in Animal Village?",
+      "audioText": "What is the weather like in Animal Village?",
+      "options": [
+        {
+          "emoji": "🌧️",
+          "value": "rainy",
+          "text": "Rainy"
+        },
+        {
+          "emoji": "☀️",
+          "value": "sunny",
+          "text": "Sunny"
+        },
+        {
+          "emoji": "❄️",
+          "value": "snowy",
+          "text": "Snowy"
+        }
+      ],
+      "answer": "rainy"
+    },
+    {
+      "type": "image_choice",
+      "question": "What are the animals building?",
+      "audioText": "What are the animals building?",
+      "options": [
+        {
+          "emoji": "🌉",
+          "value": "bridge",
+          "text": "A bridge"
+        },
+        {
+          "emoji": "🏠",
+          "value": "house",
+          "text": "A house"
+        },
+        {
+          "emoji": "🪁",
+          "value": "kite",
+          "text": "A kite"
+        }
+      ],
+      "answer": "bridge"
+    },
+    {
+      "type": "word_builder",
+      "word": "bridge",
+      "audioText": "bridge"
+    },
+    {
+      "type": "word_builder",
+      "word": "river",
+      "audioText": "river"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "They",
+        "are",
+        "building",
+        "a",
+        "new",
+        "bridge",
+        "together"
+      ],
+      "audioText": "They are building a new bridge together."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "Bear is ___ a heavy log.",
+      "choices": [
+        "pushing",
+        "eating",
+        "reading"
+      ],
+      "answer": "pushing",
+      "audioText": "Bear is pushing a heavy log."
+    }
+  ],
+  "_unknownWords": [
+    "cannot",
+    "putting",
+    "log"
+  ]
+}

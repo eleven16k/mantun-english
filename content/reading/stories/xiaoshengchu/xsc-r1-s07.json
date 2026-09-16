@@ -1,0 +1,137 @@
+{
+  "id": "xsc-r1-s07",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r1",
+  "order": 7,
+  "title": "A Bird in the Apple Tree",
+  "titleCn": "苹果树上的小鸟",
+  "coverEmoji": "🍎",
+  "paragraphs": [
+    {
+      "text": "We have a small apple farm. There are many apple trees. The trees are tall and green.",
+      "translation": "我们有一个小小的苹果园。那里有很多苹果树，树又高又绿。"
+    },
+    {
+      "text": "Look at the little bird. It sits in the apple tree. The bird is brown and small. It can sing nice songs.",
+      "translation": "看那只小鸟。它待在苹果树上。这只鸟是棕色的，个子小小，还会唱好听的歌。"
+    },
+    {
+      "text": "My dog runs to the tree. His name is Lucky. Lucky is white and black. He can run very fast.",
+      "translation": "我的狗跑到树边。它叫 Lucky。Lucky 是黑白相间的，跑得特别快。"
+    },
+    {
+      "text": "The bird likes red apples. It sits on a big apple. Lucky looks at the bird.",
+      "translation": "这只鸟喜欢红苹果，它坐在一个大苹果上。Lucky 就盯着它看。"
+    },
+    {
+      "text": "I have six red apples. My sister has two green apples. We are happy in the orchard.",
+      "translation": "我摘了六个红苹果，妹妹有两个青苹果。我们在果园里可开心了。"
+    },
+    {
+      "text": "Mom makes apple juice for us. The juice is sweet and cold. We love our apple farm.",
+      "translation": "妈妈给我们做苹果汁，果汁又甜又凉。我们都很爱我们的苹果园。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What color is the bird?",
+      "audioText": "What color is the bird?",
+      "options": [
+        {
+          "emoji": "🟤",
+          "value": "brown",
+          "text": "Brown"
+        },
+        {
+          "emoji": "⚪",
+          "value": "white",
+          "text": "White"
+        },
+        {
+          "emoji": "🔴",
+          "value": "red",
+          "text": "Red"
+        }
+      ],
+      "answer": "brown"
+    },
+    {
+      "type": "image_choice",
+      "question": "How many red apples do I have?",
+      "audioText": "How many red apples do I have?",
+      "options": [
+        {
+          "emoji": "6️⃣",
+          "value": "six",
+          "text": "Six"
+        },
+        {
+          "emoji": "2️⃣",
+          "value": "two",
+          "text": "Two"
+        },
+        {
+          "emoji": "3️⃣",
+          "value": "three",
+          "text": "Three"
+        }
+      ],
+      "answer": "six"
+    },
+    {
+      "type": "image_choice",
+      "question": "What does Mom make for us?",
+      "audioText": "What does Mom make for us?",
+      "options": [
+        {
+          "emoji": "🧃",
+          "value": "juice",
+          "text": "Juice"
+        },
+        {
+          "emoji": "🍰",
+          "value": "cake",
+          "text": "Cake"
+        },
+        {
+          "emoji": "🥛",
+          "value": "milk",
+          "text": "Milk"
+        }
+      ],
+      "answer": "juice"
+    },
+    {
+      "type": "word_builder",
+      "word": "green",
+      "audioText": "green"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "The",
+        "bird",
+        "is",
+        "brown",
+        "and",
+        "small."
+      ],
+      "audioText": "The bird is brown and small."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "My sister has ___ green apples.",
+      "choices": [
+        "two",
+        "six",
+        "ten"
+      ],
+      "answer": "two",
+      "audioText": "My sister has two green apples."
+    }
+  ],
+  "_unknownWords": [
+    "orchard"
+  ]
+}

@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import QuizScreen from "@/components/QuizScreen";
 import { useGameStore } from "@/lib/store";
+import { useI18n } from "@/lib/i18n";
+import { generateDailyPlan, questionsFromPlan } from "@/lib/plan";
 import { clampQuestionText, QUESTION_LENGTH_LIMITS } from "@/lib/deeptutor";
 import type { Question } from "@/lib/types";
 
@@ -10,8 +12,13 @@ import type { Question } from "@/lib/types";
  * Quiz page — SSR-safe loading gate.
  * Server and client both render the spinner initially (no hydration mismatch),
  * then on mount we check for ?src=import and load AI questions.
+ *
+ * 直进自愈（Gizmo 式「永远可用的起点」）：/quiz 自身不产题，题目由今日计划/
+ * 卡组/导入注入。若以上都没有（如侧边栏「学习」CTA 直进），自动生成今日计划
+ * ——CTA 永远不会落到「暂无题目」死胡同；空态仅作生成失败兜底。
  */
 export default function QuizPage() {
+  const { t } = useI18n();
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -48,7 +55,16 @@ export default function QuizPage() {
         }
       } catch { /* fall through */ }
     }
+    // 直进无题 → 自动生成今日计划（与仪表盘「开始今日计划」同源）
+    if (useGameStore.getState().questions.length === 0) {
+      try {
+        const plan = generateDailyPlan();
+        const qs = plan.totalQuestions > 0 ? questionsFromPlan(plan) : [];
+        if (qs.length) useGameStore.getState().loadImportedQuiz(qs, t("dash.todayPlan"));
+      } catch { /* 暂无题目兜底 */ }
+    }
     setReady(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!ready) {

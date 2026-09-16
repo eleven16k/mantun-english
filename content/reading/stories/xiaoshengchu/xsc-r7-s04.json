@@ -1,0 +1,113 @@
+{
+  "id": "xsc-r7-s04",
+  "track": "xiaoshengchu",
+  "regionId": "xsc-r7",
+  "order": 4,
+  "title": "The Smallest Door",
+  "titleCn": "最小的那扇门",
+  "coverEmoji": "🏰",
+  "paragraphs": [
+    {
+      "text": "Lily lived near an old castle. Every day, she walked past its high stone walls. She always wanted to go inside. One morning, the big gate was open. \"I can look inside for a minute,\" she said.",
+      "translation": "莉莉住在一座古老城堡的附近。每天，她都会走过城堡高高的石墙。她一直想进去看看。一天早上，城堡的大门开着。“我可以进去看一分钟。”她说。"
+    },
+    {
+      "text": "The castle was bigger and darker than she thought. Its rooms were bigger than her school. The tower was the tallest place in the town. Lily climbed the stairs very slowly. When she listened, she could hear a soft sound.",
+      "translation": "城堡比她想象的更大、更暗。里面的房间比她的学校还大。那座塔楼是镇上最高的地方。莉莉慢慢地爬上楼梯。当她侧耳倾听时，她能听见一个轻轻的声音。"
+    },
+    {
+      "text": "On the top floor, she found a small door. It was the smallest door in the castle. A little blue bird sat on the door. \"You must be brave,\" the bird said. \"Please open the door and help me.\"",
+      "translation": "在顶层，她发现了一扇小门。那是城堡里最小的门。一只蓝色的小鸟停在门上。“你必须勇敢。”小鸟说，“请打开门，帮帮我。”"
+    },
+    {
+      "text": "While Lily pushed the door, the wind blew hard. When the door opened, she saw a magic garden. Golden flowers grew there, and the air was warm. The bird could not fly. \"My wing is broken,\" it said sadly.",
+      "translation": "莉莉推门的时候，风呼呼地刮着。门一打开，她看见了一个魔法花园。那里长着金色的花，空气暖暖的。小鸟飞不起来。“我的翅膀断了。”它难过地说。"
+    },
+    {
+      "text": "Lily took the bird in her hands. She carried it down the stairs carefully. While she walked, the bird sang a soft song. When they got outside, the bird's wing was better. The magic of the castle helped it.",
+      "translation": "莉莉把小鸟捧在手里。她小心地抱着它走下楼梯。她走着的时候，小鸟唱起了一首轻柔的歌。当他们走到外面时，小鸟的翅膀好了。是城堡的魔法帮了它。"
+    },
+    {
+      "text": "The bird flew up into the blue sky. \"Thank you, brave girl,\" it said. \"You can visit the castle again.\" Lily smiled and waved goodbye. She was the bravest girl in the town.",
+      "translation": "小鸟飞上了蓝天。“谢谢你，勇敢的女孩。”它说，“你可以再来城堡玩。”莉莉笑着挥手告别。她是镇上最勇敢的女孩。"
+    }
+  ],
+  "quiz": [
+    {
+      "type": "image_choice",
+      "question": "What did Lily find on the small door?",
+      "audioText": "What did Lily find on the small door?",
+      "options": [
+        {
+          "emoji": "🐦",
+          "value": "bird",
+          "text": "A bird"
+        },
+        {
+          "emoji": "🔑",
+          "value": "key",
+          "text": "A key"
+        },
+        {
+          "emoji": "🌸",
+          "value": "flower",
+          "text": "A flower"
+        }
+      ],
+      "answer": "bird"
+    },
+    {
+      "type": "word_builder",
+      "word": "castle",
+      "audioText": "castle"
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "The tower was the ___ place in the town.",
+      "choices": [
+        "tallest",
+        "taller",
+        "tall"
+      ],
+      "answer": "tallest",
+      "audioText": "The tower was the tallest place in the town."
+    },
+    {
+      "type": "word_builder",
+      "word": "brave",
+      "audioText": "brave"
+    },
+    {
+      "type": "sentence_order",
+      "correctOrder": [
+        "Lily",
+        "climbed",
+        "the",
+        "stairs",
+        "very",
+        "slowly."
+      ],
+      "audioText": "Lily climbed the stairs very slowly."
+    },
+    {
+      "type": "fill_blank",
+      "sentenceWithBlank": "When the door opened, she ___ a magic garden.",
+      "choices": [
+        "saw",
+        "sees",
+        "see"
+      ],
+      "answer": "saw",
+      "audioText": "When the door opened, she saw a magic garden."
+    }
+  ],
+  "_unknownWords": [
+    "bigger",
+    "tower",
+    "blew",
+    "broken",
+    "bird's",
+    "waved",
+    "bravest"
+  ]
+}
