@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import QRCode from "qrcode";
 import { AppShell } from "@/components/AppShell";
@@ -18,6 +19,8 @@ export default function SharePage() {
   const { t } = useI18n();
   const [mounted, setMounted] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [linkState, setLinkState] = useState<null | "shared" | "copied" | "failed">(null);
+  const linkTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
@@ -133,13 +136,34 @@ export default function SharePage() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const shareLink = async () => {
+    // 网页登录流程下直接分享登录链接；无系统分享面板时降级为复制
+    const flash = (s: "shared" | "copied" | "failed") => {
+      if (linkTimer.current) clearTimeout(linkTimer.current);
+      setLinkState(s);
+      linkTimer.current = setTimeout(() => setLinkState(null), 2000);
+    };
+    try {
+      if (typeof navigator.share === "function") {
+        await navigator.share({ title: "漫豚英语", url: LOGIN_URL });
+        flash("shared");
+      } else {
+        await navigator.clipboard.writeText(LOGIN_URL);
+        flash("copied");
+      }
+    } catch (e) {
+      // 用户关掉分享面板不算失败；剪贴板写失败要提示
+      if (!(e instanceof DOMException && e.name === "AbortError")) flash("failed");
+    }
+  };
+
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-md px-4 pt-[84px] pb-8 sm:px-6">
-        <h1 className="pt-1 font-booster text-[26px] font-extrabold leading-[32px] text-primary mb-5">{t("share.title")}</h1>
+      <div className="page-shell">
+        <PageHeader badge="🎁 INVITE" title={t("share.title")} />
         {/* Poster — width-driven, aspect ratio locked (canvas is 750×1000, so
             clamping height instead of width squishes it on wide screens) */}
-        <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-3xl shadow-lg ring-1 ring-black/5 dark:ring-white/10">
+        <div className="g-card-hero relative mx-auto max-w-[420px] overflow-hidden rounded-3xl">
           <canvas ref={canvasRef} className="block aspect-[3/4] w-full" />
           {/* Tap hotspot over the QR card — direct entry to the join page
               (percentages map the QR card region: 264..486 × 719..941 of 750×1000) */}
@@ -153,9 +177,21 @@ export default function SharePage() {
         <div className="mx-auto mt-5 flex max-w-[420px] flex-col gap-2.5">
           <button
             onClick={share}
-            className="rounded-pill bg-brand py-3.5 font-booster text-base font-extrabold text-white shadow-sm transition hover:opacity-90"
+            className="game-btn w-full rounded-pill bg-brand py-3.5 font-booster text-base text-white"
           >
             {copied ? `✓ ${t("share.ready")}` : t("share.poster")}
+          </button>
+          <button
+            onClick={shareLink}
+            className="game-btn w-full rounded-pill border border-subtle bg-surface py-3 font-booster text-base text-secondary"
+          >
+            {linkState === "shared"
+              ? `✓ ${t("share.ready")}`
+              : linkState === "copied"
+                ? `✓ ${t("share.linkCopied")}`
+                : linkState === "failed"
+                  ? `✗ ${t("share.linkFailed")}`
+                  : t("share.link")}
           </button>
           <button onClick={() => router.push("/chat")} className="py-1 text-sm font-bold text-tertiary transition hover:text-secondary">
             {t("share.backHome")}

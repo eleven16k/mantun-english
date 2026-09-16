@@ -67,6 +67,7 @@ const en = {
   "class.wordCount": "words",
   "class.due": "Due",
   "class.start": "Start",
+  "class.startPhonics": "🔤 Go spell",
   "class.practiceAgain": "Practice again",
   "class.done": "Done",
   "class.overdue": "Overdue",
@@ -85,6 +86,7 @@ const en = {
   "org.leaderboard": `${ORG_EN} Weekly Ranking`,
   "org.trackXsc": "Elementary",
   "org.trackZk": "Zhongkao",
+  "org.trackGk": "Gaokao",
   "org.thisWeek": "This week",
   "org.youAre": "You are",
   "org.youWere": "You were",
@@ -112,6 +114,9 @@ const en = {
   "share.tapJoin": "Join ManTun English",
   "share.ready": "Ready to share",
   "share.poster": "Share poster",
+  "share.link": "Share link",
+  "share.linkCopied": "Link copied",
+  "share.linkFailed": "Copy failed, try again",
   "share.backHome": "Back to Home",
 
   // — Leaderboard —
@@ -198,6 +203,7 @@ const zh: Record<keyof typeof en, string> = {
   "class.wordCount": "词",
   "class.due": "截止",
   "class.start": "开始练习",
+  "class.startPhonics": "🔤 去闯关",
   "class.practiceAgain": "再练一次",
   "class.done": "已完成",
   "class.overdue": "已过期",
@@ -216,6 +222,7 @@ const zh: Record<keyof typeof en, string> = {
   "org.leaderboard": `${ORG}周榜`,
   "org.trackXsc": "小升初",
   "org.trackZk": "中考",
+  "org.trackGk": "高考",
   "org.thisWeek": "本周",
   "org.youAre": "你当前位于",
   "org.youWere": "你当时位于",
@@ -243,6 +250,9 @@ const zh: Record<keyof typeof en, string> = {
   "share.tapJoin": "加入漫豚英语",
   "share.ready": "可以分享啦",
   "share.poster": "分享海报",
+  "share.link": "分享链接",
+  "share.linkCopied": "链接已复制",
+  "share.linkFailed": "复制失败，请重试",
   "share.backHome": "返回首页",
 
   // — 排行榜 —

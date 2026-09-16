@@ -62,6 +62,9 @@ export async function login(phone: string, code: string, inviteCode?: string) {
     body: JSON.stringify(stored ? { phone, code, inviteCode: stored } : { phone, code }),
   });
   setToken(data.token);
+  // 意图已消费：无条件清掉暂存码，避免同浏览器之后的新注册误挂到旧推荐人
+  // （即使本次用的是显式 inviteCode 参数，kv 里的旧码也不该留到下次注册）
+  kv.removeItem("lexi-invite");
   return data;
 }
 
