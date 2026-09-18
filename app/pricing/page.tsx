@@ -1,17 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
-import { subscribe } from "@/lib/api";
+import { submitMemberRequest, getMemberRequest, type MemberRequest } from "@/lib/api";
 import { shippedMembershipFeatures } from "@/lib/membership";
 import { useGameStore } from "@/lib/store";
 import { useI18n, type MessageKey } from "@/lib/i18n";
 
 /**
- * /pricing — G1: Three-tier subscription page.
- * Monthly / Semester / Annual with feature comparison.
+ * /pricing — Three-tier subscription page.
+ * Payment is not self-serve: users leave an email and submit an activation
+ * request; the admin console (mt-teach-api /admin) approves it.
  */
+
+const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "";
 
 const PLANS: {
   id: string;
@@ -68,42 +71,80 @@ const PLANS: {
 // rows render, so copy never promises an unshipped feature.
 const COMPARISON = shippedMembershipFeatures();
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export default function PricingPage() {
-  const [selected, setSelected] = useState("semester");
-  const [subscribing, setSubscribing] = useState(false);
-  const [subscribed, setSubscribed] = useState<{ tier: string; expiresAt: number } | null>(null);
+  const [email, setEmail] = useState("");
+  const [applying, setApplying] = useState(false);
+  const [applied, setApplied] = useState<MemberRequest | null>(null);
   const [error, setError] = useState("");
   const { t } = useI18n();
+  const { isMember, membershipExpiresAt } = useGameStore();
 
-  // Activates the membership server-side. Payment provider not wired yet —
-  // the subscription record is real, the charge channel is the stub.
-  const confirm = async () => {
-    if (subscribing) return;
-    setSubscribing(true);
+  // 已有 pending 申请则直接进入已提交态
+  useEffect(() => {
+    getMemberRequest()
+      .then(({ request }) => {
+        if (request?.status === "pending") setApplied(request);
+      })
+      .catch(() => {});
+  }, []);
+
+  const apply = async () => {
+    if (applying) return;
+    const normalized = email.trim().toLowerCase();
+    if (!EMAIL_RE.test(normalized)) {
+      setError(t("pricing.applyInvalid"));
+      return;
+    }
+    setApplying(true);
     setError("");
     try {
-      const result = await subscribe(selected as "monthly" | "semester" | "annual");
-      setSubscribed(result);
-      useGameStore.setState({ isMember: true });
-    } catch {
-      setError(t("pricing.subFail"));
+      const { request } = await submitMemberRequest(normalized);
+      setApplied(request);
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : "";
+      setError(
+        msg === "request_pending" ? t("pricing.applyPending")
+        : msg === "email_taken" ? t("pricing.applyTaken")
+        : t("pricing.applyFail"),
+      );
     } finally {
-      setSubscribing(false);
+      setApplying(false);
     }
   };
+
+  const daysLeft = isMember && membershipExpiresAt
+    ? Math.max(0, Math.ceil((membershipExpiresAt * 1000 - Date.now()) / 86400000))
+    : null;
 
   return (
     <AppShell>
       <div className="page-shell">
         <PageHeader badge="👑 MEMBERSHIP" title={t("pricing.title")} sub={t("pricing.subtitle")} />
 
-        {/* Subscription success */}
-        {subscribed && (
+        {/* Membership active */}
+        {isMember && (
           <div className="mb-5 rounded-2xl border-2 border-b-4 border-[#22C55E] bg-[#F0FDF4] p-4 text-center">
             <p className="font-booster text-base font-extrabold text-positive">✓ {t("pricing.subOk")}</p>
-            <p className="mt-1 text-xs text-secondary">
-              {t("pricing.subUntil")} {new Date(subscribed.expiresAt * 1000).toLocaleDateString()}
-            </p>
+            {membershipExpiresAt && (
+              <p className="mt-1 text-xs text-secondary">
+                {t("pricing.subUntil")} {new Date(membershipExpiresAt * 1000).toLocaleDateString()}
+              </p>
+            )}
+            {daysLeft !== null && daysLeft <= 7 && (
+              <p className="mt-1 text-xs font-bold text-streak">
+                {daysLeft} {t("pricing.daysLeft")}
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Request submitted */}
+        {applied && !isMember && (
+          <div className="mb-5 rounded-2xl border-2 border-b-4 border-brandborder bg-brand-subtle p-4 text-center">
+            <p className="font-booster text-base font-extrabold text-brand-text">✓ {t("pricing.applyOk")}</p>
+            <p className="mt-1 text-xs text-secondary">{applied.email}</p>
           </div>
         )}
         {error && <p className="mb-4 text-center text-xs font-bold text-critical">{error}</p>}
@@ -133,13 +174,10 @@ export default function PricingPage() {
         {/* Plan cards */}
         <div className="grid gap-3 sm:grid-cols-3">
           {PLANS.map(plan => (
-            <button
+            <div
               key={plan.id}
-              onClick={() => setSelected(plan.id)}
-              className={`relative flex flex-col rounded-3xl border-2 p-5 text-left transition ${
-                selected === plan.id
-                  ? "border-brandborder bg-brand-subtle"
-                  : "border-subtle bg-surface hover:border-brandborder"
+              className={`relative flex flex-col rounded-3xl border-2 p-5 text-left ${
+                plan.highlight ? "border-brandborder bg-brand-subtle" : "border-subtle bg-surface"
               }`}
             >
               {plan.highlight && (
@@ -161,28 +199,45 @@ export default function PricingPage() {
                   </li>
                 ))}
               </ul>
-              <span className={`mt-4 rounded-pill py-2.5 text-center text-sm font-bold transition ${
-                selected === plan.id ? "bg-brand text-white" : "border border-subtle text-secondary"
-              }`}>
-                {selected === plan.id ? t("pricing.selected") : t("pricing.choose")}
-              </span>
-            </button>
+            </div>
           ))}
         </div>
 
-        {/* Subscribe CTA */}
-        <button
-          onClick={confirm}
-          disabled={subscribing || !!subscribed}
-          className="mt-6 w-full rounded-pill bg-action py-4 font-booster text-base font-extrabold text-white transition hover:bg-actionhover active:scale-[0.98] disabled:opacity-50"
-        >
-          {subscribed ? t("pricing.subOk") : subscribing ? t("pricing.subscribing") : t("pricing.subscribe")}
-        </button>
+        {/* Activation request — the only CTA until online payment ships */}
+        {!isMember && !applied && (
+          <div className="mt-6 rounded-3xl border-2 border-subtle bg-surface p-5">
+            <h3 className="font-booster text-base font-extrabold text-primary">{t("pricing.applyTitle")}</h3>
+            <p className="mt-1 text-xs leading-relaxed text-secondary">{t("pricing.applyDesc")}</p>
+            <label className="mt-4 block text-xs font-bold uppercase tracking-wide text-tertiary">
+              {t("pricing.applyEmailLabel")}
+            </label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder={t("pricing.applyEmailPlaceholder")}
+              maxLength={254}
+              className="mt-1.5 w-full rounded-xl border border-subtle bg-app px-3 py-3 text-sm text-primary outline-none focus:border-brandborder"
+            />
+            <button
+              onClick={apply}
+              disabled={applying}
+              className="mt-3 w-full rounded-pill bg-action py-3.5 font-booster text-base font-extrabold text-white transition hover:bg-actionhover active:scale-[0.98] disabled:opacity-50"
+            >
+              {applying ? t("pricing.applySubmitting") : t("pricing.applyBtn")}
+            </button>
+          </div>
+        )}
 
-        {/* Payment note */}
+        {/* Contact note */}
         <p className="mt-6 text-center text-[11px] text-tertiary">
-          {t("pricing.note1")}<br />
-          {t("pricing.note2")}
+          {t("pricing.contactAdmin")}
+          {SUPPORT_EMAIL && (
+            <>
+              <br />
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="font-bold text-brand-text">{SUPPORT_EMAIL}</a>
+            </>
+          )}
         </p>
       </div>
     </AppShell>

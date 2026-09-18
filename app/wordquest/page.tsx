@@ -92,6 +92,7 @@ export default function WordQuestPage() {
               xp: newScore,
               coins: 20,
               masteredWords: [],
+              clientToken: typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : undefined,
             });
             useGameStore.setState((s) => ({ coins: s.coins + 20, scorePoints: s.scorePoints + newScore }));
           } catch {

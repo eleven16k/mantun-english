@@ -221,6 +221,7 @@ export default function ScenarioSessionPage() {
           coins,
           masteredWords: mastered,
           transcript,
+          clientToken: typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : undefined,
         });
         useGameStore.setState((s) => ({ coins: s.coins + coins, scorePoints: s.scorePoints + xp }));
         return res;

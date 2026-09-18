@@ -79,13 +79,14 @@ export function isLoggedIn(): boolean {
 // ─── User Profile ───
 export interface UserProfile {
   user: {
-    id: number; phone: string; nickname: string; track: string;
+    id: number; phone: string; email: string | null; nickname: string; track: string;
     target_score: number; exam_date: string | null; estimated_score: number;
   };
   economy: Record<string, number | string | null>;
   weaknessCount: number;
   masteredCount: number;
   membership: { tier: string; expiresAt: number } | null;
+  pendingMemberRequest: { id: number; email: string; status: string; created_at: number } | null;
   scoreHistory: { score_points: number; estimated_score: number; recorded_at: number }[];
 }
 
@@ -95,7 +96,7 @@ export async function getMe(): Promise<UserProfile> {
 
 export async function updateProfile(patch: {
   nickname?: string; track?: string; targetScore?: number;
-  examDate?: string; estimatedScore?: number;
+  examDate?: string; estimatedScore?: number; email?: string;
 }) {
   return fetchApi("/api/me", { method: "PATCH", body: JSON.stringify(patch) });
 }
@@ -424,6 +425,8 @@ export async function bankScenarioReward(payload: {
   coins: number;
   masteredWords: string[];
   transcript?: unknown[];
+  /** 结算幂等键：同一局重试必须复用同一 token，服务端按它去重 */
+  clientToken?: string;
 }): Promise<{ coins: number; scorePoints: number; newWords: number }> {
   return fetchApi("/api/scenarios/reward", { method: "POST", body: JSON.stringify(payload) });
 }
@@ -463,13 +466,47 @@ export async function sendSmsCode(phone: string) {
   });
 }
 
-// ─── Membership ───
+// ─── Membership（申请-审批流：提交后由管理员在 /admin 后台开通） ───
 
-export async function subscribe(tier: "monthly" | "semester" | "annual") {
-  return fetchApi<{ tier: string; expiresAt: number }>("/api/subscribe", {
+export interface MemberRequest {
+  id: number;
+  email: string;
+  status: "pending" | "granted" | "rejected";
+  created_at?: number;
+  handled_at?: number | null;
+}
+
+export async function submitMemberRequest(email?: string) {
+  return fetchApi<{ ok: boolean; request: MemberRequest }>("/api/member-requests", {
     method: "POST",
-    body: JSON.stringify({ tier }),
+    body: JSON.stringify(email ? { email } : {}),
   });
+}
+
+export async function getMemberRequest(): Promise<{ request: MemberRequest | null }> {
+  return fetchApi("/api/member-requests");
+}
+
+export interface ShopCatalogItem {
+  id: string;
+  basePrice: number;
+  memberPrice: number;
+  /** 当前用户（会员与否）的实际结算价 */
+  price: number;
+}
+
+export async function getShopCatalog() {
+  return fetchApi<{ items: ShopCatalogItem[]; member: boolean; redeem?: { coins: number; days: number } }>("/api/shop/catalog");
+}
+
+/** 金币兑换会员：扣 REDEEM_COINS 币顺延 REDEEM_DAYS 天；400 = 金币不足 */
+export async function redeemMembership(): Promise<{
+  ok: boolean;
+  membership: { tier: string; expiresAt: number };
+  coins: number;
+  redeemed: { coins: number; days: number };
+}> {
+  return fetchApi("/api/membership/redeem", { method: "POST", body: JSON.stringify({}) });
 }
 
 export function timeLabel(at: number): string {

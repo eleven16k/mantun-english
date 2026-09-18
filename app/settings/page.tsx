@@ -116,7 +116,7 @@ function LinkRow({ label, value, onClick, destructive }: {
 
 export default function SettingsPage() {
   const router = useRouter();
-  const { coins, scorePoints, streak, isMember } = useGameStore();
+  const { coins, scorePoints, streak, isMember, membershipExpiresAt } = useGameStore();
   const { t } = useI18n();
 
   // Preferences persist in localStorage and survive reloads.
@@ -138,6 +138,12 @@ export default function SettingsPage() {
   const [nicknameError, setNicknameError] = useState("");
   const [pendingBindings, setPendingBindings] = useState(0);
 
+  // 联系邮箱（会员开通申请走这个邮箱，管理员按它对账）
+  const [accountEmail, setAccountEmail] = useState<string>("");
+  const [editingEmail, setEditingEmail] = useState(false);
+  const [emailDraft, setEmailDraft] = useState("");
+  const [emailStatus, setEmailStatus] = useState<"saved" | "error" | "taken" | null>(null);
+
   // 学段（升学机制）：显示当前 track；入班且班级声明学段时只读（班级 = 权威源）
   const [userTrack, setUserTrack] = useState<string | null>(null);
   const [classTrack, setClassTrack] = useState<string | null>(null);
@@ -153,6 +159,7 @@ export default function SettingsPage() {
           setAccountPhone(d.user.phone ?? null);
           setAccountNickname(d.user.nickname ?? "");
           setUserTrack(d.user.track ?? null);
+          setAccountEmail(d.user.email ?? "");
           // Family red-dot (V4 S3): pending parent-binding requests count
           getParentLinks()
             .then((links) => setPendingBindings((links.links ?? []).filter((l) => l.status === "pending").length))
@@ -206,6 +213,23 @@ export default function SettingsPage() {
     logout();
     useGameStore.setState({ questions: [], currentQIndex: 0, selectedAnswer: null, showFeedback: false });
     window.location.assign(LOGIN_URL);
+  };
+
+  // 邮箱绑定——客户端与服务端同一格式规则；409 = 已被其他账号占用
+  const saveEmail = async () => {
+    const next = emailDraft.trim().toLowerCase();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(next)) {
+      setEmailStatus("error");
+      return;
+    }
+    try {
+      await updateProfile({ email: next });
+      setAccountEmail(next);
+      setEditingEmail(false);
+      setEmailStatus("saved");
+    } catch (e) {
+      setEmailStatus(e instanceof Error && e.message === "email_taken" ? "taken" : "error");
+    }
   };
 
   return (
@@ -281,9 +305,54 @@ export default function SettingsPage() {
             <SettingGroup title={t("settings.membership")}>
               <LinkRow
                 label={t("settings.subscription")}
-                value={isMember ? t("settings.memberActive") : t("settings.upgrade")}
+                value={
+                  isMember
+                    ? membershipExpiresAt && (membershipExpiresAt * 1000 - Date.now()) / 86400000 <= 7
+                      ? `${t("settings.memberActive")} · ${Math.max(0, Math.ceil((membershipExpiresAt * 1000 - Date.now()) / 86400000))}d`
+                      : t("settings.memberActive")
+                    : t("settings.upgrade")
+                }
                 onClick={() => router.push("/pricing")}
               />
+              {editingEmail ? (
+                <div className="px-4 py-3.5">
+                  <p className="text-[15px] font-medium text-primary">{t("settings.email")}</p>
+                  <div className="mt-2 flex items-center gap-2">
+                    <input
+                      type="email"
+                      value={emailDraft}
+                      onChange={(e) => { setEmailDraft(e.target.value); setEmailStatus(null); }}
+                      maxLength={254}
+                      autoFocus
+                      className="min-w-0 flex-1 rounded-xl border border-subtle bg-app px-3 py-2 text-sm outline-none focus:border-brandborder"
+                    />
+                    <button
+                      onClick={saveEmail}
+                      disabled={!emailDraft.trim()}
+                      className="rounded-pill bg-brand px-4 py-2 text-xs font-bold text-white transition hover:opacity-90 disabled:opacity-40"
+                    >
+                      {t("settings.emailSave")}
+                    </button>
+                    <button
+                      onClick={() => { setEditingEmail(false); setEmailStatus(null); }}
+                      className="rounded-pill border border-subtle px-4 py-2 text-xs font-bold text-secondary"
+                    >
+                      {t("settings.nicknameCancel")}
+                    </button>
+                  </div>
+                  {emailStatus && (
+                    <p className={`mt-2 text-xs font-bold ${emailStatus === "saved" ? "text-positive" : "text-critical"}`}>
+                      {t(emailStatus === "saved" ? "settings.emailSaved" : emailStatus === "taken" ? "settings.emailTaken" : "settings.emailFail")}
+                    </p>
+                  )}
+                </div>
+              ) : (
+                <LinkRow
+                  label={t("settings.email")}
+                  value={accountEmail || "—"}
+                  onClick={isLoggedIn() ? () => { setEmailDraft(accountEmail); setEditingEmail(true); } : undefined}
+                />
+              )}
             </SettingGroup>
 
             {/* Sound & Haptics */}

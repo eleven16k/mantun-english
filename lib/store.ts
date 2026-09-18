@@ -111,6 +111,7 @@ interface GameState {
 
   // Membership (synced from /api/me — members bypass the daily free limit)
   isMember: boolean;
+  membershipExpiresAt: number | null; // unix 秒，会员到期时间（到期前 7 天提醒用）
 
   currentQIndex: number;
   sessionCorrect: number;
@@ -195,6 +196,7 @@ export const useGameStore = create<GameState>()(
       lastStudyDate: '',
       heartsDepletedAt: null,
       isMember: false,
+      membershipExpiresAt: null,
   quizKbName: null,
 
       dailyQuestionsAnswered: 0,

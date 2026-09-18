@@ -47,11 +47,12 @@ test.describe("/shop", () => {
 });
 
 test.describe("/pricing", () => {
-  test("three tiers visible; subscribe activates membership", async ({ page }) => {
+  test("three tiers visible; email request flow submits", async ({ page }) => {
     await page.goto("/pricing");
-    await expect(page.getByText(/¥18|monthly|月/i).first()).toBeVisible({ timeout: 10_000 });
-    await page.getByRole("button", { name: /subscribe|订阅|立即/i }).first().click();
-    await expect(page.getByText(/active|生效/i).first()).toBeVisible({ timeout: 8000 });
+    await expect(page.getByText(/¥|monthly|月/i).first()).toBeVisible({ timeout: 10_000 });
+    await page.getByPlaceholder(/example\.com|邮箱/i).fill("e2e-member@example.com");
+    await page.getByRole("button", { name: /submit|提交/i }).first().click();
+    await expect(page.getByText(/submitted|已提交/i).first()).toBeVisible({ timeout: 8000 });
   });
 });
 

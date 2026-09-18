@@ -26,7 +26,7 @@ export default function QuizScreen() {
   const {
     questions, currentQIndex, selectedAnswer, showFeedback,
     hearts, scoreBoostActive,
-    isMember,
+    isMember, membershipExpiresAt,
     hintsOwned, scoreBoostsOwned,
     answerQuestion, nextQuestion, useHint, useScoreBoost, navigate,
     dailyQuestionsAnswered, dailyDate,
@@ -267,6 +267,10 @@ export default function QuizScreen() {
   const total = questions.length;
   const progress = ((currentQIndex + (showFeedback ? 1 : 0)) / total) * 100;
   const outOfHearts = hearts === 0 && freeRemaining === 0 && !isMember;
+  // 👑 会员到期前 7 天：答题界面常驻续费提醒（设置页/定价页同款逻辑）
+  const memberDaysLeft = isMember && membershipExpiresAt
+    ? Math.ceil((membershipExpiresAt * 1000 - Date.now()) / 86400000)
+    : null;
 
   // Prompt font size adapts to length so sentences (fill-blank / AI questions)
   // stay readable on phone screens instead of exploding at display size
@@ -420,6 +424,14 @@ export default function QuizScreen() {
             </div>
           </div>
         </div>
+      )}
+      {isMember && memberDaysLeft !== null && memberDaysLeft <= 7 && !showFeedback && (
+        <button
+          onClick={() => router.push('/pricing')}
+          className="mx-4 mb-1 rounded-xl bg-brand-subtle px-3 py-1.5 text-left text-[11px] font-bold text-brand-text transition hover:opacity-80"
+        >
+          👑 {Math.max(0, memberDaysLeft)} {t('pricing.daysLeft')}
+        </button>
       )}
       {/* 👹 Boss 战：血条 + 击杀提示 */}
       {bossBattle && (

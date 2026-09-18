@@ -56,6 +56,7 @@ export function useAppSync() {
           heartsDepletedAt: hearts < 5 ? depleted : null,
           lastStudyDate: eco.last_study_date as string,
           isMember: !!data.membership,
+          membershipExpiresAt: data.membership?.expiresAt ?? null,
         });
       })
       .catch(err => {
