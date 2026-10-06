@@ -12,6 +12,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { speakEn } from "@/lib/speak";
+import { prefetchTts } from "@/lib/tts";
 import { keyClick, keyError, successChime, vibrate, warmupSound } from "@/lib/sound";
 import { VolumeIcon } from "@/components/icons";
 import { PartyPopperIcon } from "@/components/SvgIcons";
@@ -50,6 +51,7 @@ export function WordTypingCard({ step, word, onPass, onWrong }: Props) {
     prevLen.current = 0;
     inputRef.current?.focus({ preventScroll: true });
     warmupSound();
+    prefetchTts(word.en); // 预热神经 TTS——通关播读零等待
     if (masked) {
       const timer = setTimeout(() => speakEn(word.en), 350);
       return () => clearTimeout(timer);
@@ -67,8 +69,9 @@ export function WordTypingCard({ step, word, onPass, onWrong }: Props) {
   const finish = () => {
     setDone(true);
     successChime();
+    // 通关播读单词（记忆强化）：预热后即时播；留 1.8s 听完再切下一词
     speakEn(word.en).catch(() => {});
-    setTimeout(onPass, 750);
+    setTimeout(onPass, 1800);
   };
 
   const onChange = (v: string) => {
@@ -154,7 +157,6 @@ export function WordTypingCard({ step, word, onPass, onWrong }: Props) {
           value={input}
           onChange={(e) => onChange(e.target.value)}
           onKeyDown={onKeyDown}
-          disabled={done}
           autoCapitalize="off"
           autoCorrect="off"
           autoComplete="off"
