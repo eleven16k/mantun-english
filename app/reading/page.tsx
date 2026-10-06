@@ -29,6 +29,8 @@ import {
 } from "@/content/reading";
 import "../phonics/phonics.css";
 import "./reading.css";
+// 玩法卡复用句法馆 sn-mode-card 样式
+import "../sentence/sentence.css";
 
 export default function ReadingPage() {
   const { t } = useI18n();

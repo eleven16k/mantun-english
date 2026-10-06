@@ -44,6 +44,8 @@ import {
 } from "@/content/reading";
 import "../../phonics/phonics.css";
 import "../reading.css";
+// WordBuilder 的字母槽/字母卡复用句法馆 sn- 体系（无此样式字母会裸奔成无布局文本）
+import "../../sentence/sentence.css";
 
 type Phase = "intro" | "read" | "quiz" | "done";
 
