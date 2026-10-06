@@ -13,6 +13,8 @@ import { BASE_PATH } from './config';
 
 let lexiconHydrated = false;
 let hydrateSig = '';
+/** 进行中的 hydrate promise——并发调用串行化，防两套标签词交错混入 */
+let hydrating: Promise<number> | null = null;
 /** 词库扩容词是否已注入（未注入时题库仅 30 精选词） */
 export function isVocabHydrated() {
   return lexiconHydrated;
@@ -30,6 +32,11 @@ export interface HydrateOptions {
 export async function hydrateVocabFromLexicon(opts?: HydrateOptions): Promise<number> {
   const sig = JSON.stringify(opts ?? {});
   if (lexiconHydrated && hydrateSig === sig) return VOCAB.length;
+  if (hydrating) {
+    try { await hydrating; } catch { /* 前一轮失败不阻塞本轮 */ }
+    if (lexiconHydrated && hydrateSig === sig) return VOCAB.length;
+  }
+  const run = async (): Promise<number> => {
   if (hydrateSig !== sig) {
     // 换角色：移除上一轮注入的词（精选 30 词保留）
     for (let i = VOCAB.length - 1; i >= 0; i--) {
@@ -75,6 +82,9 @@ export async function hydrateVocabFromLexicon(opts?: HydrateOptions): Promise<nu
     /* 离线/词库不可用：保持精选 30 词题库 */
   }
   return VOCAB.length;
+  };
+  hydrating = run().finally(() => { hydrating = null; });
+  return hydrating;
 }
 
 export const VOCAB: VocabWord[] = [

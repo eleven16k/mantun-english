@@ -77,7 +77,7 @@ for (let li = 1; li < lines.length; li++) {
     const pos = posMatch ? posMatch[1].trim() : "";
     let cn = (pos ? first.slice(pos.length) : first).trim().replace(/[；;]\s*$/, "").replace(/\\r|\\n/g, " ").replace(/\s+/g, " ").trim();
     if (!cn) continue;
-    entries.push({ en: word, cn: cn.length > 30 ? cn.slice(0, 28) + "…" : cn, phonetic: cols[idx.phonetic] ? `/${cols[idx.phonetic]}/` : undefined, pos: pos || undefined, frq, bnc });
+    entries.push({ en: word, cn: cn.length > 40 ? cn.slice(0, 38) + "…" : cn, phonetic: cols[idx.phonetic] ? `/${cols[idx.phonetic]}/` : undefined, pos: pos || undefined, frq, bnc });
     continue;
   }
   const tags = (cols[idx.tag] || "").split(/\s+/);
@@ -101,7 +101,7 @@ for (let li = 1; li < lines.length; li++) {
   if (!cn) continue;
   entries.push({
     en: word,
-    cn: cn.length > 30 ? cn.slice(0, 28) + "…" : cn,
+    cn: cn.length > 40 ? cn.slice(0, 38) + "…" : cn, // 与 gen-lexicon 截断宽度对齐
     phonetic: cols[idx.phonetic] ? `/${cols[idx.phonetic]}/` : undefined,
     pos: pos || undefined,
     frq,

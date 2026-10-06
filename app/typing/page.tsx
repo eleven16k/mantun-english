@@ -39,7 +39,7 @@ import { BOOK_METAS, ZK_STARTER_BOOK, defaultBook, loadWordBook, bookMeta } from
 import { savedStage, stageDef } from "@/lib/stage";
 import { WordTypingCard } from "@/components/typing/WordTypingCard";
 import { WordIdentifyCard } from "@/components/typing/WordIdentifyCard";
-import { BrokenHeartIcon, CardsIcon, BookIcon, RefreshIcon, CoinIcon, StarIcon } from "@/components/icons";
+import { BrokenHeartIcon, CardsIcon, BookIcon, RefreshIcon, CoinIcon, StarIcon, KeyboardIcon } from "@/components/icons";
 import "./typing.css";
 
 type View = "home" | "gacha" | "practice" | "done" | "book";
@@ -225,7 +225,14 @@ export default function TypingPage() {
         writeProgress(p);
         return p;
       });
-      if (isLoggedIn()) pushTypingCard(book.id, word.en, "wrong", 1).catch(() => {});
+      if (isLoggedIn()) {
+        // 错误全口径上报：红心惩罚/弱点本/Jev 错因诊断闭环（economy 内部按免费额度决定扣心）
+        submitAnswer(`typing:${book.id}:${word.en.toLowerCase()}`, false, `wrong:${word.en}`, {
+          questionType: "typing_wrong",
+          correct: word.en,
+        }).catch(() => {});
+        pushTypingCard(book.id, word.en, "wrong", 1).catch(() => {});
+      }
     },
     [book.id],
   );
@@ -235,8 +242,8 @@ export default function TypingPage() {
       setQIdx(qIdx + 1);
       return;
     }
-    // 主队列完 → 有错词且还没进过修复轮 → 修复轮（默写至对）
-    if (!repairing && wrongKeysRef.current.size > 0 && repairRoundRef.current < 3) {
+    // 主队列/修复轮完 → 仍有错词且未超轮数上限 → 再进修复轮（默写至对，≤3 轮）
+    if (wrongKeysRef.current.size > 0 && repairRoundRef.current < 3) {
       repairRoundRef.current += 1;
       const byEn = new Map(draw.map((d) => [d.word.en.toLowerCase(), d.word]));
       const repairs = [...wrongKeysRef.current]
@@ -372,7 +379,7 @@ export default function TypingPage() {
             </div>
             <button type="button" className="tp-draw-btn" style={{ marginTop: 16 }} onClick={startPractice}>
               <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                <KeyboardGlyph /> {t("typing.startPractice")}
+                <KeyboardIcon size={18} /> {t("typing.startPractice")}
               </span>
             </button>
             <button
@@ -496,19 +503,3 @@ export default function TypingPage() {
   );
 }
 
-/** 练习按钮内联键盘字形（避免额外 import 抖动） */
-function KeyboardGlyph() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect width="20" height="16" x="2" y="4" rx="2" />
-      <path d="M6 8h.01" />
-      <path d="M10 8h.01" />
-      <path d="M14 8h.01" />
-      <path d="M18 8h.01" />
-      <path d="M8 12h.01" />
-      <path d="M12 12h.01" />
-      <path d="M16 12h.01" />
-      <path d="M7 16h10" />
-    </svg>
-  );
-}

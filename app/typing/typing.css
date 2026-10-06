@@ -607,7 +607,7 @@
 }
 
 /* 馆内 ghost 按钮（图鉴/返回）图标与文字同行 */
-.tp-wrap .ph-btn {
+.tp-inner .ph-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
