@@ -79,7 +79,8 @@ export function scheduleReview(stage: number, from = Date.now()): number {
 }
 
 export function cardRarity(card: WordCard): Rarity {
-  return RARITIES[Math.min(card.stage, 3)];
+  // stage<0 防御（历史脏数据/异常卡）：钳到 N，避免 RARITIES[-1] 越界白屏
+  return RARITIES[Math.min(Math.max(card.stage, 0), 3)];
 }
 
 // ─── 练习流程（M1：follow + dictation；identify/listen M2 接入）───

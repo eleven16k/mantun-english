@@ -79,7 +79,7 @@ export default function TypingPage() {
   const wrongKeysRef = useRef<Set<string>>(new Set()); // 本组错词（会话内修复轮）
   const repairRoundRef = useRef(0);
 
-  const [bookId, setBookId] = useState<string>(() => (typeof window === "undefined" ? ZK_STARTER_BOOK.id : (window.localStorage.getItem("lexi-typing-book") || stageDef(savedStage()).bookId)));
+  const [bookId, setBookId] = useState<string>(ZK_STARTER_BOOK.id);
   const [book, setBook] = useState<WordBook>(defaultBook());
   const [bookLoading, setBookLoading] = useState(false);
 
@@ -104,8 +104,9 @@ export default function TypingPage() {
 
   // 切书：恢复上次选择 → 按需加载（builtin 同步）
   useEffect(() => {
+    // 恢复上次词书，否则按学段角色默认（挂载后读，避免 hydration mismatch）
     const saved = typeof window !== "undefined" ? window.localStorage.getItem("lexi-typing-book") : null;
-    const initial = saved && bookMeta(saved) ? saved : ZK_STARTER_BOOK.id;
+    const initial = saved && bookMeta(saved) ? saved : stageDef(savedStage()).bookId;
     if (initial !== ZK_STARTER_BOOK.id) setBookId(initial);
   }, []);
 
@@ -215,16 +216,12 @@ export default function TypingPage() {
   const reportWrong = useCallback(
     (word: WordEntry) => {
       wrongKeysRef.current.add(word.en.toLowerCase());
+      // 只对已收集的卡累计错误（新词答错不落卡——stage:-1 会让 cardRarity 越界白屏）
       setProgress((prev) => {
         const key = cardKey(book.id, word.en);
         const c = prev.cards[key];
-        const p = {
-          ...prev,
-          cards: {
-            ...prev.cards,
-            [key]: { ...(c ?? { key, bookId: book.id, stage: -1, drawnAt: Date.now() }), wrongCount: (c?.wrongCount ?? 0) + 1, key, bookId: book.id },
-          },
-        };
+        if (!c) return prev;
+        const p = { ...prev, cards: { ...prev.cards, [key]: { ...c, wrongCount: c.wrongCount + 1 } } };
         writeProgress(p);
         return p;
       });
@@ -294,7 +291,7 @@ export default function TypingPage() {
                 <i style={{ width: `${Math.round(stats.rate * 100)}%` }} />
               </div>
               <div className="tp-bar-legend">
-                <span style={{ color: "var(--ph-ink-2)" }}>
+                <span style={{ color: "var(--text-secondary)" }}>
                   {t("typing.collected")} {stats.collected}/{stats.total}
                 </span>
                 {RARITIES.map((r) => (
@@ -339,7 +336,7 @@ export default function TypingPage() {
 
         {view === "gacha" && (
           <>
-            <p style={{ textAlign: "center", color: "var(--ph-ink-2)", fontWeight: 800, margin: "8px 0 14px" }}>
+            <p style={{ textAlign: "center", color: "var(--text-secondary)", fontWeight: 800, margin: "8px 0 14px" }}>
               {t("typing.tapToFlip")}
             </p>
             <div className="tp-gacha-grid">
@@ -403,6 +400,7 @@ export default function TypingPage() {
             )}
             {cur.step === "identify" ? (
               <WordIdentifyCard
+                key={`${cur.step}-${cur.word.en}`}
                 book={book}
                 word={cur.word}
                 onPass={() => {
@@ -413,6 +411,7 @@ export default function TypingPage() {
               />
             ) : (
               <WordTypingCard
+                key={`${cur.step}-${cur.word.en}`}
                 step={cur.step}
                 word={cur.word}
                 onPass={() => {
@@ -455,7 +454,7 @@ export default function TypingPage() {
           <>
             <PageHeader badge="CARD BOOK" title={t("typing.bookTitle")} sub={`${t("typing.progressAll")} ${stats.collected}/${stats.total}`} className="mb-4" />
             {stats.collected === 0 ? (
-              <p style={{ textAlign: "center", color: "var(--ph-ink-3)", marginTop: 24, fontWeight: 700 }}>
+              <p style={{ textAlign: "center", color: "var(--text-tertiary)", marginTop: 24, fontWeight: 700 }}>
                 {t("typing.bookEmpty")}
               </p>
             ) : (

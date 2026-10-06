@@ -92,11 +92,11 @@ export function WordIdentifyCard({ book, word, onPass, onWrong }: Props) {
 
       <div className="tp-feedback">
         {picked === word.cn ? (
-          <span style={{ color: "var(--ph-green)" }} className="inline-flex items-center gap-1"><PartyPopperIcon size={14} /> {t("typing.nice")}</span>
+          <span style={{ color: "var(--text-positive, #15803d)" }} className="inline-flex items-center gap-1"><PartyPopperIcon size={14} /> {t("typing.nice")}</span>
         ) : picked ? (
-          <span style={{ color: "var(--ph-red)" }}>{t("typing.wrong")}</span>
+          <span style={{ color: "var(--text-critical, #dc2626)" }}>{t("typing.wrong")}</span>
         ) : (
-          <span style={{ color: "var(--ph-ink-3)" }}>{t("typing.identifyHint")}</span>
+          <span style={{ color: "var(--text-tertiary, #94a3b8)" }}>{t("typing.identifyHint")}</span>
         )}
       </div>
     </div>

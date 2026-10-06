@@ -38,6 +38,10 @@ const idx = Object.fromEntries(COLS.map((c) => [c, header.indexOf(c)]));
 const STOPWORDS = new Set(["a","an","the","and","or","but","of","to","in","on","at","for","with","by","from","as","is","are","was","were","be","been","being","am","do","does","did","it","its","this","that","these","those","he","she","they","we","you","i","his","her","their","our","your","my","not","no","so","if","then","than","there","here","when","what","which","who","how","why","all","any","some","such","own","same","too","very","can","will","just","don","should","now","would","could","might","must","shall","me","us","him"]);
 const DOMAIN_RE = /^\[.{1,3}\]/;
 
+// 内容安全黑名单：粗俗/不当词不入词书与词典（少年可达内容，零容忍）
+const VULGAR = new Set(["nigger","nigga","fuck","fucking","fuckin","motherfucker","fucker","fucked","shit","shitty","bullshit","dick","dickhead","pussy","cunt","cuntface","twat","wanker","bastard","bitch","whore","slut","rape","rapist","penis","vagina","cock","tits","asshole","arsehole","fag","faggot","kike","spic","chink","gook","retard","spastic","cocksucker","blowjob","handjob","jizz","cum","smegma","dildo","buttplug","scrotum","testicle","labia","clitoris","homo","dyke","tranny","paki","gook","gyp","jap","chinaman","coolie","halfcaste"]);
+
+
 const lexicon = {};
 for (let li = 1; li < lines.length; li++) {
   const line = lines[li];
@@ -46,6 +50,7 @@ for (let li = 1; li < lines.length; li++) {
   const word = cols[idx.word];
   if (!/^[a-z][a-z'-]*[a-z]$|^[a-z]$/.test(word)) continue;
   if (STOPWORDS.has(word)) continue;
+  if (VULGAR.has(word)) continue;
   if ((cols[idx.exchange] || "").startsWith("0:")) continue; // 曲折形
   const tags = (cols[idx.tag] || "").split(/\s+/).filter((t) => ["zk","gk","cet4","cet6","ky","toefl","ielts","gre"].includes(t));
   const frq = parseInt(cols[idx.frq], 10) || 0;

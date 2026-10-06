@@ -65,7 +65,7 @@
   text-align: center;
   font-size: 12px;
   font-weight: 700;
-  color: var(--ph-ink-3, #94a3b8);
+  color: var(--text-tertiary, #94a3b8);
 }
 
 /* ─── 词书卡（g-card 规范） ─── */
@@ -151,14 +151,8 @@
 /* ─── 抽卡网格（自适应列数：手机 4 列、宽屏 5 列） ─── */
 .tp-gacha-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
   gap: 10px;
-}
-
-@media (min-width: 480px) {
-  .tp-gacha-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
 }
 
 .tp-card {
@@ -335,7 +329,7 @@
   color: var(--text-primary, #0f172a);
 }
 
-.tp-target--masked .tp-target-word {
+.tp-target--masked {
   filter: blur(14px);
   user-select: none;
 }
@@ -365,6 +359,8 @@
   align-items: center;
   justify-content: center;
   color: var(--text-primary, #0f172a);
+  position: relative;
+  z-index: 6; /* 高于整卡遮罩 input，听写/默写步可手动重听 */
 }
 
 /* 单词解析（释义 + 例句） */

@@ -50,6 +50,10 @@ const STOPWORDS = new Set(["a","an","the","and","or","but","of","to","in","on","
 // 领域标签行（[计]/[医]/[化]…）非学习释义
 const DOMAIN_RE = /^\[.{1,3}\]/;
 
+// 内容安全黑名单：粗俗/不当词不入词书与词典（少年可达内容，零容忍）
+const VULGAR = new Set(["nigger","nigga","fuck","fucking","fuckin","motherfucker","fucker","fucked","shit","shitty","bullshit","dick","dickhead","pussy","cunt","cuntface","twat","wanker","bastard","bitch","whore","slut","rape","rapist","penis","vagina","cock","tits","asshole","arsehole","fag","faggot","kike","spic","chink","gook","retard","spastic","cocksucker","blowjob","handjob","jizz","cum","smegma","dildo","buttplug","scrotum","testicle","labia","clitoris","homo","dyke","tranny","paki","gook","gyp","jap","chinaman","coolie","halfcaste"]);
+
+
 const entries = [];
 for (let li = 1; li < lines.length; li++) {
   const line = lines[li];
@@ -65,6 +69,7 @@ for (let li = 1; li < lines.length; li++) {
     if (!frq && !bnc) continue;
     if (!/^[a-z][a-z'-]*[a-z]$|^[a-z]$/.test(word)) continue;
     if (STOPWORDS.has(word)) continue;
+  if (VULGAR.has(word)) continue;
     const translationRaw = (cols[idx.translation] || "").split(/\\n/).map((l) => l.trim()).filter((l) => l && !l.includes("[网络]") && !DOMAIN_RE.test(l));
     if (translationRaw.length === 0) continue;
     const first = translationRaw[0].trim();
@@ -80,6 +85,7 @@ for (let li = 1; li < lines.length; li++) {
   // 只收纯字母词（过滤短语/专名/词缀）
   if (!/^[a-z][a-z'-]*[a-z]$|^[a-z]$/.test(word)) continue;
   if (STOPWORDS.has(word)) continue;
+  if (VULGAR.has(word)) continue;
   // ECDICT 的 translation 多义行用字面 "\n"（两字符）分隔
   const translationRaw = (cols[idx.translation] || "")
     .split(/\\n/)
