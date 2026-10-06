@@ -81,6 +81,7 @@ export interface UserProfile {
   user: {
     id: number; phone: string; email: string | null; nickname: string; track: string;
     target_score: number; exam_date: string | null; estimated_score: number;
+    interests?: string[]; dailyGoal?: number | null; stage?: string | null;
   };
   economy: Record<string, number | string | null>;
   weaknessCount: number;
@@ -97,6 +98,7 @@ export async function getMe(): Promise<UserProfile> {
 export async function updateProfile(patch: {
   nickname?: string; track?: string; targetScore?: number;
   examDate?: string; estimatedScore?: number; email?: string;
+  interests?: string[]; dailyGoal?: number; stage?: string;
 }) {
   return fetchApi("/api/me", { method: "PATCH", body: JSON.stringify(patch) });
 }
@@ -114,8 +116,43 @@ export interface AnswerResult {
   isNewWord: boolean;
 }
 
+/**
+ * 判断层证据（阶段1，Jev 集成方案）：做题明细的补充字段。
+ * chosen（学生所选的错误选项）是混淆方向的核心信号；全部可选、
+ * 服务端独立落 answer_events，不影响任何经济/学习逻辑。
+ */
+export interface AnswerEvidence {
+  questionType?: string;
+  chosen?: string;
+  correct?: string;
+  timeMs?: number;
+  module?: string;
+}
+
 export async function getEconomy(): Promise<Record<string, number | string | null>> {
   return fetchApi("/api/economy");
+}
+
+// ─── Typing hall (card gacha) — word card sync ───
+
+export interface TypingCardDto {
+  bookId: string;
+  en: string;
+  stage: number;
+  wrongCount: number;
+  nextReviewAt?: number;
+}
+
+export async function fetchTypingCards(bookId?: string): Promise<TypingCardDto[]> {
+  const r = await fetchApi<{ cards: TypingCardDto[] }>(`/api/typing/cards${bookId ? `?book=${encodeURIComponent(bookId)}` : ""}`);
+  return r.cards;
+}
+
+export async function pushTypingCard(bookId: string, en: string, step: string, wrongDelta = 0) {
+  return fetchApi<{ ok: boolean; stage: number; nextReviewAt: number }>("/api/typing/cards", {
+    method: "POST",
+    body: JSON.stringify({ bookId, en, step, wrongDelta }),
+  });
 }
 
 export async function shopPurchase(itemId: string) {
@@ -125,29 +162,136 @@ export async function shopPurchase(itemId: string) {
   );
 }
 
-export async function submitAnswer(wordId: string, isCorrect: boolean, prompt: string): Promise<AnswerResult> {
+export async function submitAnswer(
+  wordId: string,
+  isCorrect: boolean,
+  prompt: string,
+  evidence: AnswerEvidence = {},
+): Promise<AnswerResult> {
   return fetchApi("/api/economy", {
     method: "POST",
-    body: JSON.stringify({ wordId, isCorrect, prompt }),
+    body: JSON.stringify({ wordId, isCorrect, prompt, ...evidence }),
   });
 }
 
+/**
+ * 仅证据上报（不进经济结算）：给 import-N / plan- 等绕过学习闭环的题用。
+ * fire-and-forget：失败静默吞掉（证据不丢就算成功，丢了也不影响游戏）。
+ */
+export async function reportEvidence(
+  wordId: string,
+  isCorrect: boolean,
+  prompt: string,
+  evidence: AnswerEvidence = {},
+): Promise<void> {
+  try {
+    await fetchApi("/api/evidence", {
+      method: "POST",
+      body: JSON.stringify({ wordId, isCorrect, prompt, ...evidence }),
+    });
+  } catch {
+    // 证据上报失败不影响游戏
+  }
+}
+
+// ─── V8 E1 跟读评分 ───
+export interface AlignedWord {
+  word: string;
+  verdict: "good" | "fuzzy" | "miss";
+  heard?: string;
+}
+
+export interface PronunciationResult {
+  words: AlignedWord[];
+  /** null = 没听清（不计入画像，不惩罚） */
+  stars: number | null;
+}
+
+/** ASR 在浏览器端完成；服务端只做词级对齐 + 落库。 */
+export async function submitPronunciationAttempt(
+  targetText: string,
+  heardText: string | null,
+  scenarioId?: string
+): Promise<PronunciationResult> {
+  return fetchApi<PronunciationResult>("/api/pronunciation/attempt", {
+    method: "POST",
+    body: JSON.stringify({ targetText, heardText, scenarioId }),
+  });
+}
+
+// ─── V8 E2 发音画像 ───
+export interface PhonemeProfile {
+  ready: boolean;
+  totalAttempts: number;
+  tags: { tag: string; score: number; count: number }[];
+  /** score 最低、最多 2 个（服务端截断） */
+  weak: { tag: string; score: number; count: number }[];
+}
+
+export async function getPhonemeProfile(): Promise<PhonemeProfile> {
+  return fetchApi<PhonemeProfile>("/api/pronunciation/profile");
+}
+
+// ─── V8 D1 错题讲解员 ───
+export interface WeaknessExplain {
+  better: string;
+  why: string;
+  tip: string;
+  cached?: boolean;
+}
+
+export async function fetchWeaknessExplain(wordId: string): Promise<WeaknessExplain> {
+  return fetchApi<WeaknessExplain>(`/api/weaknesses/${encodeURIComponent(wordId)}/explain`, { method: "POST" });
+}
+
 // ─── Weaknesses ───
-export interface WeaknessItem {
-  word_id: string;
+export interface WeaknessItem {  word_id: string;
   wrong_count: number;
   correct_streak: number;
   last_prompt: string;
   added_at: number;
+  /** 判断层诊断（阶段2）：错因存储值（如 "phoneme_pair:i_ee"）与双语标签 */
+  misconception?: string | null;
+  diagnosed_at?: number | null;
+  misconception_label_zh?: string | null;
+  misconception_label_en?: string | null;
 }
 
 export async function getWeaknesses(): Promise<WeaknessItem[]> {
   return fetchApi("/api/weaknesses");
 }
 
+// ─── 知识点画像（阶段2：进度页能力雷达） ───
+export interface KpRadarAxis {
+  key: string;
+  labelZh: string;
+  labelEn: string;
+  value: number | null;
+  kpCount: number;
+  confidence: number;
+}
+export interface KpProfile {
+  radar: KpRadarAxis[];
+  kps: { kp_type: string; kp_id: string; mastery: number; confidence: number; evidence_count: number }[];
+  evidenceTotal: number;
+}
+
+export async function getKpProfile(): Promise<KpProfile> {
+  return fetchApi("/api/kp-profile");
+}
+
 export async function deleteWeakness(wordId?: string) {
   const url = wordId ? `/api/weaknesses?wordId=${wordId}` : "/api/weaknesses";
   return fetchApi(url, { method: "DELETE" });
+}
+
+/** 个性化干扰项池（阶段3）：该生对指定词「历史上选错过的释义」。 */
+export async function getDistractorPools(words: string[]): Promise<Record<string, string[]>> {
+  const r = await fetchApi<{ pools?: Record<string, string[]> }>("/api/quiz/distractors", {
+    method: "POST",
+    body: JSON.stringify({ words }),
+  });
+  return r?.pools ?? {};
 }
 
 // ─── Import History ───

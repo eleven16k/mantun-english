@@ -6,8 +6,8 @@ import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { useGameStore } from "@/lib/store";
 import { VOCAB } from "@/lib/vocab";
+import { CoinIcon, CheckIcon, GraduationCapIcon } from "@/components/icons";
 import { HeartFilledIcon, FlameIcon } from "@/components/SvgIcons";
-import { CoinIcon, CheckIcon } from "@/components/icons";
 import { useI18n } from "@/lib/i18n";
 
 /**
@@ -76,7 +76,7 @@ export default function TutorialPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="🎓 TUTORIAL" title={t("tut.title")} />
+        <PageHeader badge="TUTORIAL" title={t("tut.title")} />
 
         {level === "done" ? (
           /* Completion screen */
@@ -106,7 +106,7 @@ export default function TutorialPage() {
                 <span key={l} className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-extrabold ${
                   level === l ? "bg-brand text-white" : level > l ? "bg-positive text-white" : "bg-canvas text-tertiary"
                 }`}>
-                  {typeof level === "number" && level > l ? "✓" : l}
+                  {typeof level === "number" && level > l ? <CheckIcon size={14} /> : l}
                 </span>
               ))}
               <span className="ml-2 text-xs font-bold text-tertiary">
@@ -127,7 +127,7 @@ export default function TutorialPage() {
                     </span>
                   )}
                   {answered && isCorrect && (
-                    <span className="ml-auto text-sm font-bold text-positive">✓ {t('tut.noHeartLost')}</span>
+                    <span className="ml-auto text-sm font-bold text-positive inline-flex items-center gap-1"><CheckIcon size={13} /> {t('tut.noHeartLost')}</span>
                   )}
                 </div>
                 <p className="mt-3 text-sm text-secondary">

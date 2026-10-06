@@ -9,6 +9,8 @@
  */
 
 import Link from "next/link";
+import { BookOpenIcon, VolumeIcon, CheckIcon, RepeatIcon } from "@/components/icons";
+
 import { useEffect, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { LetterTiles } from "@/components/phonics/LetterTiles";
@@ -75,7 +77,7 @@ export default function PhonicsReviewPage() {
             ← {t("phonics.backToLand")}
           </Link>
 
-          <span className="ph-sticker">📖 REVIEW BOOK</span>
+          <span className="ph-sticker">REVIEW BOOK</span>
           <h1 className="ph-h1">{t("phonics.review")}</h1>
           <p className="ph-sub">{items.length ? t("phonics.reviewStart") : ""}</p>
           {reward.coins + reward.sp > 0 && (
@@ -88,7 +90,7 @@ export default function PhonicsReviewPage() {
 
           {items.length === 0 ? (
             <div className="ph-card--ink ph-stage mt-6" style={{ padding: "3rem 1.5rem" }}>
-              <p className="text-6xl">🌈</p>
+              <p className="text-6xl text-brand-text inline-flex justify-center"><BookOpenIcon size={60} /></p>
               <p className="ph-h1" style={{ fontSize: "1.3rem" }}>
                 {t("phonics.reviewEmpty")}
               </p>
@@ -114,7 +116,7 @@ export default function PhonicsReviewPage() {
                           void speakWord(item.text, 0.6).then(() => speakWord(item.text, 1));
                         }}
                       >
-                        🔊
+                        <VolumeIcon size={20} />
                       </button>
                       <span className="text-3xl">{item.emoji}</span>
                       <div className="flex-1 min-w-0">
@@ -133,7 +135,7 @@ export default function PhonicsReviewPage() {
                         </div>
                       </div>
                       {done ? (
-                        <span className="ph-pill ph-pill--good">✓</span>
+                        <span className="ph-pill ph-pill--good"><CheckIcon size={13} /></span>
                       ) : (
                         <button
                           type="button"

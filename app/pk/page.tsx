@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { CrownIcon, HourglassIcon, VolumeIcon, FlagIcon } from "@/components/icons";
+import { MuscleIcon, MedalIcon } from "@/components/SvgIcons";
 import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { usePKBattle } from "@/lib/usePKBattle";
 import { speakWord, stopSpeech, unlockAudio } from "@/lib/phonics";
-import { LOGIN_URL } from "@/lib/api";
+import { LOGIN_URL, reportEvidence } from "@/lib/api";
 import { isLoggedIn, getMe } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
 
@@ -72,6 +74,10 @@ export default function PKPage() {
     const isCorrect = i === q.correctIndex;
     const timeMs = Date.now() - questionStart;
     pk.submitAnswer(pk.roomCode, qIdx, isCorrect, timeMs);
+    // 判断层证据（全量接入）：对战不入经济（V7 规约），但错选方向留痕供诊断
+    reportEvidence(`pk:${q.prompt}`, isCorrect, q.prompt, {
+      questionType: "pk", chosen: q.choices[i], correct: q.choices[q.correctIndex], timeMs,
+    });
   };
 
   // Next question
@@ -107,9 +113,9 @@ export default function PKPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="🏫 CLASS PK" title={t("pk.title")} />
+        <PageHeader badge="CLASS PK" title={t("pk.title")} />
         <p className="mb-5 text-sm text-tertiary">
-          {pk.connected ? `🟢 ${t("pk.connected")}` : `🔴 ${t("pk.connecting")}`} · {t("pk.realtime")}
+          {pk.connected ? <span className="inline-flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-full" style={{ background: "#22C55E" }} />{t("pk.connected")}</span> : <span className="inline-flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-full" style={{ background: "#EF4444" }} />{t("pk.connecting")}</span>} · {t("pk.realtime")} · {t("pk.realtime")}
         </p>
 
         {/* IDLE: join by room code — hosting is the teacher app's job */}
@@ -150,13 +156,13 @@ export default function PKPage() {
               <div className="flex flex-wrap justify-center gap-2">
                 {pk.players.map((p, i) => (
                   <span key={i} className={`rounded-pill px-3 py-1.5 text-xs font-bold ${p.role === "teacher" ? "bg-brand-subtle text-brand-text" : "bg-canvas text-secondary"}`}>
-                    {p.role === "teacher" ? "👑 " : ""}{p.name}
+                    {p.role === "teacher" && <CrownIcon size={13} className="inline" />} {p.name}
                   </span>
                 ))}
               </div>
             </div>
 
-            <p className="mt-6 text-sm text-tertiary">⏳ {t("pk.waitingTeacher")}</p>
+            <p className="mt-6 text-sm text-tertiary inline-flex items-center gap-1"><HourglassIcon size={14} /> {t("pk.waitingTeacher")}</p>
           </div>
         )}
 
@@ -175,7 +181,7 @@ export default function PKPage() {
             <div className="g-card flex items-center justify-between p-3">
               <div className="flex items-center gap-2">
                 <span className={`font-booster text-xl font-extrabold ${timeLeft <= 10 ? "text-critical" : "text-primary"}`}>
-                  ⏱ {timeLeft}{t("pk.sec")}
+                  <HourglassIcon size={13} className="inline" /> {timeLeft}{t("pk.sec")}
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -196,7 +202,7 @@ export default function PKPage() {
                   className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-brand text-3xl text-white transition hover:opacity-90"
                   aria-label="play word"
                 >
-                  🔊
+                  <VolumeIcon size={22} />
                 </button>
               ) : (
                 <p className="font-booster text-3xl font-extrabold text-primary">{q.prompt}</p>
@@ -234,14 +240,14 @@ export default function PKPage() {
         {/* ENDED: results */}
         {pk.phase === "ended" && (
           <div className="g-card-hero p-8 text-center">
-            <span className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-brand-subtle text-4xl">🏁</span>
+            <span className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-brand-subtle text-brand-text"><FlagIcon size={34} /></span>
             <h2 className="mt-4 font-booster text-2xl font-extrabold text-primary">{t("pk.battleOver")}</h2>
             <div className="mt-4 flex flex-col gap-2">
               {pk.results.map((p, i) => (
                 <div key={i} className={`flex items-center justify-between rounded-2xl border px-4 py-3 ${i === 0 ? "border-gold bg-gold/10" : "border-subtle bg-surface"}`}>
                   <div className="flex items-center gap-3">
                     <span className="grid w-8 place-items-center font-booster text-lg font-extrabold text-tertiary">
-                      {i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}
+                      {i === 0 ? <MedalIcon size={18} /> : i === 1 ? <MedalIcon size={18} className="opacity-75" /> : i === 2 ? <MedalIcon size={18} className="opacity-50" /> : i + 1}
                     </span>
                     <span className={`text-sm font-bold ${i === 0 ? "text-gold" : "text-primary"}`}>{p.name}</span>
                   </div>

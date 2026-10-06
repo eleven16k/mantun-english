@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FlameIcon } from "@/components/icons";
+
 import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
 import { useGameStore } from "@/lib/store";
-import { FlameIcon } from "@/components/SvgIcons";
+import { SnowflakeIcon } from "@/components/SvgIcons";
 import { STREAK_LEVELS, getStreakLevel, getExamPhase, getProfile } from "@/lib/plan";
 import { useI18n } from "@/lib/i18n";
+import { KpRadarCard } from "@/components/KpRadar";
 
 /**
  * /progress — E1 nine-level streak ladder + D2 countdown + friends leaderboard.
@@ -21,6 +24,11 @@ const LEVEL_KEYS = [
   "prog.level6", "prog.level7", "prog.level8", "prog.level9",
 ] as const;
 const LEVEL_XP = [0, 50, 150, 350, 700, 1200, 2000, 3500, 6000];
+
+const STREAK_TONES: Record<string, string> = {
+  amber: "#F59E0B", orange: "#F97316", deeporange: "#EA580C", rose: "#F43F5E",
+  brown: "#92400E", red: "#DC2626", violet: "#8B5CF6", sky: "#0EA5E9", gold: "#D97706",
+};
 
 const STREAK_LEVEL_KEYS = [
   "prog.streakLevel1", "prog.streakLevel2", "prog.streakLevel3", "prog.streakLevel4",
@@ -70,7 +78,7 @@ export default function ProgressPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="📈 PROGRESS" title={t("prog.title")} />
+        <PageHeader badge="PROGRESS" title={t("prog.title")} />
 
         {/* D2: Exam countdown */}
         {exam && exam.daysLeft > 0 && (
@@ -106,11 +114,11 @@ export default function ProgressPage() {
             <div className="mt-4 w-full">
               <div className="mb-2 flex items-center justify-between">
                 <p className="text-xs font-bold text-secondary">
-                  {streakInfo.current.emoji} {t(STREAK_LEVEL_KEYS[streakInfo.current.level - 1])} (Lv{streakInfo.current.level})
+                  <span style={{ color: STREAK_TONES[streakInfo.current.emoji] ?? "var(--ph-orange)" }} className="inline"><FlameIcon size={15} /></span> {t(STREAK_LEVEL_KEYS[streakInfo.current.level - 1])} (Lv{streakInfo.current.level})
                 </p>
                 {streakInfo.next && (
                   <p className="text-xs text-tertiary">
-                    {t("prog.next")} {streakInfo.next.emoji} {t(STREAK_LEVEL_KEYS[streakInfo.next.level - 1])} {t("prog.at")} {streakInfo.next.minDays}{t("prog.daysAbbr")}
+                    {t("prog.next")} <span style={{ color: STREAK_TONES[streakInfo.next.emoji] ?? "var(--ph-orange)" }} className="inline"><FlameIcon size={15} /></span> {t(STREAK_LEVEL_KEYS[streakInfo.next.level - 1])} {t("prog.at")} {streakInfo.next.minDays}{t("prog.daysAbbr")}
                   </p>
                 )}
               </div>
@@ -127,7 +135,7 @@ export default function ProgressPage() {
                         }`}
                         title={t(STREAK_LEVEL_KEYS[i])}
                       >
-                        {sl.emoji}
+                        <span style={{ color: STREAK_TONES[sl.emoji] ?? "var(--ph-orange)" }} className="inline-flex"><FlameIcon size={15} /></span>
                       </div>
                       <span className={`text-[8px] font-bold ${isCurrent ? "text-brand-text" : "text-tertiary"}`}>
                         {sl.minDays}{t("prog.daysAbbr")}
@@ -145,7 +153,7 @@ export default function ProgressPage() {
               {/* Freeze indicator */}
               {streakFreezesOwned > 0 && (
                 <p className="mt-2 text-[11px] text-info">
-                  ❄️ {streakFreezesOwned} {streakFreezesOwned > 1 ? t("prog.freezesAvailable") : t("prog.freezeAvailable")}
+                  <SnowflakeIcon size={13} className="inline" /> {streakFreezesOwned} {streakFreezesOwned > 1 ? t("prog.freezesAvailable") : t("prog.freezeAvailable")}
                 </p>
               )}
             </div>
@@ -168,7 +176,7 @@ export default function ProgressPage() {
                       }`}
                       style={done ? { background: "var(--bg-streak-emphasis-default)" } : undefined}
                     >
-                      {done ? "🔥" : isToday ? dailyQuestionsAnswered : ""}
+                      {done ? <FlameIcon size={15} className="inline" /> : isToday ? dailyQuestionsAnswered : ""}
                     </div>
                   </div>
                 );
@@ -181,6 +189,9 @@ export default function ProgressPage() {
             </p>
           </div>
         </section>
+
+        {/* 判断层能力雷达（阶段2；无画像数据时自隐藏） */}
+        <KpRadarCard />
 
         {/* Friends leaderboard */}
         <section className="g-card p-5">

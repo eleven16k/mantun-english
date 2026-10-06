@@ -7,7 +7,10 @@
  */
 import { useEffect } from "react";
 import { useGameStore } from "./store";
-import { getMe, isLoggedIn } from "./api";
+import { getMe, isLoggedIn, getWeaknesses } from "./api";
+import { mergeServerWeaknesses } from "./weakness-sync";
+import { hydrateVocabFromLexicon } from "./vocab";
+import { savedStage, saveStage, stageDef } from "./stage";
 
 // 模块级时间戳：AppShell 随页面重挂载，用它在重挂载间做 30s 节流
 let lastSyncAt = 0;
@@ -21,14 +24,35 @@ export function useAppSync() {
       rehydrated = true;
       void useGameStore.persist.rehydrate();
     }
+    // 词库扩容：按学段角色注入题库（幂等、离线安全；游客用本地角色，登录后随 me 更新）
+    {
+      const def = stageDef(savedStage());
+      void hydrateVocabFromLexicon({ tags: def.quizTags, difficulties: def.quizDifficulties });
+    }
+
     // AppShell 随页面重挂载会重复触发本 effect——30 秒内不重复拉 /api/me，
     // 避免每次跳转都打一次接口（顶部数值本就一致，纯属浪费）
     if (Date.now() - lastSyncAt < 30_000) return;
     if (!isLoggedIn()) return;
 
     lastSyncAt = Date.now();
+    // 阶段3（缺口 9）：错词本水合——服务端权威弱点并进本地 store，
+    // 每日计划的 40% 弱点分量在重载后不再蒸发。失败静默（离线模式照旧）。
+    getWeaknesses()
+      .then(rows => {
+        useGameStore.setState(st => ({ weaknesses: mergeServerWeaknesses(st.weaknesses, rows) }));
+      })
+      .catch(() => {});
+
     getMe()
       .then(data => {
+        // 服务端 stage 与本地不同（他端改过）→ 按服务端角色重挂题库
+        const serverStage = (data.user as { stage?: string }).stage;
+        if (serverStage && serverStage !== savedStage()) {
+          saveStage(serverStage as ReturnType<typeof savedStage>);
+          const def = stageDef(serverStage);
+          void hydrateVocabFromLexicon({ tags: def.quizTags, difficulties: def.quizDifficulties });
+        }
         const eco = data.economy;
         if (!eco) return;
 

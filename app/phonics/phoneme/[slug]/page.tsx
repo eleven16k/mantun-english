@@ -6,6 +6,8 @@
  */
 
 import Link from "next/link";
+import { VolumeIcon, BookOpenIcon } from "@/components/icons";
+
 import { useParams } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { useI18n } from "@/lib/i18n";
@@ -75,7 +77,7 @@ export default function PhonemeDetailPage() {
                   .then(() => playPhoneme(phoneme.slug, phoneme.exampleWord, true));
               }}
             >
-              🔊
+              <VolumeIcon size={20} />
             </button>
 
             <div className="mt-6 flex flex-wrap justify-center gap-2">
@@ -95,7 +97,7 @@ export default function PhonemeDetailPage() {
                   ) : (
                     <span key={i}>{seg.text}</span>
                   ),
-                )} 🔊
+                )} <VolumeIcon size={18} className="inline" />
               </button>
               <span className="ph-pill ph-pill--gold">
                 {t("phonics.grapheme")}: {phoneme.grapheme}
@@ -104,7 +106,7 @@ export default function PhonemeDetailPage() {
             </div>
           </div>
 
-          <p className="ph-group-title">📖 {t("phonics.inWords")}</p>
+          <p className="ph-group-title"><BookOpenIcon size={15} className="inline" /> {t("phonics.inWords")}</p>
           {related.length === 0 ? (
             <div className="ph-card text-center text-sm font-semibold" style={{ color: "var(--ph-ink-3)" }}>
               {t("phonics.noWords")}

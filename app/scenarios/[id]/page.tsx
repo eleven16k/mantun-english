@@ -7,19 +7,28 @@
  * TTS replay, and realtime voice calls via the speech-to-speech engine.
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { SparklesIcon, FileTextIcon, PhoneIcon } from "@/components/icons";
+
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { ScenarioCallOverlay, type CallTranscriptRow } from "@/components/scenarios/ScenarioCallOverlay";
+import { DemoStage, DrillStage, StageBar, VocabStage, type LessonStageName } from "@/components/scenarios/LessonStages";
 import { scenarioById, scenarioImg, buildCallInstructions, type Scenario, type VocabLevel } from "@/lib/scenarios";
+import { lessonFor } from "@/lib/scenario-lessons";
 import { fetchCustomScenarios } from "@/lib/api";
 import { kv } from "@/lib/kv";
 import { useI18n } from "@/lib/i18n";
+import { lookupLexicon } from "@/lib/lexicon";
 import { chatWithNpc, generateScenarioVocab, scenarioTTS, bankScenarioReward, translateScenarioText } from "@/lib/api";
+import { playPcm } from "@/lib/tts";
 import { useGameStore } from "@/lib/store";
 
 const LEVEL_KEY = "lexi-scenario-level";
 const CUSTOM_VOCAB_KEY = "lexi-scenario-custom-vocab";
+// S1 四段式：完成标记 + 断点（中途退出可续）
+const lessonDoneKey = (id: string) => `lexi-lesson-done:${id}`;
+const lessonStageKey = (id: string) => `lexi-lesson-stage:${id}`;
 
 interface Message {
   id: string;
@@ -33,51 +42,6 @@ interface Message {
 // appended in one batch, so playback/translation state keys on this instead.
 let msgSeq = 0;
 const mkMsgId = () => `m${Date.now().toString(36)}-${msgSeq++}`;
-
-/**
- * Play base64 PCM16 audio through a fresh AudioContext. Resolves when the
- * clip finishes or the returned cancel handle is invoked (another bubble
- * interrupting playback).
- */
-async function playPcm(
-  base64: string,
-  sampleRate: number,
-  registerCancel?: (cancel: () => void) => void
-): Promise<void> {
-  const bin = atob(base64);
-  const bytes = new Uint8Array(bin.length);
-  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-  const pcm = new Int16Array(bytes.buffer);
-  const ctx = new AudioContext();
-  const buffer = ctx.createBuffer(1, pcm.length, sampleRate);
-  const channel = buffer.getChannelData(0);
-  for (let i = 0; i < pcm.length; i++) channel[i] = pcm[i] / 32768;
-  let closed = false;
-  const closeCtx = () => {
-    if (closed) return;
-    closed = true;
-    void ctx.close().catch(() => {});
-  };
-  return new Promise((resolve) => {
-    const src = ctx.createBufferSource();
-    src.buffer = buffer;
-    src.onended = () => {
-      closeCtx();
-      resolve();
-    };
-    src.connect(ctx.destination);
-    src.start();
-    registerCancel?.(() => {
-      try {
-        src.stop();
-      } catch {
-        // already stopped — nothing to do
-      }
-      closeCtx();
-      resolve();
-    });
-  });
-}
 
 export default function ScenarioSessionPage() {
   const { id } = useParams<{ id: string }>();
@@ -115,6 +79,9 @@ export default function ScenarioSessionPage() {
   const [micError, setMicError] = useState<string | null>(null);
   const [inCall, setInCall] = useState(false);
   const [callToast, setCallToast] = useState<string | null>(null);
+  // S1 四段式：null = 不上课/已上完（直达 chat）；demo→drill→vocab→null(实战)
+  const lesson = useMemo(() => (scenario ? lessonFor(scenario.id) : undefined), [scenario]);
+  const [stage, setStage] = useState<LessonStageName | null>(null);
 
   const masteredRef = useRef<Set<string>>(new Set());
   const recognitionRef = useRef<{ start: () => void; stop: () => void } | null>(null);
@@ -235,10 +202,42 @@ export default function ScenarioSessionPage() {
   const startBriefing = () => {
     if (!scenario) return;
     setBriefing(false);
+    // S1：有课程内容且没上过（或上次中途退出）→ 进四段流程；否则直达 chat。
+    if (lesson) {
+      const done = kv.getItem(lessonDoneKey(scenario.id)) === "1";
+      const saved = kv.getItem(lessonStageKey(scenario.id)) as string | null;
+      const resumeStage = !done && saved && ["demo", "drill", "vocab"].includes(saved) ? (saved as LessonStageName) : null;
+      if (!done || resumeStage) {
+        setStage(resumeStage ?? "demo");
+        return;
+      }
+    }
     const greeting = `Hello! I'm ${scenario.npc}, the ${scenario.npcRole.en}. Welcome to ${scenario.location.en}. How can I help you today?`;
     const translation = `你好！我是 ${scenario.npc}，${scenario.npcRole.zh}。欢迎来到 ${scenario.location.zh}。今天我能帮你什么吗？`;
     const tip = locale === "zh" ? "[Tip: 用英语向 NPC 打个招呼，告诉他们你需要什么。]" : "[Tip: Greet the NPC and tell them what you need.]";
     setMessages([{ id: mkMsgId(), role: "model", text: `${greeting} \n--- \n ${translation} \n--- \n ${tip}`, timestamp: Date.now() }]);
+  };
+
+  // S1 断点：段切换时记录，完成时清掉
+  const gotoStage = (next: LessonStageName | null) => {
+    if (!scenario) return;
+    if (next === null) {
+      kv.setItem(lessonDoneKey(scenario.id), "1");
+      kv.removeItem(lessonStageKey(scenario.id));
+      setStage(null);
+      startBriefing();
+      return;
+    }
+    kv.setItem(lessonStageKey(scenario.id), next);
+    setStage(next);
+  };
+
+  const retakeLesson = () => {
+    if (!scenario) return;
+    kv.removeItem(lessonDoneKey(scenario.id));
+    kv.removeItem(lessonStageKey(scenario.id));
+    setMessages([]);
+    setStage("demo");
   };
 
   const sendMessage = async () => {
@@ -459,7 +458,7 @@ export default function ScenarioSessionPage() {
         {showTranslation && translation && renderTranslationCard(translation)}
         {tip && (
           <div className="flex items-start gap-2 rounded-xl border border-brandborder/30 bg-brand-subtle/60 p-2.5 text-[11px] font-medium leading-relaxed text-brand-text">
-            <span aria-hidden>✨</span>
+            <span aria-hidden><SparklesIcon size={16} /></span>
             <p>{tip}</p>
           </div>
         )}
@@ -551,12 +550,18 @@ export default function ScenarioSessionPage() {
                       onChange={(e) => {
                         const file = e.target.files?.[0];
                         if (!file) return;
-                        file.text().then((content) => {
-                          setCustomInput((prev) => (prev ? `${prev}, ${content}` : content).slice(0, 2000));
+                        file.text().then(async (content) => {
+                          // 词面解析后查统一词库回填释义——AI grounding 从「裸词面」升级为「词+义」
+                          const words = content.split(/[\s,，;；、\n]+/).map((w) => w.trim().toLowerCase()).filter(Boolean);
+                          const entries = await Promise.all(words.slice(0, 80).map((w) => lookupLexicon(w)));
+                          const enriched = words
+                            .map((w, i) => (entries[i] ? `${w}(${entries[i]!.cn.split(",")[0].split("、")[0]})` : w))
+                            .join(", ");
+                          setCustomInput((prev) => (prev ? `${prev}, ${enriched}` : enriched).slice(0, 2000));
                         });
                       }}
                     />
-                    📄 {t("scn.importVocab")}
+                    <FileTextIcon size={14} className="inline" /> {t("scn.importVocab")}
                   </label>
                 </div>
               </div>
@@ -572,9 +577,27 @@ export default function ScenarioSessionPage() {
               {isGeneratingVocab ? t("scn.preparing") : t("scn.startSimulation")}
             </button>
           </div>
+        ) : stage && lesson ? (
+          /* ── S1 四段式课程 ── */
+          <div className="mx-auto w-full max-w-3xl space-y-4">
+            <StageBar
+              current={stage}
+              done={new Set<LessonStageName>([...(stage !== "demo" ? ["demo" as const] : []), ...(stage === "vocab" ? ["drill" as const] : [])])}
+            />
+            {stage === "demo" && <DemoStage lesson={lesson} onNext={() => gotoStage("drill")} />}
+            {stage === "drill" && <DrillStage lesson={lesson} scenarioId={scenario.id} onDone={() => gotoStage("vocab")} />}
+            {stage === "vocab" && <VocabStage words={scenario.targetVocab} onDone={() => gotoStage(null)} />}
+          </div>
         ) : (
           /* ── Chat + call ── */
           <div className="g-card flex min-h-0 flex-1 flex-col overflow-hidden">
+            {lesson && (
+              <div className="border-b border-subtle px-4 pt-2 md:px-6">
+                <button onClick={retakeLesson} className="rounded-pill border border-subtle bg-canvas px-3 py-1 text-[10px] font-bold text-tertiary transition hover:text-primary">
+                  {t("lesson.retake")}
+                </button>
+              </div>
+            )}
             {/* Chat scroll area */}
             <div className="flex-1 space-y-4 overflow-y-auto p-4 md:p-6">
               {messages.map((msg) => {
@@ -597,7 +620,7 @@ export default function ScenarioSessionPage() {
                           <p className="font-medium">{msg.text}</p>
                           {msg.suggestion && (
                             <span className="mt-2 block rounded-lg bg-[rgba(15,23,42,0.45)] p-2 text-[11px] italic leading-relaxed text-white">
-                              ✨ <span className="text-[9px] font-bold uppercase tracking-widest text-white/60">
+                              <SparklesIcon size={11} className="inline" /> <span className="text-[9px] font-bold uppercase tracking-widest text-white/60">
                                 {t("scn.suggestion")}:
                               </span>{" "}
                               {msg.suggestion}
@@ -718,7 +741,7 @@ export default function ScenarioSessionPage() {
       {/* Call-ended toast */}
       {callToast && (
         <div className="fixed bottom-28 left-1/2 z-[150] -translate-x-1/2 rounded-full border-2 border-[var(--ink)] bg-primary px-5 py-3 text-xs font-bold text-app shadow-[0_3px_0_0_rgba(0,0,0,0.15)] lg:bottom-10">
-          📞 {t("scn.callEnded")} · {callToast}
+          <PhoneIcon size={14} className="inline" /> {t("scn.callEnded")} · {callToast}
         </div>
       )}
     </AppShell>

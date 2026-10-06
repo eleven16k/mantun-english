@@ -9,6 +9,8 @@
  */
 
 import { useEffect, useMemo, useState } from "react";
+import { LightbulbIcon, PartyPopperIcon} from "@/components/SvgIcons";
+
 import { makeLetterTiles, type LetterTile } from "@/lib/phonics";
 
 interface Props {
@@ -18,7 +20,7 @@ interface Props {
   /** digraph 拼法块（与 phonemes 对齐），缺省按字母拆 */
   graphemes?: string[];
   /** 结果回调：passed = 未经提示拼对；failed = 3 次机会用尽或使用提示后完成 */
-  onDone: (passed: boolean) => void;
+  onDone: (passed: boolean, attempt?: string) => void;
 }
 
 type Phase = "input" | "correct" | "tryagain" | "reveal";
@@ -71,7 +73,8 @@ export function LetterTiles({ word, ipa, phonemes, graphemes, onDone }: Props) {
       setAttempts(n);
       if (n >= 3) {
         setPhase("reveal");
-        setTimeout(() => onDone(false), 3200);
+        // 判断层证据：带上学生最终拼错的串（诊断混淆方向的原料）
+        setTimeout(() => onDone(false, seq.map((f) => f.ch).join("")), 3200);
       } else {
         setPhase("tryagain");
         setTimeout(() => {
@@ -140,7 +143,7 @@ export function LetterTiles({ word, ipa, phonemes, graphemes, onDone }: Props) {
             }}
             disabled={showHint}
           >
-            💡 提示（看过不记通过）
+            <LightbulbIcon size={13} className="inline" /> 提示（看过不记通过）
           </button>
           <span className="text-xs font-bold" style={{ color: "var(--ph-ink-3)" }}>
             还剩 {3 - attempts} 次机会
@@ -150,7 +153,7 @@ export function LetterTiles({ word, ipa, phonemes, graphemes, onDone }: Props) {
 
       {phase === "correct" && (
         <p className="mt-5">
-          <span className="ph-pill ph-pill--good">🎉 拼对了！{word}</span>
+          <span className="ph-pill ph-pill--good inline-flex items-center gap-1"><PartyPopperIcon size={13} /> 拼对了！{word}</span>
         </p>
       )}
       {phase === "tryagain" && (

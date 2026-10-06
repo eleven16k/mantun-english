@@ -73,7 +73,12 @@ export interface ReadingReward {
   hearts?: number;
 }
 
-type SubmitFn = (wordId: string, isCorrect: boolean, prompt: string) => Promise<ReadingReward | null>;
+type SubmitFn = (
+  wordId: string,
+  isCorrect: boolean,
+  prompt: string,
+  evidence?: { questionType?: string; chosen?: string; correct?: string; timeMs?: number },
+) => Promise<ReadingReward | null>;
 
 let submitter: SubmitFn | null = null;
 export function registerReadingSubmitter(fn: SubmitFn) {
@@ -85,10 +90,11 @@ export async function reportStoryAnswer(
   idx: number,
   prompt: string,
   isCorrect: boolean,
+  evidence?: { questionType?: string; chosen?: string; correct?: string; timeMs?: number },
 ): Promise<ReadingReward | null> {
   if (!submitter) return null;
   try {
-    return await submitter(`story:${storyId}:${idx}`, isCorrect, `悦读:${prompt}`);
+    return await submitter(`story:${storyId}:${idx}`, isCorrect, `悦读:${prompt}`, evidence);
   } catch {
     return null;
   }

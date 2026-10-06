@@ -1,11 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
+
 import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from 'next/navigation';
 import { useGameStore } from '@/lib/store';
 import { isLoggedIn, shopPurchase, getShopCatalog, redeemMembership, type ShopCatalogItem } from '@/lib/api';
 import { useI18n } from '@/lib/i18n';
-import { CoinIcon, CheckIcon } from './icons';
+import { CoinIcon, CheckIcon, CrownIcon } from './icons';
 import { LightbulbIcon, MoonIcon, WrenchIcon, SnowflakeIcon, HeartFilledIcon, RocketIcon } from './SvgIcons';
 
 /**
@@ -131,7 +132,7 @@ export default function ShopScreen() {
 
   return (
     <div className="page-shell">
-      <PageHeader badge="🪙 SHOP" title={t("shop.title")} />
+      <PageHeader badge="SHOP" title={t("shop.title")} />
 
       {/* coin balance pill */}
       <div className="mb-6 flex items-center justify-center">
@@ -152,7 +153,7 @@ export default function ShopScreen() {
       {/* 金币兑换会员（登录用户专属）：金币经济的主要消耗口，学习赚币→兑换会员 */}
       {mounted && isLoggedIn() && (
         <div className="g-card mb-4 flex items-center gap-4 p-4">
-          <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-[#ffd93d22] text-2xl">👑</span>
+          <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-[#ffd93d22] text-[#B45309]"><CrownIcon size={28} /></span>
           <div className="min-w-0 flex-1">
             <p className="font-booster text-base font-extrabold text-primary">{t('shop.redeem.name')}</p>
             <p className="text-xs text-tertiary leading-snug mt-0.5">{t('shop.redeem.desc')}</p>
@@ -260,7 +261,7 @@ export default function ShopScreen() {
         <div className="game-overlay fixed inset-0 z-50 flex items-center justify-center p-6" onClick={() => setRedeemOpen(false)}>
           <div className="game-modal w-full max-w-sm p-5" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center gap-3">
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd93d22] text-2xl">👑</span>
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd93d22] text-[#B45309]"><CrownIcon size={24} /></span>
               <div>
                 <h2 className="font-booster text-lg font-extrabold text-primary">{t('shop.redeem.confirmTitle')}</h2>
                 <p className="text-xs text-tertiary">{t('shop.redeem.name')}</p>

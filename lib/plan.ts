@@ -55,7 +55,12 @@ export function generateDailyPlan(): DailyPlan {
   const profile = getProfile();
   const goal = profile?.examDate ? getDailyGoal(profile.examDate) : 20;
 
-  const weaknesses = Object.keys(state.weaknesses);
+  // 阶段3（自适应缺口 9 后半）：弱点分量按错误次数降序、只计词库内词条——
+  // 服务端错词本经 useAppSync 水合后，重载不再丢分量，且最弱的词先进计划
+  const weaknesses = Object.entries(state.weaknesses)
+    .filter(([id]) => !!getWordById(id))
+    .sort(([, a], [, b]) => b.wrongCount - a.wrongCount)
+    .map(([id]) => id);
   const dueReviews = Object.entries(state.cardStates)
     .filter(([_, cs]) => cs.nextReviewAt < Date.now() && !cs.mastered)
     .map(([id]) => id)
@@ -105,18 +110,76 @@ export function questionsFromPlan(plan: DailyPlan): Question[] {
   return qs.sort(() => Math.random() - 0.5);
 }
 
+// ─── V8-P4: 服务端权威计划（断层 #9 修复）───
+
+interface ServerPlanResponse {
+  date: string;
+  goal: number;
+  items: { type: "weakness" | "review"; count: number; wordIds: string[] }[];
+  newCount: number;
+  weakKps: string[];
+  tilted: boolean;
+}
+
+const SERVER_PLAN_CACHE_KEY = "lexi-plan-daily";
+
+/**
+ * 服务端权威计划；newCount 的新词槽由本地词库（VOCAB 未学）补齐。
+ * 拉不到（离线/游客）→ null，调用方回落本地 generateDailyPlan。
+ */
+export async function fetchServerPlan(): Promise<DailyPlan | null> {
+  try {
+    const { fetchApi } = await import("./api");
+    const res = await fetchApi<ServerPlanResponse>("/api/plan/daily");
+    const state = useGameStore.getState();
+    const learned = new Set(Object.keys(state.cardStates));
+    const newIds = VOCAB.filter(v => !learned.has(v.id)).map(v => v.id).slice(0, res.newCount);
+    const items: PlanItem[] = [
+      ...res.items.filter(i => i.count > 0).map(i => ({ type: i.type, count: i.wordIds.length, wordIds: i.wordIds })),
+      ...(newIds.length > 0 ? [{ type: "new" as const, count: newIds.length, wordIds: newIds }] : []),
+    ];
+    return {
+      date: res.date,
+      goal: res.goal,
+      items,
+      totalQuestions: items.reduce((acc, i) => acc + i.count, 0),
+    };
+  } catch {
+    return null;
+  }
+}
+
+export function cacheServerPlan(plan: DailyPlan) {
+  kv.setItem(SERVER_PLAN_CACHE_KEY, JSON.stringify(plan));
+}
+
+export function getCachedServerPlan(): DailyPlan | null {
+  try {
+    const raw = kv.getItem(SERVER_PLAN_CACHE_KEY) as string | null;
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
+/** 组成是否变化（比较各分量词集，不比顺序）——变了提示「豚豚更新了计划」。 */
+export function planDiffers(a: DailyPlan, b: DailyPlan): boolean {
+  if (a.goal !== b.goal || a.totalQuestions !== b.totalQuestions) return true;
+  const key = (p: DailyPlan) =>
+    p.items.map(i => `${i.type}:${[...i.wordIds].sort().join(",")}`).sort().join("|");
+  return key(a) !== key(b);
+}
+
 // ─── E1: 9-level streak ladder ───
 
 export const STREAK_LEVELS = [
-  { level: 1, name: "Spark", emoji: "✨", minDays: 0 },
-  { level: 2, name: "Ember", emoji: "🔥", minDays: 2 },
-  { level: 3, name: "Flame", emoji: "🔥", minDays: 4 },
-  { level: 4, name: "Blaze", emoji: "🌋", minDays: 7 },
-  { level: 5, name: "Bonfire", emoji: "🪵", minDays: 10 },
-  { level: 6, name: "Inferno", emoji: "💥", minDays: 15 },
-  { level: 7, name: "Wildfire", emoji: "🌪️", minDays: 25 },
-  { level: 8, name: "Supernova", emoji: "🌟", minDays: 50 },
-  { level: 9, name: "Phoenix", emoji: "🦅", minDays: 100 },
+  { level: 1, name: "Spark", emoji: "amber", minDays: 0 },
+  { level: 2, name: "Ember", emoji: "orange", minDays: 2 },
+  { level: 3, name: "Flame", emoji: "deeporange", minDays: 4 },
+  { level: 4, name: "Blaze", emoji: "rose", minDays: 7 },
+  { level: 5, name: "Bonfire", emoji: "brown", minDays: 10 },
+  { level: 6, name: "Inferno", emoji: "red", minDays: 15 },
+  { level: 7, name: "Wildfire", emoji: "violet", minDays: 25 },
+  { level: 8, name: "Supernova", emoji: "sky", minDays: 50 },
+  { level: 9, name: "Phoenix", emoji: "gold", minDays: 100 },
 ];
 
 export function getStreakLevel(days: number) {

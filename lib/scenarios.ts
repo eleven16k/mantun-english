@@ -8,6 +8,7 @@
  */
 import { VOCAB_LISTS } from "./vocab-lists";
 import { BASE_PATH } from "./config";
+import { lessonFor, personaFor, type CorrectionTier } from "./scenario-lessons";
 
 /** picsum.photos 国内不可达 → 场景图统一改写为本地自托管副本（按 seed 映射）。 */
 export function scenarioImg(src: string): string {
@@ -270,11 +271,34 @@ export function buildCallInstructions(scenario: Scenario, level: VocabLevel, cus
       : level === "JuniorHigh"
         ? "Speak for a junior-high learner: common everyday vocabulary."
         : "Speak for a senior-high learner: natural conversational English.";
+  // V8-P1 recast 纠错规范 + V8-P2 人格三档：recast 优先是底座；纠错档位
+  // （encouraging/standard/strict）按 NPC persona 调整直接纠正的边界。
+  const persona = personaFor(scenario.id);
+  const tier: CorrectionTier = persona?.correction ?? "standard";
+  const correctionLine =
+    tier === "encouraging"
+      ? "Correction style: when the student makes a mistake, prefer RECAST — naturally continue the conversation by restating their idea in correct English (e.g. student: 'I like a latte' → you: 'A latte for you, coming up!'). Only correct directly when the mistake blocks understanding, and at most one correction per reply. Be extra warm and celebratory — praise every attempt before moving on. Never interrupt or lecture."
+      : tier === "strict"
+        ? "Correction style: prefer RECAST for flow — restate their idea in correct English naturally. For repeated or grammar-level mistakes you may add one short, kind direct correction (max one per reply). Hold a high bar but stay respectful; never interrupt mid-sentence."
+        : "Correction style: when the student makes a mistake, prefer RECAST — naturally continue the conversation by restating their idea in correct English (e.g. student: 'I like a latte' → you: 'A latte for you, coming up!'). Only correct directly when the mistake blocks understanding, and at most one correction per reply. Keep a warm, encouraging tone; never interrupt or lecture.";
+  // V8-P2 人格卡片：性格标签 + 口吻示例作语域锚点
+  const personaLine = persona
+    ? `Persona: you are ${persona.traits.join(", ")} — for example, you might say: "${persona.style}"`
+    : "";
+  // V8-S3 内容治理：审核过的开场白种子（scenario-lessons.ts，人工维护）。
+  // 有 lesson 的场景把 opening 固定注入——AI 对话的质量下限由真人把控。
+  const lesson = lessonFor(scenario.id);
+  const openingLine = lesson
+    ? `Start the call with this exact opening line (adapt naturally afterwards): "${lesson.opening}"`
+    : "";
   return [
     scenario.prompt,
     "You are role-playing a live phone call with a Chinese K12 student practicing English.",
     levelLine,
     vocabLine,
+    personaLine,
+    openingLine,
+    correctionLine,
     // Latency: the gateway model thinks before answering — keep the task small
     // so reasoning, generation, and TTS synthesis all stay short.
     "Respond immediately and spontaneously, like a real phone call. Keep every reply to 1-2 very short sentences (under 25 words). Never mention thinking or reasoning. Ask a follow-up question when the student seems stuck. Speak only English.",

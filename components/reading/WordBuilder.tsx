@@ -6,6 +6,8 @@
  */
 
 import { useEffect, useState } from "react";
+import { PartyPopperIcon } from "@/components/SvgIcons";
+
 import { useI18n } from "@/lib/i18n";
 import { quizAudioUrl } from "@/content/reading";
 import type { ReadingQuizWordBuilder, ReadingTrack } from "@/content/reading/types";
@@ -17,7 +19,7 @@ interface Props {
   track: ReadingTrack;
   quizIdx: number;
   speed: QuestSpeed;
-  onDone: (passed: boolean) => void;
+  onDone: (passed: boolean, attempt?: string) => void;
 }
 
 interface Tile {
@@ -68,7 +70,7 @@ export function WordBuilder({ q, storyId, track, quizIdx, speed, onDone }: Props
       const ok = next.map((b) => b.ch).join("") === word;
       setPhase(ok ? "correct" : "reveal");
       if (!ok) setPeeked(true);
-      setTimeout(() => onDone(ok && !peeked), ok ? 1000 : 1800);
+      setTimeout(() => onDone(ok && !peeked, next.map((b) => b.ch).join("")), ok ? 1000 : 1800);
     }
   };
 
@@ -150,7 +152,7 @@ export function WordBuilder({ q, storyId, track, quizIdx, speed, onDone }: Props
 
       {phase === "correct" && (
         <p className="mt-5 text-center">
-          <span className="ph-pill ph-pill--good">🎉 {t("reading.nice")}</span>
+          <span className="ph-pill ph-pill--good inline-flex items-center gap-1"><PartyPopperIcon size={13} /> {t("reading.nice")}</span>
         </p>
       )}
     </div>

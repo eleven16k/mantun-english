@@ -7,6 +7,8 @@
  */
 
 import { useEffect, useState } from "react";
+import { LightbulbIcon } from "@/components/SvgIcons";
+
 import { useI18n } from "@/lib/i18n";
 import { quizAudioUrl } from "@/content/reading";
 import type { ReadingQuizImageChoice, ReadingTrack } from "@/content/reading/types";
@@ -20,7 +22,7 @@ interface Props {
   speed: QuestSpeed;
   hintAvailable: boolean;
   onUseHint: () => boolean;
-  onDone: (passed: boolean) => void;
+  onDone: (passed: boolean, attempt?: string) => void;
 }
 
 export function ImageChoice({ q, storyId, track, quizIdx, speed, hintAvailable, onUseHint, onDone }: Props) {
@@ -38,7 +40,7 @@ export function ImageChoice({ q, storyId, track, quizIdx, speed, hintAvailable, 
     setPicked(value);
     setSettled(true);
     const ok = value === q.answer;
-    setTimeout(() => onDone(ok), 1200);
+    setTimeout(() => onDone(ok, value), 1200);
   };
 
   const hint = () => {
@@ -84,7 +86,7 @@ export function ImageChoice({ q, storyId, track, quizIdx, speed, hintAvailable, 
         <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
           {hintAvailable && (
             <button type="button" className="ph-btn ph-btn--ghost ph-btn--sm" onClick={hint}>
-              💡 {t("reading.hint")}
+              <LightbulbIcon size={13} className="inline" /> {t("reading.hint")}
             </button>
           )}
           <span className="text-xs font-bold" style={{ color: "var(--ph-ink-3)" }}>

@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { FlameIcon } from "@/components/icons";
+
 import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
@@ -87,7 +89,7 @@ export default function GroupsPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="👥 GROUPS" title={t("group.title")} />
+        <PageHeader badge="GROUPS" title={t("group.title")} />
         <p className="mb-5 text-sm text-tertiary">{t("group.intro")}</p>
 
         {error && <p className="mb-4 text-center text-xs font-bold text-critical">{error}</p>}
@@ -243,7 +245,7 @@ function GroupCard({
                 {m.nickname[0]}
               </span>
               <span className="flex-1 truncate text-sm font-bold text-primary">{m.nickname}</span>
-              <span className="text-xs text-tertiary">🔥 {m.streak ?? 0}{t("group.day")}</span>
+              <span className="text-xs text-tertiary inline-flex items-center gap-0.5"><FlameIcon size={12} /> {m.streak ?? 0}{t("group.day")}</span>
               <span className="font-booster text-sm font-extrabold text-brand-text">{m.score_points ?? 0} {t("group.sp")}</span>
             </div>
           ))}

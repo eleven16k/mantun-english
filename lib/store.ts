@@ -16,48 +16,26 @@ const DAILY_FREE_QUESTIONS = 30;
 
 // ---- League tiers ----
 // P1-2 均衡校准：阈值与服务端 LEAGUE_TIERS ×2 对齐（0/400/1000/1800/2800/4000/5600/8000）
+// icon 为语义 key，渲染层映射 SVG（见 ResultsScreen 的 TierIcon / ShopScreen 的 ShopItemIcon）
 export const LEAGUE_TIERS = [
-  { name: '青铜', icon: '🥉', color: '#A16207', minSP: 0 },
-  { name: '白银', icon: '🥈', color: '#94A3B8', minSP: 400 },
-  { name: '黄金', icon: '🥇', color: '#F59E0B', minSP: 1000 },
-  { name: '铂金', icon: '💎', color: '#06B6D4', minSP: 1800 },
-  { name: '翡翠', icon: '💚', color: '#10B981', minSP: 2800 },
-  { name: '钻石', icon: '🔷', color: '#3B82F6', minSP: 4000 },
-  { name: '大师', icon: '👑', color: '#8B5CF6', minSP: 5600 },
-  { name: '王者', icon: '🏆', color: '#EC4899', minSP: 8000 },
+  { name: '青铜', icon: 'bronze', color: '#A16207', minSP: 0 },
+  { name: '白银', icon: 'silver', color: '#94A3B8', minSP: 400 },
+  { name: '黄金', icon: 'gold', color: '#F59E0B', minSP: 1000 },
+  { name: '铂金', icon: 'gem', color: '#06B6D4', minSP: 1800 },
+  { name: '翡翠', icon: 'emerald', color: '#10B981', minSP: 2800 },
+  { name: '钻石', icon: 'diamond', color: '#3B82F6', minSP: 4000 },
+  { name: '大师', icon: 'crown', color: '#8B5CF6', minSP: 5600 },
+  { name: '王者', icon: 'trophy', color: '#EC4899', minSP: 8000 },
 ];
 
 export const POWERUPS = [
-  { id: 'streak-repair', name: '连胜修复', icon: '🔧', desc: '恢复中断的连胜记录', price: 50, color: '#F59E0B' },
-  { id: 'streak-freeze', name: '连胜冻结', icon: '❄️', desc: '冻结今日连胜，明天继续', price: 30, color: '#3B82F6' },
-  { id: 'hint', name: '提示道具', icon: '💡', desc: '答题时排除两个错误选项', price: 10, color: '#FCD34D' },
-  { id: 'super-heart', name: '蓝心续命', icon: '💙', desc: '红心归零时自动续命一颗', price: 20, color: '#06B6D4' },
-  { id: 'score-boost', name: '提分加速', icon: '🚀', desc: '本场练习提分值 x2，持续 10 题', price: 40, color: '#8B5CF6' },
-  { id: 'heart-refill', name: '体力回满', icon: '❤️', desc: '立刻恢复所有红心', price: 35, color: '#F43F5E' },
+  { id: 'streak-repair', name: '连胜修复', icon: 'wrench', desc: '恢复中断的连胜记录', price: 50, color: '#F59E0B' },
+  { id: 'streak-freeze', name: '连胜冻结', icon: 'snowflake', desc: '冻结今日连胜，明天继续', price: 30, color: '#3B82F6' },
+  { id: 'hint', name: '提示道具', icon: 'lightbulb', desc: '答题时排除两个错误选项', price: 10, color: '#FCD34D' },
+  { id: 'super-heart', name: '蓝心续命', icon: 'heartfill', desc: '红心归零时自动续命一颗', price: 20, color: '#06B6D4' },
+  { id: 'score-boost', name: '提分加速', icon: 'rocket', desc: '本场练习提分值 x2，持续 10 题', price: 40, color: '#8B5CF6' },
+  { id: 'heart-refill', name: '体力回满', icon: 'heart', desc: '立刻恢复所有红心', price: 35, color: '#F43F5E' },
 ];
-
-// Mock leaderboard data
-function generateLeaderboard(mySP: number) {
-  const names = ['张小明', '李思琪', '王浩然', '赵雨桐', '刘子轩', '陈欣怡', '杨宇航', '周梦琪', '吴俊杰', '郑爽', '孙佳怡', '马天宇'];
-  const avatars = ['🦊', '🐼', '🐯', '🦁', '🐨', '🐸', '🐵', '🐰', '🦉', '🐧', '🦄', '🐲'];
-  const players = names.map((name, i) => ({
-    id: `p${i}`,
-    name,
-    avatar: avatars[i],
-    scorePoints: Math.max(0, mySP + Math.floor((Math.random() - 0.4) * 600)),
-    isMe: false,
-    isClassmate: true,
-  }));
-  players.push({
-    id: 'me',
-    name: '我',
-    avatar: '⭐',
-    scorePoints: mySP,
-    isMe: true,
-    isClassmate: true,
-  });
-  return players.sort((a, b) => b.scorePoints - a.scorePoints);
-}
 
 function getTierIndex(sp: number) {
   let idx = 0;
@@ -176,6 +154,8 @@ interface GameState {
   useScoreBoost: () => void;
   refillHearts: () => void;
   tickRegen: () => void;
+  /** 直加金币（抽卡打字等本地记账路径用；主玩法走 answerQuestion） */
+  earnCoins: (n: number) => void;
   canAnswerMore: () => boolean;
   getWeaknesses: () => Weakness[];
   startWeaknessDrill: () => void;
@@ -602,6 +582,8 @@ export const useGameStore = create<GameState>()(
         }
       },
 
+      earnCoins: (n: number) => set({ coins: get().coins + n }),
+
       getWeaknesses: () => {
         return Object.values(get().weaknesses).sort((a, b) => b.wrongCount - a.wrongCount);
       },
@@ -674,4 +656,4 @@ function createCardState(wordId: string): CardState {
   };
 }
 
-export { DAILY_FREE_QUESTIONS, getTierIndex, generateLeaderboard };
+export { DAILY_FREE_QUESTIONS, getTierIndex };

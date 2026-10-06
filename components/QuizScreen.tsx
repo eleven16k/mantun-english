@@ -3,10 +3,12 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useGameStore, DAILY_FREE_QUESTIONS } from '@/lib/store';
 import { getWordById } from '@/lib/vocab';
-import { HeartIcon, CoinIcon, BoltIcon, CheckIcon, XIcon } from './icons';
-import { submitAnswer } from '@/lib/api';
+import { HeartIcon, CoinIcon, BoltIcon, CheckIcon, XIcon, FlameIcon, CrownIcon, MonsterIcon } from './icons';
+import { GiftIcon, PartyPopperIcon } from './SvgIcons';
+import { submitAnswer, reportEvidence, type AnswerEvidence } from '@/lib/api';
 import { judgeAnswer, askTutor, synthesizeSpeech, transcribeSpeech } from '@/lib/deeptutor';
 import { Md } from '@/components/Markdown';
+import { ExplainSheet } from '@/components/ExplainSheet';
 import { useI18n } from '@/lib/i18n';
 
 const LETTERS = ['A', 'B', 'C', 'D'];
@@ -51,7 +53,7 @@ export default function QuizScreen() {
   const micStopRef = useRef<(() => void) | null>(null);
   const quizKbName = useGameStore((s) => s.quizKbName);
   const { locale } = useI18n();
-  const [floatReward, setFloatReward] = useState<{ text: string; color: string; key: number } | null>(null);
+  const [floatReward, setFloatReward] = useState<{ text: string; color: string; key: number; icon?: 'gift' | 'flame' | 'party' } | null>(null);
   const [heartLoss, setHeartLoss] = useState(false);
   const rewardKey = useRef(0);
 
@@ -63,6 +65,7 @@ export default function QuizScreen() {
   const [feverActive, setFeverActive] = useState(false);
   const feverRef = useRef(false); // 该题作答时 Fever 是否生效（服务端同步倍率）
   const speedMultRef = useRef(1); // 该题作答时的速度倍率（服务端同步倍率）
+  const qStartRef = useRef(Date.now()); // 本题开始时间（判断层证据：答题用时）
   const [serverResult, setServerResult] = useState<{
     coinsEarned: number; spEarned: number; hearts: number;
     enteredWeakness: boolean; conqueredWeakness: boolean;
@@ -102,6 +105,7 @@ export default function QuizScreen() {
     setTutorInput('');
     setTutorLoading(false);
     setTutorSources(null);
+    qStartRef.current = Date.now(); // 判断层证据：换题重起计时
   }, [currentQIndex]);
 
   // Feedback effects: floating reward on correct, heart shake on wrong
@@ -154,16 +158,26 @@ export default function QuizScreen() {
     dropKey.current++;
     setDropShower({ coins: lastDrop, key: dropKey.current });
     rewardKey.current++;
-    setFloatReward({ text: `🎁 +${lastDrop} 金币`, color: '#F59E0B', key: rewardKey.current });
+    setFloatReward({ text: `+${lastDrop} 金币`, color: '#F59E0B', key: rewardKey.current, icon: 'gift' });
     const t1 = setTimeout(() => setDropShower(null), 1400);
     const t2 = setTimeout(() => setFloatReward(null), 1200);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [lastDrop]);
 
   // ---- Handlers ----
-  const handleAnswer = (i: number) => {
+  // 判断层证据：typed 题（AI 简答/填空）由 submitTyped 传入文本证据
+  const handleAnswer = (i: number, typed?: { chosen: string; correct: string }) => {
     if (showFeedback || !q) return;
     const isCorrect = i === q.correctIndex;
+    // 判断层证据（阶段1）：所选/正确选项与答题用时，随结算请求上报
+    const evidence: AnswerEvidence = typed
+      ? { questionType: 'typed', chosen: typed.chosen, correct: typed.correct }
+      : {
+          questionType: q.type,
+          chosen: q.choices?.[i],
+          correct: q.choices?.[q.correctIndex],
+        };
+    evidence.timeMs = Date.now() - qStartRef.current;
 
     // ⚡ 闪电模式：记录本题剩余秒数与倍率；🔥 Fever 生效则记录 ×2
     const st = useGameStore.getState();
@@ -184,20 +198,20 @@ export default function QuizScreen() {
     const after = useGameStore.getState();
     if (after.feverUntil && after.feverUntil > Date.now() && !feverOn) {
       rewardKey.current++;
-      setFloatReward({ text: '🔥 FEVER ×2', color: '#F59E0B', key: rewardKey.current });
+      setFloatReward({ text: 'FEVER ×2', color: '#F59E0B', key: rewardKey.current, icon: 'flame' });
       setTimeout(() => setFloatReward(null), 1400);
     }
     // 👹 Boss 被击败的即时反馈
     if (after.bossBattle?.defeated) {
       rewardKey.current++;
-      setFloatReward({ text: '🎉 Boss 击败！+50💰+50SP', color: '#16A34A', key: rewardKey.current });
+      setFloatReward({ text: 'Boss 击败！+50金币 +50SP', color: '#16A34A', key: rewardKey.current, icon: 'party' });
       setTimeout(() => setFloatReward(null), 1600);
     }
 
     // Fire server call (authoritative — updates hearts/coins/SP/streak/weakness/SM-2)
     if (q.wordId && !q.wordId.startsWith("import-") && !q.wordId.startsWith("plan-") && !q.wordId.startsWith("weak-") && !q.wordId.startsWith("battle-") && !q.wordId.startsWith("vocab-") && !q.wordId.startsWith("t")) {
       // Real vocab word → full server processing
-      submitAnswer(q.wordId, isCorrect, q.prompt)
+      submitAnswer(q.wordId, isCorrect, q.prompt, evidence)
         .then(result => {
           setServerResult(result);
           // Sync authoritative values back to store
@@ -228,6 +242,10 @@ export default function QuizScreen() {
           // Server unreachable → stay on local state (offline mode)
           console.warn("Server sync failed, using local state:", err.message);
         });
+    } else if (q.wordId) {
+      // 判断层证据（阶段1）：不进经济结算的题（import-N/plan-/weak- 等）也留痕，
+      // 供错因诊断管线使用——补齐 AI 导入题/计划题绕过学习闭环的盲区
+      reportEvidence(q.wordId, isCorrect, q.prompt, evidence);
     }
   };
 
@@ -304,7 +322,7 @@ export default function QuizScreen() {
       aiFeedback = judged.feedback;
     }
     setJudgeFeedback(aiFeedback);
-    handleAnswer(correct ? 0 : 1);
+    handleAnswer(correct ? 0 : 1, { chosen: typedInput.trim(), correct: q.answer ?? '' });
   };
 
   // Ask the AI tutor about the current question (explanation / follow-ups)
@@ -405,13 +423,13 @@ export default function QuizScreen() {
           <HeartIcon size={20} className={hearts > 0 ? 'text-hearts' : 'text-tertiary'} />
           <span className={`font-heading font-extrabold text-sm ${hearts > 0 ? 'text-hearts' : 'text-tertiary'}`}>{hearts}</span>
         </div>
-        {feverActive && <span className="fever-badge">🔥 FEVER ×2</span>}
+        {feverActive && <span className="fever-badge inline-flex items-center gap-1"><FlameIcon size={12} /> FEVER ×2</span>}
       </div>
       {sessionLightning && !showFeedback && (
         <div className="px-4 pb-1 -mt-1">
           <div className="flex items-center gap-2">
             <span className={`text-xs font-black tabular-nums ${lightningLeft <= 3 ? 'text-critical' : 'text-gold'}`}>
-              ⚡ {lightningLeft.toFixed(1)}s
+              <BoltIcon size={12} className="inline" /> {lightningLeft.toFixed(1)}s
             </span>
             <div className="flex-1 progress-track h-1.5">
               <div
@@ -430,16 +448,16 @@ export default function QuizScreen() {
           onClick={() => router.push('/pricing')}
           className="mx-4 mb-1 rounded-xl bg-brand-subtle px-3 py-1.5 text-left text-[11px] font-bold text-brand-text transition hover:opacity-80"
         >
-          👑 {Math.max(0, memberDaysLeft)} {t('pricing.daysLeft')}
+          <CrownIcon size={13} className="inline" /> {Math.max(0, memberDaysLeft)} {t('pricing.daysLeft')}
         </button>
       )}
       {/* 👹 Boss 战：血条 + 击杀提示 */}
       {bossBattle && (
         <div className="mx-4 mb-1 rounded-2xl border-2 border-[var(--ink)] bg-surface px-4 py-2 shadow-[0_3px_0_0_rgba(0,0,0,0.1)]">
           <div className="flex items-center justify-between text-xs font-black text-primary">
-            <span>👹 BOSS · {bossBattle.word}</span>
+            <span className="inline-flex items-center gap-1"><MonsterIcon size={14} /> BOSS · {bossBattle.word}</span>
             <span className={bossBattle.defeated ? 'text-positive' : 'text-critical'}>
-              {bossBattle.defeated ? '🎉 击败！+50💰+50SP' : `HP ${bossBattle.hp}/${bossBattle.maxHp}`}
+              {bossBattle.defeated ? '击败！+50金币 +50SP' : `HP ${bossBattle.hp}/${bossBattle.maxHp}`}
             </span>
           </div>
           <div className="mt-1 h-2 overflow-hidden rounded-pill bg-canvas">
@@ -449,7 +467,7 @@ export default function QuizScreen() {
             />
           </div>
           {showFeedback && selectedAnswer !== q.correctIndex && !bossBattle.defeated && (
-            <p className="mt-1 text-center text-[11px] font-bold text-critical">👹 答错了，Boss 回血 +1！</p>
+            <p className="mt-1 text-center text-[11px] font-bold text-critical inline-flex items-center gap-1"><MonsterIcon size={12} /> 答错了，Boss 回血 +1！</p>
           )}
         </div>
       )}
@@ -469,14 +487,17 @@ export default function QuizScreen() {
         <div className="g-card-hero flex-1 flex flex-col items-center justify-between text-center relative mx-4 my-2 py-6 overflow-y-auto">
           {/* Floating reward animation */}
           {floatReward && (
-          <div key={floatReward.key} className="float-reward top-1/3 left-1/2 -translate-x-1/2" style={{ color: floatReward.color }}>
+          <div key={floatReward.key} className="float-reward top-1/3 left-1/2 -translate-x-1/2 flex items-center gap-1.5" style={{ color: floatReward.color }}>
+            {floatReward.icon === 'gift' && <GiftIcon size={18} />}
+            {floatReward.icon === 'flame' && <FlameIcon size={18} />}
+            {floatReward.icon === 'party' && <PartyPopperIcon size={18} />}
             {floatReward.text}
             </div>
           )}
           {dropShower && (
             <div key={dropShower.key} className="coin-shower" aria-hidden>
               {Array.from({ length: 6 }).map((_, i) => (
-                <span key={i} style={{ left: `${15 + i * 14}%`, animationDelay: `${i * 0.12}s` }}>🪙</span>
+                <span key={i} style={{ left: `${15 + i * 14}%`, animationDelay: `${i * 0.12}s` }}><CoinIcon size={18} /></span>
               ))}
             </div>
           )}
@@ -599,6 +620,9 @@ export default function QuizScreen() {
             ) : (
               <div className="text-xs text-tertiary leading-relaxed whitespace-pre-line">{q.explanation}</div>
             )}
+
+            {/* D1 错题讲解员：答错时豚豚 ≤3 句讲明白（幂等缓存，全题型通用） */}
+            {!isCorrect && q.wordId && <ExplainSheet wordId={q.wordId} />}
 
             {/* AI tutor panel \u2014 streamed explanation + follow-ups + voice + sources */}
             {tutorOpen && (

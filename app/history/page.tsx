@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FileTextIcon } from "@/components/icons";
+
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { PageHeader } from "@/components/PageHeader";
@@ -53,7 +55,7 @@ export default function HistoryPage() {
     <AppShell>
       <div className="page-shell">
         <div className="mb-5 flex items-center justify-between">
-          <PageHeader className="" badge="🕘 AI HISTORY" title={t("hist.title")} />
+          <PageHeader className="" badge="AI HISTORY" title={t("hist.title")} />
           {mounted && records.length > 0 && (
             <button
               onClick={() => { deleteImport().then(() => setRecords([])); }}
@@ -66,7 +68,7 @@ export default function HistoryPage() {
 
         {mounted && records.length === 0 ? (
           <div className="g-card-hero p-8 text-center">
-            <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-canvas text-3xl">📋</span>
+            <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-canvas text-tertiary"><FileTextIcon size={30} /></span>
             <p className="mt-4 font-booster text-lg font-extrabold text-primary">{t("hist.emptyTitle")}</p>
             <p className="mt-1 text-sm text-tertiary">{t("hist.emptyHint")}</p>
             <button

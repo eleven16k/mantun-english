@@ -9,6 +9,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BookOpenIcon, GamepadIcon, HeadphoneIcon, TrophyIcon, CheckIcon, LockIcon } from "@/components/icons";
 import { AppShell } from "@/components/AppShell";
 import { BuddyBar } from "@/components/reading/BuddyBar";
 import { useI18n } from "@/lib/i18n";
@@ -81,7 +82,7 @@ export default function ReadingPage() {
     <AppShell>
       <div className={`ph-page rq-page rq-theme-${regionSet?.theme ?? "magic"}`}>
         <div className="ph-wrap">
-          <span className="ph-sticker">📖 READING QUEST</span>
+          <span className="ph-sticker">READING QUEST</span>
           <h1 className="ph-h1">{t("reading.title")}</h1>
           <p className="ph-sub">{t("reading.sub")}</p>
 
@@ -91,11 +92,11 @@ export default function ReadingPage() {
           </div>
 
           {/* 玩法三步（降低学习成本：始终可见的一屏说明） */}
-          <div className="ph-group-title">🎮 {t("reading.tutorialTitle")}</div>
+          <div className="ph-group-title"><GamepadIcon size={15} className="inline" /> {t("reading.tutorialTitle")}</div>
           <div className="sn-modes">
-            <div className="sn-mode-card"><i>📖</i><b>{t("reading.tutorial1").split("—")[0]}</b><span>{t("reading.tutorial1").split("—")[1] ?? ""}</span></div>
-            <div className="sn-mode-card"><i>🎧</i><b>{t("reading.tutorial2").split("—")[0]}</b><span>{t("reading.tutorial2").split("—")[1] ?? ""}</span></div>
-            <div className="sn-mode-card"><i>🏆</i><b>{t("reading.tutorial3").split("—")[0]}</b><span>{t("reading.tutorial3").split("—")[1] ?? ""}</span></div>
+            <div className="sn-mode-card"><i><BookOpenIcon size={20} /></i><b>{t("reading.tutorial1").split("—")[0]}</b><span>{t("reading.tutorial1").split("—")[1] ?? ""}</span></div>
+            <div className="sn-mode-card"><i><HeadphoneIcon size={20} /></i><b>{t("reading.tutorial2").split("—")[0]}</b><span>{t("reading.tutorial2").split("—")[1] ?? ""}</span></div>
+            <div className="sn-mode-card"><i><TrophyIcon size={20} /></i><b>{t("reading.tutorial3").split("—")[0]}</b><span>{t("reading.tutorial3").split("—")[1] ?? ""}</span></div>
           </div>
 
           {/* 主题区 × 课程 */}
@@ -135,7 +136,7 @@ export default function ReadingPage() {
                         return (
                           <div key={story.id} className={`ph-unit-row ${unlocked ? "" : "opacity-60"}`}>
                             <span className={`ph-unit-num ${cleared ? "ph-unit-num--done" : ""}`}>
-                              {cleared ? "✓" : unlocked ? story.coverEmoji : "🔒"}
+                              {cleared ? <CheckIcon size={16} /> : unlocked ? story.coverEmoji : <LockIcon size={16} />}
                             </span>
                             <div className="ph-unit-main">
                               <p className="ph-unit-title">

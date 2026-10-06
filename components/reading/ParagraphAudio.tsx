@@ -8,6 +8,8 @@
  */
 
 import { useEffect, useRef, useState } from "react";
+import { VolumeIcon } from "@/components/icons";
+
 import { playMp3, speakText, stopSpeech } from "@/lib/phonics";
 
 export type QuestSpeed = 0.8 | 1.0 | 1.2;
@@ -88,7 +90,7 @@ export function QuestPlayButton({
       aria-label="play audio"
       style={playing ? { transform: "translateY(2px)", boxShadow: "none" } : undefined}
     >
-      {playing ? "🔈 …" : "🔊 Play"}
+      {playing ? <span className="inline-flex items-center gap-1 opacity-60"><VolumeIcon size={14} /> …</span> : <span className="inline-flex items-center gap-1"><VolumeIcon size={14} /> Play</span>}
     </button>
   );
 }

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>原型 · 角色选择与词汇分配</title>
+<style>
+  /* 真站 token 对齐（globals.css） */
+  :root {
+    --bg-canvas: #f1f5f9;
+    --bg-surface: #ffffff;
+    --brand: #4d96ff;
+    --brand-hover: #2563eb;
+    --brand-subtle: #eef4ff;
+    --ink: #0f172a;
+    --ink-2: #475569;
+    --ink-3: #94a3b8;
+    --gold: #f59e0b;
+    --page-bg: #fdf8ec; /* 站点米黄底 */
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Segoe UI", sans-serif;
+    background: #efe9dc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+  }
+  /* 手机框 */
+  .phone {
+    width: 390px;
+    height: 812px;
+    background: var(--page-bg);
+    border-radius: 40px;
+    border: 10px solid #1e293b;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, .25);
+  }
+  .screen {
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    padding: 56px 20px 40px;
+    display: none;
+    animation: slidein .28s ease;
+  }
+  .screen.on { display: block; }
+  @keyframes slidein { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
+
+  /* 原型角标 */
+  .proto-tag {
+    position: absolute; top: 10px; right: 14px; z-index: 9;
+    font-size: 9px; font-weight: 900; letter-spacing: .12em;
+    color: var(--ink-3); border: 1px dashed var(--ink-3);
+    padding: 2px 8px; border-radius: 999px;
+  }
+
+  /* PageHeader 三件套（真站同款） */
+  .badge {
+    display: inline-block; background: var(--gold); color: var(--ink);
+    font-size: 11px; font-weight: 900; letter-spacing: .14em;
+    padding: 7px 16px; border-radius: 999px; transform: rotate(-2deg);
+    border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
+  }
+  h1 { font-size: 26px; font-weight: 900; color: var(--ink); margin: 14px 0 6px; }
+  .sub { font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+
+  /* 角色卡 */
+  .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+  .role {
+    background: var(--bg-surface); border: 4px solid var(--bg-canvas);
+    border-radius: 22px; padding: 16px 12px 14px; cursor: pointer;
+    text-align: center; position: relative; transition: all .15s;
+  }
+  .role:hover { transform: translateY(-2px); border-color: var(--ink); }
+  .role.on { border-color: var(--brand); background: var(--brand-subtle); }
+  .role.on::after {
+    content: "✓"; position: absolute; top: -8px; right: -6px;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--brand); color: #fff; font-weight: 900; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid #fff;
+  }
+  .role svg { width: 34px; height: 34px; stroke: var(--ink); }
+  .role .rname { font-size: 15px; font-weight: 900; color: var(--ink); margin-top: 8px; }
+  .role .rdesc { font-size: 10.5px; color: var(--ink-3); margin-top: 3px; line-height: 1.4; }
+  .role .rcount {
+    display: inline-block; margin-top: 7px; font-size: 10px; font-weight: 800;
+    color: var(--brand); background: var(--brand-subtle);
+    padding: 2px 9px; border-radius: 999px;
+  }
+
+  /* 底部条 */
+  .foot-hint { margin-top: 16px; font-size: 11px; color: var(--ink-3); text-align: center; line-height: 1.6; }
+  .link { color: var(--brand); font-weight: 800; cursor: pointer; }
+
+  /* 主按钮 */
+  .cta {
+    width: 100%; border: none; border-radius: 999px; padding: 15px;
+    font-size: 16px; font-weight: 800; color: #fff;
+    background: var(--brand); cursor: pointer; margin-top: 20px;
+    transition: opacity .15s, transform .1s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .cta:hover { opacity: .92; }
+  .cta:active { transform: scale(.98); }
+  .cta[disabled] { opacity: .45; cursor: not-allowed; }
+  .cta.ghost { background: var(--bg-surface); color: var(--brand); border: 2px solid var(--brand); }
+
+  /* 分配预览 */
+  .assign {
+    background: var(--bg-surface); border: 4px solid var(--bg-canvas);
+    border-radius: 22px; padding: 18px; margin-top: 20px;
+  }
+  .assign .a-title { font-size: 15px; font-weight: 900; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+  .assign .a-title .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); }
+  .a-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 11px 0; border-bottom: 1px dashed var(--bg-canvas);
+  }
+  .a-row:last-child { border-bottom: none; }
+  .a-ico {
+    width: 34px; height: 34px; border-radius: 10px; background: var(--brand-subtle);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .a-ico svg { width: 18px; height: 18px; stroke: var(--brand); }
+  .a-label { font-size: 11px; color: var(--ink-3); font-weight: 700; }
+  .a-val { font-size: 13.5px; font-weight: 800; color: var(--ink); margin-top: 1px; }
+  .a-val small { font-weight: 700; color: var(--ink-3); font-size: 11px; }
+
+  /* 词书角标 */
+  .bookrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .bookchip {
+    font-size: 11px; font-weight: 800; color: var(--ink-2);
+    background: var(--page-bg); border: 1.5px solid var(--bg-canvas);
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .bookchip.main { color: var(--brand); border-color: var(--brand); background: var(--brand-subtle); }
+  .note {
+    margin-top: 14px; font-size: 11px; color: var(--ink-3); line-height: 1.6;
+    background: var(--page-bg); border-radius: 12px; padding: 10px 12px;
+  }
+  .back { font-size: 13px; font-weight: 800; color: var(--ink-2); cursor: pointer; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 12px; }
+
+  /* 完成屏 */
+  .done-wrap { text-align: center; padding-top: 120px; }
+  .done-ico {
+    width: 84px; height: 84px; border-radius: 50%; background: var(--brand-subtle);
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;
+  }
+  .done-ico svg { width: 42px; height: 42px; stroke: var(--brand); }
+</style>
+</head>
+<body>
+<div class="phone">
+  <span class="proto-tag">PROTOTYPE</span>
+
+  <!-- 屏1：角色选择 -->
+  <div class="screen on" id="s1">
+    <span class="badge">WHO ARE YOU</span>
+    <h1>你是哪类学习者？</h1>
+    <p class="sub">选一个角色，我会为你配好词汇包、阅读内容和练习难度。选错也没关系，之后随时可换。</p>
+
+    <div class="roles" id="roles">
+      <!-- JS 渲染 -->
+    </div>
+
+    <p class="foot-hint">不确定水平？<span class="link" onclick="startTest()">先测一下 →</span><br>所有词书全部开放，角色只决定默认分配，不锁定内容。</p>
+
+    <button class="cta" id="s1next" disabled onclick="go('s2')">继续</button>
+  </div>
+
+  <!-- 屏1.5：迷你定级测试 -->
+  <div class="screen" id="s-test">
+    <span class="back" onclick="go('s1')">‹ 返回</span>
+    <span class="badge">QUICK TEST</span>
+    <h1 style="font-size:22px">快速定级 · 5 题</h1>
+    <p class="sub">从易到难，答到哪档就推荐哪档。不用紧张，答错不扣分。</p>
+
+    <div class="tp-bar" style="margin-top:14px"><i id="t-bar" style="width:0%"></i></div>
+    <div style="display:flex; justify-content:space-between; margin-top:5px">
+      <span style="font-size:10px; color:var(--ink-3); font-weight:700" id="t-stage">小学词</span>
+      <span style="font-size:10px; color:var(--ink-3); font-weight:700" id="t-idx">1 / 5</span>
+    </div>
+
+    <div class="assign" style="margin-top:12px">
+      <div style="text-align:center; padding:6px 0 2px">
+        <div style="font-size:11px; color:var(--ink-3); font-weight:800; letter-spacing:.08em" id="t-hint">选出划线词的意思</div>
+        <div style="font-size:30px; font-weight:900; color:var(--ink); margin:10px 0 2px" id="t-word">apple</div>
+      </div>
+      <div id="t-choices" style="margin-top:12px; display:flex; flex-direction:column; gap:9px"></div>
+    </div>
+    <div id="t-feedback" style="min-height:22px; margin-top:10px; text-align:center; font-size:13px; font-weight:800"></div>
+  </div>
+
+  <!-- 屏2.5：建议角色 -->
+  <div class="screen" id="s-suggest">
+    <span class="back" onclick="go('s-test')">‹ 回到测试</span>
+    <span class="badge">SUGGESTED</span>
+    <h1 id="sg-title">建议角色</h1>
+    <p class="sub" id="sg-sub">-</p>
+
+    <div class="roles" style="grid-template-columns:1fr; margin-top:16px" id="sg-card"></div>
+
+    <div style="text-align:center; font-size:11px; color:var(--ink-3); margin-top:14px; line-height:1.6">
+      不认同？测的是单词底子，不是你——<span class="link" onclick="go('s1')">手动选一个也行</span>
+    </div>
+    <button class="cta" onclick="confirmSuggest()">就用建议角色，看配置</button>
+  </div>
+
+  <!-- 屏2：分配预览 -->
+  <div class="screen" id="s2">
+    <span class="back" onclick="go('s1')">‹ 换个角色</span>
+    <span class="badge">YOUR SETUP</span>
+    <h1 id="p-title">已为你配置</h1>
+    <p class="sub" id="p-sub">以下分配随角色自动生效，全部可后续调整。</p>
+
+    <div class="assign">
+      <div class="a-title"><span class="dot"></span>词汇分配</div>
+      <div class="a-row">
+        <div class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <div><div class="a-label">每日练习题库</div><div class="a-val" id="a-quiz">-</div></div>
+      </div>
+      <div class="a-row">
+        <div class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect width="8" height="12" x="3" y="7" rx="1.5"/><rect width="8" height="12" x="12" y="5" rx="1.5"/></svg></div>
+        <div><div class="a-label">抽卡打字 · 默认词书</div><div class="a-val" id="a-book">-</div></div>
+      </div>
+      <div class="a-row">
+        <div class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <div><div class="a-label">悦读馆 · 故事轨道</div><div class="a-val" id="a-track">-</div></div>
+      </div>
+      <div class="a-row">
+        <div class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div>
+        <div><div class="a-label">单词闯关 · 出题难度</div><div class="a-val" id="a-wq">-</div></div>
+      </div>
+      <div class="bookrow" id="a-books"></div>
+    </div>
+
+    <p class="note">词库共 81,000+ 词：主词书之外，其他词书始终开放——想越级挑战或复习旧词，随时在「抽卡打字」里切换。</p>
+
+    <button class="cta" onclick="go('s3')">就这个，开始</button>
+    <button class="cta ghost" onclick="go('s1')">换个角色</button>
+  </div>
+
+  <!-- 屏3：完成 -->
+  <div class="screen">
+    <div class="done-wrap">
+      <div class="done-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h1 style="margin-top:0">配置完成</h1>
+      <p class="sub" id="d-sub">-</p>
+      <p class="note" style="text-align:left; margin-top:24px">
+        <b>原型说明（审核要点）</b><br>
+        ① 本步骤将替换 onboarding 现有的「选轨」步骤（原 3 选只管阅读轨）<br>
+        ② 落库 users.stage，驱动 quiz 题库 / 打字默认词书 / 阅读轨 / wordquest 四处<br>
+        ③ 老用户 stage 空 = 初中（与现状一致，零感知）；设置页可随时换角色<br>
+        ④ 定级测试保留为「先测一下」入口，测完反推建议角色
+      </p>
+      <button class="cta" onclick="go('s1')">再看一遍</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const ICONS = {
+  chick:  '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3.5 0-6.5 2.5-6.5 7 0 4 2.5 7 6.5 7s6.5-3 6.5-7c0-4.5-3-7-6.5-7z"/><circle cx="9.5" cy="10" r=".6" fill="currentColor"/><circle cx="14.5" cy="10" r=".6" fill="currentColor"/><path d="M10 13.5c.8.8 3.2.8 4 0"/><path d="M12 3V1.5"/></svg>',
+  bag:    '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1.5 13.5a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>',
+  book:   '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
+  grad:   '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>',
+  flame:  '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 3 4 4.5 4 9a4 4 0 0 1-8 0c0-1.5.6-2.7 1.5-3.8C10.5 5.5 12 4 12 2z"/><path d="M12 22c-4 0-7-2.5-7-6.5 0-2 1-3.8 2-5 .3 1.2 1 2.3 2 3 0-3 1-6 3-8 2 2 3 5 3 8 1-.7 1.7-1.8 2-3 1 1.2 2 3 2 5 0 4-3 6.5-7 6.5z"/></svg>',
+  plane:  '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>',
+  brief:  '<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>'
+};
+
+const ROLES = [
+  { id:'primary',  icon:'chick', name:'小学启蒙', desc:'打好基础 · 趣味优先',       count:'入门 202 词',        main:'入门精选',          quiz:'入门常用词 202',      books:['入门精选'],            track:'小学故事轨道' },
+  { id:'junior',   icon:'bag',   name:'初中备考', desc:'中考大纲 · 稳步提升',       count:'中考 1,468 词',      main:'中考核心词',        quiz:'中考核心词 1,468',    books:['中考核心词'],          track:'中考故事轨道' },
+  { id:'senior',   icon:'book',  name:'高中冲刺', desc:'高考大纲 · 强度拉满',       count:'高考 3,419 词',      main:'高考核心词',        quiz:'高考核心词 3,419',    books:['高考核心词'],          track:'高考故事轨道' },
+  { id:'college',  icon:'grad',  name:'大学四六级', desc:'四级打底 · 六级进阶',     count:'四六级 9,008 词',    main:'四级核心词',        quiz:'四级+六级词 9,008',   books:['四级核心词','六级核心词'], track:'高考故事轨道' },
+  { id:'postgrad', icon:'flame', name:'考研上岸', desc:'考研大纲 · 长线作战',       count:'考研 4,711 词',      main:'考研核心词',        quiz:'考研核心词 4,711',    books:['考研核心词'],          track:'中考故事轨道' },
+  { id:'abroad',   icon:'plane', name:'出国留学', desc:'托福雅思 · 学术英语',       count:'托福+雅思 11,282 词', main:'托福核心词',        quiz:'托福+雅思词 11,282',  books:['托福核心词','雅思核心词'], track:'高考故事轨道' },
+  { id:'adult',    icon:'brief', name:'成人进阶', desc:'高频实用 · 职场通用',       count:'通用高频 3,000 词',   main:'通用高频词',        quiz:'通用高频词 3,000',    books:['通用高频词'],          track:'中考故事轨道' },
+];
+
+let picked = null;
+const WQ = { primary:'入门级', junior:'初中级', senior:'高中级', college:'高中级', postgrad:'高中级', abroad:'高中级', adult:'高中级' };
+
+function renderRoles() {
+  document.getElementById('roles').innerHTML = ROLES.map(r => `
+    <div class="role" data-id="${r.id}" onclick="pick('${r.id}')">
+      ${ICONS[r.icon]}
+      <div class="rname">${r.name}</div>
+      <div class="rdesc">${r.desc}</div>
+      <span class="rcount">${r.count}</span>
+    </div>`).join('');
+}
+
+function pick(id) {
+  picked = ROLES.find(r => r.id === id);
+  document.querySelectorAll('.role').forEach(el => el.classList.toggle('on', el.dataset.id === id));
+  document.getElementById('s1next').disabled = false;
+}
+
+/* ── 迷你定级测试 ── */
+const QUIZ = [
+  { lv:'小学词',   word:'apple',      opts:['苹果','桌子','小狗','跑'],       ans:0, role:'primary' },
+  { lv:'初中词',   word:'communicate',opts:['交流','取消','数数','搬'],       ans:0, role:'junior' },
+  { lv:'高中词',   word:'consequence',opts:['后果','自信','典礼','仪表'],     ans:0, role:'senior' },
+  { lv:'四六级词', word:'elaborate',  opts:['详细阐述','蒸发','选举','放松'], ans:0, role:'college' },
+  { lv:'考研词',   word:'paradigm',   opts:['范式','公园','悖论','药剂量'],   ans:0, role:'postgrad' },
+];
+let tIdx = 0, tCorrect = 0, tLocked = false;
+
+function startTest() { tIdx = 0; tCorrect = 0; renderQ(); go('s-test'); }
+
+function renderQ() {
+  const q = QUIZ[tIdx];
+  tLocked = false;
+  document.getElementById('t-bar').style.width = (tIdx / QUIZ.length * 100) + '%';
+  document.getElementById('t-stage').textContent = q.lv;
+  document.getElementById('t-idx').textContent = (tIdx + 1) + ' / ' + QUIZ.length;
+  document.getElementById('t-hint').textContent = '选出「' + q.word + '」的意思 · ' + q.lv;
+  document.getElementById('t-word').textContent = q.word;
+  document.getElementById('t-feedback').textContent = '';
+  document.getElementById('t-choices').innerHTML = q.opts.map((o, i) =>
+    `<button class="tp-choice" style="text-align:left; padding:12px 14px" onclick="answer(${i}, this)">${String.fromCharCode(65+i)} &nbsp;${o}</button>`
+  ).join('');
+}
+
+function answer(i, btn) {
+  if (tLocked) return;
+  tLocked = true;
+  const q = QUIZ[tIdx];
+  const right = i === q.ans;
+  if (right) tCorrect++;
+  btn.className = 'tp-choice ' + (right ? 'tp-choice--right' : 'tp-choice--wrong');
+  document.getElementById('t-feedback').textContent = right ? '✓ 答对了' : '✗ 正确答案：' + q.opts[q.ans];
+  document.getElementById('t-feedback').style.color = right ? 'var(--text-positive,#15803d)' : 'var(--text-critical,#dc2626)';
+  setTimeout(() => {
+    tIdx++;
+    if (tIdx < QUIZ.length) renderQ();
+    else showSuggest();
+  }, 900);
+}
+
+function showSuggest() {
+  document.getElementById('t-bar').style.width = '100%';
+  // 推荐口径：答对到第 N 档 → 该档角色；0 题对 → primary；全对 → postgrad（college 全对也可跳 postgrad，这里取最高答对档）
+  const sugId = tCorrect === 0 ? 'primary' : QUIZ[tCorrect - 1].role;
+  const sug = ROLES.find(r => r.id === sugId);
+  picked = sug;
+  document.getElementById('sg-title').textContent = `答对 ${tCorrect} / 5 · 建议「${sug.name}」`;
+  document.getElementById('sg-sub').textContent = '按你答到的最难的词档位推荐。确认后可看词汇分配详情。';
+  const others = sug.count;
+  document.getElementById('sg-card').innerHTML = `
+    <div class="role on" style="display:flex; align-items:center; gap:14px; text-align:left; padding:16px; cursor:default">
+      <div style="flex-shrink:0">${ICONS[sug.icon].replace('<svg ', '<svg style="width:40px;height:40px"')}</div>
+      <div style="flex:1">
+        <div class="rname" style="margin-top:0">${sug.name} <span class="rcount" style="margin:0 0 0 6px">推荐</span></div>
+        <div class="rdesc" style="margin-top:3px">${sug.desc} · 主词书「${sug.main}」</div>
+      </div>
+    </div>`;
+  go('s-suggest');
+}
+
+function confirmSuggest() {
+  document.querySelectorAll('.role').forEach(el => el.classList.toggle('on', el.dataset.id === picked.id));
+  go('s2');
+}
+
+function go(id) {
+  if (id === 's2' && picked) {
+    document.getElementById('p-title').textContent = `${picked.name} · 词汇配置`;
+    document.getElementById('p-sub').textContent = '以下分配随角色自动生效，全部可后续调整。';
+    document.getElementById('a-quiz').innerHTML = `${picked.quiz} <small>（答对得金币与提分值）</small>`;
+    document.getElementById('a-book').innerHTML = `${picked.main} <small>（默认，可切换全部词书）</small>`;
+    document.getElementById('a-track').textContent = picked.track;
+    document.getElementById('a-wq').textContent = WQ[picked.id];
+    document.getElementById('a-books').innerHTML =
+      `<span class="bookchip main">★ ${picked.main}</span>` +
+      picked.books.filter(b => b !== picked.main).map(b => `<span class="bookchip">${b}</span>`).join('') +
+      `<span class="bookchip">+ 全部词书开放</span>`;
+    document.getElementById('d-sub').textContent = `你以「${picked.name}」角色开始，主词书「${picked.main}」已就位。`;
+  }
+  document.querySelectorAll('.screen').forEach((el) => el.classList.toggle('on', el.id === id));
+  document.querySelector('.screen.on').scrollTop = 0;
+}
+
+renderRoles();
+</script>
+</body>
+</html>

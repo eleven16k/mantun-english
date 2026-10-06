@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { CheckIcon, CrownIcon } from "@/components/icons";
+
 import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
 import { submitMemberRequest, getMemberRequest, type MemberRequest } from "@/lib/api";
@@ -121,12 +123,12 @@ export default function PricingPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="👑 MEMBERSHIP" title={t("pricing.title")} sub={t("pricing.subtitle")} />
+        <PageHeader badge="MEMBERSHIP" title={t("pricing.title")} sub={t("pricing.subtitle")} />
 
         {/* Membership active */}
         {isMember && (
           <div className="mb-5 rounded-2xl border-2 border-b-4 border-[#22C55E] bg-[#F0FDF4] p-4 text-center">
-            <p className="font-booster text-base font-extrabold text-positive">✓ {t("pricing.subOk")}</p>
+            <p className="font-booster text-base font-extrabold text-positive inline-flex items-center gap-1"><CheckIcon size={15} /> {t("pricing.subOk")}</p>
             {membershipExpiresAt && (
               <p className="mt-1 text-xs text-secondary">
                 {t("pricing.subUntil")} {new Date(membershipExpiresAt * 1000).toLocaleDateString()}
@@ -143,7 +145,7 @@ export default function PricingPage() {
         {/* Request submitted */}
         {applied && !isMember && (
           <div className="mb-5 rounded-2xl border-2 border-b-4 border-brandborder bg-brand-subtle p-4 text-center">
-            <p className="font-booster text-base font-extrabold text-brand-text">✓ {t("pricing.applyOk")}</p>
+            <p className="font-booster text-base font-extrabold text-brand-text inline-flex items-center gap-1"><CheckIcon size={15} /> {t("pricing.applyOk")}</p>
             <p className="mt-1 text-xs text-secondary">{applied.email}</p>
           </div>
         )}

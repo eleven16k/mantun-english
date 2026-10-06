@@ -278,6 +278,7 @@ type SubmitFn = (
   wordId: string,
   isCorrect: boolean,
   prompt: string,
+  evidence?: { questionType?: string; chosen?: string; correct?: string; timeMs?: number },
 ) => Promise<SentenceReward | null>;
 
 /** 由页面注入 lib/api 的 submitAnswer，避免循环依赖 */
@@ -298,10 +299,16 @@ export async function reportSentenceAnswer(
   en: string,
   isCorrect: boolean,
   kind: SentenceMode,
+  attempt?: string,
 ): Promise<SentenceReward | null> {
   if (!submitter) return null;
   try {
-    return await submitter(`sent:${lessonId}:${idx}`, isCorrect, `${MODE_LABEL[kind]}:${en}`);
+    return await submitter(
+      `sent:${lessonId}:${idx}`,
+      isCorrect,
+      `${MODE_LABEL[kind]}:${en}`,
+      { questionType: `sentence_${kind}`, correct: en, chosen: attempt },
+    );
   } catch {
     return null;
   }

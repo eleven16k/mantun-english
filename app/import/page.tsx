@@ -298,7 +298,7 @@ export default function ImportPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="📥 UPLOAD COURSEWARE" title={t("imp.title")} />
+        <PageHeader badge="UPLOAD COURSEWARE" title={t("imp.title")} />
 
         {/* Mode tabs — upload / paste */}
         <div className="mb-4 flex gap-1 rounded-pill bg-canvas p-1">

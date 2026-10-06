@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { AbcIcon, CrownIcon, BoltIcon, VolumeIcon, TrophyIcon } from "@/components/icons";
+import { MuscleIcon, MedalIcon } from "@/components/SvgIcons";
 import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { usePKBattle, type PKQuestion } from "@/lib/usePKBattle";
 import { LOGIN_URL } from "@/lib/api";
 import { VOCAB, makeQuestion } from "@/lib/vocab";
-import { isLoggedIn, getMe } from "@/lib/api";
+import { isLoggedIn, getMe, reportEvidence } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
 import { allWords } from "@/content/phonics/data";
 import { makeListenQuestion, shuffle, speakWord, stopSpeech, unlockAudio } from "@/lib/phonics";
@@ -106,7 +108,12 @@ export default function BattlePage() {
     if (answered || !q || !pk.roomCode) return;
     setSelected(i);
     setAnswered(true);
-    pk.submitAnswer(pk.roomCode, qIdx, i === q.correctIndex, Date.now() - questionStart);
+    const battleTimeMs = Date.now() - questionStart;
+    pk.submitAnswer(pk.roomCode, qIdx, i === q.correctIndex, battleTimeMs);
+    // 判断层证据（全量接入）：对战不入经济，错选方向留痕
+    reportEvidence(`battle:${q.prompt}`, i === q.correctIndex, q.prompt, {
+      questionType: "battle", chosen: q.choices[i], correct: q.choices[q.correctIndex], timeMs: battleTimeMs,
+    });
     setTimeout(() => {
       setSelected(null);
       setAnswered(false);
@@ -128,9 +135,9 @@ export default function BattlePage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="⚔️ 1V1 BATTLE" title={t("battle.title")} />
+        <PageHeader badge="1V1 BATTLE" title={t("battle.title")} />
         <p className="mb-5 text-sm text-tertiary">
-          {pk.connected ? `🟢 ${t("battle.liveTag")}` : `🔴 ${t("pk.connecting")}`}
+          {pk.connected ? <span className="inline-flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-full" style={{ background: "#22C55E" }} />{t("battle.liveTag")}</span> : <span className="inline-flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-full" style={{ background: "#EF4444" }} />{t("pk.connecting")}</span>}
         </p>
 
         {/* IDLE: host or join */}
@@ -156,7 +163,7 @@ export default function BattlePage() {
                 disabled={!pk.connected || !user}
                 className="rounded-pill border-2 border-subtle bg-surface px-6 py-2 text-sm font-bold text-secondary transition hover:border-brandborder disabled:opacity-40"
               >
-                🔤 {t("phonics.battleQuick")}
+                <AbcIcon size={15} className="inline" /> {t("phonics.battleQuick")}
               </button>
             </div>
 
@@ -195,7 +202,7 @@ export default function BattlePage() {
             <div className="mt-5 flex flex-wrap justify-center gap-2">
               {pk.players.map((p, i) => (
                 <span key={i} className={`rounded-pill px-3 py-1.5 text-xs font-bold ${p.role === "teacher" ? "bg-brand-subtle text-brand-text" : "bg-canvas text-secondary"}`}>
-                  {p.role === "teacher" ? "👑 " : ""}{p.name}
+                  {p.role === "teacher" && <CrownIcon size={13} className="inline" />} {p.name}
                 </span>
               ))}
             </div>
@@ -206,7 +213,7 @@ export default function BattlePage() {
         {/* COUNTDOWN */}
         {pk.phase === "countdown" && (
           <div className="flex flex-col items-center justify-center py-20">
-            <p className="font-booster text-8xl font-extrabold text-primary">⚡</p>
+            <p className="font-booster text-8xl font-extrabold text-primary"><BoltIcon size={72} /></p>
             <p className="mt-4 text-sm text-tertiary">{t("battle.getReady")}</p>
           </div>
         )}
@@ -239,12 +246,12 @@ export default function BattlePage() {
                     className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-brand text-3xl text-white transition hover:opacity-90"
                     aria-label="play word"
                   >
-                    🔊
+                    <VolumeIcon size={22} />
                   </button>
                   <p className="mt-3 text-xs font-bold uppercase text-tertiary">{t("phonics.listenPick")}</p>
                 </>
               ) : (
-                <p className="font-booster text-3xl font-extrabold text-primary break-words">{q.prompt}</p>
+                <p className="font-booster text-3xl font-extrabold text-primary break-words inline-flex items-center gap-2">{q.prompt === "🔊" ? <VolumeIcon size={30} /> : q.prompt}</p>
               )}
             </div>
 
@@ -270,13 +277,13 @@ export default function BattlePage() {
         {/* ENDED */}
         {pk.phase === "ended" && (
           <div className="g-card-hero p-8 text-center">
-            <span className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-brand-subtle text-4xl">{meWon ? "🏆" : "💪"}</span>
+            <span className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-brand-subtle text-brand-text">{meWon ? <TrophyIcon size={34} /> : <MuscleIcon size={34} />}</span>
             <h2 className="mt-4 font-booster text-2xl font-extrabold text-primary">{meWon ? t("battle.victory") : t("battle.close")}</h2>
             <div className="mt-4 flex flex-col gap-2">
               {pk.results.map((p, i) => (
                 <div key={i} className={`flex items-center justify-between rounded-2xl border px-4 py-3 ${i === 0 ? "border-gold bg-gold/10" : "border-subtle bg-surface"}`}>
                   <div className="flex items-center gap-3">
-                    <span className="grid w-8 place-items-center font-booster text-lg font-extrabold text-tertiary">{i === 0 ? "🥇" : "🥈"}</span>
+                    <span className="grid w-8 place-items-center font-booster text-lg font-extrabold text-tertiary">{i === 0 ? <MedalIcon size={18} /> : <MedalIcon size={18} className="opacity-70" />}</span>
                     <span className={`text-sm font-bold ${i === 0 ? "text-gold" : "text-primary"}`}>{p.name}</span>
                   </div>
                   <span className={`font-booster text-lg font-extrabold ${i === 0 ? "text-gold" : "text-brand-text"}`}>{p.score}</span>

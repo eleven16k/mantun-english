@@ -7,6 +7,8 @@
  */
 
 import { useEffect, useState } from "react";
+import { SparklesIcon } from "@/components/icons";
+
 import { useI18n } from "@/lib/i18n";
 import { isLoggedIn } from "@/lib/api";
 import { evolveBuddy, getReadingProfile, type ReadingProfileState } from "@/lib/reading";
@@ -52,7 +54,7 @@ export function BuddyBar({ track, onEvolved }: { track: ReadingTrack; onEvolved?
         <span style={{ flex: 1 }}>
           <span className="rq-buddy-name">
             {t("reading.buddy")} · {name}
-            {pending && <span className="ph-pill ph-pill--gold" style={{ marginLeft: "0.5rem" }}>✨ {t("reading.buddyReady")}</span>}
+            {pending && <span className="ph-pill ph-pill--gold inline-flex items-center gap-1" style={{ marginLeft: "0.5rem" }}><SparklesIcon size={12} /> {t("reading.buddyReady")}</span>}
           </span>
           <span className="rq-buddy-meta" style={{ display: "block", marginTop: "0.2rem" }}>
             {!profile

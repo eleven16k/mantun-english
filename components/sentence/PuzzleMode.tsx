@@ -8,6 +8,8 @@
  */
 
 import { useEffect, useState } from "react";
+import { PartyPopperIcon } from "@/components/SvgIcons";
+
 import { useI18n } from "@/lib/i18n";
 import { makeWordChips, tokenizeSentence, type WordChip } from "@/lib/sentence";
 import type { Sentence } from "@/content/sentence/data";
@@ -15,7 +17,7 @@ import type { Sentence } from "@/content/sentence/data";
 interface Props {
   sentence: Sentence;
   /** passed = 未看答案且一次拼对；failed = 看过答案 / 3 次机会用尽 */
-  onDone: (passed: boolean) => void;
+  onDone: (passed: boolean, attempt?: string) => void;
 }
 
 type Phase = "input" | "correct" | "tryagain" | "reveal";
@@ -69,7 +71,7 @@ export function PuzzleMode({ sentence, onDone }: Props) {
       setAttempts(n);
       if (n >= 3) {
         setPhase("reveal");
-        setTimeout(() => onDone(false), 2600);
+        setTimeout(() => onDone(false, seq.map((f) => f.word).join(" ")), 2600);
       } else {
         setPhase("tryagain");
         setTimeout(() => {
@@ -142,7 +144,7 @@ export function PuzzleMode({ sentence, onDone }: Props) {
 
       {phase === "correct" && (
         <p className="mt-5">
-          <span className="ph-pill ph-pill--good">🎉 {t("sentence.nice")}</span>
+          <span className="ph-pill ph-pill--good inline-flex items-center gap-1"><PartyPopperIcon size={13} /> {t("sentence.nice")}</span>
         </p>
       )}
       {phase === "tryagain" && (

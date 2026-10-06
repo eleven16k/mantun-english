@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { CheckIcon, BellIcon, TrophyIcon, AbcIcon, FlameIcon } from "@/components/icons";
+
 import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
@@ -192,7 +194,7 @@ export default function ClassPage() {
 
   const statusChip = (a: AssignmentRow) => {
     const overdue = a.dueAt * 1000 < Date.now() && a.status !== "done";
-    if (a.status === "done") return <span className="rounded-full bg-[var(--bg-positive-emphasis-default)] px-2 py-0.5 text-[10px] font-bold text-white">✓ {t("class.done")}</span>;
+    if (a.status === "done") return <span className="rounded-full bg-[var(--bg-positive-emphasis-default)] px-2 py-0.5 text-[10px] font-bold text-white inline-flex items-center gap-0.5"><CheckIcon size={11} /> {t("class.done")}</span>;
     if (overdue) return <span className="rounded-full bg-canvas px-2 py-0.5 text-[10px] font-bold text-tertiary">{t("class.overdue")}</span>;
     if (a.status === "in_progress") return <span className="rounded-full bg-brand-subtle px-2 py-0.5 text-[10px] font-bold text-brand-text">{t("class.inProgress")}</span>;
     return null;
@@ -201,7 +203,7 @@ export default function ClassPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="🏫 CLASS" title={t("class.title")} />
+        <PageHeader badge="CLASS" title={t("class.title")} />
 
         {/* Join card */}
         <div className="g-card p-5">
@@ -229,7 +231,7 @@ export default function ClassPage() {
         {/* Reminder banner (V6 N2) — teacher nudges, max 2 shown */}
         {reminders.map((n) => (
           <div key={n.id} className="mt-5 flex items-center gap-3 rounded-2xl border border-brandborder bg-brand-subtle px-4 py-3">
-            <span className="text-lg">🔔</span>
+            <span className="text-lg text-brand-text inline-flex"><BellIcon size={20} /></span>
             <span className="min-w-0 flex-1">
               <span className="block truncate text-sm font-bold text-primary">
                 {t("reminder.banner").replace("{{teacher}}", n.payload.teacherName ?? "")}
@@ -255,7 +257,7 @@ export default function ClassPage() {
             onClick={() => router.push("/org")}
             className="mt-6 flex w-full items-center gap-3 rounded-2xl border border-brandborder bg-brand-subtle p-5 text-left transition hover:opacity-95"
           >
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand text-base">🏆</span>
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand text-white"><TrophyIcon size={20} /></span>
             <span className="min-w-0 flex-1">
               <span className="block text-[15px] font-extrabold text-primary">{t("org.leaderboard")} · {orgRanking.org.name}</span>
               <span className="block truncate text-xs text-secondary">
@@ -282,7 +284,7 @@ export default function ClassPage() {
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
                       <p className="truncate text-[15px] font-bold text-primary">
-                        {isPhonics && <span className="mr-1">🔤</span>}
+                        {isPhonics && <span className="mr-1 inline-flex align-middle"><AbcIcon size={13} /></span>}
                         {a.title}
                       </p>
                       <p className="mt-0.5 text-xs text-tertiary">
@@ -362,7 +364,7 @@ export default function ClassPage() {
                         <span className="grid w-6 place-items-center font-booster text-sm text-tertiary">{i + 1}</span>
                         <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand text-xs font-extrabold text-white">{m.nickname[0]}</span>
                         <span className="min-w-0 flex-1 truncate text-sm font-bold text-primary">{m.nickname}</span>
-                        <span className="shrink-0 text-xs text-tertiary">🔥 {m.streak}{t("class.day")}</span>
+                        <span className="shrink-0 text-xs text-tertiary inline-flex items-center gap-0.5"><FlameIcon size={12} /> {m.streak}{t("class.day")}</span>
                         <span className="shrink-0 text-sm font-booster font-extrabold text-brand-text">{m.score_points} {t("class.sp")}</span>
                       </div>
                     ))

@@ -14,6 +14,8 @@
  */
 
 import Link from "next/link";
+import { VolumeIcon, TrophyIcon, BookOpenIcon, RepeatIcon} from "@/components/icons";
+
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AppShell } from "@/components/AppShell";
@@ -61,9 +63,9 @@ export default function UnitTrainPage() {
   // 注册经济上报器（module 级单次），登录态下金币/SP/弱点本自动流转；
   // 游客态直接跳过——economy 401 会触发全局登录跳转，不能让拼读页被踢走
   useEffect(() => {
-    registerEconomySubmitter(async (wordId, isCorrect, prompt) => {
+    registerEconomySubmitter(async (wordId, isCorrect, prompt, evidence) => {
       if (!isLoggedIn()) return null;
-      const r = await submitAnswer(wordId, isCorrect, prompt);
+      const r = await submitAnswer(wordId, isCorrect, prompt, evidence ?? {});
       return {
         coins: r.coinsEarned,
         sp: r.spEarned,
@@ -112,13 +114,13 @@ export default function UnitTrainPage() {
   }, [wordIdx]);
 
   const finishWord = useCallback(
-    (status: WordResult) => {
+    (status: WordResult, attempt?: string) => {
       if (!unit || !word) return;
       const next = [...results, { text: word.text, status }];
       setResults(next);
       const idx = next.length;
       saveUnitProgress(unit.id, { results: next, wordIdx: idx, clearedAt: null });
-      void reportAnswer(unit.id, word.text, status === "PASSED", "spell").then((r) => {
+      void reportAnswer(unit.id, word.text, status === "PASSED", "spell", { chosen: attempt }).then((r) => {
         if (r) {
           setReward((x) => ({ coins: x.coins + r.coins, sp: x.sp + r.sp }));
           const s = useGameStore.getState();
@@ -148,7 +150,16 @@ export default function UnitTrainPage() {
     const q = quiz[quizIdx];
     const ok =
       q.kind === "pair" ? i === (q.same ? 0 : 1) : i === q.correctIndex;
-    void reportAnswer(unit.id, q.word.text, ok, "listen").then((r) => {
+    // 判断层证据：所选/正确选项原文（听音选词=词、辨音=音标、组对=同/不同）
+    const chosen =
+      q.kind === "pair" ? (i === 0 ? "same" : "different")
+      : q.kind === "phoneme" ? q.choices[i]
+      : q.choices[i].text;
+    const correct =
+      q.kind === "pair" ? (q.same ? "same" : "different")
+      : q.kind === "phoneme" ? q.choices[q.correctIndex]
+      : q.choices[q.correctIndex].text;
+    void reportAnswer(unit.id, q.word.text, ok, "listen", { chosen, correct }).then((r) => {
       if (r) {
         setReward((x) => ({ coins: x.coins + r.coins, sp: x.sp + r.sp }));
       }
@@ -321,7 +332,7 @@ export default function UnitTrainPage() {
                     void playIntro();
                   }}
                 >
-                  🔊
+                  <VolumeIcon size={20} />
                 </button>
                 <span className="text-xs font-bold" style={{ color: "var(--ph-ink-3)" }}>
                   {t("phonics.replay")}
@@ -335,7 +346,7 @@ export default function UnitTrainPage() {
                 ipa={word.ipa}
                 phonemes={word.phonemes}
                 graphemes={word.graphemes}
-                onDone={(passed) => finishWord(passed ? "PASSED" : "FAILED")}
+                onDone={(passed, attempt) => finishWord(passed ? "PASSED" : "FAILED", attempt)}
               />
               <button
                 type="button"
@@ -373,7 +384,7 @@ export default function UnitTrainPage() {
                         : void speakWord(q.word.text, 0.9)
                     }
                   >
-                    🔊
+                    <VolumeIcon size={20} />
                   </button>
                   {q.kind === "phoneme" && (
                     <p className="ph-word-ipa mt-3">
@@ -421,7 +432,7 @@ export default function UnitTrainPage() {
           {/* ── 结算 ── */}
           {mode === "done" && (
             <div className="ph-card--ink ph-stage" style={{ padding: "2.5rem 1.5rem" }}>
-              <p className="text-6xl">🏆</p>
+              <p className="text-6xl text-brand-text inline-flex justify-center"><TrophyIcon size={60} /></p>
               <h1 className="ph-h1" style={{ fontSize: "1.7rem" }}>
                 {t("phonics.done")}
               </h1>
@@ -443,12 +454,12 @@ export default function UnitTrainPage() {
               </div>
               {passedCount < words.length && (
                 <p className="mt-4">
-                  <span className="ph-pill ph-pill--bad">📖 {t("phonics.toReview")}</span>
+                  <span className="ph-pill ph-pill--bad inline-flex items-center gap-1"><BookOpenIcon size={13} /> {t("phonics.toReview")}</span>
                 </p>
               )}
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <button type="button" className="ph-btn" onClick={retry}>
-                  🔁 {t("phonics.retry")}
+                  <RepeatIcon size={14} className="inline" /> {t("phonics.retry")}
                 </button>
                 <Link href="/phonics" className="ph-btn ph-btn--ghost">
                   {t("phonics.backToLand")}

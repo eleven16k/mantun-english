@@ -16,6 +16,9 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { PuzzleIcon, KeyboardIcon, MicIcon, SparklesIcon, TrophyIcon, BookOpenIcon } from "@/components/icons";
+import { PartyPopperIcon } from "@/components/SvgIcons";
+import { RepeatIcon } from "@/components/icons";
 import { AppShell } from "@/components/AppShell";
 import { PuzzleMode } from "@/components/sentence/PuzzleMode";
 import { TypingMode } from "@/components/sentence/TypingMode";
@@ -45,7 +48,17 @@ const AI_SESSION_KEY = "lexi-sentence-ai";
 
 type Phase = "intro" | "playing" | "done";
 
-const MODE_ICON: Record<SentenceMode, string> = { puzzle: "🧩", typing: "⌨️", speaking: "🎤" };
+function PartyGlyph() {
+  return <PartyPopperIcon size={13} />;
+}
+function RepeatGlyph() {
+  return <RepeatIcon size={14} />;
+}
+const MODE_ICON: Record<SentenceMode, React.ReactNode> = {
+  puzzle: <PuzzleIcon size={16} />,
+  typing: <KeyboardIcon size={16} />,
+  speaking: <MicIcon size={16} />,
+};
 
 export default function SentenceSessionPage() {
   const { t } = useI18n();
@@ -65,9 +78,9 @@ export default function SentenceSessionPage() {
   // 注册经济上报器（module 级单次），登录态下金币/SP/弱点本自动流转；
   // 游客态直接跳过——economy 401 会触发全局登录跳转，不能让训练页被踢走
   useEffect(() => {
-    registerEconomySubmitter(async (wordId, isCorrect, prompt) => {
+    registerEconomySubmitter(async (wordId, isCorrect, prompt, evidence) => {
       if (!isLoggedIn()) return null;
-      const r = await submitAnswer(wordId, isCorrect, prompt);
+      const r = await submitAnswer(wordId, isCorrect, prompt, evidence ?? {});
       return {
         coins: r.coinsEarned,
         sp: r.spEarned,
@@ -136,7 +149,7 @@ export default function SentenceSessionPage() {
 
   // ——— 完成一句：记结果 + 落盘 + 经济上报 ———
   const finishSentence = useCallback(
-    (passed: boolean) => {
+    (passed: boolean, attempt?: string) => {
       if (!lesson || !sentence) return;
       const next = [...results, { en: sentence.en, status: (passed ? "PASSED" : "FAILED") as SentenceResultStatus }];
       setResults(next);
@@ -145,7 +158,7 @@ export default function SentenceSessionPage() {
       if (!isAi && lessonId) {
         saveModeProgress(lessonId, mode, { results: next, idx: nextIdx, clearedAt: null });
       }
-      void reportSentenceAnswer(lessonId, idx, sentence.en, passed, mode).then((r) => {
+      void reportSentenceAnswer(lessonId, idx, sentence.en, passed, mode, attempt).then((r) => {
         if (r) {
           setReward((x) => ({ coins: x.coins + r.coins, sp: x.sp + r.sp }));
           const s = useGameStore.getState();
@@ -245,7 +258,7 @@ export default function SentenceSessionPage() {
           {phase === "intro" && (
             <div className="ph-card--ink ph-stage" style={{ padding: "2.5rem 1.5rem" }}>
               <span className="ph-sticker">
-                {isAi ? "✨ AI BONUS" : `LESSON ${lesson.number}`}
+                {isAi ? <span className="inline-flex items-center gap-1"><SparklesIcon size={13} /> AI BONUS</span> : `LESSON ${lesson.number}`}
               </span>
               <h1 className="ph-h1" style={{ fontSize: "1.7rem" }}>
                 {lessonTitle}
@@ -292,13 +305,13 @@ export default function SentenceSessionPage() {
           {/* ── 结算 ── */}
           {phase === "done" && (
             <div className="ph-card--ink ph-stage" style={{ padding: "2.5rem 1.5rem" }}>
-              <p className="text-6xl">🏆</p>
+              <p className="text-6xl text-brand-text inline-flex justify-center"><TrophyIcon size={60} /></p>
               <h1 className="ph-h1" style={{ fontSize: "1.7rem" }}>
                 {isAi ? t("sentence.aiDone") : clearedNow ? t("sentence.done") : t("sentence.tryMore")}
               </h1>
               {clearedNow && !isAi && (
                 <p className="mt-2">
-                  <span className="ph-pill ph-pill--good">🎉 {t("sentence.lessonCleared")}</span>
+                  <span className="ph-pill ph-pill--good inline-flex items-center gap-1"><PartyGlyph /> {t("sentence.lessonCleared")}</span>
                 </p>
               )}
               <div className="mx-auto mt-5 grid max-w-sm grid-cols-3 gap-2.5">
@@ -319,12 +332,12 @@ export default function SentenceSessionPage() {
               </div>
               {passedCount < total && (
                 <p className="mt-4">
-                  <span className="ph-pill ph-pill--bad">📖 {t("sentence.revealNote")}</span>
+                  <span className="ph-pill ph-pill--bad inline-flex items-center gap-1"><BookOpenIcon size={13} /> {t("sentence.revealNote")}</span>
                 </p>
               )}
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <button type="button" className="ph-btn" onClick={retry}>
-                  🔁 {t("sentence.retryLesson")}
+                  <RepeatGlyph /> {t("sentence.retryLesson")}
                 </button>
                 {next && lessonUnlocked(next.id) && (
                   <Link href={`/sentence/${next.id}`} className="ph-btn ph-btn--sm" onClick={() => setPhase("intro")}>

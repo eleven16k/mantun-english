@@ -114,7 +114,7 @@ export default function LeaderboardScreen() {
 
   return (
     <div className="page-shell">
-      <PageHeader badge="🏆 LEAGUE" title={t("lb.title")} />
+      <PageHeader badge="LEAGUE" title={t("lb.title")} />
 
       {/* Reset banner */}
       <div className="mb-4 flex items-center justify-center gap-1.5 rounded-pill border border-subtle bg-surface px-3 py-1.5 text-[11px] font-semibold text-tertiary">

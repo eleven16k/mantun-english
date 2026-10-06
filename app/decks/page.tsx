@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { CardsIcon } from "@/components/icons";
+
 import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
@@ -41,6 +43,14 @@ export default function DecksPage() {
   // Real progress: share of the word bank mastered (SM-2 level ≥ 14-day interval)
   const mastered = Object.values(cardStates).filter((c) => c.mastered).length;
   const progress = VOCAB.length > 0 ? mastered / VOCAB.length : 0;
+
+  // 词库异步扩容后刷新卡片计数（模块数组变化不触发渲染）
+  const [, setVocabTick] = useState(0);
+  useEffect(() => {
+    const onHydrated = () => setVocabTick((t) => t + 1);
+    window.addEventListener("lexi:vocab-hydrated", onHydrated);
+    return () => window.removeEventListener("lexi:vocab-hydrated", onHydrated);
+  }, []);
 
   const [showDialog, setShowDialog] = useState(false);
   const [name, setName] = useState("");
@@ -86,7 +96,22 @@ export default function DecksPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="🃏 MY DECKS" title={t("deck.title")} />
+        <PageHeader badge="MY DECKS" title={t("deck.title")} />
+
+        {/* 抽卡打字馆入口（/typing） */}
+        <button
+          onClick={() => router.push("/typing")}
+          className="g-card mb-3 flex w-full items-center gap-3 p-4 text-left transition hover:border-brandborder"
+        >
+          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-white" style={{ background: "linear-gradient(135deg,#7c3aed,#4d96ff)" }}>
+            <CardsIcon size={20} />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-bold text-primary">{t("typing.title")}</span>
+            <span className="block text-xs text-tertiary truncate">{t("typing.sub")}</span>
+          </span>
+          <span className="text-tertiary">›</span>
+        </button>
 
         <div className="grid grid-cols-3 gap-3">
           {visibleBuiltin.map((deck) => (

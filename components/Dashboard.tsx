@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useGameStore } from "@/lib/store";
 import { BASE_PATH } from "@/lib/config";
-import { generateDailyPlan, getExamPhase, getProfile, questionsFromPlan } from "@/lib/plan";
-import { TargetIcon, RepeatIcon, SparklesIcon } from "./icons";
+import { generateDailyPlan, getExamPhase, getProfile, questionsFromPlan, fetchServerPlan, cacheServerPlan, getCachedServerPlan, planDiffers } from "@/lib/plan";
+import { TargetIcon, RepeatIcon, SparklesIcon, PigIcon, BoltIcon } from "./icons";
 import { useI18n } from "@/lib/i18n";
 
 const ASSETS = `${BASE_PATH}/sites/assets`;
@@ -46,7 +46,28 @@ export function Dashboard() {
 
   const profile = mounted ? getProfile() : null;
   const exam = mounted && profile?.examDate ? getExamPhase(profile.examDate) : null;
-  const plan = useMemo(() => (mounted ? generateDailyPlan() : null), [mounted]);
+  // V8-P4：计划页 api-first——服务端权威计划（弱项倾斜在服务端算），拉不到
+  // 回落本地 generateDailyPlan（断层 #9 修复：本地易失态不再是唯一来源）
+  const [plan, setPlan] = useState<ReturnType<typeof generateDailyPlan> | null>(null);
+  const [planUpdated, setPlanUpdated] = useState(false);
+  useEffect(() => {
+    if (!mounted) return;
+    let alive = true;
+    fetchServerPlan().then((p) => {
+      if (!alive) return;
+      if (p) {
+        const cached = getCachedServerPlan();
+        if (cached && planDiffers(cached, p)) setPlanUpdated(true);
+        cacheServerPlan(p);
+        setPlan(p);
+      } else {
+        setPlan(generateDailyPlan());
+      }
+    }).catch(() => {
+      if (alive) setPlan(generateDailyPlan());
+    });
+    return () => { alive = false; };
+  }, [mounted]);
   const goal = plan?.goal ?? 20;
   const done = Math.min(dailyQuestionsAnswered, goal);
 
@@ -99,8 +120,14 @@ export function Dashboard() {
       <div className="relative mt-5 rounded-[30px] border-4 bg-surface p-5" style={{ borderColor: "var(--bg-canvas)" }}>
         {/* juyou 贴纸签名：右上角旋转标签（Lexi 业务词） */}
         <span className="game-badge absolute -top-3 right-6 z-10 text-xs text-[#0f172a]">
-          🎯 {t("dash.todayPlan")}
+          <TargetIcon size={15} className="inline" /> {t("dash.todayPlan")}
         </span>
+        {/* V8-P4：服务端计划与本地缓存不一致 → 豚豚更新提示（GWT-3） */}
+        {planUpdated && (
+          <div className="mb-3 flex items-center gap-2 rounded-xl bg-brand-subtle px-3 py-2 text-xs font-bold text-brand-text">
+            <PigIcon size={13} className="inline" /> {t("dash.planUpdated")}
+          </div>
+        )}
         <div className="flex items-center gap-3 rounded-pill bg-canvas px-4 py-3">
           <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-tertiary" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 14l-4-4 4-4" />
@@ -148,7 +175,7 @@ export function Dashboard() {
           }}
           className="game-btn mt-2 w-full bg-accent py-2.5 text-sm text-[#0f172a]"
         >
-          ⚡ {t("dash.lightning")} · ×3
+          <BoltIcon size={14} className="inline" /> {t("dash.lightning")} · ×3
         </button>
 
         {/* Action buttons — Upload / Paste / PK / More */}

@@ -7,6 +7,8 @@
  */
 
 import { useEffect, useState } from "react";
+import { PartyPopperIcon } from "@/components/SvgIcons";
+
 import { useI18n } from "@/lib/i18n";
 import { quizAudioUrl } from "@/content/reading";
 import type { ReadingQuizSentenceOrder, ReadingTrack } from "@/content/reading/types";
@@ -18,7 +20,7 @@ interface Props {
   track: ReadingTrack;
   quizIdx: number;
   speed: QuestSpeed;
-  onDone: (passed: boolean) => void;
+  onDone: (passed: boolean, attempt?: string) => void;
 }
 
 interface Chip {
@@ -68,7 +70,7 @@ export function SentenceOrder({ q, storyId, track, quizIdx, speed, onDone }: Pro
       const ok = next.map((f) => f.word).join(" ") === answerText;
       setPhase(ok ? "correct" : "reveal");
       if (!ok) setPeeked(true);
-      setTimeout(() => onDone(ok && !peeked), ok ? 1000 : 2400);
+      setTimeout(() => onDone(ok && !peeked, next.map((f) => f.word).join(" ")), ok ? 1000 : 2400);
     }
   };
 
@@ -146,7 +148,7 @@ export function SentenceOrder({ q, storyId, track, quizIdx, speed, onDone }: Pro
 
       {phase === "correct" && (
         <p className="mt-5 text-center">
-          <span className="ph-pill ph-pill--good">🎉 {t("reading.nice")}</span>
+          <span className="ph-pill ph-pill--good inline-flex items-center gap-1"><PartyPopperIcon size={13} /> {t("reading.nice")}</span>
         </p>
       )}
     </div>

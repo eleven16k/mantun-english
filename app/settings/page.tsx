@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { CheckIcon } from "@/components/icons";
+
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/AppShell";
 import { useGameStore } from "@/lib/store";
@@ -8,13 +10,11 @@ import { useI18n, LOCALES } from "@/lib/i18n";
 import { getMe, getClasses, updateProfile, logout, isLoggedIn, getParentLinks, LOGIN_URL } from "@/lib/api";
 import { getProfile, setProfile } from "@/lib/plan";
 import { maskPhone } from "@/lib/maskPhone";
+import { STAGES, savedStage, saveStage, stageDef, isStage } from "@/lib/stage";
+import { hydrateVocabFromLexicon } from "@/lib/vocab";
 
-/** 学段选项（label 复用 onboarding 卡文案键） */
-const TRACK_OPTIONS = [
-  { id: "xiaoshengchu", labelKey: "onb.trackXiaoshengchu" },
-  { id: "zhongkao", labelKey: "onb.trackZhongkao" },
-  { id: "gaokao", labelKey: "onb.trackGaokao" },
-] as const;
+/** 学段角色（7 选，label 复用 onboarding 卡文案键；改角色=重挂题库+换轨） */
+const STAGE_OPTIONS = STAGES;
 
 function trackLabel(t: (k: "onb.trackXiaoshengchu" | "onb.trackZhongkao" | "onb.trackGaokao") => string, id: string | null | undefined) {
   if (id === "gaokao") return t("onb.trackGaokao");
@@ -410,7 +410,8 @@ export default function SettingsPage() {
                 label={t("settings.track")}
                 value={classTrack
                   ? `${trackLabel(t, classTrack) ?? classTrack} · ${t("settings.trackLocked")}`
-                  : trackLabel(t, userTrack) ?? trackLabel(t, getProfile()?.track) ?? "—"}
+                  : (isStage(savedStage()) ? t(stageDef(savedStage()).nameKey as "onb.stageJunior") : null)
+                    ?? trackLabel(t, userTrack) ?? trackLabel(t, getProfile()?.track) ?? "—"}
                 onClick={() => { if (!classTrack) setTrackModal(true); }}
               />
               <LinkRow label={t("settings.dailyGoal")} value={t("settings.dailyGoalValue")} />
@@ -440,8 +441,8 @@ export default function SettingsPage() {
               <h3 className="font-booster text-lg font-extrabold text-primary">{t("settings.track")}</h3>
               <p className="mt-1 text-xs text-tertiary">{t("settings.trackNote")}</p>
               <div className="mt-4 flex flex-col gap-2">
-                {TRACK_OPTIONS.map((opt) => {
-                  const current = (classTrack ?? userTrack ?? getProfile()?.track) === opt.id;
+                {STAGE_OPTIONS.map((opt) => {
+                  const current = savedStage() === opt.id && !classTrack;
                   return (
                     <button
                       key={opt.id}
@@ -449,22 +450,30 @@ export default function SettingsPage() {
                       onClick={async () => {
                         setTrackModal(false);
                         if (current) return;
-                        // 本地档案立即生效（服务端由定级测试页的 updateProfile 权威写入）
+                        // 角色保存：本地 stage + 词库重挂 + track 联动；服务端 best-effort
+                        saveStage(opt.id);
+                        void hydrateVocabFromLexicon({ tags: opt.quizTags, difficulties: opt.quizDifficulties });
                         const p = getProfile();
                         setProfile({
-                          track: opt.id,
+                          track: opt.track,
                           targetScore: p?.targetScore ?? 0,
                           examDate: p?.examDate ?? "",
                           estimatedScore: p?.estimatedScore,
                         });
-                        router.push(`/onboarding?step=goal&track=${opt.id}&next=/reading`);
+                        updateProfile({ stage: opt.id }).catch(() => {});
+                        router.push(`/onboarding?step=goal&track=${opt.track}&next=/reading`);
                       }}
                       className={`g-card flex items-center justify-between p-4 text-left ${current ? "!border-[var(--ink)] bg-brand-subtle" : ""}`}
                     >
-                      <span className="font-booster text-base font-extrabold text-primary">
-                        {trackLabel(t, opt.id)}
+                      <span>
+                        <span className="block font-booster text-base font-extrabold text-primary">
+                          {t(opt.nameKey as "onb.stageJunior")}
+                        </span>
+                        <span className="block text-xs text-tertiary">
+                          {t(opt.countKey as "onb.stageJuniorCount")}
+                        </span>
                       </span>
-                      {current && <span className="text-xs font-bold text-brand-text">✓</span>}
+                      {current && <span className="text-xs font-bold text-brand-text"><CheckIcon size={13} /></span>}
                     </button>
                   );
                 })}

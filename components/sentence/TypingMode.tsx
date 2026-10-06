@@ -9,6 +9,10 @@
  */
 
 import { useEffect, useRef, useState } from "react";
+import { PartyPopperIcon } from "@/components/SvgIcons";
+
+import { KeyboardIcon } from "@/components/icons";
+
 import { useI18n } from "@/lib/i18n";
 import { typingStates, typingDone } from "@/lib/sentence";
 import type { Sentence } from "@/content/sentence/data";
@@ -16,7 +20,7 @@ import type { Sentence } from "@/content/sentence/data";
 interface Props {
   sentence: Sentence;
   /** passed = 未看答案敲对；failed = 看过答案 */
-  onDone: (passed: boolean) => void;
+  onDone: (passed: boolean, attempt?: string) => void;
 }
 
 export function TypingMode({ sentence, onDone }: Props) {
@@ -43,7 +47,7 @@ export function TypingMode({ sentence, onDone }: Props) {
     setInput(v);
     if (typingDone(sentence.en, v)) {
       setDone(true);
-      setTimeout(() => onDone(!peeked), 900);
+      setTimeout(() => onDone(!peeked, v), 900);
     }
   };
 
@@ -112,7 +116,7 @@ export function TypingMode({ sentence, onDone }: Props) {
 
       {!done && (
         <p className="text-center text-xs font-bold" style={{ color: "var(--ph-ink-3)" }}>
-          ⌨️ {t("sentence.typeHint")}
+          <KeyboardIcon size={13} className="inline" /> {t("sentence.typeHint")}
         </p>
       )}
 
@@ -131,7 +135,7 @@ export function TypingMode({ sentence, onDone }: Props) {
 
       {done && (
         <p className="mt-5">
-          <span className="ph-pill ph-pill--good">🎉 {t("sentence.nice")}</span>
+          <span className="ph-pill ph-pill--good inline-flex items-center gap-1"><PartyPopperIcon size={13} /> {t("sentence.nice")}</span>
         </p>
       )}
     </div>

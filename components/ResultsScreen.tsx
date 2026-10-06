@@ -4,15 +4,34 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useGameStore, LEAGUE_TIERS, getTierIndex } from '@/lib/store';
 import { reportAssignmentProgress, saveSession } from '@/lib/api';
-import { PartyPopperIcon, MuscleIcon, GiftIcon } from './SvgIcons';
-import { BoltIcon, CoinIcon } from './icons';
+import { PartyPopperIcon, MuscleIcon, GiftIcon, MedalIcon } from './SvgIcons';
+import { BoltIcon, CoinIcon, GemIcon, CrownIcon, TrophyIcon } from './icons';
 import { useI18n } from '@/lib/i18n';
+
+/** 段位图标（LEAGUE_TIERS.icon key → SVG），低段奖牌按 tier.color 上色 */
+function TierIcon({ icon, color }: { icon: string; color: string }) {
+  switch (icon) {
+    case 'gem':
+    case 'diamond':
+      return <GemIcon size={18} className="shrink-0" />;
+    case 'emerald':
+    case 'crown':
+      return <CrownIcon size={18} className="shrink-0" />;
+    case 'trophy':
+      return <TrophyIcon size={18} className="shrink-0" />;
+    default:
+      return <span style={{ color }} className="shrink-0 inline-flex"><MedalIcon size={18} /></span>;
+  }
+}
+import { scenarioLinkForQuestions, scenarioById } from '@/lib/scenario-links';
 
 export default function ResultsScreen() {
   const router = useRouter();
-  const { t } = useI18n();
-  const { lastResults, scorePoints, navigate, startQuiz } = useGameStore();
+  const { t, locale } = useI18n();
+  const { lastResults, scorePoints, navigate, startQuiz, questions } = useGameStore();
   const [showConfetti, setShowConfetti] = useState(false);
+  // S2：话题匹配只算一次（questions 在结算后仍留在 store 里）
+  const [linkedScenarioId] = useState<string | null>(() => scenarioLinkForQuestions(questions ?? []));
 
   // Quiz entered from My decks returns there instead of home (?from=decks)
   const [backHref] = useState(() =>
@@ -159,13 +178,32 @@ export default function ResultsScreen() {
       <div className="g-card p-5 mb-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-lg">{tier.icon}</span>
+            <TierIcon icon={tier.icon} color={tier.color} />
             <span className="font-bold text-secondary text-sm">{tier.name} {t('res.tier')}</span>
           </div>
           <span className="text-xs font-bold text-brand-text">{scorePoints.toLocaleString()} {t('res.sp')}</span>
         </div>
         <p className="text-xs text-tertiary mt-1">{t('res.rankingWeek')}</p>
       </div>
+
+      {/* S2 关卡尾部场景入口（V8）：刚练的话题接一段口语实战；无对齐不显示 */}
+      {linkedScenarioId && (
+        <Link
+          href={`/scenarios/${linkedScenarioId}`}
+          className="g-card mb-5 flex items-center gap-3 p-4 transition hover:border-brandborder"
+        >
+          <span className="text-2xl">{scenarioById(linkedScenarioId)?.emoji}</span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-bold text-primary">
+              {t('res.talkTopic')} <span className="badge rounded-pill bg-brand-subtle px-2 py-0.5 text-[10px] font-bold text-brand-text">{t('res.talkTopicNew')}</span>
+            </span>
+            <span className="block text-xs text-tertiary">
+              {scenarioById(linkedScenarioId)?.title[locale]} · {t('res.talkTopicDesc')}
+            </span>
+          </span>
+          <span className="text-tertiary">›</span>
+        </Link>
+      )}
 
       {/* Actions */}
       <div className="space-y-3 mt-auto">

@@ -417,6 +417,7 @@ type SubmitFn = (
   wordId: string,
   isCorrect: boolean,
   prompt: string,
+  evidence?: { questionType?: string; chosen?: string; correct?: string; timeMs?: number },
 ) => Promise<PhonicsReward | null>;
 
 /** 由页面注入 lib/api 的 submitAnswer，避免循环依赖 */
@@ -425,15 +426,28 @@ export function registerEconomySubmitter(fn: SubmitFn) {
   submitter = fn;
 }
 
+export interface PhonicsEvidence {
+  questionType?: string;
+  chosen?: string;
+  correct?: string;
+  timeMs?: number;
+}
+
 export async function reportAnswer(
   unitId: string,
   word: string,
   isCorrect: boolean,
   kind: "spell" | "listen" = "spell",
+  evidence?: PhonicsEvidence,
 ): Promise<PhonicsReward | null> {
   if (!submitter) return null;
   try {
-    return await submitter(`phonics:${unitId}:${word}`, isCorrect, `${kind === "spell" ? "拼词" : "听音选词"}:${word}`);
+    return await submitter(
+      `phonics:${unitId}:${word}`,
+      isCorrect,
+      `${kind === "spell" ? "拼词" : "听音选词"}:${word}`,
+      evidence ? { questionType: `phonics_${kind}`, ...evidence } : { questionType: `phonics_${kind}`, correct: word },
+    );
   } catch {
     return null;
   }

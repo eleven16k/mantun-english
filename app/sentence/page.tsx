@@ -11,6 +11,7 @@
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { PuzzleIcon, KeyboardIcon, MicIcon, GamepadIcon, BooksIcon, HourglassIcon, CheckIcon, LockIcon, SparklesIcon, BookOpenIcon, SproutIcon, GraduationCapIcon, FlagIcon } from "@/components/icons";
 import { AppShell } from "@/components/AppShell";
 import { useI18n } from "@/lib/i18n";
 import { generateSentences, isLoggedIn } from "@/lib/api";
@@ -28,10 +29,22 @@ import "./sentence.css";
 const AI_SESSION_KEY = "lexi-sentence-ai";
 
 const MODE_CARDS = [
-  { mode: "puzzle", icon: "🧩", titleKey: "sentence.modePuzzle", descKey: "sentence.modePuzzleDesc" },
-  { mode: "typing", icon: "⌨️", titleKey: "sentence.modeTyping", descKey: "sentence.modeTypingDesc" },
-  { mode: "speaking", icon: "🎤", titleKey: "sentence.modeSpeaking", descKey: "sentence.modeSpeakingDesc" },
+  { mode: "puzzle", icon: "puzzle", titleKey: "sentence.modePuzzle", descKey: "sentence.modePuzzleDesc" },
+  { mode: "typing", icon: "typing", titleKey: "sentence.modeTyping", descKey: "sentence.modeTypingDesc" },
+  { mode: "speaking", icon: "speaking", titleKey: "sentence.modeSpeaking", descKey: "sentence.modeSpeakingDesc" },
 ] as const;
+
+const MODE_ICONS: Record<string, React.ReactNode> = {
+  puzzle: <PuzzleIcon size={22} />,
+  typing: <KeyboardIcon size={22} />,
+  speaking: <MicIcon size={22} />,
+};
+
+const PACK_ICONS: Record<string, React.ReactNode> = {
+  sprout: <SproutIcon size={18} />,
+  grad: <GraduationCapIcon size={18} />,
+  work: <FlagIcon size={18} />,
+};
 
 export default function SentencePage() {
   const { t } = useI18n();
@@ -113,18 +126,18 @@ export default function SentencePage() {
     <AppShell>
       <div className="ph-page">
         <div className="ph-wrap">
-          <span className="ph-sticker">🧩 SENTENCE · 3 WAYS</span>
+          <span className="ph-sticker">SENTENCE · 3 WAYS</span>
           <h1 className="ph-h1">{t("sentence.title")}</h1>
           <p className="ph-sub">{t("sentence.sub")}</p>
 
           {/* ── 三种玩法 ── */}
           <div className="ph-group-title">
-            🎮 {t("sentence.modes")}
+            <GamepadIcon size={15} className="inline" /> {t("sentence.modes")}
           </div>
           <div className="sn-modes">
             {MODE_CARDS.map((c) => (
               <div key={c.mode} className="sn-mode-card">
-                <i className={c.mode}>{c.icon}</i>
+                <i className={c.mode}>{MODE_ICONS[c.icon] ?? null}</i>
                 <b>{t(c.titleKey)}</b>
                 <span>{t(c.descKey)}</span>
               </div>
@@ -133,7 +146,7 @@ export default function SentencePage() {
 
           {/* ── 课程包 ── */}
           <div className="ph-group-title">
-            📚 {t("sentence.packs")}
+            <BooksIcon size={15} className="inline" /> {t("sentence.packs")}
           </div>
           {aiNote && (
             <p className="mb-3 text-xs font-bold" style={{ color: "var(--ph-orange)" }}>
@@ -147,10 +160,10 @@ export default function SentencePage() {
                 <div key={pack.id} className={`ph-card ${pack.status === "soon" ? "ph-card--locked" : ""}`}>
                   <div className="flex items-baseline justify-between gap-3 flex-wrap">
                     <b className="font-black text-[1.05rem]">
-                      {pack.icon} {pack.cnName} · {pack.name}
+                      {PACK_ICONS[pack.icon] ?? null} {pack.cnName} · {pack.name}
                     </b>
                     {pack.status === "soon" ? (
-                      <span className="ph-pill ph-pill--gold">⏳ SOON</span>
+                      <span className="ph-pill ph-pill--gold inline-flex items-center gap-1"><HourglassIcon size={12} /> SOON</span>
                     ) : (
                       <span className="ph-pill ph-pill--info">
                         {clearedCount}/{pack.lessons.length} {t("sentence.cleared")}
@@ -171,7 +184,7 @@ export default function SentencePage() {
                         return (
                           <div key={lesson.id} className={`ph-unit-row ${unlocked ? "" : "opacity-60"}`}>
                             <span className={`ph-unit-num ${anyCleared ? "ph-unit-num--done" : ""}`}>
-                              {anyCleared ? "✓" : unlocked ? lesson.number : "🔒"}
+                              {anyCleared ? <CheckIcon size={16} /> : unlocked ? lesson.number : <LockIcon size={16} />}
                             </span>
                             <div className="ph-unit-main">
                               <p className="ph-unit-title">
@@ -194,7 +207,7 @@ export default function SentencePage() {
 
                       {/* AI 加练 */}
                       <div className="ph-unit-row">
-                        <span className="ph-unit-num" style={{ background: "var(--ph-blue)", color: "#fff" }}>✨</span>
+                        <span className="ph-unit-num inline-flex items-center justify-center" style={{ background: "var(--ph-blue)", color: "#fff" }}><SparklesIcon size={14} /></span>
                         <div className="ph-unit-main">
                           <p className="ph-unit-title">{t("sentence.aiPractice")}</p>
                           <p className="ph-unit-meta">{t("sentence.aiNote")}</p>

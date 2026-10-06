@@ -93,7 +93,7 @@ export default function SolvePage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="📷 PHOTO SOLVE" title={t("solve.title")} sub={t("solve.intro")} />
+        <PageHeader badge="PHOTO SOLVE" title={t("solve.title")} sub={t("solve.intro")} />
 
         {/* Photo picker / preview */}
         <input

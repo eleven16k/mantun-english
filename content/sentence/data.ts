@@ -34,7 +34,7 @@ export const SENTENCE_PACKS: SentencePack[] = [
     name: "Starter",
     cnName: "零基础入门",
     desc: "打招呼与日常生活短句，建立开口自信",
-    icon: "🌱",
+    icon: "sprout",
     status: "live",
     lessons: [
       {
@@ -76,7 +76,7 @@ export const SENTENCE_PACKS: SentencePack[] = [
     name: "School",
     cnName: "升学考试",
     desc: "校园学习与议论文高频句型，直指考点",
-    icon: "🎓",
+    icon: "grad",
     status: "live",
     lessons: [
       {
@@ -118,7 +118,7 @@ export const SENTENCE_PACKS: SentencePack[] = [
     name: "Business",
     cnName: "商务职场",
     desc: "会议邮件与谈判客户场景，开口即专业",
-    icon: "💼",
+    icon: "work",
     status: "live",
     lessons: [
       {

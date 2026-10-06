@@ -1,0 +1,619 @@
+/* 抽卡打字馆 — tp- 前缀。
+   样式对齐全站基准：页面容器 page-shell（TopBar 留白）、卡片 g-card 规范
+   （bg-surface + 4px canvas 厚边 + 2rem 圆角）、主按钮 brand 实底胶囊、
+   PageHeader 三件套。手机适配：词卡网格自适应列数、字号 clamp、紧凑练习卡。 */
+
+.tp-inner {
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+/* ─── 主按钮（全站 brand 实底胶囊，替代渐变） ─── */
+.tp-draw-btn {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--bg-brand-emphasis-default);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.tp-draw-btn:hover {
+  opacity: 0.9;
+}
+
+.tp-draw-btn:active {
+  transform: scale(0.98);
+}
+
+.tp-draw-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 复习抽卡：同形次级（brand 描边款，弱一档） */
+.tp-draw-btn--due {
+  background: var(--bg-surface);
+  color: var(--text-brand-default);
+  border: 2px solid var(--border-brand-default);
+  padding: 12px 20px;
+  font-size: 15px;
+}
+
+.tp-due-badge {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 7px;
+  margin-left: 4px;
+  border-radius: 999px;
+  background: var(--bg-brand-emphasis-default);
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.tp-due-empty {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ph-ink-3, #94a3b8);
+}
+
+/* ─── 词书卡（g-card 规范） ─── */
+.tp-book {
+  border: 4px solid var(--bg-canvas);
+  border-radius: 2rem;
+  padding: 16px 18px;
+  background: var(--bg-surface);
+}
+
+.tp-book-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-primary, #0f172a);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tp-book-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-tertiary, #94a3b8);
+}
+
+.tp-bar {
+  margin-top: 12px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--bg-canvas);
+  overflow: hidden;
+}
+
+.tp-bar > i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--bg-brand-emphasis-default);
+  transition: width 0.5s ease;
+}
+
+.tp-bar-legend {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ─── 词书选择 chips（横滑，滚动暗示） ─── */
+.tp-books-row {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px 2px 6px;
+  scrollbar-width: none;
+}
+
+.tp-books-row::-webkit-scrollbar {
+  display: none;
+}
+
+.tp-book-chip {
+  flex-shrink: 0;
+  border: 1.5px solid var(--border-subtle, #e2e8f0);
+  border-radius: 999px;
+  background: var(--bg-surface);
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-secondary, #475569);
+  cursor: pointer;
+}
+
+.tp-book-chip.on {
+  border-color: var(--bg-brand-emphasis-default);
+  color: var(--text-brand-default);
+  background: var(--bg-brand-subtle-default, #eef2ff);
+}
+
+/* ─── 抽卡网格（自适应列数：手机 4 列、宽屏 5 列） ─── */
+.tp-gacha-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (min-width: 480px) {
+  .tp-gacha-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.tp-card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  perspective: 600px;
+  cursor: pointer;
+}
+
+.tp-card-inner {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+.tp-card--open .tp-card-inner {
+  transform: rotateY(180deg);
+}
+
+.tp-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--bg-canvas);
+  overflow: hidden;
+}
+
+.tp-card-face--back {
+  background: var(--bg-surface);
+  color: var(--text-brand-default);
+}
+
+.tp-card-face--front {
+  transform: rotateY(180deg);
+  padding: 6px 4px;
+  text-align: center;
+}
+
+.tp-card-word {
+  font-size: clamp(10px, 2.6vw, 13px);
+  font-weight: 900;
+  color: var(--text-primary, #0f172a);
+  word-break: break-all;
+  line-height: 1.25;
+}
+
+.tp-card-rarity {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+
+.tp-card--ssr .tp-card-face--front {
+  border-color: #f59e0b;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.55);
+  animation: tp-glow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes tp-glow {
+  from {
+    box-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
+  }
+  to {
+    box-shadow: 0 0 18px rgba(245, 158, 11, 0.8);
+  }
+}
+
+/* 角标：卡内右上，不再溢出裁切 */
+.tp-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 9px;
+  font-weight: 900;
+  color: #fff;
+  background: #f97316;
+  border-radius: 999px;
+  padding: 2px 6px;
+}
+
+/* ─── 练习视图 ─── */
+.tp-progress {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.tp-progress i {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--bg-canvas);
+}
+
+.tp-progress i.done {
+  background: var(--bg-brand-emphasis-default);
+}
+
+.tp-progress i.now {
+  background: var(--text-gold, #f59e0b);
+}
+
+.tp-stage-card {
+  border: 4px solid var(--bg-canvas);
+  border-radius: 2rem;
+  background: var(--bg-surface);
+  padding: 22px 18px 18px;
+  text-align: center;
+  position: relative;
+}
+
+.tp-step-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--text-brand-default);
+  background: var(--bg-brand-subtle-default, #dbeafe);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.tp-target {
+  font-size: clamp(26px, 8vw, 38px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--text-primary, #0f172a);
+  line-height: 1.2;
+  cursor: text;
+}
+
+/* 歌词进度式逐字符着色：对绿 / 错红 / 当前位光标条 / 未到淡 */
+.tp-key {
+  display: inline-block;
+  transition: color 0.08s;
+}
+
+.tp-key--ok {
+  color: var(--text-positive, #15803d);
+}
+
+.tp-key--bad {
+  color: var(--text-critical, #dc2626);
+  transform: translateY(1px);
+}
+
+.tp-key--cursor {
+  position: relative;
+  color: var(--text-tertiary, #94a3b8);
+}
+
+.tp-key--cursor::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -4px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bg-brand-emphasis-default, #4d96ff);
+  animation: tp-blink 1s steps(1) infinite;
+}
+
+.tp-key--pending {
+  color: var(--text-primary, #0f172a);
+}
+
+.tp-target--masked .tp-target-word {
+  filter: blur(14px);
+  user-select: none;
+}
+
+.tp-phonetic {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text-tertiary, #94a3b8);
+}
+
+.tp-cn {
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-secondary, #475569);
+}
+
+.tp-speaker {
+  margin-top: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-canvas);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary, #0f172a);
+}
+
+/* 单词解析（释义 + 例句） */
+.tp-info {
+  margin-top: 14px;
+  border-top: 1px dashed var(--bg-canvas);
+  padding-top: 12px;
+  text-align: left;
+}
+
+.tp-info-cn {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-secondary, #475569);
+  line-height: 1.5;
+}
+
+.tp-info-cn b {
+  color: var(--text-brand-default);
+  margin-right: 6px;
+}
+
+.tp-info-ex {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.tp-info-ex-en {
+  display: block;
+  color: var(--text-primary, #0f172a);
+  font-weight: 700;
+}
+
+.tp-info-ex-en::before {
+  content: "例";
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 900;
+  color: var(--text-brand-default);
+  background: var(--bg-brand-subtle-default, #eef4ff);
+  border-radius: 4px;
+  padding: 1px 5px;
+  margin-right: 6px;
+  vertical-align: 1px;
+}
+
+.tp-info-ex-cn {
+  display: block;
+  color: var(--text-tertiary, #94a3b8);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* 辨认步 4 选 1 */
+.tp-choices {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.tp-choice {
+  border: 2px solid var(--border-subtle, #e2e8f0);
+  border-radius: 14px;
+  background: var(--bg-surface);
+  padding: 12px 10px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-primary, #0f172a);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s, opacity 0.15s;
+}
+
+.tp-choice--right {
+  border-color: var(--text-positive, #15803d);
+  background: #f0fdf4;
+}
+
+.tp-choice--wrong {
+  border-color: var(--text-critical, #dc2626);
+  background: #fef2f2;
+}
+
+.tp-choice--dim {
+  opacity: 0.45;
+}
+
+/* 修复轮横幅 */
+.tp-repair-banner {
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  font-size: 13px;
+  font-weight: 800;
+  color: #b91c1c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ─── 歌词进度光标（tp-key--cursor::after 复用） ─── */
+@keyframes tp-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.tp-shake {
+  animation: tp-shake 0.45s;
+}
+
+@keyframes tp-shake {
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+/* 隐藏受控 input（防 iOS 聚焦缩放） */
+.tp-input-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0.01;
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+  outline: none;
+}
+
+.tp-feedback {
+  margin-top: 12px;
+  min-height: 24px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.tp-feedback > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ─── 结算 ─── */
+.tp-done {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.tp-done-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--text-primary, #0f172a);
+}
+
+.tp-done-stat {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-secondary, #475569);
+}
+
+.tp-done-stat > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ─── 图鉴 ─── */
+.tp-book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 10px;
+}
+
+.tp-book-card {
+  border: 3px solid var(--bg-canvas);
+  border-radius: 16px;
+  padding: 10px 6px;
+  text-align: center;
+  background: var(--bg-surface);
+}
+
+.tp-book-card--undrawn {
+  opacity: 0.45;
+  background: var(--bg-canvas);
+  border-style: dashed;
+}
+
+.tp-book-card-word {
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--text-primary, #0f172a);
+  word-break: break-all;
+}
+
+.tp-book-card-cn {
+  margin-top: 3px;
+  font-size: 10px;
+  color: var(--text-secondary, #475569);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tp-book-card-rarity {
+  margin-top: 5px;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+
+.tp-damaged-mark {
+  margin-left: 3px;
+  color: var(--text-critical, #dc2626);
+  vertical-align: -1px;
+}
+
+/* 金币雨容器 */
+.tp-stage-wrap {
+  position: relative;
+}
+
+/* 馆内 ghost 按钮（图鉴/返回）图标与文字同行 */
+.tp-wrap .ph-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}

@@ -52,7 +52,7 @@ export default function FamilyPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="👨‍👩‍👧 FAMILY" title={t("family.title")} />
+        <PageHeader badge="FAMILY" title={t("family.title")} />
 
         {loaded && pending.length === 0 && active.length === 0 && (
           <div className="g-card p-6 text-center">

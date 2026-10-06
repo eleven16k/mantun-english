@@ -15,6 +15,8 @@ import { scenariosDict } from "./i18n/dicts/scenarios";
 import { phonicsDict } from "./i18n/dicts/phonics";
 import { sentenceDict } from "./i18n/dicts/sentence";
 import { readingDict } from "./i18n/dicts/reading";
+import { lessonDict } from "./i18n/dicts/lesson";
+import { typingDict } from "./i18n/dicts/typing";
 import { kv } from "./kv";
 
 export type Locale = "en" | "zh";
@@ -201,6 +203,8 @@ const en = {
   ...phonicsDict.en,
   ...sentenceDict.en,
   ...readingDict.en,
+  ...lessonDict.en,
+  ...typingDict.en,
 };
 
 export type MessageKey = keyof typeof en;
@@ -216,6 +220,8 @@ const zh: Record<MessageKey, string> = {
   ...phonicsDict.zh,
   ...sentenceDict.zh,
   ...readingDict.zh,
+  ...lessonDict.zh,
+  ...typingDict.zh,
 };
 
 const DICTS: Record<Locale, Record<MessageKey, string>> = { en, zh };

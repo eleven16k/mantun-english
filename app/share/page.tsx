@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { CheckIcon, XIcon } from "@/components/icons";
+
 import { PageHeader } from "@/components/PageHeader";
 import { useRouter } from "next/navigation";
 import QRCode from "qrcode";
@@ -160,7 +162,7 @@ export default function SharePage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="🎁 INVITE" title={t("share.title")} />
+        <PageHeader badge="INVITE" title={t("share.title")} />
         {/* Poster — width-driven, aspect ratio locked (canvas is 750×1000, so
             clamping height instead of width squishes it on wide screens) */}
         <div className="g-card-hero relative mx-auto max-w-[420px] overflow-hidden rounded-3xl">
@@ -179,18 +181,18 @@ export default function SharePage() {
             onClick={share}
             className="game-btn w-full rounded-pill bg-brand py-3.5 font-booster text-base text-white"
           >
-            {copied ? `✓ ${t("share.ready")}` : t("share.poster")}
+            {copied ? <span className="inline-flex items-center gap-1"><CheckIcon size={13} /> {t("share.ready")}</span> : t("share.poster")}
           </button>
           <button
             onClick={shareLink}
             className="game-btn w-full rounded-pill border border-subtle bg-surface py-3 font-booster text-base text-secondary"
           >
             {linkState === "shared"
-              ? `✓ ${t("share.ready")}`
+              ? <span className="inline-flex items-center gap-1"><CheckIcon size={13} /> {t("share.ready")}</span>
               : linkState === "copied"
-                ? `✓ ${t("share.linkCopied")}`
+                ? <span className="inline-flex items-center gap-1"><CheckIcon size={13} /> {t("share.linkCopied")}</span>
                 : linkState === "failed"
-                  ? `✗ ${t("share.linkFailed")}`
+                  ? <span className="inline-flex items-center gap-1"><XIcon size={13} /> {t("share.linkFailed")}</span>
                   : t("share.link")}
           </button>
           <button onClick={() => router.push("/chat")} className="py-1 text-sm font-bold text-tertiary transition hover:text-secondary">

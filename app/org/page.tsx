@@ -59,7 +59,7 @@ export default function OrgRankingPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="🏢 ORGANIZATION" title={t("org.leaderboard")} />
+        <PageHeader badge="ORGANIZATION" title={t("org.leaderboard")} />
         {data?.org && <p className="mb-4 text-sm text-tertiary">{data.org.name}</p>}
 
         {loaded && !data?.org && (

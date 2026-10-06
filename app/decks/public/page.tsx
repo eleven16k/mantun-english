@@ -32,7 +32,7 @@ export default function PublicDecksPage() {
   return (
     <AppShell>
       <div className="page-shell">
-        <PageHeader badge="🌍 PUBLIC DECKS" title={t("deck.publicTitle")} sub={t("deck.publicHint")} />
+        <PageHeader badge="PUBLIC DECKS" title={t("deck.publicTitle")} sub={t("deck.publicHint")} />
 
         {SUBJECTS.map((group) => (
           <section key={group.categoryKey} className="mb-6">

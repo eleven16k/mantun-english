@@ -13,7 +13,8 @@ import { PageHeader } from "@/components/PageHeader";
 import { AppShell } from "@/components/AppShell";
 import { getScenarios, scenarioImg, type Scenario, type VocabLevel } from "@/lib/scenarios";
 import { VOCAB_LISTS } from "@/lib/vocab-lists";
-import { generateScenario, fetchCustomScenarios, deleteCustomScenario, extractCoursewareText } from "@/lib/api";
+import { generateScenario, fetchCustomScenarios, deleteCustomScenario, extractCoursewareText, getMe } from "@/lib/api";
+import { orderScenariosByInterests } from "@/lib/scenario-links";
 import { kv } from "@/lib/kv";
 import { useI18n, type MessageKey } from "@/lib/i18n";
 
@@ -47,6 +48,7 @@ export default function ScenariosPage() {
   const [createError, setCreateError] = useState(false);
   const [extracting, setExtracting] = useState(false);
   const [extractedName, setExtractedName] = useState("");
+  const [interests, setInterests] = useState<string[]>([]);
 
   useEffect(() => {
     const savedLevel = kv.getItem(LEVEL_KEY) as VocabLevel | null;
@@ -57,9 +59,13 @@ export default function ScenariosPage() {
       setVocabInput(savedVocab);
     }
     fetchCustomScenarios().then(setMyScenarios).catch(() => {});
+    // V8-P3：兴趣作为场景推荐排序权重（best-effort，拉不到就用默认序）
+    getMe()
+      .then((m) => setInterests(m.user.interests ?? []))
+      .catch(() => {});
   }, []);
 
-  const scenarios = useMemo(() => getScenarios(level), [level]);
+  const scenarios = useMemo(() => orderScenariosByInterests(getScenarios(level), interests), [level, interests]);
 
   const pickLevel = (lvl: VocabLevel) => {
     setLevel(lvl);
@@ -175,7 +181,7 @@ export default function ScenariosPage() {
       <div className="page-shell">
         {/* Header + courseware entry */}
         <header className="mb-8 flex items-start justify-between gap-4">
-          <PageHeader className="" badge="🎧 SCENARIOS" title={t("scn.title")} sub={t("scn.subtitle")} />
+          <PageHeader className="" badge="SCENARIOS" title={t("scn.title")} sub={t("scn.subtitle")} />
           <button
             onClick={() => setShowCreate(true)}
             className="flex shrink-0 items-center gap-1.5 rounded-pill bg-brand px-4 py-2.5 text-xs font-bold text-white transition hover:opacity-90"

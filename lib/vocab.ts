@@ -1,8 +1,81 @@
 // ============================================================
-// Lexi Vocabulary Bank - 中考高频词汇
+// Lexi Vocabulary Bank - 词库驱动的题库词集
+// 30 个精选词（带手写例句，可出全部四题型）+ 运行时从统一词库
+// （public/typing-dicts/lexicon.json，ECDICT 管线产物）异步注入的
+// 中考标签词（id 形如 lex:<en>，无例句，只出 word-to-cn / cn-to-word /
+// listening 三题型）。全站词汇检索统一走词库；本模块消费方
+// （store/QuizScreen/weakness/vocab 页/battle/tutorial/onboarding）
+// 无需感知扩容。
 // ============================================================
 import type { VocabWord, Question } from './types';
 import { generateGrammarQuestions } from './grammar';
+import { BASE_PATH } from './config';
+
+let lexiconHydrated = false;
+let hydrateSig = '';
+/** 词库扩容词是否已注入（未注入时题库仅 30 精选词） */
+export function isVocabHydrated() {
+  return lexiconHydrated;
+}
+
+export interface HydrateOptions {
+  /** 考试标签过滤（学段角色：junior=['zk']、college=['cet4','cet6']…；空=全部核心词） */
+  tags?: string[];
+  /** 难度过滤（primary 只出入门词） */
+  difficulties?: (1 | 2 | 3)[];
+}
+
+/** 启动时调用：拉取统一词库，按学段角色注入对应标签词。幂等（同参数）；
+ *  换角色（参数变化）时清空重注。 */
+export async function hydrateVocabFromLexicon(opts?: HydrateOptions): Promise<number> {
+  const sig = JSON.stringify(opts ?? {});
+  if (lexiconHydrated && hydrateSig === sig) return VOCAB.length;
+  if (hydrateSig !== sig) {
+    // 换角色：移除上一轮注入的词（精选 30 词保留）
+    for (let i = VOCAB.length - 1; i >= 0; i--) {
+      if (VOCAB[i].id.startsWith('lex:')) VOCAB.splice(i, 1);
+    }
+  }
+  try {
+    const [res, exRes] = await Promise.all([
+      fetch(`${BASE_PATH}/typing-dicts/lexicon.json`),
+      // AI 例句包（gen-examples.mjs 产物，可能不存在——401/404 时例句留空）
+      fetch(`${BASE_PATH}/typing-dicts/examples-zk.json`).catch(() => null),
+    ]);
+    if (!res.ok) return VOCAB.length;
+    const idx = (await res.json()) as Record<string, { cn: string; phonetic: string; pos: string; difficulty: 1 | 2 | 3; tags: string }>;
+    const examples = exRes && exRes.ok
+      ? (await exRes.json()) as Record<string, { example: string; exampleCn: string }>
+      : {};
+    const tagSet = opts?.tags && opts.tags.length > 0 ? new Set(opts.tags) : null;
+    const diffSet = opts?.difficulties && opts.difficulties.length > 0 ? new Set(opts.difficulties) : null;
+    const existing = new Set(VOCAB.map((w) => w.en.toLowerCase()));
+    for (const [en, e] of Object.entries(idx)) {
+      if (existing.has(en)) continue;
+      if (tagSet && !e.tags.split(',').some((t) => tagSet.has(t))) continue;
+      if (diffSet && !diffSet.has(e.difficulty)) continue;
+      const ex = examples[en];
+      VOCAB.push({
+        id: `lex:${en}`,
+        en,
+        cn: e.cn,
+        phonetic: e.phonetic,
+        type: e.pos || 'word',
+        example: ex?.example ?? '',
+        exampleCn: ex?.exampleCn ?? '',
+        difficulty: e.difficulty,
+      });
+    }
+    lexiconHydrated = true;
+    hydrateSig = sig;
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("lexi:vocab-hydrated"));
+    }
+  } catch {
+    /* 离线/词库不可用：保持精选 30 词题库 */
+  }
+  return VOCAB.length;
+}
 
 export const VOCAB: VocabWord[] = [
   { id: 'w01', en: 'achieve', cn: '实现，达到', phonetic: '/əˈtʃiːv/', type: 'v.', example: 'You can achieve your dream.', exampleCn: '你可以实现你的梦想。', difficulty: 2 },
@@ -44,7 +117,8 @@ export function generateQuestions(count: number = 10): Question[] {
   const types: Question['type'][] = ['word-to-cn', 'cn-to-word', 'fill-blank', 'listening'];
 
   return selected.map((word, idx) => {
-    const type = types[idx % 4]; // cycle through all 4 types
+    // 词库扩容词无手写例句，fill-blank（例句挖空）只在精选词上出
+    const type: Question['type'] = word.example ? types[idx % 4] : (['word-to-cn', 'cn-to-word', 'listening'] as const)[idx % 3];
     return makeQuestion(word, idx, type);
   });
 }
@@ -56,21 +130,25 @@ export function generateQuestionsByType(count: number, type: Question['type']): 
     return generateGrammarQuestions(count);
   }
   const shuffled = [...VOCAB].sort(() => Math.random() - 0.5);
-  const selected = shuffled.slice(0, Math.min(count, VOCAB.length));
+  const pool = type === 'fill-blank' ? shuffled.filter((w) => w.example) : shuffled;
+  const selected = pool.slice(0, Math.min(count, pool.length));
   return selected.map((word, idx) => makeQuestion(word, idx, type));
 }
 
-/** Generate a single question of a specific type from a word. */
-export function makeQuestion(word: VocabWord, idx: number, type: Question['type']): Question {
+/** Generate a single question of a specific type from a word.
+ *  hints（阶段3）：该生历史错选，word-to-cn/listening 的干扰项优先探测。 */
+export function makeQuestion(word: VocabWord, idx: number, type: Question['type'], hints: string[] = []): Question {
   const base = {
     id: `q${idx}`,
     wordId: word.id,
-    explanation: `${word.en} ${word.phonetic} — ${word.cn}\n例句: ${word.example}\n${word.exampleCn}`,
+    explanation: word.example
+      ? `${word.en} ${word.phonetic} — ${word.cn}\n例句: ${word.example}\n${word.exampleCn}`
+      : `${word.en} ${word.phonetic} — ${word.cn}`,
   };
 
   switch (type) {
     case 'word-to-cn': {
-      const distractors = getDistractors(word.cn, word.difficulty);
+      const distractors = getDistractors(word.cn, word.difficulty, hints);
       const choices = [...distractors, word.cn].sort(() => Math.random() - 0.5);
       return { ...base, type, prompt: word.en, promptSub: word.phonetic, choices, correctIndex: choices.indexOf(word.cn) };
     }
@@ -86,7 +164,7 @@ export function makeQuestion(word: VocabWord, idx: number, type: Question['type'
       return { ...base, type, prompt: sentence, promptSub: word.exampleCn, choices, correctIndex: choices.indexOf(word.en) };
     }
     case 'listening': {
-      const distractors = getDistractors(word.cn, word.difficulty);
+      const distractors = getDistractors(word.cn, word.difficulty, hints);
       const choices = [...distractors, word.cn].sort(() => Math.random() - 0.5);
       return { ...base, type, prompt: `🔊 ${word.phonetic}`, promptSub: '听音辨义 (sound → meaning)', choices, correctIndex: choices.indexOf(word.cn) };
     }
@@ -101,9 +179,25 @@ export function getWordById(id: string): VocabWord | undefined {
 }
 
 
-/** Get 3 random distractor Chinese meanings (different from the correct one). */
-export function getDistractors(correctCn: string, difficulty: number): string[] {
-  const pool = VOCAB.filter(v => v.cn !== correctCn).map(v => v.cn);
-  const shuffled = [...pool].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, 3);
+/**
+ * 3 个干扰项中文释义。阶段3（方案 P0-2）：
+ * - hints（该生历史错选，/api/quiz/distractors）优先——学生自己的错误
+ *   选择是最锋利的干扰项；
+ * - difficulty 参与同层偏好（此前该参数被完全忽略——自适应缺口 1 的前半）。
+ */
+export function getDistractors(correctCn: string, difficulty: number, hints: string[] = []): string[] {
+  const out: string[] = [];
+  const push = (cn: string) => {
+    if (cn && cn !== correctCn && !out.includes(cn) && out.length < 3) out.push(cn);
+  };
+  hints.forEach(push);
+
+  const tier = Math.min(3, Math.max(1, Math.round(difficulty) || 2));
+  const shuffle = <T,>(arr: T[]): T[] => [...arr].sort(() => Math.random() - 0.5);
+  const others = VOCAB.filter((v) => v.cn !== correctCn);
+  const sameTier = others.filter((v) => v.difficulty === tier);
+  const nearTier = others.filter((v) => Math.abs(v.difficulty - tier) === 1);
+  // 同层 → 邻层 → 全库，层内乱序
+  [...shuffle(sameTier), ...shuffle(nearTier), ...shuffle(others)].forEach((v) => push(v.cn));
+  return out;
 }

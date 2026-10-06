@@ -253,7 +253,7 @@ export const PHONICS_LEVELS: PhonicLevel[] = [
           { text: "chain", ipa: "/tʃeɪn/", phonemes: ["/tʃ/", "/eɪ/", "/n/"], emoji: "⛓️", graphemes: ["ch", "ai", "n"] },
           { text: "lunch", ipa: "/lʌntʃ/", phonemes: ["/l/", "/ʌ/", "/n/", "/tʃ/"], emoji: "🍱", graphemes: ["l", "u", "n", "ch"] },
           { text: "bench", ipa: "/bentʃ/", phonemes: ["/b/", "/e/", "/n/", "/tʃ/"], emoji: "🛋️", graphemes: ["b", "e", "n", "ch"] },
-          { text: "cherry", ipa: "/tʃeri/", phonemes: ["/tʃ/", "/e/", "/r/", "/i/"], emoji: "🍒", graphemes: ["ch", "err", "y"] },
+          { text: "cherry", ipa: "/tʃeri/", phonemes: ["/tʃ/", "/e/", "/r/", "/iː/"], emoji: "🍒", graphemes: ["ch", "err", "y"] },
         ],
       },
       {

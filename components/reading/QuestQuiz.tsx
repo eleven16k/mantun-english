@@ -45,7 +45,7 @@ export function QuestQuiz({ story, initial, onDone }: Props) {
     return true;
   };
 
-  const finishQuestion = (passed: boolean) => {
+  const finishQuestion = (passed: boolean, attempt?: string) => {
     const next = [...results, passed];
     setResults(next);
     // 断点续答落盘（通关时由课程页覆写 clearedAt；保留历史最高分）
@@ -56,9 +56,16 @@ export function QuestQuiz({ story, initial, onDone }: Props) {
       bestScore: getStoryProgress(story.id)?.bestScore ?? 0,
     });
     // 逐题经济上报（best-effort）：金币/SP/红心/弱点本全复用现有 economy 循环
+    // 判断层证据：chosen/正确原文随报 → 服务端错因诊断 → 雷达阅读理解轴
     if (q) {
       const prompt = q.audioText || (q.type === "image_choice" ? q.question : "");
-      void reportStoryAnswer(story.id, idx, prompt, passed).then((r) => {
+      const correctText =
+        q.type === "sentence_order" ? q.correctOrder.join(" ")
+        : q.type === "word_builder" ? q.word
+        : q.answer;
+      void reportStoryAnswer(story.id, idx, prompt, passed, {
+        questionType: q.type, chosen: attempt, correct: correctText,
+      }).then((r) => {
         if (r) {
           setEarned((x) => ({ coins: x.coins + r.coins, sp: x.sp + r.sp }));
           const s = useGameStore.getState();

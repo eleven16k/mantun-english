@@ -13,8 +13,11 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { PartyPopperIcon as PartyPopperIconR } from "@/components/SvgIcons";
+import { BookOpenIcon, TrophyIcon, GraduationCapIcon, RepeatIcon as RepeatIconR } from "@/components/icons";
 import { AppShell } from "@/components/AppShell";
 import { QuestQuiz } from "@/components/reading/QuestQuiz";
+import { TapWordText } from "@/components/reading/TapWordText";
 import { QuestPlayButton, SpeedTabs, useQuestAudio, type QuestSpeed } from "@/components/reading/ParagraphAudio";
 import { useI18n } from "@/lib/i18n";
 import { isLoggedIn, submitAnswer, updateProfile } from "@/lib/api";
@@ -50,6 +53,17 @@ const NEXT_TRACK: Partial<Record<ReadingTrack, ReadingTrack>> = {
   zhongkao: "gaokao",
 };
 
+function PlayForwardGlyph() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" x2="19" y1="5" y2="19"/></svg>
+  );
+}
+function PartyGlyphR() {
+  return <PartyPopperIconR size={13} />;
+}
+function RepeatGlyphR() {
+  return <RepeatIconR size={14} />;
+}
 export default function ReadingStoryPage() {
   const { t } = useI18n();
   const router = useRouter();
@@ -80,9 +94,9 @@ export default function ReadingStoryPage() {
   // 经济上报器注册（module 级单次；游客不注册防 401 踢登录）
   useEffect(() => {
     if (!isLoggedIn()) return;
-    registerReadingSubmitter(async (wordId, isCorrect, prompt) => {
+    registerReadingSubmitter(async (wordId, isCorrect, prompt, evidence) => {
       if (!isLoggedIn()) return null;
-      const r = await submitAnswer(wordId, isCorrect, prompt);
+      const r = await submitAnswer(wordId, isCorrect, prompt, evidence ?? {});
       return { coins: r.coinsEarned, sp: r.spEarned, hearts: r.hearts };
     });
     return () => stopSpeech();
@@ -274,7 +288,7 @@ export default function ReadingStoryPage() {
                     setPhase("read");
                   }}
                 >
-                  📖 {t("reading.introRead")}
+                  <BookOpenIcon size={15} className="inline" /> {t("reading.introRead")}
                 </button>
                 {quizInitial && (
                   <button
@@ -285,7 +299,7 @@ export default function ReadingStoryPage() {
                       startQuiz(true);
                     }}
                   >
-                    ⏩ {t("reading.continue")}
+                    <PlayForwardGlyph /> {t("reading.continue")}
                   </button>
                 )}
               </div>
@@ -320,7 +334,7 @@ export default function ReadingStoryPage() {
                   <div key={i} className={`rq-para ${playingIdx === i ? "rq-para--playing" : ""}`}>
                     <span className="rq-para-num">{i + 1}</span>
                     <span style={{ flex: 1 }}>
-                      <span className="rq-para-text" style={{ display: "block" }}>{p.text}</span>
+                      <TapWordText text={p.text} />
                       {showCn && <span className="rq-para-cn" style={{ display: "block" }}>{p.translation}</span>}
                     </span>
                     <QuestPlayButton
@@ -365,7 +379,7 @@ export default function ReadingStoryPage() {
           {/* ── 结算 ── */}
           {phase === "done" && result && (
             <div className="ph-card--ink ph-stage" style={{ padding: "2.5rem 1.5rem" }}>
-              <p className="text-6xl">{result.score >= 60 ? "🏆" : "📖"}</p>
+              <p className="text-6xl text-brand-text inline-flex justify-center">{result.score >= 60 ? <TrophyIcon size={60} /> : <BookOpenIcon size={60} />}</p>
               <h1 className="ph-h1" style={{ fontSize: "1.7rem" }}>
                 {result.score >= 60 ? t("reading.done") : t("reading.tryMore")}
               </h1>
@@ -389,13 +403,13 @@ export default function ReadingStoryPage() {
               </div>
               {result.server?.firstPass && (
                 <p className="mt-4">
-                  <span className="ph-pill ph-pill--good">🎉 {t("reading.firstPass")}</span>
+                  <span className="ph-pill ph-pill--good inline-flex items-center gap-1"><PartyGlyphR /> {t("reading.firstPass")}</span>
                 </p>
               )}
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 {result.score < 60 && (
                   <button type="button" className="ph-btn" onClick={restartQuiz}>
-                    🔁 {t("reading.retryStory")}
+                    <RepeatGlyphR /> {t("reading.retryStory")}
                   </button>
                 )}
                 {next && result.score >= 60 && (
@@ -414,7 +428,7 @@ export default function ReadingStoryPage() {
           {isFinalClear && !gradDismissed && (
             <div className="game-overlay fixed inset-0 z-50 flex items-center justify-center p-6" onClick={() => setGradDismissed(true)}>
               <div className="game-modal w-full max-w-sm p-6 text-center" onClick={(e) => e.stopPropagation()}>
-                <p className="text-6xl">🎓</p>
+                <p className="text-6xl text-brand-text inline-flex justify-center"><GraduationCapIcon size={60} /></p>
                 <h1 className="mt-3 font-booster text-2xl font-extrabold text-primary">{t("reading.gradTitle")}</h1>
                 <p className="mt-2 text-sm text-secondary">{t("reading.gradDesc")}</p>
                 <div className="mt-5 flex flex-col gap-2.5">

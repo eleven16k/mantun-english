@@ -7,18 +7,20 @@
  */
 import { useState } from "react";
 import { AppShell } from "@/components/AppShell";
+import { SproutIcon, LeafIcon, TreeIcon, BoltIcon, LockIcon, TrophyIcon, VolumeIcon, CheckCircleIcon, XIcon, GamepadIcon } from "@/components/icons";
 import { PageHeader } from "@/components/PageHeader";
 import { useI18n, type MessageKey } from "@/lib/i18n";
-import { generateWordQuest, bankScenarioReward, type WordQuestQuestion } from "@/lib/api";
+import { savedStage, stageDef } from "@/lib/stage";
+import { generateWordQuest, bankScenarioReward, isLoggedIn, reportEvidence, type WordQuestQuestion } from "@/lib/api";
 import { useGameStore } from "@/lib/store";
 import { kv } from "@/lib/kv";
 
 type GameStatus = "selecting" | "loading" | "playing" | "gameOver" | "congratulations";
 
 const LEVELS = [
-  { id: "Primary", labelKey: "scn.levelPrimary", icon: "🌱" },
-  { id: "JuniorHigh", labelKey: "scn.levelJuniorHigh", icon: "🌿" },
-  { id: "SeniorHigh", labelKey: "scn.levelSeniorHigh", icon: "🌳" },
+  { id: "Primary", labelKey: "scn.levelPrimary", icon: "sprout" },
+  { id: "JuniorHigh", labelKey: "scn.levelJuniorHigh", icon: "leaf" },
+  { id: "SeniorHigh", labelKey: "scn.levelSeniorHigh", icon: "tree" },
 ] as const;
 
 type QuestLevel = (typeof LEVELS)[number]["id"];
@@ -36,7 +38,10 @@ export default function WordQuestPage() {
       return ["Primary"];
     }
   });
-  const [level, setLevel] = useState<QuestLevel | null>(null);
+  const [level, setLevel] = useState<QuestLevel | null>(() => {
+    const wq = stageDef(savedStage()).wordquestLevel;
+    return (["Primary", "JuniorHigh", "SeniorHigh"].includes(wq) ? wq : "JuniorHigh") as QuestLevel;
+  });
   const [questions, setQuestions] = useState<WordQuestQuestion[]>([]);
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -65,9 +70,16 @@ export default function WordQuestPage() {
   const answer = (option: string) => {
     if (selected || !questions[index]) return;
     setSelected(option);
-    const correct = option === questions[index].correct;
+    const q = questions[index];
+    const correct = option === q.correct;
     const newScore = score + (correct ? 10 : 0);
     setScore(newScore);
+    // 判断层证据（全量接入）：wq: 前缀证据流——诊断归词汇轴、不入 SRS（AI 生词无卡态语义）
+    if (isLoggedIn()) {
+      reportEvidence(`wq:${q.word}`, correct, q.word, {
+        questionType: "word-to-cn", chosen: option, correct: q.correct,
+      });
+    }
 
     setTimeout(async () => {
       if (index < questions.length - 1) {
@@ -114,11 +126,11 @@ export default function WordQuestPage() {
           <>
             {quotaError && (
               <div className="mb-4 rounded-2xl border-2 border-b-4 border-[#F4C430] bg-[#FEF9C3] p-4 text-center text-sm font-bold text-primary">
-                ⚡ {t("scn.wqQuota")}
+                <BoltIcon size={13} className="inline" /> {t("scn.wqQuota")}
               </div>
             )}
             <header className="mb-6">
-              <PageHeader badge="🎮 WORD QUEST" title={t("nav.wordquest")} sub={t("scn.wqSelectLevel")} />
+              <PageHeader badge="WORD QUEST" title={t("nav.wordquest")} sub={t("scn.wqSelectLevel")} />
             </header>
             <div className="grid gap-4 md:grid-cols-3">
               {LEVELS.map((lvl, i) => {
@@ -135,10 +147,10 @@ export default function WordQuestPage() {
                     }`}
                   >
                     {!isUnlocked && (
-                      <span className="absolute right-4 top-4 text-lg" aria-hidden>🔒</span>
+                      <span className="absolute right-4 top-4 text-tertiary" aria-hidden><LockIcon size={18} /></span>
                     )}
-                    <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-brand-subtle text-2xl">
-                      {lvl.icon}
+                    <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-brand-subtle text-brand-text">
+                      {lvl.icon === "sprout" ? <SproutIcon size={26} /> : lvl.icon === "leaf" ? <LeafIcon size={26} /> : <TreeIcon size={26} />}
                     </div>
                     <h3 className="font-booster text-lg font-extrabold">{t(lvl.labelKey as MessageKey)}</h3>
                     <p className="mt-1 text-xs text-tertiary">
@@ -168,7 +180,7 @@ export default function WordQuestPage() {
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2.5">
-                <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-subtle text-lg">🏆</span>
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-subtle text-brand-text"><TrophyIcon size={22} /></span>
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-tertiary">{t("scn.wqScore")}</p>
                   <p className="font-booster text-xl font-extrabold">{score}</p>
@@ -185,7 +197,7 @@ export default function WordQuestPage() {
             <div className="g-card space-y-6 p-8 text-center">
               {isSpellingFallback ? (
                 <>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-tertiary">🔊 Spell it right</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-tertiary inline-flex items-center gap-1"><VolumeIcon size={12} /> Spell it right</p>
                   <h2 className="font-booster text-4xl font-extrabold">{q.word[0]}␣␣{q.word.slice(-1)}</h2>
                 </>
               ) : (
@@ -219,8 +231,8 @@ export default function WordQuestPage() {
                     className={`game-chip flex items-center justify-between p-4 text-left text-base font-semibold ${cls}`}
                   >
                     {option}
-                    {selected && isCorrectOption && <span aria-hidden>✅</span>}
-                    {selected && isSelected && !isCorrectOption && <span aria-hidden>❌</span>}
+                    {selected && isCorrectOption && <span aria-hidden className="text-positive"><CheckCircleIcon size={16} /></span>}
+                    {selected && isSelected && !isCorrectOption && <span aria-hidden className="text-critical"><XIcon size={16} /></span>}
                   </button>
                 );
               })}
@@ -246,7 +258,7 @@ export default function WordQuestPage() {
                   status === "congratulations" ? "bg-positive/10" : "bg-critical/10"
                 }`}
               >
-                {status === "congratulations" ? "🏆" : "🎮"}
+                {status === "congratulations" ? <TrophyIcon size={34} /> : <GamepadIcon size={34} />}
               </div>
               <div>
                 <h2 className="font-booster text-3xl font-extrabold">

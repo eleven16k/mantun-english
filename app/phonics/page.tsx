@@ -8,9 +8,12 @@
  */
 
 import Link from "next/link";
+import { AbcIcon, PigIcon, MapIcon, HourglassIcon, CheckIcon, BookOpenIcon } from "@/components/icons";
+
 import { useEffect, useMemo, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { useI18n } from "@/lib/i18n";
+import { getPhonemeProfile } from "@/lib/api";
 import {
   PHONEMES,
   PHONEME_GROUP_META,
@@ -37,11 +40,30 @@ export default function PhonicsPage() {
   // 若在 render 期读本地存储，SSR "0/3" vs 客户端 "3/3" 会触发 hydration 错误
   const [mastered, setMastered] = useState<Set<string>>(new Set());
   const [stats, setStats] = useState({ cleared: 0, total: 0, words: 0, failed: [] as string[] });
+  // V8-E2 发音画像：弱项定向 banner（数据足够才显示，宁缺毋滥）
+  const [weakTag, setWeakTag] = useState<string | null>(null);
 
   useEffect(() => {
     setMastered(masteredPhonemeSymbols());
     setStats(phonicsStats());
+    getPhonemeProfile()
+      .then((p) => setWeakTag(p.ready && p.weak.length > 0 ? p.weak[0].tag : null))
+      .catch(() => {});
   }, []);
+
+  // 弱项 tag → 最贴近的既有关卡（词首匹配 > 音标 focus 匹配）
+  const weakUnit = useMemo(() => {
+    if (!weakTag) return null;
+    const FOCUS_SYM: Record<string, string> = { th: "θ", sh: "ʃ", ch: "tʃ", r: "r", l: "l", v_w: "v", s: "s" };
+    for (const level of PHONICS_LEVELS) {
+      for (const unit of level.units ?? []) {
+        if (unit.words?.some((w) => w.text.toLowerCase().startsWith(weakTag))) return unit;
+        const sym = FOCUS_SYM[weakTag];
+        if (sym && unit.focus?.includes(sym)) return unit;
+      }
+    }
+    return null;
+  }, [weakTag]);
 
   const grouped = useMemo(() => {
     return GROUP_ORDER.map((g) => ({
@@ -54,13 +76,29 @@ export default function PhonicsPage() {
     <AppShell>
       <div className="ph-page">
         <div className="ph-wrap">
-          <span className="ph-sticker">🔤 PHONICS · 44 SOUNDS</span>
+          <span className="ph-sticker">PHONICS · 44 SOUNDS</span>
           <h1 className="ph-h1">{t("phonics.title")}</h1>
           <p className="ph-sub">{t("phonics.sub")}</p>
 
+          {/* ── E2 弱项专攻 banner（跟读画像驱动）── */}
+          {weakTag && (
+            <Link href={weakUnit ? `/phonics/unit/${weakUnit.id}` : "/phonics/review"} className="mb-5 flex items-center gap-3 rounded-2xl border-2 border-[var(--ph-amber, #E8B54D)] bg-[#FFF6E3] p-4">
+              <span className="text-2xl text-brand-text inline-flex"><PigIcon size={26} /></span>
+              <span className="min-w-0 flex-1">
+                <b className="block text-sm font-black" style={{ color: "var(--ph-ink, #3B2F1E)" }}>
+                  {t("phonics.weakBanner").replace("{tag}", weakTag)}
+                </b>
+                <small className="block text-xs" style={{ color: "var(--ph-ink-3, #8A7A5C)" }}>
+                  {weakUnit ? `${t("phonics.weakUnit")}: ${weakUnit.title} ${weakUnit.focus}` : t("phonics.weakGoReview")}
+                </small>
+              </span>
+              <span className="ph-pill ph-pill--gold">{t("phonics.weakCta")}</span>
+            </Link>
+          )}
+
           {/* ── 单词闯关（课程地图）── */}
           <div className="ph-group-title">
-            🗺️ {t("phonics.levels")} <small>{t("phonics.levelsSub")}</small>
+            <MapIcon size={15} className="inline" /> {t("phonics.levels")} <small>{t("phonics.levelsSub")}</small>
           </div>
           <div className="ph-level-list">
             {PHONICS_LEVELS.map((level) => (
@@ -68,7 +106,7 @@ export default function PhonicsPage() {
                 <div className="flex items-baseline justify-between gap-3 flex-wrap">
                   <b className="font-black text-[1.05rem]">{level.name}</b>
                   {level.status === "soon" ? (
-                    <span className="ph-pill ph-pill--gold">⏳ {t("phonics.soon")}</span>
+                    <span className="ph-pill ph-pill--gold inline-flex items-center gap-1"><HourglassIcon size={12} /> {t("phonics.soon")}</span>
                   ) : (
                     <span className="ph-pill ph-pill--info">
                       {stats.cleared}/{level.units.length} {t("phonics.cleared")}
@@ -86,7 +124,7 @@ export default function PhonicsPage() {
                       return (
                         <div key={unit.id} className="ph-unit-row">
                           <span className={`ph-unit-num ${isCleared ? "ph-unit-num--done" : ""}`}>
-                            {isCleared ? "✓" : unit.number}
+                            {isCleared ? <CheckIcon size={15} /> : unit.number}
                           </span>
                           <div className="ph-unit-main">
                             <p className="ph-unit-title">
@@ -110,7 +148,7 @@ export default function PhonicsPage() {
             {/* 复习本入口 */}
             <Link href="/phonics/review" className="ph-card ph-card--lift block">
               <div className="ph-unit-row">
-                <span className="ph-unit-num" style={{ background: "var(--ph-red-bg)" }}>📖</span>
+                <span className="ph-unit-num inline-flex items-center justify-center" style={{ background: "var(--ph-red-bg)" }}><BookOpenIcon size={15} /></span>
                 <div className="ph-unit-main">
                   <p className="ph-unit-title">{t("phonics.review")}</p>
                   <p className="ph-unit-meta">{t("phonics.reviewSub")}</p>
@@ -118,7 +156,7 @@ export default function PhonicsPage() {
                 {stats.failed.length > 0 ? (
                   <span className="ph-pill ph-pill--bad">{stats.failed.length}</span>
                 ) : (
-                  <span className="ph-pill ph-pill--good">✓</span>
+                  <span className="ph-pill ph-pill--good"><CheckIcon size={13} /></span>
                 )}
               </div>
             </Link>
@@ -126,7 +164,7 @@ export default function PhonicsPage() {
 
           {/* ── 音标图鉴 ── */}
           <div className="ph-group-title">
-            🔤 {t("phonics.chart")} <small>{t("phonics.chartSub")}</small>
+            <AbcIcon size={15} className="inline" /> {t("phonics.chart")} <small>{t("phonics.chartSub")}</small>
           </div>
           <p className="mb-3 text-xs font-bold" style={{ color: "var(--ph-ink-3)" }}>
             {mastered.size} / {PHONEMES.length} {t("phonics.mastered")}

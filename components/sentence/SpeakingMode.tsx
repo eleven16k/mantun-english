@@ -8,8 +8,13 @@
  */
 
 import { useEffect, useRef, useState } from "react";
+import { PartyPopperIcon } from "@/components/SvgIcons";
+
+import { VolumeIcon, TurtleIcon, RepeatIcon, MicIcon } from "@/components/icons";
+
 import { useI18n } from "@/lib/i18n";
-import { speakText, stopSpeech, unlockAudio } from "@/lib/phonics";
+import { unlockAudio } from "@/lib/phonics";
+import { speakEn, stopSpeakEn } from "@/lib/speak";
 import {
   SPEAK_PASS_THRESHOLD,
   scoreTranscript,
@@ -20,7 +25,7 @@ import type { Sentence } from "@/content/sentence/data";
 
 interface Props {
   sentence: Sentence;
-  onDone: (passed: boolean) => void;
+  onDone: (passed: boolean, attempt?: string) => void;
 }
 
 type Recognizer = {
@@ -67,12 +72,13 @@ export function SpeakingMode({ sentence, onDone }: Props) {
     setMicError(null);
     finishedRef.current = false;
     const seq = ++seqRef.current;
-    void speakText(sentence.en, 0.95).then(() => {
+    // V8 清晰度修复：神经 TTS 优先（原浏览器合成音色听设备脸色）
+    void speakEn(sentence.en, 0.95).then(() => {
       if (seqRef.current === seq) setTranscript(null);
     });
     return () => {
       seqRef.current++;
-      stopSpeech();
+      stopSpeakEn();
     };
   }, [sentence.en]);
 
@@ -89,7 +95,7 @@ export function SpeakingMode({ sentence, onDone }: Props) {
 
   const replay = (rate: number) => {
     unlockAudio();
-    void speakText(sentence.en, rate);
+    void speakEn(sentence.en, rate);
   };
 
   const grade = (text: string) => {
@@ -134,7 +140,7 @@ export function SpeakingMode({ sentence, onDone }: Props) {
   const skip = () => {
     if (finishedRef.current) return;
     finishedRef.current = true;
-    onDone(false);
+    onDone(false, transcript ?? undefined); // 判断层证据：最后识别文本
   };
 
   const tokens = tokenizeSentence(sentence.en);
@@ -167,10 +173,10 @@ export function SpeakingMode({ sentence, onDone }: Props) {
       {/* 听 */}
       <div className="mt-4 flex items-center justify-center gap-4">
         <button type="button" className="ph-sound" aria-label={t("sentence.replay")} onClick={() => replay(0.95)}>
-          🔊
+          <VolumeIcon size={20} />
         </button>
         <button type="button" className="ph-sound ph-sound--blue" aria-label={t("sentence.slow")} onClick={() => replay(0.55)}>
-          🐢
+          <TurtleIcon size={20} />
         </button>
       </div>
 
@@ -200,12 +206,12 @@ export function SpeakingMode({ sentence, onDone }: Props) {
           {grading.extras.length > 0 && <p className="sn-extras">＋ {grading.extras.join(" · ")}</p>}
           {passed ? (
             <p className="mt-4">
-              <span className="ph-pill ph-pill--good">🎉 {t("sentence.nice")}</span>
+              <span className="ph-pill ph-pill--good inline-flex items-center gap-1"><PartyPopperIcon size={13} /> {t("sentence.nice")}</span>
             </p>
           ) : (
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
               <button type="button" className="ph-btn ph-btn--sm" onClick={startReading}>
-                🔁 {t("sentence.tryAgain")}
+                <RepeatIcon size={14} className="inline" /> {t("sentence.tryAgain")}
               </button>
               <button type="button" className="ph-btn ph-btn--ghost ph-btn--sm" onClick={skip}>
                 {t("sentence.skip")}
@@ -220,7 +226,7 @@ export function SpeakingMode({ sentence, onDone }: Props) {
         <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
           {asrSupported ? (
             <button type="button" className="ph-btn" onClick={startReading} disabled={listening}>
-              {listening ? <span className="sn-rec" /> : "🎤"} {listening ? t("sentence.micListening") : t("sentence.micStart")}
+              {listening ? <span className="sn-rec" /> : <MicIcon size={15} className="inline" />} {listening ? t("sentence.micListening") : t("sentence.micStart")}
             </button>
           ) : (
             <button type="button" className="ph-btn" onClick={() => { if (!finishedRef.current) { finishedRef.current = true; onDone(true); } }}>
