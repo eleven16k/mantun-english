@@ -102,6 +102,7 @@ export function DrillStage({ lesson, scenarioId, onDone }: { lesson: ScenarioLes
   const [micError, setMicError] = useState<string | null>(null);
   const [fails, setFails] = useState(0);
   const recRef = useRef<{ start: () => void; stop: () => void } | null>(null);
+  const asrTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const sentence = lesson.drills[idx];
   const total = lesson.drills.length;
 
@@ -127,6 +128,21 @@ export function DrillStage({ lesson, scenarioId, onDone }: { lesson: ScenarioLes
 
   const startListening = () => {
     const w = window as unknown as Record<string, unknown>;
+    // ASR 超时兜底：浏览器 SpeechRecognition 走 Google 服务，国内网络可能
+    // 无 onresult/onerror/onend（挂起）——8s 无结果强制收场并提示
+    if (asrTimerRef.current) clearTimeout(asrTimerRef.current);
+    asrTimerRef.current = setTimeout(() => {
+      setPhase((p) => {
+        if (p !== "listening") return p;
+        setMicError(t("lesson.asrTimeout"));
+        return "idle";
+      });
+      try {
+        recRef.current?.stop();
+      } catch {
+        /* already stopped */
+      }
+    }, 8000);
     const SR = (w.SpeechRecognition ?? w.webkitSpeechRecognition) as
       | (new () => {
           continuous: boolean;
@@ -149,15 +165,19 @@ export function DrillStage({ lesson, scenarioId, onDone }: { lesson: ScenarioLes
     rec.lang = "en-US";
     recRef.current = rec;
     rec.onresult = (e) => {
+      if (asrTimerRef.current) clearTimeout(asrTimerRef.current);
       const heard = e.results[0][0].transcript;
       void score(heard);
     };
     rec.onerror = (e) => {
+      if (asrTimerRef.current) clearTimeout(asrTimerRef.current);
       setPhase("idle");
       if (e.error === "not-allowed") setMicError(t("lesson.micDenied"));
+      else if (e.error === "network") setMicError(t("lesson.asrTimeout"));
       else setMicError(t("lesson.noHear"));
     };
     rec.onend = () => {
+      if (asrTimerRef.current) clearTimeout(asrTimerRef.current);
       // result path handles UI; if no result arrived, show retry hint
       setPhase((p) => (p === "listening" ? "idle" : p));
     };
