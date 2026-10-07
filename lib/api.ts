@@ -195,6 +195,16 @@ export async function reportEvidence(
 }
 
 // ─── V8 E1 跟读评分 ───
+/** 跟读录音转写（国内 ASR 降级通道）：MediaRecorder webm → 服务端 whisper → text */
+export async function transcribeAudio(blob: Blob): Promise<string> {
+  const form = new FormData();
+  form.append("audio_file", blob, "rec.webm");
+  const res = await fetchApi<{ text: string }>("/api/pronunciation/transcribe", {
+    method: "POST",
+    body: form,
+  });
+  return res.text;
+}
 export interface AlignedWord {
   word: string;
   verdict: "good" | "fuzzy" | "miss";

@@ -13,7 +13,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AbcIcon, CheckCircleIcon, PhoneIcon, VolumeIcon, ClapperIcon, MicIcon } from "@/components/icons";
 
-import { submitPronunciationAttempt, type AlignedWord, type PronunciationResult } from "@/lib/api";
+import { submitPronunciationAttempt, transcribeAudio, type AlignedWord, type PronunciationResult } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
 import { speakEn } from "@/lib/speak";
 import { prefetchTts } from "@/lib/tts";
@@ -103,6 +103,12 @@ export function DrillStage({ lesson, scenarioId, onDone }: { lesson: ScenarioLes
   const [fails, setFails] = useState(0);
   const recRef = useRef<{ start: () => void; stop: () => void } | null>(null);
   const asrTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // ── 国内降级通道：浏览器 ASR（Google）失败后切服务端 whisper 录音转写 ──
+  const [asrMode, setAsrMode] = useState<"asr" | "rec">("asr");
+  const [transcribing, setTranscribing] = useState(false);
+  const mediaRecRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const streamRef = useRef<MediaStream | null>(null);
   const sentence = lesson.drills[idx];
   const total = lesson.drills.length;
 
@@ -126,15 +132,81 @@ export function DrillStage({ lesson, scenarioId, onDone }: { lesson: ScenarioLes
     [sentence.en, scenarioId, t]
   );
 
+  const setModeRec = (on: boolean) => {
+    setAsrMode(on ? "rec" : "asr");
+  };
+
+  /** 录音降级路径：MediaRecorder 录 6s（或点停）→ 服务端 whisper 转写 → 评分 */
+  const startRecRecording = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      streamRef.current = stream;
+      const mr = new MediaRecorder(stream);
+      mediaRecRef.current = mr;
+      chunksRef.current = [];
+      mr.ondataavailable = (e) => {
+        if (e.data.size > 0) chunksRef.current.push(e.data);
+      };
+      mr.onstop = async () => {
+        stream.getTracks().forEach((t) => t.stop());
+        streamRef.current = null;
+        const blob = new Blob(chunksRef.current, { type: mr.mimeType });
+        if (blob.size < 2000) {
+          // 过短视为没说话
+          setPhase("idle");
+          setMicError(t("lesson.noHear"));
+          return;
+        }
+        setTranscribing(true);
+        try {
+          const text = await transcribeAudio(blob);
+          setTranscribing(false);
+          if (!text) {
+            setPhase("idle");
+            setMicError(t("lesson.noHear"));
+            return;
+          }
+          void score(text);
+        } catch {
+          setTranscribing(false);
+          setPhase("idle");
+          setMicError(t("lesson.transcribeFail"));
+        }
+      };
+      setMicError(null);
+      setResult(null);
+      setPhase("listening");
+      mr.start();
+      // 句子级跟读 6s 足够；到点自动停进入转写
+      setTimeout(() => {
+        if (mediaRecRef.current?.state === "recording") mediaRecRef.current.stop();
+      }, 6000);
+    } catch {
+      setMicError(t("lesson.micDenied"));
+      setPhase("idle");
+    }
+  };
+
+  /** 统一入口：按当前模式分发 */
+  const startSpeaking = () => {
+    if (asrMode === "rec") {
+      if (transcribing) return;
+      void startRecRecording();
+      return;
+    }
+    startListening();
+  };
+
   const startListening = () => {
     const w = window as unknown as Record<string, unknown>;
     // ASR 超时兜底：浏览器 SpeechRecognition 走 Google 服务，国内网络可能
     // 无 onresult/onerror/onend（挂起）——8s 无结果强制收场并提示
     if (asrTimerRef.current) clearTimeout(asrTimerRef.current);
     asrTimerRef.current = setTimeout(() => {
+      setModeRec(true);
       setPhase((p) => {
         if (p !== "listening") return p;
-        setMicError(t("lesson.asrTimeout"));
+        setMicError(t("lesson.asrTimeoutRec"));
         return "idle";
       });
       try {
@@ -173,7 +245,7 @@ export function DrillStage({ lesson, scenarioId, onDone }: { lesson: ScenarioLes
       if (asrTimerRef.current) clearTimeout(asrTimerRef.current);
       setPhase("idle");
       if (e.error === "not-allowed") setMicError(t("lesson.micDenied"));
-      else if (e.error === "network") setMicError(t("lesson.asrTimeout"));
+      else if (e.error === "network") { setModeRec(true); setMicError(t("lesson.asrTimeoutRec")); }
       else setMicError(t("lesson.noHear"));
     };
     rec.onend = () => {
@@ -206,7 +278,7 @@ export function DrillStage({ lesson, scenarioId, onDone }: { lesson: ScenarioLes
     <div className="space-y-4">
       <div className="g-card space-y-3 p-4 text-center md:p-6">
         <p className="text-xs text-tertiary">
-          {t("lesson.drillProgress").replace("{a}", String(idx + 1)).replace("{b}", String(total))} · {t("lesson.drillTap")}
+          {t("lesson.drillProgress").replace("{a}", String(idx + 1)).replace("{b}", String(total))} · {asrMode === "rec" ? t("lesson.recTap") : t("lesson.drillTap")}
         </p>
         <button onClick={() => speakEn(sentence.en)} className="font-booster text-lg font-extrabold leading-relaxed text-primary">
           <VolumeIcon size={14} className="inline" /> {sentence.en}
@@ -238,14 +310,14 @@ export function DrillStage({ lesson, scenarioId, onDone }: { lesson: ScenarioLes
       </div>
 
       <button
-        onClick={phase === "listening" ? undefined : startListening}
-        disabled={phase === "listening"}
+        onClick={phase === "listening" || transcribing ? undefined : startSpeaking}
+        disabled={phase === "listening" || transcribing}
         className={`mx-auto grid h-20 w-20 place-items-center rounded-full text-3xl text-white transition ${
-          phase === "listening" ? "animate-pulse bg-critical" : "game-btn bg-brand shadow-[0_6px_0_0_rgba(0,0,0,0.12)]"
+          phase === "listening" ? "animate-pulse bg-critical" : transcribing ? "animate-pulse bg-critical" : "game-btn bg-brand shadow-[0_6px_0_0_rgba(0,0,0,0.12)]"
         }`}
         aria-label="record"
       >
-        {phase === "listening" ? "…" : <MicIcon size={18} />}
+        {transcribing ? <span className="text-base font-black">识别中</span> : phase === "listening" ? "…" : <MicIcon size={18} />}
       </button>
 
       <div className="flex gap-2">
