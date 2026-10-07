@@ -10,6 +10,8 @@
 
 在线体验：[english.mt-health.com](https://english.mt-health.com)
 
+<img src="docs/screenshots/00-marketing.webp" alt="漫豚英语 · 营销主页" width="100%">
+
 </div>
 
 ---
@@ -42,9 +44,9 @@
 ### 🎓 学段角色与词汇分配
 首次进入选择学段角色（小学/初中/高中/四六级/考研/出国/成人），系统自动分配对应词书与难度；支持 5 题快速定级反推建议角色。词库共 **11 本词书 · 81,000+ 词**（中考/高考/四六级/考研/托福/雅思/GRE/词频总集），全部免费开放。
 
-![登录](docs/screenshots/07-login.png)
+![学段角色选择](docs/screenshots/01-onboarding-roles.png)
 
-![角色选择](docs/screenshots/01-onboarding-roles.png)
+![登录](docs/screenshots/07-login.png)
 
 ## 🧱 技术栈
 
