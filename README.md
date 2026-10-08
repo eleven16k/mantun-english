@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/logo.png" alt="漫豚英语" width="88">
+
 # 漫豚英语 · mt-teach-app
 
 **给中国 K12 孩子的游戏化英语练习 —— 场景对话 · 抽卡打字 · 悦读闯关 · 拼读馆**
